@@ -1,102 +1,173 @@
 # De las urnas a la Moncloa
 
-Sitio didáctico sobre las elecciones generales del 29 de noviembre de 2026: qué se vota, cómo se convierten los votos en escaños y cómo se llega a un Gobierno. El texto va a un lado y, al otro, un escenario con los 350 escaños del Congreso, uno por hexágono, que cambian de forma en cada paso: mapa de provincias, reparto de tu provincia, habitantes por escaño, Senado, hemiciclo y pactos. Tu voto es el hexágono dorado y se sigue de principio a fin.
+**Qué se vota el 29N y cómo se pasa de una papeleta a un Gobierno, contado con los 350 escaños del Congreso.**
 
-## Cómo verlo en local
+### → [gastiaso.github.io/de-las-urnas-a-la-moncloa](https://gastiaso.github.io/de-las-urnas-a-la-moncloa/)
 
-Hace falta servir la carpeta por HTTP (los módulos de JavaScript no cargan abriendo el archivo directamente):
+[![Captura de De las urnas a la Moncloa: el mapa de España con un hexágono por escaño, los 38 de Madrid en teja y el voto del lector en dorado](docs/captura.png)](https://gastiaso.github.io/de-las-urnas-a-la-moncloa/)
+
+El 29 de noviembre de 2026 se eligen el Congreso y el Senado. Entre la papeleta y el Gobierno hay más pasos de los que parece: cómo se reparten los escaños entre provincias, qué hace la regla D'Hondt con los votos, por qué no cuesta lo mismo un escaño en Soria que en Madrid, para qué sirve el Senado, qué mayorías hacen falta y cuánto puede tardar la investidura.
+
+*De las urnas a la Moncloa* lo cuenta en ocho pasos. Junto al texto, los 350 escaños del Congreso, un hexágono cada uno, cambian de forma en cada paso: mapa, reparto, Senado, hemiciclo y pactos. Eliges tu provincia y sigues tu voto, el hexágono dorado, de la urna a la Moncloa.
+
+No es una encuesta ni una predicción. Son las reglas, cada una con su artículo del BOE.
+
+## Qué vas a encontrar
+
+1. **Qué se vota.** Los 350 escaños y cómo se reparten entre las provincias.
+2. **Del voto al escaño.** La regla D'Hondt con partidos inventados: adivina el reparto antes de verlo.
+3. **Dónde votas.** Por qué los mismos porcentajes dan más partidos en Madrid que en Soria, y cuántos habitantes hay detrás de cada escaño.
+4. **El Senado.** Cómo se vota, qué puede hacer y qué no.
+5. **Las mayorías.** Los 176 de la primera votación, la mayoría simple de la segunda y las mayorías reforzadas.
+6. **Pactos.** Una calculadora de investidura con escaños calculados a partir de las últimas encuestas.
+7. **Del 29N al Gobierno.** El calendario, de la convocatoria a la investidura, fecha a fecha.
+
+Y un cierre. Desde el 30 de noviembre se abren cinco pasos más con los resultados: qué ha pasado, tu provincia (y qué habría cambiado con otros votos), votos frente a escaños, quién puede gobernar y lo que viene.
+
+Cada paso tiene cajones «saber más» con la fuente al pie, y las palabras subrayadas llevan su definición. También se puede leer solo el texto, sin el mapa.
+
+## Cómo leerlo
+
+- **Un hexágono, un escaño.** El mapa no respeta la superficie: cada provincia ocupa tantos hexágonos como diputados elige, dentro de la silueta de España. Por eso Madrid es enorme y Soria, diminuta. Canarias va en un recuadro.
+- **Tu voto es el hexágono dorado.** Está en tu provincia, en el reparto, en el Senado y en el hemiciclo. En los pactos queda aparte, porque el bloque en el que estaría depende de a quién votes.
+- **Los partidos del ejemplo son inventados.** El reparto D'Hondt se explica con cinco partidos, de la A a la E, para que se vea la regla sin pensar en quién gana.
+- **La calculadora de pactos no es un resultado.** Son escaños calculados a partir de las últimas encuestas por [Porra Electoral](https://gastiaso.github.io/porra-electoral/), congelados antes de la veda y con su fecha. El 30N se cambian por los reales.
+- **Lo que no tiene fuente no entra.** Las reglas están cotejadas con el texto vigente en el BOE, y las cuentas propias (cuotas, habitantes por escaño, mínimos para bloquear) se señalan como tales.
+
+> **Si encuentras un error, avisa.** El texto se revisa y se corrige en cuanto se detecta uno.
+
+## De dónde salen los datos
+
+| Qué | Fuente |
+|---|---|
+| Escaños por provincia | Real Decreto 806/2026, de disolución y convocatoria, anexo ([BOE-A-2026-20742](https://www.boe.es/buscar/doc.php?id=BOE-A-2026-20742)) |
+| Población por provincia (habitantes por escaño) | Real Decreto 1117/2025, cifras oficiales del padrón a 1 de enero de 2025 ([BOE-A-2025-25362](https://www.boe.es/buscar/doc.php?id=BOE-A-2025-25362)) |
+| Reglas | Constitución, LOREG, Reglamento del Congreso, Real Decreto 605/1999 y Ley 50/1997. El artículo de cada cajón está en [`docs/guion.md`](docs/guion.md) |
+| Escaños de la calculadora de pactos | [Porra Electoral](https://gastiaso.github.io/porra-electoral/), con las encuestas publicadas hasta la fecha que indica la calculadora |
+| Resultados de prueba de la fase 2 | Escrutinio del 23 de julio de 2023, Ministerio del Interior, tal como están reunidos en Porra Electoral |
+| Resultados del 29N | Ministerio del Interior: recuento provisional y, después, escrutinio general |
+| Silueta y provincias del mapa | Instituto Geográfico Nacional, líneas límite (CC BY 4.0), en la versión TopoJSON de [es-atlas](https://github.com/martgnz/es-atlas) |
+
+## Calendario
+
+- **23 de noviembre:** sale la fase 1, con la calculadora de pactos congelada.
+- **24 a 28 de noviembre:** la ley prohíbe publicar encuestas esos cinco días (LOREG, art. 69.7). La calculadora no cambia.
+- **Noche del 29 de noviembre:** se cargan los votos del recuento provisional y se abren los pasos 9 a 13.
+- **4 de diciembre:** escrutinio general. Se actualizan los resultados.
+- **Después:** el calendario de la investidura se completa a medida que haya fechas.
+
+## Cómo funciona
+
+```mermaid
+flowchart LR
+  A["BOE<br/>escaños, población y reglas"] --> D["js/datos.js"]
+  B["Porra Electoral<br/>escaños estimados"] --> D
+  C["IGN, vía es-atlas<br/>límites provinciales"] --> E["herramientas/cartograma.py"]
+  E --> F["js/cartograma.js<br/>350 + 209 hexágonos"]
+  G["Votos del 29N<br/>por provincia (CSV)"] --> H["herramientas/resultados.py"]
+  H --> I["js/resultados.js"]
+  D --> J["index.html + js/sitio.js<br/>D'Hondt en el navegador"]
+  F --> J
+  I --> J
+  J --> K["GitHub Pages"]
+  J -. texto .-> L["herramientas/guion.py"]
+  L --> M["docs/guion.md"]
+```
+
+Es un sitio estático en JavaScript y SVG, sin compilación ni dependencias: lo que hay en el repositorio es lo que se publica. Los escaños de la fase 2 no se copian de ningún sitio: el navegador aplica la regla D'Hondt a los votos de cada provincia. Con los votos del 23J, el cálculo reproduce los 350 escaños de 2023.
+
+Sin cookies, sin registro y sin analítica. Las tipografías se sirven desde el propio sitio, así que no se pide nada a servidores de terceros (GitHub Pages, que lo aloja, puede registrar qué ficheros se descargan).
+
+### Verlo en local
+
+Los módulos de JavaScript no cargan abriendo el archivo directamente; hay que servir la carpeta:
 
 ```bash
 python3 -m http.server 8000
 ```
 
-y abrir `http://localhost:8000`. No hay paso de compilación ni dependencias que instalar. Todo se sirve desde el propio sitio: las fuentes no se piden a servidores externos y no hay cookies ni analítica.
+y abrir <http://localhost:8000>. Con `#fase2` al final de la dirección se ven los pasos de resultados con los datos de prueba del 23J, con un aviso.
 
-## Cómo se recorre
+### El mapa de hexágonos
 
-- Al entrar, una montaña de sobres con la tapa: nombre, instrucciones y «Clica aquí para empezar». Al pulsarlo, cada sobre vuela a su sitio y se convierte en un hexágono del mapa. Solo se ve una vez por pestaña, y se salta si se llega con una combinación compartida (`?p6=…`).
-- Primero se elige la provincia en la que se vota (en el desplegable o tocándola en el mapa). Cada paso trae una frase sobre esa provincia.
-- Bajando por la página: en cada paso, los 350 hexágonos cambian de forma. En escritorio, el escenario va a la derecha; en el móvil, arriba.
-- El hexágono dorado es tu voto: está en tu provincia, en el reparto, en el Senado y en el hemiciclo. En los pactos de la fase 1 queda aparte, porque el bloque en el que estaría depende de a quién se vote. En la fase 2 marca el primer escaño de tu provincia, que es del partido más votado allí.
-- En los pactos, cada escaño lleva el color de su partido y los partidos se juntan en tres bloques: sí, abstención y no. La raya del 176 dice si sale a la primera.
-- El menú «Paso X de 8» de la barra salta a cualquier paso; al final de cada paso, el botón «Siguiente» lleva al que sigue y deja el foco en su título.
-- «Ver solo el texto» (en el menú, en la portada y en el primer Tab) quita el escenario.
-- Sin JavaScript se ve el texto completo, sin escenario ni juegos.
+Lo genera [`herramientas/cartograma.py`](herramientas/cartograma.py) (requiere `numpy`, `scipy` y `shapely`):
 
-## El mapa de hexágonos
+1. Rellena la silueta peninsular con 325 hexágonos, los escaños peninsulares.
+2. Reparte las celdas entre provincias con una asignación con capacidad: cada una recibe exactamente sus escaños y la suma de distancias al cuadrado hasta su centro es mínima. Si alguna queda partida, se recompone.
+3. Coloca Baleares, Ceuta y Melilla en el mar, cerca de su posición real, y Canarias en un recuadro.
 
-Un hexágono por escaño: cada provincia ocupa tantos como diputados elige, dentro de la silueta real de la Península. Lo genera `herramientas/cartograma.py`:
-
-1. Rellena la silueta peninsular con 325 hexágonos (los escaños peninsulares), con el tamaño con el que el borde pasa justo por los centros.
-2. Reparte las celdas entre provincias con una asignación con capacidad: cada una recibe exactamente sus escaños y la suma de distancias al cuadrado hasta su centro geográfico es mínima. Si alguna queda partida, se recompone.
-3. Coloca Baleares, Ceuta y Melilla en el mar, junto a su posición real, y Canarias en un recuadro.
-
-Hace lo mismo con los 209 senadores elegidos (cuatro por provincia; en las islas, según la isla), para el paso del Senado. Requiere `numpy`, `scipy` y `shapely`: `python3 herramientas/cartograma.py > js/cartograma.js` (con un nombre de archivo `.png` como argumento, dibuja además una vista previa).
-
-## Las dos fases
-
-- **Fase 1 (pasos 1 a 8):** las reglas. Es lo que se ve por defecto.
-- **Fase 2 (pasos 9 a 13 y «La Moncloa»):** los resultados. Está construida pero cerrada. Para verla antes de tiempo, añadir `#fase2` a la dirección: enseña los resultados del 23 de julio de 2023 como datos de prueba, con un aviso.
-
-Para abrir la fase 2 con los resultados del 29N:
+Hace lo mismo con los 209 senadores elegidos en las urnas, para el paso del Senado.
 
 ```bash
-# 1. Dejar los votos por circunscripción en datos/resultados_29N.csv, con el mismo formato que datos/prueba_23J.csv
+python3 herramientas/cartograma.py > js/cartograma.js
+```
+
+Con un nombre de archivo `.png` como argumento, dibuja además una vista previa.
+
+### Abrir la fase 2
+
+```bash
+# 1. Dejar los votos por circunscripción en datos/resultados_29N.csv, con el formato de datos/prueba_23J.csv
 # 2. Generar el archivo de resultados y abrir la fase para todo el mundo
 python3 herramientas/resultados.py datos/resultados_29N.csv --abierta \
     --etiqueta "escrutinio provisional del 29 de noviembre de 2026" --fuente "Ministerio del Interior" > js/resultados.js
 ```
 
-Los escaños no se copian de ningún sitio: se calculan en el navegador con los votos de cada provincia. Con los datos del 23J, el cálculo reproduce los 350 escaños de 2023.
-
-`resultados.py` comprueba antes de escribir nada que estén las 52 circunscripciones con los nombres de `js/datos.js`, que sus escaños coincidan con el decreto y que cuadren los votos. Si el CSV trae `censo`, `votantes` y `nulos`, el paso 9 da la participación.
+Antes de escribir nada, `resultados.py` comprueba que estén las 52 circunscripciones con los nombres de `js/datos.js`, que sus escaños coincidan con el decreto y que cuadren los votos. Si el CSV trae `censo`, `votantes` y `nulos`, el paso 9 da la participación.
 
 Las calculadoras de pactos se pueden compartir: la combinación va en la dirección (`?p6=PSOE:s,PNV:a` para el paso 6, `?p12=` para el 12).
 
-## Estructura
+### Estructura
 
 | Ruta | Qué es |
 |---|---|
 | `index.html` | Todo el texto del sitio, paso por paso |
 | `css/estilo.css` | Estilos: recorrido, escenario, portada, juegos y modo «solo texto» |
 | `js/sitio.js` | El recorrido: escenario de los 350 hexágonos, tu voto, portada de sobres, menú y navegación |
-| `js/contenido.js` | Juegos y calculadoras de los pasos (glosario, provincia, apuesta, Senado, pactos, resultados) |
-| `js/mapa.js` | Geometría y dibujo del mapa de hexágonos |
-| `js/hemiciclo.js` | Posiciones de los 350 asientos del hemiciclo |
-| `js/fichas.js` | Iconos de cada paso, con el estilo del mapa |
-| `js/datos.js` | Escaños por provincia, población, partidos de ejemplo, estimación de la calculadora, colores de los partidos, glosario |
-| `js/dhondt.js` | Reparto D'Hondt con barrera del 3 % y cálculo del último escaño |
-| `js/resultados.js` | Resultados para la fase 2 (generado) |
-| `js/cartograma.js` | Posición de los 350 hexágonos del Congreso y los 209 del Senado (generado) |
-| `herramientas/cartograma.py` | Genera `js/cartograma.js` a partir de `herramientas/geo/provincias-es-atlas.json` |
-| `herramientas/resultados.py` | Convierte el CSV de resultados en `js/resultados.js` |
-| `herramientas/guion.py` | Genera `docs/guion.md` desde `index.html` |
-| `fuentes/` | Courier Prime y Libre Franklin en woff2 (licencia OFL) |
+| `js/contenido.js` | Juegos y calculadoras de cada paso (glosario, provincia, apuesta, Senado, pactos, resultados) |
+| `js/datos.js` | Escaños y población por provincia, partidos del ejemplo, escaños de la calculadora, colores de los partidos y glosario |
+| `js/dhondt.js` | Reparto D'Hondt con la barrera del 3 % y cálculo del último escaño |
+| `js/mapa.js` y `js/hemiciclo.js` | Geometría del mapa de hexágonos y de los 350 asientos del hemiciclo |
+| `js/fichas.js` | Iconos de cada paso |
+| `js/cartograma.js` y `js/resultados.js` | Posición de los hexágonos y resultados de la fase 2 (generados) |
+| `herramientas/` | Generadores del mapa, de los resultados y del guion |
+| `fuentes/` | Courier Prime y Libre Franklin en woff2, con su licencia |
 | `img/` | Imagen para compartir (1200 × 630), favicon e icono |
-| `datos/prueba_23J.csv` | Resultados del 23J por circunscripción, copiados de Porra Electoral |
-| `docs/guion.md` | El texto del sitio con la fuente de cada cajón (generado) |
+| `datos/prueba_23J.csv` | Votos del 23J por circunscripción, para probar la fase 2 |
+| `docs/guion.md` | Todo el texto del sitio con la fuente de cada cajón (generado) |
 
-Tras cambiar un texto en `index.html`, regenerar el guion: `python3 herramientas/guion.py > docs/guion.md`.
+Tras cambiar un texto en `index.html`, hay que regenerar el guion: `python3 herramientas/guion.py > docs/guion.md`.
 
-## Datos y fuentes
+## Limitaciones
 
-- Escaños por circunscripción: anexo del Real Decreto 806/2026 (BOE-A-2026-20742).
-- Población por circunscripción (habitantes por escaño, paso 3): Real Decreto 1117/2025, cifras oficiales del padrón a 1 de enero de 2025 (BOE-A-2025-25362). Con ellas, la regla del art. 162 de la LOREG reproduce el anexo del decreto.
-- Reglas: Constitución, LOREG, Reglamento del Congreso, Real Decreto 605/1999 y Ley 50/1997. El artículo de cada una está en `docs/guion.md`.
-- Calculadora de pactos: escaños calculados por [Porra Electoral](https://gastiaso.github.io/porra-electoral/) a partir de las últimas encuestas, hasta el 8 de noviembre de 2026. Es una estimación, no un resultado.
-- Los partidos A a E y los nombres de la papeleta del Senado son inventados.
-- Datos de prueba de la fase 2: escrutinio del 23 de julio de 2023 (Ministerio del Interior), tal como están reunidos en Porra Electoral.
-- Límites provinciales para el mapa de hexágonos: Instituto Geográfico Nacional (líneas límite), licencia CC BY 4.0, en la versión TopoJSON de [es-atlas](https://github.com/martgnz/es-atlas) (licencia MIT). Solo se usan para colocar los hexágonos.
-- Colores de los partidos: los habituales, algo apagados; provisionales.
+- **El mapa deforma a propósito.** Cuenta escaños, no territorio. La posición de cada provincia es aproximada, y alguna queda estirada.
+- **Habitantes no son votantes.** Los habitantes por escaño salen de la población oficial, que incluye a menores y a extranjeros que no votan en estas elecciones.
+- **La calculadora es una foto fija.** Recoge las encuestas hasta su fecha, no cambia durante la veda y hereda los errores que tengan las encuestas.
+- **La noche electoral no da el resultado oficial.** Los primeros resultados son del recuento provisional; el oficial, con el voto desde el extranjero, llega el 4 de diciembre.
+- **El Senado, solo en las reglas.** Los pasos de resultados dan los del Congreso; los del Senado, todavía no.
+- **Es una introducción.** Los cajones dan la norma exacta, pero no cubren todos los casos que prevé la ley.
+
+## Cómo citar
+
+> Astiaso Llamazares, G. (2026). *De las urnas a la Moncloa: qué se vota el 29N y cómo se llega a un Gobierno* [sitio web y software]. https://gastiaso.github.io/de-las-urnas-a-la-moncloa/. CC BY 4.0.
+
+GitHub ofrece la cita en otros formatos (APA, BibTeX) desde el botón *Cite this repository*.
 
 ## Licencias
 
-- Código: MIT (ver `LICENSE`).
-- Textos del sitio (`index.html`, `docs/guion.md`): CC BY 4.0.
-- Tipografías Courier Prime y Libre Franklin: SIL Open Font License (ver `fuentes/`).
+- **Código:** [MIT](LICENSE). Se puede reutilizar con cualquier fin conservando el aviso de autoría.
+- **Textos del sitio y del guion, iconos, imágenes y posición de los hexágonos:** [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es). Se pueden reutilizar con cualquier fin citando la autoría.
+- **Normas publicadas en el BOE:** no son objeto de propiedad intelectual (Ley de Propiedad Intelectual, art. 13).
+- **Límites provinciales:** © Instituto Geográfico Nacional, CC BY 4.0.
+- **Tipografías:** Courier Prime y Libre Franklin, con licencia SIL Open Font License 1.1, servidas desde el propio sitio.
 
-## Pendiente
+Detalle y fórmula de cita en [`LICENCIA-DATOS.md`](LICENCIA-DATOS.md).
 
-- Congelar la estimación de la calculadora antes de la veda y cambiarla por el resultado el 30N.
-- Orden y colores definitivos de los partidos (`js/datos.js` y `herramientas/resultados.py`).
-- Los metadatos para compartir apuntan a `https://gastiaso.github.io/de-las-urnas-a-la-moncloa/`: si el repositorio se llama distinto, cambiar `og:url`, `og:image` y `canonical` en `index.html`.
+## Contacto
+
+Errores, dudas o sugerencias: por [LinkedIn](https://www.linkedin.com/in/guillermo-astiaso) o abriendo una [incidencia](https://github.com/gastiaso/de-las-urnas-a-la-moncloa/issues).
+
+## Proyectos relacionados
+
+- [Porra Electoral](https://gastiaso.github.io/porra-electoral/) ([repositorio](https://github.com/gastiaso/porra-electoral)): la media de las encuestas de las generales del 29N y los escaños que salen de ella. De ahí salen los escaños de la calculadora de pactos y los datos de prueba del 23J.
+- [Historias con los barómetros del CIS](https://gastiaso.github.io/historias/) ([repositorio](https://github.com/gastiaso/historias)): historias para leer con scroll, en las que el gráfico cambia mientras avanza el texto.

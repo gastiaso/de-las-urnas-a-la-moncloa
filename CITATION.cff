@@ -1,0 +1,31 @@
+# Al publicar la versión del 23 de noviembre: añade version y date-released (AAAA-MM-DD).
+cff-version: 1.2.0
+message: "Si usas este sitio, sus textos o su código, cítalos así. El código tiene licencia MIT (fichero LICENSE); los textos, las imágenes y el mapa, CC BY 4.0."
+type: software
+title: "De las urnas a la Moncloa: qué se vota el 29N y cómo se llega a un Gobierno"
+abstract: >-
+  Sitio didáctico sobre las elecciones generales españolas del 29 de noviembre de 2026.
+  Explica en ocho pasos cómo se reparten los 350 escaños del Congreso entre provincias,
+  la regla D'Hondt, el peso del voto según la provincia, el Senado, las mayorías, los
+  pactos de investidura y el calendario hasta la formación de Gobierno, con un mapa de
+  hexágonos (uno por escaño) y la norma del BOE que respalda cada regla. Desde el 30 de
+  noviembre añade cinco pasos con los resultados, calculados en el navegador a partir de
+  los votos de cada provincia.
+authors:
+  - family-names: "Astiaso Llamazares"
+    given-names: "Guillermo"
+repository-code: "https://github.com/gastiaso/de-las-urnas-a-la-moncloa"
+url: "https://gastiaso.github.io/de-las-urnas-a-la-moncloa/"
+license:
+  - MIT
+  - CC-BY-4.0
+keywords:
+  - elecciones generales
+  - España
+  - sistema electoral
+  - D'Hondt
+  - Congreso de los Diputados
+  - Senado
+  - investidura
+  - cartograma
+  - educación cívica
