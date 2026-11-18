@@ -115,6 +115,13 @@ python3 herramientas/resultados.py datos/resultados_29N.csv --abierta \
 
 Antes de escribir nada, `resultados.py` comprueba que estén las 52 circunscripciones con los nombres de `js/datos.js`, que sus escaños coincidan con el decreto y que cuadren los votos. Si el CSV trae `censo`, `votantes` y `nulos`, el paso 9 da la participación.
 
+En Windows, `herramientas/escribir_resultados.py` (mismos argumentos) hace lo mismo sin la redirección `>`, que en PowerShell puede estropear los acentos.
+
+Otras herramientas para la noche electoral:
+
+- `herramientas/interior_a_csv.py` pasa al CSV de `resultados.py` los ficheros de resultados del Ministerio del Interior (formato de infoelectoral) o un CSV largo hecho a mano (`datos/plantilla_largo.csv`). Las siglas se traducen a los partidos de la web con `datos/siglas.csv`.
+- `herramientas/cotejar_escanos.py` recalcula el reparto y lo compara, provincia a provincia, con los escaños oficiales (`datos/plantilla_oficiales.csv`). Con los ficheros oficiales del 23J da los 350 escaños sin ninguna diferencia (`datos/escanos_oficiales_23J.csv`).
+
 Las calculadoras de pactos se pueden compartir: la combinación va en la dirección (`?p6=PSOE:s,PNV:a` para el paso 6, `?p12=` para el 12).
 
 ### Estructura
@@ -130,10 +137,13 @@ Las calculadoras de pactos se pueden compartir: la combinación va en la direcci
 | `js/mapa.js` y `js/hemiciclo.js` | Geometría del mapa de hexágonos y de los 350 asientos del hemiciclo |
 | `js/fichas.js` | Iconos de cada paso |
 | `js/cartograma.js` y `js/resultados.js` | Posición de los hexágonos y resultados de la fase 2 (generados) |
-| `herramientas/` | Generadores del mapa, de los resultados y del guion |
+| `herramientas/` | Generadores del mapa, de los resultados y del guion; conversor y cotejo de resultados |
 | `fuentes/` | Courier Prime y Libre Franklin en woff2, con su licencia |
 | `img/` | Imagen para compartir (1200 × 630), favicon e icono |
 | `datos/prueba_23J.csv` | Votos del 23J por circunscripción, para probar la fase 2 |
+| `datos/escanos_oficiales_23J.csv` | Escaños oficiales del 23J por circunscripción, para probar el cotejo |
+| `datos/siglas.csv` y `datos/siglas_23J.csv` | De las siglas del Ministerio a los partidos de la web (la segunda, solo para el 23J) |
+| `datos/plantilla_largo.csv` y `datos/plantilla_oficiales.csv` | Plantillas para copiar resultados y escaños a mano |
 | `docs/guion.md` | Todo el texto del sitio con la fuente de cada cajón (generado) |
 
 Tras cambiar un texto en `index.html`, hay que regenerar el guion: `python3 herramientas/guion.py > docs/guion.md`.

@@ -1,0 +1,9 @@
+# Plantilla de escaños oficiales para herramientas/cotejar_escanos.py. Las líneas con # no cuentan.
+# partido: el id de la web (PP, PSOE, VOX, FA, POD, SALF, ERC, JUNTS, BILDU, PNV, BNG, CC, UPN, AA...), no las siglas.
+# Provincia «Total»: el total nacional de cada partido (lo primero que conviene copiar la noche electoral).
+# Con provincias, solo las que se copien; para no dar por fallo las que faltan, cotejar con --parcial.
+# Ejemplo con números inventados:
+#   Total;PP;140
+#   Total;PSOE;110
+#   Madrid;PP;16
+provincia;partido;escanos

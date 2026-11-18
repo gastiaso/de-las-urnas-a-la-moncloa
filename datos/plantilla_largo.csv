@@ -1,0 +1,15 @@
+# Plantilla del CSV largo para herramientas/interior_a_csv.py (entrada «largo»). Las líneas con # no cuentan.
+# Una fila por provincia y candidatura, con las siglas tal como las da el Ministerio, y estas filas especiales:
+#   _blancos (obligatoria), _validos, _nulos, _votantes, _censo. Con _validos, lo que falte va a OTROS:
+#   basta con escribir las candidaturas que pasan del 3 % (o del 1 %, para ir sobre seguro) y _validos.
+# escanos: los oficiales de esa candidatura; vacío = 0 si en la provincia hay alguno escrito.
+# Separador ; o , (se detecta solo). Miles con punto o sin nada: 93.282 o 93282.
+# Ejemplo con números inventados (provincia de 2 escaños):
+#   Soria;PP;20.000;1
+#   Soria;PSOE;15.000;1
+#   Soria;VOX;6.000;
+#   Soria;_blancos;600;
+#   Soria;_validos;45.000;
+#   Soria;_nulos;500;
+#   Soria;_censo;70.000;
+provincia;siglas;votos;escanos
