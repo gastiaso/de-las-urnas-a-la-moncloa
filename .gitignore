@@ -1,0 +1,9 @@
+# Prototipos descartados: se quedan solo en el ordenador
+archivo/
+
+# Archivos del sistema y de Python
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+desktop.ini
