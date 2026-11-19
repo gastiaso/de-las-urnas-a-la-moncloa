@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<!-- Generado con herramientas/idiomas.py a partir de index.html, idiomas/ca.txt y js/idiomas/ca.js. No editar a mano. -->
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>De les urnes a la Moncloa</title>
+<meta name="description" content="Què es vota el 29N i com es passa d'una papereta a un Govern, explicat amb els 350 escons del Congrés.">
+<meta name="author" content="Guillermo Astiaso">
+<meta name="theme-color" content="#E4E2DC">
+<link rel="canonical" href="https://gastiaso.github.io/de-las-urnas-a-la-moncloa/ca/">
+<link rel="alternate" hreflang="es" href="https://gastiaso.github.io/de-las-urnas-a-la-moncloa/">
+<link rel="alternate" hreflang="ca" href="https://gastiaso.github.io/de-las-urnas-a-la-moncloa/ca/">
+<link rel="alternate" hreflang="ca-valencia" href="https://gastiaso.github.io/de-las-urnas-a-la-moncloa/va/">
+<link rel="alternate" hreflang="gl" href="https://gastiaso.github.io/de-las-urnas-a-la-moncloa/gl/">
+<link rel="alternate" hreflang="eu" href="https://gastiaso.github.io/de-las-urnas-a-la-moncloa/eu/">
+<link rel="alternate" hreflang="en" href="https://gastiaso.github.io/de-las-urnas-a-la-moncloa/en/">
+<link rel="alternate" hreflang="x-default" href="https://gastiaso.github.io/de-las-urnas-a-la-moncloa/">
+<link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../img/icono-180.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ca_ES">
+<meta property="og:site_name" content="De les urnes a la Moncloa">
+<meta property="og:title" content="De les urnes a la Moncloa">
+<meta property="og:description" content="Què es vota el 29N i com es passa d'una papereta a un Govern, explicat amb els 350 escons del Congrés.">
+<meta property="og:url" content="https://gastiaso.github.io/de-las-urnas-a-la-moncloa/ca/">
+<meta property="og:image" content="https://gastiaso.github.io/de-las-urnas-a-la-moncloa/img/compartir.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Els 350 escons del Congrés dibuixats com a hexàgons sobre el mapa d'Espanya, amb el títol «De las urnas a la Moncloa».">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="../fuentes/courier-prime-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../fuentes/libre-franklin-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../css/estilo.css">
+<noscript><style>
+/* sin JavaScript: todo el texto seguido, sin escenario ni juegos */
+.bar button,#sliders,#apostar,#resto,.calc,#sen,.selProv,label.sel,.solo-js,#repetirReparto{display:none}
+.tip{display:block;position:static;grid-column:1/-1;margin:0 0 8px 122px;background:transparent;color:var(--ink);padding:0}
+main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-height:0;margin-bottom:12px}.pie{width:auto}
+</style></noscript>
+</head>
+<body>
+<a class="saltar" href="#salida" id="saltar">Llegeix només el text, sense animació</a>
+<header class="bar">
+<b>De les urnes a la Moncloa</b>
+<button type="button" id="donde" aria-expanded="false" aria-controls="indice">Sortida ▾</button>
+</header>
+<nav id="indice" hidden aria-label="Ves a un pas"></nav>
+<p id="anuncio" class="vh" role="status" aria-live="polite"></p>
+<main>
+
+<section class="paso corta" data-k="0" id="salida">
+<div class="portada">
+<h1>De les urnes a la Moncloa</h1>
+<p>Què votes el 29N i com es passa de la teva papereta a un Govern, amb els 350 escons del Congrés.</p>
+<p class="nota solo-js">Baixa per començar ↓</p>
+<noscript><p class="nota">Aquest navegador no executa JavaScript: només es mostra el text, sense l'escena ni els jocs.</p></noscript>
+<p class="prueba" id="avisoPrueba" hidden></p>
+<nav class="idiomas" aria-label="Idioma" translate="no">
+<a href="../" lang="es" hreflang="es">Castellano</a>
+<a href="../ca/" lang="ca" hreflang="ca" aria-current="page">Català</a>
+<a href="../va/" lang="ca-valencia" hreflang="ca-valencia">Valencià</a>
+<a href="../gl/" lang="gl" hreflang="gl">Galego</a>
+<a href="../eu/" lang="eu" hreflang="eu">Euskara</a>
+<a href="../en/" lang="en" hreflang="en">English</a>
+</nav>
+</div>
+</section>
+
+<section class="paso" data-k="1">
+<article class="tarjeta" aria-labelledby="tit1">
+<div class="cuerpo">
+<h2 id="tit1">1 · Què es vota</h2>
+<p>El 29N esculls qui seurà al Congrés. Hi ha 350 seients, que es diuen <button type="button" class="glos" data-g="escano">escons</button>, i es reparteixen per <button type="button" class="glos" data-g="circ">circumscripcions</button>: a la pràctica, per províncies.</p>
+<label class="sel" for="prov">Tria la teva província</label>
+<select id="prov" class="selProv"></select>
+<p id="provTxt" aria-live="polite"></p>
+<h3>Saber-ne més</h3>
+<details><summary>Per què algunes províncies tenen més escons</summary>
+<p>Cada província té d'entrada dos escons; Ceuta i Melilla, un cadascuna. Són 102. Els altres 248 es reparteixen segons la població.</p>
+<p>El compte es fa així: es divideix la població de totes les províncies per 248 i en surt una quota. Cada província rep tants escons com vegades cap aquesta quota en la seva població. Els que sobren van a les províncies que s'han quedat més a prop d'aconseguir-ne un més.</p>
+<p>Per al 29N s'ha fet servir el padró a 1 de gener de 2025, i la quota és d'uns 197.000 habitants. Per això Madrid n'escull 38 i Sòria, 2.</p>
+<p class="nota">Fonts: LOREG, art. 162; Reial decret 806/2026, annex; Reial decret 1117/2025, annex. La xifra de 102 és la suma de 50 províncies per dos, més Ceuta i Melilla. La quota (197.355) és un càlcul propi, i amb ella surt exactament el repartiment del decret.</p>
+</details>
+<details><summary>Qui pot votar</summary>
+<p>Poden votar els espanyols majors d'edat que estiguin inscrits al <button type="button" class="glos" data-g="censo">cens electoral</button>. Només perd el dret qui ha estat condemnat per sentència ferma a aquesta pena, i mentre la compleix.</p>
+<p>Es vota en persona, a la mesa que et toca, i una sola vegada. Per identificar-te serveix el DNI, el passaport o el carnet de conduir amb foto.</p>
+<p class="nota">Fonts: LOREG, arts. 2, 3, 4 i 85.</p>
+</details>
+<details><summary>Per què el 29 de novembre</summary>
+<p>El president del Govern va avançar les eleccions: el decret que va dissoldre les Corts va sortir al BOE el 6 d'octubre. La llei fixa la votació 54 dies després de la convocatòria, i això cau en diumenge 29 de novembre.</p>
+<p>Si un dia calgués repetir les eleccions, el termini seria més curt: 47 dies.</p>
+<p class="nota">Fonts: Constitució, art. 115; LOREG, art. 42.1 i disposició addicional setena; Reial decret 806/2026, arts. 1 i 2, publicat al BOE del 6 d'octubre de 2026. El 29 de novembre és el càlcul del dia 54.</p>
+</details>
+<details><summary>Com és anar a votar</summary>
+<p>Els col·legis obren de 9:00 a 20:00, sense interrupció. Votes dues vegades: una papereta blanca per al Congrés i una altra de color sèpia per al Senat, cadascuna al seu sobre.</p>
+<p>Pots fer servir la cabina, però no és obligatori. A la mesa, el president diu el teu nom, diu «vota» i el sobre entra a l'urna.</p>
+<p>El vot és secret: ningú et pot obligar a dir què has votat. Si no pots llegir o manejar les paperetes, et pot ajudar una persona de la teva confiança.</p>
+<p class="nota">Fonts: LOREG, arts. 5, 84, 86 i 87; Reial decret 605/1999, art. 4.</p>
+</details>
+<details><summary>Qui hi ha a la mesa</summary>
+<p>La <button type="button" class="glos" data-g="mesael">mesa electoral</button> són tres persones: un president i dos vocals. Surten per sorteig entre els votants d'aquesta mesa que saben llegir i escriure i tenen menys de setanta anys. És obligatori.</p>
+<p>Quan tanca el col·legi, ells obren l'urna i compten els vots en públic, d'un en un i en veu alta.</p>
+<p class="nota">Fonts: LOREG, arts. 25, 26, 27 i 95.</p>
+</details>
+<details><summary>Qui vigila les eleccions</summary>
+<p>Les <button type="button" class="glos" data-g="junta">juntes electorals</button>. Vetllen perquè el procés sigui net i igual per a tothom, resolen queixes i recursos, vigilen les enquestes i fan el recompte oficial.</p>
+<p>Hi ha una Junta Electoral Central, a Madrid, una a cada província i d'altres de zona. La Central la formen vuit magistrats del Tribunal Suprem, escollits per sorteig, i cinc catedràtics de Dret, Ciència Política o Sociologia proposats pels partits amb diputats. A les provincials i a les de zona també són majoria els jutges.</p>
+<p class="nota">Fonts: LOREG, arts. 8, 9, 10, 11, 19, 69 i 103.</p>
+</details>
+<details><summary>Què són les Corts i per a què serveixen</summary>
+<p>Les <button type="button" class="glos" data-g="cortes">Corts Generals</button> són el Congrés i el Senat junts. Fan les lleis, aproven els pressupostos i controlen el Govern. S'escullen per a quatre anys.</p>
+<p>De les dues cambres, el Congrés és la que escull el president del Govern i la que pot aixecar els vets del Senat.</p>
+<p class="nota">Fonts: Constitució, arts. 66, 68.4, 69.6, 90 i 99.</p>
+</details>
+<details><summary>Com són les llistes</summary>
+<p>Al Congrés votes una <button type="button" class="glos" data-g="lista">llista</button> sencera d'un partit, amb tants noms com escons reparteix la teva província. No pots ratllar ningú ni canviar l'ordre: el vot seria nul.</p>
+<p>Les llistes alternen dones i homes. S'hi pot presentar qualsevol espanyol major d'edat amb dret de vot, tret d'alguns càrrecs, com ara jutges, militars o policies en actiu.</p>
+<p class="nota">Fonts: LOREG, arts. 6, 44 bis, 46 i 96.</p>
+</details>
+<p class="nota">Al mapa, cada hexàgon és un escó: les províncies creixen o s'encongeixen segons els escons que reparteixen, dins de la silueta d'Espanya. Les Canàries van al requadre.</p>
+</div>
+</article>
+</section>
+
+<section class="paso" data-k="2">
+<article class="tarjeta" aria-labelledby="tit2">
+<div class="cuerpo">
+<h2 id="tit2">2 · Del vot a l'escó</h2>
+<p id="betIntro"></p>
+<div id="sliders"></div>
+<p id="resto" style="font-weight:700;margin-top:6px"></p>
+<p id="betErr" class="err" role="alert" hidden>Reparteix tots els escons abans d'apostar.</p>
+<button type="button" class="pill" id="apostar">Aposta</button>
+<div id="betRes" hidden>
+<p class="res" id="betHit"></p>
+<p style="font-size:14px">El partit E no arriba a la <button type="button" class="glos" data-g="barrera">barrera</button> del 3 % i es queda fora del repartiment.</p>
+<button type="button" class="pill sec" id="reapostar">Torna a apostar</button>
+</div>
+<h3>Saber-ne més</h3>
+<details><summary>Com es fa el repartiment</summary>
+<p>Es divideixen els vots de cada partit per 1, 2, 3 i així successivament. Els escons van, d'un en un, als resultats més alts de tota la taula. És la <button type="button" class="glos" data-g="dhondt">regla D'Hondt</button>.</p>
+<p>Aquesta és la taula de la teva província amb els partits de l'exemple. En color teula, les divisions que s'enduen escó, numerades en l'ordre en què l'aconsegueixen:</p>
+<div class="tabla" id="cocientes"></div>
+<p id="pasoReparto" class="paso-reparto"></p>
+<button type="button" class="pill sec" id="repetirReparto">Mira el repartiment pas a pas</button>
+<p>La mateixa llei posa un exemple: amb 480.000 vots i 8 escons, el partit més votat se n'enduu quatre, el segon dos, i el tercer i el quart, un cadascun.</p>
+<p class="nota">Font: LOREG, art. 163. A la taula, els percentatges inventats fan de vots.</p>
+</details>
+<details><summary>Des de quan es fa servir</summary>
+<p>Des del 1977. La va fixar el reial decret llei de normes electorals del març d'aquell any, que va regular les primeres eleccions després de la Llei per a la reforma política, ja amb 350 diputats. Ja en deia «regla d'Hondt», ja posava la barrera en el 3 % i ja portava el mateix exemple de 480.000 vots que porta avui la llei.</p>
+<p>Aquell decret la presentava com un fre perquè el Congrés no quedés massa fragmentat. I el repartiment d'aleshores era un altre: Madrid escollia 32 diputats, Barcelona 33 i Sòria 3.</p>
+<p class="nota">Font: Reial decret llei 20/1977, de 18 de març, sobre normes electorals: preàmbul i arts. 19 i 20.</p>
+</details>
+<details><summary>La barrera del 3 %</summary>
+<p>Abans de repartir s'aparten els partits que no arriben al 3 % dels vots vàlids de la província. Els seus vots no es passen a ningú: senzillament no entren a la taula.</p>
+<p>La barrera es mesura província a província, no a tot Espanya.</p>
+<p class="nota">Font: LOREG, art. 163.</p>
+</details>
+<details><summary>Blanc, nul i abstenció</summary>
+<p>El <button type="button" class="glos" data-g="blanco">vot en blanc</button> és un sobre buit. És vàlid: no va a cap partit, però compta en el total i per això apuja una mica el llistó del 3 %.</p>
+<p>El <button type="button" class="glos" data-g="nulo">vot nul</button> no compta per al repartiment. Ho és una papereta amb ratllades o afegits, o un sobre que no és l'oficial. Si hi poses dues paperetes del mateix partit, val com un sol vot.</p>
+<p>Qui no va a votar s'absté: no entra en cap compte.</p>
+<p class="nota">Fonts: LOREG, arts. 96 i 108.</p>
+</details>
+<details><summary>Què passa si hi ha empat</summary>
+<p>Si dos partits empaten en una divisió, l'escó és per al que té més vots en total. Si també empaten en això, se sorteja.</p>
+<p class="nota">Font: LOREG, art. 163.</p>
+</details>
+<details><summary>Qui ocupa cada escó</summary>
+<p>Els escons d'un partit són per als primers de la seva llista, per ordre. Si un diputat renuncia o mor, entra el següent de la mateixa llista o un <button type="button" class="glos" data-g="suplente">suplent</button>. No cal tornar a votar.</p>
+<p class="nota">Fonts: LOREG, arts. 163 i 164.</p>
+</details>
+<details><summary>Ceuta i Melilla</summary>
+<p>Cadascuna escull un sol diputat, de manera que no hi ha res a repartir: guanya qui treu més vots.</p>
+<p class="nota">Font: LOREG, art. 163.2.</p>
+</details>
+<details><summary>L'últim escó</summary>
+<p>L'últim escó de cada província és el més disputat. Se l'enduu el partit amb la següent divisió més alta, i de vegades un altre es queda molt a prop.</p>
+<p>Quan hi hagi resultats, al pas 10 veuràs per quants vots es va decidir a la teva província.</p>
+<p class="nota">Explicació pròpia a partir de la regla de l'art. 163 de la LOREG.</p>
+</details>
+</div>
+</article>
+</section>
+
+<section class="paso" data-k="3">
+<article class="tarjeta" aria-labelledby="tit3">
+<div class="cuerpo">
+<h2 id="tit3">3 · On votes</h2>
+<p>Els mateixos percentatges no donen el mateix a tot arreu. Com menys escons reparteix una província, menys partits hi entren.</p>
+<ul class="lista" id="comp"></ul>
+<p id="hab" aria-live="polite"></p>
+<h3>Saber-ne més</h3>
+<details><summary>Quants habitants hi ha darrere de cada escó</summary>
+<p>Els escons es reparteixen per població, però amb un mínim de dos per província. Per això a les províncies petites calen molts menys habitants per escollir un diputat.</p>
+<p>Per al 29N, a Sòria hi ha un escó per cada 45.117 habitants; a Madrid, un per cada 187.817: quatre vegades més.</p>
+<p>El compte és d'habitants, no de votants: inclou menors i estrangers, que no voten en aquestes eleccions.</p>
+<ol class="barras" id="barrasHab" aria-label="Habitants per escó a cada circumscripció, de menys a més"></ol>
+<p class="nota">Fonts: Reial decret 1117/2025, annex (padró a 1 de gener de 2025); Reial decret 806/2026, annex; LOREG, arts. 2 i 162. Habitants per escó: càlcul propi, població dividida per escons.</p>
+</details>
+<details><summary>Per què passa</summary>
+<p>Amb dos escons només hi caben els dos partits més votats. Amb 38, fins i tot un partit amb el 9 % n'aconsegueix uns quants. La regla és la mateixa; canvia la mida de la província.</p>
+<p>A l'exemple, amb dos escons no n'hi ha prou ni amb un 17 %. A les províncies petites, el llistó de debò és molt per sobre del 3 %.</p>
+<p class="nota">Exemple propi: els mateixos cinc partits inventats i els mateixos percentatges a les dues províncies.</p>
+</details>
+<details><summary>Què diu la Constitució i què diu la llei</summary>
+<p>La Constitució fixa tres coses: que el Congrés tingui entre 300 i 400 diputats, que cada província sigui una circumscripció i que el repartiment sigui proporcional.</p>
+<p>La resta la decideix la llei electoral: que siguin 350, que cada província en tingui dos d'entrada, la regla D'Hondt i la barrera del 3 %.</p>
+<p>Canviar la llei electoral exigeix majoria absoluta del Congrés, perquè és una <button type="button" class="glos" data-g="organica">llei orgànica</button>. Canviar la Constitució exigeix força més.</p>
+<p class="nota">Fonts: Constitució, arts. 68 i 81; LOREG, arts. 162 i 163.</p>
+</details>
+<details><summary>Quantes províncies hi ha de cada mida</summary>
+<p id="tamanos"></p>
+<p class="nota">Càlcul propi a partir de l'annex del Reial decret 806/2026.</p>
+</details>
+</div>
+</article>
+</section>
+
+<section class="paso" data-k="4">
+<article class="tarjeta" aria-labelledby="tit4">
+<div class="cuerpo">
+<h2 id="tit4">4 · El Senat</h2>
+<p>Al Senat es vota diferent: marques persones, no llistes. En una província pots marcar fins a tres noms i surten escollides les quatre persones més votades.</p>
+<fieldset id="sen"><legend class="nota">Prova de marcar (noms inventats)</legend></fieldset>
+<p id="senTxt" style="font-weight:700"></p>
+<p>El Senat no escull el president ni el pot fer caure. Però sense ell no es reforma la Constitució, i li toca escollir una part del Tribunal Constitucional i del Consell General del Poder Judicial.</p>
+<h3>Saber-ne més</h3>
+<details><summary>La clau de la reforma constitucional</summary>
+<p>Per reformar la Constitució calen tres cinquens del Congrés i tres cinquens del Senat. Si el Senat no arriba a tres cinquens, queda una altra via: que ho aprovi per majoria absoluta i que el Congrés ho aprovi per dos terços. Sense la majoria absoluta del Senat, la reforma no tira endavant.</p>
+<p>Les reformes més profundes, les que toquen el títol preliminar, els drets fonamentals o la Corona, exigeixen dos terços de cada cambra, dissoldre les Corts, que les noves ho ratifiquin també per dos terços i un referèndum.</p>
+<p>A la pràctica, qui tingui més de la meitat del Senat pot bloquejar qualsevol reforma, i qui en tingui més d'un terç, les més profundes. A més, una desena part dels senadors pot exigir que qualsevol reforma es voti en referèndum.</p>
+<p class="nota">Fonts: Constitució, arts. 167 i 168. Les xifres de bloqueig són un càlcul propi a partir d'aquestes majories.</p>
+</details>
+<details><summary>Nomenaments que passen pel Senat</summary>
+<p>El Senat proposa quatre dels dotze magistrats del Tribunal Constitucional i escull deu dels vint vocals del Consell General del Poder Judicial, l'òrgan que governa els jutges; els altres deu, el Congrés. En tots dos casos calen tres cinquens dels senadors.</p>
+<p>Això vol dir que qui tingui més de dos cinquens del Senat pot impedir aquests nomenaments.</p>
+<p class="nota">Fonts: Constitució, arts. 122.3 i 159.1; Llei orgànica del poder judicial, art. 567.2. El bloqueig és un càlcul propi a partir de la majoria de tres cinquens.</p>
+</details>
+<details><summary>Illes, Ceuta i Melilla</summary>
+<p>Gran Canària, Mallorca i Tenerife escullen tres senadors i s'hi marquen dos noms. Ceuta i Melilla n'escullen dos i se'n marquen dos. A la resta d'illes se n'escull un i se'n marca un.</p>
+<p>Eivissa i Formentera escullen per separat després de la reforma constitucional del maig de 2026.</p>
+<p>En total s'escullen així 209 senadors.</p>
+<p class="nota">Fonts: Reial decret 806/2026, art. 3; LOREG, arts. 165 i 166; Constitució, art. 69. El total de 209 és una suma pròpia a partir del decret.</p>
+</details>
+<details><summary>Com és la papereta</summary>
+<p>És una sola papereta, de color sèpia, amb totes les candidatures: cada partit amb els seus candidats a sota i un requadre davant de cada nom. Marques amb una creu qui triïs, com a molt tres, i poden ser de partits diferents: la llei només limita quants.</p>
+<p>Si en marques més dels permesos, el vot és nul. Si no marques ningú, és un vot en blanc.</p>
+<p class="nota">Fonts: Reial decret 605/1999, art. 4 i annex 3; LOREG, arts. 96, 166 i 172.3.</p>
+</details>
+<details><summary>Per a què serveix el Senat</summary>
+<p>La Constitució el defineix com la cambra de representació territorial. Revisa les lleis que li arriben del Congrés: té dos mesos per canviar-les o per vetar-les. El Congrés pot aixecar aquest <button type="button" class="glos" data-g="veto">vet</button>.</p>
+<p>Hi ha una cosa que només pot autoritzar el Senat, per majoria absoluta: que el Govern obligui una comunitat autònoma a complir la llei, l'article 155.</p>
+<p>També pot proposar lleis, crear comissions d'investigació i, amb 50 senadors, impugnar una llei davant del Tribunal Constitucional. Els acords de cooperació entre comunitats autònomes i el repartiment del Fons de Compensació Interterritorial comencen al Senat, tot i que, si les dues cambres no es posen d'acord, decideix el Congrés.</p>
+<p class="nota">Fonts: Constitució, arts. 69, 74.2, 76, 87.1, 90, 145.2, 155, 158.2 i 162.1.</p>
+</details>
+<details><summary>El que el Senat no pot fer</summary>
+<p>No vota la investidura ni la moció de censura: això és només cosa del Congrés. Tampoc decideix sobre els decrets llei del Govern ni sobre els estats d'alarma, excepció i setge.</p>
+<p>Pot preguntar i interpel·lar el Govern cada setmana, però no fer-lo caure.</p>
+<p class="nota">Fonts: Constitució, arts. 86, 99, 111, 113 i 116.</p>
+</details>
+<details><summary>Si el Senat té una altra majoria</summary>
+<p>Si al Senat hi mana una majoria diferent de la del Congrés, pot endarrerir les lleis dos mesos i obligar el Congrés a votar-les una altra vegada. I pot bloquejar les reformes constitucionals i els nomenaments que exigeixen tres cinquens.</p>
+<p>El que no pot fer és aturar una llei per sempre: el Congrés té l'última paraula.</p>
+<p class="nota">Explicació pròpia a partir dels arts. 90, 122.3, 159.1, 167 i 168 de la Constitució.</p>
+</details>
+<details><summary>Els senadors que no es voten</summary>
+<p>A més dels escollits a les urnes, cada parlament autonòmic designa un senador, més un altre per cada milió d'habitants de la seva comunitat. Són els <button type="button" class="glos" data-g="designacion">senadors per designació</button>.</p>
+<p>Si un senador escollit a les urnes deixa l'escó, l'ocupa el seu suplent.</p>
+<p class="nota">Fonts: Constitució, art. 69.5; LOREG, art. 166.</p>
+</details>
+</div>
+</article>
+</section>
+
+<section class="paso" data-k="5">
+<article class="tarjeta" aria-labelledby="tit5">
+<div class="cuerpo">
+<h2 id="tit5">5 · Les majories</h2>
+<p>Per escollir president a la primera cal la <button type="button" class="glos" data-g="absoluta">majoria absoluta</button>: 176 sís de 350. Si no surt, 48 hores després n'hi ha prou amb la <button type="button" class="glos" data-g="simple">majoria simple</button>: més sís que nos.</p>
+<p class="nota">En color teula, els 176 escons que marquen la meitat més un.</p>
+<h3>Saber-ne més</h3>
+<details><summary>Per què l'abstenció pesa diferent</summary>
+<p>A la primera votació només compten els sís: cal reunir-ne 176, i qui s'absté no ajuda.</p>
+<p>A la segona es comparen sís i nos. Aquí, abstenir-se en lloc de votar no sí que ajuda el candidat, perquè hi ha un no menys per superar.</p>
+<p class="nota">Explicació pròpia a partir de l'art. 99.3 de la Constitució.</p>
+</details>
+<details><summary>Altres majories</summary>
+<p>La majoria absoluta (176) també cal per aprovar les lleis orgàniques i la moció de censura.</p>
+<p>Tres cinquens (210): reformar la Constitució i proposar magistrats del Tribunal Constitucional.</p>
+<p>Dos terços (234): les reformes constitucionals de més abast.</p>
+<p class="nota">Fonts: Constitució, arts. 81, 99, 113, 159, 167 i 168. Les xifres 210 i 234 són el càlcul sobre 350 diputats.</p>
+</details>
+<details><summary>El dia a dia: quòrum i majoria simple</summary>
+<p>Perquè una votació valgui hi ha de ser present més de la meitat de la cambra: és el <button type="button" class="glos" data-g="quorum">quòrum</button>. Les decisions corrents s'aproven amb més vots a favor que en contra entre els presents.</p>
+<p>Si hi ha empat, es vota una altra vegada. Si persisteix, es fa una pausa i es vota una tercera vegada. Si continua l'empat, la proposta es dona per rebutjada.</p>
+<p class="nota">Fonts: Constitució, art. 79; Reglament del Congrés, arts. 78, 79 i 88.</p>
+</details>
+<details><summary>Lleis orgàniques i decrets llei</summary>
+<p>Les lleis orgàniques tracten els assumptes de més pes: els drets fonamentals, els estatuts d'autonomia o les regles electorals. Necessiten majoria absoluta del Congrés.</p>
+<p>El <button type="button" class="glos" data-g="decretoley">decret llei</button> és la drecera del Govern per a casos urgents: l'aprova ell sol i entra en vigor, però el Congrés té trenta dies per mantenir-lo o tombar-lo.</p>
+<p class="nota">Fonts: Constitució, arts. 81 i 86.</p>
+</details>
+<details><summary>Moció de censura i qüestió de confiança</summary>
+<p>La <button type="button" class="glos" data-g="censura">moció de censura</button> és la manera de canviar de president sense eleccions. La signen almenys 35 diputats, porta el nom d'un candidat i necessita majoria absoluta. Si tira endavant, aquest candidat passa a ser president.</p>
+<p>La <button type="button" class="glos" data-g="confianza">qüestió de confiança</button> va al revés: la demana el mateix president. En té prou amb la majoria simple. Si la perd, dimiteix i es busca un nou president.</p>
+<p class="nota">Fonts: Constitució, arts. 112, 113 i 114. Els 35 diputats són la desena part de 350.</p>
+</details>
+<details><summary>Els pressupostos</summary>
+<p>Els prepara el Govern i els aproven les Corts. Si l'any comença sense pressupostos nous, continuen valent els de l'any anterior fins que se n'aprovin uns de nous.</p>
+<p>Per això un Govern sense majoria pot continuar governant, però amb els comptes d'un altre any.</p>
+<p class="nota">Font: Constitució, art. 134.</p>
+</details>
+</div>
+</article>
+</section>
+
+<section class="paso" data-k="6">
+<article class="tarjeta" aria-labelledby="tit6">
+<div class="cuerpo">
+<h2 id="tit6">6 · Pactes</h2>
+<p>Si cap partit no arriba tot sol a 176, toca pactar. Toca cada partit per canviar el seu vot a la <button type="button" class="glos" data-g="investidura">investidura</button>: no, sí o <button type="button" class="glos" data-g="abstencion">abstenció</button>.</p>
+<div class="calc" id="calc6"></div>
+<p class="nota" id="porraNota"></p>
+<h3>Saber-ne més</h3>
+<details><summary>Tres maneres de donar suport</summary>
+<p>Un partit pot ajudar un candidat de tres maneres. Entrant al Govern amb ell: és una coalició. Votant sí sense entrar al Govern. O abstenint-se, perquè en tingui prou amb la segona votació.</p>
+<p>El que es demana a canvi no és a cap llei: és negociació política.</p>
+<p class="nota">Explicació pròpia. Les majories, a l'art. 99 de la Constitució.</p>
+</details>
+<details><summary>Com es vota la investidura</summary>
+<p>D'un en un i en veu alta. Es crida cada diputat per ordre alfabètic del primer cognom, començant per un de triat per sorteig, i respon «sí», «no» o «abstenció». Els membres del Govern que són diputats i la Mesa voten al final.</p>
+<p>Abans hi ha debat: el candidat explica el seu programa sense límit de temps i cada grup li respon durant mitja hora.</p>
+<p class="nota">Fonts: Reglament del Congrés, arts. 85, 86 i 171.</p>
+</details>
+<details><summary>Si la investidura falla</summary>
+<p>Si el candidat no surt escollit, el Rei pot fer noves propostes. Però el rellotge ja corre: dos mesos després de la primera votació, si no hi ha president, es dissolen les Corts i es torna a votar.</p>
+<p>Ha passat dues vegades. El 2016 i el 2019 ningú va aconseguir la investidura a temps i es van repetir les eleccions.</p>
+<p>En una repetició tot va més de pressa: es vota 47 dies després de la convocatòria, no 54.</p>
+<p class="nota">Fonts: Constitució, art. 99; LOREG, art. 42 i disposició addicional setena (afegida per la Llei orgànica 2/2016); reials decrets 184/2016 i 551/2019.</p>
+</details>
+<details><summary>D'on surten aquests escons</summary>
+<p>No són resultats: són escons calculats a partir de les últimes enquestes per <a href="https://gastiaso.github.io/porra-electoral/">Porra Electoral</a>, que aplega les enquestes publicades i simula el repartiment província a província. El 30N es canviaran pels escons de debò.</p>
+<p class="nota">Font: <a href="https://gastiaso.github.io/porra-electoral/">Porra Electoral</a>.</p>
+</details>
+<details><summary>Per què la calculadora porta data</summary>
+<p>La llei prohibeix publicar o difondre enquestes electorals durant els cinc dies anteriors a la votació: per al 29N, del 24 al 28 de novembre. Per això l'estimació d'aquesta calculadora es va congelar abans i porta la data de l'última enquesta que inclou.</p>
+<p>Qui vigila que les enquestes compleixin la llei és la Junta Electoral Central.</p>
+<p class="nota">Font: LOREG, art. 69. Del 24 al 28 de novembre és el càlcul dels cinc dies.</p>
+</details>
+</div>
+</article>
+</section>
+
+<section class="paso" data-k="7">
+<article class="tarjeta" aria-labelledby="tit7">
+<div class="cuerpo">
+<h2 id="tit7">7 · Del 29N al Govern</h2>
+<p>El rellotge de dos mesos no es posa en marxa el 29N. Comença amb la primera votació d'<button type="button" class="glos" data-g="investidura">investidura</button>.</p>
+<p class="nota solo-js">Toca cada data per veure què passa aquell dia.</p>
+<ol class="calendario">
+<li class="fase">Abans de votar</li>
+<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h1">dt. 6 oct.</button><span class="que">Es dissolen les Corts i es convoquen eleccions</span><span class="tip" id="h1">El Reial decret 806/2026 surt al BOE: dissol el Congrés i el Senat escollits el juliol de 2023 i fixa la votació 54 dies després, el diumenge 29 de novembre. <small>Reial decret 806/2026, arts. 1 i 2; LOREG, art. 42.1.</small></span></li>
+<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h2">dv. 13 nov.</button><span class="que">Comença la campanya</span><span class="tip" id="h2">Quinze dies en què els partits demanen el vot amb mítings, cartells i anuncis. Arrenca a les zero hores. <small>LOREG, art. 51; Reial decret 806/2026, art. 4.</small></span></li>
+<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h3">dj. 19 nov.</button><span class="que">Últim dia per demanar el vot per correu</span><span class="tip" id="h3">Es demana en una oficina de Correus, en persona i amb el DNI. Les paperetes arriben després a casa i es tornen per correu certificat, sense segell. <small>LOREG, arts. 72 i 73. Data: càlcul del desè dia anterior.</small></span></li>
+<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h4">21-26 nov.</button><span class="que">Vot als consolats</span><span class="tip" id="h4">Qui viu a l'estranger pot dipositar el seu vot en una urna del seu consolat o ambaixada. Si l'envia per correu, ho ha de fer com a molt tard el 24. <small>LOREG, art. 75. Dates: càlcul dels terminis de l'article.</small></span></li>
+<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h5">24-28 nov.</button><span class="que">No es poden publicar enquestes</span><span class="tip" id="h5">La llei prohibeix publicar, difondre o reproduir sondejos electorals durant els cinc dies anteriors a la votació. <small>LOREG, art. 69.7.</small></span></li>
+<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h6">dv. 27 nov.</button><span class="que">S'acaba la campanya</span><span class="tip" id="h6">A mitjanit s'acaben els mítings, la propaganda i els actes de campanya. <small>LOREG, art. 51; Reial decret 806/2026, art. 4.</small></span></li>
+<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h7">ds. 28 nov.</button><span class="que">Jornada de reflexió</span><span class="tip" id="h7">La vigília no hi pot haver propaganda ni actes de campanya. <small>LOREG, arts. 51.3 i 53.</small></span></li>
+<li class="fase">La votació</li>
+<li class="hito clave"><button type="button" class="fecha" aria-expanded="false" aria-controls="h8">dg. 29 nov.</button><span class="que">Es vota, de 9:00 a 20:00</span><span class="tip" id="h8">Els col·legis no tanquen en tot el dia. En acabar, cada mesa obre l'urna i compta els vots en públic. A la nit es coneix el recompte provisional. <small>LOREG, arts. 84, 95 i 98.</small></span></li>
+<li class="fase">El recompte oficial</li>
+<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h9">dv. 4 des.</button><span class="que">Escrutini general</span><span class="tip" id="h9">Les juntes electorals fan el recompte oficial amb les actes de les meses i hi sumen el vot arribat de l'estranger. <small>LOREG, arts. 75 i 103. Data: càlcul del cinquè dia.</small></span></li>
+<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h10">dl. 7 des.</button><span class="que">Com a molt tard, s'acaba l'escrutini</span><span class="tip" id="h10">Després es proclamen els electes. Des de la proclamació hi ha tres dies per presentar recurs; els recursos els resol el Tribunal Suprem. <small>LOREG, arts. 107.2, 108 i 112. Data: càlcul del vuitè dia.</small></span></li>
+<li class="fase">Les noves Corts</li>
+<li class="hito clave"><button type="button" class="fecha" aria-expanded="false" aria-controls="h11">dc. 23 des.</button><span class="que">Es constitueixen el Congrés i el Senat</span><span class="tip" id="h11">A les deu del matí, cada cambra en la seva sessió constitutiva. Al Congrés presideix al començament el diputat de més edat, s'escull la Mesa i els diputats juren o prometen la Constitució. <small>Reial decret 806/2026, art. 5; Constitució, art. 72.2; Reglament del Congrés, arts. 1 a 4 i 37.</small></span></li>
+<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h12">fins al 28 des.</button><span class="que">Es formen els grups parlamentaris</span><span class="tip" id="h12">En els cinc dies següents a la sessió constitutiva. Per regla general calen quinze diputats; hi ha una altra via amb cinc si se supera un mínim de vots. <small>Reglament del Congrés, arts. 23 i 24. Data: càlcul dels cinc dies.</small></span></li>
+<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h13">1 gen. 2027</button><span class="que">Si no hi ha pressupostos nous, continuen els anteriors</span><span class="tip" id="h13">Es prorroguen automàticament fins que se n'aprovin uns altres. Un Govern en funcions no pot aprovar el projecte de pressupostos. <small>Constitució, art. 134.4; Llei 50/1997, art. 21.5.</small></span></li>
+<li class="fase">La investidura</li>
+<li class="hito abierta"><button type="button" class="fecha" aria-expanded="false" aria-controls="h14">sense data</button><span class="que">El Rei consulta i proposa un candidat</span><span class="tip" id="h14">Rep els representants dels grups amb escons i proposa un candidat a través de la presidència del Congrés. La Constitució no li posa termini. <small>Constitució, art. 99.1.</small></span></li>
+<li class="hito abierta clave"><button type="button" class="fecha" aria-expanded="false" aria-controls="h15">dia D</button><span class="que">Debat i primera votació</span><span class="tip" id="h15">El candidat exposa el seu programa sense límit de temps i cada grup li respon. Necessita 176 sís. Aquí es posa en marxa el rellotge de dos mesos. <small>Constitució, art. 99; Reglament del Congrés, art. 171.</small></span></li>
+<li class="hito abierta"><button type="button" class="fecha" aria-expanded="false" aria-controls="h16">D + 48 h</button><span class="que">Segona votació</span><span class="tip" id="h16">Si no va arribar a 176, n'hi ha prou amb més sís que nos. Si tampoc surt escollit, el Rei pot proposar un altre candidat. <small>Constitució, art. 99.3 i 99.4.</small></span></li>
+<li class="hito abierta"><button type="button" class="fecha" aria-expanded="false" aria-controls="h17">D + 2 mesos</button><span class="que">Si no hi ha president, noves eleccions</span><span class="tip" id="h17">Es dissolen les Corts i es vota 47 dies després de la convocatòria. Ha passat el 2016 i el 2019. <small>Constitució, art. 99.5; LOREG, disposició addicional setena; reials decrets 184/2016 i 551/2019.</small></span></li>
+<li class="hito abierta"><button type="button" class="fecha" aria-expanded="false" aria-controls="h18">amb president</button><span class="que">Nomenament i nou Govern</span><span class="tip" id="h18">El Rei nomena president el candidat investit i, a proposta seva, els ministres. Quan prenen possessió, s'acaba el Govern en funcions. <small>Constitució, arts. 62, 99.3, 100 i 101.</small></span></li>
+</ol>
+<h3>Saber-ne més</h3>
+<details><summary>La campanya i la jornada de reflexió</summary>
+<p>La campanya dura quinze dies: del divendres 13 al divendres 27 de novembre. És el temps en què els partits demanen el vot amb mítings, cartells i anuncis. Abans del 13 no poden posar cartells ni anuncis electorals.</p>
+<p>El dissabte 28, la vigília, no hi pot haver propaganda ni actes de campanya. És el que es coneix com a jornada de reflexió.</p>
+<p class="nota">Fonts: LOREG, arts. 51 i 53; Reial decret 806/2026, art. 4. «Jornada de reflexió» és el nom d'ús comú; la llei parla del període en què la campanya ha acabat.</p>
+</details>
+<details><summary>Si aquell dia no hi pots anar</summary>
+<p>Hi ha el vot per correu. Cal demanar-lo en una oficina de Correus, en persona i amb el DNI, fins a deu dies abans de la votació: per al 29N, fins al 19 de novembre. Després t'arriben les paperetes a casa i les tornes per correu certificat, sense pagar segell.</p>
+<p>Qui viu a l'estranger i està inscrit al cens de residents absents rep la documentació a casa sense demanar-la. Pot votar en una urna del seu consolat, del 21 al 26 de novembre, o enviar el vot per correu al consolat com a molt tard el 24. Aquests vots es compten el 4 de desembre, en el recompte oficial.</p>
+<p class="nota">Fonts: LOREG, arts. 72, 73, 75 i 103. Les dates són el càlcul dels terminis d'aquests articles per al 29N.</p>
+</details>
+<details><summary>La nit electoral no és el resultat oficial</summary>
+<p>La nit del 29N es coneix un recompte provisional, fet amb les actes de les meses. L'oficial, l'<button type="button" class="glos" data-g="escrutinio">escrutini general</button>, el fan les <button type="button" class="glos" data-g="junta">juntes electorals</button> el cinquè dia: el 4 de desembre. Aquell dia s'hi suma el vot arribat de l'estranger.</p>
+<p>Ha d'estar acabat com a molt tard el vuitè dia: el 7 de desembre. Després es proclamen els diputats. Des d'aquell moment hi ha tres dies per presentar recurs, i els recursos els resol el Tribunal Suprem.</p>
+<p class="nota">Fonts: LOREG, arts. 75, 98, 103, 107, 108 i 112. El 4 i el 7 de desembre són el càlcul del cinquè i el vuitè dia.</p>
+</details>
+<details><summary>Per què el 23 de desembre</summary>
+<p>La Constitució dona 25 dies des de la votació per reunir el nou Congrés. El decret que va convocar les eleccions va fixar el 23 de desembre a les deu.</p>
+<p class="nota">Fonts: Constitució, art. 68.6; Reial decret 806/2026, art. 5.</p>
+</details>
+<details><summary>El primer dia del Congrés</summary>
+<p>Presideix el diputat de més edat, amb els dos més joves de secretaris. La primera cosa és escollir la <button type="button" class="glos" data-g="mesa">Mesa del Congrés</button>. Per presidir-la cal majoria absoluta; si no l'aconsegueix ningú, es decideix entre els dos més votats.</p>
+<p>Després, els diputats juren o prometen acatar la Constitució i el Congrés queda constituït.</p>
+<p>Per ser diputat de ple dret cal lliurar la credencial i la declaració d'activitats, i jurar o prometre la Constitució. Qui no ho faci en tres plens es queda sense drets ni prerrogatives fins que ho faci.</p>
+<p>Els <button type="button" class="glos" data-g="grupo">grups parlamentaris</button> es formen en els cinc dies següents.</p>
+<p class="nota">Fonts: Reglament del Congrés, arts. 1 a 4, 20, 23, 24 i 37.</p>
+</details>
+<details><summary>Les consultes del Rei</summary>
+<p>El Rei rep els representants dels partits amb escó i després proposa un candidat, a través de la presidència del Congrés. La Constitució no li posa termini.</p>
+<p>Per això el calendari té un tram sense dates: fins que no hi ha una primera votació, el rellotge de dos mesos no compta.</p>
+<p class="nota">Font: Constitució, arts. 62 i 99.</p>
+</details>
+<details><summary>Qui governa mentrestant</summary>
+<p>El Govern sortint continua <button type="button" class="glos" data-g="funciones">en funcions</button> fins que pren possessió el nou. Despatxa els assumptes ordinaris, però no pot presentar projectes de llei ni els pressupostos.</p>
+<p>El seu president tampoc pot dissoldre les Corts, ni plantejar una qüestió de confiança, ni proposar un referèndum.</p>
+<p class="nota">Fonts: Constitució, art. 101; Llei 50/1997, art. 21.</p>
+</details>
+<details><summary>I mentre no hi ha Corts</summary>
+<p>Des que es van dissoldre les cambres fins que es constitueixin les noves queda de guàrdia un grup reduït de diputats i un altre de senadors: la <button type="button" class="glos" data-g="permanente">Diputació Permanent</button>.</p>
+<p>Fa el que en aquest temps no pot fer el Congrés: mantenir o tombar els <button type="button" class="glos" data-g="decretoley">decrets llei</button> del Govern i decidir sobre els estats d'alarma, excepció i setge.</p>
+<p class="nota">Fonts: Constitució, arts. 78, 86 i 116.</p>
+</details>
+<details><summary>Quan ja hi ha president</summary>
+<p>El Rei nomena el president que ha escollit el Congrés. Després nomena els ministres que el president li proposa. Quan el nou Govern pren possessió, l'anterior deixa d'estar en funcions.</p>
+<p class="nota">Fonts: Constitució, arts. 62, 99, 100 i 101.</p>
+</details>
+</div>
+</article>
+</section>
+
+<section class="paso" data-k="8">
+<article class="tarjeta" aria-labelledby="tit8">
+<div class="cuerpo">
+<h2 id="tit8">8 · Tancament</h2>
+<p class="solo-f1">Fins aquí, les regles. El 30N s'obren cinc passos més, amb els resultats i el que passi després.</p>
+<p class="solo-f2">Fins aquí, les regles. Els cinc passos que segueixen expliquen què ha passat.</p>
+<details><summary>Glossari complet</summary><dl class="glosario" id="glosario"></dl></details>
+<p class="fuentes" style="margin-top:8px">Fonts: <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20742">Reial decret 806/2026</a>, <a href="https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229">Constitució</a>, <a href="https://www.boe.es/buscar/act.php?id=BOE-A-1985-11672">LOREG</a>, <a href="https://www.boe.es/buscar/act.php?id=BOE-A-1982-5196">Reglament del Congrés</a>, <a href="https://www.boe.es/buscar/act.php?id=BOE-A-1999-8583">Reial decret 605/1999</a> i <a href="https://www.boe.es/buscar/act.php?id=BOE-A-1997-25336">Llei 50/1997</a>.</p>
+<button type="button" class="pill sec" id="volver">Torna a la sortida</button>
+<button type="button" class="pill sec" id="soloTexto">Mostra només el text</button>
+</div>
+</article>
+</section>
+
+<section class="paso f2" data-k="9">
+<article class="tarjeta" aria-labelledby="tit9">
+<div class="cuerpo">
+<h2 id="tit9">9 · Què ha passat</h2>
+<p id="r9"></p>
+<div class="tabla" id="t9"></div>
+<p class="nota" id="f9"></p>
+<h3>Saber-ne més</h3>
+<details><summary>Com es llegeix el mapa</summary>
+<p>Cada hexàgon és un escó i porta el color del partit que l'ha guanyat. Les províncies grans ocupen més perquè reparteixen més escons, no perquè tinguin més territori.</p>
+<p class="nota">Explicació pròpia.</p>
+</details>
+<details><summary>Provisional i oficial</summary>
+<p>El que es coneix la nit electoral és un recompte provisional. L'oficial el fan les juntes electorals cinc dies després, i és llavors quan s'hi suma el vot arribat de l'estranger.</p>
+<p>Després es proclamen els diputats. Des d'aquell moment hi ha tres dies per presentar recurs, i els recursos els resol el Tribunal Suprem.</p>
+<p class="nota">Fonts: LOREG, arts. 75, 98, 103, 108 i 112.</p>
+</details>
+<details><summary>Què són els vots vàlids</summary>
+<p>Els percentatges es calculen sobre els vots vàlids: els que van a un partit més els vots en blanc. Els nuls queden fora.</p>
+<p class="nota">Fonts: LOREG, arts. 96 i 108.</p>
+</details>
+</div>
+</article>
+</section>
+
+<section class="paso f2" data-k="10">
+<article class="tarjeta" aria-labelledby="tit10">
+<div class="cuerpo">
+<h2 id="tit10">10 · A la teva província</h2>
+<label class="sel" for="prov2">La teva província</label>
+<select id="prov2" class="selProv"></select>
+<p id="r10"></p>
+<ul class="lista" id="l10"></ul>
+<p id="u10" style="font-weight:700"></p>
+<h3>I si…?</h3>
+<p>Passa vots d'un partit a un altre i mira com canvia el repartiment de la teva província. El total de vots no canvia.</p>
+<div class="ysi">
+<label class="sel" for="ysiDe">Treu vots a</label><select id="ysiDe"></select>
+<label class="sel" for="ysiA">Dona'ls a</label><select id="ysiA"></select>
+<label class="sel" for="ysiN">Quants: <output id="ysiV" for="ysiN"></output></label><input type="range" id="ysiN" min="0" value="0">
+</div>
+<ul class="lista" id="ysiL" aria-live="polite"></ul>
+<p id="ysiT" style="font-weight:700"></p>
+<h3>Saber-ne més</h3>
+<details><summary>Com es calcula el que va faltar</summary>
+<p>L'últim escó se l'enduu la divisió més alta que quedava a la taula. El que li va faltar al partit següent és quants vots més hauria necessitat perquè la seva divisió superés aquesta, sense que canviï res més.</p>
+<p>És un càlcul sobre el paper: a la realitat, si un partit puja, d'altres baixen.</p>
+<p class="nota">Càlcul propi amb la regla de l'art. 163 de la LOREG.</p>
+</details>
+<details><summary>Si un diputat deixa l'escó</summary>
+<p>Entra el següent de la llista per la qual va sortir escollit; no es torna a votar.</p>
+<p class="nota">Font: LOREG, art. 164.</p>
+</details>
+</div>
+</article>
+</section>
+
+<section class="paso f2" data-k="11">
+<article class="tarjeta" aria-labelledby="tit11">
+<div class="cuerpo">
+<h2 id="tit11">11 · Vots i escons</h2>
+<p id="r11"></p>
+<div class="tabla" id="t11"></div>
+<ol class="votesc" id="g11" aria-label="Percentatge de vots i d'escons de cada partit"></ol>
+<p class="nota leyenda"><i class="lv"></i> vots <i class="le"></i> escons</p>
+<p id="s11" style="font-weight:700"></p>
+<h3>Saber-ne més</h3>
+<details><summary>Per què no coincideixen</summary>
+<p>Perquè els escons no es reparteixen una vegada a tot Espanya, sinó 52 vegades: una per província. A les petites només hi entren els partits més votats, i els vots dels altres es queden sense escó.</p>
+<p>A això s'afegeix la barrera del 3 % i que la regla D'Hondt arrodoneix a favor dels partits amb més vots a cada província.</p>
+<p class="nota">Explicació pròpia a partir dels arts. 162 i 163 de la LOREG.</p>
+</details>
+<details><summary>Què caldria canviar perquè coincidissin</summary>
+<p>La província com a circumscripció és a la Constitució. El nombre de diputats (350), el mínim de dos per província, la barrera i la regla de repartiment són a la llei electoral.</p>
+<p>La primera cosa exigeix reformar la Constitució. La segona, majoria absoluta del Congrés.</p>
+<p class="nota">Fonts: Constitució, arts. 68 i 81; LOREG, arts. 162 i 163.</p>
+</details>
+</div>
+</article>
+</section>
+
+<section class="paso f2" data-k="12">
+<article class="tarjeta" aria-labelledby="tit12">
+<div class="cuerpo">
+<h2 id="tit12">12 · Qui governa?</h2>
+<p>Aquests són els escons de debò. Toca cada partit per canviar el seu vot a la investidura: no, sí o abstenció.</p>
+<div class="calc" id="calc12"></div>
+<h3>Saber-ne més</h3>
+<details><summary>Què cal mirar en una negociació</summary>
+<p>Dos números. Si els sís arriben a 176, hi ha president a la primera. Si no hi arriben, el que importa és que hi hagi més sís que nos: aquí cada abstenció compta.</p>
+<p class="nota">Font: Constitució, art. 99.3.</p>
+</details>
+<details><summary>Els diputats no estan lligats</summary>
+<p>La Constitució diu que diputats i senadors no estan subjectes a mandat imperatiu: ningú els pot obligar legalment a votar en un sentit.</p>
+<p class="nota">Font: Constitució, art. 67.2.</p>
+</details>
+</div>
+</article>
+</section>
+
+<section class="paso f2" data-k="13">
+<article class="tarjeta" aria-labelledby="tit13">
+<div class="cuerpo">
+<h2 id="tit13">13 · El que ve</h2>
+<p id="r13"></p>
+<ul class="lista" id="l13"></ul>
+<h3>Saber-ne més</h3>
+<details><summary>Si no hi ha acord</summary>
+<p>Dos mesos després de la primera votació d'investidura, si no hi ha president, es dissolen les Corts i es convoquen noves eleccions. Es farien 47 dies després.</p>
+<p>Ha passat dues vegades, el 2016 i el 2019.</p>
+<p class="nota">Fonts: Constitució, art. 99.5; LOREG, disposició addicional setena (afegida per la Llei orgànica 2/2016); reials decrets 184/2016 i 551/2019.</p>
+</details>
+<details><summary>Si hi ha acord</summary>
+<p>El Rei nomena el president i, a proposta seva, els ministres. El Govern en funcions s'acaba quan el nou pren possessió.</p>
+<p class="nota">Fonts: Constitució, arts. 62, 99, 100 i 101.</p>
+</details>
+</div>
+</article>
+</section>
+
+<section class="paso f2" data-k="14">
+<article class="tarjeta" aria-labelledby="tit14">
+<div class="cuerpo">
+<h2 id="tit14">La Moncloa</h2>
+<p>L'últim pas. El recorregut s'acaba quan el Congrés escull president i el nou Govern pren possessió.</p>
+<button type="button" class="pill sec" id="volver2">Torna a la sortida</button>
+</div>
+</article>
+</section>
+
+</main>
+<footer class="pie">
+<p><b>De les urnes a la Moncloa</b> · Guillermo Astiaso, 2026.</p>
+<p>Codi amb llicència <a href="https://github.com/gastiaso/de-las-urnas-a-la-moncloa/blob/main/LICENSE">MIT</a>; textos amb llicència <a href="https://creativecommons.org/licenses/by/4.0/deed.es">CC BY 4.0</a>. Tipografies Courier Prime i Libre Franklin (llicència OFL); mapa d'hexàgons generat a partir dels límits provincials de l'IGN (CC BY 4.0).</p>
+<p>Sense galetes, sense analítica i sense peticions a altres servidors. <a href="https://github.com/gastiaso/de-las-urnas-a-la-moncloa">Codi a GitHub</a>.</p>
+</footer>
+<script type="module">import '../js/idiomas/ca.js'; import '../js/sitio.js';</script>
+</body>
+</html>

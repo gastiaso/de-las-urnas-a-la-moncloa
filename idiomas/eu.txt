@@ -1,0 +1,1102 @@
+# eu · textos de la página. Formato y uso: ver herramientas/idiomas.py
+# Cada bloque es una frase de index.html («es:») y su traducción («eu:»). No cambies la línea «es:».
+
+# ───── Cabecera: título y descripción para buscadores y redes ─────
+
+es: Qué se vota el 29N y cómo se pasa de una papeleta a un Gobierno, contado con los 350 escaños del Congreso.
+eu: Zer bozkatzen den azaroaren 29an eta nola iristen den boto-paper batetik Gobernu batera, Kongresuko 350 eserlekuekin kontatuta.
+
+es: De las urnas a la Moncloa
+eu: Hautestontzietatik Moncloara
+
+es: Los 350 escaños del Congreso dibujados como hexágonos sobre el mapa de España, con el título «De las urnas a la Moncloa».
+eu: Kongresuko 350 eserlekuak, hexagono gisa marraztuta Espainiako maparen gainean, «De las urnas a la Moncloa» izenburuarekin.
+
+es: Leer solo el texto, sin animación
+eu: Testua bakarrik irakurri, animaziorik gabe
+
+# ───── Barra de arriba y salida ─────
+
+es: Salida ▾
+eu: Irteera ▾
+
+# ───── De las urnas a la Moncloa ─────
+
+es: Qué votas el 29N y cómo se pasa de tu papeleta a un Gobierno, con los 350 escaños del Congreso.
+eu: Zer bozkatzen duzun azaroaren 29an eta nola iristen den zure boto-paperetik Gobernu batera, Kongresuko 350 eserlekuekin.
+
+es: Baja para empezar ↓
+eu: Jaitsi hasteko ↓
+
+es: Este navegador no ejecuta JavaScript: se muestra solo el texto, sin la escena ni los juegos.
+eu: Nabigatzaile honek ez du JavaScript exekutatzen: testua bakarrik erakusten da, eszenarik eta jokorik gabe.
+
+# ───── 1 · Qué se vota ─────
+
+es: 1 · Qué se vota
+eu: 1 · Zer bozkatzen den
+
+es: El 29N eliges a quienes se sientan en el Congreso. Hay 350 asientos, que se llaman [[escano|escaños]], y se reparten por [[circ|circunscripciones]]: en la práctica, por provincias.
+eu: Azaroaren 29an Kongresuan nor eseriko den aukeratuko duzu. 350 aulki daude; [[escano|eserleku]] deitzen zaie, eta [[circ|hautesbarrutika]] banatzen dira: praktikan, probintziaka.
+
+es: Elige tu provincia
+eu: Aukeratu zure probintzia
+
+es: Saber más
+eu: Gehiago jakiteko
+
+es: Por qué unas provincias tienen más escaños
+eu: Zergatik dituzten probintzia batzuek eserleku gehiago
+
+es: Cada provincia tiene de salida dos escaños; Ceuta y Melilla, uno cada una. Son 102. Los otros 248 se reparten según la población.
+eu: Probintzia bakoitzak bi eserleku ditu hasieratik; Ceutak eta Melillak, bana. 102 dira. Beste 248ak biztanleriaren arabera banatzen dira.
+
+es: La cuenta es así: se divide la población de todas las provincias entre 248 y sale una cuota. Cada provincia recibe tantos escaños como veces cabe esa cuota en su población. Los que sobran van a las provincias que se quedaron más cerca de conseguir uno más.
+eu: Kalkulua honela egiten da: probintzia guztietako biztanleria zati 248 egiten da, eta kuota bat ateratzen da. Kuota hori probintzia baten biztanlerian zenbat aldiz sartzen den, hainbeste eserleku jasotzen ditu probintzia horrek. Soberan geratzen direnak beste bat lortzetik hurbilen geratu diren probintzientzat dira.
+
+es: Para el 29N se ha usado el padrón a 1 de enero de 2025, y la cuota sale de unos 197.000 habitantes. Por eso Madrid elige 38 y Soria, 2.
+eu: Azaroaren 29rako, 2025eko urtarrilaren 1eko biztanle-errolda erabili da, eta kuota 197.000 biztanle ingurukoa da. Horregatik aukeratzen ditu Madrilek 38 eta Soriak 2.
+
+es: Fuentes: LOREG, art. 162; Real Decreto 806/2026, anexo; Real Decreto 1117/2025, anexo. La cifra de 102 es la suma de 50 provincias por dos, más Ceuta y Melilla. La cuota (197.355) es cuenta propia, y con ella sale exactamente el reparto del decreto.
+eu: Iturriak: LOREG, 162. art.; 806/2026 Errege Dekretua, eranskina; 1117/2025 Errege Dekretua, eranskina. 102ko zifra 50 probintzia bider bi eginda ateratzen da, Ceuta eta Melilla gehituta. Kuota (197.355) kalkulu propioa da, eta harekin dekretuko banaketa bera ateratzen da, zehatz-mehatz.
+
+es: Quién puede votar
+eu: Nork bozka dezakeen
+
+es: Pueden votar los españoles mayores de edad que estén inscritos en el [[censo|censo electoral]]. Solo pierde el derecho quien ha sido condenado por sentencia firme a esa pena, y mientras la cumple.
+eu: [[censo|Hautesle-erroldan]] inskribatuta dauden espainiar adindunek bozka dezakete. Eskubidea galtzen duen bakarra epai irmo batek zigor horretara kondenatu duena da, eta zigorra betetzen duen bitartean bakarrik.
+
+es: Se vota en persona, en la mesa que te toca, y una sola vez. Para identificarte vale el DNI, el pasaporte o el carné de conducir con foto.
+eu: Aurrez aurre bozkatzen da, dagokizun mahaian, eta behin bakarrik. Nor zaren egiaztatzeko, NANak, pasaporteak edo argazkidun gidabaimenak balio du.
+
+es: Fuentes: LOREG, arts. 2, 3, 4 y 85.
+eu: Iturriak: LOREG, 2., 3., 4. eta 85. art.
+
+es: Por qué el 29 de noviembre
+eu: Zergatik azaroaren 29an
+
+es: El presidente del Gobierno adelantó las elecciones: el decreto que disolvió las Cortes salió en el BOE el 6 de octubre. La ley fija la votación 54 días después de la convocatoria, y eso cae en domingo 29 de noviembre.
+eu: Gobernuko presidenteak hauteskundeak aurreratu zituen: Gorteak desegin zituen dekretua urriaren 6an atera zen BOEn. Legeak deialditik 54 egunera jartzen du bozketa, eta egun hori azaroaren 29a da, igandea.
+
+es: Si un día hubiera que repetir las elecciones, el plazo sería más corto: 47 días.
+eu: Egunen batean hauteskundeak errepikatu behar balira, epea laburragoa izango litzateke: 47 egun.
+
+es: Fuentes: Constitución, art. 115; LOREG, art. 42.1 y disposición adicional séptima; Real Decreto 806/2026, arts. 1 y 2, publicado en el BOE del 6 de octubre de 2026. El 29 de noviembre es el cálculo del día 54.
+eu: Iturriak: Konstituzioa, 115. art.; LOREG, 42.1 art. eta zazpigarren xedapen gehigarria; 806/2026 Errege Dekretua, 1. eta 2. art., 2026ko urriaren 6ko BOEn argitaratua. Azaroaren 29a 54. egunaren kalkulua da.
+
+es: Cómo es ir a votar
+eu: Nolakoa den bozkatzera joatea
+
+es: Los colegios abren de 9:00 a 20:00, sin interrupción. Votas dos veces: una papeleta blanca para el Congreso y otra sepia para el Senado, cada una en su sobre.
+eu: Hauteslekuak 9:00etatik 20:00etara daude zabalik, etenik gabe. Bi aldiz bozkatzen duzu: boto-paper zuri bat Kongresurako eta sepia koloreko beste bat Senaturako, bakoitza bere gutun-azalean.
+
+es: Puedes usar la cabina, pero no es obligatorio. En la mesa, el presidente dice tu nombre, dice «vota» y el sobre entra en la urna.
+eu: Kabina erabil dezakezu, baina ez da nahitaezkoa. Mahaian, mahaiburuak zure izena esaten du, «bozkatzen du» esaten du, eta gutun-azala hautestontzian sartzen da.
+
+es: El voto es secreto: nadie puede obligarte a decir qué has votado. Si no puedes leer o manejar las papeletas, puede ayudarte una persona de tu confianza.
+eu: Botoa sekretua da: inork ezin zaitu behartu zer bozkatu duzun esatera. Boto-paperak irakurri edo erabili ezin badituzu, zure konfiantzako pertsona batek lagun diezazuke.
+
+es: Fuentes: LOREG, arts. 5, 84, 86 y 87; Real Decreto 605/1999, art. 4.
+eu: Iturriak: LOREG, 5., 84., 86. eta 87. art.; 605/1999 Errege Dekretua, 4. art.
+
+es: Quién está en la mesa
+eu: Nor dagoen mahaian
+
+es: La [[mesael|mesa electoral]] son tres personas: un presidente y dos vocales. Salen por sorteo entre los votantes de esa mesa que saben leer y escribir y tienen menos de setenta años. Es obligatorio.
+eu: [[mesael|Hauteskunde-mahaia]] hiru pertsonak osatzen dute: mahaiburu batek eta bi mahaikidek. Zozketaz aukeratzen dira mahai horretako hautesleen artean; irakurtzen eta idazten jakin behar dute, eta hirurogeita hamar urte baino gutxiago izan. Nahitaezkoa da.
+
+es: Cuando cierra el colegio, ellos abren la urna y cuentan los votos en público, uno a uno y en voz alta.
+eu: Hauteslekua ixten denean, haiek hautestontzia ireki eta botoak jendaurrean zenbatzen dituzte, banan-banan eta ozen.
+
+es: Fuentes: LOREG, arts. 25, 26, 27 y 95.
+eu: Iturriak: LOREG, 25., 26., 27. eta 95. art.
+
+es: Quién vigila las elecciones
+eu: Nork zaintzen dituen hauteskundeak
+
+es: Las [[junta|juntas electorales]]. Velan por que el proceso sea limpio e igual para todos, resuelven quejas y recursos, vigilan las encuestas y hacen el recuento oficial.
+eu: [[junta|Hauteskunde-batzordeek]]. Prozesua garbia eta denentzat berdina izan dadin zaintzen dute, kexak eta helegiteak ebazten dituzte, inkestak zaintzen dituzte eta kontaketa ofiziala egiten dute.
+
+es: Hay una Junta Electoral Central, en Madrid, una en cada provincia y otras de zona. La Central la forman ocho magistrados del Tribunal Supremo, elegidos por sorteo, y cinco catedráticos de Derecho, Ciencia Política o Sociología propuestos por los partidos con diputados. En las provinciales y las de zona también son mayoría los jueces.
+eu: Hauteskunde Batzorde Zentral bat dago, Madrilen; beste bat probintzia bakoitzean, eta eskualdeko beste batzuk. Zentrala Auzitegi Goreneko zortzi magistratuk, zozketaz aukeratuek, eta Zuzenbideko, Zientzia Politikoko edo Soziologiako bost katedradunek osatzen dute; katedradunak diputatuak dituzten alderdiek proposatzen dituzte. Probintzietakoetan eta eskualdekoetan ere epaileak dira gehiengoa.
+
+es: Fuentes: LOREG, arts. 8, 9, 10, 11, 19, 69 y 103.
+eu: Iturriak: LOREG, 8., 9., 10., 11., 19., 69. eta 103. art.
+
+es: Qué son las Cortes y para qué sirven
+eu: Zer diren Gorteak eta zertarako diren
+
+es: Las [[cortes|Cortes Generales]] son el Congreso y el Senado juntos. Hacen las leyes, aprueban los Presupuestos y controlan al Gobierno. Se eligen para cuatro años.
+eu: [[cortes|Gorte Nagusiak]] Kongresua eta Senatua dira, biak batera. Legeak egiten dituzte, Aurrekontuak onartzen dituzte eta Gobernua kontrolatzen dute. Lau urterako aukeratzen dira.
+
+es: De las dos cámaras, el Congreso es el que elige al presidente del Gobierno y el que puede levantar los vetos del Senado.
+eu: Bi ganberetatik, Kongresuak aukeratzen du Gobernuko presidentea, eta hark ken ditzake Senatuaren betoak.
+
+es: Fuentes: Constitución, arts. 66, 68.4, 69.6, 90 y 99.
+eu: Iturriak: Konstituzioa, 66., 68.4, 69.6, 90. eta 99. art.
+
+es: Cómo son las listas
+eu: Nolakoak diren zerrendak
+
+es: Al Congreso votas una [[lista|lista]] entera de un partido, con tantos nombres como escaños reparte tu provincia. No puedes tachar a nadie ni cambiar el orden: el voto sería nulo.
+eu: Kongresurako, alderdi baten [[lista|zerrenda]] osoa bozkatzen duzu; zure probintzian banatzen diren eserlekuak adina izen ditu. Ezin duzu inor ezabatu, ezta ordena aldatu ere: botoa baliogabea izango litzateke.
+
+es: Las listas alternan mujeres y hombres. Puede presentarse cualquier español mayor de edad con derecho a voto, salvo algunos cargos, como jueces, militares o policías en activo.
+eu: Zerrendetan emakumeak eta gizonak txandakatzen dira. Boto-eskubidea duen edozein espainiar adindun aurkez daiteke, kargu batzuk izan ezik; adibidez, jardunean dauden epaileak, militarrak edo poliziak.
+
+es: Fuentes: LOREG, arts. 6, 44 bis, 46 y 96.
+eu: Iturriak: LOREG, 6., 44 bis, 46. eta 96. art.
+
+es: En el mapa, cada hexágono es un escaño: las provincias crecen o encogen según los escaños que reparten, dentro de la silueta de España. Canarias va en el recuadro.
+eu: Mapan, hexagono bakoitza eserleku bat da: probintziak handitu edo txikitu egiten dira banatzen dituzten eserlekuen arabera, Espainiaren silueta barruan. Kanariak laukian daude.
+
+# ───── 2 · Del voto al escaño ─────
+
+es: 2 · Del voto al escaño
+eu: 2 · Bototik eserlekura
+
+es: Reparte todos los escaños antes de apostar.
+eu: Banatu eserleku guztiak apustu egin aurretik.
+
+es: Apostar
+eu: Apustu egin
+
+es: El partido E no llega a la [[barrera|barrera]] del 3 % y se queda fuera del reparto.
+eu: E alderdia ez da % 3ko [[barrera|langara]] iristen, eta banaketatik kanpo geratzen da.
+
+es: Volver a apostar
+eu: Berriro apustu egin
+
+es: Cómo se hace el reparto
+eu: Nola egiten den banaketa
+
+es: Se dividen los votos de cada partido entre 1, 2, 3 y así sucesivamente. Los escaños van, uno a uno, a los resultados más altos de toda la tabla. Es la [[dhondt|regla D'Hondt]].
+eu: Alderdi bakoitzaren botoak zati 1, 2, 3 eta abar egiten dira. Eserlekuak, banan-banan, taula osoko emaitza handienentzat dira. Hori da [[dhondt|D'Hondt legea]].
+
+es: Esta es la tabla de tu provincia con los partidos del ejemplo. En teja, las divisiones que se llevan escaño, numeradas en el orden en que lo consiguen:
+eu: Hau da zure probintziako taula, adibideko alderdiekin. Teila-kolorez, eserlekua lortzen duten zatidurak, lortzen duten hurrenkeran zenbakituta:
+
+es: Ver el reparto paso a paso
+eu: Ikusi banaketa urratsez urrats
+
+es: La propia ley pone un ejemplo: con 480.000 votos y 8 escaños, el partido más votado se lleva cuatro, el segundo dos, y el tercero y el cuarto, uno cada uno.
+eu: Legeak berak adibide bat jartzen du: 480.000 boto eta 8 eserlekurekin, boto gehien dituen alderdiak lau lortzen ditu; bigarrenak, bi; eta hirugarrenak eta laugarrenak, bana.
+
+es: Fuente: LOREG, art. 163. En la tabla, los porcentajes inventados hacen de votos.
+eu: Iturria: LOREG, 163. art. Taulan, asmatutako ehunekoek botoen lekua hartzen dute.
+
+es: Desde cuándo se usa
+eu: Noiztik erabiltzen den
+
+es: Desde 1977. La fijó el real decreto-ley de normas electorales de marzo de aquel año, que reguló las primeras elecciones tras la Ley para la Reforma Política, ya con 350 diputados. Ya la llamaba «regla d'Hondt», ya ponía la barrera en el 3 % y ya traía el mismo ejemplo de 480.000 votos que trae hoy la ley.
+eu: 1977tik. Urte hartako martxoko hauteskunde-arauei buruzko errege lege-dekretuak ezarri zuen; dekretu hark arautu zituen Erreforma Politikorako Legearen ondorengo lehen hauteskundeak, ordurako 350 diputaturekin. Ordurako «regla d'Hondt» deitzen zion, ordurako % 3an jartzen zuen langa, eta ordurako bazekarren gaur legeak dakarren 480.000 botoko adibide bera.
+
+es: Aquel decreto la presentaba como un freno a que el Congreso quedara demasiado fragmentado. Y el reparto de entonces era otro: Madrid elegía 32 diputados, Barcelona 33 y Soria 3.
+eu: Dekretu hark Kongresua gehiegi zatituta ez geratzeko balazta gisa aurkezten zuen. Eta orduko banaketa bestelakoa zen: Madrilek 32 diputatu aukeratzen zituen; Bartzelonak, 33, eta Soriak, 3.
+
+es: Fuente: Real Decreto-ley 20/1977, de 18 de marzo, sobre Normas Electorales: preámbulo y arts. 19 y 20.
+eu: Iturria: 20/1977 Errege Lege Dekretua, martxoaren 18koa, Hauteskunde Arauei buruzkoa: hitzaurrea eta 19. eta 20. art.
+
+es: La barrera del 3 %
+eu: % 3ko langa
+
+es: Antes de repartir se apartan los partidos que no llegan al 3 % de los votos válidos de la provincia. Sus votos no se pasan a nadie: sencillamente no entran en la tabla.
+eu: Banatu aurretik, probintziako baliozko botoen % 3ra iristen ez diren alderdiak baztertzen dira. Haien botoak ez zaizkio inori pasatzen: taulan ez dira sartzen, besterik gabe.
+
+es: La barrera se mide provincia a provincia, no en toda España.
+eu: Langa probintziaz probintzia neurtzen da, ez Espainia osoan.
+
+es: Fuente: LOREG, art. 163.
+eu: Iturria: LOREG, 163. art.
+
+es: Blanco, nulo y abstención
+eu: Zuria, baliogabea eta abstentzioa
+
+es: El [[blanco|voto en blanco]] es un sobre vacío. Es válido: no va a ningún partido, pero cuenta en el total y por eso sube un poco el listón del 3 %.
+eu: [[blanco|Boto zuria]] gutun-azal huts bat da. Baliozkoa da: ez doa alderdi bakar batera ere, baina guztizkoan zenbatzen da, eta horregatik % 3ko langa pixka bat igotzen du.
+
+es: El [[nulo|voto nulo]] no cuenta para el reparto. Lo es una papeleta con tachaduras o añadidos, o un sobre que no es el oficial. Si metes dos papeletas del mismo partido, vale como un solo voto.
+eu: [[nulo|Boto baliogabea]] ez da banaketarako zenbatzen. Baliogabea da zerbait ezabatuta edo erantsita duen boto-papera, edo ofiziala ez den gutun-azala. Alderdi bereko bi boto-paper sartzen badituzu, boto bakar gisa balio du.
+
+es: Quien no va a votar se abstiene: no entra en ninguna cuenta.
+eu: Bozkatzera joaten ez dena abstenitu egiten da: ez da inongo kontutan sartzen.
+
+es: Fuentes: LOREG, arts. 96 y 108.
+eu: Iturriak: LOREG, 96. eta 108. art.
+
+es: Qué pasa si hay empate
+eu: Zer gertatzen den berdinketa badago
+
+es: Si dos partidos empatan en una división, el escaño es para el que tiene más votos en total. Si también empatan en eso, se sortea.
+eu: Bi alderdik zatidura berdina badute, eserlekua guztira boto gehien dituenarentzat da. Horretan ere berdinduta badaude, zozketa egiten da.
+
+es: Quién ocupa cada escaño
+eu: Nork betetzen duen eserleku bakoitza
+
+es: Los escaños de un partido son para los primeros de su lista, por orden. Si un diputado renuncia o muere, entra el siguiente de la misma lista o un [[suplente|suplente]]. No hay que volver a votar.
+eu: Alderdi baten eserlekuak haren zerrendako lehenentzat dira, hurrenkeran. Diputatu batek kargua uzten badu edo hiltzen bada, zerrenda bereko hurrengoa edo [[suplente|ordezko]] bat sartzen da. Ez dago berriro bozkatu beharrik.
+
+es: Fuentes: LOREG, arts. 163 y 164.
+eu: Iturriak: LOREG, 163. eta 164. art.
+
+es: Ceuta y Melilla
+eu: Ceuta eta Melilla
+
+es: Cada una elige un solo diputado, así que no hay nada que repartir: gana quien saca más votos.
+eu: Bakoitzak diputatu bakarra aukeratzen du; beraz, ez dago zer banaturik: boto gehien lortzen dituenak irabazten du.
+
+es: Fuente: LOREG, art. 163.2.
+eu: Iturria: LOREG, 163.2 art.
+
+es: El último escaño
+eu: Azken eserlekua
+
+es: El último escaño de cada provincia es el más disputado. Se lo lleva el partido con la siguiente división más alta, y a veces otro se queda muy cerca.
+eu: Probintzia bakoitzeko azken eserlekua da lehiatuena. Hurrengo zatidura handiena duen alderdiak lortzen du, eta batzuetan beste bat oso gertu geratzen da.
+
+es: Cuando haya resultados, en el paso 10 verás por cuántos votos se decidió en tu provincia.
+eu: Emaitzak daudenean, 10. urratsean ikusiko duzu zenbat botogatik erabaki zen zure probintzian.
+
+es: Explicación propia a partir de la regla del art. 163 de la LOREG.
+eu: Azalpen propioa, LOREGen 163. artikuluko arautik abiatuta.
+
+# ───── 3 · Dónde votas ─────
+
+es: 3 · Dónde votas
+eu: 3 · Non bozkatzen duzun
+
+es: Los mismos porcentajes no dan lo mismo en todas partes. Cuantos menos escaños reparte una provincia, menos partidos entran.
+eu: Ehuneko berek ez dute emaitza bera ematen leku guztietan. Probintzia batek zenbat eta eserleku gutxiago banatu, orduan eta alderdi gutxiago sartzen dira.
+
+es: Cuántos habitantes hay detrás de cada escaño
+eu: Zenbat biztanle dauden eserleku bakoitzaren atzean
+
+es: Los escaños se reparten por población, pero con un mínimo de dos por provincia. Por eso en las provincias pequeñas hacen falta muchos menos habitantes para elegir a un diputado.
+eu: Eserlekuak biztanleriaren arabera banatzen dira, baina probintzia bakoitzak gutxienez bi ditu. Horregatik, probintzia txikietan askoz biztanle gutxiago behar dira diputatu bat aukeratzeko.
+
+es: Para el 29N, en Soria hay un escaño por cada 45.117 habitantes; en Madrid, uno por cada 187.817: cuatro veces más.
+eu: Azaroaren 29rako, Sorian eserleku bat dago 45.117 biztanleko; Madrilen, bat 187.817 biztanleko: lau aldiz gehiago.
+
+es: La cuenta es de habitantes, no de votantes: incluye a menores y a extranjeros, que no votan en estas elecciones.
+eu: Kalkulua biztanleekin egiten da, ez hautesleekin: adingabeak eta atzerritarrak ere sartzen dira, eta haiek ez dute bozkatzen hauteskunde hauetan.
+
+es: Fuentes: Real Decreto 1117/2025, anexo (padrón a 1 de enero de 2025); Real Decreto 806/2026, anexo; LOREG, arts. 2 y 162. Habitantes por escaño: cuenta propia, población entre escaños.
+eu: Iturriak: 1117/2025 Errege Dekretua, eranskina (2025eko urtarrilaren 1eko biztanle-errolda); 806/2026 Errege Dekretua, eranskina; LOREG, 2. eta 162. art. Biztanleak eserlekuko: kalkulu propioa, biztanleria zati eserlekuak.
+
+es: Por qué pasa
+eu: Zergatik gertatzen den
+
+es: Con dos escaños solo caben los dos partidos más votados. Con 38, hasta un partido con el 9 % consigue varios. La regla es la misma; cambia el tamaño de la provincia.
+eu: Bi eserlekurekin, boto gehien dituzten bi alderdiak bakarrik sartzen dira. 38rekin, % 9 duen alderdi batek ere hainbat lortzen ditu. Araua bera da; probintziaren tamaina aldatzen da.
+
+es: En el ejemplo, con dos escaños no basta ni un 17 %. En las provincias pequeñas, el listón de verdad está muy por encima del 3 %.
+eu: Adibidean, bi eserlekurekin % 17 ere ez da nahikoa. Probintzia txikietan, benetako langa % 3tik oso gora dago.
+
+es: Ejemplo propio: los mismos cinco partidos inventados y los mismos porcentajes en las dos provincias.
+eu: Adibide propioa: asmatutako bost alderdi berak eta ehuneko berak bi probintzietan.
+
+es: Qué dice la Constitución y qué dice la ley
+eu: Zer dioen Konstituzioak eta zer legeak
+
+es: La Constitución fija tres cosas: que el Congreso tenga entre 300 y 400 diputados, que cada provincia sea una circunscripción y que el reparto sea proporcional.
+eu: Konstituzioak hiru gauza finkatzen ditu: Kongresuak 300 eta 400 diputatu artean izatea, probintzia bakoitza hautesbarruti bat izatea eta banaketa proportzionala izatea.
+
+es: Lo demás lo decide la ley electoral: que sean 350, que cada provincia tenga dos de salida, la regla D'Hondt y la barrera del 3 %.
+eu: Gainerakoa hauteskunde-legeak erabakitzen du: 350 izatea, probintzia bakoitzak hasieratik bi izatea, D'Hondt legea eta % 3ko langa.
+
+es: Cambiar la ley electoral exige mayoría absoluta del Congreso, porque es una [[organica|ley orgánica]]. Cambiar la Constitución exige bastante más.
+eu: Hauteskunde-legea aldatzeko, Kongresuaren gehiengo osoa behar da, [[organica|lege organikoa]] delako. Konstituzioa aldatzeko, dezente gehiago behar da.
+
+es: Fuentes: Constitución, arts. 68 y 81; LOREG, arts. 162 y 163.
+eu: Iturriak: Konstituzioa, 68. eta 81. art.; LOREG, 162. eta 163. art.
+
+es: Cuántas provincias de cada tamaño hay
+eu: Tamaina bakoitzeko zenbat probintzia dauden
+
+es: Cuenta propia a partir del anexo del Real Decreto 806/2026.
+eu: Kalkulu propioa, 806/2026 Errege Dekretuaren eranskinetik abiatuta.
+
+# ───── 4 · El Senado ─────
+
+es: 4 · El Senado
+eu: 4 · Senatua
+
+es: Al Senado se vota distinto: marcas personas, no listas. En una provincia puedes marcar hasta tres nombres y salen las cuatro personas más votadas.
+eu: Senaturako beste era batera bozkatzen da: pertsonak markatzen dituzu, ez zerrendak. Probintzia batean hiru izen markatu ditzakezu gehienez, eta boto gehien dituzten lau pertsonak ateratzen dira.
+
+es: Prueba a marcar (nombres inventados)
+eu: Probatu markatzen (asmatutako izenak)
+
+es: El Senado no elige al presidente ni puede hacerlo caer. Pero sin él no se reforma la Constitución, y le toca elegir a parte del Tribunal Constitucional y del Consejo General del Poder Judicial.
+eu: Senatuak ez du presidentea aukeratzen, eta ezin du erorarazi ere. Baina Senaturik gabe ezin da Konstituzioa erreformatu, eta hari dagokio Konstituzio Auzitegiaren eta Botere Judizialaren Kontseilu Nagusiaren zati bat aukeratzea.
+
+es: La llave de la reforma constitucional
+eu: Konstituzio-erreformaren giltza
+
+es: Para reformar la Constitución hacen falta tres quintos del Congreso y tres quintos del Senado. Si el Senado no llega a tres quintos, queda otra vía: que lo apruebe por mayoría absoluta y que el Congreso lo apruebe por dos tercios. Sin la mayoría absoluta del Senado, la reforma no sale.
+eu: Konstituzioa erreformatzeko, Kongresuaren hiru bosten eta Senatuaren hiru bosten behar dira. Senatua hiru bostenetara iristen ez bada, beste bide bat geratzen da: Senatuak gehiengo osoz onartzea eta Kongresuak bi herenez onartzea. Senatuaren gehiengo osorik gabe, erreforma ez da aurrera ateratzen.
+
+es: Las reformas de más calado, las que tocan el título preliminar, los derechos fundamentales o la Corona, exigen dos tercios de cada cámara, disolver las Cortes, que las nuevas lo ratifiquen también por dos tercios y un referéndum.
+eu: Sakonen doazen erreformek, atariko titulua, oinarrizko eskubideak edo Koroa ukitzen dituztenek, hauek guztiak eskatzen dituzte: ganbera bakoitzaren bi heren, Gorteak desegitea, Gorte berriek ere bi herenez berrestea eta erreferendum bat.
+
+es: En la práctica, quien tenga más de la mitad del Senado puede bloquear cualquier reforma, y quien tenga más de un tercio, las de más calado. Además, una décima parte de los senadores puede exigir que cualquier reforma se vote en referéndum.
+eu: Praktikan, Senatuaren erdia baino gehiago duenak edozein erreforma blokea dezake, eta heren bat baino gehiago duenak, sakonenak. Gainera, senatarien hamarren batek eska dezake edozein erreforma erreferendumean bozkatzeko.
+
+es: Fuentes: Constitución, arts. 167 y 168. Las cifras de bloqueo son una cuenta propia a partir de esas mayorías.
+eu: Iturriak: Konstituzioa, 167. eta 168. art. Blokeatzeko zifrak kalkulu propioa dira, gehiengo horietatik abiatuta.
+
+es: Nombramientos que pasan por el Senado
+eu: Senatutik igarotzen diren izendapenak
+
+es: El Senado propone a cuatro de los doce magistrados del Tribunal Constitucional y elige a diez de los veinte vocales del Consejo General del Poder Judicial, el órgano que gobierna a los jueces; los otros diez, el Congreso. En los dos casos hacen falta tres quintos de los senadores.
+eu: Senatuak Konstituzio Auzitegiko hamabi magistratuetatik lau proposatzen ditu, eta Botere Judizialaren Kontseilu Nagusiko hogei kideetatik hamar aukeratzen ditu; kontseilu hori epaileak gobernatzen dituen organoa da. Beste hamarrak Kongresuak aukeratzen ditu. Bi kasuetan senatarien hiru bosten behar dira.
+
+es: Eso quiere decir que quien tenga más de dos quintos del Senado puede impedir esos nombramientos.
+eu: Horrek esan nahi du Senatuaren bi bosten baino gehiago duenak izendapen horiek eragotz ditzakeela.
+
+es: Fuentes: Constitución, arts. 122.3 y 159.1; Ley Orgánica del Poder Judicial, art. 567.2. El bloqueo es una cuenta propia a partir de la mayoría de tres quintos.
+eu: Iturriak: Konstituzioa, 122.3 eta 159.1 art.; Botere Judizialaren Lege Organikoa, 567.2 art. Blokeoa kalkulu propioa da, hiru bosteneko gehiengotik abiatuta.
+
+es: Islas, Ceuta y Melilla
+eu: Uharteak, Ceuta eta Melilla
+
+es: Gran Canaria, Mallorca y Tenerife eligen tres senadores y se marcan dos nombres. Ceuta y Melilla eligen dos y se marcan dos. En las demás islas se elige uno y se marca uno.
+eu: Kanaria Handiak, Mallorcak eta Tenerifek hiruna senatari aukeratzen dituzte, eta bi izen markatzen dira. Ceutak eta Melillak bina aukeratzen dituzte, eta bi markatzen dira. Gainerako uharteetan bat aukeratzen da, eta bat markatzen da.
+
+es: Ibiza y Formentera eligen por separado tras la reforma constitucional de mayo de 2026.
+eu: Eivissak eta Formenterak bereiz aukeratzen dute 2026ko maiatzeko konstituzio-erreformaz geroztik.
+
+es: En total se eligen así 209 senadores.
+eu: Guztira 209 senatari aukeratzen dira horrela.
+
+es: Fuentes: Real Decreto 806/2026, art. 3; LOREG, arts. 165 y 166; Constitución, art. 69. El total de 209 es una suma propia a partir del decreto.
+eu: Iturriak: 806/2026 Errege Dekretua, 3. art.; LOREG, 165. eta 166. art.; Konstituzioa, 69. art. 209ko guztizkoa batuketa propioa da, dekretutik abiatuta.
+
+es: Cómo es la papeleta
+eu: Nolakoa den boto-papera
+
+es: Es una sola papeleta, sepia, con todas las candidaturas: cada partido con sus candidatos debajo y un recuadro delante de cada nombre. Marcas con una cruz a quien elijas, como mucho tres, y pueden ser de partidos distintos: la ley solo limita cuántos.
+eu: Boto-paper bakarra da, sepia kolorekoa, hautagaitza guztiekin: alderdi bakoitza bere hautagaiak azpian dituela, eta izen bakoitzaren aurrean lauki bat. Aukeratzen dituzunak gurutze batez markatzen dituzu, gehienez hiru, eta alderdi desberdinetakoak izan daitezke: legeak kopurua bakarrik mugatzen du.
+
+es: Si marcas más de los permitidos, el voto es nulo. Si no marcas a nadie, es un voto en blanco.
+eu: Baimendutakoak baino gehiago markatzen badituzu, botoa baliogabea da. Inor markatzen ez baduzu, boto zuria da.
+
+es: Fuentes: Real Decreto 605/1999, art. 4 y anexo 3; LOREG, arts. 96, 166 y 172.3.
+eu: Iturriak: 605/1999 Errege Dekretua, 4. art. eta 3. eranskina; LOREG, 96., 166. eta 172.3 art.
+
+es: Para qué sirve el Senado
+eu: Zertarako den Senatua
+
+es: La Constitución lo define como la cámara de representación territorial. Revisa las leyes que le llegan del Congreso: tiene dos meses para cambiarlas o para vetarlas. El Congreso puede levantar ese [[veto|veto]].
+eu: Konstituzioak lurralde-ordezkaritzako ganbera gisa definitzen du. Kongresutik iristen zaizkion legeak berrikusten ditu: bi hilabete ditu legeak aldatzeko edo betoa jartzeko. Kongresuak [[veto|beto]] hori ken dezake.
+
+es: Hay una cosa que solo puede autorizar el Senado, por mayoría absoluta: que el Gobierno obligue a una comunidad autónoma a cumplir la ley, el artículo 155.
+eu: Bada gauza bat Senatuak bakarrik baimendu dezakeena, gehiengo osoz: Gobernuak autonomia-erkidego bat legea betetzera behartzea, 155. artikulua.
+
+es: También puede proponer leyes, crear comisiones de investigación y, con 50 senadores, recurrir una ley ante el Tribunal Constitucional. Los acuerdos de cooperación entre comunidades autónomas y el reparto del Fondo de Compensación Interterritorial empiezan en el Senado, aunque, si las dos cámaras no se ponen de acuerdo, decide el Congreso.
+eu: Legeak proposatu ere egin ditzake, ikerketa-batzordeak sortu eta, 50 senatarirekin, lege baten aurkako helegitea jarri Konstituzio Auzitegian. Autonomia-erkidegoen arteko lankidetza-hitzarmenak eta Lurralde arteko Konpentsazio Funtsaren banaketa Senatuan hasten dira; hala ere, bi ganberak ados jartzen ez badira, Kongresuak erabakitzen du.
+
+es: Fuentes: Constitución, arts. 69, 74.2, 76, 87.1, 90, 145.2, 155, 158.2 y 162.1.
+eu: Iturriak: Konstituzioa, 69., 74.2, 76., 87.1, 90., 145.2, 155., 158.2 eta 162.1 art.
+
+es: Lo que el Senado no puede hacer
+eu: Senatuak egin ezin duena
+
+es: No vota la investidura ni la moción de censura: eso es solo del Congreso. Tampoco decide sobre los decretos-leyes del Gobierno ni sobre los estados de alarma, excepción y sitio.
+eu: Ez du inbestidura bozkatzen, ezta zentsura-mozioa ere: hori Kongresuari bakarrik dagokio. Gobernuaren lege-dekretuei buruz ere ez du erabakitzen, ezta alarma-, salbuespen- eta setio-egoerei buruz ere.
+
+es: Puede preguntar e interpelar al Gobierno cada semana, pero no hacerlo caer.
+eu: Astero egin diezazkioke galderak eta interpelazioak Gobernuari, baina ezin du erorarazi.
+
+es: Fuentes: Constitución, arts. 86, 99, 111, 113 y 116.
+eu: Iturriak: Konstituzioa, 86., 99., 111., 113. eta 116. art.
+
+es: Si el Senado tiene otra mayoría
+eu: Senatuak beste gehiengo bat badu
+
+es: Si en el Senado manda una mayoría distinta de la del Congreso, puede retrasar las leyes dos meses y obligar al Congreso a votarlas otra vez. Y puede bloquear las reformas constitucionales y los nombramientos que exigen tres quintos.
+eu: Senatuan Kongresukoa ez den beste gehiengo batek agintzen badu, legeak bi hilabete atzeratu ditzake, eta Kongresua berriro bozkatzera behartu. Eta hiru bosten eskatzen dituzten konstituzio-erreformak eta izendapenak blokea ditzake.
+
+es: Lo que no puede es parar una ley para siempre: el Congreso tiene la última palabra.
+eu: Ezin duena lege bat betiko gelditzea da: Kongresuak du azken hitza.
+
+es: Explicación propia a partir de los arts. 90, 122.3, 159.1, 167 y 168 de la Constitución.
+eu: Azalpen propioa, Konstituzioaren 90., 122.3, 159.1, 167. eta 168. artikuluetatik abiatuta.
+
+es: Los senadores que no se votan
+eu: Bozkatzen ez diren senatariak
+
+es: Además de los elegidos en las urnas, cada parlamento autonómico designa un senador, más otro por cada millón de habitantes de su comunidad. Son los [[designacion|senadores por designación]].
+eu: Hautestontzietan aukeratutakoez gain, autonomia-erkidegoko parlamentu bakoitzak senatari bat izendatzen du, eta beste bat erkidegoko milioi bat biztanleko. Horiek dira [[designacion|izendapen bidezko senatariak]].
+
+es: Si un senador elegido en las urnas deja el escaño, lo ocupa su suplente.
+eu: Hautestontzietan aukeratutako senatari batek eserlekua uzten badu, haren ordezkoak betetzen du.
+
+es: Fuentes: Constitución, art. 69.5; LOREG, art. 166.
+eu: Iturriak: Konstituzioa, 69.5 art.; LOREG, 166. art.
+
+# ───── 5 · Las mayorías ─────
+
+es: 5 · Las mayorías
+eu: 5 · Gehiengoak
+
+es: Para elegir presidente a la primera hace falta la [[absoluta|mayoría absoluta]]: 176 síes de 350. Si no sale, 48 horas después basta la [[simple|mayoría simple]]: más síes que noes.
+eu: Presidentea lehen bozketan aukeratzeko, [[absoluta|gehiengo osoa]] behar da: 350etik 176 bai. Ateratzen ez bada, 48 ordu geroago [[simple|gehiengo soila]] aski da: ezezkoak baino baiezko gehiago.
+
+es: En teja, los 176 escaños que marcan la mitad más uno.
+eu: Teila-kolorez, erdia gehi bat markatzen duten 176 eserlekuak.
+
+es: Por qué la abstención pesa distinto
+eu: Zergatik duen abstentzioak pisu desberdina
+
+es: En la primera votación solo cuentan los síes: hay que juntar 176, y quien se abstiene no ayuda.
+eu: Lehen bozketan baiezkoak bakarrik zenbatzen dira: 176 bildu behar dira, eta abstenitzen denak ez du laguntzen.
+
+es: En la segunda se comparan síes y noes. Ahí, abstenerse en vez de votar no sí ayuda al candidato, porque hay un no menos que superar.
+eu: Bigarrenean, baiezkoak eta ezezkoak alderatzen dira. Hor bai, ezezkoa eman beharrean abstenitzeak hautagaiari laguntzen dio, gainditu beharreko ezezko bat gutxiago dagoelako.
+
+es: Explicación propia a partir del art. 99.3 de la Constitución.
+eu: Azalpen propioa, Konstituzioaren 99.3 artikulutik abiatuta.
+
+es: Otras mayorías
+eu: Beste gehiengo batzuk
+
+es: La mayoría absoluta (176) también hace falta para aprobar las leyes orgánicas y la moción de censura.
+eu: Gehiengo osoa (176) lege organikoak eta zentsura-mozioa onartzeko ere behar da.
+
+es: Tres quintos (210): reformar la Constitución y proponer magistrados del Tribunal Constitucional.
+eu: Hiru bosten (210): Konstituzioa erreformatzea eta Konstituzio Auzitegiko magistratuak proposatzea.
+
+es: Dos tercios (234): las reformas constitucionales de mayor alcance.
+eu: Bi heren (234): irismen handieneko konstituzio-erreformak.
+
+es: Fuentes: Constitución, arts. 81, 99, 113, 159, 167 y 168. Las cifras 210 y 234 son el cálculo sobre 350 diputados.
+eu: Iturriak: Konstituzioa, 81., 99., 113., 159., 167. eta 168. art. 210 eta 234 zifrak 350 diputaturen gaineko kalkulua dira.
+
+es: El día a día: quórum y mayoría simple
+eu: Egunerokoa: quoruma eta gehiengo soila
+
+es: Para que una votación valga tiene que estar presente más de la mitad de la Cámara: es el [[quorum|quórum]]. Las decisiones corrientes salen con más votos a favor que en contra entre los presentes.
+eu: Bozketa batek balio izateko, Ganberaren erdia baino gehiagok egon behar du bertan: hori da [[quorum|quoruma]]. Erabaki arruntak aurrera ateratzeko, bertan daudenen artean aldeko botoak kontrakoak baino gehiago izan behar dira.
+
+es: Si hay empate, se vota otra vez. Si persiste, se hace una pausa y se vota una tercera vez. Si sigue el empate, la propuesta se da por rechazada.
+eu: Berdinketa badago, berriro bozkatzen da. Berdinketak jarraitzen badu, etenaldi bat egiten da eta hirugarren aldiz bozkatzen da. Oraindik ere berdinketa badago, proposamena baztertutzat jotzen da.
+
+es: Fuentes: Constitución, art. 79; Reglamento del Congreso, arts. 78, 79 y 88.
+eu: Iturriak: Konstituzioa, 79. art.; Kongresuko Erregelamendua, 78., 79. eta 88. art.
+
+es: Leyes orgánicas y decretos-leyes
+eu: Lege organikoak eta lege-dekretuak
+
+es: Las leyes orgánicas tratan los asuntos de más peso: los derechos fundamentales, los estatutos de autonomía o las reglas electorales. Necesitan mayoría absoluta del Congreso.
+eu: Lege organikoek garrantzi handieneko gaiak jorratzen dituzte: oinarrizko eskubideak, autonomia-estatutuak edo hauteskunde-arauak. Kongresuaren gehiengo osoa behar dute.
+
+es: El [[decretoley|decreto-ley]] es el atajo del Gobierno para casos urgentes: lo aprueba él solo y entra en vigor, pero el Congreso tiene treinta días para mantenerlo o tumbarlo.
+eu: [[decretoley|Lege-dekretua]] Gobernuaren lasterbidea da presako kasuetarako: Gobernuak bakarrik onartzen du eta indarrean sartzen da, baina Kongresuak hogeita hamar egun ditu hari eusteko edo bertan behera uzteko.
+
+es: Fuentes: Constitución, arts. 81 y 86.
+eu: Iturriak: Konstituzioa, 81. eta 86. art.
+
+es: Moción de censura y cuestión de confianza
+eu: Zentsura-mozioa eta konfiantza-arazoa
+
+es: La [[censura|moción de censura]] es la forma de cambiar de presidente sin elecciones. La firman al menos 35 diputados, lleva el nombre de un candidato y necesita mayoría absoluta. Si sale, ese candidato pasa a ser presidente.
+eu: [[censura|Zentsura-mozioa]] hauteskunderik gabe presidentea aldatzeko modua da. Gutxienez 35 diputatuk sinatzen dute, hautagai baten izena darama eta gehiengo osoa behar du. Aurrera ateratzen bada, hautagai hori presidente bihurtzen da.
+
+es: La [[confianza|cuestión de confianza]] va al revés: la pide el propio presidente. Le basta la mayoría simple. Si la pierde, dimite y se busca nuevo presidente.
+eu: [[confianza|Konfiantza-arazoa]] alderantziz doa: presidenteak berak eskatzen du. Gehiengo soila aski du. Galtzen badu, dimisioa ematen du eta presidente berria bilatzen da.
+
+es: Fuentes: Constitución, arts. 112, 113 y 114. Los 35 diputados son la décima parte de 350.
+eu: Iturriak: Konstituzioa, 112., 113. eta 114. art. 35 diputatuak 350en hamarrena dira.
+
+es: Los Presupuestos
+eu: Aurrekontuak
+
+es: Los prepara el Gobierno y los aprueban las Cortes. Si el año empieza sin presupuestos nuevos, siguen valiendo los del año anterior hasta que se aprueben.
+eu: Gobernuak prestatzen ditu eta Gorteek onartzen dituzte. Urtea aurrekontu berririk gabe hasten bada, aurreko urtekoek balio dute berriak onartu arte.
+
+es: Por eso un Gobierno sin mayoría puede seguir gobernando, pero con las cuentas de otro año.
+eu: Horregatik, gehiengorik gabeko Gobernu batek gobernatzen jarrai dezake, baina beste urte bateko kontuekin.
+
+es: Fuente: Constitución, art. 134.
+eu: Iturria: Konstituzioa, 134. art.
+
+# ───── 6 · Pactos ─────
+
+es: 6 · Pactos
+eu: 6 · Itunak
+
+es: Si ningún partido llega solo a 176, toca pactar. Toca cada partido para cambiar su voto en la [[investidura|investidura]]: no, sí o [[abstencion|abstención]].
+eu: Alderdi bakar bat ere ez bada bere kabuz 176ra iristen, itunak egin behar dira. Ukitu alderdi bakoitza [[investidura|inbestiduran]] ematen duen botoa aldatzeko: ez, bai edo [[abstencion|abstentzioa]].
+
+es: Tres maneras de apoyar
+eu: Babesa emateko hiru modu
+
+es: Un partido puede ayudar a un candidato de tres maneras. Entrando en el Gobierno con él: es una coalición. Votando sí sin entrar en el Gobierno. O absteniéndose, para que le baste con la segunda votación.
+eu: Alderdi batek hiru modutan lagun diezaioke hautagai bati. Harekin Gobernuan sartuta: koalizio bat da. Baiezkoa emanda, Gobernuan sartu gabe. Edo abstenituta, bigarren bozketarekin aski izan dezan.
+
+es: Lo que se pide a cambio no está en ninguna ley: es negociación política.
+eu: Trukean eskatzen dena ez dago inongo legetan: negoziazio politikoa da.
+
+es: Explicación propia. Las mayorías, en el art. 99 de la Constitución.
+eu: Azalpen propioa. Gehiengoak, Konstituzioaren 99. artikuluan.
+
+es: Cómo se vota la investidura
+eu: Nola bozkatzen den inbestidura
+
+es: Uno a uno y en voz alta. Se llama a cada diputado por orden alfabético del primer apellido, empezando por uno sacado a suerte, y responde «sí», «no» o «abstención». Los miembros del Gobierno que son diputados y la Mesa votan al final.
+eu: Banan-banan eta ozen. Diputatu bakoitzari lehen abizenaren hurrenkera alfabetikoan deitzen zaio, zozketaz ateratako batetik hasita, eta «bai», «ez» edo «abstentzioa» erantzuten du. Diputatu diren Gobernuko kideek eta Mahaiak amaieran bozkatzen dute.
+
+es: Antes hay debate: el candidato explica su programa sin límite de tiempo y cada grupo le responde durante media hora.
+eu: Aurretik eztabaida dago: hautagaiak bere programa azaltzen du, denbora-mugarik gabe, eta talde bakoitzak ordu erdiz erantzuten dio.
+
+es: Fuentes: Reglamento del Congreso, arts. 85, 86 y 171.
+eu: Iturriak: Kongresuko Erregelamendua, 85., 86. eta 171. art.
+
+es: Si la investidura falla
+eu: Inbestidurak huts egiten badu
+
+es: Si el candidato no sale, el Rey puede hacer nuevas propuestas. Pero el reloj ya corre: dos meses después de la primera votación, si no hay presidente, se disuelven las Cortes y se vuelve a votar.
+eu: Hautagaia ateratzen ez bada, erregeak proposamen berriak egin ditzake. Baina erlojua martxan dago jada: lehen bozketatik bi hilabetera presidenterik ez badago, Gorteak desegiten dira eta berriro bozkatzen da.
+
+es: Ha pasado dos veces. En 2016 y en 2019 nadie logró la investidura a tiempo y se repitieron las elecciones.
+eu: Bi aldiz gertatu da. 2016an eta 2019an inork ez zuen inbestidura garaiz lortu, eta hauteskundeak errepikatu ziren.
+
+es: En una repetición todo va más rápido: se vota 47 días después de la convocatoria, no 54.
+eu: Errepikapen batean dena azkarrago doa: deialditik 47 egunera bozkatzen da, ez 54ra.
+
+es: Fuentes: Constitución, art. 99; LOREG, art. 42 y disposición adicional séptima (añadida por la Ley Orgánica 2/2016); Reales Decretos 184/2016 y 551/2019.
+eu: Iturriak: Konstituzioa, 99. art.; LOREG, 42. art. eta zazpigarren xedapen gehigarria (2/2016 Lege Organikoak erantsia); 184/2016 eta 551/2019 Errege Dekretuak.
+
+es: De dónde salen estos escaños
+eu: Nondik datozen eserleku hauek
+
+es: No son resultados: son escaños calculados a partir de las últimas encuestas por [Porra Electoral](https://gastiaso.github.io/porra-electoral/), que junta las encuestas publicadas y simula el reparto provincia a provincia. El 30N se cambiarán por los escaños de verdad.
+eu: Ez dira emaitzak: [Porra Electoral](https://gastiaso.github.io/porra-electoral/) webguneak azken inkestetatik kalkulatutako eserlekuak dira; webgune horrek argitaratutako inkestak biltzen ditu eta banaketa probintziaz probintzia simulatzen du. Azaroaren 30ean benetako eserlekuekin ordezkatuko dira.
+
+es: Fuente: [Porra Electoral](https://gastiaso.github.io/porra-electoral/).
+eu: Iturria: [Porra Electoral](https://gastiaso.github.io/porra-electoral/).
+
+es: Por qué la calculadora lleva fecha
+eu: Zergatik duen data kalkulagailuak
+
+es: La ley prohíbe publicar o difundir encuestas electorales en los cinco días anteriores a la votación: para el 29N, del 24 al 28 de noviembre. Por eso la estimación de esta calculadora se congeló antes y lleva la fecha de la última encuesta que incluye.
+eu: Legeak debekatu egiten du hauteskunde-inkestak argitaratzea edo zabaltzea bozketaren aurreko bost egunetan: azaroaren 29rako, azaroaren 24tik 28ra. Horregatik, kalkulagailu honen estimazioa lehenago izoztu zen, eta sartzen duen azken inkestaren data darama.
+
+es: Quien vigila que las encuestas cumplan la ley es la Junta Electoral Central.
+eu: Inkestek legea betetzen dutela zaintzen duena Hauteskunde Batzorde Zentrala da.
+
+es: Fuente: LOREG, art. 69. Del 24 al 28 de noviembre es el cálculo de los cinco días.
+eu: Iturria: LOREG, 69. art. Azaroaren 24tik 28ra bitartekoa bost egunen kalkulua da.
+
+# ───── 7 · Del 29N al Gobierno ─────
+
+es: 7 · Del 29N al Gobierno
+eu: 7 · Azaroaren 29tik Gobernura
+
+es: El reloj de dos meses no arranca el 29N. Empieza con la primera votación de [[investidura|investidura]].
+eu: Bi hilabeteko erlojua ez da azaroaren 29an abiatzen. [[investidura|Inbestidurako]] lehen bozketarekin hasten da.
+
+es: Toca cada fecha para ver qué pasa ese día.
+eu: Ukitu data bakoitza egun horretan zer gertatzen den ikusteko.
+
+es: Antes de votar
+eu: Bozkatu aurretik
+
+es: mar 6 oct
+eu: urr. 6 ar.
+
+es: Se disuelven las Cortes y se convocan elecciones
+eu: Gorteak desegiten dira eta hauteskundeak deitzen dira
+
+es: El Real Decreto 806/2026 sale en el BOE: disuelve el Congreso y el Senado elegidos en julio de 2023 y fija la votación 54 días después, el domingo 29 de noviembre. <small>Real Decreto 806/2026, arts. 1 y 2; LOREG, art. 42.1.</small>
+eu: 806/2026 Errege Dekretua BOEn ateratzen da: 2023ko uztailean aukeratutako Kongresua eta Senatua desegiten ditu, eta bozketa 54 egun geroago jartzen du, azaroaren 29an, igandean. <small>806/2026 Errege Dekretua, 1. eta 2. art.; LOREG, 42.1 art.</small>
+
+es: vie 13 nov
+eu: aza. 13 or.
+
+es: Empieza la campaña
+eu: Kanpaina hasten da
+
+es: Quince días en los que los partidos piden el voto con mítines, carteles y anuncios. Arranca a las cero horas. <small>LOREG, art. 51; Real Decreto 806/2026, art. 4.</small>
+eu: Hamabost egunez, alderdiek botoa eskatzen dute mitinekin, kartelekin eta iragarkiekin. Zero orduetan hasten da. <small>LOREG, 51. art.; 806/2026 Errege Dekretua, 4. art.</small>
+
+es: jue 19 nov
+eu: aza. 19 og.
+
+es: Último día para pedir el voto por correo
+eu: Posta bidezko botoa eskatzeko azken eguna
+
+es: Se pide en una oficina de Correos, en persona y con el DNI. Las papeletas llegan después a casa y se devuelven por correo certificado, sin sello. <small>LOREG, arts. 72 y 73. Fecha: cálculo del décimo día anterior.</small>
+eu: Correoseko bulego batean eskatzen da, aurrez aurre eta NANarekin. Boto-paperak etxera iristen dira gero, eta posta ziurtatuz itzultzen dira, zigilurik gabe. <small>LOREG, 72. eta 73. art. Data: aurreko hamargarren egunaren kalkulua.</small>
+
+es: 21 a 26 nov
+eu: aza. 21-26
+
+es: Voto en los consulados
+eu: Botoa kontsulatuetan
+
+es: Quien vive en el extranjero puede depositar su voto en una urna de su consulado o embajada. Si lo manda por correo, tiene que enviarlo como tarde el 24. <small>LOREG, art. 75. Fechas: cálculo de los plazos del artículo.</small>
+eu: Atzerrian bizi denak bere kontsulatuko edo enbaxadako hautestontzi batean utz dezake botoa. Postaz bidaltzen badu, beranduenez 24an bidali behar du. <small>LOREG, 75. art. Datak: artikuluko epeen kalkulua.</small>
+
+es: 24 a 28 nov
+eu: aza. 24-28
+
+es: No se pueden publicar encuestas
+eu: Ezin da inkestarik argitaratu
+
+es: La ley prohíbe publicar, difundir o reproducir sondeos electorales en los cinco días anteriores a la votación. <small>LOREG, art. 69.7.</small>
+eu: Legeak debekatu egiten du hauteskunde-inkestak argitaratzea, zabaltzea edo erreproduzitzea bozketaren aurreko bost egunetan. <small>LOREG, 69.7 art.</small>
+
+es: vie 27 nov
+eu: aza. 27 or.
+
+es: Termina la campaña
+eu: Kanpaina amaitzen da
+
+es: A medianoche se acaban los mítines, la propaganda y los actos de campaña. <small>LOREG, art. 51; Real Decreto 806/2026, art. 4.</small>
+eu: Gauerdian amaitzen dira mitinak, propaganda eta kanpainako ekitaldiak. <small>LOREG, 51. art.; 806/2026 Errege Dekretua, 4. art.</small>
+
+es: sáb 28 nov
+eu: aza. 28 lr.
+
+es: Jornada de reflexión
+eu: Hausnarketa-eguna
+
+es: La víspera no puede haber propaganda ni actos de campaña. <small>LOREG, arts. 51.3 y 53.</small>
+eu: Bezperan ezin da propagandarik ez kanpainako ekitaldirik egin. <small>LOREG, 51.3 eta 53. art.</small>
+
+es: La votación
+eu: Bozketa
+
+es: dom 29 nov
+eu: aza. 29 ig.
+
+es: Se vota, de 9:00 a 20:00
+eu: Bozketa, 9:00etatik 20:00etara
+
+es: Los colegios no cierran en todo el día. Al acabar, cada mesa abre la urna y cuenta los votos en público. Por la noche se conoce el recuento provisional. <small>LOREG, arts. 84, 95 y 98.</small>
+eu: Hauteslekuak ez dira egun osoan ixten. Amaitzean, mahai bakoitzak hautestontzia ireki eta botoak jendaurrean zenbatzen ditu. Gauean jakiten da behin-behineko kontaketa. <small>LOREG, 84., 95. eta 98. art.</small>
+
+es: El recuento oficial
+eu: Kontaketa ofiziala
+
+es: vie 4 dic
+eu: abe. 4 or.
+
+es: Escrutinio general
+eu: Zenbaketa orokorra
+
+es: Las juntas electorales hacen el recuento oficial con las actas de las mesas y suman el voto llegado del extranjero. <small>LOREG, arts. 75 y 103. Fecha: cálculo del quinto día.</small>
+eu: Hauteskunde-batzordeek kontaketa ofiziala egiten dute mahaien aktekin, eta atzerritik iritsitako botoa gehitzen dute. <small>LOREG, 75. eta 103. art. Data: bosgarren egunaren kalkulua.</small>
+
+es: lun 7 dic
+eu: abe. 7 al.
+
+es: Como tarde, termina el escrutinio
+eu: Beranduenez, zenbaketa amaitzen da
+
+es: Después se proclaman los electos. Desde la proclamación hay tres días para recurrir; los recursos los resuelve el Tribunal Supremo. <small>LOREG, arts. 107.2, 108 y 112. Fecha: cálculo del octavo día.</small>
+eu: Ondoren, hautetsiak aldarrikatzen dira. Aldarrikapenetik hiru egun daude helegitea jartzeko; helegiteak Auzitegi Gorenak ebazten ditu. <small>LOREG, 107.2, 108. eta 112. art. Data: zortzigarren egunaren kalkulua.</small>
+
+es: Las nuevas Cortes
+eu: Gorte berriak
+
+es: mié 23 dic
+eu: abe. 23 az.
+
+es: Se constituyen el Congreso y el Senado
+eu: Kongresua eta Senatua eratzen dira
+
+es: A las diez de la mañana, cada cámara en su sesión constitutiva. En el Congreso preside al principio el diputado de más edad, se elige la Mesa y los diputados juran o prometen la Constitución. <small>Real Decreto 806/2026, art. 5; Constitución, art. 72.2; Reglamento del Congreso, arts. 1 a 4 y 37.</small>
+eu: Goizeko hamarretan, ganbera bakoitza bere eraketa-bilkuran. Kongresuan, hasieran diputaturik zaharrena da buru, Mahaia aukeratzen da, eta diputatuek Konstituzioa betetzeko zin egiten dute edo hitz ematen dute. <small>806/2026 Errege Dekretua, 5. art.; Konstituzioa, 72.2 art.; Kongresuko Erregelamendua, 1-4. eta 37. art.</small>
+
+es: hasta el 28 dic
+eu: abe. 28ra arte
+
+es: Se forman los grupos parlamentarios
+eu: Talde parlamentarioak osatzen dira
+
+es: En los cinco días siguientes a la sesión constitutiva. Por regla general hacen falta quince diputados; hay otra vía con cinco si se supera un mínimo de votos. <small>Reglamento del Congreso, arts. 23 y 24. Fecha: cálculo de los cinco días.</small>
+eu: Eraketa-bilkuraren ondorengo bost egunetan. Oro har, hamabost diputatu behar dira; bada beste bide bat bostekin, gutxieneko boto kopuru bat gaindituz gero. <small>Kongresuko Erregelamendua, 23. eta 24. art. Data: bost egunen kalkulua.</small>
+
+es: 1 ene 2027
+eu: 2027ko urt. 1
+
+es: Si no hay Presupuestos nuevos, siguen los anteriores
+eu: Aurrekontu berririk ez badago, aurrekoek jarraitzen dute
+
+es: Se prorrogan automáticamente hasta que se aprueben otros. Un Gobierno en funciones no puede aprobar el proyecto de Presupuestos. <small>Constitución, art. 134.4; Ley 50/1997, art. 21.5.</small>
+eu: Automatikoki luzatzen dira beste batzuk onartu arte. Jarduneko Gobernu batek ezin du Aurrekontuen proiektua onartu. <small>Konstituzioa, 134.4 art.; 50/1997 Legea, 21.5 art.</small>
+
+es: La investidura
+eu: Inbestidura
+
+es: sin fecha
+eu: datarik gabe
+
+es: El Rey consulta y propone un candidato
+eu: Erregeak kontsultak egiten ditu eta hautagai bat proposatzen du
+
+es: Recibe a los representantes de los grupos con escaños y propone un candidato a través de la presidencia del Congreso. La Constitución no le pone plazo. <small>Constitución, art. 99.1.</small>
+eu: Eserlekuak dituzten taldeen ordezkariak hartzen ditu, eta hautagai bat proposatzen du Kongresuko presidentetzaren bidez. Konstituzioak ez dio eperik jartzen. <small>Konstituzioa, 99.1 art.</small>
+
+es: día D
+eu: D eguna
+
+es: Debate y primera votación
+eu: Eztabaida eta lehen bozketa
+
+es: El candidato expone su programa sin límite de tiempo y cada grupo le responde. Necesita 176 síes. Aquí arranca el reloj de dos meses. <small>Constitución, art. 99; Reglamento del Congreso, art. 171.</small>
+eu: Hautagaiak bere programa azaltzen du, denbora-mugarik gabe, eta talde bakoitzak erantzuten dio. 176 bai behar ditu. Hemen abiatzen da bi hilabeteko erlojua. <small>Konstituzioa, 99. art.; Kongresuko Erregelamendua, 171. art.</small>
+
+es: D + 48 h
+eu: D + 48 h
+
+es: Segunda votación
+eu: Bigarren bozketa
+
+es: Si no llegó a 176, basta con más síes que noes. Si tampoco sale, el Rey puede proponer a otro candidato. <small>Constitución, art. 99.3 y 99.4.</small>
+eu: 176ra iritsi ez bazen, aski da ezezkoak baino baiezko gehiago izatea. Orduan ere ateratzen ez bada, erregeak beste hautagai bat proposa dezake. <small>Konstituzioa, 99.3 eta 99.4 art.</small>
+
+es: D + 2 meses
+eu: D + 2 hilabete
+
+es: Si no hay presidente, nuevas elecciones
+eu: Presidenterik ez badago, hauteskunde berriak
+
+es: Se disuelven las Cortes y se vota 47 días después de la convocatoria. Ha pasado en 2016 y en 2019. <small>Constitución, art. 99.5; LOREG, disposición adicional séptima; Reales Decretos 184/2016 y 551/2019.</small>
+eu: Gorteak desegiten dira, eta deialditik 47 egunera bozkatzen da. 2016an eta 2019an gertatu da. <small>Konstituzioa, 99.5 art.; LOREG, zazpigarren xedapen gehigarria; 184/2016 eta 551/2019 Errege Dekretuak.</small>
+
+es: con presidente
+eu: presidentea
+
+es: Nombramiento y nuevo Gobierno
+eu: Izendapena eta Gobernu berria
+
+es: El Rey nombra presidente al candidato investido y, a propuesta suya, a los ministros. Cuando toman posesión, termina el Gobierno en funciones. <small>Constitución, arts. 62, 99.3, 100 y 101.</small>
+eu: Erregeak presidente izendatzen du inbestitutako hautagaia, eta, hark proposatuta, ministroak. Kargua hartzen dutenean, jarduneko Gobernua amaitzen da. <small>Konstituzioa, 62., 99.3, 100. eta 101. art.</small>
+
+es: La campaña y la jornada de reflexión
+eu: Kanpaina eta hausnarketa-eguna
+
+es: La campaña dura quince días: del viernes 13 al viernes 27 de noviembre. Es el tiempo en que los partidos piden el voto con mítines, carteles y anuncios. Antes del 13 no pueden poner carteles ni anuncios electorales.
+eu: Kanpainak hamabost egun irauten du: azaroaren 13tik (ostirala) azaroaren 27ra (ostirala). Denbora horretan eskatzen dute alderdiek botoa, mitinekin, kartelekin eta iragarkiekin. 13a baino lehen ezin dute hauteskundeetako kartelik ez iragarkirik jarri.
+
+es: El sábado 28, la víspera, no puede haber propaganda ni actos de campaña. Es lo que se conoce como jornada de reflexión.
+eu: Larunbatean, azaroaren 28an, bezperan, ezin da propagandarik ez kanpainako ekitaldirik egin. Horri esaten zaio hausnarketa-eguna.
+
+es: Fuentes: LOREG, arts. 51 y 53; Real Decreto 806/2026, art. 4. «Jornada de reflexión» es el nombre de uso común; la ley habla del periodo en que la campaña ha terminado.
+eu: Iturriak: LOREG, 51. eta 53. art.; 806/2026 Errege Dekretua, 4. art. «Hausnarketa-eguna» ohiko izena da; legeak kanpaina amaituta dagoen aldiaz hitz egiten du.
+
+es: Si ese día no puedes ir
+eu: Egun horretan joan ezin baduzu
+
+es: Existe el voto por correo. Hay que pedirlo en una oficina de Correos, en persona y con el DNI, hasta diez días antes de la votación: para el 29N, hasta el 19 de noviembre. Después te llegan las papeletas a casa y las devuelves por correo certificado, sin pagar sello.
+eu: Posta bidezko botoa dago. Correoseko bulego batean eskatu behar da, aurrez aurre eta NANarekin, bozketa baino hamar egun lehenago arte: azaroaren 29rako, azaroaren 19ra arte. Gero, boto-paperak etxera iristen zaizkizu, eta posta ziurtatuz itzultzen dituzu, zigilurik ordaindu gabe.
+
+es: Quien vive en el extranjero y está inscrito en el censo de residentes ausentes recibe la documentación en casa sin pedirla. Puede votar en una urna de su consulado, del 21 al 26 de noviembre, o mandar el voto por correo al consulado como tarde el 24. Esos votos se cuentan el 4 de diciembre, en el recuento oficial.
+eu: Atzerrian bizi denak, egoiliar absenteen erroldan inskribatuta badago, etxean jasotzen du dokumentazioa, eskatu gabe. Bere kontsulatuko hautestontzi batean bozka dezake, azaroaren 21etik 26ra, edo botoa postaz bidal dezake kontsulatura, beranduenez 24an. Boto horiek abenduaren 4an zenbatzen dira, kontaketa ofizialean.
+
+es: Fuentes: LOREG, arts. 72, 73, 75 y 103. Las fechas son el cálculo de los plazos de esos artículos para el 29N.
+eu: Iturriak: LOREG, 72., 73., 75. eta 103. art. Datak artikulu horietako epeen kalkulua dira, azaroaren 29rako.
+
+es: La noche electoral no es el resultado oficial
+eu: Hauteskunde-gauekoa ez da emaitza ofiziala
+
+es: La noche del 29N se conoce un recuento provisional, hecho con las actas de las mesas. El oficial, el [[escrutinio|escrutinio general]], lo hacen las [[junta|juntas electorales]] al quinto día: el 4 de diciembre. Ese día se suma el voto llegado del extranjero.
+eu: Azaroaren 29ko gauean behin-behineko kontaketa bat jakiten da, mahaien aktekin egina. Ofiziala, [[escrutinio|zenbaketa orokorra]], [[junta|hauteskunde-batzordeek]] egiten dute bosgarren egunean: abenduaren 4an. Egun horretan gehitzen da atzerritik iritsitako botoa.
+
+es: Tiene que estar terminado como tarde el octavo día: el 7 de diciembre. Luego se proclaman los diputados. Desde ese momento hay tres días para recurrir, y los recursos los resuelve el Tribunal Supremo.
+eu: Beranduenez zortzigarren egunean amaituta egon behar du: abenduaren 7an. Gero, diputatuak aldarrikatzen dira. Une horretatik hiru egun daude helegitea jartzeko, eta helegiteak Auzitegi Gorenak ebazten ditu.
+
+es: Fuentes: LOREG, arts. 75, 98, 103, 107, 108 y 112. El 4 y el 7 de diciembre son el cálculo del quinto y el octavo día.
+eu: Iturriak: LOREG, 75., 98., 103., 107., 108. eta 112. art. Abenduaren 4a eta 7a bosgarren eta zortzigarren egunaren kalkulua dira.
+
+es: Por qué el 23 de diciembre
+eu: Zergatik abenduaren 23an
+
+es: La Constitución da 25 días desde la votación para reunir al nuevo Congreso. El decreto que convocó las elecciones fijó el 23 de diciembre a las diez.
+eu: Konstituzioak 25 egun ematen ditu bozketatik Kongresu berria biltzeko. Hauteskundeak deitu zituen dekretuak abenduaren 23a finkatu zuen, hamarretan.
+
+es: Fuentes: Constitución, art. 68.6; Real Decreto 806/2026, art. 5.
+eu: Iturriak: Konstituzioa, 68.6 art.; 806/2026 Errege Dekretua, 5. art.
+
+es: El primer día del Congreso
+eu: Kongresuaren lehen eguna
+
+es: Preside el diputado de más edad, con los dos más jóvenes de secretarios. Lo primero es elegir la [[mesa|Mesa del Congreso]]. Para presidirla hace falta mayoría absoluta; si nadie la logra, se decide entre los dos más votados.
+eu: Diputaturik zaharrena da buru, eta bi gazteenak idazkari. Lehenik, [[mesa|Kongresuko Mahaia]] aukeratzen da. Mahaiko presidente izateko, gehiengo osoa behar da; inork lortzen ez badu, boto gehien dituzten bien artean erabakitzen da.
+
+es: Después, los diputados juran o prometen acatar la Constitución y el Congreso queda constituido.
+eu: Ondoren, diputatuek Konstituzioa betetzeko zin egiten dute edo hitz ematen dute, eta Kongresua eratuta geratzen da.
+
+es: Para ser diputado de pleno derecho hay que entregar la credencial y la declaración de actividades, y jurar o prometer la Constitución. Quien no lo haga en tres plenos se queda sin derechos ni prerrogativas hasta que lo haga.
+eu: Eskubide osoko diputatu izateko, kredentziala eta jardueren aitorpena aurkeztu behar dira, eta Konstituzioa betetzeko zin egin edo hitz eman. Hiru osoko bilkuratan hori egiten ez duena eskubiderik eta prerrogatibarik gabe geratzen da, egin arte.
+
+es: Los [[grupo|grupos parlamentarios]] se forman en los cinco días siguientes.
+eu: [[grupo|Talde parlamentarioak]] ondorengo bost egunetan osatzen dira.
+
+es: Fuentes: Reglamento del Congreso, arts. 1 a 4, 20, 23, 24 y 37.
+eu: Iturriak: Kongresuko Erregelamendua, 1-4., 20., 23., 24. eta 37. art.
+
+es: Las consultas del Rey
+eu: Erregearen kontsultak
+
+es: El Rey recibe a los representantes de los partidos con escaño y después propone un candidato, a través de la presidencia del Congreso. La Constitución no le pone plazo.
+eu: Erregeak eserlekua duten alderdien ordezkariak hartzen ditu, eta gero hautagai bat proposatzen du, Kongresuko presidentetzaren bidez. Konstituzioak ez dio eperik jartzen.
+
+es: Por eso el calendario tiene un tramo sin fechas: hasta que no hay una primera votación, el reloj de dos meses no cuenta.
+eu: Horregatik du egutegiak datarik gabeko tarte bat: lehen bozketa bat egon arte, bi hilabeteko erlojua ez da martxan jartzen.
+
+es: Fuente: Constitución, arts. 62 y 99.
+eu: Iturria: Konstituzioa, 62. eta 99. art.
+
+es: Quién gobierna mientras tanto
+eu: Nork gobernatzen duen bitartean
+
+es: El Gobierno que sale sigue [[funciones|en funciones]] hasta que toma posesión el nuevo. Despacha los asuntos ordinarios, pero no puede presentar proyectos de ley ni los Presupuestos.
+eu: Kargua uzten duen Gobernuak [[funciones|jardunean]] jarraitzen du berriak kargua hartu arte. Ohiko gaiak bideratzen ditu, baina ezin du lege-proiekturik aurkeztu, ezta Aurrekontuak ere.
+
+es: Su presidente tampoco puede disolver las Cortes, ni plantear una cuestión de confianza, ni proponer un referéndum.
+eu: Haren presidenteak ere ezin ditu Gorteak desegin, ez konfiantza-arazorik planteatu, ez erreferendumik proposatu.
+
+es: Fuentes: Constitución, art. 101; Ley 50/1997, art. 21.
+eu: Iturriak: Konstituzioa, 101. art.; 50/1997 Legea, 21. art.
+
+es: Y mientras no hay Cortes
+eu: Eta Gorterik ez dagoen bitartean
+
+es: Desde que se disolvieron las Cámaras hasta que se constituyan las nuevas queda de guardia un grupo reducido de diputados y otro de senadores: la [[permanente|Diputación Permanente]].
+eu: Ganberak desegin zirenetik berriak eratu arte, diputatu talde txiki bat eta senatarien beste bat geratzen dira guardian: [[permanente|Diputazio Iraunkorra]].
+
+es: Hace lo que en ese tiempo no puede hacer el Congreso: mantener o tumbar los [[decretoley|decretos-leyes]] del Gobierno y decidir sobre los estados de alarma, excepción y sitio.
+eu: Denbora horretan Kongresuak egin ezin duena egiten du: Gobernuaren [[decretoley|lege-dekretuei]] eutsi edo bertan behera utzi, eta alarma-, salbuespen- eta setio-egoerei buruz erabaki.
+
+es: Fuentes: Constitución, arts. 78, 86 y 116.
+eu: Iturriak: Konstituzioa, 78., 86. eta 116. art.
+
+es: Cuando ya hay presidente
+eu: Presidentea dagoenean
+
+es: El Rey nombra al presidente que ha elegido el Congreso. Después nombra a los ministros que el presidente le propone. Cuando el nuevo Gobierno toma posesión, el anterior deja de estar en funciones.
+eu: Erregeak Kongresuak aukeratu duen presidentea izendatzen du. Gero, presidenteak proposatzen dizkion ministroak izendatzen ditu. Gobernu berriak kargua hartzen duenean, aurrekoak jardunean egoteari uzten dio.
+
+es: Fuentes: Constitución, arts. 62, 99, 100 y 101.
+eu: Iturriak: Konstituzioa, 62., 99., 100. eta 101. art.
+
+# ───── 8 · Cierre ─────
+
+es: 8 · Cierre
+eu: 8 · Itxiera
+
+es: Hasta aquí, las reglas. El 30N se abren cinco pasos más, con los resultados y lo que pase después.
+eu: Honaino, arauak. Azaroaren 30ean beste bost urrats irekiko dira, emaitzekin eta ondoren gertatzen denarekin.
+
+es: Hasta aquí, las reglas. Los cinco pasos que siguen cuentan lo que ha pasado.
+eu: Honaino, arauak. Ondorengo bost urratsek gertatu dena kontatzen dute.
+
+es: Glosario completo
+eu: Glosario osoa
+
+es: Fuentes: [Real Decreto 806/2026](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20742), [Constitución](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229), [LOREG](https://www.boe.es/buscar/act.php?id=BOE-A-1985-11672), [Reglamento del Congreso](https://www.boe.es/buscar/act.php?id=BOE-A-1982-5196), [Real Decreto 605/1999](https://www.boe.es/buscar/act.php?id=BOE-A-1999-8583) y [Ley 50/1997](https://www.boe.es/buscar/act.php?id=BOE-A-1997-25336).
+eu: Iturriak: [806/2026 Errege Dekretua](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20742), [Konstituzioa](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229), [LOREG](https://www.boe.es/buscar/act.php?id=BOE-A-1985-11672), [Kongresuko Erregelamendua](https://www.boe.es/buscar/act.php?id=BOE-A-1982-5196), [605/1999 Errege Dekretua](https://www.boe.es/buscar/act.php?id=BOE-A-1999-8583) eta [50/1997 Legea](https://www.boe.es/buscar/act.php?id=BOE-A-1997-25336).
+
+es: Volver a la salida
+eu: Itzuli irteerara
+
+es: Ver solo el texto
+eu: Testua bakarrik ikusi
+
+# ───── 9 · Qué ha pasado ─────
+
+es: 9 · Qué ha pasado
+eu: 9 · Zer gertatu den
+
+es: Cómo leer el mapa
+eu: Nola irakurri mapa
+
+es: Cada hexágono es un escaño y lleva el color del partido que lo ha ganado. Las provincias grandes ocupan más porque reparten más escaños, no porque tengan más territorio.
+eu: Hexagono bakoitza eserleku bat da, eta irabazi duen alderdiaren kolorea du. Probintzia handiek leku gehiago hartzen dute eserleku gehiago banatzen dituztelako, ez lurralde handiagoa dutelako.
+
+es: Explicación propia.
+eu: Azalpen propioa.
+
+es: Provisional y oficial
+eu: Behin-behinekoa eta ofiziala
+
+es: Lo que se conoce la noche electoral es un recuento provisional. El oficial lo hacen las juntas electorales cinco días después, y es entonces cuando se suma el voto llegado del extranjero.
+eu: Hauteskunde-gauean jakiten dena behin-behineko kontaketa bat da. Ofiziala hauteskunde-batzordeek egiten dute bost egun geroago, eta orduan gehitzen da atzerritik iritsitako botoa.
+
+es: Después se proclaman los diputados. Desde ese momento hay tres días para recurrir, y los recursos los resuelve el Tribunal Supremo.
+eu: Ondoren, diputatuak aldarrikatzen dira. Une horretatik hiru egun daude helegitea jartzeko, eta helegiteak Auzitegi Gorenak ebazten ditu.
+
+es: Fuentes: LOREG, arts. 75, 98, 103, 108 y 112.
+eu: Iturriak: LOREG, 75., 98., 103., 108. eta 112. art.
+
+es: Qué son los votos válidos
+eu: Zer diren baliozko botoak
+
+es: Los porcentajes se calculan sobre los votos válidos: los que van a un partido más los votos en blanco. Los nulos quedan fuera.
+eu: Ehunekoak baliozko botoen gainean kalkulatzen dira: alderdi batera doazenak gehi boto zuriak. Baliogabeak kanpoan geratzen dira.
+
+# ───── 10 · En tu provincia ─────
+
+es: 10 · En tu provincia
+eu: 10 · Zure probintzian
+
+es: Tu provincia
+eu: Zure probintzia
+
+es: ¿Y si…?
+eu: Zer gertatuko litzateke…?
+
+es: Pasa votos de un partido a otro y mira cómo cambia el reparto de tu provincia. El total de votos no cambia.
+eu: Pasatu botoak alderdi batetik bestera, eta begiratu nola aldatzen den zure probintziako banaketa. Boto guztien kopurua ez da aldatzen.
+
+es: Quitar votos a
+eu: Botoak kendu honi
+
+es: Dárselos a
+eu: Eman honi
+
+es: Cuántos: <output id="ysiV" for="ysiN"></output>
+eu: Zenbat: <output id="ysiV" for="ysiN"></output>
+
+es: Cómo se calcula lo que faltó
+eu: Nola kalkulatzen den zenbat falta izan zen
+
+es: El último escaño se lo lleva la división más alta que quedaba en la tabla. Lo que le faltó al siguiente partido es cuántos votos más habría necesitado para que su división superase a esa, sin que cambie nada más.
+eu: Azken eserlekua taulan geratzen zen zatidura handienak lortzen du. Hurrengo alderdiari falta izan zitzaiona hau da: zenbat boto gehiago beharko zituen bere zatidurak hura gainditzeko, beste ezer aldatu gabe.
+
+es: Es una cuenta sobre el papel: en la realidad, si un partido sube, otros bajan.
+eu: Paper gaineko kalkulua da: errealitatean, alderdi bat igotzen bada, beste batzuk jaitsi egiten dira.
+
+es: Cálculo propio con la regla del art. 163 de la LOREG.
+eu: Kalkulu propioa, LOREGen 163. artikuluko arauarekin.
+
+es: Si un diputado deja el escaño
+eu: Diputatu batek eserlekua uzten badu
+
+es: Entra el siguiente de la lista por la que salió elegido; no se vuelve a votar.
+eu: Hura hautatu zuten zerrendako hurrengoa sartzen da; ez da berriro bozkatzen.
+
+es: Fuente: LOREG, art. 164.
+eu: Iturria: LOREG, 164. art.
+
+# ───── 11 · Votos y escaños ─────
+
+es: 11 · Votos y escaños
+eu: 11 · Botoak eta eserlekuak
+
+es: <i class="lv"></i> votos <i class="le"></i> escaños
+eu: <i class="lv"></i> botoak <i class="le"></i> eserlekuak
+
+es: Por qué no coinciden
+eu: Zergatik ez datozen bat
+
+es: Porque los escaños no se reparten una vez en toda España, sino 52 veces: una por provincia. En las pequeñas solo entran los partidos más votados, y los votos de los demás se quedan sin escaño.
+eu: Eserlekuak ez direlako behin banatzen Espainia osoan, 52 aldiz baizik: behin probintzia bakoitzean. Txikietan boto gehien dituzten alderdiak bakarrik sartzen dira, eta gainerakoen botoak eserlekurik gabe geratzen dira.
+
+es: A eso se suma la barrera del 3 % y que la regla D'Hondt redondea a favor de los partidos con más votos en cada provincia.
+eu: Horri gehitu behar zaio % 3ko langa, eta D'Hondt legeak probintzia bakoitzean boto gehien dituzten alderdien alde biribiltzen duela.
+
+es: Explicación propia a partir de los arts. 162 y 163 de la LOREG.
+eu: Azalpen propioa, LOREGen 162. eta 163. artikuluetatik abiatuta.
+
+es: Qué habría que cambiar para que coincidieran
+eu: Zer aldatu beharko litzatekeen bat etortzeko
+
+es: La provincia como circunscripción está en la Constitución. El número de diputados (350), el mínimo de dos por provincia, la barrera y la regla de reparto están en la ley electoral.
+eu: Probintzia hautesbarruti izatea Konstituzioan dago. Diputatu kopurua (350), probintziako gutxieneko biak, langa eta banaketa-araua hauteskunde-legean daude.
+
+es: Lo primero exige reformar la Constitución. Lo segundo, mayoría absoluta del Congreso.
+eu: Lehenengorako, Konstituzioa erreformatu behar da. Bigarrenerako, Kongresuaren gehiengo osoa behar da.
+
+# ───── 12 · ¿Quién gobierna? ─────
+
+es: 12 · ¿Quién gobierna?
+eu: 12 · Nork gobernatzen du?
+
+es: Estos son los escaños de verdad. Toca cada partido para cambiar su voto en la investidura: no, sí o abstención.
+eu: Hauek dira benetako eserlekuak. Ukitu alderdi bakoitza inbestiduran ematen duen botoa aldatzeko: ez, bai edo abstentzioa.
+
+es: Qué mirar en una negociación
+eu: Zeri begiratu negoziazio batean
+
+es: Dos números. Si los síes llegan a 176, hay presidente a la primera. Si no llegan, lo que importa es que haya más síes que noes: ahí cada abstención cuenta.
+eu: Bi zenbakiri. Baiezkoak 176ra iristen badira, presidentea dago lehen bozketan. Iristen ez badira, garrantzitsuena ezezkoak baino baiezko gehiago izatea da: hor abstentzio bakoitzak balio du.
+
+es: Fuente: Constitución, art. 99.3.
+eu: Iturria: Konstituzioa, 99.3 art.
+
+es: Los diputados no están atados
+eu: Diputatuak ez daude lotuta
+
+es: La Constitución dice que diputados y senadores no están sujetos a mandato imperativo: nadie puede obligarlos legalmente a votar en un sentido.
+eu: Konstituzioak dio diputatuak eta senatariak ez daudela aginduzko mandatuaren mende: inork ezin ditu legez behartu zentzu batean bozkatzera.
+
+es: Fuente: Constitución, art. 67.2.
+eu: Iturria: Konstituzioa, 67.2 art.
+
+# ───── 13 · Lo que viene ─────
+
+es: 13 · Lo que viene
+eu: 13 · Datorrena
+
+es: Si no hay acuerdo
+eu: Akordiorik ez badago
+
+es: Dos meses después de la primera votación de investidura, si no hay presidente, se disuelven las Cortes y se convocan nuevas elecciones. Se celebrarían 47 días después.
+eu: Inbestidurako lehen bozketatik bi hilabetera presidenterik ez badago, Gorteak desegiten dira eta hauteskunde berriak deitzen dira. 47 egun geroago egingo lirateke.
+
+es: Ha pasado dos veces, en 2016 y en 2019.
+eu: Bi aldiz gertatu da, 2016an eta 2019an.
+
+es: Fuentes: Constitución, art. 99.5; LOREG, disposición adicional séptima (añadida por la Ley Orgánica 2/2016); Reales Decretos 184/2016 y 551/2019.
+eu: Iturriak: Konstituzioa, 99.5 art.; LOREG, zazpigarren xedapen gehigarria (2/2016 Lege Organikoak erantsia); 184/2016 eta 551/2019 Errege Dekretuak.
+
+es: Si hay acuerdo
+eu: Akordioa badago
+
+es: El Rey nombra al presidente y, a propuesta suya, a los ministros. El Gobierno en funciones termina cuando el nuevo toma posesión.
+eu: Erregeak presidentea izendatzen du eta, hark proposatuta, ministroak. Jarduneko Gobernua amaitzen da berriak kargua hartzen duenean.
+
+# ───── La Moncloa ─────
+
+es: La Moncloa
+eu: Moncloa
+
+es: El último paso. El recorrido termina cuando el Congreso elige presidente y el nuevo Gobierno toma posesión.
+eu: Azken urratsa. Ibilbidea amaitzen da Kongresuak presidentea aukeratzen duenean eta Gobernu berriak kargua hartzen duenean.
+
+# ───── Pie de página ─────
+
+es: <b>De las urnas a la Moncloa</b> · Guillermo Astiaso, 2026.
+eu: <b>Hautestontzietatik Moncloara</b> · Guillermo Astiaso, 2026.
+
+es: Código con licencia [MIT](https://github.com/gastiaso/de-las-urnas-a-la-moncloa/blob/main/LICENSE); textos con licencia [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es). Tipografías Courier Prime y Libre Franklin (licencia OFL); mapa de hexágonos generado a partir de los límites provinciales del IGN (CC BY 4.0).
+eu: Kodea [MIT](https://github.com/gastiaso/de-las-urnas-a-la-moncloa/blob/main/LICENSE) lizentziarekin; testuak [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es) lizentziarekin. Courier Prime eta Libre Franklin tipografiak (OFL lizentzia); hexagonoen mapa IGNren probintzia-mugetatik abiatuta sortua (CC BY 4.0).
+
+es: Sin cookies, sin analítica y sin peticiones a otros servidores. [Código en GitHub](https://github.com/gastiaso/de-las-urnas-a-la-moncloa).
+eu: Cookierik gabe, analitikarik gabe eta beste zerbitzarietarako eskaerarik gabe. [Kodea GitHuben](https://github.com/gastiaso/de-las-urnas-a-la-moncloa).
+
+# ───── Barra de arriba y salida ─────
+
+es: Ir a un paso
+eu: Joan urrats batera
+
+# ───── De las urnas a la Moncloa ─────
+
+es: Idioma
+eu: Hizkuntza
+
+# ───── 3 · Dónde votas ─────
+
+es: Habitantes por escaño en cada circunscripción, de menos a más
+eu: Biztanleak eserlekuko hautesbarruti bakoitzean, gutxienetik gehienera
+
+# ───── 11 · Votos y escaños ─────
+
+es: Porcentaje de votos y de escaños de cada partido
+eu: Alderdi bakoitzaren botoen eta eserlekuen ehunekoa

@@ -87,8 +87,9 @@ for (const cod of cods) {
   const es = fallos.some(f => f.startsWith('una función')) ? [] : frases(ES);
   fr.forEach(([r, v], i) => {
     if (/undefined|NaN|\[object/.test(v)) fallos.push(r + ' escribe «' + v + '»');
-    // las mismas cifras que en castellano (sin contar ordinales como «1.ª» ni los separadores de miles)
-    const nums = s => (s.replace(/<[^>]+>/g, ' ').match(/\d[\d.,  ]*\d|\d/g) || []).map(x => x.replace(/[.,  ]/g, '')).sort().join(' ');
+    // las mismas cifras que en castellano, sin contar los separadores de miles ni el 1 suelto, que un idioma puede
+    // escribir con letra («eserleku bat», «one seat»)
+    const nums = s => (s.replace(/<[^>]+>/g, ' ').match(/\d[\d.,  ]*\d|\d/g) || []).map(x => x.replace(/[.,  ]/g, '')).filter(x => x !== '1').sort().join(' ');
     if (es[i] && !/^(dato|fecha|primerEscano|escanos|sies|provLista|prov)$/.test(r) && nums(es[i][1]) !== nums(v)) fallos.push(r + ': no lleva las mismas cifras. «' + es[i][1] + '» / «' + v + '»');
   });
   console.log(cod + (fallos.length ? '  ' + fallos.length + ' problemas' : '  bien') + ' · ' + fr.length + ' frases probadas');
