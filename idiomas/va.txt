@@ -88,7 +88,7 @@ es: Cómo es ir a votar
 va: Com és anar a votar
 
 es: Los colegios abren de 9:00 a 20:00, sin interrupción. Votas dos veces: una papeleta blanca para el Congreso y otra sepia para el Senado, cada una en su sobre.
-va: Els col·legis obrin de 9:00 a 20:00, sense interrupció. Votes dues vegades: una papereta blanca per al Congrés i una altra sépia per al Senat, cadascuna en el seu sobre.
+va: Els col·legis obrin de 9:00 a 20:00, sense interrupció. Votes dos vegades: una papereta blanca per al Congrés i una altra sépia per al Senat, cadascuna en el seu sobre.
 
 es: Puedes usar la cabina, pero no es obligatorio. En la mesa, el presidente dice tu nombre, dice «vota» y el sobre entra en la urna.
 va: Pots usar la cabina, però no és obligatori. En la mesa, el president diu el teu nom, diu «vota» i el sobre entra en l'urna.
@@ -130,7 +130,7 @@ es: Las [[cortes|Cortes Generales]] son el Congreso y el Senado juntos. Hacen la
 va: Les [[cortes|Corts Generals]] són el Congrés i el Senat junts. Fan les lleis, aproven els Pressupostos i controlen el Govern. S'elegixen per a quatre anys.
 
 es: De las dos cámaras, el Congreso es el que elige al presidente del Gobierno y el que puede levantar los vetos del Senado.
-va: De les dues cambres, el Congrés és el que elegix el president del Govern i el que pot alçar els vetos del Senat.
+va: De les dos cambres, el Congrés és el que elegix el president del Govern i el que pot alçar els vetos del Senat.
 
 es: Fuentes: Constitución, arts. 66, 68.4, 69.6, 90 y 99.
 va: Fonts: Constitució, arts. 66, 68.4, 69.6, 90 i 99.
@@ -216,7 +216,7 @@ es: El [[blanco|voto en blanco]] es un sobre vacío. Es válido: no va a ningún
 va: El [[blanco|vot en blanc]] és un sobre buit. És vàlid: no va a cap partit, però compta en el total i per això puja un poc el llistó del 3 %.
 
 es: El [[nulo|voto nulo]] no cuenta para el reparto. Lo es una papeleta con tachaduras o añadidos, o un sobre que no es el oficial. Si metes dos papeletas del mismo partido, vale como un solo voto.
-va: El [[nulo|vot nul]] no compta per al repartiment. Ho és una papereta amb ratllades o afegits, o un sobre que no és l'oficial. Si poses dues paperetes del mateix partit, val com un sol vot.
+va: El [[nulo|vot nul]] no compta per al repartiment. Ho és una papereta amb ratllades o afegits, o un sobre que no és l'oficial. Si poses dos paperetes del mateix partit, val com un sol vot.
 
 es: Quien no va a votar se abstiene: no entra en ninguna cuenta.
 va: Qui no va a votar s'absté: no entra en cap compte.
@@ -293,7 +293,7 @@ es: En el ejemplo, con dos escaños no basta ni un 17 %. En las provincias peque
 va: En l'exemple, amb dos escons no basta ni un 17 %. En les províncies xicotetes, el llistó de veritat està molt per damunt del 3 %.
 
 es: Ejemplo propio: los mismos cinco partidos inventados y los mismos porcentajes en las dos provincias.
-va: Exemple propi: els mateixos cinc partits inventats i els mateixos percentatges en les dues províncies.
+va: Exemple propi: els mateixos cinc partits inventats i els mateixos percentatges en les dos províncies.
 
 es: Qué dice la Constitución y qué dice la ley
 va: Què diu la Constitució i què diu la llei
@@ -394,7 +394,7 @@ es: Hay una cosa que solo puede autorizar el Senado, por mayoría absoluta: que 
 va: Hi ha una cosa que només pot autoritzar el Senat, per majoria absoluta: que el Govern obligue una comunitat autònoma a complir la llei, l'article 155.
 
 es: También puede proponer leyes, crear comisiones de investigación y, con 50 senadores, recurrir una ley ante el Tribunal Constitucional. Los acuerdos de cooperación entre comunidades autónomas y el reparto del Fondo de Compensación Interterritorial empiezan en el Senado, aunque, si las dos cámaras no se ponen de acuerdo, decide el Congreso.
-va: També pot proposar lleis, crear comissions d'investigació i, amb 50 senadors, recórrer una llei davant del Tribunal Constitucional. Els acords de cooperació entre comunitats autònomes i el repartiment del Fons de Compensació Interterritorial comencen en el Senat, encara que, si les dues cambres no es posen d'acord, decidix el Congrés.
+va: També pot proposar lleis, crear comissions d'investigació i, amb 50 senadors, recórrer una llei davant del Tribunal Constitucional. Els acords de cooperació entre comunitats autònomes i el repartiment del Fons de Compensació Interterritorial comencen en el Senat, encara que, si les dos cambres no es posen d'acord, decidix el Congrés.
 
 es: Fuentes: Constitución, arts. 69, 74.2, 76, 87.1, 90, 145.2, 155, 158.2 y 162.1.
 va: Fonts: Constitució, arts. 69, 74.2, 76, 87.1, 90, 145.2, 155, 158.2 i 162.1.
@@ -560,7 +560,7 @@ es: Si el candidato no sale, el Rey puede hacer nuevas propuestas. Pero el reloj
 va: Si el candidat no ix, el Rei pot fer noves propostes. Però el rellotge ja corre: dos mesos després de la primera votació, si no hi ha president, es dissolen les Corts i es torna a votar.
 
 es: Ha pasado dos veces. En 2016 y en 2019 nadie logró la investidura a tiempo y se repitieron las elecciones.
-va: Ha passat dues vegades. En 2016 i en 2019 ningú va aconseguir la investidura a temps i es van repetir les eleccions.
+va: Ha passat dos vegades. En 2016 i en 2019 ningú va aconseguir la investidura a temps i es van repetir les eleccions.
 
 es: En una repetición todo va más rápido: se vota 47 días después de la convocatoria, no 54.
 va: En una repetició tot va més ràpid: es vota 47 dies després de la convocatòria, no 54.
@@ -1051,7 +1051,7 @@ es: Dos meses después de la primera votación de investidura, si no hay preside
 va: Dos mesos després de la primera votació d'investidura, si no hi ha president, es dissolen les Corts i es convoquen noves eleccions. Se celebrarien 47 dies després.
 
 es: Ha pasado dos veces, en 2016 y en 2019.
-va: Ha passat dues vegades, en 2016 i en 2019.
+va: Ha passat dos vegades, en 2016 i en 2019.
 
 es: Fuentes: Constitución, art. 99.5; LOREG, disposición adicional séptima (añadida por la Ley Orgánica 2/2016); Reales Decretos 184/2016 y 551/2019.
 va: Fonts: Constitució, art. 99.5; LOREG, disposició addicional setena (afegida per la Llei orgànica 2/2016); Reials decrets 184/2016 i 551/2019.
