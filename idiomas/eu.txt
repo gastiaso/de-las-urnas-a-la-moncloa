@@ -441,7 +441,7 @@ es: 5 · Las mayorías
 eu: 5 · Gehiengoak
 
 es: Para elegir presidente a la primera hace falta la [[absoluta|mayoría absoluta]]: 176 síes de 350. Si no sale, 48 horas después basta la [[simple|mayoría simple]]: más síes que noes.
-eu: Presidentea lehen bozketan aukeratzeko, [[absoluta|gehiengo osoa]] behar da: 350etik 176 bai. Ateratzen ez bada, 48 ordu geroago [[simple|gehiengo soila]] aski da: ezezkoak baino baiezko gehiago.
+eu: Presidentea lehen bozketan aukeratzeko, [[absoluta|gehiengo osoa]] behar da: 350etik aldeko 176 boto. Hautagaiak inbestidura lortzen ez badu, 48 ordu geroago [[simple|gehiengo soila]] aski da: ezezkoak baino baiezko gehiago.
 
 es: En teja, los 176 escaños que marcan la mitad más uno.
 eu: Teila-kolorez, erdia gehi bat markatzen duten 176 eserlekuak.
@@ -557,7 +557,7 @@ es: Si la investidura falla
 eu: Inbestidurak huts egiten badu
 
 es: Si el candidato no sale, el Rey puede hacer nuevas propuestas. Pero el reloj ya corre: dos meses después de la primera votación, si no hay presidente, se disuelven las Cortes y se vuelve a votar.
-eu: Hautagaia ateratzen ez bada, erregeak proposamen berriak egin ditzake. Baina erlojua martxan dago jada: lehen bozketatik bi hilabetera presidenterik ez badago, Gorteak desegiten dira eta berriro bozkatzen da.
+eu: Hautagaiak inbestidura lortzen ez badu, erregeak proposamen berriak egin ditzake. Baina erlojua martxan dago jada: lehen bozketatik bi hilabetera presidenterik ez badago, Gorteak desegiten dira eta berriro bozkatzen da.
 
 es: Ha pasado dos veces. En 2016 y en 2019 nadie logró la investidura a tiempo y se repitieron las elecciones.
 eu: Bi aldiz gertatu da. 2016an eta 2019an inork ez zuen inbestidura garaiz lortu, eta hauteskundeak errepikatu ziren.
@@ -748,7 +748,7 @@ es: Debate y primera votación
 eu: Eztabaida eta lehen bozketa
 
 es: El candidato expone su programa sin límite de tiempo y cada grupo le responde. Necesita 176 síes. Aquí arranca el reloj de dos meses. <small>Constitución, art. 99; Reglamento del Congreso, art. 171.</small>
-eu: Hautagaiak bere programa azaltzen du, denbora-mugarik gabe, eta talde bakoitzak erantzuten dio. 176 bai behar ditu. Hemen abiatzen da bi hilabeteko erlojua. <small>Konstituzioa, 99. art.; Kongresuko Erregelamendua, 171. art.</small>
+eu: Hautagaiak bere programa azaltzen du, denbora-mugarik gabe, eta talde bakoitzak erantzuten dio. Aldeko 176 boto behar ditu. Hemen abiatzen da bi hilabeteko erlojua. <small>Konstituzioa, 99. art.; Kongresuko Erregelamendua, 171. art.</small>
 
 es: D + 48 h
 eu: D + 48 h
@@ -757,7 +757,7 @@ es: Segunda votación
 eu: Bigarren bozketa
 
 es: Si no llegó a 176, basta con más síes que noes. Si tampoco sale, el Rey puede proponer a otro candidato. <small>Constitución, art. 99.3 y 99.4.</small>
-eu: 176ra iritsi ez bazen, aski da ezezkoak baino baiezko gehiago izatea. Orduan ere ateratzen ez bada, erregeak beste hautagai bat proposa dezake. <small>Konstituzioa, 99.3 eta 99.4 art.</small>
+eu: 176ra iritsi ez bazen, aski da ezezkoak baino baiezko gehiago izatea. Orduan ere inbestidura lortzen ez badu, erregeak beste hautagai bat proposa dezake. <small>Konstituzioa, 99.3 eta 99.4 art.</small>
 
 es: D + 2 meses
 eu: D + 2 hilabete

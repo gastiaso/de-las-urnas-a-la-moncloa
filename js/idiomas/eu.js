@@ -70,9 +70,10 @@ const tik = n => n + (kons(n) ? 'etik' : 'tik');                                
 const tan = n => n + (n % 20 === 1 && n % 100 !== 11 ? 'ean' : kons(n) ? 'etan' : 'tan');   // «29tan», «5etan», «1ean»
 // «bat» va detrás del nombre; se escribe con cifra («eserleku 1») para que las frases lleven las mismas cifras que en castellano
 const eserleku = n => n === 1 ? 'eserleku bat' : n + ' eserleku';
-const bai = n => n === 1 ? 'bai bat' : n + ' bai';
+const bai = n => n === 1 ? 'aldeko boto bat' : 'aldeko ' + n + ' boto';
+const kontra = n => n === 1 ? 'kontrako bat' : 'kontrako ' + n;
 const boto = n => n === 1 ? 'boto bat' : miles(n) + ' boto';
-const falta = n => n === 1 ? 'bai bat falta da' : n + ' bai falta dira';
+const falta = n => bai(n) + (n === 1 ? ' falta da' : ' falta dira');
 const PORRA = '<a href="https://gastiaso.github.io/porra-electoral/">Porra Electoral</a>';
 const HIL = ['urtarril', 'otsail', 'martxo', 'apiril', 'maiatz', 'ekain', 'uztail', 'abuztu', 'irail', 'urri', 'azaro', 'abendu'];
 
@@ -93,7 +94,7 @@ const DATUAK = {
   'escrutinio general: el recuento oficial.': 'Zenbaketa orokorra: kontaketa ofiziala.',
   'se constituyen el Congreso y el Senado.': 'Kongresua eta Senatua eratzen dira.',
   'el Rey consulta a los grupos y propone un candidato.': 'Erregeak taldeei kontsulta egiten die eta hautagai bat proposatzen du.',
-  'hacen falta 176 síes. Arranca el reloj de dos meses.': '176 bai behar dira. Bi hilabeteko erlojua martxan jartzen da.',
+  'hacen falta 176 síes. Arranca el reloj de dos meses.': 'Aldeko 176 boto behar dira. Bi hilabeteko erlojua martxan jartzen da.',
   '2.ª votación: más síes que noes.': '2. bozketa: ezezkoak baino baiezko gehiago.',
   'el Rey nombra al presidente.': 'Erregeak presidentea izendatzen du.'
 };
@@ -176,10 +177,10 @@ export const textos = {
     13: 'Hautetsontzietatik ateratzen den Kongresua',
     14: '350 eserleku' }[k] || ''),
   // c: { si, abs, no }, en escaños
-  rotuloPacto: c => 'Bai ' + c.si + ' · Abst. ' + c.abs + ' · Ez ' + c.no + '<small>' + (c.si >= 176 ? 'Lehen bozketan ateratzen da: 176 bai edo gehiago.'
-    : c.si > c.no ? 'Ez da 176ra iristen, baina bigarren bozketan ateratzen da.'
+  rotuloPacto: c => 'Bai ' + c.si + ' · Abst. ' + c.abs + ' · Ez ' + c.no + '<small>' + (c.si >= 176 ? 'Lehen bozketan lortzen du: aldeko 176 boto edo gehiago.'
+    : c.si > c.no ? 'Ez da 176ra iristen, baina bigarren bozketan lortzen du.'
     : c.si === 0 ? 'Ukitu alderdiak gehiengo bat osatzeko.'
-    : 'Ez da ateratzen: ' + falta(176 - c.si) + ' 176ra iristeko.') + '</small>',
+    : 'Ez du lortzen: ' + falta(176 - c.si) + ' 176ra iristeko.') + '</small>',
   piePacto: 'Eserleku bakoitza, bere alderdiaren kolorez. Zure botoa, aparte: ' + BLOKEA,
   piePactoRes: 'Eserleku bakoitza, bere alderdiaren kolorez. Baiezkoak ezkerrean biltzen dira; gero, abstentzioak, eta gero, ezezkoak.',
 
@@ -269,9 +270,9 @@ export const textos = {
   cuentaSi: n => 'Bai: ' + n,
   cuentaAbs: n => 'Abst.: ' + n,
   cuentaNo: n => 'Ez: ' + n,
-  primera: si => si >= 176 ? 'Ateratzen da: ' + si + ' bai ditu.' : 'Ez da ateratzen: ' + falta(176 - si) + '.',
-  segunda: (si, no) => (si > no ? 'Ateratzen da: ' : 'Ez da ateratzen: ') + si + ' bai eta ' + no + ' ez.',
-  anuncioPacto: (si, abs, no, primera, segunda) => 'Bai ' + si + ', abstentzioa ' + abs + ', ez ' + no + '. Lehen bozketa: ' + primera + ' Bigarrena: ' + segunda,
+  primera: si => si >= 176 ? 'Inbestidura lortzen du: ' + bai(si) + '.' : 'Ez du lortzen: ' + falta(176 - si) + '.',
+  segunda: (si, no) => (si > no ? 'Inbestidura lortzen du: ' : 'Ez du lortzen: ') + bai(si) + ' eta ' + kontra(no) + '.',
+  anuncioPacto: (si, abs, no, primera, segunda) => 'Aldeko ' + si + ', abstentzioa ' + abs + ', kontrako ' + no + '. Lehen bozketa: ' + primera + ' Bigarrena: ' + segunda,
   // corte: la fecha tal como la da fecha(), en adlativo («2026ko azaroaren 8ra»)
   porraNota: corte => corte + ' arteko azken inkestetatik kalkulatutako eserlekuak (' + PORRA + '). Estimazio bat da, ez emaitza bat.',
 
