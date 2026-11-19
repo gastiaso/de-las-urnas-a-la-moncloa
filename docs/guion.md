@@ -9,7 +9,7 @@ Cada cajón «saber más» lleva al final sus fuentes. Los textos que dependen d
 
 **Riel:**
 
-Qué votas el 29N y cómo se pasa de tu papeleta a un Gobierno, en ocho pasos, con los 350 escaños del Congreso.
+Qué votas el 29N y cómo se pasa de tu papeleta a un Gobierno, con los 350 escaños del Congreso.
 Baja para empezar ↓
 
 ## 1 · Qué se vota
@@ -190,10 +190,10 @@ _Fuentes: Constitución, arts. 167 y 168. Las cifras de bloqueo son una cuenta p
 
 **Saber más: Nombramientos que pasan por el Senado**
 
-El Senado propone a cuatro de los doce magistrados del Tribunal Constitucional y a cuatro de los veinte vocales del Consejo General del Poder Judicial, el órgano que gobierna a los jueces. En los dos casos hacen falta tres quintos de los senadores.
+El Senado propone a cuatro de los doce magistrados del Tribunal Constitucional y elige a diez de los veinte vocales del Consejo General del Poder Judicial, el órgano que gobierna a los jueces; los otros diez, el Congreso. En los dos casos hacen falta tres quintos de los senadores.
 Eso quiere decir que quien tenga más de dos quintos del Senado puede impedir esos nombramientos.
 
-_Fuentes: Constitución, arts. 122.3 y 159.1. El bloqueo es una cuenta propia a partir de la mayoría de tres quintos._
+_Fuentes: Constitución, arts. 122.3 y 159.1; Ley Orgánica del Poder Judicial, art. 567.2. El bloqueo es una cuenta propia a partir de la mayoría de tres quintos._
 
 **Saber más: Islas, Ceuta y Melilla**
 
@@ -469,7 +469,7 @@ _Cálculo propio con la regla del art. 163 de la LOREG._
 
 **Saber más: Si un diputado deja el escaño**
 
-Entra el siguiente de su misma lista. El escaño es del partido que lo ganó en las urnas ese día; no se vuelve a votar.
+Entra el siguiente de la lista por la que salió elegido; no se vuelve a votar.
 
 _Fuente: LOREG, art. 164._
 
@@ -503,7 +503,7 @@ _Fuente: Constitución, art. 99.3._
 
 **Saber más: Los diputados no están atados**
 
-La Constitución dice que diputados y senadores no están sujetos a mandato imperativo: nadie puede obligarles legalmente a votar en un sentido.
+La Constitución dice que diputados y senadores no están sujetos a mandato imperativo: nadie puede obligarlos legalmente a votar en un sentido.
 
 _Fuente: Constitución, art. 67.2._
 
@@ -561,5 +561,5 @@ El último paso. El recorrido termina cuando el Congreso elige presidente y el n
 
 # Recuento
 
-- Cajones «saber más»: 59 (3260 palabras).
+- Cajones «saber más»: 59 (3257 palabras).
 - Términos de glosario: 28.

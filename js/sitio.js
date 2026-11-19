@@ -2,7 +2,7 @@
 // de forma en cada paso (mapa, reparto de tu provincia, habitantes por escaño, Senado, hemiciclo, pactos).
 // Tu voto es el hexágono dorado: se sigue de principio a fin. Al entrar, una montaña de sobres se convierte en el mapa.
 import { PROV, PART, PORRA, TITULOS, COLOR_PARTIDO } from './datos.js';
-import { contenido, FASE2, plural, miles } from './contenido.js';
+import { contenido, FASE2, plural, sies, nombre as nombreProv, miles } from './contenido.js';
 import { dhondt } from './dhondt.js';
 import { HEX, HEX_SEN } from './cartograma.js';
 import { geometria, tonoProv, hexD, TEJA } from './mapa.js';
@@ -17,8 +17,7 @@ function anuncia(t) { clearTimeout(tA); anuncio.textContent = ''; tA = setTimeou
 const enLectura = () => document.body.classList.contains('lectura');
 const secs = $$('.paso').filter(s => FASE2 || !s.classList.contains('f2'));
 const casilla = s => +s.dataset.k, ULTIMA = FASE2 ? 13 : 8;
-// Nombre para el texto: «Balears (Illes)» → «Illes Balears», «Coruña (A)» → «A Coruña».
-const nombre = i => PROV[i][0].replace(/^(.*) \((.*)\)$/, '$2 $1');
+const nombre = nombreProv;   // «Coruña (A)» → «A Coruña»
 const numero = k => k === 0 ? 'Salida' : k === 14 ? 'La Moncloa' : 'Paso ' + k;
 
 /* ---------- el escenario ---------- */
@@ -177,16 +176,16 @@ function aplica(suave, dur0) {
 function rotula() {
   const n = PROV[sel()][1], nom = nombre(sel()), est = estadoActual();
   let t = { 0: '350 escaños: un hexágono por escaño', 1: nom + ': ' + n + ' de 350',
-    2: revelado ? nom + ': así reparte D’Hondt sus ' + n : nom + ': ' + n + ' escaños por repartir',
+    2: revelado ? nom + ": así reparte D'Hondt " + (n === 1 ? 'su escaño' : 'sus ' + n) : nom + ': ' + plural(n) + ' por repartir',
     3: 'Más oscuro: menos habitantes por escaño', 4: 'Senado: 209 elegidos, cuatro por provincia', 5: '176 de 350: la mayoría absoluta',
-    8: '350 escaños', 9: 'Cada escaño, del color de quien lo ganó', 10: nom + ': ' + n + ' escaños', 11: 'El Congreso que sale de las urnas',
+    8: '350 escaños', 9: 'Cada escaño, del color de quien lo ganó', 10: nom + ': ' + plural(n), 11: 'El Congreso que sale de las urnas',
     13: 'El Congreso que sale de las urnas', 14: '350 escaños' }[k] || '';
   let pie = '';
   if (est === 'pacto') {
     const b = k === 12 ? pacto12 : pacto6;
     if (b) {
       const c = b.cuenta;
-      t = 'Sí ' + c.si + ' · Abst. ' + c.abs + ' · No ' + c.no + '<small>' + (c.si >= 176 ? 'Sale a la primera: más de 176 síes.' : c.si > c.no ? 'No llega a 176, pero sale en la segunda votación.' : 'No sale: ' + (176 - c.si) + ' síes por debajo de 176.') + '</small>';
+      t = 'Sí ' + c.si + ' · Abst. ' + c.abs + ' · No ' + c.no + '<small>' + (c.si >= 176 ? 'Sale a la primera: 176 síes o más.' : c.si > c.no ? 'No llega a 176, pero sale en la segunda votación.' : c.si === 0 ? 'Toca los partidos para formar una mayoría.' : 'No sale: ' + (176 - c.si === 1 ? 'falta ' : 'faltan ') + sies(176 - c.si) + ' para llegar a 176.') + '</small>';
     }
     pie = k === 12 ? 'Cada escaño, del color de su partido. Los síes se juntan a la izquierda, luego las abstenciones y luego los noes.'
       : 'Cada escaño, del color de su partido. Tu voto, aparte: en qué bloque estaría depende de a quién votes.';

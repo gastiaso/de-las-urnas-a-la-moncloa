@@ -6,12 +6,15 @@ import { RES } from './resultados.js';
 
 const $ = (s, r = document) => r.querySelector(s);
 const plural = n => n + (n === 1 ? ' escaño' : ' escaños');
+const sies = n => n + (n === 1 ? ' sí' : ' síes');
+// Nombre para el texto: «Balears (Illes)» → «Illes Balears», «Coruña (A)» → «A Coruña».
+const nombre = i => PROV[i][0].replace(/^(.*) \((.*)\)$/, '$2 $1');
 const miles = n => Math.round(n).toLocaleString('es-ES');
 const pct = x => (x * 100).toFixed(1).replace('.', ',') + ' %';
 const calma = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
 // La fase 2 se abre para todos con RES.abierta; para verla antes, añadir #fase2 a la dirección.
 export const FASE2 = RES.abierta || location.hash === '#fase2';
-export { plural, miles, pct };
+export { plural, sies, nombre, miles, pct };
 
 /* G: setProv, resetBet, reveal, setSen, setPact, setRes, setProvRes, setPact2 (pueden no hacer nada).
    anuncia(texto): mensaje para lectores de pantalla. enLectura(): si se está en modo de solo texto. */
@@ -50,10 +53,17 @@ Object.values(GLOS).sort((a, b) => a[0].localeCompare(b[0], 'es')).forEach(g => 
   const dd = document.createElement('dd'); dd.textContent = g[1];
   dl.appendChild(dt); dl.appendChild(dd);
 });
-/* al abrir un cajón se cierran los demás de su panel, para que no se haga interminable */
+/* al abrir un cajón se cierran los demás de su panel, para que no se haga interminable.
+   Si se cierra uno que estaba encima, la página se desplaza lo mismo que ha encogido, para que el cajón recién abierto
+   no se vaya por arriba (detrás del escenario, en el móvil). */
 document.addEventListener('toggle', e => {
   const d = e.target; if (!d.open || d.tagName !== 'DETAILS' || enLectura()) return;
-  d.parentElement.querySelectorAll(':scope > details[open]').forEach(o => { if (o !== d) o.open = false; });
+  const otros = [...d.parentElement.querySelectorAll(':scope > details[open]')].filter(o => o !== d);
+  if (!otros.length) return;
+  const sum = d.querySelector('summary') || d, antes = sum.getBoundingClientRect().top;
+  otros.forEach(o => { o.open = false; });
+  const salto = sum.getBoundingClientRect().top - antes;
+  if (Math.abs(salto) > 1) scrollBy({ top: salto, behavior: 'instant' });
 }, true);
 
 /* provincia (el desplegable aparece en el paso 1 y, en la fase 2, en el 10) */
@@ -63,7 +73,7 @@ sels.forEach(sel => {
   sel.addEventListener('change', () => { st.prov = +sel.value; pintaProv(); });
 });
 function pintaProv() {
-  const [n, s] = PROV[st.prov];
+  const s = PROV[st.prov][1], n = nombre(st.prov);
   sels.forEach(sel => { sel.value = st.prov; });
   $('#provTxt').textContent = n + ' elige ' + plural(s) + ' de los 350.';
   $('#betIntro').textContent = n + ' reparte ' + plural(s) + ' entre cinco partidos inventados. ¿Cuántos le das a cada uno?';
@@ -168,7 +178,7 @@ const MEDIA = Math.round(POB.reduce((a, b) => a + b, 0) / 350), MAXH = HAB[HAB.l
 })();
 function pintaHab() {
   const x = HAB.find(y => y.i === st.prov), pos = HAB.indexOf(x) + 1;
-  $('#hab').textContent = 'En ' + x.n + ' hay un escaño por cada ' + miles(x.h) + ' habitantes (puesto ' + pos + ' de 52, de menos a más). La media de España es uno por cada ' + miles(MEDIA) + '.';
+  $('#hab').textContent = 'En ' + nombre(x.i) + ' hay un escaño por cada ' + miles(x.h) + ' habitantes (puesto ' + pos + ' de 52, de menos a más). La media de España es uno por cada ' + miles(MEDIA) + '.';
   $('#barrasHab').querySelectorAll('li').forEach(li => li.classList.toggle('sel', +li.dataset.i === st.prov));
 }
 
@@ -232,7 +242,7 @@ function calculadora(raiz, partidos, estado, alCambiar, clave) {
     $('.tSi', raiz).textContent = 'Sí: ' + si; $('.tAbs', raiz).textContent = 'Abst.: ' + abs; $('.tNo', raiz).textContent = 'No: ' + no;
     $('.bSi', raiz).style.width = (si / 350 * 100).toFixed(2) + '%'; $('.bNo', raiz).style.width = (no / 350 * 100).toFixed(2) + '%';
     const s1 = si >= 176, s2 = si > no;
-    $('.v1', raiz).textContent = s1 ? 'Sale: tiene ' + si + ' síes.' : 'No sale: faltan ' + (176 - si) + ' síes.';
+    $('.v1', raiz).textContent = s1 ? 'Sale: tiene ' + si + ' síes.' : 'No sale: ' + (176 - si === 1 ? 'falta ' : 'faltan ') + sies(176 - si) + '.';
     $('.v2', raiz).textContent = (s2 ? 'Sale: ' : 'No sale: ') + si + ' síes frente a ' + no + ' noes.';
     $('.v1', raiz).className = 'v1' + (s1 ? ' ok' : ''); $('.v2', raiz).className = 'v2' + (s2 ? ' ok' : '');
     if (avisa) anuncia('Sí ' + si + ', abstención ' + abs + ', no ' + no + '. Primera votación: ' + $('.v1', raiz).textContent + ' Segunda: ' + $('.v2', raiz).textContent);
@@ -247,7 +257,7 @@ $('#porraNota').innerHTML = 'Escaños calculados a partir de las últimas encues
 let R = null, pintaPact2 = () => {};
 function pintaProvRes() {
   if (!R) return;
-  const p = R.prov[st.prov], [n] = PROV[st.prov], con = R.partidos.filter(q => p.rep.seats[q.id] > 0).sort((a, b) => p.rep.seats[b.id] - p.rep.seats[a.id]);
+  const p = R.prov[st.prov], n = nombre(st.prov), con = R.partidos.filter(q => p.rep.seats[q.id] > 0).sort((a, b) => p.rep.seats[b.id] - p.rep.seats[a.id]);
   $('#r10').textContent = n + ' repartía ' + plural(p.e) + '.';
   $('#l10').innerHTML = con.map(q => '<li><b>' + q.nombre + '</b><span>' + plural(p.rep.seats[q.id]) + ' · ' + pct(p.votos[q.id] / p.val) + '</span></li>').join('');
   const nom = id => R.partidos.find(q => q.id === id).nombre;
