@@ -6,7 +6,7 @@
 | Contenido de elaboración propia: los textos del sitio (`index.html`) y del guion (`docs/guion.md`), el glosario, los iconos (`js/fichas.js`), las imágenes (`img/`, `docs/captura.png`), la posición de los hexágonos del mapa (`js/cartograma.js`) y la documentación | [Creative Commons Reconocimiento 4.0 Internacional (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.es) |
 | Normas citadas y datos que proceden de ellas: escaños por provincia (Real Decreto 806/2026) y población oficial (Real Decreto 1117/2025) | No son objeto de propiedad intelectual ([Ley de Propiedad Intelectual, art. 13](https://www.boe.es/buscar/act.php?id=BOE-A-1996-8930#a13)) |
 | Resultados electorales del 23J (`datos/prueba_23J.csv` y `js/resultados.js`) | Datos oficiales del Ministerio del Interior (BOE-A-2023-18907), tal como están reunidos en [Porra Electoral](https://github.com/gastiaso/porra-electoral). Solo sirven para probar la fase 2 |
-| Escaños de la calculadora de pactos (`js/datos.js`) | [Porra Electoral](https://gastiaso.github.io/porra-electoral/), CC BY 4.0 |
+| Escaños de la calculadora de pactos (`js/datos.js`) | Junta Electoral Central, resultados de las elecciones del 23 de julio de 2023 (BOE-A-2023-18907). No son objeto de propiedad intelectual |
 | Límites provinciales (`herramientas/geo/provincias-es-atlas.json`) | © Instituto Geográfico Nacional, CC BY 4.0 ([condiciones del IGN](https://www.ign.es/resources/licencia/Condiciones_licenciaUso_IGN.pdf)), en la versión TopoJSON de [es-atlas](https://github.com/martgnz/es-atlas) (código MIT, © 2016-2018 Martín González) |
 | Tipografías Courier Prime y Libre Franklin (`fuentes/`) | SIL Open Font License 1.1 (texto en `fuentes/`) |
 

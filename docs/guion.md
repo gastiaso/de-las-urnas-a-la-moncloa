@@ -330,13 +330,15 @@ _Fuentes: Constitución, art. 99; LOREG, art. 42 y disposición adicional sépti
 
 **Saber más: De dónde salen estos escaños**
 
-No son resultados: son escaños calculados por Porra Electoral, otra web del autor, que junta las encuestas publicadas y simula el reparto provincia a provincia. El 30N se cambiarán por los escaños de verdad.
+Son los escaños que cada partido sacó en las últimas elecciones generales, las del 23 de julio de 2023. No son una encuesta ni una estimación.
+Con ellos, la investidura de noviembre de 2023 salió a la primera: 179 síes y 171 noes. Prueba a repetirla, o busca otras combinaciones.
+Los escaños del 29N estarán en el paso 12 cuando haya resultados.
 
-_Fuente: Porra Electoral._
+_Fuentes: Junta Electoral Central, resultados de las elecciones del 23 de julio de 2023 (BOE del 1 de septiembre de 2023; los 121 escaños del PSOE incluyen los 19 del PSC); Diario de Sesiones del Congreso, Pleno núm. 8, de 16 de noviembre de 2023._
 
-**Saber más: Por qué la calculadora lleva fecha**
+**Saber más: Por qué aquí no hay encuestas**
 
-La ley prohíbe publicar, difundir o reproducir sondeos electorales en los cinco días anteriores a la votación: para el 29N, del 24 al 28 de noviembre. La estimación de esta calculadora se publicó antes de esos días, lleva la fecha de la última encuesta que incluye y desde entonces no se actualiza.
+La ley prohíbe publicar, difundir o reproducir sondeos electorales en los cinco días anteriores a la votación: para el 29N, del 24 al 28 de noviembre. Esta calculadora no usa encuestas ni estimaciones: usa un resultado, el de 2023.
 Quien vigila que se cumpla es la Junta Electoral Central.
 
 _Fuente: LOREG, art. 69.7. Del 24 al 28 de noviembre es el cálculo de los cinco días._
@@ -573,5 +575,5 @@ El último paso. El recorrido termina cuando el Congreso elige presidente y el n
 
 # Recuento
 
-- Cajones «saber más»: 60 (3589 palabras).
+- Cajones «saber más»: 60 (3604 palabras).
 - Términos de glosario: 28.

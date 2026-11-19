@@ -12,17 +12,19 @@ export const POB = [390406, 2030037, 773577, 342161, 1013529, 159887, 663886, 12
 // Los colores no repiten el tono y el puesto de ningún partido real, y ninguno se parece al dorado de «tu voto».
 export const PART = [['A', 40.2, '#7A4B5E', '#fff'], ['B', 31.0, '#7FA39B', '#2B2118'], ['C', 17.2, '#2F4B5C', '#fff'], ['D', 9.2, '#56663F', '#fff'], ['E', 2.4, '#6A645C', '#fff']];
 
-// Calculadora de pactos: estimación central de escaños de Porra Electoral (web/datos/modelo.json, campo «hemiciclo»),
-// ordenada de izquierda a derecha del hemiciclo. Hay que congelarla antes de la veda y sustituirla por el resultado el 30N.
 // Color de cada partido: los habituales, algo apagados para que convivan con la paleta del sitio (los mismos que usa
 // herramientas/resultados.py en la fase 2). Son provisionales.
-export const COLOR_PARTIDO = { Bildu: '#7C9440', ERC: '#D9A62E', AA: '#3E7C59', FA: '#B4527A', BNG: '#86AFCF', PSOE: '#B5382E', PNV: '#2E6B4A',
-  CC: '#E3CC6B', Junts: '#2A9D97', UPN: '#8C5A3C', PP: '#2F5D8C', Vox: '#5F9E3A' };
+export const COLOR_PARTIDO = { Bildu: '#7C9440', ERC: '#D9A62E', AA: '#3E7C59', FA: '#B4527A', Sumar: '#B4527A', BNG: '#86AFCF', PSOE: '#B5382E',
+  PNV: '#2E6B4A', CC: '#E3CC6B', Junts: '#2A9D97', UPN: '#8C5A3C', PP: '#2F5D8C', Vox: '#5F9E3A' };
 
-export const PORRA = {
-  corte: '8 de noviembre de 2026',
-  partidos: [['Bildu', 'EH Bildu', 7], ['ERC', 'ERC', 10], ['AA', 'Adelante Andalucía', 3], ['FA', 'Frente Amplio', 8], ['BNG', 'BNG', 2], ['PSOE', 'PSOE', 110],
-    ['PNV', 'PNV', 5], ['CC', 'Coalición Canaria', 1], ['Junts', 'Junts', 5], ['UPN', 'UPN', 1], ['PP', 'PP', 129], ['Vox', 'Vox', 69]]
+// Calculadora de pactos del paso 6: los escaños que salieron de las elecciones del 23 de julio de 2023, proclamados por la
+// Junta Electoral Central (BOE-A-2023-18907; los 121 del PSOE incluyen los 19 del PSC). Son un resultado, no una encuesta,
+// así que no hay nada que congelar durante la veda. Van de izquierda a derecha del hemiciclo, como en herramientas/resultados.py.
+// Los escaños del 29N se ven en el paso 12, cuando se abre la fase 2.
+export const CONGRESO_2023 = {
+  fecha: '23 de julio de 2023',
+  partidos: [['Bildu', 'EH Bildu', 6], ['ERC', 'ERC', 7], ['Sumar', 'Sumar', 31], ['BNG', 'BNG', 1], ['PSOE', 'PSOE', 121], ['PNV', 'PNV', 5],
+    ['CC', 'Coalición Canaria', 1], ['Junts', 'Junts', 7], ['UPN', 'UPN', 1], ['PP', 'PP', 137], ['Vox', 'Vox', 33]]
 };
 
 // Casillas 0 a 8: fase 1 (las reglas). 9 a 13: fase 2 (los resultados), cerradas hasta el 30N. 14: la meta.

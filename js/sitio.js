@@ -1,7 +1,7 @@
 // De las urnas a la Moncloa: el texto a un lado y, al otro, un escenario con los 350 escaños del Congreso, que cambian
 // de forma en cada paso (mapa, reparto de tu provincia, habitantes por escaño, Senado, hemiciclo, pactos).
 // Tu voto es el hexágono dorado: se sigue de principio a fin. Al entrar, una montaña de sobres se convierte en el mapa.
-import { PROV, PART, PORRA, TITULOS, COLOR_PARTIDO } from './datos.js';
+import { PROV, PART, CONGRESO_2023, TITULOS, COLOR_PARTIDO } from './datos.js';
 import { contenido, FASE2, plural, sies, nombre as nombreProv, miles } from './contenido.js';
 import { dhondt } from './dhondt.js';
 import { HEX, HEX_SEN } from './cartograma.js';
@@ -205,7 +205,7 @@ const G = {
   resetBet() { revelado = null; if (listo && k === 2) aplica(true); },
   reveal(d) { revelado = agrupa(d.order.map(id => PART.find(p => p[0] === id)[2])); if (listo && k === 2) { aplica(true); rotula(); } },
   setSen() {},
-  setPact(estado, partidos) { pacto6 = bloques(estado, partidos || PORRA.partidos, colorVoto); if (listo && k === 6) aplica(true, 700); },
+  setPact(estado, partidos) { pacto6 = bloques(estado, partidos || CONGRESO_2023.partidos, colorVoto); if (listo && k === 6) aplica(true, 700); },
   setRes(r) { res = r; if (listo && [9, 11, 13].includes(k)) aplica(true); },
   setProvRes(colores) { provRes = agrupa(colores); if (listo && k === 10) aplica(true); },
   setPact2(estado, partidos) {
