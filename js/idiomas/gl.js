@@ -42,7 +42,7 @@ const GLOS = {
   escano: ['Escano', 'Cada un dos 350 asentos do Congreso. Quen o ocupa é deputado ou deputada.'],
   circ: ['Circunscrición', 'A zona na que se contan os votos e se reparten os escanos. Nas xerais é a provincia; Ceuta e Melilla son unha cada unha.'],
   dhondt: ["Regra D'Hondt", 'A forma de repartir os escanos de cada provincia: divídense os votos de cada partido entre 1, 2, 3… e os escanos van para os resultados máis altos.'],
-  barrera: ['Barreira electoral', 'O mínimo para entrar na repartición: o 3 % dos votos válidos da provincia.'],
+  barrera: ['Barreira electoral', 'O mínimo para entrar no reparto: o 3 % dos votos válidos da provincia.'],
   blanco: ['Voto en branco', 'Un sobre sen papeleta. É un voto válido: non vai para ningún partido, pero conta no total.'],
   nulo: ['Voto nulo', 'Un voto que non vale: por exemplo, unha papeleta con algo riscado ou engadido, ou un sobre que non é o oficial.'],
   absoluta: ['Maioría absoluta', 'Máis da metade de todos os deputados, voten ou non: 176 de 350.'],
@@ -159,7 +159,7 @@ export const textos = {
       case 0: return 'O teu voto é o hexágono dourado. Elixe onde votas e ségueo ata o final.';
       case 1: return (uno ? 'O teu voto é o hexágono dourado: é o único escano ' + de(i) + '.' : 'O teu voto é o hexágono dourado: está ' + en(i) + ', entre os escanos da túa provincia, en cor tella.') + ' A túa papeleta branca, a do Congreso, vai á súa urna.';
       case 2: return uno ? 'O teu voto súmase ao do teu partido ' + en(i) + '. Alí hai un só escano: é para o máis votado.'
-        : 'O teu voto súmase ao do teu partido ' + en(i) + ', e só entra na repartición se ese partido chega ao 3 % dos votos válidos da provincia.';
+        : 'O teu voto súmase ao do teu partido ' + en(i) + ', e só entra no reparto se ese partido chega ao 3 % dos votos válidos da provincia.';
       case 3:
         if (uno) return En(i) + ' hai un só escano: cos cinco partidos inventados do paso 2, só entraría o máis votado.';
         if (n === 2 || n === 38) return 'Cos cinco partidos inventados do paso 2, ' + en(i) + ' entran <b>' + entran + '</b>. É un dos dous extremos da táboa.';
@@ -209,8 +209,8 @@ export const textos = {
   partido: 'Partido',
   fuera: ' (fóra)',
   repartoPaso: (orden, total, letra, cociente, division) => 'Escano ' + orden + ' de ' + total + ': para ' + letra + ', con ' + cociente + (division ? ' (división ÷' + division + ', fóra da táboa).' : '.'),
-  repartoEmpieza: 'Comeza a repartición…',
-  repartoFin: lista => 'Repartición rematada: ' + lista + '.',
+  repartoEmpieza: 'Comeza o reparto…',
+  repartoFin: lista => 'Reparto rematado: ' + lista + '.',
 
   /* paso 3 */
   habitantes: (i, porEscano, puesto, media) => En(i) + ' hai un escano por cada ' + miles(porEscano) + ' habitantes (posto ' + puesto + ' de 52, de menos a máis). A media de España é un por cada ' + miles(media) + '.',
@@ -252,8 +252,8 @@ export const textos = {
   unico: ganador => 'O escano foi para ' + ganador + '.',
   votos: nvotos,
   ysiIguales: 'Elixe dous partidos distintos.',
-  ysiCambia: (n, orixe, destino, ultimo) => 'Con ' + nvotos(n) + ' de ' + orixe + ' a ' + destino + ', cambia a repartición. O último escano sería para ' + ultimo + '.',
-  ysiNoCambia: (n, ultimo) => 'Con ' + nvotos(n) + ', a repartición non cambia. O último escano segue sendo para ' + ultimo + '.',
+  ysiCambia: (n, orixe, destino, ultimo) => 'Con ' + nvotos(n) + ' de ' + orixe + ' a ' + destino + ', cambia o reparto. O último escano sería para ' + ultimo + '.',
+  ysiNoCambia: (n, ultimo) => 'Con ' + nvotos(n) + ', o reparto non cambia. O último escano segue sendo para ' + ultimo + '.',
   votosYEscanos: 'A porcentaxe de escanos dun partido case nunca coincide coa súa porcentaxe de votos.',
   sinEscano: (n, p) => miles(n) + ' votos (' + p + ') foron para candidaturas que non lograron escano na súa provincia.',
   loSiguiente: t => 'O seguinte: ' + t.charAt(0).toLowerCase() + t.slice(1),

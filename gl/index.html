@@ -80,7 +80,7 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <p>Cada provincia ten de saída dous escanos; Ceuta e Melilla, un cada unha. Son 102. Os outros 248 repártense segundo a poboación.</p>
 <p>A conta é así: divídese a poboación de todas as provincias entre 248 e sae unha cota. Cada provincia recibe tantos escanos como veces cabe esa cota na súa poboación. Os que sobran van para as provincias que quedaron máis preto de conseguir un máis.</p>
 <p>Para o 29N usouse o padrón a 1 de xaneiro de 2025, e a cota sae duns 197.000 habitantes. Por iso Madrid elixe 38 e Soria, 2.</p>
-<p class="nota">Fontes: LOREG, art. 162; Real decreto 806/2026, anexo; Real decreto 1117/2025, anexo. A cifra de 102 é a suma de 50 provincias por dous, máis Ceuta e Melilla. A cota (197.355) é conta propia, e con ela sae exactamente a repartición do decreto.</p>
+<p class="nota">Fontes: LOREG, art. 162; Real decreto 806/2026, anexo; Real decreto 1117/2025, anexo. A cifra de 102 é a suma de 50 provincias por dous, máis Ceuta e Melilla. A cota (197.355) é conta propia, e con ela sae exactamente o reparto do decreto.</p>
 </details>
 <details><summary>Quen pode votar</summary>
 <p>Poden votar os españois maiores de idade que estean inscritos no <button type="button" class="glos" data-g="censo">censo electoral</button>. Só perde o dereito quen foi condenado por sentenza firme a esa pena, e mentres a cumpre.</p>
@@ -134,22 +134,22 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <button type="button" class="pill" id="apostar">Apostar</button>
 <div id="betRes" hidden>
 <p class="res" id="betHit"></p>
-<p style="font-size:14px">O partido E non chega á <button type="button" class="glos" data-g="barrera">barreira</button> do 3 % e queda fóra da repartición.</p>
+<p style="font-size:14px">O partido E non chega á <button type="button" class="glos" data-g="barrera">barreira</button> do 3 % e queda fóra do reparto.</p>
 <button type="button" class="pill sec" id="reapostar">Apostar de novo</button>
 </div>
 <h3>Saber máis</h3>
-<details><summary>Como se fai a repartición</summary>
+<details><summary>Como se fai o reparto</summary>
 <p>Divídense os votos de cada partido entre 1, 2, 3 e así sucesivamente. Os escanos van, un a un, para os resultados máis altos de toda a táboa. É a <button type="button" class="glos" data-g="dhondt">regra D'Hondt</button>.</p>
 <p>Esta é a táboa da túa provincia cos partidos do exemplo. En cor tella, as divisións que levan escano, numeradas na orde en que o conseguen:</p>
 <div class="tabla" id="cocientes"></div>
 <p id="pasoReparto" class="paso-reparto"></p>
-<button type="button" class="pill sec" id="repetirReparto">Ver a repartición paso a paso</button>
+<button type="button" class="pill sec" id="repetirReparto">Ver o reparto paso a paso</button>
 <p>A propia lei pon un exemplo: con 480.000 votos e 8 escanos, o partido máis votado leva catro, o segundo dous, e o terceiro e o cuarto, un cada un.</p>
 <p class="nota">Fonte: LOREG, art. 163. Na táboa, as porcentaxes inventadas fan de votos.</p>
 </details>
 <details><summary>Desde cando se usa</summary>
 <p>Desde 1977. Fixouna o real decreto lei de normas electorais de marzo daquel ano, que regulou as primeiras eleccións tras a Lei para a reforma política, xa con 350 deputados. Xa lle chamaba «regra d'Hondt», xa poñía a barreira no 3 % e xa traía o mesmo exemplo de 480.000 votos que trae hoxe a lei.</p>
-<p>Aquel decreto presentábaa como un freo a que o Congreso quedase demasiado fragmentado. E a repartición daquela era outra: Madrid elixía 32 deputados, Barcelona 33 e Soria 3.</p>
+<p>Aquel decreto presentábaa como un freo a que o Congreso quedase demasiado fragmentado. E o reparto daquela era outro: Madrid elixía 32 deputados, Barcelona 33 e Soria 3.</p>
 <p class="nota">Fonte: Real decreto lei 20/1977, do 18 de marzo, sobre normas electorais: preámbulo e arts. 19 e 20.</p>
 </details>
 <details><summary>A barreira do 3 %</summary>
@@ -159,7 +159,7 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 </details>
 <details><summary>Branco, nulo e abstención</summary>
 <p>O <button type="button" class="glos" data-g="blanco">voto en branco</button> é un sobre baleiro. É válido: non vai para ningún partido, pero conta no total e por iso sobe un pouco o listón do 3 %.</p>
-<p>O <button type="button" class="glos" data-g="nulo">voto nulo</button> non conta para a repartición. É o caso dunha papeleta con algo riscado ou engadido, ou dun sobre que non é o oficial. Se metes dúas papeletas do mesmo partido, vale como un só voto.</p>
+<p>O <button type="button" class="glos" data-g="nulo">voto nulo</button> non conta para o reparto. É o caso dunha papeleta con algo riscado ou engadido, ou dun sobre que non é o oficial. Se metes dúas papeletas do mesmo partido, vale como un só voto.</p>
 <p>Quen non vai votar abstense: non entra en ningunha conta.</p>
 <p class="nota">Fontes: LOREG, arts. 96 e 108.</p>
 </details>
@@ -205,7 +205,7 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <p class="nota">Exemplo propio: os mesmos cinco partidos inventados e as mesmas porcentaxes nas dúas provincias.</p>
 </details>
 <details><summary>Que di a Constitución e que di a lei</summary>
-<p>A Constitución fixa tres cousas: que o Congreso teña entre 300 e 400 deputados, que cada provincia sexa unha circunscrición e que a repartición sexa proporcional.</p>
+<p>A Constitución fixa tres cousas: que o Congreso teña entre 300 e 400 deputados, que cada provincia sexa unha circunscrición e que o reparto sexa proporcional.</p>
 <p>O demais decídeo a lei electoral: que sexan 350, que cada provincia teña dous de saída, a regra D'Hondt e a barreira do 3 %.</p>
 <p>Cambiar a lei electoral esixe maioría absoluta do Congreso, porque é unha <button type="button" class="glos" data-g="organica">lei orgánica</button>. Cambiar a Constitución esixe bastante máis.</p>
 <p class="nota">Fontes: Constitución, arts. 68 e 81; LOREG, arts. 162 e 163.</p>
@@ -252,7 +252,7 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <details><summary>Para que serve o Senado</summary>
 <p>A Constitución defíneo como a cámara de representación territorial. Revisa as leis que lle chegan do Congreso: ten dous meses para cambialas ou para vetalas. O Congreso pode levantar ese <button type="button" class="glos" data-g="veto">veto</button>.</p>
 <p>Hai unha cousa que só pode autorizar o Senado, por maioría absoluta: que o Goberno obrigue unha comunidade autónoma a cumprir a lei, o artigo 155.</p>
-<p>Tamén pode propoñer leis, crear comisións de investigación e, con 50 senadores, recorrer unha lei ante o Tribunal Constitucional. Os acordos de cooperación entre comunidades autónomas e a repartición do Fondo de Compensación Interterritorial comezan no Senado, aínda que, se as dúas cámaras non se poñen de acordo, decide o Congreso.</p>
+<p>Tamén pode propoñer leis, crear comisións de investigación e, con 50 senadores, recorrer unha lei ante o Tribunal Constitucional. Os acordos de cooperación entre comunidades autónomas e o reparto do Fondo de Compensación Interterritorial comezan no Senado, aínda que, se as dúas cámaras non se poñen de acordo, decide o Congreso.</p>
 <p class="nota">Fontes: Constitución, arts. 69, 74.2, 76, 87.1, 90, 145.2, 155, 158.2 e 162.1.</p>
 </details>
 <details><summary>O que o Senado non pode facer</summary>
@@ -341,7 +341,7 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <p class="nota">Fontes: Constitución, art. 99; LOREG, art. 42 e disposición adicional sétima (engadida pola Lei orgánica 2/2016); Reais decretos 184/2016 e 551/2019.</p>
 </details>
 <details><summary>De onde saen estes escanos</summary>
-<p>Non son resultados: son escanos calculados a partir das últimas enquisas por <a href="https://gastiaso.github.io/porra-electoral/">Porra Electoral</a>, que xunta as enquisas publicadas e simula a repartición provincia a provincia. O 30N cambiaranse polos escanos de verdade.</p>
+<p>Non son resultados: son escanos calculados a partir das últimas enquisas por <a href="https://gastiaso.github.io/porra-electoral/">Porra Electoral</a>, que xunta as enquisas publicadas e simula o reparto provincia a provincia. O 30N cambiaranse polos escanos de verdade.</p>
 <p class="nota">Fonte: <a href="https://gastiaso.github.io/porra-electoral/">Porra Electoral</a>.</p>
 </details>
 <details><summary>Por que a calculadora leva data</summary>
@@ -483,7 +483,7 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <ul class="lista" id="l10"></ul>
 <p id="u10" style="font-weight:700"></p>
 <h3>E se…?</h3>
-<p>Pasa votos dun partido a outro e mira como cambia a repartición da túa provincia. O total de votos non cambia.</p>
+<p>Pasa votos dun partido a outro e mira como cambia o reparto da túa provincia. O total de votos non cambia.</p>
 <div class="ysi">
 <label class="sel" for="ysiDe">Quitarlle votos a</label><select id="ysiDe"></select>
 <label class="sel" for="ysiA">Dárllos a</label><select id="ysiA"></select>
@@ -521,7 +521,7 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <p class="nota">Explicación propia a partir dos arts. 162 e 163 da LOREG.</p>
 </details>
 <details><summary>Que habería que cambiar para que coincidisen</summary>
-<p>A provincia como circunscrición está na Constitución. O número de deputados (350), o mínimo de dous por provincia, a barreira e a regra de repartición están na lei electoral.</p>
+<p>A provincia como circunscrición está na Constitución. O número de deputados (350), o mínimo de dous por provincia, a barreira e a regra de reparto están na lei electoral.</p>
 <p>O primeiro esixe reformar a Constitución. O segundo, maioría absoluta do Congreso.</p>
 <p class="nota">Fontes: Constitución, arts. 68 e 81; LOREG, arts. 162 e 163.</p>
 </details>

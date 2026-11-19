@@ -58,7 +58,7 @@ es: Para el 29N se ha usado el padrón a 1 de enero de 2025, y la cuota sale de 
 gl: Para o 29N usouse o padrón a 1 de xaneiro de 2025, e a cota sae duns 197.000 habitantes. Por iso Madrid elixe 38 e Soria, 2.
 
 es: Fuentes: LOREG, art. 162; Real Decreto 806/2026, anexo; Real Decreto 1117/2025, anexo. La cifra de 102 es la suma de 50 provincias por dos, más Ceuta y Melilla. La cuota (197.355) es cuenta propia, y con ella sale exactamente el reparto del decreto.
-gl: Fontes: LOREG, art. 162; Real decreto 806/2026, anexo; Real decreto 1117/2025, anexo. A cifra de 102 é a suma de 50 provincias por dous, máis Ceuta e Melilla. A cota (197.355) é conta propia, e con ela sae exactamente a repartición do decreto.
+gl: Fontes: LOREG, art. 162; Real decreto 806/2026, anexo; Real decreto 1117/2025, anexo. A cifra de 102 é a suma de 50 provincias por dous, máis Ceuta e Melilla. A cota (197.355) é conta propia, e con ela sae exactamente o reparto do decreto.
 
 es: Quién puede votar
 gl: Quen pode votar
@@ -162,13 +162,13 @@ es: Apostar
 gl: Apostar
 
 es: El partido E no llega a la [[barrera|barrera]] del 3 % y se queda fuera del reparto.
-gl: O partido E non chega á [[barrera|barreira]] do 3 % e queda fóra da repartición.
+gl: O partido E non chega á [[barrera|barreira]] do 3 % e queda fóra do reparto.
 
 es: Volver a apostar
 gl: Apostar de novo
 
 es: Cómo se hace el reparto
-gl: Como se fai a repartición
+gl: Como se fai o reparto
 
 es: Se dividen los votos de cada partido entre 1, 2, 3 y así sucesivamente. Los escaños van, uno a uno, a los resultados más altos de toda la tabla. Es la [[dhondt|regla D'Hondt]].
 gl: Divídense os votos de cada partido entre 1, 2, 3 e así sucesivamente. Os escanos van, un a un, para os resultados máis altos de toda a táboa. É a [[dhondt|regra D'Hondt]].
@@ -177,7 +177,7 @@ es: Esta es la tabla de tu provincia con los partidos del ejemplo. En teja, las 
 gl: Esta é a táboa da túa provincia cos partidos do exemplo. En cor tella, as divisións que levan escano, numeradas na orde en que o conseguen:
 
 es: Ver el reparto paso a paso
-gl: Ver a repartición paso a paso
+gl: Ver o reparto paso a paso
 
 es: La propia ley pone un ejemplo: con 480.000 votos y 8 escaños, el partido más votado se lleva cuatro, el segundo dos, y el tercero y el cuarto, uno cada uno.
 gl: A propia lei pon un exemplo: con 480.000 votos e 8 escanos, o partido máis votado leva catro, o segundo dous, e o terceiro e o cuarto, un cada un.
@@ -192,7 +192,7 @@ es: Desde 1977. La fijó el real decreto-ley de normas electorales de marzo de a
 gl: Desde 1977. Fixouna o real decreto lei de normas electorais de marzo daquel ano, que regulou as primeiras eleccións tras a Lei para a reforma política, xa con 350 deputados. Xa lle chamaba «regra d'Hondt», xa poñía a barreira no 3 % e xa traía o mesmo exemplo de 480.000 votos que trae hoxe a lei.
 
 es: Aquel decreto la presentaba como un freno a que el Congreso quedara demasiado fragmentado. Y el reparto de entonces era otro: Madrid elegía 32 diputados, Barcelona 33 y Soria 3.
-gl: Aquel decreto presentábaa como un freo a que o Congreso quedase demasiado fragmentado. E a repartición daquela era outra: Madrid elixía 32 deputados, Barcelona 33 e Soria 3.
+gl: Aquel decreto presentábaa como un freo a que o Congreso quedase demasiado fragmentado. E o reparto daquela era outro: Madrid elixía 32 deputados, Barcelona 33 e Soria 3.
 
 es: Fuente: Real Decreto-ley 20/1977, de 18 de marzo, sobre Normas Electorales: preámbulo y arts. 19 y 20.
 gl: Fonte: Real decreto lei 20/1977, do 18 de marzo, sobre normas electorais: preámbulo e arts. 19 e 20.
@@ -216,7 +216,7 @@ es: El [[blanco|voto en blanco]] es un sobre vacío. Es válido: no va a ningún
 gl: O [[blanco|voto en branco]] é un sobre baleiro. É válido: non vai para ningún partido, pero conta no total e por iso sobe un pouco o listón do 3 %.
 
 es: El [[nulo|voto nulo]] no cuenta para el reparto. Lo es una papeleta con tachaduras o añadidos, o un sobre que no es el oficial. Si metes dos papeletas del mismo partido, vale como un solo voto.
-gl: O [[nulo|voto nulo]] non conta para a repartición. É o caso dunha papeleta con algo riscado ou engadido, ou dun sobre que non é o oficial. Se metes dúas papeletas do mesmo partido, vale como un só voto.
+gl: O [[nulo|voto nulo]] non conta para o reparto. É o caso dunha papeleta con algo riscado ou engadido, ou dun sobre que non é o oficial. Se metes dúas papeletas do mesmo partido, vale como un só voto.
 
 es: Quien no va a votar se abstiene: no entra en ninguna cuenta.
 gl: Quen non vai votar abstense: non entra en ningunha conta.
@@ -299,7 +299,7 @@ es: Qué dice la Constitución y qué dice la ley
 gl: Que di a Constitución e que di a lei
 
 es: La Constitución fija tres cosas: que el Congreso tenga entre 300 y 400 diputados, que cada provincia sea una circunscripción y que el reparto sea proporcional.
-gl: A Constitución fixa tres cousas: que o Congreso teña entre 300 e 400 deputados, que cada provincia sexa unha circunscrición e que a repartición sexa proporcional.
+gl: A Constitución fixa tres cousas: que o Congreso teña entre 300 e 400 deputados, que cada provincia sexa unha circunscrición e que o reparto sexa proporcional.
 
 es: Lo demás lo decide la ley electoral: que sean 350, que cada provincia tenga dos de salida, la regla D'Hondt y la barrera del 3 %.
 gl: O demais decídeo a lei electoral: que sexan 350, que cada provincia teña dous de saída, a regra D'Hondt e a barreira do 3 %.
@@ -394,7 +394,7 @@ es: Hay una cosa que solo puede autorizar el Senado, por mayoría absoluta: que 
 gl: Hai unha cousa que só pode autorizar o Senado, por maioría absoluta: que o Goberno obrigue unha comunidade autónoma a cumprir a lei, o artigo 155.
 
 es: También puede proponer leyes, crear comisiones de investigación y, con 50 senadores, recurrir una ley ante el Tribunal Constitucional. Los acuerdos de cooperación entre comunidades autónomas y el reparto del Fondo de Compensación Interterritorial empiezan en el Senado, aunque, si las dos cámaras no se ponen de acuerdo, decide el Congreso.
-gl: Tamén pode propoñer leis, crear comisións de investigación e, con 50 senadores, recorrer unha lei ante o Tribunal Constitucional. Os acordos de cooperación entre comunidades autónomas e a repartición do Fondo de Compensación Interterritorial comezan no Senado, aínda que, se as dúas cámaras non se poñen de acordo, decide o Congreso.
+gl: Tamén pode propoñer leis, crear comisións de investigación e, con 50 senadores, recorrer unha lei ante o Tribunal Constitucional. Os acordos de cooperación entre comunidades autónomas e o reparto do Fondo de Compensación Interterritorial comezan no Senado, aínda que, se as dúas cámaras non se poñen de acordo, decide o Congreso.
 
 es: Fuentes: Constitución, arts. 69, 74.2, 76, 87.1, 90, 145.2, 155, 158.2 y 162.1.
 gl: Fontes: Constitución, arts. 69, 74.2, 76, 87.1, 90, 145.2, 155, 158.2 e 162.1.
@@ -572,7 +572,7 @@ es: De dónde salen estos escaños
 gl: De onde saen estes escanos
 
 es: No son resultados: son escaños calculados a partir de las últimas encuestas por [Porra Electoral](https://gastiaso.github.io/porra-electoral/), que junta las encuestas publicadas y simula el reparto provincia a provincia. El 30N se cambiarán por los escaños de verdad.
-gl: Non son resultados: son escanos calculados a partir das últimas enquisas por [Porra Electoral](https://gastiaso.github.io/porra-electoral/), que xunta as enquisas publicadas e simula a repartición provincia a provincia. O 30N cambiaranse polos escanos de verdade.
+gl: Non son resultados: son escanos calculados a partir das últimas enquisas por [Porra Electoral](https://gastiaso.github.io/porra-electoral/), que xunta as enquisas publicadas e simula o reparto provincia a provincia. O 30N cambiaranse polos escanos de verdade.
 
 es: Fuente: [Porra Electoral](https://gastiaso.github.io/porra-electoral/).
 gl: Fonte: [Porra Electoral](https://gastiaso.github.io/porra-electoral/).
@@ -952,7 +952,7 @@ es: ¿Y si…?
 gl: E se…?
 
 es: Pasa votos de un partido a otro y mira cómo cambia el reparto de tu provincia. El total de votos no cambia.
-gl: Pasa votos dun partido a outro e mira como cambia a repartición da túa provincia. O total de votos non cambia.
+gl: Pasa votos dun partido a outro e mira como cambia o reparto da túa provincia. O total de votos non cambia.
 
 es: Quitar votos a
 gl: Quitarlle votos a
@@ -1008,7 +1008,7 @@ es: Qué habría que cambiar para que coincidieran
 gl: Que habería que cambiar para que coincidisen
 
 es: La provincia como circunscripción está en la Constitución. El número de diputados (350), el mínimo de dos por provincia, la barrera y la regla de reparto están en la ley electoral.
-gl: A provincia como circunscrición está na Constitución. O número de deputados (350), o mínimo de dous por provincia, a barreira e a regra de repartición están na lei electoral.
+gl: A provincia como circunscrición está na Constitución. O número de deputados (350), o mínimo de dous por provincia, a barreira e a regra de reparto están na lei electoral.
 
 es: Lo primero exige reformar la Constitución. Lo segundo, mayoría absoluta del Congreso.
 gl: O primeiro esixe reformar a Constitución. O segundo, maioría absoluta do Congreso.
