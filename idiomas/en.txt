@@ -1,0 +1,1119 @@
+# en · English edition. Formato y uso: ver herramientas/idiomas.py
+# No es una traducción literal: está adaptada para un lector de fuera de España (explica lo que aquí se da por sabido,
+# habla del votante en tercera persona y añade dos cajones propios, al final de este archivo). No cambies las líneas «es:».
+
+# ───── Cabecera: título y descripción para buscadores y redes ─────
+
+es: Qué se vota el 29N y cómo se pasa de una papeleta a un Gobierno, contado con los 350 escaños del Congreso.
+en: What Spain votes on in the general election of 29 November 2026 and how a ballot paper becomes a government, explained with the 350 seats in Congress.
+
+es: De las urnas a la Moncloa
+en: From the ballot box to La Moncloa
+
+es: Los 350 escaños del Congreso dibujados como hexágonos sobre el mapa de España, con el título «De las urnas a la Moncloa».
+en: The 350 seats in Spain's Congress drawn as hexagons on a map of Spain, under the Spanish title “De las urnas a la Moncloa”.
+
+es: Leer solo el texto, sin animación
+en: Read the text only, without animation
+
+# ───── Barra de arriba y salida ─────
+
+es: Salida ▾
+en: Start ▾
+
+# ───── De las urnas a la Moncloa ─────
+
+es: Qué votas el 29N y cómo se pasa de tu papeleta a un Gobierno, con los 350 escaños del Congreso.
+en: What Spain votes on in the general election of 29 November and how a ballot paper becomes a government, told with the 350 seats in its Congress. ¶ La Moncloa is the prime minister's official residence in Madrid, and shorthand for the Spanish government, as Downing Street is for the British one.
+
+es: Baja para empezar ↓
+en: Scroll down to start ↓
+
+es: Este navegador no ejecuta JavaScript: se muestra solo el texto, sin la escena ni los juegos.
+en: This browser is not running JavaScript: only the text is shown, without the animated chart or the interactive parts.
+
+# ───── 1 · Qué se vota ─────
+
+es: 1 · Qué se vota
+en: 1 · What's being elected
+
+es: El 29N eliges a quienes se sientan en el Congreso. Hay 350 asientos, que se llaman [[escano|escaños]], y se reparten por [[circ|circunscripciones]]: en la práctica, por provincias.
+en: On Sunday 29 November, Spain elects its Congress of Deputies, the lower house of parliament and the one that chooses the prime minister. It has 350 [[escano|seats]] (escaños, in Spanish), shared out by [[circ|constituency]]: in practice, by province. ¶ Voters do not choose the prime minister directly, and there is no single national count: there are 52 separate contests.
+
+es: Elige tu provincia
+en: Choose a province
+
+es: Saber más
+en: More detail
+
+es: Por qué unas provincias tienen más escaños
+en: Why some provinces have more seats
+
+es: Cada provincia tiene de salida dos escaños; Ceuta y Melilla, uno cada una. Son 102. Los otros 248 se reparten según la población.
+en: Every province starts with two seats; Ceuta and Melilla, Spain's two cities on the North African coast, have one each. That makes 102. The other 248 are shared out by population.
+
+es: La cuenta es así: se divide la población de todas las provincias entre 248 y sale una cuota. Cada provincia recibe tantos escaños como veces cabe esa cuota en su población. Los que sobran van a las provincias que se quedaron más cerca de conseguir uno más.
+en: It works like this: the population of all the provinces is divided by 248 to get a quota. Each province receives as many seats as the number of times that quota fits into its population. The seats left over go to the provinces that came closest to earning one more.
+
+es: Para el 29N se ha usado el padrón a 1 de enero de 2025, y la cuota sale de unos 197.000 habitantes. Por eso Madrid elige 38 y Soria, 2.
+en: For this election the figures used are those of the municipal register (the padrón) at 1 January 2025, and the quota works out at about 197,000 inhabitants. That is why Madrid elects 38 deputies and Soria 2.
+
+es: Fuentes: LOREG, art. 162; Real Decreto 806/2026, anexo; Real Decreto 1117/2025, anexo. La cifra de 102 es la suma de 50 provincias por dos, más Ceuta y Melilla. La cuota (197.355) es cuenta propia, y con ella sale exactamente el reparto del decreto.
+en: Sources: LOREG (the general electoral law, Organic Law 5/1985), art. 162; Royal Decree 806/2026, annex; Royal Decree 1117/2025, annex. The figure of 102 is 50 provinces times two, plus Ceuta and Melilla. The quota (197,355) is an own calculation, and it reproduces the decree's allocation exactly.
+
+es: Quién puede votar
+en: Who can vote
+
+es: Pueden votar los españoles mayores de edad que estén inscritos en el [[censo|censo electoral]]. Solo pierde el derecho quien ha sido condenado por sentencia firme a esa pena, y mientras la cumple.
+en: Spanish citizens aged 18 or over who are on the [[censo|electoral register]]. The only people who lose the right are those sentenced to that specific penalty by a final court ruling, for as long as it lasts. ¶ Foreign residents cannot vote in a general election, whatever their nationality.
+
+es: Se vota en persona, en la mesa que te toca, y una sola vez. Para identificarte vale el DNI, el pasaporte o el carné de conducir con foto.
+en: Voting is in person, at the polling station each voter is assigned to, and only once. Voters identify themselves with their national identity card (the DNI), a passport or a photo driving licence.
+
+es: Fuentes: LOREG, arts. 2, 3, 4 y 85.
+en: Sources: LOREG, arts. 2, 3, 4 and 85.
+
+es: Por qué el 29 de noviembre
+en: Why 29 November
+
+es: El presidente del Gobierno adelantó las elecciones: el decreto que disolvió las Cortes salió en el BOE el 6 de octubre. La ley fija la votación 54 días después de la convocatoria, y eso cae en domingo 29 de noviembre.
+en: The prime minister called the election early: the decree dissolving parliament was published in the official state gazette (the BOE) on 6 October. The law sets polling day 54 days after an election is called, which falls on Sunday 29 November. ¶ Spanish media abbreviate election dates: “29N” is 29 November, just as “23J” was the previous general election, on 23 July 2023.
+
+es: Si un día hubiera que repetir las elecciones, el plazo sería más corto: 47 días.
+en: If an election ever has to be repeated, the timetable is shorter: 47 days.
+
+es: Fuentes: Constitución, art. 115; LOREG, art. 42.1 y disposición adicional séptima; Real Decreto 806/2026, arts. 1 y 2, publicado en el BOE del 6 de octubre de 2026. El 29 de noviembre es el cálculo del día 54.
+en: Sources: Constitution, art. 115; LOREG, art. 42.1 and seventh additional provision; Royal Decree 806/2026, arts. 1 and 2, published in the BOE of 6 October 2026. 29 November is an own count of the 54th day.
+
+es: Cómo es ir a votar
+en: What voting looks like
+
+es: Los colegios abren de 9:00 a 20:00, sin interrupción. Votas dos veces: una papeleta blanca para el Congreso y otra sepia para el Senado, cada una en su sobre.
+en: Polling stations are open from 9am to 8pm, without a break. Each voter casts two votes: a white ballot paper for Congress and a sepia one for the Senate, each in its own envelope.
+
+es: Puedes usar la cabina, pero no es obligatorio. En la mesa, el presidente dice tu nombre, dice «vota» y el sobre entra en la urna.
+en: Using the booth is optional. At the table, the chair reads out the voter's name, says “vota” (“votes”) and the envelope goes into the ballot box.
+
+es: El voto es secreto: nadie puede obligarte a decir qué has votado. Si no puedes leer o manejar las papeletas, puede ayudarte una persona de tu confianza.
+en: The vote is secret: nobody can be made to say how they voted. Voters who cannot read or handle the ballot papers may be helped by someone they trust.
+
+es: Fuentes: LOREG, arts. 5, 84, 86 y 87; Real Decreto 605/1999, art. 4.
+en: Sources: LOREG, arts. 5, 84, 86 and 87; Royal Decree 605/1999, art. 4.
+
+es: Quién está en la mesa
+en: Who staffs the polling station
+
+es: La [[mesael|mesa electoral]] son tres personas: un presidente y dos vocales. Salen por sorteo entre los votantes de esa mesa que saben leer y escribir y tienen menos de setenta años. Es obligatorio.
+en: Each [[mesael|polling station board]] (mesa electoral) is three people: a chair and two members. They are drawn by lot from among that station's voters who can read and write and are under seventy. Serving is compulsory.
+
+es: Cuando cierra el colegio, ellos abren la urna y cuentan los votos en público, uno a uno y en voz alta.
+en: When the polls close, they open the ballot box and count the votes in public, one by one and out loud.
+
+es: Fuentes: LOREG, arts. 25, 26, 27 y 95.
+en: Sources: LOREG, arts. 25, 26, 27 and 95.
+
+es: Quién vigila las elecciones
+en: Who oversees the election
+
+es: Las [[junta|juntas electorales]]. Velan por que el proceso sea limpio e igual para todos, resuelven quejas y recursos, vigilan las encuestas y hacen el recuento oficial.
+en: The [[junta|electoral boards]] (juntas electorales). They see that the process is clean and equal for everyone, rule on complaints and appeals, police opinion polls and carry out the official count.
+
+es: Hay una Junta Electoral Central, en Madrid, una en cada provincia y otras de zona. La Central la forman ocho magistrados del Tribunal Supremo, elegidos por sorteo, y cinco catedráticos de Derecho, Ciencia Política o Sociología propuestos por los partidos con diputados. En las provinciales y las de zona también son mayoría los jueces.
+en: There is a Central Electoral Board (Junta Electoral Central) in Madrid, one in each province and others at district level. The central board is made up of eight Supreme Court judges, chosen by lot, and five professors of law, political science or sociology proposed by the parties with seats in Congress. Judges are also in the majority on the provincial and district boards.
+
+es: Fuentes: LOREG, arts. 8, 9, 10, 11, 19, 69 y 103.
+en: Sources: LOREG, arts. 8, 9, 10, 11, 19, 69 and 103.
+
+es: Qué son las Cortes y para qué sirven
+en: What the Cortes are and what they do
+
+es: Las [[cortes|Cortes Generales]] son el Congreso y el Senado juntos. Hacen las leyes, aprueban los Presupuestos y controlan al Gobierno. Se eligen para cuatro años.
+en: The [[cortes|Cortes Generales]] are Spain's parliament: Congress and the Senate together. They make laws, approve the budget and hold the government to account. They are elected for four years.
+
+es: De las dos cámaras, el Congreso es el que elige al presidente del Gobierno y el que puede levantar los vetos del Senado.
+en: Of the two chambers, Congress is the one that elects the prime minister and the one that can override the Senate's vetoes.
+
+es: Fuentes: Constitución, arts. 66, 68.4, 69.6, 90 y 99.
+en: Sources: Constitution, arts. 66, 68.4, 69.6, 90 and 99.
+
+es: Cómo son las listas
+en: How the lists work
+
+es: Al Congreso votas una [[lista|lista]] entera de un partido, con tantos nombres como escaños reparte tu provincia. No puedes tachar a nadie ni cambiar el orden: el voto sería nulo.
+en: For Congress, voters choose a party's whole [[lista|list]], with as many names as the province has seats. The lists are closed: crossing out a name or changing the order spoils the vote.
+
+es: Las listas alternan mujeres y hombres. Puede presentarse cualquier español mayor de edad con derecho a voto, salvo algunos cargos, como jueces, militares o policías en activo.
+en: Lists alternate women and men. Any adult Spanish citizen with the right to vote can stand, except holders of certain posts, such as serving judges, members of the armed forces and police officers.
+
+es: Fuentes: LOREG, arts. 6, 44 bis, 46 y 96.
+en: Sources: LOREG, arts. 6, 44 bis, 46 and 96.
+
+es: En el mapa, cada hexágono es un escaño: las provincias crecen o encogen según los escaños que reparten, dentro de la silueta de España. Canarias va en el recuadro.
+en: On the map, each hexagon is a seat: provinces grow or shrink according to the seats they elect, inside the outline of Spain. The Canary Islands are in the box.
+
+# ───── 2 · Del voto al escaño ─────
+
+es: 2 · Del voto al escaño
+en: 2 · From votes to seats
+
+es: Reparte todos los escaños antes de apostar.
+en: Share out all the seats before you bet.
+
+es: Apostar
+en: Bet
+
+es: El partido E no llega a la [[barrera|barrera]] del 3 % y se queda fuera del reparto.
+en: Party E falls short of the 3% [[barrera|threshold]] and is left out of the share-out.
+
+es: Volver a apostar
+en: Bet again
+
+es: Cómo se hace el reparto
+en: How the seats are shared out
+
+es: Se dividen los votos de cada partido entre 1, 2, 3 y así sucesivamente. Los escaños van, uno a uno, a los resultados más altos de toda la tabla. Es la [[dhondt|regla D'Hondt]].
+en: Each party's votes are divided by 1, 2, 3 and so on. The seats go, one at a time, to the highest results in the whole table. This is the [[dhondt|D'Hondt method]] (regla D'Hondt, in Spanish).
+
+es: Esta es la tabla de tu provincia con los partidos del ejemplo. En teja, las divisiones que se llevan escaño, numeradas en el orden en que lo consiguen:
+en: This is the table for the province you chose, with the example parties. In terracotta, the results that win a seat, numbered in the order they win it:
+
+es: Ver el reparto paso a paso
+en: Watch the share-out step by step
+
+es: La propia ley pone un ejemplo: con 480.000 votos y 8 escaños, el partido más votado se lleva cuatro, el segundo dos, y el tercero y el cuarto, uno cada uno.
+en: The law itself gives an example: with 480,000 votes and 8 seats, the party with most votes takes four, the second two, and the third and fourth one each.
+
+es: Fuente: LOREG, art. 163. En la tabla, los porcentajes inventados hacen de votos.
+en: Source: LOREG, art. 163. In the table, the made-up percentages stand in for votes.
+
+es: Desde cuándo se usa
+en: How long it has been used
+
+es: Desde 1977. La fijó el real decreto-ley de normas electorales de marzo de aquel año, que reguló las primeras elecciones tras la Ley para la Reforma Política, ya con 350 diputados. Ya la llamaba «regla d'Hondt», ya ponía la barrera en el 3 % y ya traía el mismo ejemplo de 480.000 votos que trae hoy la ley.
+en: Since 1977. It was set by the royal decree-law on electoral rules of March that year, which governed the first elections after the Political Reform Act that opened the way out of the Franco dictatorship, already with 350 deputies. It already called it the “d'Hondt rule”, already set the threshold at 3% and already carried the same 480,000-vote example the law gives today.
+
+es: Aquel decreto la presentaba como un freno a que el Congreso quedara demasiado fragmentado. Y el reparto de entonces era otro: Madrid elegía 32 diputados, Barcelona 33 y Soria 3.
+en: That decree presented it as a brake on Congress becoming too fragmented. And the share-out between provinces was different then: Madrid elected 32 deputies, Barcelona 33 and Soria 3.
+
+es: Fuente: Real Decreto-ley 20/1977, de 18 de marzo, sobre Normas Electorales: preámbulo y arts. 19 y 20.
+en: Source: Royal Decree-Law 20/1977 of 18 March on electoral rules: preamble and arts. 19 and 20.
+
+es: La barrera del 3 %
+en: The 3% threshold
+
+es: Antes de repartir se apartan los partidos que no llegan al 3 % de los votos válidos de la provincia. Sus votos no se pasan a nadie: sencillamente no entran en la tabla.
+en: Before the share-out, parties with less than 3% of the valid votes in the province are set aside. Their votes are not passed on to anyone: they simply do not enter the table.
+
+es: La barrera se mide provincia a provincia, no en toda España.
+en: The threshold applies province by province. There is no national threshold.
+
+es: Fuente: LOREG, art. 163.
+en: Source: LOREG, art. 163.
+
+es: Blanco, nulo y abstención
+en: Blank votes, spoilt votes and abstention
+
+es: El [[blanco|voto en blanco]] es un sobre vacío. Es válido: no va a ningún partido, pero cuenta en el total y por eso sube un poco el listón del 3 %.
+en: A [[blanco|blank vote]] is an empty envelope. It is valid: it goes to no party, but it counts in the total and so raises the 3% bar slightly.
+
+es: El [[nulo|voto nulo]] no cuenta para el reparto. Lo es una papeleta con tachaduras o añadidos, o un sobre que no es el oficial. Si metes dos papeletas del mismo partido, vale como un solo voto.
+en: A [[nulo|spoilt vote]] does not count towards the share-out. A ballot paper with crossings-out or additions is spoilt, and so is an envelope that is not the official one. Two ballot papers for the same party in one envelope count as a single vote.
+
+es: Quien no va a votar se abstiene: no entra en ninguna cuenta.
+en: Those who do not vote abstain: they do not enter any calculation.
+
+es: Fuentes: LOREG, arts. 96 y 108.
+en: Sources: LOREG, arts. 96 and 108.
+
+es: Qué pasa si hay empate
+en: What happens in a tie
+
+es: Si dos partidos empatan en una división, el escaño es para el que tiene más votos en total. Si también empatan en eso, se sortea.
+en: If two parties tie on a division, the seat goes to the one with more votes overall. If they tie on that too, lots are drawn.
+
+es: Quién ocupa cada escaño
+en: Who fills each seat
+
+es: Los escaños de un partido son para los primeros de su lista, por orden. Si un diputado renuncia o muere, entra el siguiente de la misma lista o un [[suplente|suplente]]. No hay que volver a votar.
+en: A party's seats go to the first names on its list, in order. If a deputy resigns or dies, the next person on the same list, or a [[suplente|substitute]], takes over. There are no by-elections.
+
+es: Fuentes: LOREG, arts. 163 y 164.
+en: Sources: LOREG, arts. 163 and 164.
+
+es: Ceuta y Melilla
+en: Ceuta and Melilla
+
+es: Cada una elige un solo diputado, así que no hay nada que repartir: gana quien saca más votos.
+en: Each elects a single deputy, so there is nothing to share out: whoever gets most votes wins.
+
+es: Fuente: LOREG, art. 163.2.
+en: Source: LOREG, art. 163.2.
+
+es: El último escaño
+en: The last seat
+
+es: El último escaño de cada provincia es el más disputado. Se lo lleva el partido con la siguiente división más alta, y a veces otro se queda muy cerca.
+en: The last seat in each province is the most closely fought. It goes to the party with the next-highest result, and sometimes another party falls just short.
+
+es: Cuando haya resultados, en el paso 10 verás por cuántos votos se decidió en tu provincia.
+en: Once there are results, step 10 will show by how many votes it was decided in each province.
+
+es: Explicación propia a partir de la regla del art. 163 de la LOREG.
+en: Own explanation, based on the rule in art. 163 of the LOREG.
+
+# ───── 3 · Dónde votas ─────
+
+es: 3 · Dónde votas
+en: 3 · Where the vote is cast
+
+es: Los mismos porcentajes no dan lo mismo en todas partes. Cuantos menos escaños reparte una provincia, menos partidos entran.
+en: The same percentages do not produce the same result everywhere. The fewer seats a province elects, the fewer parties get in.
+
+es: Cuántos habitantes hay detrás de cada escaño
+en: How many inhabitants stand behind each seat
+
+es: Los escaños se reparten por población, pero con un mínimo de dos por provincia. Por eso en las provincias pequeñas hacen falta muchos menos habitantes para elegir a un diputado.
+en: Seats are shared out by population, but with a minimum of two per province. That is why far fewer inhabitants are needed to elect a deputy in the small provinces.
+
+es: Para el 29N, en Soria hay un escaño por cada 45.117 habitantes; en Madrid, uno por cada 187.817: cuatro veces más.
+en: In this election, Soria has one seat for every 45,117 inhabitants; Madrid, one for every 187,817: four times as many.
+
+es: La cuenta es de habitantes, no de votantes: incluye a menores y a extranjeros, que no votan en estas elecciones.
+en: The count is of inhabitants, not voters: it includes children and foreign residents, who do not vote in this election.
+
+es: Fuentes: Real Decreto 1117/2025, anexo (padrón a 1 de enero de 2025); Real Decreto 806/2026, anexo; LOREG, arts. 2 y 162. Habitantes por escaño: cuenta propia, población entre escaños.
+en: Sources: Royal Decree 1117/2025, annex (municipal register at 1 January 2025); Royal Decree 806/2026, annex; LOREG, arts. 2 and 162. Inhabitants per seat: own calculation, population divided by seats.
+
+es: Por qué pasa
+en: Why it happens
+
+es: Con dos escaños solo caben los dos partidos más votados. Con 38, hasta un partido con el 9 % consigue varios. La regla es la misma; cambia el tamaño de la provincia.
+en: With two seats there is only room for the two biggest parties. With 38, even a party on 9% wins several. The rule is the same; what changes is the size of the province.
+
+es: En el ejemplo, con dos escaños no basta ni un 17 %. En las provincias pequeñas, el listón de verdad está muy por encima del 3 %.
+en: In the example, with two seats not even 17% is enough. In the small provinces, the real bar is far above 3%.
+
+es: Ejemplo propio: los mismos cinco partidos inventados y los mismos porcentajes en las dos provincias.
+en: Own example: the same five made-up parties and the same percentages in both provinces.
+
+es: Qué dice la Constitución y qué dice la ley
+en: What the Constitution says and what the law says
+
+es: La Constitución fija tres cosas: que el Congreso tenga entre 300 y 400 diputados, que cada provincia sea una circunscripción y que el reparto sea proporcional.
+en: The Constitution fixes three things: that Congress has between 300 and 400 deputies, that each province is a constituency and that the allocation is proportional.
+
+es: Lo demás lo decide la ley electoral: que sean 350, que cada provincia tenga dos de salida, la regla D'Hondt y la barrera del 3 %.
+en: The rest is decided by the electoral law: that there are 350, that each province starts with two, the D'Hondt method and the 3% threshold.
+
+es: Cambiar la ley electoral exige mayoría absoluta del Congreso, porque es una [[organica|ley orgánica]]. Cambiar la Constitución exige bastante más.
+en: Changing the electoral law takes an absolute majority in Congress, because it is an [[organica|organic law]]. Changing the Constitution takes a good deal more.
+
+es: Fuentes: Constitución, arts. 68 y 81; LOREG, arts. 162 y 163.
+en: Sources: Constitution, arts. 68 and 81; LOREG, arts. 162 and 163.
+
+es: Cuántas provincias de cada tamaño hay
+en: How many provinces there are of each size
+
+es: Cuenta propia a partir del anexo del Real Decreto 806/2026.
+en: Own count from the annex to Royal Decree 806/2026.
+
+# ───── 4 · El Senado ─────
+
+es: 4 · El Senado
+en: 4 · The Senate
+
+es: Al Senado se vota distinto: marcas personas, no listas. En una provincia puedes marcar hasta tres nombres y salen las cuatro personas más votadas.
+en: The Senate, the upper house, is elected differently: voters mark people, not lists. In a mainland province they can mark up to three names, and the four people with most votes are elected.
+
+es: Prueba a marcar (nombres inventados)
+en: Try ticking the boxes (made-up names)
+
+es: El Senado no elige al presidente ni puede hacerlo caer. Pero sin él no se reforma la Constitución, y le toca elegir a parte del Tribunal Constitucional y del Consejo General del Poder Judicial.
+en: The Senate does not elect the prime minister and cannot bring one down. But the Constitution cannot be amended without it, and it chooses some of the members of the Constitutional Court and of the General Council of the Judiciary.
+
+es: La llave de la reforma constitucional
+en: The key to constitutional reform
+
+es: Para reformar la Constitución hacen falta tres quintos del Congreso y tres quintos del Senado. Si el Senado no llega a tres quintos, queda otra vía: que lo apruebe por mayoría absoluta y que el Congreso lo apruebe por dos tercios. Sin la mayoría absoluta del Senado, la reforma no sale.
+en: Amending the Constitution takes three-fifths of Congress and three-fifths of the Senate. If the Senate falls short of three-fifths there is another route: it approves the change by an absolute majority and Congress approves it by two-thirds. Without an absolute majority in the Senate, the reform fails.
+
+es: Las reformas de más calado, las que tocan el título preliminar, los derechos fundamentales o la Corona, exigen dos tercios de cada cámara, disolver las Cortes, que las nuevas lo ratifiquen también por dos tercios y un referéndum.
+en: The most far-reaching reforms, those touching the preliminary title, fundamental rights or the Crown, require two-thirds of each chamber, the dissolution of parliament, ratification by the new chambers, again by two-thirds, and a referendum.
+
+es: En la práctica, quien tenga más de la mitad del Senado puede bloquear cualquier reforma, y quien tenga más de un tercio, las de más calado. Además, una décima parte de los senadores puede exigir que cualquier reforma se vote en referéndum.
+en: In practice, whoever holds more than half the Senate can block any reform, and whoever holds more than a third can block the most far-reaching ones. In addition, a tenth of senators can demand that any reform be put to a referendum.
+
+es: Fuentes: Constitución, arts. 167 y 168. Las cifras de bloqueo son una cuenta propia a partir de esas mayorías.
+en: Sources: Constitution, arts. 167 and 168. The blocking figures are an own calculation from those majorities.
+
+es: Nombramientos que pasan por el Senado
+en: Appointments that go through the Senate
+
+es: El Senado propone a cuatro de los doce magistrados del Tribunal Constitucional y elige a diez de los veinte vocales del Consejo General del Poder Judicial, el órgano que gobierna a los jueces; los otros diez, el Congreso. En los dos casos hacen falta tres quintos de los senadores.
+en: The Senate nominates four of the twelve judges of the Constitutional Court and elects ten of the twenty members of the General Council of the Judiciary, the body that governs the judges; Congress elects the other ten. In both cases three-fifths of senators are needed.
+
+es: Eso quiere decir que quien tenga más de dos quintos del Senado puede impedir esos nombramientos.
+en: That means whoever holds more than two-fifths of the Senate can block those appointments.
+
+es: Fuentes: Constitución, arts. 122.3 y 159.1; Ley Orgánica del Poder Judicial, art. 567.2. El bloqueo es una cuenta propia a partir de la mayoría de tres quintos.
+en: Sources: Constitution, arts. 122.3 and 159.1; Organic Law on the Judiciary, art. 567.2. The blocking figure is an own calculation from the three-fifths majority.
+
+es: Islas, Ceuta y Melilla
+en: Islands, Ceuta and Melilla
+
+es: Gran Canaria, Mallorca y Tenerife eligen tres senadores y se marcan dos nombres. Ceuta y Melilla eligen dos y se marcan dos. En las demás islas se elige uno y se marca uno.
+en: Gran Canaria, Mallorca and Tenerife elect three senators each, and voters mark two names. Ceuta and Melilla elect two each, and voters mark two. On each of the other islands one is elected and one is marked.
+
+es: Ibiza y Formentera eligen por separado tras la reforma constitucional de mayo de 2026.
+en: Ibiza and Formentera have elected their senators separately since the constitutional reform of May 2026.
+
+es: En total se eligen así 209 senadores.
+en: In all, 209 senators are elected this way.
+
+es: Fuentes: Real Decreto 806/2026, art. 3; LOREG, arts. 165 y 166; Constitución, art. 69. El total de 209 es una suma propia a partir del decreto.
+en: Sources: Royal Decree 806/2026, art. 3; LOREG, arts. 165 and 166; Constitution, art. 69. The total of 209 is an own sum from the decree.
+
+es: Cómo es la papeleta
+en: What the ballot paper looks like
+
+es: Es una sola papeleta, sepia, con todas las candidaturas: cada partido con sus candidatos debajo y un recuadro delante de cada nombre. Marcas con una cruz a quien elijas, como mucho tres, y pueden ser de partidos distintos: la ley solo limita cuántos.
+en: It is a single sepia sheet with every candidacy on it: each party with its candidates underneath and a box in front of each name. Voters put a cross against those they choose, three at most, and they can be from different parties: the law only limits how many.
+
+es: Si marcas más de los permitidos, el voto es nulo. Si no marcas a nadie, es un voto en blanco.
+en: Marking more than the number allowed spoils the vote. Marking nobody makes it a blank vote.
+
+es: Fuentes: Real Decreto 605/1999, art. 4 y anexo 3; LOREG, arts. 96, 166 y 172.3.
+en: Sources: Royal Decree 605/1999, art. 4 and annex 3; LOREG, arts. 96, 166 and 172.3.
+
+es: Para qué sirve el Senado
+en: What the Senate is for
+
+es: La Constitución lo define como la cámara de representación territorial. Revisa las leyes que le llegan del Congreso: tiene dos meses para cambiarlas o para vetarlas. El Congreso puede levantar ese [[veto|veto]].
+en: The Constitution defines it as the chamber of territorial representation. It reviews the bills that reach it from Congress: it has two months to amend or veto them. Congress can override that [[veto|veto]].
+
+es: Hay una cosa que solo puede autorizar el Senado, por mayoría absoluta: que el Gobierno obligue a una comunidad autónoma a cumplir la ley, el artículo 155.
+en: There is one thing only the Senate can authorise, by an absolute majority: for the central government to compel an autonomous community (a region) to comply with the law. This is article 155.
+
+es: También puede proponer leyes, crear comisiones de investigación y, con 50 senadores, recurrir una ley ante el Tribunal Constitucional. Los acuerdos de cooperación entre comunidades autónomas y el reparto del Fondo de Compensación Interterritorial empiezan en el Senado, aunque, si las dos cámaras no se ponen de acuerdo, decide el Congreso.
+en: It can also propose laws, set up committees of inquiry and, with 50 senators, challenge a law before the Constitutional Court. Cooperation agreements between autonomous communities and the sharing-out of the Interterritorial Compensation Fund start in the Senate, although if the two chambers disagree, Congress decides.
+
+es: Fuentes: Constitución, arts. 69, 74.2, 76, 87.1, 90, 145.2, 155, 158.2 y 162.1.
+en: Sources: Constitution, arts. 69, 74.2, 76, 87.1, 90, 145.2, 155, 158.2 and 162.1.
+
+es: Lo que el Senado no puede hacer
+en: What the Senate cannot do
+
+es: No vota la investidura ni la moción de censura: eso es solo del Congreso. Tampoco decide sobre los decretos-leyes del Gobierno ni sobre los estados de alarma, excepción y sitio.
+en: It does not vote on the investiture or on a motion of no confidence: those belong to Congress alone. Nor does it decide on the government's decree-laws or on states of alarm, emergency and siege.
+
+es: Puede preguntar e interpelar al Gobierno cada semana, pero no hacerlo caer.
+en: It can question the government every week, but it cannot bring it down.
+
+es: Fuentes: Constitución, arts. 86, 99, 111, 113 y 116.
+en: Sources: Constitution, arts. 86, 99, 111, 113 and 116.
+
+es: Si el Senado tiene otra mayoría
+en: If the Senate has a different majority
+
+es: Si en el Senado manda una mayoría distinta de la del Congreso, puede retrasar las leyes dos meses y obligar al Congreso a votarlas otra vez. Y puede bloquear las reformas constitucionales y los nombramientos que exigen tres quintos.
+en: If the Senate is controlled by a different majority from Congress, it can delay bills by two months and force Congress to vote on them again. And it can block constitutional reforms and the appointments that need three-fifths.
+
+es: Lo que no puede es parar una ley para siempre: el Congreso tiene la última palabra.
+en: What it cannot do is stop a law for good: Congress has the last word.
+
+es: Explicación propia a partir de los arts. 90, 122.3, 159.1, 167 y 168 de la Constitución.
+en: Own explanation, based on arts. 90, 122.3, 159.1, 167 and 168 of the Constitution.
+
+es: Los senadores que no se votan
+en: The senators nobody votes for
+
+es: Además de los elegidos en las urnas, cada parlamento autonómico designa un senador, más otro por cada millón de habitantes de su comunidad. Son los [[designacion|senadores por designación]].
+en: Besides those elected at the ballot box, each regional parliament appoints one senator, plus another for every million inhabitants of its autonomous community. These are the [[designacion|appointed senators]].
+
+es: Si un senador elegido en las urnas deja el escaño, lo ocupa su suplente.
+en: If a senator elected at the ballot box gives up the seat, their substitute takes it.
+
+es: Fuentes: Constitución, art. 69.5; LOREG, art. 166.
+en: Sources: Constitution, art. 69.5; LOREG, art. 166.
+
+# ───── 5 · Las mayorías ─────
+
+es: 5 · Las mayorías
+en: 5 · Majorities
+
+es: Para elegir presidente a la primera hace falta la [[absoluta|mayoría absoluta]]: 176 síes de 350. Si no sale, 48 horas después basta la [[simple|mayoría simple]]: más síes que noes.
+en: To elect a prime minister at the first attempt, a candidate needs an [[absoluta|absolute majority]]: 176 yes votes out of 350. Failing that, 48 hours later a [[simple|simple majority]] is enough: more yes votes than no votes.
+
+es: En teja, los 176 escaños que marcan la mitad más uno.
+en: In terracotta, the 176 seats that mark half plus one.
+
+es: Por qué la abstención pesa distinto
+en: Why abstaining weighs differently
+
+es: En la primera votación solo cuentan los síes: hay que juntar 176, y quien se abstiene no ayuda.
+en: In the first vote only the yes votes count: 176 are needed, and abstaining does not help.
+
+es: En la segunda se comparan síes y noes. Ahí, abstenerse en vez de votar no sí ayuda al candidato, porque hay un no menos que superar.
+en: In the second, yes votes are compared with no votes. There, abstaining instead of voting no does help the candidate, because there is one fewer no to beat.
+
+es: Explicación propia a partir del art. 99.3 de la Constitución.
+en: Own explanation, based on art. 99.3 of the Constitution.
+
+es: Otras mayorías
+en: Other majorities
+
+es: La mayoría absoluta (176) también hace falta para aprobar las leyes orgánicas y la moción de censura.
+en: An absolute majority (176) is also needed to pass organic laws and a motion of no confidence.
+
+es: Tres quintos (210): reformar la Constitución y proponer magistrados del Tribunal Constitucional.
+en: Three-fifths (210): amending the Constitution and nominating judges of the Constitutional Court.
+
+es: Dos tercios (234): las reformas constitucionales de mayor alcance.
+en: Two-thirds (234): the most far-reaching constitutional reforms.
+
+es: Fuentes: Constitución, arts. 81, 99, 113, 159, 167 y 168. Las cifras 210 y 234 son el cálculo sobre 350 diputados.
+en: Sources: Constitution, arts. 81, 99, 113, 159, 167 and 168. The figures 210 and 234 are calculated on 350 deputies.
+
+es: El día a día: quórum y mayoría simple
+en: Day to day: quorum and simple majority
+
+es: Para que una votación valga tiene que estar presente más de la mitad de la Cámara: es el [[quorum|quórum]]. Las decisiones corrientes salen con más votos a favor que en contra entre los presentes.
+en: For a vote to be valid, more than half the chamber must be present: that is the [[quorum|quorum]]. Ordinary decisions pass with more votes in favour than against among those present.
+
+es: Si hay empate, se vota otra vez. Si persiste, se hace una pausa y se vota una tercera vez. Si sigue el empate, la propuesta se da por rechazada.
+en: If there is a tie, the vote is repeated. If the tie persists, there is a pause and a third vote. If it is still tied, the proposal is deemed rejected.
+
+es: Fuentes: Constitución, art. 79; Reglamento del Congreso, arts. 78, 79 y 88.
+en: Sources: Constitution, art. 79; Standing Orders of Congress, arts. 78, 79 and 88.
+
+es: Leyes orgánicas y decretos-leyes
+en: Organic laws and decree-laws
+
+es: Las leyes orgánicas tratan los asuntos de más peso: los derechos fundamentales, los estatutos de autonomía o las reglas electorales. Necesitan mayoría absoluta del Congreso.
+en: Organic laws deal with the weightiest matters: fundamental rights, the regions' statutes of autonomy or the electoral rules. They need an absolute majority in Congress.
+
+es: El [[decretoley|decreto-ley]] es el atajo del Gobierno para casos urgentes: lo aprueba él solo y entra en vigor, pero el Congreso tiene treinta días para mantenerlo o tumbarlo.
+en: The [[decretoley|decree-law]] is the government's shortcut for urgent cases: it passes it on its own and it takes effect, but Congress has thirty days to uphold it or strike it down.
+
+es: Fuentes: Constitución, arts. 81 y 86.
+en: Sources: Constitution, arts. 81 and 86.
+
+es: Moción de censura y cuestión de confianza
+en: No-confidence motions and confidence votes
+
+es: La [[censura|moción de censura]] es la forma de cambiar de presidente sin elecciones. La firman al menos 35 diputados, lleva el nombre de un candidato y necesita mayoría absoluta. Si sale, ese candidato pasa a ser presidente.
+en: A [[censura|motion of no confidence]] (moción de censura) is the way to change prime minister without an election. It must be signed by at least 35 deputies, name a candidate and win an absolute majority. If it passes, that candidate becomes prime minister: it cannot just remove one, it has to install another.
+
+es: La [[confianza|cuestión de confianza]] va al revés: la pide el propio presidente. Le basta la mayoría simple. Si la pierde, dimite y se busca nuevo presidente.
+en: A [[confianza|confidence vote]] (cuestión de confianza) works the other way round: the prime minister calls it. A simple majority is enough. If it is lost, the prime minister resigns and a new one has to be found.
+
+es: Fuentes: Constitución, arts. 112, 113 y 114. Los 35 diputados son la décima parte de 350.
+en: Sources: Constitution, arts. 112, 113 and 114. The 35 deputies are a tenth of 350.
+
+es: Los Presupuestos
+en: The budget
+
+es: Los prepara el Gobierno y los aprueban las Cortes. Si el año empieza sin presupuestos nuevos, siguen valiendo los del año anterior hasta que se aprueben.
+en: The government drafts it and the Cortes approve it. If the year starts without a new budget, the previous year's stays in force until one is passed.
+
+es: Por eso un Gobierno sin mayoría puede seguir gobernando, pero con las cuentas de otro año.
+en: That is why a government without a majority can carry on governing, but with another year's accounts.
+
+es: Fuente: Constitución, art. 134.
+en: Source: Constitution, art. 134.
+
+# ───── 6 · Pactos ─────
+
+es: 6 · Pactos
+en: 6 · Deals
+
+es: Si ningún partido llega solo a 176, toca pactar. Toca cada partido para cambiar su voto en la [[investidura|investidura]]: no, sí o [[abstencion|abstención]].
+en: If no party reaches 176 on its own, it is time to negotiate. Tap each party to change how it votes in the [[investidura|investiture]], the vote that makes a prime minister: no, yes or [[abstencion|abstain]].
+
+es: Tres maneras de apoyar
+en: Three ways of lending support
+
+es: Un partido puede ayudar a un candidato de tres maneras. Entrando en el Gobierno con él: es una coalición. Votando sí sin entrar en el Gobierno. O absteniéndose, para que le baste con la segunda votación.
+en: A party can help a candidate in three ways. By joining the government: that is a coalition. By voting yes without joining the government. Or by abstaining, so that the second vote is enough.
+
+es: Lo que se pide a cambio no está en ninguna ley: es negociación política.
+en: What is asked for in return is not in any law: it is political negotiation.
+
+es: Explicación propia. Las mayorías, en el art. 99 de la Constitución.
+en: Own explanation. The majorities are in art. 99 of the Constitution.
+
+es: Cómo se vota la investidura
+en: How the investiture vote is held
+
+es: Uno a uno y en voz alta. Se llama a cada diputado por orden alfabético del primer apellido, empezando por uno sacado a suerte, y responde «sí», «no» o «abstención». Los miembros del Gobierno que son diputados y la Mesa votan al final.
+en: One by one and out loud. Each deputy is called in alphabetical order of first surname, starting from one drawn by lot, and answers “sí”, “no” or “abstención”. Members of the government who are deputies, and the Bureau, vote last.
+
+es: Antes hay debate: el candidato explica su programa sin límite de tiempo y cada grupo le responde durante media hora.
+en: First comes a debate: the candidate sets out a programme with no time limit and each group replies for half an hour.
+
+es: Fuentes: Reglamento del Congreso, arts. 85, 86 y 171.
+en: Sources: Standing Orders of Congress, arts. 85, 86 and 171.
+
+es: Si la investidura falla
+en: If the investiture fails
+
+es: Si el candidato no sale, el Rey puede hacer nuevas propuestas. Pero el reloj ya corre: dos meses después de la primera votación, si no hay presidente, se disuelven las Cortes y se vuelve a votar.
+en: If the candidate is not elected, the King can nominate others. But the clock is already running: two months after the first vote, if there is no prime minister, parliament is dissolved and the country votes again.
+
+es: Ha pasado dos veces. En 2016 y en 2019 nadie logró la investidura a tiempo y se repitieron las elecciones.
+en: It has happened twice. In 2016 and in 2019 nobody won an investiture in time and the election was repeated.
+
+es: En una repetición todo va más rápido: se vota 47 días después de la convocatoria, no 54.
+en: A repeat election moves faster: polling day is 47 days after it is called, not 54.
+
+es: Fuentes: Constitución, art. 99; LOREG, art. 42 y disposición adicional séptima (añadida por la Ley Orgánica 2/2016); Reales Decretos 184/2016 y 551/2019.
+en: Sources: Constitution, art. 99; LOREG, art. 42 and seventh additional provision (added by Organic Law 2/2016); Royal Decrees 184/2016 and 551/2019.
+
+es: De dónde salen estos escaños
+en: Where these seat numbers come from
+
+es: No son resultados: son escaños calculados a partir de las últimas encuestas por [Porra Electoral](https://gastiaso.github.io/porra-electoral/), que junta las encuestas publicadas y simula el reparto provincia a provincia. El 30N se cambiarán por los escaños de verdad.
+en: They are not results: they are seats projected from the latest polls by [Porra Electoral](https://gastiaso.github.io/porra-electoral/) (in Spanish), which pools the published polls and simulates the share-out province by province. On 30 November they will be replaced by the real seats.
+
+es: Fuente: [Porra Electoral](https://gastiaso.github.io/porra-electoral/).
+en: Source: [Porra Electoral](https://gastiaso.github.io/porra-electoral/).
+
+es: Por qué la calculadora lleva fecha
+en: Why the calculator carries a date
+
+es: La ley prohíbe publicar o difundir encuestas electorales en los cinco días anteriores a la votación: para el 29N, del 24 al 28 de noviembre. Por eso la estimación de esta calculadora se congeló antes y lleva la fecha de la última encuesta que incluye.
+en: Spanish law bans publishing or disseminating election polls in the five days before polling day: for this election, from 24 to 28 November. That is why the estimate in this calculator was frozen beforehand and carries the date of the last poll it includes.
+
+es: Quien vigila que las encuestas cumplan la ley es la Junta Electoral Central.
+en: The body that checks that polls comply with the law is the Central Electoral Board.
+
+es: Fuente: LOREG, art. 69. Del 24 al 28 de noviembre es el cálculo de los cinco días.
+en: Source: LOREG, art. 69. 24 to 28 November is an own count of the five days.
+
+# ───── 7 · Del 29N al Gobierno ─────
+
+es: 7 · Del 29N al Gobierno
+en: 7 · From 29 November to a government
+
+es: El reloj de dos meses no arranca el 29N. Empieza con la primera votación de [[investidura|investidura]].
+en: The two-month clock does not start on election day. It starts with the first [[investidura|investiture]] vote.
+
+es: Toca cada fecha para ver qué pasa ese día.
+en: Tap each date to see what happens that day.
+
+es: Antes de votar
+en: Before the vote
+
+es: mar 6 oct
+en: Tue 6 Oct
+
+es: Se disuelven las Cortes y se convocan elecciones
+en: Parliament is dissolved and the election is called
+
+es: El Real Decreto 806/2026 sale en el BOE: disuelve el Congreso y el Senado elegidos en julio de 2023 y fija la votación 54 días después, el domingo 29 de noviembre. <small>Real Decreto 806/2026, arts. 1 y 2; LOREG, art. 42.1.</small>
+en: Royal Decree 806/2026 is published in the BOE: it dissolves the Congress and Senate elected in July 2023 and sets polling day 54 days later, on Sunday 29 November. <small>Royal Decree 806/2026, arts. 1 and 2; LOREG, art. 42.1.</small>
+
+es: vie 13 nov
+en: Fri 13 Nov
+
+es: Empieza la campaña
+en: The campaign begins
+
+es: Quince días en los que los partidos piden el voto con mítines, carteles y anuncios. Arranca a las cero horas. <small>LOREG, art. 51; Real Decreto 806/2026, art. 4.</small>
+en: Fifteen days in which the parties ask for votes with rallies, posters and adverts. It starts at midnight. <small>LOREG, art. 51; Royal Decree 806/2026, art. 4.</small>
+
+es: jue 19 nov
+en: Thu 19 Nov
+
+es: Último día para pedir el voto por correo
+en: Last day to apply for a postal vote
+
+es: Se pide en una oficina de Correos, en persona y con el DNI. Las papeletas llegan después a casa y se devuelven por correo certificado, sin sello. <small>LOREG, arts. 72 y 73. Fecha: cálculo del décimo día anterior.</small>
+en: Voters apply at a post office, in person and with their identity card. The ballot papers then arrive at home and are sent back by registered post, free of charge. <small>LOREG, arts. 72 and 73. Date: own count of the tenth day before.</small>
+
+es: 21 a 26 nov
+en: 21–26 Nov
+
+es: Voto en los consulados
+en: Voting at consulates
+
+es: Quien vive en el extranjero puede depositar su voto en una urna de su consulado o embajada. Si lo manda por correo, tiene que enviarlo como tarde el 24. <small>LOREG, art. 75. Fechas: cálculo de los plazos del artículo.</small>
+en: Spaniards living abroad can put their vote in a ballot box at their consulate or embassy. If they send it by post, they must do so by the 24th at the latest. <small>LOREG, art. 75. Dates: own count of the deadlines in that article.</small>
+
+es: 24 a 28 nov
+en: 24–28 Nov
+
+es: No se pueden publicar encuestas
+en: No polls may be published
+
+es: La ley prohíbe publicar, difundir o reproducir sondeos electorales en los cinco días anteriores a la votación. <small>LOREG, art. 69.7.</small>
+en: The law bans publishing, disseminating or reproducing election polls in the five days before polling day. <small>LOREG, art. 69.7.</small>
+
+es: vie 27 nov
+en: Fri 27 Nov
+
+es: Termina la campaña
+en: The campaign ends
+
+es: A medianoche se acaban los mítines, la propaganda y los actos de campaña. <small>LOREG, art. 51; Real Decreto 806/2026, art. 4.</small>
+en: At midnight the rallies, the advertising and the campaign events stop. <small>LOREG, art. 51; Royal Decree 806/2026, art. 4.</small>
+
+es: sáb 28 nov
+en: Sat 28 Nov
+
+es: Jornada de reflexión
+en: Day of reflection
+
+es: La víspera no puede haber propaganda ni actos de campaña. <small>LOREG, arts. 51.3 y 53.</small>
+en: On the eve of the vote there can be no advertising or campaign events. <small>LOREG, arts. 51.3 and 53.</small>
+
+es: La votación
+en: Polling day
+
+es: dom 29 nov
+en: Sun 29 Nov
+
+es: Se vota, de 9:00 a 20:00
+en: Voting, from 9am to 8pm
+
+es: Los colegios no cierran en todo el día. Al acabar, cada mesa abre la urna y cuenta los votos en público. Por la noche se conoce el recuento provisional. <small>LOREG, arts. 84, 95 y 98.</small>
+en: Polling stations stay open all day. When they close, each one opens its ballot box and counts the votes in public. The provisional count is known that night. <small>LOREG, arts. 84, 95 and 98.</small>
+
+es: El recuento oficial
+en: The official count
+
+es: vie 4 dic
+en: Fri 4 Dec
+
+es: Escrutinio general
+en: General count
+
+es: Las juntas electorales hacen el recuento oficial con las actas de las mesas y suman el voto llegado del extranjero. <small>LOREG, arts. 75 y 103. Fecha: cálculo del quinto día.</small>
+en: The electoral boards carry out the official count from the polling stations' tally sheets and add the votes that have arrived from abroad. <small>LOREG, arts. 75 and 103. Date: own count of the fifth day.</small>
+
+es: lun 7 dic
+en: Mon 7 Dec
+
+es: Como tarde, termina el escrutinio
+en: The count ends, at the latest
+
+es: Después se proclaman los electos. Desde la proclamación hay tres días para recurrir; los recursos los resuelve el Tribunal Supremo. <small>LOREG, arts. 107.2, 108 y 112. Fecha: cálculo del octavo día.</small>
+en: Those elected are then proclaimed. From the proclamation there are three days to appeal; appeals are decided by the Supreme Court. <small>LOREG, arts. 107.2, 108 and 112. Date: own count of the eighth day.</small>
+
+es: Las nuevas Cortes
+en: The new parliament
+
+es: mié 23 dic
+en: Wed 23 Dec
+
+es: Se constituyen el Congreso y el Senado
+en: Congress and the Senate are constituted
+
+es: A las diez de la mañana, cada cámara en su sesión constitutiva. En el Congreso preside al principio el diputado de más edad, se elige la Mesa y los diputados juran o prometen la Constitución. <small>Real Decreto 806/2026, art. 5; Constitución, art. 72.2; Reglamento del Congreso, arts. 1 a 4 y 37.</small>
+en: At ten in the morning, each chamber holds its opening sitting. In Congress the oldest deputy presides at first, the Bureau is elected and deputies swear or promise to uphold the Constitution. <small>Royal Decree 806/2026, art. 5; Constitution, art. 72.2; Standing Orders of Congress, arts. 1 to 4 and 37.</small>
+
+es: hasta el 28 dic
+en: by 28 Dec
+
+es: Se forman los grupos parlamentarios
+en: Parliamentary groups are formed
+
+es: En los cinco días siguientes a la sesión constitutiva. Por regla general hacen falta quince diputados; hay otra vía con cinco si se supera un mínimo de votos. <small>Reglamento del Congreso, arts. 23 y 24. Fecha: cálculo de los cinco días.</small>
+en: In the five days after the opening sitting. As a rule fifteen deputies are needed; there is another route with five if a minimum share of the vote is reached. <small>Standing Orders of Congress, arts. 23 and 24. Date: own count of the five days.</small>
+
+es: 1 ene 2027
+en: 1 Jan 2027
+
+es: Si no hay Presupuestos nuevos, siguen los anteriores
+en: With no new budget, the old one carries on
+
+es: Se prorrogan automáticamente hasta que se aprueben otros. Un Gobierno en funciones no puede aprobar el proyecto de Presupuestos. <small>Constitución, art. 134.4; Ley 50/1997, art. 21.5.</small>
+en: It is extended automatically until another is passed. A caretaker government cannot approve a draft budget. <small>Constitution, art. 134.4; Law 50/1997, art. 21.5.</small>
+
+es: La investidura
+en: The investiture
+
+es: sin fecha
+en: no date
+
+es: El Rey consulta y propone un candidato
+en: The King consults and nominates a candidate
+
+es: Recibe a los representantes de los grupos con escaños y propone un candidato a través de la presidencia del Congreso. La Constitución no le pone plazo. <small>Constitución, art. 99.1.</small>
+en: He receives the representatives of the groups with seats and nominates a candidate through the speaker of Congress. The Constitution sets no deadline. <small>Constitution, art. 99.1.</small>
+
+es: día D
+en: D-day
+
+es: Debate y primera votación
+en: Debate and first vote
+
+es: El candidato expone su programa sin límite de tiempo y cada grupo le responde. Necesita 176 síes. Aquí arranca el reloj de dos meses. <small>Constitución, art. 99; Reglamento del Congreso, art. 171.</small>
+en: The candidate sets out a programme with no time limit and each group replies. 176 yes votes are needed. This is where the two-month clock starts. <small>Constitution, art. 99; Standing Orders of Congress, art. 171.</small>
+
+es: D + 48 h
+en: D + 48 h
+
+es: Segunda votación
+en: Second vote
+
+es: Si no llegó a 176, basta con más síes que noes. Si tampoco sale, el Rey puede proponer a otro candidato. <small>Constitución, art. 99.3 y 99.4.</small>
+en: If the candidate fell short of 176, more yes votes than no votes are enough. If that fails too, the King can nominate another candidate. <small>Constitution, art. 99.3 and 99.4.</small>
+
+es: D + 2 meses
+en: D + 2 months
+
+es: Si no hay presidente, nuevas elecciones
+en: No prime minister means a new election
+
+es: Se disuelven las Cortes y se vota 47 días después de la convocatoria. Ha pasado en 2016 y en 2019. <small>Constitución, art. 99.5; LOREG, disposición adicional séptima; Reales Decretos 184/2016 y 551/2019.</small>
+en: Parliament is dissolved and polling day is 47 days after the election is called. It happened in 2016 and in 2019. <small>Constitution, art. 99.5; LOREG, seventh additional provision; Royal Decrees 184/2016 and 551/2019.</small>
+
+es: con presidente
+en: once elected
+
+es: Nombramiento y nuevo Gobierno
+en: Appointment and new government
+
+es: El Rey nombra presidente al candidato investido y, a propuesta suya, a los ministros. Cuando toman posesión, termina el Gobierno en funciones. <small>Constitución, arts. 62, 99.3, 100 y 101.</small>
+en: The King appoints as prime minister the candidate who has won the investiture and, on the prime minister's proposal, the ministers. When they take office, the caretaker government ends. <small>Constitution, arts. 62, 99.3, 100 and 101.</small>
+
+es: La campaña y la jornada de reflexión
+en: The campaign and the day of reflection
+
+es: La campaña dura quince días: del viernes 13 al viernes 27 de noviembre. Es el tiempo en que los partidos piden el voto con mítines, carteles y anuncios. Antes del 13 no pueden poner carteles ni anuncios electorales.
+en: The campaign lasts fifteen days: from Friday 13 to Friday 27 November. It is the period in which parties ask for votes with rallies, posters and adverts. Before the 13th they may not put up election posters or run election adverts.
+
+es: El sábado 28, la víspera, no puede haber propaganda ni actos de campaña. Es lo que se conoce como jornada de reflexión.
+en: On Saturday 28, the eve of the vote, there can be no advertising or campaign events. It is known as the day of reflection (jornada de reflexión).
+
+es: Fuentes: LOREG, arts. 51 y 53; Real Decreto 806/2026, art. 4. «Jornada de reflexión» es el nombre de uso común; la ley habla del periodo en que la campaña ha terminado.
+en: Sources: LOREG, arts. 51 and 53; Royal Decree 806/2026, art. 4. “Day of reflection” is the everyday name; the law speaks of the period after the campaign has ended.
+
+es: Si ese día no puedes ir
+en: Voting by post and from abroad
+
+es: Existe el voto por correo. Hay que pedirlo en una oficina de Correos, en persona y con el DNI, hasta diez días antes de la votación: para el 29N, hasta el 19 de noviembre. Después te llegan las papeletas a casa y las devuelves por correo certificado, sin pagar sello.
+en: Voters who cannot go on the day can vote by post. They must apply at a post office, in person and with their identity card, up to ten days before polling day: for this election, until 19 November. The ballot papers then arrive at home and are returned by registered post, free of charge.
+
+es: Quien vive en el extranjero y está inscrito en el censo de residentes ausentes recibe la documentación en casa sin pedirla. Puede votar en una urna de su consulado, del 21 al 26 de noviembre, o mandar el voto por correo al consulado como tarde el 24. Esos votos se cuentan el 4 de diciembre, en el recuento oficial.
+en: Spaniards who live abroad and are on the register of absent residents receive the paperwork at home without asking for it. They can vote in a ballot box at their consulate, from 21 to 26 November, or post their vote to the consulate by the 24th at the latest. Those votes are counted on 4 December, in the official count.
+
+es: Fuentes: LOREG, arts. 72, 73, 75 y 103. Las fechas son el cálculo de los plazos de esos artículos para el 29N.
+en: Sources: LOREG, arts. 72, 73, 75 and 103. The dates are an own count of the deadlines in those articles for this election.
+
+es: La noche electoral no es el resultado oficial
+en: Election night is not the official result
+
+es: La noche del 29N se conoce un recuento provisional, hecho con las actas de las mesas. El oficial, el [[escrutinio|escrutinio general]], lo hacen las [[junta|juntas electorales]] al quinto día: el 4 de diciembre. Ese día se suma el voto llegado del extranjero.
+en: On election night a provisional count is announced, based on the polling stations' tally sheets. The official one, the [[escrutinio|general count]], is carried out by the [[junta|electoral boards]] on the fifth day: 4 December. That is when the votes from abroad are added.
+
+es: Tiene que estar terminado como tarde el octavo día: el 7 de diciembre. Luego se proclaman los diputados. Desde ese momento hay tres días para recurrir, y los recursos los resuelve el Tribunal Supremo.
+en: It must be finished by the eighth day at the latest: 7 December. The deputies are then proclaimed. From that moment there are three days to appeal, and appeals are decided by the Supreme Court.
+
+es: Fuentes: LOREG, arts. 75, 98, 103, 107, 108 y 112. El 4 y el 7 de diciembre son el cálculo del quinto y el octavo día.
+en: Sources: LOREG, arts. 75, 98, 103, 107, 108 and 112. 4 and 7 December are an own count of the fifth and eighth days.
+
+es: Por qué el 23 de diciembre
+en: Why 23 December
+
+es: La Constitución da 25 días desde la votación para reunir al nuevo Congreso. El decreto que convocó las elecciones fijó el 23 de diciembre a las diez.
+en: The Constitution allows 25 days from polling day to convene the new Congress. The decree that called the election set 23 December at ten o'clock.
+
+es: Fuentes: Constitución, art. 68.6; Real Decreto 806/2026, art. 5.
+en: Sources: Constitution, art. 68.6; Royal Decree 806/2026, art. 5.
+
+es: El primer día del Congreso
+en: The first day of Congress
+
+es: Preside el diputado de más edad, con los dos más jóvenes de secretarios. Lo primero es elegir la [[mesa|Mesa del Congreso]]. Para presidirla hace falta mayoría absoluta; si nadie la logra, se decide entre los dos más votados.
+en: The oldest deputy presides, with the two youngest as secretaries. The first business is to elect the [[mesa|Bureau of Congress]]. Its president, the speaker, needs an absolute majority; if nobody gets one, the choice is between the two with most votes.
+
+es: Después, los diputados juran o prometen acatar la Constitución y el Congreso queda constituido.
+en: The deputies then swear or promise to abide by the Constitution and Congress is constituted.
+
+es: Para ser diputado de pleno derecho hay que entregar la credencial y la declaración de actividades, y jurar o prometer la Constitución. Quien no lo haga en tres plenos se queda sin derechos ni prerrogativas hasta que lo haga.
+en: To become a full deputy, a member must hand in their credentials and declaration of activities, and swear or promise to abide by the Constitution. Anyone who has not done so within three plenary sittings is left without rights or privileges until they do.
+
+es: Los [[grupo|grupos parlamentarios]] se forman en los cinco días siguientes.
+en: The [[grupo|parliamentary groups]] are formed in the following five days.
+
+es: Fuentes: Reglamento del Congreso, arts. 1 a 4, 20, 23, 24 y 37.
+en: Sources: Standing Orders of Congress, arts. 1 to 4, 20, 23, 24 and 37.
+
+es: Las consultas del Rey
+en: The King's consultations
+
+es: El Rey recibe a los representantes de los partidos con escaño y después propone un candidato, a través de la presidencia del Congreso. La Constitución no le pone plazo.
+en: The King receives the representatives of the parties with seats and then nominates a candidate, through the speaker of Congress. The Constitution sets no deadline.
+
+es: Por eso el calendario tiene un tramo sin fechas: hasta que no hay una primera votación, el reloj de dos meses no cuenta.
+en: That is why the calendar has a stretch with no dates: until there is a first vote, the two-month clock does not run.
+
+es: Fuente: Constitución, arts. 62 y 99.
+en: Source: Constitution, arts. 62 and 99.
+
+es: Quién gobierna mientras tanto
+en: Who governs in the meantime
+
+es: El Gobierno que sale sigue [[funciones|en funciones]] hasta que toma posesión el nuevo. Despacha los asuntos ordinarios, pero no puede presentar proyectos de ley ni los Presupuestos.
+en: The outgoing government stays on [[funciones|as a caretaker]] until the new one takes office. It deals with day-to-day business, but it cannot present bills or the budget.
+
+es: Su presidente tampoco puede disolver las Cortes, ni plantear una cuestión de confianza, ni proponer un referéndum.
+en: Nor can its prime minister dissolve parliament, call a confidence vote or propose a referendum.
+
+es: Fuentes: Constitución, art. 101; Ley 50/1997, art. 21.
+en: Sources: Constitution, art. 101; Law 50/1997, art. 21.
+
+es: Y mientras no hay Cortes
+en: And while there is no parliament
+
+es: Desde que se disolvieron las Cámaras hasta que se constituyan las nuevas queda de guardia un grupo reducido de diputados y otro de senadores: la [[permanente|Diputación Permanente]].
+en: From the dissolution of the chambers until the new ones are constituted, a small group of deputies and another of senators stay on duty: the [[permanente|Permanent Deputation]] (Diputación Permanente).
+
+es: Hace lo que en ese tiempo no puede hacer el Congreso: mantener o tumbar los [[decretoley|decretos-leyes]] del Gobierno y decidir sobre los estados de alarma, excepción y sitio.
+en: It does what Congress cannot do in that period: uphold or strike down the government's [[decretoley|decree-laws]] and decide on states of alarm, emergency and siege.
+
+es: Fuentes: Constitución, arts. 78, 86 y 116.
+en: Sources: Constitution, arts. 78, 86 and 116.
+
+es: Cuando ya hay presidente
+en: Once there is a prime minister
+
+es: El Rey nombra al presidente que ha elegido el Congreso. Después nombra a los ministros que el presidente le propone. Cuando el nuevo Gobierno toma posesión, el anterior deja de estar en funciones.
+en: The King appoints the prime minister Congress has elected. He then appoints the ministers the prime minister proposes. When the new government takes office, the previous one ceases to be a caretaker.
+
+es: Fuentes: Constitución, arts. 62, 99, 100 y 101.
+en: Sources: Constitution, arts. 62, 99, 100 and 101.
+
+# ───── 8 · Cierre ─────
+
+es: 8 · Cierre
+en: 8 · Wrap-up
+
+es: Hasta aquí, las reglas. El 30N se abren cinco pasos más, con los resultados y lo que pase después.
+en: Those are the rules. On 30 November five more steps open, with the results and whatever happens next.
+
+es: Hasta aquí, las reglas. Los cinco pasos que siguen cuentan lo que ha pasado.
+en: Those are the rules. The five steps that follow tell what has happened.
+
+es: Glosario completo
+en: Full glossary
+
+es: Fuentes: [Real Decreto 806/2026](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20742), [Constitución](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229), [LOREG](https://www.boe.es/buscar/act.php?id=BOE-A-1985-11672), [Reglamento del Congreso](https://www.boe.es/buscar/act.php?id=BOE-A-1982-5196), [Real Decreto 605/1999](https://www.boe.es/buscar/act.php?id=BOE-A-1999-8583) y [Ley 50/1997](https://www.boe.es/buscar/act.php?id=BOE-A-1997-25336).
+en: Sources (all in Spanish): [Royal Decree 806/2026](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20742), [Constitution](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229), [LOREG](https://www.boe.es/buscar/act.php?id=BOE-A-1985-11672), [Standing Orders of Congress](https://www.boe.es/buscar/act.php?id=BOE-A-1982-5196), [Royal Decree 605/1999](https://www.boe.es/buscar/act.php?id=BOE-A-1999-8583) and [Law 50/1997](https://www.boe.es/buscar/act.php?id=BOE-A-1997-25336).
+
+es: Volver a la salida
+en: Back to the start
+
+es: Ver solo el texto
+en: Text only
+
+# ───── 9 · Qué ha pasado ─────
+
+es: 9 · Qué ha pasado
+en: 9 · What happened
+
+es: Cómo leer el mapa
+en: How to read the map
+
+es: Cada hexágono es un escaño y lleva el color del partido que lo ha ganado. Las provincias grandes ocupan más porque reparten más escaños, no porque tengan más territorio.
+en: Each hexagon is a seat, in the colour of the party that won it. Big provinces take up more room because they elect more seats, not because they have more territory.
+
+es: Explicación propia.
+en: Own explanation.
+
+es: Provisional y oficial
+en: Provisional and official
+
+es: Lo que se conoce la noche electoral es un recuento provisional. El oficial lo hacen las juntas electorales cinco días después, y es entonces cuando se suma el voto llegado del extranjero.
+en: What is known on election night is a provisional count. The official one is carried out by the electoral boards five days later, and that is when the votes from abroad are added.
+
+es: Después se proclaman los diputados. Desde ese momento hay tres días para recurrir, y los recursos los resuelve el Tribunal Supremo.
+en: The deputies are then proclaimed. From that moment there are three days to appeal, and appeals are decided by the Supreme Court.
+
+es: Fuentes: LOREG, arts. 75, 98, 103, 108 y 112.
+en: Sources: LOREG, arts. 75, 98, 103, 108 and 112.
+
+es: Qué son los votos válidos
+en: What valid votes are
+
+es: Los porcentajes se calculan sobre los votos válidos: los que van a un partido más los votos en blanco. Los nulos quedan fuera.
+en: Percentages are calculated on valid votes: those cast for a party plus blank votes. Spoilt votes are left out.
+
+# ───── 10 · En tu provincia ─────
+
+es: 10 · En tu provincia
+en: 10 · In one province
+
+es: Tu provincia
+en: Province
+
+es: ¿Y si…?
+en: What if…?
+
+es: Pasa votos de un partido a otro y mira cómo cambia el reparto de tu provincia. El total de votos no cambia.
+en: Move votes from one party to another and see how the share-out changes in this province. The total number of votes stays the same.
+
+es: Quitar votos a
+en: Take votes from
+
+es: Dárselos a
+en: Give them to
+
+es: Cuántos: <output id="ysiV" for="ysiN"></output>
+en: How many: <output id="ysiV" for="ysiN"></output>
+
+es: Cómo se calcula lo que faltó
+en: How the shortfall is calculated
+
+es: El último escaño se lo lleva la división más alta que quedaba en la tabla. Lo que le faltó al siguiente partido es cuántos votos más habría necesitado para que su división superase a esa, sin que cambie nada más.
+en: The last seat goes to the highest result left in the table. The next party's shortfall is how many more votes it would have needed for its own result to beat that one, with nothing else changing.
+
+es: Es una cuenta sobre el papel: en la realidad, si un partido sube, otros bajan.
+en: It is a calculation on paper: in reality, if one party goes up, others go down.
+
+es: Cálculo propio con la regla del art. 163 de la LOREG.
+en: Own calculation with the rule in art. 163 of the LOREG.
+
+es: Si un diputado deja el escaño
+en: If a deputy gives up the seat
+
+es: Entra el siguiente de la lista por la que salió elegido; no se vuelve a votar.
+en: The next person on the list they were elected on takes over; there is no by-election.
+
+es: Fuente: LOREG, art. 164.
+en: Source: LOREG, art. 164.
+
+# ───── 11 · Votos y escaños ─────
+
+es: 11 · Votos y escaños
+en: 11 · Votes and seats
+
+es: <i class="lv"></i> votos <i class="le"></i> escaños
+en: <i class="lv"></i> votes <i class="le"></i> seats
+
+es: Por qué no coinciden
+en: Why they don't match
+
+es: Porque los escaños no se reparten una vez en toda España, sino 52 veces: una por provincia. En las pequeñas solo entran los partidos más votados, y los votos de los demás se quedan sin escaño.
+en: Because the seats are not shared out once for the whole of Spain but 52 times: once per constituency. In the small ones only the biggest parties get in, and the votes for the rest win no seat.
+
+es: A eso se suma la barrera del 3 % y que la regla D'Hondt redondea a favor de los partidos con más votos en cada provincia.
+en: On top of that come the 3% threshold and the fact that the D'Hondt method rounds in favour of the parties with most votes in each province.
+
+es: Explicación propia a partir de los arts. 162 y 163 de la LOREG.
+en: Own explanation, based on arts. 162 and 163 of the LOREG.
+
+es: Qué habría que cambiar para que coincidieran
+en: What would have to change for them to match
+
+es: La provincia como circunscripción está en la Constitución. El número de diputados (350), el mínimo de dos por provincia, la barrera y la regla de reparto están en la ley electoral.
+en: The province as the constituency is in the Constitution. The number of deputies (350), the minimum of two per province, the threshold and the allocation formula are in the electoral law.
+
+es: Lo primero exige reformar la Constitución. Lo segundo, mayoría absoluta del Congreso.
+en: The first requires amending the Constitution. The second, an absolute majority in Congress.
+
+# ───── 12 · ¿Quién gobierna? ─────
+
+es: 12 · ¿Quién gobierna?
+en: 12 · Who governs?
+
+es: Estos son los escaños de verdad. Toca cada partido para cambiar su voto en la investidura: no, sí o abstención.
+en: These are the real seats. Tap each party to change how it votes in the investiture: no, yes or abstain.
+
+es: Qué mirar en una negociación
+en: What to watch in a negotiation
+
+es: Dos números. Si los síes llegan a 176, hay presidente a la primera. Si no llegan, lo que importa es que haya más síes que noes: ahí cada abstención cuenta.
+en: Two numbers. If the yes votes reach 176, there is a prime minister at the first attempt. If they do not, what matters is that there are more yes votes than no votes: that is where every abstention counts.
+
+es: Fuente: Constitución, art. 99.3.
+en: Source: Constitution, art. 99.3.
+
+es: Los diputados no están atados
+en: Deputies are not bound
+
+es: La Constitución dice que diputados y senadores no están sujetos a mandato imperativo: nadie puede obligarlos legalmente a votar en un sentido.
+en: The Constitution says deputies and senators are not bound by any compulsory mandate: nobody can legally force them to vote one way or another.
+
+es: Fuente: Constitución, art. 67.2.
+en: Source: Constitution, art. 67.2.
+
+# ───── 13 · Lo que viene ─────
+
+es: 13 · Lo que viene
+en: 13 · What's next
+
+es: Si no hay acuerdo
+en: If there is no deal
+
+es: Dos meses después de la primera votación de investidura, si no hay presidente, se disuelven las Cortes y se convocan nuevas elecciones. Se celebrarían 47 días después.
+en: Two months after the first investiture vote, if there is no prime minister, parliament is dissolved and a new election is called. It would be held 47 days later.
+
+es: Ha pasado dos veces, en 2016 y en 2019.
+en: It has happened twice, in 2016 and in 2019.
+
+es: Fuentes: Constitución, art. 99.5; LOREG, disposición adicional séptima (añadida por la Ley Orgánica 2/2016); Reales Decretos 184/2016 y 551/2019.
+en: Sources: Constitution, art. 99.5; LOREG, seventh additional provision (added by Organic Law 2/2016); Royal Decrees 184/2016 and 551/2019.
+
+es: Si hay acuerdo
+en: If there is a deal
+
+es: El Rey nombra al presidente y, a propuesta suya, a los ministros. El Gobierno en funciones termina cuando el nuevo toma posesión.
+en: The King appoints the prime minister and, on the prime minister's proposal, the ministers. The caretaker government ends when the new one takes office.
+
+# ───── La Moncloa ─────
+
+es: La Moncloa
+en: La Moncloa
+
+es: El último paso. El recorrido termina cuando el Congreso elige presidente y el nuevo Gobierno toma posesión.
+en: The last step. The journey ends when Congress elects a prime minister and the new government takes office.
+
+# ───── Pie de página ─────
+
+es: <b>De las urnas a la Moncloa</b> · Guillermo Astiaso, 2026.
+en: <b>From the ballot box to La Moncloa</b> · Guillermo Astiaso, 2026.
+
+es: Código con licencia [MIT](https://github.com/gastiaso/de-las-urnas-a-la-moncloa/blob/main/LICENSE); textos con licencia [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es). Tipografías Courier Prime y Libre Franklin (licencia OFL); mapa de hexágonos generado a partir de los límites provinciales del IGN (CC BY 4.0).
+en: Code licensed under [MIT](https://github.com/gastiaso/de-las-urnas-a-la-moncloa/blob/main/LICENSE); texts under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.en). Courier Prime and Libre Franklin typefaces (OFL licence); hexagon map generated from the provincial boundaries of Spain's National Geographic Institute, the IGN (CC BY 4.0).
+
+es: Sin cookies, sin analítica y sin peticiones a otros servidores. [Código en GitHub](https://github.com/gastiaso/de-las-urnas-a-la-moncloa).
+en: No cookies, no analytics and no requests to other servers. [Code on GitHub](https://github.com/gastiaso/de-las-urnas-a-la-moncloa). ¶ This English edition is adapted from the [Spanish original](../), not just translated: it adds context for readers outside Spain.
+
+# ───── Barra de arriba y salida ─────
+
+es: Ir a un paso
+en: Go to a step
+
+# ───── De las urnas a la Moncloa ─────
+
+es: Idioma
+en: Language
+
+# ───── 3 · Dónde votas ─────
+
+es: Habitantes por escaño en cada circunscripción, de menos a más
+en: Inhabitants per seat in each constituency, from fewest to most
+
+# ───── 11 · Votos y escaños ─────
+
+es: Porcentaje de votos y de escaños de cada partido
+en: Share of votes and of seats for each party
+
+# ───── Cajones que solo existen en la edición inglesa ─────
+
++cajón antes de: Por qué unas provincias tienen más escaños
+título: Spain in brief
+p: Spain is a parliamentary monarchy. The King is head of state, but the country is run by a government led by a prime minister, whose formal title is President of the Government (presidente del Gobierno).
+p: Voters do not elect the prime minister. They elect a parliament, the Cortes Generales, and its lower house, the Congress of Deputies, chooses the prime minister in a vote called the investiture. That is why the number to watch is seats in Congress: 176 of the 350 is a majority.
+p: The country is divided into 50 provinces, plus the cities of Ceuta and Melilla on the North African coast. Each one is a constituency. The provinces are grouped into 17 autonomous communities, the regions, which have their own parliaments and governments.
+p: La Moncloa is the palace complex in Madrid where the prime minister lives and works. In Spanish politics “la Moncloa” means the government, much as “Downing Street” does in Britain.
+nota: Sources: Constitution, arts. 1.3, 56, 66, 68 and 99. The 17 autonomous communities and the note on La Moncloa are general context added for this English edition.
+
++cajón antes de: Tres maneras de apoyar
+título: Who the parties are
+p: The calculator lists the parties that the polls put in Congress, from left to right as they are drawn in the chamber. Two are the big nationwide parties: the PSOE (Socialists, centre-left) and the PP (Partido Popular, conservative). Vox stands to the right of the PP and is usually described as far right. Frente Amplio (FA) is an alliance of parties to the left of the PSOE, formed for this election.
+p: The rest stand only in their own territories. From Catalonia: ERC (pro-independence, left-wing) and Junts (pro-independence, centre-right). From the Basque Country: the PNV (Basque nationalist, centre-right) and EH Bildu (pro-independence, left-wing). UPN is a conservative regionalist party from Navarre; the BNG is Galician nationalist and left-wing; Coalición Canaria (CC) is a Canary Islands nationalist party; Adelante Andalucía (AA) is a left-wing Andalusian party.
+nota: General context added for this English edition; it is not in the Spanish original. The labels are the usual shorthand, not the parties' own descriptions.

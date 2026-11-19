@@ -236,3 +236,11 @@ main{position:relative;z-index:1}
 @media (max-height:640px){.tapa h2,.tapa ol{display:none}}
 @media (prefers-reduced-motion:reduce){.escenario.mueve,.tapa{transition:none}}
 .grid button i.pt{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:4px;border:1px solid #fff;vertical-align:0}
+/* idiomas: la lista está en la salida y se repite en la portada y en el menú de pasos */
+.idiomas{display:flex;flex-wrap:wrap;gap:0 14px;margin:12px 0 0;font-size:13px}
+.idiomas a{display:inline-flex;align-items:center;min-height:32px;color:var(--sec);text-decoration:none}
+.idiomas a:hover{text-decoration:underline}
+.idiomas a[aria-current]{color:var(--ink);font-weight:700;text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:4px}
+.tapa .idiomas{justify-content:center;gap:0 12px;margin:6px 0 -6px;font-size:12.5px}
+.tapa .idiomas a{min-height:26px}
+#indice .idiomas{margin:10px 0 0;padding-top:4px;border-top:1.5px solid var(--ink)}

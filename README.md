@@ -126,6 +126,7 @@ Las calculadoras de pactos se pueden compartir: la combinación va en la direcci
 | `js/sitio.js` | El recorrido: escenario de los 350 hexágonos, tu voto, portada de sobres, menú y navegación |
 | `js/contenido.js` | Juegos y calculadoras de cada paso (glosario, provincia, apuesta, Senado, pactos, resultados) |
 | `js/datos.js` | Escaños y población por provincia, partidos del ejemplo, escaños de la calculadora, colores de los partidos y glosario |
+| `js/textos.js` | Los textos que escribe el JavaScript (rótulos, frases de «Tu voto», calculadoras, resultados), en castellano |
 | `js/dhondt.js` | Reparto D'Hondt con la barrera del 3 % y cálculo del último escaño |
 | `js/mapa.js` y `js/hemiciclo.js` | Geometría del mapa de hexágonos y de los 350 asientos del hemiciclo |
 | `js/fichas.js` | Iconos de cada paso |
@@ -135,8 +136,27 @@ Las calculadoras de pactos se pueden compartir: la combinación va en la direcci
 | `img/` | Imagen para compartir (1200 × 630), favicon e icono |
 | `datos/prueba_23J.csv` | Votos del 23J por circunscripción, para probar la fase 2 |
 | `docs/guion.md` | Todo el texto del sitio con la fuente de cada cajón (generado) |
+| `idiomas/` y `js/idiomas/` | Las traducciones: las frases de la página (`xx.txt`) y los textos del JavaScript (`xx.js`) de cada idioma |
+| `ca/`, `va/`, `gl/`, `eu/` y `en/` | La página en catalán, valenciano, gallego, euskera e inglés (generadas) |
 
-Tras cambiar un texto en `index.html`, hay que regenerar el guion: `python3 herramientas/guion.py > docs/guion.md`.
+Tras cambiar un texto en `index.html`, hay que regenerar el guion (`python3 herramientas/guion.py > docs/guion.md`) y las páginas de los demás idiomas.
+
+### Idiomas
+
+El sitio se escribe en castellano (`index.html` y `js/textos.js`). Las versiones en catalán, valenciano, gallego, euskera e inglés se generan a partir de él:
+
+```bash
+python3 herramientas/idiomas.py            # genera ca/, va/, gl/, eu/ y en/ y dice qué frases faltan por traducir
+python3 herramientas/idiomas.py --comprueba  # no escribe nada: avisa si alguna página está sin regenerar
+node herramientas/prueba_idiomas.mjs       # comprueba que a los textos del JavaScript de cada idioma no les falta nada
+```
+
+- `idiomas/xx.txt` lleva cada frase de la página en castellano y, debajo, su traducción. Si una frase de `index.html` cambia o es nueva, el generador la apunta al final de cada archivo para traducirla y, mientras tanto, la página de ese idioma la muestra en castellano.
+- `js/idiomas/xx.js` lleva los textos del JavaScript, con las mismas entradas que `js/textos.js`, y los nombres de las provincias en ese idioma.
+- La edición inglesa no es una traducción literal: está adaptada para quien lee desde fuera de España. Explica lo que aquí se da por sabido, no habla de «tu voto» sino de un voto que se sigue, y añade dos cajones propios («Spain in brief» y «Who the parties are»).
+- La etiqueta y la fuente que se pasan a `herramientas/resultados.py` llegan a la página en castellano: para que salgan traducidas hay que añadirlas a la lista `dato` de cada `js/idiomas/xx.js`.
+- La imagen para compartir (`img/compartir.jpg`) es la misma en todos los idiomas y lleva el título en castellano.
+- Para quitar o añadir un idioma hay que tocar tres sitios: la lista `LENGUAS` de `herramientas/idiomas.py`, la lista `<nav class="idiomas">` de `index.html` y sus enlaces `hreflang` de la cabecera.
 
 ## Limitaciones
 

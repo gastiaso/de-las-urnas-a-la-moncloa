@@ -37,7 +37,7 @@ html = re.sub(r'<details class="formatos">.*?</details>', '', html, flags=re.S) 
 html = re.sub(r'<li class="fase">(.*?)</li>', r'<li>\1</li>', html)
 html = re.sub(r'<li class="hito[^"]*"><button[^>]*>(.*?)</button><span class="que">(.*?)</span><span class="tip"[^>]*>(.*?) <small>(.*?)</small></span></li>', r'<li>\1 — \2: \3 (\4)</li>', html)
 L = Lector(); L.feed(html)
-glos = json.loads(subprocess.run(['node', '--input-type=module', '-e', "import {GLOS} from './js/datos.js'; console.log(JSON.stringify(GLOS))"], capture_output=True, text=True, check=True).stdout)
+glos = json.loads(subprocess.run(['node', '--input-type=module', '-e', "import {GLOS} from './js/datos.js'; console.log(JSON.stringify(GLOS))"], capture_output=True, text=True, encoding='utf-8', check=True).stdout)
 o = ['# Guion · De las urnas a la Moncloa', '',
      'Generado desde `index.html` con `herramientas/guion.py`: es, palabra por palabra, el texto que lleva el sitio.',
      'Cada cajón «saber más» lleva al final sus fuentes. Los textos que dependen de los datos (provincia elegida, resultados) se rellenan solos y aquí aparecen vacíos.', '']
