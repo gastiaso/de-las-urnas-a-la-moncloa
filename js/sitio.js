@@ -1,7 +1,7 @@
 // De las urnas a la Moncloa: el texto a un lado y, al otro, un escenario con los 350 escaños del Congreso, que cambian
 // de forma en cada paso (mapa, reparto de tu provincia, habitantes por escaño, Senado, hemiciclo, pactos).
 // Tu voto es el hexágono dorado: se sigue de principio a fin. Al entrar, una montaña de sobres se convierte en el mapa.
-import { PROV, PART, PORRA, COLOR_PARTIDO } from './datos.js';
+import { PROV, PART, CONGRESO_2023, COLOR_PARTIDO } from './datos.js';
 import { T } from './textos.js';
 import { contenido, FASE2 } from './contenido.js';
 import { dhondt } from './dhondt.js';
@@ -39,7 +39,7 @@ const SOBRE = '<path class="sobre" d="M-1.25 -0.85 H1.25 V0.85 H-1.25 Z"/><path 
 esc.innerHTML = '<p class="rotulo"></p><svg viewBox="-0.52 -0.46 1.04 0.96"><g class="piezas">' +
   piezas.map(() => '<g class="p"><g class="env">' + SOBRE + '</g><path class="hx" d="' + hexD(0, 0, 1, 3) + '"/></g>').join('') +
   '</g><g class="hemi-guia" opacity="0"><path class="raya176" d="M0 ' + (HY - HS * 1.03).toFixed(3) + ' V' + (HY - HS * 0.3).toFixed(3) + '"/><text class="t176" x="0" y="' + (HY - HS * 1.06).toFixed(3) + '">176</text></g>' +
-  '<path class="tuyo" d="' + hexD(0, 0, 1, 3) + '"/></svg><span class="marca" hidden>' + T.tuVoto + '</span><p class="pie-escenario"></p>';
+  '<g class="tuyo"><path d="' + hexD(0, 0, 1, 3) + '"/><circle r=".3"/></g></svg><span class="marca" hidden>' + T.tuVoto + '</span><p class="pie-escenario"></p>';
 document.body.appendChild(esc);
 const svgEl = $('svg', esc), gs = $$('.piezas > .p', esc), rotulo = $('.rotulo', esc), pieEsc = $('.pie-escenario', esc);
 const tuyo = $('.tuyo', esc), marca = $('.marca', esc), guia = $('.hemi-guia', esc);
@@ -104,7 +104,7 @@ function destino(estado) {
     return { x: HEX[q.c][0], y: HEX[q.c][1], r: R0, o: 1, f, b: estado === 'hab' && q.p === p0 };
   };
 }
-const ESTADO = { 0: 'mapaSel', 1: 'mapaSel', 2: 'prov', 3: 'hab', 4: 'senado', 5: 'hemi', 6: 'pacto', 7: 'pacto', 8: 'mapaSel', 9: 'res', 10: 'provRes', 11: 'hemiRes', 12: 'pacto', 13: 'hemiRes', 14: 'mapaSel' };
+const ESTADO = { 0: 'mapaSel', 1: 'mapaSel', 2: 'prov', 3: 'hab', 4: 'senado', 5: 'hemi', 6: 'pacto', 7: 'hemi', 8: 'mapaSel', 9: 'res', 10: 'provRes', 11: 'hemiRes', 12: 'pacto', 13: 'hemiRes', 14: 'mapaSel' };
 let forzado = null;   // 'pila' mientras se ve la portada
 const estadoActual = () => forzado || ESTADO[k] || 'mapaSel';
 
@@ -195,7 +195,7 @@ const G = {
   resetBet() { revelado = null; if (listo && k === 2) aplica(true); },
   reveal(d) { revelado = agrupa(d.order.map(id => PART.find(p => p[0] === id)[2])); if (listo && k === 2) { aplica(true); rotula(); } },
   setSen() {},
-  setPact(estado, partidos) { pacto6 = bloques(estado, partidos || PORRA.partidos, colorVoto); if (listo && (k === 6 || k === 7)) aplica(true, 700); },
+  setPact(estado, partidos) { pacto6 = bloques(estado, partidos || CONGRESO_2023.partidos, colorVoto); if (listo && k === 6) aplica(true, 700); },
   setRes(r) { res = r; if (listo && [9, 11, 13].includes(k)) aplica(true); },
   setProvRes(colores) { provRes = agrupa(colores); if (listo && k === 10) aplica(true); },
   setPact2(estado, partidos) {
@@ -229,13 +229,14 @@ function pintaTuVoto() {
   const sp = $('#provVoto'); if (sp) sp.value = C.st.prov;
   $$('.tuvoto').forEach(t => { const f = frase(+t.dataset.k); t.hidden = !f; t.innerHTML = f ? '<span class="tv-et">' + T.tuVoto + '</span>' + f : ''; });
 }
-/* salida: elegir dónde votas */
+/* salida: elegir dónde votas. Va justo debajo del título, para que se vea sin bajar nada más cerrar la portada. */
 const salida = $('.paso[data-k="0"] .portada');
 const elige = document.createElement('div'); elige.className = 'elige';
-elige.innerHTML = '<label class="sel" for="provVoto">' + T.dondeVotas + '</label><select id="provVoto"></select><p class="nota">' + T.tocaMapa + '</p>';
+elige.innerHTML = '<label class="sel" for="provVoto">' + T.dondeVotas + '</label><select id="provVoto"></select>';
 PROV.forEach((p, i) => { const o = document.createElement('option'); o.value = i; o.textContent = T.provLista(i); $('select', elige).appendChild(o); });
 $('select', elige).addEventListener('change', e => C.eligeProv(+e.target.value));
-salida.appendChild(elige);
+$('h1', salida).after(elige);
+const tocaMapa = document.createElement('p'); tocaMapa.className = 'nota'; tocaMapa.textContent = T.tocaMapa;
 pintaTuVoto();
 
 /* ---------- navegación: menú de pasos, «Siguiente», solo texto ---------- */
@@ -270,7 +271,8 @@ secs.forEach((s, i) => {
   const kk = casilla(secs[i + 1]), b = document.createElement('button'); b.type = 'button'; b.className = 'sig';
   b.textContent = (i === 0 ? T.sigueMiVoto : T.siguiente) + (kk === 14 ? '' : kk + ' · ') + T.titulos[kk];
   b.addEventListener('click', () => irA(kk, true));
-  ($('.cuerpo', s) || $('.portada', s)).appendChild(b);
+  if (i === 0) { elige.after(b); b.after(tocaMapa); }   // en la salida, el botón va con el desplegable
+  else ($('.cuerpo', s) || $('.portada', s)).appendChild(b);
 });
 function lectura(v) {
   document.body.classList.toggle('lectura', v);
@@ -282,6 +284,16 @@ lectura(false);
 $('#saltar').addEventListener('click', e => { e.preventDefault(); if (portada) portada.cierra(); lectura(true); $('h1', secs[0]).focus(); });
 const st = $('#soloTexto'); if (st) st.addEventListener('click', () => lectura(!enLectura()));
 ['#volver', '#volver2'].forEach(s => { const b = $(s); if (b) b.addEventListener('click', () => irA(0, true)); });
+// Compartir el sitio: la hoja de compartir del teléfono si la hay; si no, se copia la dirección. El texto es la descripción de la página.
+$$('.compartir-sitio').forEach(b => b.addEventListener('click', async () => {
+  const rot = b.textContent, desc = $('meta[name="description"]');
+  const d = { title: document.title, text: desc ? desc.content : '', url: location.origin + location.pathname };
+  const dice = t => { b.textContent = t; anuncia(t); setTimeout(() => { b.textContent = rot; }, 2500); };
+  try {
+    if (navigator.share) await navigator.share(d);
+    else { await navigator.clipboard.writeText(d.url); dice(T.copiado.replace(/\.$/, '')); }
+  } catch (e) { if (!e || e.name !== 'AbortError') dice(T.copiaDireccion); }
+}));
 
 /* qué paso se está leyendo: el último cuyo principio ha pasado de la mitad de la pantalla */
 function mira(forzar) {

@@ -74,7 +74,6 @@ const bai = n => n === 1 ? 'aldeko boto bat' : 'aldeko ' + n + ' boto';
 const kontra = n => n === 1 ? 'kontrako bat' : 'kontrako ' + n;
 const boto = n => n === 1 ? 'boto bat' : miles(n) + ' boto';
 const falta = n => bai(n) + (n === 1 ? ' falta da' : ' falta dira');
-const PORRA = '<a href="https://gastiaso.github.io/porra-electoral/">Porra Electoral</a>';
 const HIL = ['urtarril', 'otsail', 'martxo', 'apiril', 'maiatz', 'ekain', 'uztail', 'abuztu', 'irail', 'urri', 'azaro', 'abendu'];
 
 // Los textos que vienen dentro de js/resultados.js (etiqueta, fuente e hitos). Se buscan sin mirar la mayúscula inicial.
@@ -145,8 +144,8 @@ export const textos = {
     censo: ['Hautesle-errolda', 'Bozkatu dezaketenen zerrenda ofiziala. Bozkatzeko, zerrenda horretan inskribatuta egon behar da.'],
     mesael: ['Hauteskunde-mahaia', 'Hautetsontziaz arduratzen den taldea: mahaiburu bat eta bi mahaikide, mahai horretako hautesleen artean zozketaz aukeratuak.'],
     junta: ['Hauteskunde-batzordea', 'Hauteskundeak garbiak izan daitezen zaintzen duen eta kontaketa ofiziala egiten duen organoa. Zentral bat dago, probintzia bakoitzeko bat eta eskualdeko beste batzuk.'],
-    lista: ['Zerrenda', 'Alderdi batek probintzia batean aurkezten duen hautagaitza: banatzen diren eserlekuak adina izen, ordena finko batean.'],
-    suplente: ['Ordezkoa', 'Zerrendan titularren atzetik doana; haietako batek eserlekua uzten badu sartzen da.'],
+    lista: ['Zerrenda', 'Alderdi batek probintzia batean aurkezten duen hautagaitza: banatzen diren eserlekuak adina hautagai, ordena finko batean, eta gehienez hamar ordezko.'],
+    suplente: ['Ordezkoa', 'Zerrendaren amaieran doana, hautagaien atzetik. Eserleku bat libre geratzen bada eta aurretik hautagairik geratzen ez bada bakarrik sartzen da. Senatuan, hautagai bakoitzak bi ditu.'],
     quorum: ['Quoruma', 'Bozketa batek balio izateko gutxienez bertan egon behar dutenak: Ganberaren erdia baino gehiago.'],
     organica: ['Lege organikoa', 'Garrantzi handieneko gaiei buruzko legea, hala nola oinarrizko eskubideei edo hauteskunde-arauei buruzkoa. Kongresuaren gehiengo osoa behar du.'],
     decretoley: ['Lege-dekretua', 'Gobernuak presako kasuetan onartzen duen araua. Kongresuak hogeita hamar egun ditu hari eusteko edo bertan behera uzteko.'],
@@ -154,8 +153,8 @@ export const textos = {
     veto: ['Senatuaren betoa', 'Senatuak Kongresutik datorren lege bati ematen dion ezezkoa. Kongresuak kendu dezake.'],
     permanente: ['Diputazio Iraunkorra', 'Ganberak deseginda daudenean edo biltzen ez direnean guardian geratzen den diputatu talde txikia (eta senatarien beste bat).']
   },
-  // La fecha de corte, ya en el caso que pide porraNota («… arteko»): «2026ko azaroaren 8ra». El sufijo depende del día y del año.
-  fecha: f => { const x = parteFecha(f); return x ? x.a + (kons(x.a) ? 'eko ' : 'ko ') + HIL[x.m - 1] + 'aren ' + x.d + (kons(x.d) ? 'era' : 'ra') : f; },
+  // La fecha de las elecciones, ya en el caso que pide calcNota («… hauteskundeetan»): «2023ko uztailaren 23ko». El sufijo depende del día y del año.
+  fecha: f => { const x = parteFecha(f); return x ? x.a + (kons(x.a) ? 'eko ' : 'ko ') + HIL[x.m - 1] + 'aren ' + x.d + (kons(x.d) ? 'eko' : 'ko') : f; },
   dato: s => DATUAK[txikiz(String(s))] || s,
 
   /* el escenario */
@@ -170,6 +169,7 @@ export const textos = {
     3: 'Ilunago: biztanle gutxiago eserleku bakoitzeko',
     4: 'Senatua: 209 hautetsi, lau probintzia bakoitzeko',
     5: '350etik 176: gehiengo osoa',
+    7: 'Presidentea aukeratuko duen Kongresua<small>Bi hilabeteko epea lehen bozketarekin hasten da.</small>',
     8: '350 eserleku',
     9: 'Eserleku bakoitza, irabazi duenaren kolorez',
     10: nor(i) + ': ' + eserleku(n),
@@ -203,8 +203,8 @@ export const textos = {
         if (ISLAS[i]) return senatua + non(i) + ', zure uhartearen araberakoa da: ' + ISLAS[i] + '.';
         if (uno) return senatua + nor(i) + ' diputatu bat izatetik <b>bi</b> senatari izatera igarotzen da.';
         return senatua + 'Mapan, ' + nor(i) + ' ' + n + ' diputatu izatetik <b>lau</b> senatari izatera igarotzen da, Penintsulako beste edozein probintzia bezala.';
-      case 5: return (uno ? nongo(i) + ' diputatua beste ' + (350 - n) + ' diputatuekin batera esertzen da.' : nongo(i) + ' ' + n + ' diputatuak beste ' + (350 - n) + ' diputatuekin batera esertzen dira.') + ' Hemizikloan, zure botoa eserleku horietako bat da.';
-      case 6: return (uno ? nongo(i) + ' diputatuak bere alderdiarekin bozkatzen du.' : nongo(i) + ' ' + n + ' diputatuek nork bere alderdiarekin bozkatzen dute.') + ' Zure botoa aparte geratzen da, hemizikloaren azpian: ' + BLOKEA;
+      case 5: return (uno ? nongo(i) + ' diputatua beste ' + (350 - n) + ' diputatuekin batera esertzen da.' : nongo(i) + ' ' + n + ' diputatuak beste ' + (350 - n) + ' diputatuekin batera esertzen dira.') + (uno ? ' Zure botoak eserleku horretarako balio du zure alderdia han bozkatuena bada soilik.' : ' Zure botoak eserleku horietako baterako balio du zure alderdiak han eserlekurik lortzen badu soilik.');
+      case 6: return (uno ? nongo(i) + ' diputatuak bere alderdiarekin bozkatu ohi du.' : nongo(i) + ' ' + n + ' diputatuek beren alderdiarekin bozkatu ohi dute.') + ' Zure botoa aparte geratzen da, hemizikloaren azpian: ' + BLOKEA;
       case 7: return 'Azaroaren 29ko gauean, zure boto-papera ' + nongo(i) + ' zure mahaian zenbatzen da, jendaurrean eta ozen.';
       case 8: return 'Hori da zure boto-paperaren bidea ' + non(i) + ': hautetsontzitik Moncloara.';
       case 10: return primero ? 'Hexagono urrekara ' + non(i) + ' banatu zen lehen eserlekua da: <b>' + primero + '</b> alderdiarentzat izan zen.' : '';
@@ -266,6 +266,7 @@ export const textos = {
   copiar: 'Kopiatu konbinazio honen esteka',
   copiado: 'Esteka kopiatuta.',
   copiaManual: 'Kopiatu nabigatzaileko helbidea: konbinazioa barruan darama.',
+  copiaDireccion: 'Kopiatu nabigatzaileko helbidea',
   ariaPartido: (nombre, n, voto) => nombre + ', ' + eserleku(n) + ', botoa: ' + voto + '. Ukitu aldatzeko',
   cuentaSi: n => 'Bai: ' + n,
   cuentaAbs: n => 'Abst.: ' + n,
@@ -274,7 +275,7 @@ export const textos = {
   segunda: (si, no) => (si > no ? 'Inbestidura lortzen du: ' : 'Ez du lortzen: ') + bai(si) + ' eta ' + kontra(no) + '.',
   anuncioPacto: (si, abs, no, primera, segunda) => 'Aldeko ' + si + ', abstentzioa ' + abs + ', kontrako ' + no + '. Lehen bozketa: ' + primera + ' Bigarrena: ' + segunda,
   // corte: la fecha tal como la da fecha(), en adlativo («2026ko azaroaren 8ra»)
-  porraNota: corte => corte + ' arteko azken inkestetatik kalkulatutako eserlekuak (' + PORRA + '). Estimazio bat da, ez emaitza bat.',
+  calcNota: data => data + ' hauteskundeetan alderdi bakoitzak lortutako eserlekuak, azaroaren 29aren aurreko azkenak. Ez da inkesta bat, ezta azaroaren 29ko emaitza bat ere.',
 
   /* fase 2: los resultados */
   avisoPrueba: etiqueta => 'Aurrebista, probako datuekin: ' + etiqueta + '. Ez dira azaroaren 29ko emaitzak.',

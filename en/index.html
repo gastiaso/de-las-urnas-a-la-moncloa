@@ -72,11 +72,12 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <article class="tarjeta" aria-labelledby="tit1">
 <div class="cuerpo">
 <h2 id="tit1">1 · What's being elected</h2>
-<p>On Sunday 29 November, Spain elects its Congress of Deputies, the lower house of parliament and the one that chooses the prime minister. It has 350 <button type="button" class="glos" data-g="escano">seats</button> (escaños, in Spanish), shared out by <button type="button" class="glos" data-g="circ">constituency</button>: in practice, by province.</p>
-<p>Voters do not choose the prime minister directly, and there is no single national count: there are 52 separate contests.</p>
+<p>On Sunday 29 November, Spain does not elect a prime minister: it elects the 350 members of the Congress of Deputies, the lower house of parliament, and they choose the prime minister. Their <button type="button" class="glos" data-g="escano">seats</button> (escaños, in Spanish) are shared out by <button type="button" class="glos" data-g="circ">constituency</button>: in practice, by province.</p>
+<p>There is no single national count: there are 52 separate contests.</p>
 <label class="sel" for="prov">Choose a province</label>
 <select id="prov" class="selProv"></select>
 <p id="provTxt" aria-live="polite"></p>
+<p class="nota solo-js">On the map, each hexagon is a seat: provinces grow or shrink according to the seats they elect, inside the outline of Spain. The Canary Islands are at the bottom left.</p>
 <h3>More detail</h3>
 <details><summary>Spain in brief</summary>
 <p>Spain is a parliamentary monarchy. The King is head of state, but the country is run by a government led by a prime minister, whose formal title is President of the Government (presidente del Gobierno).</p>
@@ -92,10 +93,10 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <p class="nota">Sources: LOREG (the general electoral law, Organic Law 5/1985), art. 162; Royal Decree 806/2026, annex; Royal Decree 1117/2025, annex. The figure of 102 is 50 provinces times two, plus Ceuta and Melilla. The quota (197,355) is an own calculation, and it reproduces the decree's allocation exactly.</p>
 </details>
 <details><summary>Who can vote</summary>
-<p>Spanish citizens aged 18 or over who are on the <button type="button" class="glos" data-g="censo">electoral register</button>. The only people who lose the right are those sentenced to that specific penalty by a final court ruling, for as long as it lasts.</p>
+<p>Spanish citizens aged 18 or over who are on the <button type="button" class="glos" data-g="censo">electoral register</button>. The law takes the vote away only from those sentenced to lose it by a final court ruling, and the current Criminal Code no longer provides for that penalty.</p>
 <p>Foreign residents cannot vote in a general election, whatever their nationality.</p>
-<p>Voting is in person, at the polling station each voter is assigned to, and only once. Voters identify themselves with their national identity card (the DNI), a passport or a photo driving licence.</p>
-<p class="nota">Sources: LOREG, arts. 2, 3, 4 and 85.</p>
+<p>Voting is in person, at the polling station each voter is assigned to, and only once. Voters identify themselves with their national identity card (the DNI), a passport or a photo driving licence. On 29 November the identity card on a phone (the MiDNI app) is also accepted; the driving licence in the miDGT app is not.</p>
+<p class="nota">Sources: LOREG, arts. 2, 3, 4 and 85; Criminal Code, art. 39; Central Electoral Board, Decision 334/2026.</p>
 </details>
 <details><summary>Why 29 November</summary>
 <p>The prime minister called the election early: the decree dissolving parliament was published in the official state gazette (the BOE) on 6 October. The law sets polling day 54 days after an election is called, which falls on Sunday 29 November.</p>
@@ -105,7 +106,7 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 </details>
 <details><summary>What voting looks like</summary>
 <p>Polling stations are open from 9am to 8pm, without a break. Each voter casts two votes: a white ballot paper for Congress and a sepia one for the Senate, each in its own envelope.</p>
-<p>Using the booth is optional. At the table, the chair reads out the voter's name, says “vota” (“votes”) and the envelope goes into the ballot box.</p>
+<p>Using the booth is optional. At the table, voters give their name and show their ID; the chair repeats the name aloud, says “vota” (“votes”) and the voter drops the envelope into the ballot box.</p>
 <p>The vote is secret: nobody can be made to say how they voted. Voters who cannot read or handle the ballot papers may be helped by someone they trust.</p>
 <p class="nota">Sources: LOREG, arts. 5, 84, 86 and 87; Royal Decree 605/1999, art. 4.</p>
 </details>
@@ -129,7 +130,6 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <p>Lists alternate women and men. Any adult Spanish citizen with the right to vote can stand, except holders of certain posts, such as serving judges, members of the armed forces and police officers.</p>
 <p class="nota">Sources: LOREG, arts. 6, 44 bis, 46 and 96.</p>
 </details>
-<p class="nota">On the map, each hexagon is a seat: provinces grow or shrink according to the seats they elect, inside the outline of Spain. The Canary Islands are in the box.</p>
 </div>
 </article>
 </section>
@@ -145,7 +145,7 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <button type="button" class="pill" id="apostar">Bet</button>
 <div id="betRes" hidden>
 <p class="res" id="betHit"></p>
-<p style="font-size:14px">Party E falls short of the 3% <button type="button" class="glos" data-g="barrera">threshold</button> and is left out of the share-out.</p>
+<p style="font-size:14px">Party E falls short of the 3% <button type="button" class="glos" data-g="barrera">threshold</button> and is left out. Without it, the party would not have won a seat either, not even in Madrid: what holds small parties back is that there are few seats.</p>
 <button type="button" class="pill sec" id="reapostar">Bet again</button>
 </div>
 <h3>More detail</h3>
@@ -165,8 +165,8 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 </details>
 <details><summary>The 3% threshold</summary>
 <p>Before the share-out, parties with less than 3% of the valid votes in the province are set aside. Their votes are not passed on to anyone: they simply do not enter the table.</p>
-<p>The threshold applies province by province. There is no national threshold.</p>
-<p class="nota">Source: LOREG, art. 163.</p>
+<p>The threshold applies province by province. There is no national threshold. In practice it can only matter where many seats are shared out, such as Madrid or Barcelona: everywhere else, winning a seat takes a good deal more than 3%.</p>
+<p class="nota">Source: LOREG, art. 163. Where the threshold can matter is an own calculation based on the rule.</p>
 </details>
 <details><summary>Blank votes, spoilt votes and abstention</summary>
 <p>A <button type="button" class="glos" data-g="blanco">blank vote</button> is an empty envelope. It is valid: it goes to no party, but it counts in the total and so raises the 3% bar slightly.</p>
@@ -204,8 +204,9 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <p id="hab" aria-live="polite"></p>
 <h3>More detail</h3>
 <details><summary>How many inhabitants stand behind each seat</summary>
-<p>Seats are shared out by population, but with a minimum of two per province. That is why far fewer inhabitants are needed to elect a deputy in the small provinces.</p>
+<p>Seats are shared out by population, but with a minimum of two per province. That is why each deputy from a small province represents far fewer inhabitants.</p>
 <p>In this election, Soria has one seat for every 45,117 inhabitants; Madrid, one for every 187,817: four times as many.</p>
+<p>That does not mean a vote is worth more in Soria. Only two seats are shared out there, and votes for anyone outside the top two elect nobody. In Madrid, with 38, almost every vote goes to a party that wins at least one seat.</p>
 <p>The count is of inhabitants, not voters: it includes children and foreign residents, who do not vote in this election.</p>
 <ol class="barras" id="barrasHab" aria-label="Inhabitants per seat in each constituency, from fewest to most"></ol>
 <p class="nota">Sources: Royal Decree 1117/2025, annex (municipal register at 1 January 2025); Royal Decree 806/2026, annex; LOREG, arts. 2 and 162. Inhabitants per seat: own calculation, population divided by seats.</p>
@@ -240,8 +241,9 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <h3>More detail</h3>
 <details><summary>The key to constitutional reform</summary>
 <p>Amending the Constitution takes three-fifths of Congress and three-fifths of the Senate. If the Senate falls short of three-fifths there is another route: it approves the change by an absolute majority and Congress approves it by two-thirds. Without an absolute majority in the Senate, the reform fails.</p>
-<p>The most far-reaching reforms, those touching the preliminary title, fundamental rights or the Crown, require two-thirds of each chamber, the dissolution of parliament, ratification by the new chambers, again by two-thirds, and a referendum.</p>
-<p>In practice, whoever holds more than half the Senate can block any reform, and whoever holds more than a third can block the most far-reaching ones. In addition, a tenth of senators can demand that any reform be put to a referendum.</p>
+<p>The most far-reaching reforms, those touching the preliminary title, fundamental rights or the Crown, require two-thirds of each chamber, the dissolution of parliament, the new chambers ratifying the decision and approving the text by two-thirds, and a referendum.</p>
+<p>In practice, whoever holds half the Senate or more can block any reform, and whoever holds more than a third can block the most far-reaching ones. In addition, for the other reforms, a tenth of senators or of deputies can demand a referendum.</p>
+<p>These figures are worked out on all senators, including those appointed by the regional parliaments, not only on the 209 who are elected.</p>
 <p class="nota">Sources: Constitution, arts. 167 and 168. The blocking figures are an own calculation from those majorities.</p>
 </details>
 <details><summary>Appointments that go through the Senate</summary>
@@ -278,8 +280,9 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 </details>
 <details><summary>The senators nobody votes for</summary>
 <p>Besides those elected at the ballot box, each regional parliament appoints one senator, plus another for every million inhabitants of its autonomous community. These are the <button type="button" class="glos" data-g="designacion">appointed senators</button>.</p>
+<p>They are not elected on 29 November, but they count the same as the rest: Senate majorities are calculated on all senators, not only on the 209 who come out of the ballot box.</p>
 <p>If a senator elected at the ballot box gives up the seat, their substitute takes it.</p>
-<p class="nota">Sources: Constitution, art. 69.5; LOREG, art. 166.</p>
+<p class="nota">Sources: Constitution, art. 69.5; LOREG, arts. 165.4 and 166.2.</p>
 </details>
 </div>
 </article>
@@ -290,7 +293,7 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <div class="cuerpo">
 <h2 id="tit5">5 · Majorities</h2>
 <p>To elect a prime minister at the first attempt, a candidate needs an <button type="button" class="glos" data-g="absoluta">absolute majority</button>: 176 yes votes out of 350. Failing that, 48 hours later a <button type="button" class="glos" data-g="simple">simple majority</button> is enough: more yes votes than no votes.</p>
-<p class="nota">In terracotta, the 176 seats that mark half plus one.</p>
+<p class="nota">In terracotta, the 176 seats needed to pass the halfway mark.</p>
 <h3>More detail</h3>
 <details><summary>Why abstaining weighs differently</summary>
 <p>In the first vote only the yes votes count: 176 are needed, and abstaining does not help.</p>
@@ -299,9 +302,9 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 </details>
 <details><summary>Other majorities</summary>
 <p>An absolute majority (176) is also needed to pass organic laws and a motion of no confidence.</p>
-<p>Three-fifths (210): amending the Constitution and nominating judges of the Constitutional Court.</p>
+<p>Three-fifths (210): amending the Constitution, nominating judges of the Constitutional Court and electing members of the General Council of the Judiciary.</p>
 <p>Two-thirds (234): the most far-reaching constitutional reforms.</p>
-<p class="nota">Sources: Constitution, arts. 81, 99, 113, 159, 167 and 168. The figures 210 and 234 are calculated on 350 deputies.</p>
+<p class="nota">Sources: Constitution, arts. 81, 99, 113, 159, 167 and 168; Organic Law on the Judiciary, art. 567.2. The figures 210 and 234 are calculated on 350 deputies.</p>
 </details>
 <details><summary>Day to day: quorum and simple majority</summary>
 <p>For a vote to be valid, more than half the chamber must be present: that is the <button type="button" class="glos" data-g="quorum">quorum</button>. Ordinary decisions pass with more votes in favour than against among those present.</p>
@@ -331,19 +334,25 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <article class="tarjeta" aria-labelledby="tit6">
 <div class="cuerpo">
 <h2 id="tit6">6 · Deals</h2>
-<p>If no party reaches 176 on its own, it is time to negotiate. Tap each party to change how it votes in the <button type="button" class="glos" data-g="investidura">investiture</button>, the vote that makes a prime minister: no, yes or <button type="button" class="glos" data-g="abstencion">abstain</button>.</p>
+<p>If no party reaches 176 on its own, a deal is needed. The prime minister is whoever gathers more yes votes than no votes, whether or not they come from the party with the most votes.</p>
+<p>Tap each party to change how it votes in the <button type="button" class="glos" data-g="investidura">investiture</button>, the vote that makes a prime minister: no, yes or <button type="button" class="glos" data-g="abstencion">abstain</button>. Each combination is the investiture of one particular candidate: whose is up to you.</p>
+<p class="nota" id="calcNota"></p>
 <div class="calc" id="calc6"></div>
-<p class="nota" id="porraNota"></p>
 <h3>More detail</h3>
 <details><summary>Who the parties are</summary>
-<p>The calculator lists the parties that the polls put in Congress, from left to right as they are drawn in the chamber. The two big nationwide parties are the Socialists (PSOE), on the centre-left, and the conservative People's Party (PP). Vox is a hard-right party. Frente Amplio (FA) is a left-wing alliance built around Sumar, the junior partner in the outgoing coalition government.</p>
-<p>The rest stand only in their own territories. From Catalonia: Esquerra (ERC), left-wing Catalan separatists, and Junts, hardline Catalan separatists on the centre-right. From the Basque Country: the Basque Nationalist Party (PNV), moderate Basque nationalists on the centre-right, and EH Bildu, left-wing Basque separatists. UPN is a conservative regionalist party from Navarre; the BNG are left-wing Galician nationalists; Coalición Canaria (CC) is a regionalist party from the Canary Islands; Adelante Andalucía (AA) is a left-wing Andalusian party.</p>
+<p>The calculator lists the parties that won seats at the 2023 election, from left to right as they are drawn in the chamber. The two big nationwide parties are the Socialists (PSOE), on the centre-left, and the conservative People's Party (PP). Vox is a hard-right party. Sumar is a left-wing alliance, the junior partner in the outgoing coalition government.</p>
+<p>The rest stand only in their own territories. From Catalonia: Esquerra (ERC), left-wing Catalan separatists, and Junts, hardline Catalan separatists on the centre-right. From the Basque Country: the Basque Nationalist Party (PNV), moderate Basque nationalists on the centre-right, and EH Bildu, left-wing Basque separatists. UPN is a conservative regionalist party from Navarre; the BNG are left-wing Galician nationalists; Coalición Canaria (CC) is a regionalist party from the Canary Islands.</p>
 <p class="nota">General context added for this English edition; it is not in the Spanish original. The labels are the shorthand of the English-language press, not the parties' own descriptions.</p>
 </details>
-<details><summary>Three ways of lending support</summary>
-<p>A party can help a candidate in three ways. By joining the government: that is a coalition. By voting yes without joining the government. Or by abstaining, so that the second vote is enough.</p>
-<p>What is asked for in return is not in any law: it is political negotiation.</p>
+<details><summary>How a candidate can be backed</summary>
+<p>A party can help a candidate with its vote: by voting yes, or by abstaining so that the second vote is enough. And it can go further: joining the government (a coalition) or staying outside and agreeing its support, for the whole parliamentary term or law by law.</p>
+<p>The investiture only opens the door: after that, every law and every budget needs its own majority. What is asked for in return is not in any law: it is political negotiation.</p>
 <p class="nota">Own explanation. The majorities are in art. 99 of the Constitution.</p>
+</details>
+<details><summary>Why whole parties move together</summary>
+<p>The calculator moves whole parties because deputies almost always vote as their party decides: this is party discipline.</p>
+<p>It is not a legal obligation. The Constitution says deputies and senators are not bound by any compulsory mandate: nobody can legally force them to vote one way or another.</p>
+<p class="nota">Source: Constitution, art. 67.2. The point about party discipline is an own explanation.</p>
 </details>
 <details><summary>How the investiture vote is held</summary>
 <p>One by one and out loud. Each deputy is called in alphabetical order of first surname, starting from one drawn by lot, and answers “sí”, “no” or “abstención”. Members of the government who are deputies, and the Bureau, vote last.</p>
@@ -357,13 +366,15 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <p class="nota">Sources: Constitution, art. 99; LOREG, art. 42 and seventh additional provision (added by Organic Law 2/2016); Royal Decrees 184/2016 and 551/2019.</p>
 </details>
 <details><summary>Where these seat numbers come from</summary>
-<p>They are not results: they are seats projected from the latest polls by <a href="https://gastiaso.github.io/porra-electoral/">Porra Electoral</a> (in Spanish), which pools the published polls and simulates the share-out province by province. On 30 November they will be replaced by the real seats.</p>
-<p class="nota">Source: <a href="https://gastiaso.github.io/porra-electoral/">Porra Electoral</a>.</p>
+<p>They are the seats each party won at the last general election, held on 23 July 2023. They are neither a poll nor an estimate.</p>
+<p>With them, the investiture of November 2023 succeeded at the first attempt: 179 yes votes and 171 no votes. Try to repeat it, or look for other combinations.</p>
+<p>The seats from the 29 November election will be in step 12 once there are results.</p>
+<p class="nota">Sources: Central Electoral Board, results of the election of 23 July 2023 (official gazette, BOE, of 1 September 2023; the PSOE's 121 seats include the 19 of its Catalan sister party, the PSC); Congress Official Record (Diario de Sesiones), plenary sitting no. 8, 16 November 2023.</p>
 </details>
-<details><summary>Why the calculator carries a date</summary>
-<p>Spanish law bans publishing or disseminating election polls in the five days before polling day: for this election, from 24 to 28 November. That is why the estimate in this calculator was frozen beforehand and carries the date of the last poll it includes.</p>
-<p>The body that checks that polls comply with the law is the Central Electoral Board.</p>
-<p class="nota">Source: LOREG, art. 69. 24 to 28 November is an own count of the five days.</p>
+<details><summary>Why there are no polls here</summary>
+<p>Spanish law bans publishing, disseminating or reproducing election polls in the five days before polling day: for the 29 November election, from 24 to 28 November. This calculator uses no polls or estimates: it uses a result, that of 2023.</p>
+<p>The body that checks that the ban is observed is the Central Electoral Board.</p>
+<p class="nota">Source: LOREG, art. 69.7. 24 to 28 November is an own count of the five days.</p>
 </details>
 </div>
 </article>
@@ -379,11 +390,11 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <li class="fase">Before the vote</li>
 <li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h1">Tue 6 Oct</button><span class="que">Parliament is dissolved and the election is called</span><span class="tip" id="h1">Royal Decree 806/2026 is published in the BOE: it dissolves the Congress and Senate elected in July 2023 and sets polling day 54 days later, on Sunday 29 November. <small>Royal Decree 806/2026, arts. 1 and 2; LOREG, art. 42.1.</small></span></li>
 <li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h2">Fri 13 Nov</button><span class="que">The campaign begins</span><span class="tip" id="h2">Fifteen days in which the parties ask for votes with rallies, posters and adverts. It starts at midnight. <small>LOREG, art. 51; Royal Decree 806/2026, art. 4.</small></span></li>
-<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h3">Thu 19 Nov</button><span class="que">Last day to apply for a postal vote</span><span class="tip" id="h3">Voters apply at a post office, in person and with their identity card. The ballot papers then arrive at home and are sent back by registered post, free of charge. <small>LOREG, arts. 72 and 73. Date: own count of the tenth day before.</small></span></li>
-<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h4">21–26 Nov</button><span class="que">Voting at consulates</span><span class="tip" id="h4">Spaniards living abroad can put their vote in a ballot box at their consulate or embassy. If they send it by post, they must do so by the 24th at the latest. <small>LOREG, art. 75. Dates: own count of the deadlines in that article.</small></span></li>
+<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h3">Thu 19 Nov</button><span class="que">Last day to apply for a postal vote</span><span class="tip" id="h3">Voters apply at a post office, in person and with their identity card, or online with a digital certificate. The ballot papers arrive at home. The vote is then handed in at a post office, with proof of identity, by 25 November at the latest, unless the deadline is extended. <small>LOREG, arts. 72 and 73; Central Electoral Board, Instruction 5/2023 and Decision 11/2023. Dates: own count of the tenth day before polling day and of the last day before the third.</small></span></li>
+<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h4">21–26 Nov</button><span class="que">Voting at consulates</span><span class="tip" id="h4">Spaniards living abroad can put their vote in a ballot box at their consulate or embassy. If they send it by post, they must do so by the 24th at the latest, and it must reach the consulate by the 27th. <small>LOREG, art. 75. Dates: own count of the deadlines in that article.</small></span></li>
 <li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h5">24–28 Nov</button><span class="que">No polls may be published</span><span class="tip" id="h5">The law bans publishing, disseminating or reproducing election polls in the five days before polling day. <small>LOREG, art. 69.7.</small></span></li>
 <li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h6">Fri 27 Nov</button><span class="que">The campaign ends</span><span class="tip" id="h6">At midnight the rallies, the advertising and the campaign events stop. <small>LOREG, art. 51; Royal Decree 806/2026, art. 4.</small></span></li>
-<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h7">Sat 28 Nov</button><span class="que">Day of reflection</span><span class="tip" id="h7">On the eve of the vote there can be no advertising or campaign events. <small>LOREG, arts. 51.3 and 53.</small></span></li>
+<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h7">Sat 28 Nov</button><span class="que">Day of reflection</span><span class="tip" id="h7">On the eve of the vote there can be no advertising or campaign events. Nor on polling day itself. <small>LOREG, arts. 51.3 and 53.</small></span></li>
 <li class="fase">Polling day</li>
 <li class="hito clave"><button type="button" class="fecha" aria-expanded="false" aria-controls="h8">Sun 29 Nov</button><span class="que">Voting, from 9am to 8pm</span><span class="tip" id="h8">Polling stations stay open all day. When they close, each one opens its ballot box and counts the votes in public. The provisional count is known that night. <small>LOREG, arts. 84, 95 and 98.</small></span></li>
 <li class="fase">The official count</li>
@@ -391,25 +402,26 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h10">Mon 7 Dec</button><span class="que">The count ends, at the latest</span><span class="tip" id="h10">Those elected are then proclaimed. From the proclamation there are three days to appeal; appeals are decided by the Supreme Court. <small>LOREG, arts. 107.2, 108 and 112. Date: own count of the eighth day.</small></span></li>
 <li class="fase">The new parliament</li>
 <li class="hito clave"><button type="button" class="fecha" aria-expanded="false" aria-controls="h11">Wed 23 Dec</button><span class="que">Congress and the Senate are constituted</span><span class="tip" id="h11">At ten in the morning, each chamber holds its opening sitting. In Congress the oldest deputy presides at first, the Bureau is elected and deputies swear or promise to uphold the Constitution. <small>Royal Decree 806/2026, art. 5; Constitution, art. 72.2; Standing Orders of Congress, arts. 1 to 4 and 37.</small></span></li>
-<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h12">by 28 Dec</button><span class="que">Parliamentary groups are formed</span><span class="tip" id="h12">In the five days after the opening sitting. As a rule fifteen deputies are needed; there is another route with five if a minimum share of the vote is reached. <small>Standing Orders of Congress, arts. 23 and 24. Date: own count of the five days.</small></span></li>
+<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h12">late Dec</button><span class="que">Parliamentary groups are formed</span><span class="tip" id="h12">In the five working days after the opening sitting: the deadline falls in the last days of December. As a rule fifteen deputies are needed; there is another route with five if a minimum share of the vote is reached. <small>Standing Orders of Congress, arts. 23, 24 and 90 (deadlines set in days are counted in working days).</small></span></li>
 <li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h13">1 Jan 2027</button><span class="que">With no new budget, the old one carries on</span><span class="tip" id="h13">It is extended automatically until another is passed. A caretaker government cannot approve a draft budget. <small>Constitution, art. 134.4; Law 50/1997, art. 21.5.</small></span></li>
 <li class="fase">The investiture</li>
 <li class="hito abierta"><button type="button" class="fecha" aria-expanded="false" aria-controls="h14">no date</button><span class="que">The King consults and nominates a candidate</span><span class="tip" id="h14">He receives the representatives of the groups with seats and nominates a candidate through the speaker of Congress. The Constitution sets no deadline. <small>Constitution, art. 99.1.</small></span></li>
 <li class="hito abierta clave"><button type="button" class="fecha" aria-expanded="false" aria-controls="h15">D-day</button><span class="que">Debate and first vote</span><span class="tip" id="h15">The candidate sets out a programme with no time limit and each group replies. 176 yes votes are needed. This is where the two-month clock starts. <small>Constitution, art. 99; Standing Orders of Congress, art. 171.</small></span></li>
-<li class="hito abierta"><button type="button" class="fecha" aria-expanded="false" aria-controls="h16">D + 48 h</button><span class="que">Second vote</span><span class="tip" id="h16">If the candidate fell short of 176, more yes votes than no votes are enough. If that fails too, the King can nominate another candidate. <small>Constitution, art. 99.3 and 99.4.</small></span></li>
+<li class="hito abierta"><button type="button" class="fecha" aria-expanded="false" aria-controls="h16">D + 48 h</button><span class="que">Second vote</span><span class="tip" id="h16">If the candidate fell short of 176, more yes votes than no votes are enough. If that fails too, the King can make further nominations. <small>Constitution, art. 99.3 and 99.4.</small></span></li>
 <li class="hito abierta"><button type="button" class="fecha" aria-expanded="false" aria-controls="h17">D + 2 months</button><span class="que">No prime minister means a new election</span><span class="tip" id="h17">Parliament is dissolved and polling day is 47 days after the election is called. It happened in 2016 and in 2019. <small>Constitution, art. 99.5; LOREG, seventh additional provision; Royal Decrees 184/2016 and 551/2019.</small></span></li>
 <li class="hito abierta"><button type="button" class="fecha" aria-expanded="false" aria-controls="h18">once elected</button><span class="que">Appointment and new government</span><span class="tip" id="h18">The King appoints as prime minister the candidate who has won the investiture and, on the prime minister's proposal, the ministers. When they take office, the caretaker government ends. <small>Constitution, arts. 62, 99.3, 100 and 101.</small></span></li>
 </ol>
 <h3>More detail</h3>
 <details><summary>The campaign and the day of reflection</summary>
 <p>The campaign lasts fifteen days: from Friday 13 to Friday 27 November. It is the period in which parties ask for votes with rallies, posters and adverts. Before the 13th they may not put up election posters or run election adverts.</p>
-<p>On Saturday 28, the eve of the vote, there can be no advertising or campaign events. It is known as the day of reflection (jornada de reflexión).</p>
+<p>On Saturday 28, the eve of the vote, there can be no advertising or campaign events: it is known as the day of reflection (jornada de reflexión). Nor can there be any on the Sunday of the vote.</p>
 <p class="nota">Sources: LOREG, arts. 51 and 53; Royal Decree 806/2026, art. 4. “Day of reflection” is the everyday name; the law speaks of the period after the campaign has ended.</p>
 </details>
 <details><summary>Voting by post and from abroad</summary>
-<p>Voters who cannot go on the day can vote by post. They must apply at a post office, in person and with their identity card, up to ten days before polling day: for this election, until 19 November. The ballot papers then arrive at home and are returned by registered post, free of charge.</p>
-<p>Spaniards who live abroad and are on the register of absent residents receive the paperwork at home without asking for it. They can vote in a ballot box at their consulate, from 21 to 26 November, or post their vote to the consulate by the 24th at the latest. Those votes are counted on 4 December, in the official count.</p>
-<p class="nota">Sources: LOREG, arts. 72, 73, 75 and 103. The dates are an own count of the deadlines in those articles for this election.</p>
+<p>Voters who cannot go on the day can vote by post. They must apply up to ten days before polling day (for the 29 November election, until 19 November): at a post office, in person and with their identity card, or online with a digital certificate. The ballot papers then arrive at home.</p>
+<p>The vote cannot be dropped in a postbox: it is handed in at a post office, with proof of identity, by Wednesday 25 November at the latest. In other elections the Central Electoral Board has extended that deadline. Voters who cannot go can have someone else take it, with an authorisation signed by the voter and a photocopy of their identity card. No postage is paid.</p>
+<p>Spaniards who live abroad and are on the register of absent residents receive the paperwork at home without asking for it. They can vote in a ballot box at their consulate, from 21 to 26 November, or post their vote to the consulate by the 24th at the latest; if it arrives after the 27th, it does not count. Those votes are counted on 4 December, in the official count.</p>
+<p class="nota">Sources: LOREG, arts. 72, 73, 75 and 103; Central Electoral Board, Instruction 5/2023 and Decisions 11/2023 and 328/2023. The dates are an own count of the deadlines in those articles for the 29 November election.</p>
 </details>
 <details><summary>Election night is not the official result</summary>
 <p>On election night a provisional count is announced, based on the polling stations' tally sheets. The official one, the <button type="button" class="glos" data-g="escrutinio">general count</button>, is carried out by the <button type="button" class="glos" data-g="junta">electoral boards</button> on the fifth day: 4 December. That is when the votes from abroad are added.</p>
@@ -424,8 +436,8 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <p>The oldest deputy presides, with the two youngest as secretaries. The first business is to elect the <button type="button" class="glos" data-g="mesa">Bureau of Congress</button>. Its president, the speaker, needs an absolute majority; if nobody gets one, the choice is between the two with most votes.</p>
 <p>The deputies then swear or promise to abide by the Constitution and Congress is constituted.</p>
 <p>To become a full deputy, a member must hand in their credentials and declaration of activities, and swear or promise to abide by the Constitution. Anyone who has not done so within three plenary sittings is left without rights or privileges until they do.</p>
-<p>The <button type="button" class="glos" data-g="grupo">parliamentary groups</button> are formed in the following five days.</p>
-<p class="nota">Sources: Standing Orders of Congress, arts. 1 to 4, 20, 23, 24 and 37.</p>
+<p>The <button type="button" class="glos" data-g="grupo">parliamentary groups</button> are formed in the following five working days.</p>
+<p class="nota">Sources: Standing Orders of Congress, arts. 1 to 4, 20, 23, 24, 37 and 90.</p>
 </details>
 <details><summary>The King's consultations</summary>
 <p>The King receives the representatives of the parties with seats and then nominates a candidate, through the speaker of Congress. The Constitution sets no deadline.</p>
@@ -458,6 +470,7 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <p class="solo-f2">Those are the rules. The five steps that follow tell what has happened.</p>
 <details><summary>Full glossary</summary><dl class="glosario" id="glosario"></dl></details>
 <p class="fuentes" style="margin-top:8px">Sources (all in Spanish): <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20742">Royal Decree 806/2026</a>, <a href="https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229">Constitution</a>, <a href="https://www.boe.es/buscar/act.php?id=BOE-A-1985-11672">LOREG</a>, <a href="https://www.boe.es/buscar/act.php?id=BOE-A-1982-5196">Standing Orders of Congress</a>, <a href="https://www.boe.es/buscar/act.php?id=BOE-A-1999-8583">Royal Decree 605/1999</a> and <a href="https://www.boe.es/buscar/act.php?id=BOE-A-1997-25336">Law 50/1997</a>.</p>
+<button type="button" class="pill solo-js compartir-sitio">Share</button>
 <button type="button" class="pill sec" id="volver">Back to the start</button>
 <button type="button" class="pill sec" id="soloTexto">Text only</button>
 </div>
@@ -589,6 +602,7 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <div class="cuerpo">
 <h2 id="tit14">La Moncloa</h2>
 <p>The last step. The journey ends when Congress elects a prime minister and the new government takes office.</p>
+<button type="button" class="pill solo-js compartir-sitio">Share</button>
 <button type="button" class="pill sec" id="volver2">Back to the start</button>
 </div>
 </article>

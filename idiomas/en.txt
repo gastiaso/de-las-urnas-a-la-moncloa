@@ -37,8 +37,8 @@ en: This browser is not running JavaScript: only the text is shown, without the 
 es: 1 · Qué se vota
 en: 1 · What's being elected
 
-es: El 29N eliges a quienes se sientan en el Congreso. Hay 350 asientos, que se llaman [[escano|escaños]], y se reparten por [[circ|circunscripciones]]: en la práctica, por provincias.
-en: On Sunday 29 November, Spain elects its Congress of Deputies, the lower house of parliament and the one that chooses the prime minister. It has 350 [[escano|seats]] (escaños, in Spanish), shared out by [[circ|constituency]]: in practice, by province. ¶ Voters do not choose the prime minister directly, and there is no single national count: there are 52 separate contests.
+es: El 29N no eliges presidente: eliges a los 350 diputados del Congreso, que son quienes lo eligen. Sus asientos, los [[escano|escaños]], se reparten por [[circ|circunscripciones]]: en la práctica, por provincias.
+en: On Sunday 29 November, Spain does not elect a prime minister: it elects the 350 members of the Congress of Deputies, the lower house of parliament, and they choose the prime minister. Their [[escano|seats]] (escaños, in Spanish) are shared out by [[circ|constituency]]: in practice, by province. ¶ There is no single national count: there are 52 separate contests.
 
 es: Elige tu provincia
 en: Choose a province
@@ -64,14 +64,14 @@ en: Sources: LOREG (the general electoral law, Organic Law 5/1985), art. 162; Ro
 es: Quién puede votar
 en: Who can vote
 
-es: Pueden votar los españoles mayores de edad que estén inscritos en el [[censo|censo electoral]]. Solo pierde el derecho quien ha sido condenado por sentencia firme a esa pena, y mientras la cumple.
-en: Spanish citizens aged 18 or over who are on the [[censo|electoral register]]. The only people who lose the right are those sentenced to that specific penalty by a final court ruling, for as long as it lasts. ¶ Foreign residents cannot vote in a general election, whatever their nationality.
+es: Pueden votar los españoles mayores de edad que estén inscritos en el [[censo|censo electoral]]. La ley solo se lo quita a quien sea condenado en firme a perder el derecho de voto, y el Código Penal vigente ya no prevé esa pena.
+en: Spanish citizens aged 18 or over who are on the [[censo|electoral register]]. The law takes the vote away only from those sentenced to lose it by a final court ruling, and the current Criminal Code no longer provides for that penalty. ¶ Foreign residents cannot vote in a general election, whatever their nationality.
 
-es: Se vota en persona, en la mesa que te toca, y una sola vez. Para identificarte vale el DNI, el pasaporte o el carné de conducir con foto.
-en: Voting is in person, at the polling station each voter is assigned to, and only once. Voters identify themselves with their national identity card (the DNI), a passport or a photo driving licence.
+es: Se vota en persona, en la mesa que te toca, y una sola vez. Para identificarte vale el DNI, el pasaporte o el carné de conducir con foto. El 29N vale también el DNI en el móvil (aplicación MiDNI); el carné de conducir de la aplicación miDGT, no.
+en: Voting is in person, at the polling station each voter is assigned to, and only once. Voters identify themselves with their national identity card (the DNI), a passport or a photo driving licence. On 29 November the identity card on a phone (the MiDNI app) is also accepted; the driving licence in the miDGT app is not.
 
-es: Fuentes: LOREG, arts. 2, 3, 4 y 85.
-en: Sources: LOREG, arts. 2, 3, 4 and 85.
+es: Fuentes: LOREG, arts. 2, 3, 4 y 85; Código Penal, art. 39; Junta Electoral Central, Acuerdo 334/2026.
+en: Sources: LOREG, arts. 2, 3, 4 and 85; Criminal Code, art. 39; Central Electoral Board, Decision 334/2026.
 
 es: Por qué el 29 de noviembre
 en: Why 29 November
@@ -91,8 +91,8 @@ en: What voting looks like
 es: Los colegios abren de 9:00 a 20:00, sin interrupción. Votas dos veces: una papeleta blanca para el Congreso y otra sepia para el Senado, cada una en su sobre.
 en: Polling stations are open from 9am to 8pm, without a break. Each voter casts two votes: a white ballot paper for Congress and a sepia one for the Senate, each in its own envelope.
 
-es: Puedes usar la cabina, pero no es obligatorio. En la mesa, el presidente dice tu nombre, dice «vota» y el sobre entra en la urna.
-en: Using the booth is optional. At the table, the chair reads out the voter's name, says “vota” (“votes”) and the envelope goes into the ballot box.
+es: Puedes usar la cabina, pero no es obligatorio. En la mesa dices tu nombre y te identificas; el presidente lo repite en voz alta, dice «vota» y tú metes el sobre en la urna.
+en: Using the booth is optional. At the table, voters give their name and show their ID; the chair repeats the name aloud, says “vota” (“votes”) and the voter drops the envelope into the ballot box.
 
 es: El voto es secreto: nadie puede obligarte a decir qué has votado. Si no puedes leer o manejar las papeletas, puede ayudarte una persona de tu confianza.
 en: The vote is secret: nobody can be made to say how they voted. Voters who cannot read or handle the ballot papers may be helped by someone they trust.
@@ -148,8 +148,8 @@ en: Lists alternate women and men. Any adult Spanish citizen with the right to v
 es: Fuentes: LOREG, arts. 6, 44 bis, 46 y 96.
 en: Sources: LOREG, arts. 6, 44 bis, 46 and 96.
 
-es: En el mapa, cada hexágono es un escaño: las provincias crecen o encogen según los escaños que reparten, dentro de la silueta de España. Canarias va en el recuadro.
-en: On the map, each hexagon is a seat: provinces grow or shrink according to the seats they elect, inside the outline of Spain. The Canary Islands are in the box.
+es: En el mapa, cada hexágono es un escaño: las provincias crecen o encogen según los escaños que reparten, dentro de la silueta de España. Canarias, abajo a la izquierda.
+en: On the map, each hexagon is a seat: provinces grow or shrink according to the seats they elect, inside the outline of Spain. The Canary Islands are at the bottom left.
 
 # ───── 2 · Del voto al escaño ─────
 
@@ -162,8 +162,8 @@ en: Share out all the seats before you bet.
 es: Apostar
 en: Bet
 
-es: El partido E no llega a la [[barrera|barrera]] del 3 % y se queda fuera del reparto.
-en: Party E falls short of the 3% [[barrera|threshold]] and is left out of the share-out.
+es: El partido E no llega a la [[barrera|barrera]] del 3 % y queda fuera. Sin ella tampoco habría sacado escaño, ni en Madrid: a los pequeños los frena que haya pocos escaños.
+en: Party E falls short of the 3% [[barrera|threshold]] and is left out. Without it, the party would not have won a seat either, not even in Madrid: what holds small parties back is that there are few seats.
 
 es: Volver a apostar
 en: Bet again
@@ -204,8 +204,11 @@ en: The 3% threshold
 es: Antes de repartir se apartan los partidos que no llegan al 3 % de los votos válidos de la provincia. Sus votos no se pasan a nadie: sencillamente no entran en la tabla.
 en: Before the share-out, parties with less than 3% of the valid votes in the province are set aside. Their votes are not passed on to anyone: they simply do not enter the table.
 
-es: La barrera se mide provincia a provincia, no en toda España.
-en: The threshold applies province by province. There is no national threshold.
+es: La barrera se mide provincia a provincia, no en toda España. En la práctica solo puede decidir donde se reparten muchos escaños, como Madrid o Barcelona: en las demás provincias, para sacar uno hace falta bastante más del 3 %.
+en: The threshold applies province by province. There is no national threshold. In practice it can only matter where many seats are shared out, such as Madrid or Barcelona: everywhere else, winning a seat takes a good deal more than 3%.
+
+es: Fuente: LOREG, art. 163. Dónde puede decidir la barrera es una cuenta propia a partir de la regla.
+en: Source: LOREG, art. 163. Where the threshold can matter is an own calculation based on the rule.
 
 es: Fuente: LOREG, art. 163.
 en: Source: LOREG, art. 163.
@@ -272,11 +275,14 @@ en: The same percentages do not produce the same result everywhere. The fewer se
 es: Cuántos habitantes hay detrás de cada escaño
 en: How many inhabitants stand behind each seat
 
-es: Los escaños se reparten por población, pero con un mínimo de dos por provincia. Por eso en las provincias pequeñas hacen falta muchos menos habitantes para elegir a un diputado.
-en: Seats are shared out by population, but with a minimum of two per province. That is why far fewer inhabitants are needed to elect a deputy in the small provinces.
+es: Los escaños se reparten por población, pero con un mínimo de dos por provincia. Por eso cada diputado de una provincia pequeña representa a muchos menos habitantes.
+en: Seats are shared out by population, but with a minimum of two per province. That is why each deputy from a small province represents far fewer inhabitants.
 
 es: Para el 29N, en Soria hay un escaño por cada 45.117 habitantes; en Madrid, uno por cada 187.817: cuatro veces más.
 en: In this election, Soria has one seat for every 45,117 inhabitants; Madrid, one for every 187,817: four times as many.
+
+es: Eso no quiere decir que el voto valga más en Soria. Allí solo se reparten dos escaños, y los votos a quien no quede entre los dos primeros no eligen a nadie. En Madrid, con 38, casi todos los votos van a partidos que sacan algún escaño.
+en: That does not mean a vote is worth more in Soria. Only two seats are shared out there, and votes for anyone outside the top two elect nobody. In Madrid, with 38, almost every vote goes to a party that wins at least one seat.
 
 es: La cuenta es de habitantes, no de votantes: incluye a menores y a extranjeros, que no votan en estas elecciones.
 en: The count is of inhabitants, not voters: it includes children and foreign residents, who do not vote in this election.
@@ -337,11 +343,14 @@ en: The key to constitutional reform
 es: Para reformar la Constitución hacen falta tres quintos del Congreso y tres quintos del Senado. Si el Senado no llega a tres quintos, queda otra vía: que lo apruebe por mayoría absoluta y que el Congreso lo apruebe por dos tercios. Sin la mayoría absoluta del Senado, la reforma no sale.
 en: Amending the Constitution takes three-fifths of Congress and three-fifths of the Senate. If the Senate falls short of three-fifths there is another route: it approves the change by an absolute majority and Congress approves it by two-thirds. Without an absolute majority in the Senate, the reform fails.
 
-es: Las reformas de más calado, las que tocan el título preliminar, los derechos fundamentales o la Corona, exigen dos tercios de cada cámara, disolver las Cortes, que las nuevas lo ratifiquen también por dos tercios y un referéndum.
-en: The most far-reaching reforms, those touching the preliminary title, fundamental rights or the Crown, require two-thirds of each chamber, the dissolution of parliament, ratification by the new chambers, again by two-thirds, and a referendum.
+es: Las reformas de más calado, las que tocan el título preliminar, los derechos fundamentales o la Corona, exigen dos tercios de cada cámara, disolver las Cortes, que las nuevas ratifiquen la decisión y aprueben el texto por dos tercios, y un referéndum.
+en: The most far-reaching reforms, those touching the preliminary title, fundamental rights or the Crown, require two-thirds of each chamber, the dissolution of parliament, the new chambers ratifying the decision and approving the text by two-thirds, and a referendum.
 
-es: En la práctica, quien tenga más de la mitad del Senado puede bloquear cualquier reforma, y quien tenga más de un tercio, las de más calado. Además, una décima parte de los senadores puede exigir que cualquier reforma se vote en referéndum.
-en: In practice, whoever holds more than half the Senate can block any reform, and whoever holds more than a third can block the most far-reaching ones. In addition, a tenth of senators can demand that any reform be put to a referendum.
+es: En la práctica, quien tenga la mitad del Senado o más puede bloquear cualquier reforma, y quien tenga más de un tercio, las de más calado. Además, en las demás reformas, una décima parte de los senadores o de los diputados puede exigir un referéndum.
+en: In practice, whoever holds half the Senate or more can block any reform, and whoever holds more than a third can block the most far-reaching ones. In addition, for the other reforms, a tenth of senators or of deputies can demand a referendum.
+
+es: Estas cuentas se hacen sobre todos los senadores, incluidos los que designan los parlamentos autonómicos, no solo sobre los 209 que se votan.
+en: These figures are worked out on all senators, including those appointed by the regional parliaments, not only on the 209 who are elected.
 
 es: Fuentes: Constitución, arts. 167 y 168. Las cifras de bloqueo son una cuenta propia a partir de esas mayorías.
 en: Sources: Constitution, arts. 167 and 168. The blocking figures are an own calculation from those majorities.
@@ -430,11 +439,14 @@ en: The senators nobody votes for
 es: Además de los elegidos en las urnas, cada parlamento autonómico designa un senador, más otro por cada millón de habitantes de su comunidad. Son los [[designacion|senadores por designación]].
 en: Besides those elected at the ballot box, each regional parliament appoints one senator, plus another for every million inhabitants of its autonomous community. These are the [[designacion|appointed senators]].
 
+es: No se eligen el 29N, pero cuentan igual que los demás: las mayorías del Senado se calculan sobre todos los senadores, no solo sobre los 209 que salen de las urnas.
+en: They are not elected on 29 November, but they count the same as the rest: Senate majorities are calculated on all senators, not only on the 209 who come out of the ballot box.
+
 es: Si un senador elegido en las urnas deja el escaño, lo ocupa su suplente.
 en: If a senator elected at the ballot box gives up the seat, their substitute takes it.
 
-es: Fuentes: Constitución, art. 69.5; LOREG, art. 166.
-en: Sources: Constitution, art. 69.5; LOREG, art. 166.
+es: Fuentes: Constitución, art. 69.5; LOREG, arts. 165.4 y 166.2.
+en: Sources: Constitution, art. 69.5; LOREG, arts. 165.4 and 166.2.
 
 # ───── 5 · Las mayorías ─────
 
@@ -444,8 +456,8 @@ en: 5 · Majorities
 es: Para elegir presidente a la primera hace falta la [[absoluta|mayoría absoluta]]: 176 síes de 350. Si no sale, 48 horas después basta la [[simple|mayoría simple]]: más síes que noes.
 en: To elect a prime minister at the first attempt, a candidate needs an [[absoluta|absolute majority]]: 176 yes votes out of 350. Failing that, 48 hours later a [[simple|simple majority]] is enough: more yes votes than no votes.
 
-es: En teja, los 176 escaños que marcan la mitad más uno.
-en: In terracotta, the 176 seats that mark half plus one.
+es: En teja, los 176 escaños que hacen falta para pasar de la mitad.
+en: In terracotta, the 176 seats needed to pass the halfway mark.
 
 es: Por qué la abstención pesa distinto
 en: Why abstaining weighs differently
@@ -465,14 +477,14 @@ en: Other majorities
 es: La mayoría absoluta (176) también hace falta para aprobar las leyes orgánicas y la moción de censura.
 en: An absolute majority (176) is also needed to pass organic laws and a motion of no confidence.
 
-es: Tres quintos (210): reformar la Constitución y proponer magistrados del Tribunal Constitucional.
-en: Three-fifths (210): amending the Constitution and nominating judges of the Constitutional Court.
+es: Tres quintos (210): reformar la Constitución, proponer magistrados del Tribunal Constitucional y elegir vocales del Consejo General del Poder Judicial.
+en: Three-fifths (210): amending the Constitution, nominating judges of the Constitutional Court and electing members of the General Council of the Judiciary.
 
-es: Dos tercios (234): las reformas constitucionales de mayor alcance.
+es: Dos tercios (234): las reformas constitucionales de más calado.
 en: Two-thirds (234): the most far-reaching constitutional reforms.
 
-es: Fuentes: Constitución, arts. 81, 99, 113, 159, 167 y 168. Las cifras 210 y 234 son el cálculo sobre 350 diputados.
-en: Sources: Constitution, arts. 81, 99, 113, 159, 167 and 168. The figures 210 and 234 are calculated on 350 deputies.
+es: Fuentes: Constitución, arts. 81, 99, 113, 159, 167 y 168; Ley Orgánica del Poder Judicial, art. 567.2. Las cifras 210 y 234 son el cálculo sobre 350 diputados.
+en: Sources: Constitution, arts. 81, 99, 113, 159, 167 and 168; Organic Law on the Judiciary, art. 567.2. The figures 210 and 234 are calculated on 350 deputies.
 
 es: El día a día: quórum y mayoría simple
 en: Day to day: quorum and simple majority
@@ -527,20 +539,35 @@ en: Source: Constitution, art. 134.
 es: 6 · Pactos
 en: 6 · Deals
 
-es: Si ningún partido llega solo a 176, toca pactar. Toca cada partido para cambiar su voto en la [[investidura|investidura]]: no, sí o [[abstencion|abstención]].
-en: If no party reaches 176 on its own, it is time to negotiate. Tap each party to change how it votes in the [[investidura|investiture]], the vote that makes a prime minister: no, yes or [[abstencion|abstain]].
+es: Si ningún partido llega solo a 176, hay que pactar. Es presidente quien reúne más síes que noes, sea o no del partido más votado.
+en: If no party reaches 176 on its own, a deal is needed. The prime minister is whoever gathers more yes votes than no votes, whether or not they come from the party with the most votes.
 
-es: Tres maneras de apoyar
-en: Three ways of lending support
+es: Toca cada partido para cambiar su voto en la [[investidura|investidura]]: no, sí o [[abstencion|abstención]]. Cada combinación es la investidura de un candidato concreto: tú decides de quién.
+en: Tap each party to change how it votes in the [[investidura|investiture]], the vote that makes a prime minister: no, yes or [[abstencion|abstain]]. Each combination is the investiture of one particular candidate: whose is up to you.
 
-es: Un partido puede ayudar a un candidato de tres maneras. Entrando en el Gobierno con él: es una coalición. Votando sí sin entrar en el Gobierno. O absteniéndose, para que le baste con la segunda votación.
-en: A party can help a candidate in three ways. By joining the government: that is a coalition. By voting yes without joining the government. Or by abstaining, so that the second vote is enough.
+es: Cómo se apoya a un candidato
+en: How a candidate can be backed
 
-es: Lo que se pide a cambio no está en ninguna ley: es negociación política.
-en: What is asked for in return is not in any law: it is political negotiation.
+es: Un partido puede ayudar a un candidato con su voto: con un sí, o absteniéndose para que le baste la segunda votación. Y puede ir más allá: entrar en el Gobierno con él (una coalición) o quedarse fuera y pactar su apoyo, para toda la legislatura o ley a ley.
+en: A party can help a candidate with its vote: by voting yes, or by abstaining so that the second vote is enough. And it can go further: joining the government (a coalition) or staying outside and agreeing its support, for the whole parliamentary term or law by law.
+
+es: La investidura solo abre la puerta: después, cada ley y cada Presupuesto necesitan su propia mayoría. Lo que se pide a cambio no está en ninguna ley: es negociación política.
+en: The investiture only opens the door: after that, every law and every budget needs its own majority. What is asked for in return is not in any law: it is political negotiation.
 
 es: Explicación propia. Las mayorías, en el art. 99 de la Constitución.
 en: Own explanation. The majorities are in art. 99 of the Constitution.
+
+es: Por qué se mueven partidos enteros
+en: Why whole parties move together
+
+es: La calculadora mueve partidos enteros porque los diputados votan casi siempre lo que decide su partido: es la disciplina de voto.
+en: The calculator moves whole parties because deputies almost always vote as their party decides: this is party discipline.
+
+es: No es una obligación legal. La Constitución dice que diputados y senadores no están sujetos a mandato imperativo: nadie puede obligarlos legalmente a votar en un sentido.
+en: It is not a legal obligation. The Constitution says deputies and senators are not bound by any compulsory mandate: nobody can legally force them to vote one way or another.
+
+es: Fuente: Constitución, art. 67.2. La disciplina de voto es una explicación propia.
+en: Source: Constitution, art. 67.2. The point about party discipline is an own explanation.
 
 es: Cómo se vota la investidura
 en: How the investiture vote is held
@@ -572,23 +599,29 @@ en: Sources: Constitution, art. 99; LOREG, art. 42 and seventh additional provis
 es: De dónde salen estos escaños
 en: Where these seat numbers come from
 
-es: No son resultados: son escaños calculados a partir de las últimas encuestas por [Porra Electoral](https://gastiaso.github.io/porra-electoral/), que junta las encuestas publicadas y simula el reparto provincia a provincia. El 30N se cambiarán por los escaños de verdad.
-en: They are not results: they are seats projected from the latest polls by [Porra Electoral](https://gastiaso.github.io/porra-electoral/) (in Spanish), which pools the published polls and simulates the share-out province by province. On 30 November they will be replaced by the real seats.
+es: Son los escaños que cada partido sacó en las últimas elecciones generales, las del 23 de julio de 2023. No son una encuesta ni una estimación.
+en: They are the seats each party won at the last general election, held on 23 July 2023. They are neither a poll nor an estimate.
 
-es: Fuente: [Porra Electoral](https://gastiaso.github.io/porra-electoral/).
-en: Source: [Porra Electoral](https://gastiaso.github.io/porra-electoral/).
+es: Con ellos, la investidura de noviembre de 2023 salió a la primera: 179 síes y 171 noes. Prueba a repetirla, o busca otras combinaciones.
+en: With them, the investiture of November 2023 succeeded at the first attempt: 179 yes votes and 171 no votes. Try to repeat it, or look for other combinations.
 
-es: Por qué la calculadora lleva fecha
-en: Why the calculator carries a date
+es: Los escaños del 29N estarán en el paso 12 cuando haya resultados.
+en: The seats from the 29 November election will be in step 12 once there are results.
 
-es: La ley prohíbe publicar o difundir encuestas electorales en los cinco días anteriores a la votación: para el 29N, del 24 al 28 de noviembre. Por eso la estimación de esta calculadora se congeló antes y lleva la fecha de la última encuesta que incluye.
-en: Spanish law bans publishing or disseminating election polls in the five days before polling day: for this election, from 24 to 28 November. That is why the estimate in this calculator was frozen beforehand and carries the date of the last poll it includes.
+es: Fuentes: Junta Electoral Central, resultados de las elecciones del 23 de julio de 2023 (BOE del 1 de septiembre de 2023; los 121 escaños del PSOE incluyen los 19 del PSC); Diario de Sesiones del Congreso, Pleno núm. 8, de 16 de noviembre de 2023.
+en: Sources: Central Electoral Board, results of the election of 23 July 2023 (official gazette, BOE, of 1 September 2023; the PSOE's 121 seats include the 19 of its Catalan sister party, the PSC); Congress Official Record (Diario de Sesiones), plenary sitting no. 8, 16 November 2023.
 
-es: Quien vigila que las encuestas cumplan la ley es la Junta Electoral Central.
-en: The body that checks that polls comply with the law is the Central Electoral Board.
+es: Por qué aquí no hay encuestas
+en: Why there are no polls here
 
-es: Fuente: LOREG, art. 69. Del 24 al 28 de noviembre es el cálculo de los cinco días.
-en: Source: LOREG, art. 69. 24 to 28 November is an own count of the five days.
+es: La ley prohíbe publicar, difundir o reproducir sondeos electorales en los cinco días anteriores a la votación: para el 29N, del 24 al 28 de noviembre. Esta calculadora no usa encuestas ni estimaciones: usa un resultado, el de 2023.
+en: Spanish law bans publishing, disseminating or reproducing election polls in the five days before polling day: for the 29 November election, from 24 to 28 November. This calculator uses no polls or estimates: it uses a result, that of 2023.
+
+es: Quien vigila que se cumpla es la Junta Electoral Central.
+en: The body that checks that the ban is observed is the Central Electoral Board.
+
+es: Fuente: LOREG, art. 69.7. Del 24 al 28 de noviembre es el cálculo de los cinco días.
+en: Source: LOREG, art. 69.7. 24 to 28 November is an own count of the five days.
 
 # ───── 7 · Del 29N al Gobierno ─────
 
@@ -628,8 +661,8 @@ en: Thu 19 Nov
 es: Último día para pedir el voto por correo
 en: Last day to apply for a postal vote
 
-es: Se pide en una oficina de Correos, en persona y con el DNI. Las papeletas llegan después a casa y se devuelven por correo certificado, sin sello. <small>LOREG, arts. 72 y 73. Fecha: cálculo del décimo día anterior.</small>
-en: Voters apply at a post office, in person and with their identity card. The ballot papers then arrive at home and are sent back by registered post, free of charge. <small>LOREG, arts. 72 and 73. Date: own count of the tenth day before.</small>
+es: Se pide en una oficina de Correos, en persona y con el DNI, o por internet con certificado electrónico. Las papeletas llegan a casa. El voto se entrega después en una oficina de Correos, identificándose, como tarde el 25 de noviembre, salvo que se amplíe el plazo. <small>LOREG, arts. 72 y 73; Junta Electoral Central, Instrucción 5/2023 y Acuerdo 11/2023. Fechas: cálculo del décimo día anterior y del último antes del tercero.</small>
+en: Voters apply at a post office, in person and with their identity card, or online with a digital certificate. The ballot papers arrive at home. The vote is then handed in at a post office, with proof of identity, by 25 November at the latest, unless the deadline is extended. <small>LOREG, arts. 72 and 73; Central Electoral Board, Instruction 5/2023 and Decision 11/2023. Dates: own count of the tenth day before polling day and of the last day before the third.</small>
 
 es: 21 a 26 nov
 en: 21–26 Nov
@@ -637,8 +670,8 @@ en: 21–26 Nov
 es: Voto en los consulados
 en: Voting at consulates
 
-es: Quien vive en el extranjero puede depositar su voto en una urna de su consulado o embajada. Si lo manda por correo, tiene que enviarlo como tarde el 24. <small>LOREG, art. 75. Fechas: cálculo de los plazos del artículo.</small>
-en: Spaniards living abroad can put their vote in a ballot box at their consulate or embassy. If they send it by post, they must do so by the 24th at the latest. <small>LOREG, art. 75. Dates: own count of the deadlines in that article.</small>
+es: Quien vive en el extranjero puede depositar su voto en una urna de su consulado o embajada. Si lo manda por correo, tiene que enviarlo como tarde el 24 y tiene que llegar al consulado como tarde el 27. <small>LOREG, art. 75. Fechas: cálculo de los plazos del artículo.</small>
+en: Spaniards living abroad can put their vote in a ballot box at their consulate or embassy. If they send it by post, they must do so by the 24th at the latest, and it must reach the consulate by the 27th. <small>LOREG, art. 75. Dates: own count of the deadlines in that article.</small>
 
 es: 24 a 28 nov
 en: 24–28 Nov
@@ -664,8 +697,8 @@ en: Sat 28 Nov
 es: Jornada de reflexión
 en: Day of reflection
 
-es: La víspera no puede haber propaganda ni actos de campaña. <small>LOREG, arts. 51.3 y 53.</small>
-en: On the eve of the vote there can be no advertising or campaign events. <small>LOREG, arts. 51.3 and 53.</small>
+es: La víspera no puede haber propaganda ni actos de campaña. Tampoco el día de la votación. <small>LOREG, arts. 51.3 y 53.</small>
+en: On the eve of the vote there can be no advertising or campaign events. Nor on polling day itself. <small>LOREG, arts. 51.3 and 53.</small>
 
 es: La votación
 en: Polling day
@@ -712,14 +745,14 @@ en: Congress and the Senate are constituted
 es: A las diez de la mañana, cada cámara en su sesión constitutiva. En el Congreso preside al principio el diputado de más edad, se elige la Mesa y los diputados juran o prometen la Constitución. <small>Real Decreto 806/2026, art. 5; Constitución, art. 72.2; Reglamento del Congreso, arts. 1 a 4 y 37.</small>
 en: At ten in the morning, each chamber holds its opening sitting. In Congress the oldest deputy presides at first, the Bureau is elected and deputies swear or promise to uphold the Constitution. <small>Royal Decree 806/2026, art. 5; Constitution, art. 72.2; Standing Orders of Congress, arts. 1 to 4 and 37.</small>
 
-es: hasta el 28 dic
-en: by 28 Dec
+es: fin de dic
+en: late Dec
 
 es: Se forman los grupos parlamentarios
 en: Parliamentary groups are formed
 
-es: En los cinco días siguientes a la sesión constitutiva. Por regla general hacen falta quince diputados; hay otra vía con cinco si se supera un mínimo de votos. <small>Reglamento del Congreso, arts. 23 y 24. Fecha: cálculo de los cinco días.</small>
-en: In the five days after the opening sitting. As a rule fifteen deputies are needed; there is another route with five if a minimum share of the vote is reached. <small>Standing Orders of Congress, arts. 23 and 24. Date: own count of the five days.</small>
+es: En los cinco días hábiles siguientes a la sesión constitutiva: el plazo acaba en los últimos días de diciembre. Por regla general hacen falta quince diputados; hay otra vía con cinco si se supera un mínimo de votos. <small>Reglamento del Congreso, arts. 23, 24 y 90 (los plazos por días se cuentan en días hábiles).</small>
+en: In the five working days after the opening sitting: the deadline falls in the last days of December. As a rule fifteen deputies are needed; there is another route with five if a minimum share of the vote is reached. <small>Standing Orders of Congress, arts. 23, 24 and 90 (deadlines set in days are counted in working days).</small>
 
 es: 1 ene 2027
 en: 1 Jan 2027
@@ -757,8 +790,8 @@ en: D + 48 h
 es: Segunda votación
 en: Second vote
 
-es: Si no llegó a 176, basta con más síes que noes. Si tampoco sale, el Rey puede proponer a otro candidato. <small>Constitución, art. 99.3 y 99.4.</small>
-en: If the candidate fell short of 176, more yes votes than no votes are enough. If that fails too, the King can nominate another candidate. <small>Constitution, art. 99.3 and 99.4.</small>
+es: Si no llegó a 176, basta con más síes que noes. Si tampoco sale, el Rey puede hacer nuevas propuestas. <small>Constitución, art. 99.3 y 99.4.</small>
+en: If the candidate fell short of 176, more yes votes than no votes are enough. If that fails too, the King can make further nominations. <small>Constitution, art. 99.3 and 99.4.</small>
 
 es: D + 2 meses
 en: D + 2 months
@@ -784,8 +817,8 @@ en: The campaign and the day of reflection
 es: La campaña dura quince días: del viernes 13 al viernes 27 de noviembre. Es el tiempo en que los partidos piden el voto con mítines, carteles y anuncios. Antes del 13 no pueden poner carteles ni anuncios electorales.
 en: The campaign lasts fifteen days: from Friday 13 to Friday 27 November. It is the period in which parties ask for votes with rallies, posters and adverts. Before the 13th they may not put up election posters or run election adverts.
 
-es: El sábado 28, la víspera, no puede haber propaganda ni actos de campaña. Es lo que se conoce como jornada de reflexión.
-en: On Saturday 28, the eve of the vote, there can be no advertising or campaign events. It is known as the day of reflection (jornada de reflexión).
+es: El sábado 28, la víspera, no puede haber propaganda ni actos de campaña: es lo que se conoce como jornada de reflexión. Tampoco puede haberlos el domingo de la votación.
+en: On Saturday 28, the eve of the vote, there can be no advertising or campaign events: it is known as the day of reflection (jornada de reflexión). Nor can there be any on the Sunday of the vote.
 
 es: Fuentes: LOREG, arts. 51 y 53; Real Decreto 806/2026, art. 4. «Jornada de reflexión» es el nombre de uso común; la ley habla del periodo en que la campaña ha terminado.
 en: Sources: LOREG, arts. 51 and 53; Royal Decree 806/2026, art. 4. “Day of reflection” is the everyday name; the law speaks of the period after the campaign has ended.
@@ -793,14 +826,17 @@ en: Sources: LOREG, arts. 51 and 53; Royal Decree 806/2026, art. 4. “Day of re
 es: Si ese día no puedes ir
 en: Voting by post and from abroad
 
-es: Existe el voto por correo. Hay que pedirlo en una oficina de Correos, en persona y con el DNI, hasta diez días antes de la votación: para el 29N, hasta el 19 de noviembre. Después te llegan las papeletas a casa y las devuelves por correo certificado, sin pagar sello.
-en: Voters who cannot go on the day can vote by post. They must apply at a post office, in person and with their identity card, up to ten days before polling day: for this election, until 19 November. The ballot papers then arrive at home and are returned by registered post, free of charge.
+es: Existe el voto por correo. Hay que pedirlo hasta diez días antes de la votación (para el 29N, hasta el 19 de noviembre): en una oficina de Correos, en persona y con el DNI, o por internet con certificado electrónico. Después te llegan las papeletas a casa.
+en: Voters who cannot go on the day can vote by post. They must apply up to ten days before polling day (for the 29 November election, until 19 November): at a post office, in person and with their identity card, or online with a digital certificate. The ballot papers then arrive at home.
 
-es: Quien vive en el extranjero y está inscrito en el censo de residentes ausentes recibe la documentación en casa sin pedirla. Puede votar en una urna de su consulado, del 21 al 26 de noviembre, o mandar el voto por correo al consulado como tarde el 24. Esos votos se cuentan el 4 de diciembre, en el recuento oficial.
-en: Spaniards who live abroad and are on the register of absent residents receive the paperwork at home without asking for it. They can vote in a ballot box at their consulate, from 21 to 26 November, or post their vote to the consulate by the 24th at the latest. Those votes are counted on 4 December, in the official count.
+es: El voto no se echa a un buzón: se entrega en una oficina de Correos, identificándote, como tarde el miércoles 25 de noviembre. En otras elecciones, la Junta Electoral Central ha ampliado ese plazo. Si no puedes ir, puede llevarlo otra persona con una autorización firmada por ti y una fotocopia de tu DNI. No se paga sello.
+en: The vote cannot be dropped in a postbox: it is handed in at a post office, with proof of identity, by Wednesday 25 November at the latest. In other elections the Central Electoral Board has extended that deadline. Voters who cannot go can have someone else take it, with an authorisation signed by the voter and a photocopy of their identity card. No postage is paid.
 
-es: Fuentes: LOREG, arts. 72, 73, 75 y 103. Las fechas son el cálculo de los plazos de esos artículos para el 29N.
-en: Sources: LOREG, arts. 72, 73, 75 and 103. The dates are an own count of the deadlines in those articles for this election.
+es: Quien vive en el extranjero y está inscrito en el censo de residentes ausentes recibe la documentación en casa sin pedirla. Puede votar en una urna de su consulado, del 21 al 26 de noviembre, o mandar el voto por correo al consulado como tarde el 24; si llega después del 27, no vale. Esos votos se cuentan el 4 de diciembre, en el recuento oficial.
+en: Spaniards who live abroad and are on the register of absent residents receive the paperwork at home without asking for it. They can vote in a ballot box at their consulate, from 21 to 26 November, or post their vote to the consulate by the 24th at the latest; if it arrives after the 27th, it does not count. Those votes are counted on 4 December, in the official count.
+
+es: Fuentes: LOREG, arts. 72, 73, 75 y 103; Junta Electoral Central, Instrucción 5/2023 y Acuerdos 11/2023 y 328/2023. Las fechas son el cálculo de los plazos de esos artículos para el 29N.
+en: Sources: LOREG, arts. 72, 73, 75 and 103; Central Electoral Board, Instruction 5/2023 and Decisions 11/2023 and 328/2023. The dates are an own count of the deadlines in those articles for the 29 November election.
 
 es: La noche electoral no es el resultado oficial
 en: Election night is not the official result
@@ -835,11 +871,11 @@ en: The deputies then swear or promise to abide by the Constitution and Congress
 es: Para ser diputado de pleno derecho hay que entregar la credencial y la declaración de actividades, y jurar o prometer la Constitución. Quien no lo haga en tres plenos se queda sin derechos ni prerrogativas hasta que lo haga.
 en: To become a full deputy, a member must hand in their credentials and declaration of activities, and swear or promise to abide by the Constitution. Anyone who has not done so within three plenary sittings is left without rights or privileges until they do.
 
-es: Los [[grupo|grupos parlamentarios]] se forman en los cinco días siguientes.
-en: The [[grupo|parliamentary groups]] are formed in the following five days.
+es: Los [[grupo|grupos parlamentarios]] se forman en los cinco días hábiles siguientes.
+en: The [[grupo|parliamentary groups]] are formed in the following five working days.
 
-es: Fuentes: Reglamento del Congreso, arts. 1 a 4, 20, 23, 24 y 37.
-en: Sources: Standing Orders of Congress, arts. 1 to 4, 20, 23, 24 and 37.
+es: Fuentes: Reglamento del Congreso, arts. 1 a 4, 20, 23, 24, 37 y 90.
+en: Sources: Standing Orders of Congress, arts. 1 to 4, 20, 23, 24, 37 and 90.
 
 es: Las consultas del Rey
 en: The King's consultations
@@ -902,6 +938,9 @@ en: Full glossary
 
 es: Fuentes: [Real Decreto 806/2026](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20742), [Constitución](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229), [LOREG](https://www.boe.es/buscar/act.php?id=BOE-A-1985-11672), [Reglamento del Congreso](https://www.boe.es/buscar/act.php?id=BOE-A-1982-5196), [Real Decreto 605/1999](https://www.boe.es/buscar/act.php?id=BOE-A-1999-8583) y [Ley 50/1997](https://www.boe.es/buscar/act.php?id=BOE-A-1997-25336).
 en: Sources (all in Spanish): [Royal Decree 806/2026](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20742), [Constitution](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229), [LOREG](https://www.boe.es/buscar/act.php?id=BOE-A-1985-11672), [Standing Orders of Congress](https://www.boe.es/buscar/act.php?id=BOE-A-1982-5196), [Royal Decree 605/1999](https://www.boe.es/buscar/act.php?id=BOE-A-1999-8583) and [Law 50/1997](https://www.boe.es/buscar/act.php?id=BOE-A-1997-25336).
+
+es: Compartir
+en: Share
 
 es: Volver a la salida
 en: Back to the start
@@ -1112,8 +1151,8 @@ p: The country is divided into 50 provinces, plus the cities of Ceuta and Melill
 p: La Moncloa is the palace complex in Madrid where the prime minister lives and works. In Spanish politics “la Moncloa” means the government, much as “Downing Street” does in Britain.
 nota: Sources: Constitution, arts. 1.3, 56, 66, 68 and 99. The 17 autonomous communities and the note on La Moncloa are general context added for this English edition.
 
-+cajón antes de: Tres maneras de apoyar
++cajón antes de: Cómo se apoya a un candidato
 título: Who the parties are
-p: The calculator lists the parties that the polls put in Congress, from left to right as they are drawn in the chamber. The two big nationwide parties are the Socialists (PSOE), on the centre-left, and the conservative People's Party (PP). Vox is a hard-right party. Frente Amplio (FA) is a left-wing alliance built around Sumar, the junior partner in the outgoing coalition government.
-p: The rest stand only in their own territories. From Catalonia: Esquerra (ERC), left-wing Catalan separatists, and Junts, hardline Catalan separatists on the centre-right. From the Basque Country: the Basque Nationalist Party (PNV), moderate Basque nationalists on the centre-right, and EH Bildu, left-wing Basque separatists. UPN is a conservative regionalist party from Navarre; the BNG are left-wing Galician nationalists; Coalición Canaria (CC) is a regionalist party from the Canary Islands; Adelante Andalucía (AA) is a left-wing Andalusian party.
+p: The calculator lists the parties that won seats at the 2023 election, from left to right as they are drawn in the chamber. The two big nationwide parties are the Socialists (PSOE), on the centre-left, and the conservative People's Party (PP). Vox is a hard-right party. Sumar is a left-wing alliance, the junior partner in the outgoing coalition government.
+p: The rest stand only in their own territories. From Catalonia: Esquerra (ERC), left-wing Catalan separatists, and Junts, hardline Catalan separatists on the centre-right. From the Basque Country: the Basque Nationalist Party (PNV), moderate Basque nationalists on the centre-right, and EH Bildu, left-wing Basque separatists. UPN is a conservative regionalist party from Navarre; the BNG are left-wing Galician nationalists; Coalición Canaria (CC) is a regionalist party from the Canary Islands.
 nota: General context added for this English edition; it is not in the Spanish original. The labels are the shorthand of the English-language press, not the parties' own descriptions.

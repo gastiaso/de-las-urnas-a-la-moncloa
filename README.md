@@ -19,7 +19,7 @@ No es una encuesta ni una predicción. Son las reglas, cada una con su artículo
 3. **Dónde votas.** Por qué los mismos porcentajes dan más partidos en Madrid que en Soria, y cuántos habitantes hay detrás de cada escaño.
 4. **El Senado.** Cómo se vota, qué puede hacer y qué no.
 5. **Las mayorías.** Los 176 de la primera votación, la mayoría simple de la segunda y las mayorías reforzadas.
-6. **Pactos.** Una calculadora de investidura con escaños calculados a partir de las últimas encuestas.
+6. **Pactos.** Una calculadora de investidura con los escaños que salieron de las elecciones de 2023.
 7. **Del 29N al Gobierno.** El calendario, de la convocatoria a la investidura, fecha a fecha.
 
 Y un cierre. Desde el 30 de noviembre se abren cinco pasos más con los resultados: qué ha pasado, tu provincia (y qué habría cambiado con otros votos), votos frente a escaños, quién puede gobernar y lo que viene.
@@ -31,7 +31,7 @@ Cada paso tiene cajones «saber más» con la fuente al pie, y las palabras subr
 - **Un hexágono, un escaño.** El mapa no respeta la superficie: cada provincia ocupa tantos hexágonos como diputados elige, dentro de la silueta de España. Por eso Madrid es enorme y Soria, diminuta. Canarias va en un recuadro.
 - **Tu voto es el hexágono dorado.** Está en tu provincia, en el reparto, en el Senado y en el hemiciclo. En los pactos queda aparte, porque el bloque en el que estaría depende de a quién votes.
 - **Los partidos del ejemplo son inventados.** El reparto D'Hondt se explica con cinco partidos, de la A a la E, para que se vea la regla sin pensar en quién gana.
-- **La calculadora de pactos no es un resultado.** Son escaños calculados a partir de las últimas encuestas por [Porra Electoral](https://gastiaso.github.io/porra-electoral/), congelados antes de la veda y con su fecha. El 30N se cambian por los reales.
+- **La calculadora de pactos no usa encuestas.** Lleva los escaños que cada partido sacó en las elecciones del 23 de julio de 2023, para probar combinaciones de síes, noes y abstenciones. Los del 29N llegan el 30N, en el paso 12.
 - **Lo que no tiene fuente no entra.** Las reglas están cotejadas con el texto vigente en el BOE, y las cuentas propias (cuotas, habitantes por escaño, mínimos para bloquear) se señalan como tales.
 
 > **Si encuentras un error, avisa.** El texto se revisa y se corrige en cuanto se detecta uno.
@@ -43,15 +43,15 @@ Cada paso tiene cajones «saber más» con la fuente al pie, y las palabras subr
 | Escaños por provincia | Real Decreto 806/2026, de disolución y convocatoria, anexo ([BOE-A-2026-20742](https://www.boe.es/buscar/doc.php?id=BOE-A-2026-20742)) |
 | Población por provincia (habitantes por escaño) | Real Decreto 1117/2025, cifras oficiales del padrón a 1 de enero de 2025 ([BOE-A-2025-25362](https://www.boe.es/buscar/doc.php?id=BOE-A-2025-25362)) |
 | Reglas | Constitución, LOREG, Reglamento del Congreso, Real Decreto 605/1999 y Ley 50/1997. El artículo de cada cajón está en [`docs/guion.md`](docs/guion.md) |
-| Escaños de la calculadora de pactos | [Porra Electoral](https://gastiaso.github.io/porra-electoral/), con las encuestas publicadas hasta la fecha que indica la calculadora |
+| Escaños de la calculadora de pactos | Junta Electoral Central, resultados de las elecciones del 23 de julio de 2023 ([BOE-A-2023-18907](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-18907)) |
 | Resultados de prueba de la fase 2 | Escrutinio del 23 de julio de 2023, Ministerio del Interior, tal como están reunidos en Porra Electoral |
 | Resultados del 29N | Ministerio del Interior: recuento provisional y, después, escrutinio general |
 | Silueta y provincias del mapa | Instituto Geográfico Nacional, líneas límite (CC BY 4.0), en la versión TopoJSON de [es-atlas](https://github.com/martgnz/es-atlas) |
 
 ## Calendario
 
-- **23 de noviembre:** sale la fase 1, con la calculadora de pactos congelada.
-- **24 a 28 de noviembre:** la ley prohíbe publicar encuestas esos cinco días (LOREG, art. 69.7). La calculadora no cambia.
+- **23 de noviembre:** lanzamiento de la fase 1.
+- **24 a 28 de noviembre:** la ley prohíbe publicar encuestas esos cinco días (LOREG, art. 69.7). El sitio no lleva ninguna.
 - **Noche del 29 de noviembre:** se cargan los votos del recuento provisional y se abren los pasos 9 a 13.
 - **4 de diciembre:** escrutinio general. Se actualizan los resultados.
 - **Después:** el calendario de la investidura se completa a medida que haya fechas.
@@ -61,7 +61,7 @@ Cada paso tiene cajones «saber más» con la fuente al pie, y las palabras subr
 ```mermaid
 flowchart LR
   A["BOE<br/>escaños, población y reglas"] --> D["js/datos.js"]
-  B["Porra Electoral<br/>escaños estimados"] --> D
+  B["Junta Electoral Central<br/>escaños de 2023"] --> D
   C["IGN, vía es-atlas<br/>límites provinciales"] --> E["herramientas/cartograma.py"]
   E --> F["js/cartograma.js<br/>350 + 209 hexágonos"]
   G["Votos del 29N<br/>por provincia (CSV)"] --> H["herramientas/resultados.py"]
@@ -162,7 +162,7 @@ node herramientas/prueba_idiomas.mjs       # comprueba que a los textos del Java
 
 - **El mapa deforma a propósito.** Cuenta escaños, no territorio. La posición de cada provincia es aproximada, y alguna queda estirada.
 - **Habitantes no son votantes.** Los habitantes por escaño salen de la población oficial, que incluye a menores y a extranjeros que no votan en estas elecciones.
-- **La calculadora es una foto fija.** Recoge las encuestas hasta su fecha, no cambia durante la veda y hereda los errores que tengan las encuestas.
+- **La calculadora de pactos mira atrás.** Hasta el 30N lleva los escaños de 2023, no una previsión del 29N.
 - **La noche electoral no da el resultado oficial.** Los primeros resultados son del recuento provisional; el oficial, con el voto desde el extranjero, llega el 4 de diciembre.
 - **El Senado, solo en las reglas.** Los pasos de resultados dan los del Congreso; los del Senado, todavía no.
 - **Es una introducción.** Los cajones dan la norma exacta, pero no cubren todos los casos que prevé la ley.
@@ -189,5 +189,5 @@ Errores, dudas o sugerencias: por [LinkedIn](https://www.linkedin.com/in/guiller
 
 ## Proyectos relacionados
 
-- [Porra Electoral](https://gastiaso.github.io/porra-electoral/) ([repositorio](https://github.com/gastiaso/porra-electoral)): la media de las encuestas de las generales del 29N y los escaños que salen de ella. De ahí salen los escaños de la calculadora de pactos y los datos de prueba del 23J.
+- [Porra Electoral](https://gastiaso.github.io/porra-electoral/) ([repositorio](https://github.com/gastiaso/porra-electoral)): la media de las encuestas de las generales del 29N y los escaños que salen de ella. De ahí salen los datos de prueba del 23J.
 - [Historias con los barómetros del CIS](https://gastiaso.github.io/historias/) ([repositorio](https://github.com/gastiaso/historias)): historias para leer con scroll, en las que el gráfico cambia mientras avanza el texto.

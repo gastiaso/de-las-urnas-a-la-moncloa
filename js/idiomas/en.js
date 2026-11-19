@@ -17,7 +17,6 @@ const miles = n => Math.round(n).toLocaleString('en-GB');
 const dec = x => x.toFixed(1);
 const diputados = (i, n) => n === 1 ? 'The deputy for ' + prov(i) : 'The ' + n + ' deputies for ' + prov(i);
 const MESES = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-const PORRA = '<a href="https://gastiaso.github.io/porra-electoral/">Porra Electoral</a>';
 // Textos que llegan en castellano dentro de js/resultados.js (los escribe herramientas/resultados.py)
 const DATOS = {
   'resultados del 23 de julio de 2023': 'results of the general election of 23 July 2023',
@@ -69,8 +68,8 @@ export const textos = {
     censo: ['Electoral register (censo electoral)', 'The official list of those who can vote. To vote, a person has to be on it.'],
     mesael: ['Polling station board (mesa electoral)', "The team in charge of a ballot box: a chair and two members, drawn by lot from among that station's voters."],
     junta: ['Electoral board (junta electoral)', 'The body that sees that elections are clean and carries out the official count. There is a central one, one per province and others at district level.'],
-    lista: ['List (lista)', "A party's candidates in a province: as many names as there are seats, in a fixed order."],
-    suplente: ['Substitute (suplente)', 'A candidate placed on the list behind the main names, who comes in if one of them gives up the seat.'],
+    lista: ['List (lista)', "A party's candidates in a province: as many candidates as there are seats, in a fixed order, plus up to ten substitutes."],
+    suplente: ['Substitute (suplente)', 'A candidate placed at the end of the list, behind the main names, who comes in only if a seat falls vacant and no candidates are left ahead. In the Senate, each candidate has two.'],
     quorum: ['Quorum', 'The minimum attendance for a vote to be valid: more than half the chamber.'],
     organica: ['Organic law (ley orgánica)', 'A law on weightier matters, such as fundamental rights or the electoral rules. It needs an absolute majority in Congress.'],
     decretoley: ['Decree-law (decreto-ley)', 'A measure the government passes on grounds of urgency. Congress has thirty days to uphold it or strike it down.'],
@@ -92,6 +91,7 @@ export const textos = {
     3: 'Darker: fewer inhabitants per seat',
     4: 'Senate: 209 elected, four per province',
     5: '176 of 350: the absolute majority',
+    7: 'The Congress that will choose the prime minister<small>The two-month deadline starts with the first vote.</small>',
     8: '350 seats',
     9: 'Each seat in the colour of the party that won it',
     10: may(prov(i)) + ': ' + escanos(n),
@@ -125,8 +125,8 @@ export const textos = {
         if (this.islas[i]) return 'The second ballot paper, the sepia one, is for the Senate. In ' + nom + ' it depends on the island: ' + this.islas[i] + '.';
         if (uno) return 'The second ballot paper, the sepia one, is for the Senate. ' + may(nom) + ' goes from one deputy to <b>two</b> senators.';
         return 'The second ballot paper, the sepia one, is for the Senate. On the map, ' + nom + ' goes from ' + n + ' deputies to <b>four</b> senators, like every province on the mainland.';
-      case 5: return diputados(i, n) + (uno ? ' sits' : ' sit') + ' with the other ' + (350 - n) + '. In the chamber, the vote being followed is one of those seats.';
-      case 6: return diputados(i, n) + (uno ? ' votes with their party.' : ' each vote with their party.') + ' The vote being followed stands apart, below the chamber: which bloc it would be in depends on the party it went to.';
+      case 5: return diputados(i, n) + (uno ? ' sits' : ' sit') + ' with the other ' + (350 - n) + '. ' + (uno ? 'The vote being followed counts towards that seat only if its party comes first there.' : 'The vote being followed counts towards one of those seats only if its party wins a seat there.');
+      case 6: return diputados(i, n) + (uno ? ' usually votes with their party.' : ' usually vote with their party.') + ' The vote being followed stands apart, below the chamber: which bloc it would be in depends on the party it went to.';
       case 7: return 'On the night of 29 November, that ballot paper is counted at its polling station in ' + nom + ', in public and out loud.';
       case 8: return 'That is the path of one ballot paper cast in ' + nom + ': from the ballot box to La Moncloa.';
       case 10: return primero ? 'The gold hexagon is the first seat shared out in ' + nom + ': it went to <b>' + primero + '</b>.' : '';
@@ -187,6 +187,7 @@ export const textos = {
   copiar: 'Copy a link to this combination',
   copiado: 'Link copied.',
   copiaManual: "Copy the address from the browser: it already carries the combination.",
+  copiaDireccion: 'Copy the address from the browser',
   ariaPartido: (nombre, n, voto) => nombre + ', ' + escanos(n) + ', ' + voto + '. Tap to change',
   cuentaSi: n => 'Yes: ' + n,
   cuentaAbs: n => 'Abst.: ' + n,
@@ -194,7 +195,7 @@ export const textos = {
   primera: si => si >= 176 ? 'Elected: ' + sies(si) + '.' : 'Not elected: ' + sies(176 - si) + ' short.',
   segunda: (si, no) => (si > no ? 'Elected: ' : 'Not elected: ') + si + ' yes to ' + no + ' no.',
   anuncioPacto: (si, abs, no, primera, segunda) => 'Yes ' + si + ', abstentions ' + abs + ', no ' + no + '. First vote: ' + primera + ' Second: ' + segunda,
-  porraNota: corte => 'Seats projected from the latest polls, up to ' + corte + ' (' + PORRA + ', in Spanish). It is an estimate, not a result.',
+  calcNota: fecha => 'Seats each party won at the general election of ' + fecha + ', the last one before the 29 November vote. It is neither a poll nor a result of the 29 November election.',
 
   /* fase 2 */
   avisoPrueba: etiqueta => 'Preview with test data: ' + etiqueta + '. These are not the results of 29 November.',

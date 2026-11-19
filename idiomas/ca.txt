@@ -36,8 +36,8 @@ ca: Aquest navegador no executa JavaScript: només es mostra el text, sense l'es
 es: 1 · Qué se vota
 ca: 1 · Què es vota
 
-es: El 29N eliges a quienes se sientan en el Congreso. Hay 350 asientos, que se llaman [[escano|escaños]], y se reparten por [[circ|circunscripciones]]: en la práctica, por provincias.
-ca: El 29N esculls qui seurà al Congrés. Hi ha 350 seients, que es diuen [[escano|escons]], i es reparteixen per [[circ|circumscripcions]]: a la pràctica, per províncies.
+es: El 29N no eliges presidente: eliges a los 350 diputados del Congreso, que son quienes lo eligen. Sus asientos, los [[escano|escaños]], se reparten por [[circ|circunscripciones]]: en la práctica, por provincias.
+ca: El 29N no esculls president: esculls els 350 diputats del Congrés, que són els qui l'escullen. Els seus seients, els [[escano|escons]], es reparteixen per [[circ|circumscripcions]]: a la pràctica, per províncies.
 
 es: Elige tu provincia
 ca: Tria la teva província
@@ -63,14 +63,14 @@ ca: Fonts: LOREG, art. 162; Reial decret 806/2026, annex; Reial decret 1117/2025
 es: Quién puede votar
 ca: Qui pot votar
 
-es: Pueden votar los españoles mayores de edad que estén inscritos en el [[censo|censo electoral]]. Solo pierde el derecho quien ha sido condenado por sentencia firme a esa pena, y mientras la cumple.
-ca: Poden votar els espanyols majors d'edat que estiguin inscrits al [[censo|cens electoral]]. Només perd el dret qui ha estat condemnat per sentència ferma a aquesta pena, i mentre la compleix.
+es: Pueden votar los españoles mayores de edad que estén inscritos en el [[censo|censo electoral]]. La ley solo se lo quita a quien sea condenado en firme a perder el derecho de voto, y el Código Penal vigente ya no prevé esa pena.
+ca: Poden votar els espanyols majors d'edat que estiguin inscrits al [[censo|cens electoral]]. La llei només treu el dret de vot a qui sigui condemnat en ferm a perdre'l, i el Codi Penal vigent ja no preveu aquesta pena.
 
-es: Se vota en persona, en la mesa que te toca, y una sola vez. Para identificarte vale el DNI, el pasaporte o el carné de conducir con foto.
-ca: Es vota en persona, a la mesa que et toca, i una sola vegada. Per identificar-te serveix el DNI, el passaport o el carnet de conduir amb foto.
+es: Se vota en persona, en la mesa que te toca, y una sola vez. Para identificarte vale el DNI, el pasaporte o el carné de conducir con foto. El 29N vale también el DNI en el móvil (aplicación MiDNI); el carné de conducir de la aplicación miDGT, no.
+ca: Es vota en persona, a la mesa que et toca, i una sola vegada. Per identificar-te serveix el DNI, el passaport o el carnet de conduir amb foto. El 29N també serveix el DNI al mòbil (aplicació MiDNI); el carnet de conduir de l'aplicació miDGT, no.
 
-es: Fuentes: LOREG, arts. 2, 3, 4 y 85.
-ca: Fonts: LOREG, arts. 2, 3, 4 i 85.
+es: Fuentes: LOREG, arts. 2, 3, 4 y 85; Código Penal, art. 39; Junta Electoral Central, Acuerdo 334/2026.
+ca: Fonts: LOREG, arts. 2, 3, 4 i 85; Codi Penal, art. 39; Junta Electoral Central, Acord 334/2026.
 
 es: Por qué el 29 de noviembre
 ca: Per què el 29 de novembre
@@ -90,8 +90,8 @@ ca: Com és anar a votar
 es: Los colegios abren de 9:00 a 20:00, sin interrupción. Votas dos veces: una papeleta blanca para el Congreso y otra sepia para el Senado, cada una en su sobre.
 ca: Els col·legis obren de 9:00 a 20:00, sense interrupció. Votes dues vegades: una papereta blanca per al Congrés i una altra de color sèpia per al Senat, cadascuna al seu sobre.
 
-es: Puedes usar la cabina, pero no es obligatorio. En la mesa, el presidente dice tu nombre, dice «vota» y el sobre entra en la urna.
-ca: Pots fer servir la cabina, però no és obligatori. A la mesa, el president diu el teu nom, diu «vota» i el sobre entra a l'urna.
+es: Puedes usar la cabina, pero no es obligatorio. En la mesa dices tu nombre y te identificas; el presidente lo repite en voz alta, dice «vota» y tú metes el sobre en la urna.
+ca: Pots fer servir la cabina, però no és obligatori. A la mesa dius el teu nom i t'identifiques; el president el repeteix en veu alta, diu «vota» i tu fiques el sobre a l'urna.
 
 es: El voto es secreto: nadie puede obligarte a decir qué has votado. Si no puedes leer o manejar las papeletas, puede ayudarte una persona de tu confianza.
 ca: El vot és secret: ningú et pot obligar a dir què has votat. Si no pots llegir o manejar les paperetes, et pot ajudar una persona de la teva confiança.
@@ -147,8 +147,8 @@ ca: Les llistes alternen dones i homes. S'hi pot presentar qualsevol espanyol ma
 es: Fuentes: LOREG, arts. 6, 44 bis, 46 y 96.
 ca: Fonts: LOREG, arts. 6, 44 bis, 46 i 96.
 
-es: En el mapa, cada hexágono es un escaño: las provincias crecen o encogen según los escaños que reparten, dentro de la silueta de España. Canarias va en el recuadro.
-ca: Al mapa, cada hexàgon és un escó: les províncies creixen o s'encongeixen segons els escons que reparteixen, dins de la silueta d'Espanya. Les Canàries van al requadre.
+es: En el mapa, cada hexágono es un escaño: las provincias crecen o encogen según los escaños que reparten, dentro de la silueta de España. Canarias, abajo a la izquierda.
+ca: Al mapa, cada hexàgon és un escó: les províncies creixen o s'encongeixen segons els escons que reparteixen, dins de la silueta d'Espanya. Les Canàries, a baix a l'esquerra.
 
 # ───── 2 · Del voto al escaño ─────
 
@@ -161,8 +161,8 @@ ca: Reparteix tots els escons abans d'apostar.
 es: Apostar
 ca: Aposta
 
-es: El partido E no llega a la [[barrera|barrera]] del 3 % y se queda fuera del reparto.
-ca: El partit E no arriba a la [[barrera|barrera]] del 3 % i es queda fora del repartiment.
+es: El partido E no llega a la [[barrera|barrera]] del 3 % y queda fuera. Sin ella tampoco habría sacado escaño, ni en Madrid: a los pequeños los frena que haya pocos escaños.
+ca: El partit E no arriba a la [[barrera|barrera]] del 3 % i queda fora. Sense ella tampoc hauria tret escó, ni a Madrid: als petits els frena que hi hagi pocs escons.
 
 es: Volver a apostar
 ca: Torna a apostar
@@ -203,8 +203,11 @@ ca: La barrera del 3 %
 es: Antes de repartir se apartan los partidos que no llegan al 3 % de los votos válidos de la provincia. Sus votos no se pasan a nadie: sencillamente no entran en la tabla.
 ca: Abans de repartir s'aparten els partits que no arriben al 3 % dels vots vàlids de la província. Els seus vots no es passen a ningú: senzillament no entren a la taula.
 
-es: La barrera se mide provincia a provincia, no en toda España.
-ca: La barrera es mesura província a província, no a tot Espanya.
+es: La barrera se mide provincia a provincia, no en toda España. En la práctica solo puede decidir donde se reparten muchos escaños, como Madrid o Barcelona: en las demás provincias, para sacar uno hace falta bastante más del 3 %.
+ca: La barrera es mesura província a província, no a tot Espanya. A la pràctica només pot ser decisiva on es reparteixen molts escons, com Madrid o Barcelona: a la resta de províncies, per treure'n un cal força més del 3 %.
+
+es: Fuente: LOREG, art. 163. Dónde puede decidir la barrera es una cuenta propia a partir de la regla.
+ca: Font: LOREG, art. 163. On pot ser decisiva la barrera és un càlcul propi a partir de la regla.
 
 es: Fuente: LOREG, art. 163.
 ca: Font: LOREG, art. 163.
@@ -271,11 +274,14 @@ ca: Els mateixos percentatges no donen el mateix a tot arreu. Com menys escons r
 es: Cuántos habitantes hay detrás de cada escaño
 ca: Quants habitants hi ha darrere de cada escó
 
-es: Los escaños se reparten por población, pero con un mínimo de dos por provincia. Por eso en las provincias pequeñas hacen falta muchos menos habitantes para elegir a un diputado.
-ca: Els escons es reparteixen per població, però amb un mínim de dos per província. Per això a les províncies petites calen molts menys habitants per escollir un diputat.
+es: Los escaños se reparten por población, pero con un mínimo de dos por provincia. Por eso cada diputado de una provincia pequeña representa a muchos menos habitantes.
+ca: Els escons es reparteixen per població, però amb un mínim de dos per província. Per això cada diputat d'una província petita representa molts menys habitants.
 
 es: Para el 29N, en Soria hay un escaño por cada 45.117 habitantes; en Madrid, uno por cada 187.817: cuatro veces más.
 ca: Per al 29N, a Sòria hi ha un escó per cada 45.117 habitants; a Madrid, un per cada 187.817: quatre vegades més.
+
+es: Eso no quiere decir que el voto valga más en Soria. Allí solo se reparten dos escaños, y los votos a quien no quede entre los dos primeros no eligen a nadie. En Madrid, con 38, casi todos los votos van a partidos que sacan algún escaño.
+ca: Això no vol dir que el vot valgui més a Sòria. Allà només es reparteixen dos escons, i els vots a qui no quedi entre els dos primers no escullen ningú. A Madrid, amb 38, gairebé tots els vots van a partits que treuen algun escó.
 
 es: La cuenta es de habitantes, no de votantes: incluye a menores y a extranjeros, que no votan en estas elecciones.
 ca: El compte és d'habitants, no de votants: inclou menors i estrangers, que no voten en aquestes eleccions.
@@ -336,11 +342,14 @@ ca: La clau de la reforma constitucional
 es: Para reformar la Constitución hacen falta tres quintos del Congreso y tres quintos del Senado. Si el Senado no llega a tres quintos, queda otra vía: que lo apruebe por mayoría absoluta y que el Congreso lo apruebe por dos tercios. Sin la mayoría absoluta del Senado, la reforma no sale.
 ca: Per reformar la Constitució calen tres cinquens del Congrés i tres cinquens del Senat. Si el Senat no arriba a tres cinquens, queda una altra via: que ho aprovi per majoria absoluta i que el Congrés ho aprovi per dos terços. Sense la majoria absoluta del Senat, la reforma no tira endavant.
 
-es: Las reformas de más calado, las que tocan el título preliminar, los derechos fundamentales o la Corona, exigen dos tercios de cada cámara, disolver las Cortes, que las nuevas lo ratifiquen también por dos tercios y un referéndum.
-ca: Les reformes més profundes, les que toquen el títol preliminar, els drets fonamentals o la Corona, exigeixen dos terços de cada cambra, dissoldre les Corts, que les noves ho ratifiquin també per dos terços i un referèndum.
+es: Las reformas de más calado, las que tocan el título preliminar, los derechos fundamentales o la Corona, exigen dos tercios de cada cámara, disolver las Cortes, que las nuevas ratifiquen la decisión y aprueben el texto por dos tercios, y un referéndum.
+ca: Les reformes més profundes, les que toquen el títol preliminar, els drets fonamentals o la Corona, exigeixen dos terços de cada cambra, dissoldre les Corts, que les noves ratifiquin la decisió i aprovin el text per dos terços, i un referèndum.
 
-es: En la práctica, quien tenga más de la mitad del Senado puede bloquear cualquier reforma, y quien tenga más de un tercio, las de más calado. Además, una décima parte de los senadores puede exigir que cualquier reforma se vote en referéndum.
-ca: A la pràctica, qui tingui més de la meitat del Senat pot bloquejar qualsevol reforma, i qui en tingui més d'un terç, les més profundes. A més, una desena part dels senadors pot exigir que qualsevol reforma es voti en referèndum.
+es: En la práctica, quien tenga la mitad del Senado o más puede bloquear cualquier reforma, y quien tenga más de un tercio, las de más calado. Además, en las demás reformas, una décima parte de los senadores o de los diputados puede exigir un referéndum.
+ca: A la pràctica, qui tingui la meitat del Senat o més pot bloquejar qualsevol reforma, i qui en tingui més d'un terç, les més profundes. A més, en la resta de reformes, una desena part dels senadors o dels diputats pot exigir un referèndum.
+
+es: Estas cuentas se hacen sobre todos los senadores, incluidos los que designan los parlamentos autonómicos, no solo sobre los 209 que se votan.
+ca: Aquests comptes es fan sobre tots els senadors, inclosos els que designen els parlaments autonòmics, no només sobre els 209 que es voten.
 
 es: Fuentes: Constitución, arts. 167 y 168. Las cifras de bloqueo son una cuenta propia a partir de esas mayorías.
 ca: Fonts: Constitució, arts. 167 i 168. Les xifres de bloqueig són un càlcul propi a partir d'aquestes majories.
@@ -429,11 +438,14 @@ ca: Els senadors que no es voten
 es: Además de los elegidos en las urnas, cada parlamento autonómico designa un senador, más otro por cada millón de habitantes de su comunidad. Son los [[designacion|senadores por designación]].
 ca: A més dels escollits a les urnes, cada parlament autonòmic designa un senador, més un altre per cada milió d'habitants de la seva comunitat. Són els [[designacion|senadors per designació]].
 
+es: No se eligen el 29N, pero cuentan igual que los demás: las mayorías del Senado se calculan sobre todos los senadores, no solo sobre los 209 que salen de las urnas.
+ca: No s'escullen el 29N, però compten igual que els altres: les majories del Senat es calculen sobre tots els senadors, no només sobre els 209 que surten de les urnes.
+
 es: Si un senador elegido en las urnas deja el escaño, lo ocupa su suplente.
 ca: Si un senador escollit a les urnes deixa l'escó, l'ocupa el seu suplent.
 
-es: Fuentes: Constitución, art. 69.5; LOREG, art. 166.
-ca: Fonts: Constitució, art. 69.5; LOREG, art. 166.
+es: Fuentes: Constitución, art. 69.5; LOREG, arts. 165.4 y 166.2.
+ca: Fonts: Constitució, art. 69.5; LOREG, arts. 165.4 i 166.2.
 
 # ───── 5 · Las mayorías ─────
 
@@ -443,8 +455,8 @@ ca: 5 · Les majories
 es: Para elegir presidente a la primera hace falta la [[absoluta|mayoría absoluta]]: 176 síes de 350. Si no sale, 48 horas después basta la [[simple|mayoría simple]]: más síes que noes.
 ca: Per escollir president a la primera cal la [[absoluta|majoria absoluta]]: 176 sís de 350. Si no surt, 48 hores després n'hi ha prou amb la [[simple|majoria simple]]: més sís que nos.
 
-es: En teja, los 176 escaños que marcan la mitad más uno.
-ca: En color teula, els 176 escons que marquen la meitat més un.
+es: En teja, los 176 escaños que hacen falta para pasar de la mitad.
+ca: En color teula, els 176 escons que calen per passar de la meitat.
 
 es: Por qué la abstención pesa distinto
 ca: Per què l'abstenció pesa diferent
@@ -464,14 +476,14 @@ ca: Altres majories
 es: La mayoría absoluta (176) también hace falta para aprobar las leyes orgánicas y la moción de censura.
 ca: La majoria absoluta (176) també cal per aprovar les lleis orgàniques i la moció de censura.
 
-es: Tres quintos (210): reformar la Constitución y proponer magistrados del Tribunal Constitucional.
-ca: Tres cinquens (210): reformar la Constitució i proposar magistrats del Tribunal Constitucional.
+es: Tres quintos (210): reformar la Constitución, proponer magistrados del Tribunal Constitucional y elegir vocales del Consejo General del Poder Judicial.
+ca: Tres cinquens (210): reformar la Constitució, proposar magistrats del Tribunal Constitucional i escollir vocals del Consell General del Poder Judicial.
 
-es: Dos tercios (234): las reformas constitucionales de mayor alcance.
-ca: Dos terços (234): les reformes constitucionals de més abast.
+es: Dos tercios (234): las reformas constitucionales de más calado.
+ca: Dos terços (234): les reformes constitucionals més profundes.
 
-es: Fuentes: Constitución, arts. 81, 99, 113, 159, 167 y 168. Las cifras 210 y 234 son el cálculo sobre 350 diputados.
-ca: Fonts: Constitució, arts. 81, 99, 113, 159, 167 i 168. Les xifres 210 i 234 són el càlcul sobre 350 diputats.
+es: Fuentes: Constitución, arts. 81, 99, 113, 159, 167 y 168; Ley Orgánica del Poder Judicial, art. 567.2. Las cifras 210 y 234 son el cálculo sobre 350 diputados.
+ca: Fonts: Constitució, arts. 81, 99, 113, 159, 167 i 168; Llei orgànica del poder judicial, art. 567.2. Les xifres 210 i 234 són el càlcul sobre 350 diputats.
 
 es: El día a día: quórum y mayoría simple
 ca: El dia a dia: quòrum i majoria simple
@@ -526,20 +538,35 @@ ca: Font: Constitució, art. 134.
 es: 6 · Pactos
 ca: 6 · Pactes
 
-es: Si ningún partido llega solo a 176, toca pactar. Toca cada partido para cambiar su voto en la [[investidura|investidura]]: no, sí o [[abstencion|abstención]].
-ca: Si cap partit no arriba tot sol a 176, toca pactar. Toca cada partit per canviar el seu vot a la [[investidura|investidura]]: no, sí o [[abstencion|abstenció]].
+es: Si ningún partido llega solo a 176, hay que pactar. Es presidente quien reúne más síes que noes, sea o no del partido más votado.
+ca: Si cap partit no arriba tot sol a 176, cal pactar. És president qui reuneix més sís que nos, sigui o no del partit més votat.
 
-es: Tres maneras de apoyar
-ca: Tres maneres de donar suport
+es: Toca cada partido para cambiar su voto en la [[investidura|investidura]]: no, sí o [[abstencion|abstención]]. Cada combinación es la investidura de un candidato concreto: tú decides de quién.
+ca: Toca cada partit per canviar el seu vot a la [[investidura|investidura]]: no, sí o [[abstencion|abstenció]]. Cada combinació és la investidura d'un candidat concret: tu decideixes de qui.
 
-es: Un partido puede ayudar a un candidato de tres maneras. Entrando en el Gobierno con él: es una coalición. Votando sí sin entrar en el Gobierno. O absteniéndose, para que le baste con la segunda votación.
-ca: Un partit pot ajudar un candidat de tres maneres. Entrant al Govern amb ell: és una coalició. Votant sí sense entrar al Govern. O abstenint-se, perquè en tingui prou amb la segona votació.
+es: Cómo se apoya a un candidato
+ca: Com es dona suport a un candidat
 
-es: Lo que se pide a cambio no está en ninguna ley: es negociación política.
-ca: El que es demana a canvi no és a cap llei: és negociació política.
+es: Un partido puede ayudar a un candidato con su voto: con un sí, o absteniéndose para que le baste la segunda votación. Y puede ir más allá: entrar en el Gobierno con él (una coalición) o quedarse fuera y pactar su apoyo, para toda la legislatura o ley a ley.
+ca: Un partit pot ajudar un candidat amb el seu vot: amb un sí, o abstenint-se perquè en tingui prou amb la segona votació. I pot anar més enllà: entrar al Govern amb ell (una coalició) o quedar-se'n fora i pactar el seu suport, per a tota la legislatura o llei a llei.
+
+es: La investidura solo abre la puerta: después, cada ley y cada Presupuesto necesitan su propia mayoría. Lo que se pide a cambio no está en ninguna ley: es negociación política.
+ca: La investidura només obre la porta: després, cada llei i cada pressupost necessiten la seva pròpia majoria. El que es demana a canvi no és a cap llei: és negociació política.
 
 es: Explicación propia. Las mayorías, en el art. 99 de la Constitución.
 ca: Explicació pròpia. Les majories, a l'art. 99 de la Constitució.
+
+es: Por qué se mueven partidos enteros
+ca: Per què es mouen partits sencers
+
+es: La calculadora mueve partidos enteros porque los diputados votan casi siempre lo que decide su partido: es la disciplina de voto.
+ca: La calculadora mou partits sencers perquè els diputats voten gairebé sempre el que decideix el seu partit: és la disciplina de vot.
+
+es: No es una obligación legal. La Constitución dice que diputados y senadores no están sujetos a mandato imperativo: nadie puede obligarlos legalmente a votar en un sentido.
+ca: No és una obligació legal. La Constitució diu que diputats i senadors no estan subjectes a mandat imperatiu: ningú els pot obligar legalment a votar en un sentit.
+
+es: Fuente: Constitución, art. 67.2. La disciplina de voto es una explicación propia.
+ca: Font: Constitució, art. 67.2. La disciplina de vot és una explicació pròpia.
 
 es: Cómo se vota la investidura
 ca: Com es vota la investidura
@@ -571,23 +598,29 @@ ca: Fonts: Constitució, art. 99; LOREG, art. 42 i disposició addicional setena
 es: De dónde salen estos escaños
 ca: D'on surten aquests escons
 
-es: No son resultados: son escaños calculados a partir de las últimas encuestas por [Porra Electoral](https://gastiaso.github.io/porra-electoral/), que junta las encuestas publicadas y simula el reparto provincia a provincia. El 30N se cambiarán por los escaños de verdad.
-ca: No són resultats: són escons calculats a partir de les últimes enquestes per [Porra Electoral](https://gastiaso.github.io/porra-electoral/), que aplega les enquestes publicades i simula el repartiment província a província. El 30N es canviaran pels escons de debò.
+es: Son los escaños que cada partido sacó en las últimas elecciones generales, las del 23 de julio de 2023. No son una encuesta ni una estimación.
+ca: Són els escons que cada partit va treure a les últimes eleccions generals, les del 23 de juliol de 2023. No són una enquesta ni una estimació.
 
-es: Fuente: [Porra Electoral](https://gastiaso.github.io/porra-electoral/).
-ca: Font: [Porra Electoral](https://gastiaso.github.io/porra-electoral/).
+es: Con ellos, la investidura de noviembre de 2023 salió a la primera: 179 síes y 171 noes. Prueba a repetirla, o busca otras combinaciones.
+ca: Amb ells, la investidura del novembre de 2023 va sortir a la primera: 179 sís i 171 nos. Prova de repetir-la, o busca altres combinacions.
 
-es: Por qué la calculadora lleva fecha
-ca: Per què la calculadora porta data
+es: Los escaños del 29N estarán en el paso 12 cuando haya resultados.
+ca: Els escons del 29N seran al pas 12 quan hi hagi resultats.
 
-es: La ley prohíbe publicar o difundir encuestas electorales en los cinco días anteriores a la votación: para el 29N, del 24 al 28 de noviembre. Por eso la estimación de esta calculadora se congeló antes y lleva la fecha de la última encuesta que incluye.
-ca: La llei prohibeix publicar o difondre enquestes electorals durant els cinc dies anteriors a la votació: per al 29N, del 24 al 28 de novembre. Per això l'estimació d'aquesta calculadora es va congelar abans i porta la data de l'última enquesta que inclou.
+es: Fuentes: Junta Electoral Central, resultados de las elecciones del 23 de julio de 2023 (BOE del 1 de septiembre de 2023; los 121 escaños del PSOE incluyen los 19 del PSC); Diario de Sesiones del Congreso, Pleno núm. 8, de 16 de noviembre de 2023.
+ca: Fonts: Junta Electoral Central, resultats de les eleccions del 23 de juliol de 2023 (BOE de l'1 de setembre de 2023; els 121 escons del PSOE inclouen els 19 del PSC); Diari de Sessions del Congrés, Ple núm. 8, de 16 de novembre de 2023.
 
-es: Quien vigila que las encuestas cumplan la ley es la Junta Electoral Central.
-ca: Qui vigila que les enquestes compleixin la llei és la Junta Electoral Central.
+es: Por qué aquí no hay encuestas
+ca: Per què aquí no hi ha enquestes
 
-es: Fuente: LOREG, art. 69. Del 24 al 28 de noviembre es el cálculo de los cinco días.
-ca: Font: LOREG, art. 69. Del 24 al 28 de novembre és el càlcul dels cinc dies.
+es: La ley prohíbe publicar, difundir o reproducir sondeos electorales en los cinco días anteriores a la votación: para el 29N, del 24 al 28 de noviembre. Esta calculadora no usa encuestas ni estimaciones: usa un resultado, el de 2023.
+ca: La llei prohibeix publicar, difondre o reproduir sondejos electorals durant els cinc dies anteriors a la votació: per al 29N, del 24 al 28 de novembre. Aquesta calculadora no fa servir enquestes ni estimacions: fa servir un resultat, el de 2023.
+
+es: Quien vigila que se cumpla es la Junta Electoral Central.
+ca: Qui vigila que es compleixi és la Junta Electoral Central.
+
+es: Fuente: LOREG, art. 69.7. Del 24 al 28 de noviembre es el cálculo de los cinco días.
+ca: Font: LOREG, art. 69.7. Del 24 al 28 de novembre és el càlcul dels cinc dies.
 
 # ───── 7 · Del 29N al Gobierno ─────
 
@@ -627,8 +660,8 @@ ca: dj. 19 nov.
 es: Último día para pedir el voto por correo
 ca: Últim dia per demanar el vot per correu
 
-es: Se pide en una oficina de Correos, en persona y con el DNI. Las papeletas llegan después a casa y se devuelven por correo certificado, sin sello. <small>LOREG, arts. 72 y 73. Fecha: cálculo del décimo día anterior.</small>
-ca: Es demana en una oficina de Correus, en persona i amb el DNI. Les paperetes arriben després a casa i es tornen per correu certificat, sense segell. <small>LOREG, arts. 72 i 73. Data: càlcul del desè dia anterior.</small>
+es: Se pide en una oficina de Correos, en persona y con el DNI, o por internet con certificado electrónico. Las papeletas llegan a casa. El voto se entrega después en una oficina de Correos, identificándose, como tarde el 25 de noviembre, salvo que se amplíe el plazo. <small>LOREG, arts. 72 y 73; Junta Electoral Central, Instrucción 5/2023 y Acuerdo 11/2023. Fechas: cálculo del décimo día anterior y del último antes del tercero.</small>
+ca: Es demana en una oficina de Correus, en persona i amb el DNI, o per internet amb certificat electrònic. Les paperetes arriben a casa. El vot es lliura després en una oficina de Correus, identificant-se, com a molt tard el 25 de novembre, llevat que s'ampliï el termini. <small>LOREG, arts. 72 i 73; Junta Electoral Central, Instrucció 5/2023 i Acord 11/2023. Dates: càlcul del desè dia anterior i de l'últim abans del tercer.</small>
 
 es: 21 a 26 nov
 ca: 21-26 nov.
@@ -636,8 +669,8 @@ ca: 21-26 nov.
 es: Voto en los consulados
 ca: Vot als consolats
 
-es: Quien vive en el extranjero puede depositar su voto en una urna de su consulado o embajada. Si lo manda por correo, tiene que enviarlo como tarde el 24. <small>LOREG, art. 75. Fechas: cálculo de los plazos del artículo.</small>
-ca: Qui viu a l'estranger pot dipositar el seu vot en una urna del seu consolat o ambaixada. Si l'envia per correu, ho ha de fer com a molt tard el 24. <small>LOREG, art. 75. Dates: càlcul dels terminis de l'article.</small>
+es: Quien vive en el extranjero puede depositar su voto en una urna de su consulado o embajada. Si lo manda por correo, tiene que enviarlo como tarde el 24 y tiene que llegar al consulado como tarde el 27. <small>LOREG, art. 75. Fechas: cálculo de los plazos del artículo.</small>
+ca: Qui viu a l'estranger pot dipositar el seu vot en una urna del seu consolat o ambaixada. Si l'envia per correu, ho ha de fer com a molt tard el 24 i ha d'arribar al consolat com a molt tard el 27. <small>LOREG, art. 75. Dates: càlcul dels terminis de l'article.</small>
 
 es: 24 a 28 nov
 ca: 24-28 nov.
@@ -663,8 +696,8 @@ ca: ds. 28 nov.
 es: Jornada de reflexión
 ca: Jornada de reflexió
 
-es: La víspera no puede haber propaganda ni actos de campaña. <small>LOREG, arts. 51.3 y 53.</small>
-ca: La vigília no hi pot haver propaganda ni actes de campanya. <small>LOREG, arts. 51.3 i 53.</small>
+es: La víspera no puede haber propaganda ni actos de campaña. Tampoco el día de la votación. <small>LOREG, arts. 51.3 y 53.</small>
+ca: La vigília no hi pot haver propaganda ni actes de campanya. Tampoc el dia de la votació. <small>LOREG, arts. 51.3 i 53.</small>
 
 es: La votación
 ca: La votació
@@ -711,14 +744,14 @@ ca: Es constitueixen el Congrés i el Senat
 es: A las diez de la mañana, cada cámara en su sesión constitutiva. En el Congreso preside al principio el diputado de más edad, se elige la Mesa y los diputados juran o prometen la Constitución. <small>Real Decreto 806/2026, art. 5; Constitución, art. 72.2; Reglamento del Congreso, arts. 1 a 4 y 37.</small>
 ca: A les deu del matí, cada cambra en la seva sessió constitutiva. Al Congrés presideix al començament el diputat de més edat, s'escull la Mesa i els diputats juren o prometen la Constitució. <small>Reial decret 806/2026, art. 5; Constitució, art. 72.2; Reglament del Congrés, arts. 1 a 4 i 37.</small>
 
-es: hasta el 28 dic
-ca: fins al 28 des.
+es: fin de dic
+ca: finals de des.
 
 es: Se forman los grupos parlamentarios
 ca: Es formen els grups parlamentaris
 
-es: En los cinco días siguientes a la sesión constitutiva. Por regla general hacen falta quince diputados; hay otra vía con cinco si se supera un mínimo de votos. <small>Reglamento del Congreso, arts. 23 y 24. Fecha: cálculo de los cinco días.</small>
-ca: En els cinc dies següents a la sessió constitutiva. Per regla general calen quinze diputats; hi ha una altra via amb cinc si se supera un mínim de vots. <small>Reglament del Congrés, arts. 23 i 24. Data: càlcul dels cinc dies.</small>
+es: En los cinco días hábiles siguientes a la sesión constitutiva: el plazo acaba en los últimos días de diciembre. Por regla general hacen falta quince diputados; hay otra vía con cinco si se supera un mínimo de votos. <small>Reglamento del Congreso, arts. 23, 24 y 90 (los plazos por días se cuentan en días hábiles).</small>
+ca: En els cinc dies hàbils següents a la sessió constitutiva: el termini acaba els últims dies de desembre. Per regla general calen quinze diputats; hi ha una altra via amb cinc si se supera un mínim de vots. <small>Reglament del Congrés, arts. 23, 24 i 90 (els terminis per dies es compten en dies hàbils).</small>
 
 es: 1 ene 2027
 ca: 1 gen. 2027
@@ -756,8 +789,8 @@ ca: D + 48 h
 es: Segunda votación
 ca: Segona votació
 
-es: Si no llegó a 176, basta con más síes que noes. Si tampoco sale, el Rey puede proponer a otro candidato. <small>Constitución, art. 99.3 y 99.4.</small>
-ca: Si no va arribar a 176, n'hi ha prou amb més sís que nos. Si tampoc surt escollit, el Rei pot proposar un altre candidat. <small>Constitució, art. 99.3 i 99.4.</small>
+es: Si no llegó a 176, basta con más síes que noes. Si tampoco sale, el Rey puede hacer nuevas propuestas. <small>Constitución, art. 99.3 y 99.4.</small>
+ca: Si no va arribar a 176, n'hi ha prou amb més sís que nos. Si tampoc surt escollit, el Rei pot fer noves propostes. <small>Constitució, art. 99.3 i 99.4.</small>
 
 es: D + 2 meses
 ca: D + 2 mesos
@@ -783,8 +816,8 @@ ca: La campanya i la jornada de reflexió
 es: La campaña dura quince días: del viernes 13 al viernes 27 de noviembre. Es el tiempo en que los partidos piden el voto con mítines, carteles y anuncios. Antes del 13 no pueden poner carteles ni anuncios electorales.
 ca: La campanya dura quinze dies: del divendres 13 al divendres 27 de novembre. És el temps en què els partits demanen el vot amb mítings, cartells i anuncis. Abans del 13 no poden posar cartells ni anuncis electorals.
 
-es: El sábado 28, la víspera, no puede haber propaganda ni actos de campaña. Es lo que se conoce como jornada de reflexión.
-ca: El dissabte 28, la vigília, no hi pot haver propaganda ni actes de campanya. És el que es coneix com a jornada de reflexió.
+es: El sábado 28, la víspera, no puede haber propaganda ni actos de campaña: es lo que se conoce como jornada de reflexión. Tampoco puede haberlos el domingo de la votación.
+ca: El dissabte 28, la vigília, no hi pot haver propaganda ni actes de campanya: és el que es coneix com a jornada de reflexió. Tampoc n'hi pot haver el diumenge de la votació.
 
 es: Fuentes: LOREG, arts. 51 y 53; Real Decreto 806/2026, art. 4. «Jornada de reflexión» es el nombre de uso común; la ley habla del periodo en que la campaña ha terminado.
 ca: Fonts: LOREG, arts. 51 i 53; Reial decret 806/2026, art. 4. «Jornada de reflexió» és el nom d'ús comú; la llei parla del període en què la campanya ha acabat.
@@ -792,14 +825,17 @@ ca: Fonts: LOREG, arts. 51 i 53; Reial decret 806/2026, art. 4. «Jornada de ref
 es: Si ese día no puedes ir
 ca: Si aquell dia no hi pots anar
 
-es: Existe el voto por correo. Hay que pedirlo en una oficina de Correos, en persona y con el DNI, hasta diez días antes de la votación: para el 29N, hasta el 19 de noviembre. Después te llegan las papeletas a casa y las devuelves por correo certificado, sin pagar sello.
-ca: Hi ha el vot per correu. Cal demanar-lo en una oficina de Correus, en persona i amb el DNI, fins a deu dies abans de la votació: per al 29N, fins al 19 de novembre. Després t'arriben les paperetes a casa i les tornes per correu certificat, sense pagar segell.
+es: Existe el voto por correo. Hay que pedirlo hasta diez días antes de la votación (para el 29N, hasta el 19 de noviembre): en una oficina de Correos, en persona y con el DNI, o por internet con certificado electrónico. Después te llegan las papeletas a casa.
+ca: Hi ha el vot per correu. Cal demanar-lo fins a deu dies abans de la votació (per al 29N, fins al 19 de novembre): en una oficina de Correus, en persona i amb el DNI, o per internet amb certificat electrònic. Després t'arriben les paperetes a casa.
 
-es: Quien vive en el extranjero y está inscrito en el censo de residentes ausentes recibe la documentación en casa sin pedirla. Puede votar en una urna de su consulado, del 21 al 26 de noviembre, o mandar el voto por correo al consulado como tarde el 24. Esos votos se cuentan el 4 de diciembre, en el recuento oficial.
-ca: Qui viu a l'estranger i està inscrit al cens de residents absents rep la documentació a casa sense demanar-la. Pot votar en una urna del seu consolat, del 21 al 26 de novembre, o enviar el vot per correu al consolat com a molt tard el 24. Aquests vots es compten el 4 de desembre, en el recompte oficial.
+es: El voto no se echa a un buzón: se entrega en una oficina de Correos, identificándote, como tarde el miércoles 25 de noviembre. En otras elecciones, la Junta Electoral Central ha ampliado ese plazo. Si no puedes ir, puede llevarlo otra persona con una autorización firmada por ti y una fotocopia de tu DNI. No se paga sello.
+ca: El vot no es tira a una bústia: es lliura en una oficina de Correus, identificant-te, com a molt tard el dimecres 25 de novembre. En altres eleccions, la Junta Electoral Central ha ampliat aquest termini. Si no hi pots anar, el pot portar una altra persona amb una autorització signada per tu i una fotocòpia del teu DNI. No es paga segell.
 
-es: Fuentes: LOREG, arts. 72, 73, 75 y 103. Las fechas son el cálculo de los plazos de esos artículos para el 29N.
-ca: Fonts: LOREG, arts. 72, 73, 75 i 103. Les dates són el càlcul dels terminis d'aquests articles per al 29N.
+es: Quien vive en el extranjero y está inscrito en el censo de residentes ausentes recibe la documentación en casa sin pedirla. Puede votar en una urna de su consulado, del 21 al 26 de noviembre, o mandar el voto por correo al consulado como tarde el 24; si llega después del 27, no vale. Esos votos se cuentan el 4 de diciembre, en el recuento oficial.
+ca: Qui viu a l'estranger i està inscrit al cens de residents absents rep la documentació a casa sense demanar-la. Pot votar en una urna del seu consolat, del 21 al 26 de novembre, o enviar el vot per correu al consolat com a molt tard el 24; si arriba després del 27, no val. Aquests vots es compten el 4 de desembre, en el recompte oficial.
+
+es: Fuentes: LOREG, arts. 72, 73, 75 y 103; Junta Electoral Central, Instrucción 5/2023 y Acuerdos 11/2023 y 328/2023. Las fechas son el cálculo de los plazos de esos artículos para el 29N.
+ca: Fonts: LOREG, arts. 72, 73, 75 i 103; Junta Electoral Central, Instrucció 5/2023 i Acords 11/2023 i 328/2023. Les dates són el càlcul dels terminis d'aquests articles per al 29N.
 
 es: La noche electoral no es el resultado oficial
 ca: La nit electoral no és el resultat oficial
@@ -834,11 +870,11 @@ ca: Després, els diputats juren o prometen acatar la Constitució i el Congrés
 es: Para ser diputado de pleno derecho hay que entregar la credencial y la declaración de actividades, y jurar o prometer la Constitución. Quien no lo haga en tres plenos se queda sin derechos ni prerrogativas hasta que lo haga.
 ca: Per ser diputat de ple dret cal lliurar la credencial i la declaració d'activitats, i jurar o prometre la Constitució. Qui no ho faci en tres plens es queda sense drets ni prerrogatives fins que ho faci.
 
-es: Los [[grupo|grupos parlamentarios]] se forman en los cinco días siguientes.
-ca: Els [[grupo|grups parlamentaris]] es formen en els cinc dies següents.
+es: Los [[grupo|grupos parlamentarios]] se forman en los cinco días hábiles siguientes.
+ca: Els [[grupo|grups parlamentaris]] es formen en els cinc dies hàbils següents.
 
-es: Fuentes: Reglamento del Congreso, arts. 1 a 4, 20, 23, 24 y 37.
-ca: Fonts: Reglament del Congrés, arts. 1 a 4, 20, 23, 24 i 37.
+es: Fuentes: Reglamento del Congreso, arts. 1 a 4, 20, 23, 24, 37 y 90.
+ca: Fonts: Reglament del Congrés, arts. 1 a 4, 20, 23, 24, 37 i 90.
 
 es: Las consultas del Rey
 ca: Les consultes del Rei
@@ -901,6 +937,9 @@ ca: Glossari complet
 
 es: Fuentes: [Real Decreto 806/2026](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20742), [Constitución](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229), [LOREG](https://www.boe.es/buscar/act.php?id=BOE-A-1985-11672), [Reglamento del Congreso](https://www.boe.es/buscar/act.php?id=BOE-A-1982-5196), [Real Decreto 605/1999](https://www.boe.es/buscar/act.php?id=BOE-A-1999-8583) y [Ley 50/1997](https://www.boe.es/buscar/act.php?id=BOE-A-1997-25336).
 ca: Fonts: [Reial decret 806/2026](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20742), [Constitució](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229), [LOREG](https://www.boe.es/buscar/act.php?id=BOE-A-1985-11672), [Reglament del Congrés](https://www.boe.es/buscar/act.php?id=BOE-A-1982-5196), [Reial decret 605/1999](https://www.boe.es/buscar/act.php?id=BOE-A-1999-8583) i [Llei 50/1997](https://www.boe.es/buscar/act.php?id=BOE-A-1997-25336).
+
+es: Compartir
+ca: Comparteix
 
 es: Volver a la salida
 ca: Torna a la sortida

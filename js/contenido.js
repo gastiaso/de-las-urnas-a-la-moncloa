@@ -1,6 +1,6 @@
 // El contenido de los pasos: glosario, calendario, provincia, apuesta, tablas, Senado, calculadoras y resultados.
 // No dibuja nada: los efectos visuales (el escenario de los 350 escaños) le llegan en G.
-import { PROV, PROV_INICIAL, POB, PART, PORRA, COLOR_PARTIDO } from './datos.js';
+import { PROV, PROV_INICIAL, POB, PART, CONGRESO_2023, COLOR_PARTIDO } from './datos.js';
 import { T } from './textos.js';
 import { dhondt, reparto } from './dhondt.js';
 import { RES } from './resultados.js';
@@ -16,19 +16,21 @@ export const FASE2 = RES.abierta || location.hash === '#fase2';
    anuncia(texto): mensaje para lectores de pantalla. enLectura(): si se está en modo de solo texto. */
 export function contenido({ G, anuncia = () => {}, enLectura = () => false }) {
 document.body.classList.toggle('fase2', FASE2);
-const st = { prov: PROV_INICIAL, bets: [0, 0, 0, 0, 0], revealed: null, sen: new Set(), pact: {}, pact2: {} };
+// La provincia elegida se recuerda mientras dure la pestaña (sessionStorage: no sale del navegador), para que una recarga
+// no la devuelva a la inicial sin avisar.
+const guardada = (() => { try { const v = sessionStorage.getItem('prov'); return v !== null && PROV[+v] ? +v : null; } catch (e) { return null; } })();
+const st = { prov: guardada === null ? PROV_INICIAL : guardada, bets: [0, 0, 0, 0, 0], revealed: null, sen: new Set(), pact: {}, pact2: {} };
+const recuerda = () => { try { sessionStorage.setItem('prov', st.prov); } catch (e) {} };
 const S = () => PROV[st.prov][1];
-/* calendario del paso 7: cada fecha abre o cierra su explicación; solo una abierta a la vez */
-function cierraHitos(salvo) {
-  document.querySelectorAll('.hito.abierto').forEach(h => { if (h !== salvo) { h.classList.remove('abierto'); $('.fecha', h).setAttribute('aria-expanded', 'false'); } });
-}
+/* calendario del paso 7: cada fecha abre o cierra su explicación, que se despliega debajo sin tapar las fechas siguientes */
 document.addEventListener('click', e => {
-  const f = e.target.closest('.fecha');
-  if (!f) { if (!e.target.closest('.tip')) cierraHitos(null); return; }
-  const h = f.parentElement; cierraHitos(h);
-  f.setAttribute('aria-expanded', h.classList.toggle('abierto') ? 'true' : 'false');
+  const f = e.target.closest('.fecha'); if (!f) return;
+  f.setAttribute('aria-expanded', f.parentElement.classList.toggle('abierto') ? 'true' : 'false');
 });
-addEventListener('keydown', e => { if (e.key === 'Escape' && document.querySelector('.hito.abierto')) { const f = $('.hito.abierto .fecha'); cierraHitos(null); f.focus(); } });
+addEventListener('keydown', e => {
+  const f = e.key === 'Escape' && document.activeElement && document.activeElement.closest('.hito.abierto .fecha');
+  if (f) { f.parentElement.classList.remove('abierto'); f.setAttribute('aria-expanded', 'false'); }
+});
 
 /* glosario */
 document.addEventListener('click', e => {
@@ -66,7 +68,7 @@ document.addEventListener('toggle', e => {
 const sels = [...document.querySelectorAll('.selProv')];
 sels.forEach(sel => {
   PROV.forEach((p, i) => { const o = document.createElement('option'); o.value = i; o.textContent = T.provLista(i); sel.appendChild(o); });
-  sel.addEventListener('change', () => { st.prov = +sel.value; pintaProv(); });
+  sel.addEventListener('change', () => { st.prov = +sel.value; recuerda(); pintaProv(); });
 });
 function pintaProv() {
   const s = PROV[st.prov][1];
@@ -216,9 +218,10 @@ function calculadora(raiz, partidos, estado, alCambiar, clave) {
   raiz.innerHTML = '<div class="tally"><span class="tSi"></span><span class="tAbs"></span><span class="tNo"></span></div><div class="barra" role="img" aria-label="' + T.ariaBarra + '"><i class="bSi"></i><i class="bNo"></i><i class="bM"></i></div><div class="ver"><small>' + T.votacion1 + '</small><b class="v1"></b></div><div class="ver"><small>' + T.votacion2 + '</small><b class="v2"></b></div><div class="grid"></div><div class="compartir"><button type="button" class="pill sec">' + T.copiar + '</button><span class="nota" role="status"></span></div>';
   $('.compartir button', raiz).addEventListener('click', () => {
     const u = new URL(location.href), v = partidos.filter(p => COD[estado[p[0]]]).map(p => p[0] + ':' + COD[estado[p[0]]]).join(',');
-    if (v) u.searchParams.set(clave, v); else u.searchParams.delete(clave);
+    u.search = v ? '?' + clave + '=' + v : '';   // a mano, para que la dirección no salga con %3A y %2C
     try { history.replaceState(null, '', u); } catch (e) {}
-    const ok = () => { $('.compartir .nota', raiz).textContent = T.copiado; }, mal = () => { $('.compartir .nota', raiz).textContent = T.copiaManual; };
+    const bt = $('.compartir button', raiz);
+    const ok = () => { $('.compartir .nota', raiz).textContent = T.copiado; bt.textContent = T.copiado.replace(/\.$/, ''); setTimeout(() => { bt.textContent = T.copiar; }, 2500); }, mal = () => { $('.compartir .nota', raiz).textContent = T.copiaManual; };
     try { navigator.clipboard.writeText(u.href).then(ok, mal); } catch (e) { mal(); }
   });
   const btns = partidos.map(p => {
@@ -246,8 +249,8 @@ function calculadora(raiz, partidos, estado, alCambiar, clave) {
   }
   return pinta;
 }
-const pintaPact = calculadora($('#calc6'), PORRA.partidos.map(p => [...p, COLOR_PARTIDO[p[0]]]), st.pact, (e, p) => G.setPact(e, p), 'p6');
-$('#porraNota').innerHTML = T.porraNota(T.fecha(PORRA.corte));
+const pintaPact = calculadora($('#calc6'), CONGRESO_2023.partidos.map(p => [...p, COLOR_PARTIDO[p[0]]]), st.pact, (e, p) => G.setPact(e, p), 'p6');
+$('#calcNota').textContent = T.calcNota(T.fecha(CONGRESO_2023.fecha));
 
 /* ---------- fase 2: los resultados ---------- */
 let R = null, pintaPact2 = () => {};
@@ -342,7 +345,7 @@ function sincroniza() {
   if (R) { G.setRes({ porProvincia: R.prov.map(p => R.partidos.flatMap(q => Array(p.rep.seats[q.id]).fill(q.color))), hemi: R.hemi }); pintaProvRes(); pintaPact2(); }
 }
 // Cambiar de provincia desde fuera (por ejemplo, tocando el mapa).
-function eligeProv(i) { st.prov = i; pintaProv(); }
+function eligeProv(i) { st.prov = i; recuerda(); pintaProv(); }
 pintaProv(); pintaSen(); pintaPact(); pintaPact2();
 return { st, S, get R() { return R; }, pintaProv, pintaSen, pintaPact, pintaPact2: () => pintaPact2(), sincroniza, eligeProv, HAB, MEDIA };
 }

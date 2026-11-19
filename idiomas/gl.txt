@@ -36,8 +36,8 @@ gl: Este navegador non executa JavaScript: móstrase só o texto, sen a escena n
 es: 1 · Qué se vota
 gl: 1 · Que se vota
 
-es: El 29N eliges a quienes se sientan en el Congreso. Hay 350 asientos, que se llaman [[escano|escaños]], y se reparten por [[circ|circunscripciones]]: en la práctica, por provincias.
-gl: O 29N elixes quen senta no Congreso. Hai 350 asentos, que se chaman [[escano|escanos]], e repártense por [[circ|circunscricións]]: na práctica, por provincias.
+es: El 29N no eliges presidente: eliges a los 350 diputados del Congreso, que son quienes lo eligen. Sus asientos, los [[escano|escaños]], se reparten por [[circ|circunscripciones]]: en la práctica, por provincias.
+gl: O 29N non elixes presidente: elixes os 350 deputados do Congreso, que son os que o elixen. Os seus asentos, os [[escano|escanos]], repártense por [[circ|circunscricións]]: na práctica, por provincias.
 
 es: Elige tu provincia
 gl: Elixe a túa provincia
@@ -63,14 +63,14 @@ gl: Fontes: LOREG, art. 162; Real decreto 806/2026, anexo; Real decreto 1117/202
 es: Quién puede votar
 gl: Quen pode votar
 
-es: Pueden votar los españoles mayores de edad que estén inscritos en el [[censo|censo electoral]]. Solo pierde el derecho quien ha sido condenado por sentencia firme a esa pena, y mientras la cumple.
-gl: Poden votar os españois maiores de idade que estean inscritos no [[censo|censo electoral]]. Só perde o dereito quen foi condenado por sentenza firme a esa pena, e mentres a cumpre.
+es: Pueden votar los españoles mayores de edad que estén inscritos en el [[censo|censo electoral]]. La ley solo se lo quita a quien sea condenado en firme a perder el derecho de voto, y el Código Penal vigente ya no prevé esa pena.
+gl: Poden votar os españois maiores de idade que estean inscritos no [[censo|censo electoral]]. A lei só lle quita o dereito de voto a quen sexa condenado en firme a perdelo, e o Código Penal vixente xa non prevé esa pena.
 
-es: Se vota en persona, en la mesa que te toca, y una sola vez. Para identificarte vale el DNI, el pasaporte o el carné de conducir con foto.
-gl: Vótase en persoa, na mesa que che toca, e unha soa vez. Para identificarte vale o DNI, o pasaporte ou o carné de conducir con foto.
+es: Se vota en persona, en la mesa que te toca, y una sola vez. Para identificarte vale el DNI, el pasaporte o el carné de conducir con foto. El 29N vale también el DNI en el móvil (aplicación MiDNI); el carné de conducir de la aplicación miDGT, no.
+gl: Vótase en persoa, na mesa que che toca, e unha soa vez. Para identificarte vale o DNI, o pasaporte ou o carné de conducir con foto. O 29N vale tamén o DNI no móbil (aplicación MiDNI); o carné de conducir da aplicación miDGT, non.
 
-es: Fuentes: LOREG, arts. 2, 3, 4 y 85.
-gl: Fontes: LOREG, arts. 2, 3, 4 e 85.
+es: Fuentes: LOREG, arts. 2, 3, 4 y 85; Código Penal, art. 39; Junta Electoral Central, Acuerdo 334/2026.
+gl: Fontes: LOREG, arts. 2, 3, 4 e 85; Código Penal, art. 39; Xunta Electoral Central, Acordo 334/2026.
 
 es: Por qué el 29 de noviembre
 gl: Por que o 29 de novembro
@@ -90,8 +90,8 @@ gl: Como é ir votar
 es: Los colegios abren de 9:00 a 20:00, sin interrupción. Votas dos veces: una papeleta blanca para el Congreso y otra sepia para el Senado, cada una en su sobre.
 gl: Os colexios abren de 9:00 a 20:00, sen interrupción. Votas dúas veces: unha papeleta branca para o Congreso e outra sepia para o Senado, cada unha no seu sobre.
 
-es: Puedes usar la cabina, pero no es obligatorio. En la mesa, el presidente dice tu nombre, dice «vota» y el sobre entra en la urna.
-gl: Podes usar a cabina, pero non é obrigatorio. Na mesa, o presidente di o teu nome, di «vota» e o sobre entra na urna.
+es: Puedes usar la cabina, pero no es obligatorio. En la mesa dices tu nombre y te identificas; el presidente lo repite en voz alta, dice «vota» y tú metes el sobre en la urna.
+gl: Podes usar a cabina, pero non é obrigatorio. Na mesa dis o teu nome e identifícaste; o presidente repíteo en voz alta, di «vota» e ti metes o sobre na urna.
 
 es: El voto es secreto: nadie puede obligarte a decir qué has votado. Si no puedes leer o manejar las papeletas, puede ayudarte una persona de tu confianza.
 gl: O voto é secreto: ninguén te pode obrigar a dicir o que votaches. Se non podes ler ou manexar as papeletas, pode axudarte unha persoa da túa confianza.
@@ -147,8 +147,8 @@ gl: As listas alternan mulleres e homes. Pode presentarse calquera español maio
 es: Fuentes: LOREG, arts. 6, 44 bis, 46 y 96.
 gl: Fontes: LOREG, arts. 6, 44 bis, 46 e 96.
 
-es: En el mapa, cada hexágono es un escaño: las provincias crecen o encogen según los escaños que reparten, dentro de la silueta de España. Canarias va en el recuadro.
-gl: No mapa, cada hexágono é un escano: as provincias medran ou encollen segundo os escanos que reparten, dentro da silueta de España. Canarias vai no recadro.
+es: En el mapa, cada hexágono es un escaño: las provincias crecen o encogen según los escaños que reparten, dentro de la silueta de España. Canarias, abajo a la izquierda.
+gl: No mapa, cada hexágono é un escano: as provincias medran ou encollen segundo os escanos que reparten, dentro da silueta de España. Canarias, abaixo á esquerda.
 
 # ───── 2 · Del voto al escaño ─────
 
@@ -161,8 +161,8 @@ gl: Reparte todos os escanos antes de apostar.
 es: Apostar
 gl: Apostar
 
-es: El partido E no llega a la [[barrera|barrera]] del 3 % y se queda fuera del reparto.
-gl: O partido E non chega á [[barrera|barreira]] do 3 % e queda fóra do reparto.
+es: El partido E no llega a la [[barrera|barrera]] del 3 % y queda fuera. Sin ella tampoco habría sacado escaño, ni en Madrid: a los pequeños los frena que haya pocos escaños.
+gl: O partido E non chega á [[barrera|barreira]] do 3 % e queda fóra. Sen ela tampouco tería sacado escano, nin en Madrid: aos pequenos fréaos que haxa poucos escanos.
 
 es: Volver a apostar
 gl: Apostar de novo
@@ -203,8 +203,11 @@ gl: A barreira do 3 %
 es: Antes de repartir se apartan los partidos que no llegan al 3 % de los votos válidos de la provincia. Sus votos no se pasan a nadie: sencillamente no entran en la tabla.
 gl: Antes de repartir apártanse os partidos que non chegan ao 3 % dos votos válidos da provincia. Os seus votos non se lle pasan a ninguén: simplemente non entran na táboa.
 
-es: La barrera se mide provincia a provincia, no en toda España.
-gl: A barreira mídese provincia a provincia, non en toda España.
+es: La barrera se mide provincia a provincia, no en toda España. En la práctica solo puede decidir donde se reparten muchos escaños, como Madrid o Barcelona: en las demás provincias, para sacar uno hace falta bastante más del 3 %.
+gl: A barreira mídese provincia a provincia, non en toda España. Na práctica só pode decidir onde se reparten moitos escanos, como Madrid ou Barcelona: nas demais provincias, para sacar un fai falta bastante máis do 3 %.
+
+es: Fuente: LOREG, art. 163. Dónde puede decidir la barrera es una cuenta propia a partir de la regla.
+gl: Fonte: LOREG, art. 163. Onde pode decidir a barreira é unha conta propia a partir da regra.
 
 es: Fuente: LOREG, art. 163.
 gl: Fonte: LOREG, art. 163.
@@ -271,11 +274,14 @@ gl: As mesmas porcentaxes non dan o mesmo en todas partes. Cantos menos escanos 
 es: Cuántos habitantes hay detrás de cada escaño
 gl: Cantos habitantes hai detrás de cada escano
 
-es: Los escaños se reparten por población, pero con un mínimo de dos por provincia. Por eso en las provincias pequeñas hacen falta muchos menos habitantes para elegir a un diputado.
-gl: Os escanos repártense por poboación, pero cun mínimo de dous por provincia. Por iso nas provincias pequenas fan falta moitos menos habitantes para elixir un deputado.
+es: Los escaños se reparten por población, pero con un mínimo de dos por provincia. Por eso cada diputado de una provincia pequeña representa a muchos menos habitantes.
+gl: Os escanos repártense por poboación, pero cun mínimo de dous por provincia. Por iso cada deputado dunha provincia pequena representa moitos menos habitantes.
 
 es: Para el 29N, en Soria hay un escaño por cada 45.117 habitantes; en Madrid, uno por cada 187.817: cuatro veces más.
 gl: Para o 29N, en Soria hai un escano por cada 45.117 habitantes; en Madrid, un por cada 187.817: catro veces máis.
+
+es: Eso no quiere decir que el voto valga más en Soria. Allí solo se reparten dos escaños, y los votos a quien no quede entre los dos primeros no eligen a nadie. En Madrid, con 38, casi todos los votos van a partidos que sacan algún escaño.
+gl: Iso non quere dicir que o voto valla máis en Soria. Alí só se reparten dous escanos, e os votos a quen non quede entre os dous primeiros non elixen a ninguén. En Madrid, con 38, case todos os votos van a partidos que sacan algún escano.
 
 es: La cuenta es de habitantes, no de votantes: incluye a menores y a extranjeros, que no votan en estas elecciones.
 gl: A conta é de habitantes, non de votantes: inclúe menores e estranxeiros, que non votan nestas eleccións.
@@ -336,11 +342,14 @@ gl: A chave da reforma constitucional
 es: Para reformar la Constitución hacen falta tres quintos del Congreso y tres quintos del Senado. Si el Senado no llega a tres quintos, queda otra vía: que lo apruebe por mayoría absoluta y que el Congreso lo apruebe por dos tercios. Sin la mayoría absoluta del Senado, la reforma no sale.
 gl: Para reformar a Constitución fan falta tres quintos do Congreso e tres quintos do Senado. Se o Senado non chega a tres quintos, queda outra vía: que o aprobe por maioría absoluta e que o Congreso o aprobe por dous terzos. Sen a maioría absoluta do Senado, a reforma non sae.
 
-es: Las reformas de más calado, las que tocan el título preliminar, los derechos fundamentales o la Corona, exigen dos tercios de cada cámara, disolver las Cortes, que las nuevas lo ratifiquen también por dos tercios y un referéndum.
-gl: As reformas máis fondas, as que tocan o título preliminar, os dereitos fundamentais ou a Coroa, esixen dous terzos de cada cámara, disolver as Cortes, que as novas o ratifiquen tamén por dous terzos e un referendo.
+es: Las reformas de más calado, las que tocan el título preliminar, los derechos fundamentales o la Corona, exigen dos tercios de cada cámara, disolver las Cortes, que las nuevas ratifiquen la decisión y aprueben el texto por dos tercios, y un referéndum.
+gl: As reformas máis fondas, as que tocan o título preliminar, os dereitos fundamentais ou a Coroa, esixen dous terzos de cada cámara, disolver as Cortes, que as novas ratifiquen a decisión e aproben o texto por dous terzos, e un referendo.
 
-es: En la práctica, quien tenga más de la mitad del Senado puede bloquear cualquier reforma, y quien tenga más de un tercio, las de más calado. Además, una décima parte de los senadores puede exigir que cualquier reforma se vote en referéndum.
-gl: Na práctica, quen teña máis da metade do Senado pode bloquear calquera reforma, e quen teña máis dun terzo, as máis fondas. Ademais, unha décima parte dos senadores pode esixir que calquera reforma se vote en referendo.
+es: En la práctica, quien tenga la mitad del Senado o más puede bloquear cualquier reforma, y quien tenga más de un tercio, las de más calado. Además, en las demás reformas, una décima parte de los senadores o de los diputados puede exigir un referéndum.
+gl: Na práctica, quen teña a metade do Senado ou máis pode bloquear calquera reforma, e quen teña máis dun terzo, as máis fondas. Ademais, nas demais reformas, unha décima parte dos senadores ou dos deputados pode esixir un referendo.
+
+es: Estas cuentas se hacen sobre todos los senadores, incluidos los que designan los parlamentos autonómicos, no solo sobre los 209 que se votan.
+gl: Estas contas fanse sobre todos os senadores, incluídos os que designan os parlamentos autonómicos, non só sobre os 209 que se votan.
 
 es: Fuentes: Constitución, arts. 167 y 168. Las cifras de bloqueo son una cuenta propia a partir de esas mayorías.
 gl: Fontes: Constitución, arts. 167 e 168. As cifras de bloqueo son unha conta propia a partir desas maiorías.
@@ -429,11 +438,14 @@ gl: Os senadores que non se votan
 es: Además de los elegidos en las urnas, cada parlamento autonómico designa un senador, más otro por cada millón de habitantes de su comunidad. Son los [[designacion|senadores por designación]].
 gl: Ademais dos elixidos nas urnas, cada parlamento autonómico designa un senador, máis outro por cada millón de habitantes da súa comunidade. Son os [[designacion|senadores por designación]].
 
+es: No se eligen el 29N, pero cuentan igual que los demás: las mayorías del Senado se calculan sobre todos los senadores, no solo sobre los 209 que salen de las urnas.
+gl: Non se elixen o 29N, pero contan igual ca os demais: as maiorías do Senado calcúlanse sobre todos os senadores, non só sobre os 209 que saen das urnas.
+
 es: Si un senador elegido en las urnas deja el escaño, lo ocupa su suplente.
 gl: Se un senador elixido nas urnas deixa o escano, ocúpao o seu suplente.
 
-es: Fuentes: Constitución, art. 69.5; LOREG, art. 166.
-gl: Fontes: Constitución, art. 69.5; LOREG, art. 166.
+es: Fuentes: Constitución, art. 69.5; LOREG, arts. 165.4 y 166.2.
+gl: Fontes: Constitución, art. 69.5; LOREG, arts. 165.4 e 166.2.
 
 # ───── 5 · Las mayorías ─────
 
@@ -443,8 +455,8 @@ gl: 5 · As maiorías
 es: Para elegir presidente a la primera hace falta la [[absoluta|mayoría absoluta]]: 176 síes de 350. Si no sale, 48 horas después basta la [[simple|mayoría simple]]: más síes que noes.
 gl: Para elixir presidente á primeira fai falta a [[absoluta|maioría absoluta]]: 176 votos a favor de 350. Se non sae, 48 horas despois abonda coa [[simple|maioría simple]]: máis votos a favor que en contra.
 
-es: En teja, los 176 escaños que marcan la mitad más uno.
-gl: En cor tella, os 176 escanos que marcan a metade máis un.
+es: En teja, los 176 escaños que hacen falta para pasar de la mitad.
+gl: En cor tella, os 176 escanos que fan falta para pasar da metade.
 
 es: Por qué la abstención pesa distinto
 gl: Por que a abstención pesa distinto
@@ -464,14 +476,14 @@ gl: Outras maiorías
 es: La mayoría absoluta (176) también hace falta para aprobar las leyes orgánicas y la moción de censura.
 gl: A maioría absoluta (176) tamén fai falta para aprobar as leis orgánicas e a moción de censura.
 
-es: Tres quintos (210): reformar la Constitución y proponer magistrados del Tribunal Constitucional.
-gl: Tres quintos (210): reformar a Constitución e propoñer maxistrados do Tribunal Constitucional.
+es: Tres quintos (210): reformar la Constitución, proponer magistrados del Tribunal Constitucional y elegir vocales del Consejo General del Poder Judicial.
+gl: Tres quintos (210): reformar a Constitución, propoñer maxistrados do Tribunal Constitucional e elixir vogais do Consello Xeral do Poder Xudicial.
 
-es: Dos tercios (234): las reformas constitucionales de mayor alcance.
-gl: Dous terzos (234): as reformas constitucionais de maior alcance.
+es: Dos tercios (234): las reformas constitucionales de más calado.
+gl: Dous terzos (234): as reformas constitucionais máis fondas.
 
-es: Fuentes: Constitución, arts. 81, 99, 113, 159, 167 y 168. Las cifras 210 y 234 son el cálculo sobre 350 diputados.
-gl: Fontes: Constitución, arts. 81, 99, 113, 159, 167 e 168. As cifras 210 e 234 son o cálculo sobre 350 deputados.
+es: Fuentes: Constitución, arts. 81, 99, 113, 159, 167 y 168; Ley Orgánica del Poder Judicial, art. 567.2. Las cifras 210 y 234 son el cálculo sobre 350 diputados.
+gl: Fontes: Constitución, arts. 81, 99, 113, 159, 167 e 168; Lei orgánica do poder xudicial, art. 567.2. As cifras 210 e 234 son o cálculo sobre 350 deputados.
 
 es: El día a día: quórum y mayoría simple
 gl: O día a día: quórum e maioría simple
@@ -526,20 +538,35 @@ gl: Fonte: Constitución, art. 134.
 es: 6 · Pactos
 gl: 6 · Pactos
 
-es: Si ningún partido llega solo a 176, toca pactar. Toca cada partido para cambiar su voto en la [[investidura|investidura]]: no, sí o [[abstencion|abstención]].
-gl: Se ningún partido chega el só a 176, toca pactar. Toca cada partido para cambiar o seu voto na [[investidura|investidura]]: non, si ou [[abstencion|abstención]].
+es: Si ningún partido llega solo a 176, hay que pactar. Es presidente quien reúne más síes que noes, sea o no del partido más votado.
+gl: Se ningún partido chega el só a 176, hai que pactar. É presidente quen xunta máis votos a favor que en contra, sexa ou non do partido máis votado.
 
-es: Tres maneras de apoyar
-gl: Tres maneiras de apoiar
+es: Toca cada partido para cambiar su voto en la [[investidura|investidura]]: no, sí o [[abstencion|abstención]]. Cada combinación es la investidura de un candidato concreto: tú decides de quién.
+gl: Toca cada partido para cambiar o seu voto na [[investidura|investidura]]: non, si ou [[abstencion|abstención]]. Cada combinación é a investidura dun candidato concreto: ti decides de quen.
 
-es: Un partido puede ayudar a un candidato de tres maneras. Entrando en el Gobierno con él: es una coalición. Votando sí sin entrar en el Gobierno. O absteniéndose, para que le baste con la segunda votación.
-gl: Un partido pode axudar un candidato de tres maneiras. Entrando no Goberno con el: é unha coalición. Votando que si sen entrar no Goberno. Ou absténdose, para que lle abonde coa segunda votación.
+es: Cómo se apoya a un candidato
+gl: Como se apoia un candidato
 
-es: Lo que se pide a cambio no está en ninguna ley: es negociación política.
-gl: O que se pide a cambio non está en ningunha lei: é negociación política.
+es: Un partido puede ayudar a un candidato con su voto: con un sí, o absteniéndose para que le baste la segunda votación. Y puede ir más allá: entrar en el Gobierno con él (una coalición) o quedarse fuera y pactar su apoyo, para toda la legislatura o ley a ley.
+gl: Un partido pode axudar un candidato co seu voto: cun si, ou absténdose para que lle abonde a segunda votación. E pode ir máis alá: entrar no Goberno con el (unha coalición) ou quedar fóra e pactar o seu apoio, para toda a lexislatura ou lei a lei.
+
+es: La investidura solo abre la puerta: después, cada ley y cada Presupuesto necesitan su propia mayoría. Lo que se pide a cambio no está en ninguna ley: es negociación política.
+gl: A investidura só abre a porta: despois, cada lei e cada orzamento necesitan a súa propia maioría. O que se pide a cambio non está en ningunha lei: é negociación política.
 
 es: Explicación propia. Las mayorías, en el art. 99 de la Constitución.
 gl: Explicación propia. As maiorías, no art. 99 da Constitución.
+
+es: Por qué se mueven partidos enteros
+gl: Por que se moven partidos enteiros
+
+es: La calculadora mueve partidos enteros porque los diputados votan casi siempre lo que decide su partido: es la disciplina de voto.
+gl: A calculadora move partidos enteiros porque os deputados votan case sempre o que decide o seu partido: é a disciplina de voto.
+
+es: No es una obligación legal. La Constitución dice que diputados y senadores no están sujetos a mandato imperativo: nadie puede obligarlos legalmente a votar en un sentido.
+gl: Non é unha obriga legal. A Constitución di que deputados e senadores non están suxeitos a mandato imperativo: ninguén os pode obrigar legalmente a votar nun sentido.
+
+es: Fuente: Constitución, art. 67.2. La disciplina de voto es una explicación propia.
+gl: Fonte: Constitución, art. 67.2. A disciplina de voto é unha explicación propia.
 
 es: Cómo se vota la investidura
 gl: Como se vota a investidura
@@ -571,23 +598,29 @@ gl: Fontes: Constitución, art. 99; LOREG, art. 42 e disposición adicional sét
 es: De dónde salen estos escaños
 gl: De onde saen estes escanos
 
-es: No son resultados: son escaños calculados a partir de las últimas encuestas por [Porra Electoral](https://gastiaso.github.io/porra-electoral/), que junta las encuestas publicadas y simula el reparto provincia a provincia. El 30N se cambiarán por los escaños de verdad.
-gl: Non son resultados: son escanos calculados a partir das últimas enquisas por [Porra Electoral](https://gastiaso.github.io/porra-electoral/), que xunta as enquisas publicadas e simula o reparto provincia a provincia. O 30N cambiaranse polos escanos de verdade.
+es: Son los escaños que cada partido sacó en las últimas elecciones generales, las del 23 de julio de 2023. No son una encuesta ni una estimación.
+gl: Son os escanos que cada partido sacou nas últimas eleccións xerais, as do 23 de xullo de 2023. Non son unha enquisa nin unha estimación.
 
-es: Fuente: [Porra Electoral](https://gastiaso.github.io/porra-electoral/).
-gl: Fonte: [Porra Electoral](https://gastiaso.github.io/porra-electoral/).
+es: Con ellos, la investidura de noviembre de 2023 salió a la primera: 179 síes y 171 noes. Prueba a repetirla, o busca otras combinaciones.
+gl: Con eles, a investidura de novembro de 2023 saíu á primeira: 179 votos a favor e 171 en contra. Proba a repetila, ou busca outras combinacións.
 
-es: Por qué la calculadora lleva fecha
-gl: Por que a calculadora leva data
+es: Los escaños del 29N estarán en el paso 12 cuando haya resultados.
+gl: Os escanos do 29N estarán no paso 12 cando haxa resultados.
 
-es: La ley prohíbe publicar o difundir encuestas electorales en los cinco días anteriores a la votación: para el 29N, del 24 al 28 de noviembre. Por eso la estimación de esta calculadora se congeló antes y lleva la fecha de la última encuesta que incluye.
-gl: A lei prohibe publicar ou difundir enquisas electorais nos cinco días anteriores á votación: para o 29N, do 24 ao 28 de novembro. Por iso a estimación desta calculadora conxelouse antes e leva a data da última enquisa que inclúe.
+es: Fuentes: Junta Electoral Central, resultados de las elecciones del 23 de julio de 2023 (BOE del 1 de septiembre de 2023; los 121 escaños del PSOE incluyen los 19 del PSC); Diario de Sesiones del Congreso, Pleno núm. 8, de 16 de noviembre de 2023.
+gl: Fontes: Xunta Electoral Central, resultados das eleccións do 23 de xullo de 2023 (BOE do 1 de setembro de 2023; os 121 escanos do PSOE inclúen os 19 do PSC); Diario de Sesións do Congreso, Pleno núm. 8, do 16 de novembro de 2023.
 
-es: Quien vigila que las encuestas cumplan la ley es la Junta Electoral Central.
-gl: Quen vixía que as enquisas cumpran a lei é a Xunta Electoral Central.
+es: Por qué aquí no hay encuestas
+gl: Por que aquí non hai enquisas
 
-es: Fuente: LOREG, art. 69. Del 24 al 28 de noviembre es el cálculo de los cinco días.
-gl: Fonte: LOREG, art. 69. Do 24 ao 28 de novembro é o cálculo dos cinco días.
+es: La ley prohíbe publicar, difundir o reproducir sondeos electorales en los cinco días anteriores a la votación: para el 29N, del 24 al 28 de noviembre. Esta calculadora no usa encuestas ni estimaciones: usa un resultado, el de 2023.
+gl: A lei prohibe publicar, difundir ou reproducir sondaxes electorais nos cinco días anteriores á votación: para o 29N, do 24 ao 28 de novembro. Esta calculadora non usa enquisas nin estimacións: usa un resultado, o de 2023.
+
+es: Quien vigila que se cumpla es la Junta Electoral Central.
+gl: Quen vixía que se cumpra é a Xunta Electoral Central.
+
+es: Fuente: LOREG, art. 69.7. Del 24 al 28 de noviembre es el cálculo de los cinco días.
+gl: Fonte: LOREG, art. 69.7. Do 24 ao 28 de novembro é o cálculo dos cinco días.
 
 # ───── 7 · Del 29N al Gobierno ─────
 
@@ -627,8 +660,8 @@ gl: xov 19 nov
 es: Último día para pedir el voto por correo
 gl: Último día para pedir o voto por correo
 
-es: Se pide en una oficina de Correos, en persona y con el DNI. Las papeletas llegan después a casa y se devuelven por correo certificado, sin sello. <small>LOREG, arts. 72 y 73. Fecha: cálculo del décimo día anterior.</small>
-gl: Pídese nunha oficina de Correos, en persoa e co DNI. As papeletas chegan despois á casa e devólvense por correo certificado, sen selo. <small>LOREG, arts. 72 e 73. Data: cálculo do décimo día anterior.</small>
+es: Se pide en una oficina de Correos, en persona y con el DNI, o por internet con certificado electrónico. Las papeletas llegan a casa. El voto se entrega después en una oficina de Correos, identificándose, como tarde el 25 de noviembre, salvo que se amplíe el plazo. <small>LOREG, arts. 72 y 73; Junta Electoral Central, Instrucción 5/2023 y Acuerdo 11/2023. Fechas: cálculo del décimo día anterior y del último antes del tercero.</small>
+gl: Pídese nunha oficina de Correos, en persoa e co DNI, ou por internet con certificado electrónico. As papeletas chegan á casa. O voto entrégase despois nunha oficina de Correos, identificándose, como moi tarde o 25 de novembro, salvo que se amplíe o prazo. <small>LOREG, arts. 72 e 73; Xunta Electoral Central, Instrución 5/2023 e Acordo 11/2023. Datas: cálculo do décimo día anterior e do último antes do terceiro.</small>
 
 es: 21 a 26 nov
 gl: 21 a 26 nov
@@ -636,8 +669,8 @@ gl: 21 a 26 nov
 es: Voto en los consulados
 gl: Voto nos consulados
 
-es: Quien vive en el extranjero puede depositar su voto en una urna de su consulado o embajada. Si lo manda por correo, tiene que enviarlo como tarde el 24. <small>LOREG, art. 75. Fechas: cálculo de los plazos del artículo.</small>
-gl: Quen vive no estranxeiro pode depositar o seu voto nunha urna do seu consulado ou embaixada. Se o manda por correo, ten que envialo como moi tarde o 24. <small>LOREG, art. 75. Datas: cálculo dos prazos do artigo.</small>
+es: Quien vive en el extranjero puede depositar su voto en una urna de su consulado o embajada. Si lo manda por correo, tiene que enviarlo como tarde el 24 y tiene que llegar al consulado como tarde el 27. <small>LOREG, art. 75. Fechas: cálculo de los plazos del artículo.</small>
+gl: Quen vive no estranxeiro pode depositar o seu voto nunha urna do seu consulado ou embaixada. Se o manda por correo, ten que envialo como moi tarde o 24 e ten que chegar ao consulado como moi tarde o 27. <small>LOREG, art. 75. Datas: cálculo dos prazos do artigo.</small>
 
 es: 24 a 28 nov
 gl: 24 a 28 nov
@@ -663,8 +696,8 @@ gl: sáb 28 nov
 es: Jornada de reflexión
 gl: Xornada de reflexión
 
-es: La víspera no puede haber propaganda ni actos de campaña. <small>LOREG, arts. 51.3 y 53.</small>
-gl: A véspera non pode haber propaganda nin actos de campaña. <small>LOREG, arts. 51.3 e 53.</small>
+es: La víspera no puede haber propaganda ni actos de campaña. Tampoco el día de la votación. <small>LOREG, arts. 51.3 y 53.</small>
+gl: A véspera non pode haber propaganda nin actos de campaña. Tampouco o día da votación. <small>LOREG, arts. 51.3 e 53.</small>
 
 es: La votación
 gl: A votación
@@ -711,14 +744,14 @@ gl: Constitúense o Congreso e o Senado
 es: A las diez de la mañana, cada cámara en su sesión constitutiva. En el Congreso preside al principio el diputado de más edad, se elige la Mesa y los diputados juran o prometen la Constitución. <small>Real Decreto 806/2026, art. 5; Constitución, art. 72.2; Reglamento del Congreso, arts. 1 a 4 y 37.</small>
 gl: Ás dez da mañá, cada cámara na súa sesión constitutiva. No Congreso preside ao principio o deputado de máis idade, elíxese a Mesa e os deputados xuran ou prometen a Constitución. <small>Real decreto 806/2026, art. 5; Constitución, art. 72.2; Regulamento do Congreso, arts. 1 a 4 e 37.</small>
 
-es: hasta el 28 dic
-gl: ata o 28 dec
+es: fin de dic
+gl: fins de dec
 
 es: Se forman los grupos parlamentarios
 gl: Fórmanse os grupos parlamentarios
 
-es: En los cinco días siguientes a la sesión constitutiva. Por regla general hacen falta quince diputados; hay otra vía con cinco si se supera un mínimo de votos. <small>Reglamento del Congreso, arts. 23 y 24. Fecha: cálculo de los cinco días.</small>
-gl: Nos cinco días seguintes á sesión constitutiva. Por regra xeral fan falta quince deputados; hai outra vía con cinco se se supera un mínimo de votos. <small>Regulamento do Congreso, arts. 23 e 24. Data: cálculo dos cinco días.</small>
+es: En los cinco días hábiles siguientes a la sesión constitutiva: el plazo acaba en los últimos días de diciembre. Por regla general hacen falta quince diputados; hay otra vía con cinco si se supera un mínimo de votos. <small>Reglamento del Congreso, arts. 23, 24 y 90 (los plazos por días se cuentan en días hábiles).</small>
+gl: Nos cinco días hábiles seguintes á sesión constitutiva: o prazo remata nos últimos días de decembro. Por regra xeral fan falta quince deputados; hai outra vía con cinco se se supera un mínimo de votos. <small>Regulamento do Congreso, arts. 23, 24 e 90 (os prazos por días cóntanse en días hábiles).</small>
 
 es: 1 ene 2027
 gl: 1 xan 2027
@@ -756,8 +789,8 @@ gl: D + 48 h
 es: Segunda votación
 gl: Segunda votación
 
-es: Si no llegó a 176, basta con más síes que noes. Si tampoco sale, el Rey puede proponer a otro candidato. <small>Constitución, art. 99.3 y 99.4.</small>
-gl: Se non chegou a 176, abonda con máis votos a favor que en contra. Se tampouco sae, o Rei pode propoñer outro candidato. <small>Constitución, art. 99.3 e 99.4.</small>
+es: Si no llegó a 176, basta con más síes que noes. Si tampoco sale, el Rey puede hacer nuevas propuestas. <small>Constitución, art. 99.3 y 99.4.</small>
+gl: Se non chegou a 176, abonda con máis votos a favor que en contra. Se tampouco sae, o Rei pode facer novas propostas. <small>Constitución, art. 99.3 e 99.4.</small>
 
 es: D + 2 meses
 gl: D + 2 meses
@@ -783,8 +816,8 @@ gl: A campaña e a xornada de reflexión
 es: La campaña dura quince días: del viernes 13 al viernes 27 de noviembre. Es el tiempo en que los partidos piden el voto con mítines, carteles y anuncios. Antes del 13 no pueden poner carteles ni anuncios electorales.
 gl: A campaña dura quince días: do venres 13 ao venres 27 de novembro. É o tempo en que os partidos piden o voto con mitins, carteis e anuncios. Antes do 13 non poden poñer carteis nin anuncios electorais.
 
-es: El sábado 28, la víspera, no puede haber propaganda ni actos de campaña. Es lo que se conoce como jornada de reflexión.
-gl: O sábado 28, a véspera, non pode haber propaganda nin actos de campaña. É o que se coñece como xornada de reflexión.
+es: El sábado 28, la víspera, no puede haber propaganda ni actos de campaña: es lo que se conoce como jornada de reflexión. Tampoco puede haberlos el domingo de la votación.
+gl: O sábado 28, a véspera, non pode haber propaganda nin actos de campaña: é o que se coñece como xornada de reflexión. Tampouco pode habelos o domingo da votación.
 
 es: Fuentes: LOREG, arts. 51 y 53; Real Decreto 806/2026, art. 4. «Jornada de reflexión» es el nombre de uso común; la ley habla del periodo en que la campaña ha terminado.
 gl: Fontes: LOREG, arts. 51 e 53; Real decreto 806/2026, art. 4. «Xornada de reflexión» é o nome de uso común; a lei fala do período en que a campaña rematou.
@@ -792,14 +825,17 @@ gl: Fontes: LOREG, arts. 51 e 53; Real decreto 806/2026, art. 4. «Xornada de re
 es: Si ese día no puedes ir
 gl: Se ese día non podes ir
 
-es: Existe el voto por correo. Hay que pedirlo en una oficina de Correos, en persona y con el DNI, hasta diez días antes de la votación: para el 29N, hasta el 19 de noviembre. Después te llegan las papeletas a casa y las devuelves por correo certificado, sin pagar sello.
-gl: Existe o voto por correo. Hai que pedilo nunha oficina de Correos, en persoa e co DNI, ata dez días antes da votación: para o 29N, ata o 19 de novembro. Despois chéganche as papeletas á casa e devólvelas por correo certificado, sen pagar selo.
+es: Existe el voto por correo. Hay que pedirlo hasta diez días antes de la votación (para el 29N, hasta el 19 de noviembre): en una oficina de Correos, en persona y con el DNI, o por internet con certificado electrónico. Después te llegan las papeletas a casa.
+gl: Existe o voto por correo. Hai que pedilo ata dez días antes da votación (para o 29N, ata o 19 de novembro): nunha oficina de Correos, en persoa e co DNI, ou por internet con certificado electrónico. Despois chéganche as papeletas á casa.
 
-es: Quien vive en el extranjero y está inscrito en el censo de residentes ausentes recibe la documentación en casa sin pedirla. Puede votar en una urna de su consulado, del 21 al 26 de noviembre, o mandar el voto por correo al consulado como tarde el 24. Esos votos se cuentan el 4 de diciembre, en el recuento oficial.
-gl: Quen vive no estranxeiro e está inscrito no censo de residentes ausentes recibe a documentación na casa sen pedila. Pode votar nunha urna do seu consulado, do 21 ao 26 de novembro, ou mandar o voto por correo ao consulado como moi tarde o 24. Eses votos cóntanse o 4 de decembro, no reconto oficial.
+es: El voto no se echa a un buzón: se entrega en una oficina de Correos, identificándote, como tarde el miércoles 25 de noviembre. En otras elecciones, la Junta Electoral Central ha ampliado ese plazo. Si no puedes ir, puede llevarlo otra persona con una autorización firmada por ti y una fotocopia de tu DNI. No se paga sello.
+gl: O voto non se bota nun buzón: entrégase nunha oficina de Correos, identificándote, como moi tarde o mércores 25 de novembro. Noutras eleccións, a Xunta Electoral Central ampliou ese prazo. Se non podes ir, pode levalo outra persoa cunha autorización asinada por ti e unha fotocopia do teu DNI. Non se paga selo.
 
-es: Fuentes: LOREG, arts. 72, 73, 75 y 103. Las fechas son el cálculo de los plazos de esos artículos para el 29N.
-gl: Fontes: LOREG, arts. 72, 73, 75 e 103. As datas son o cálculo dos prazos deses artigos para o 29N.
+es: Quien vive en el extranjero y está inscrito en el censo de residentes ausentes recibe la documentación en casa sin pedirla. Puede votar en una urna de su consulado, del 21 al 26 de noviembre, o mandar el voto por correo al consulado como tarde el 24; si llega después del 27, no vale. Esos votos se cuentan el 4 de diciembre, en el recuento oficial.
+gl: Quen vive no estranxeiro e está inscrito no censo de residentes ausentes recibe a documentación na casa sen pedila. Pode votar nunha urna do seu consulado, do 21 ao 26 de novembro, ou mandar o voto por correo ao consulado como moi tarde o 24; se chega despois do 27, non vale. Eses votos cóntanse o 4 de decembro, no reconto oficial.
+
+es: Fuentes: LOREG, arts. 72, 73, 75 y 103; Junta Electoral Central, Instrucción 5/2023 y Acuerdos 11/2023 y 328/2023. Las fechas son el cálculo de los plazos de esos artículos para el 29N.
+gl: Fontes: LOREG, arts. 72, 73, 75 e 103; Xunta Electoral Central, Instrución 5/2023 e Acordos 11/2023 e 328/2023. As datas son o cálculo dos prazos deses artigos para o 29N.
 
 es: La noche electoral no es el resultado oficial
 gl: A noite electoral non é o resultado oficial
@@ -834,11 +870,11 @@ gl: Despois, os deputados xuran ou prometen acatar a Constitución e o Congreso 
 es: Para ser diputado de pleno derecho hay que entregar la credencial y la declaración de actividades, y jurar o prometer la Constitución. Quien no lo haga en tres plenos se queda sin derechos ni prerrogativas hasta que lo haga.
 gl: Para ser deputado de pleno dereito hai que entregar a credencial e a declaración de actividades, e xurar ou prometer a Constitución. Quen non o faga en tres plenos queda sen dereitos nin prerrogativas ata que o faga.
 
-es: Los [[grupo|grupos parlamentarios]] se forman en los cinco días siguientes.
-gl: Os [[grupo|grupos parlamentarios]] fórmanse nos cinco días seguintes.
+es: Los [[grupo|grupos parlamentarios]] se forman en los cinco días hábiles siguientes.
+gl: Os [[grupo|grupos parlamentarios]] fórmanse nos cinco días hábiles seguintes.
 
-es: Fuentes: Reglamento del Congreso, arts. 1 a 4, 20, 23, 24 y 37.
-gl: Fontes: Regulamento do Congreso, arts. 1 a 4, 20, 23, 24 e 37.
+es: Fuentes: Reglamento del Congreso, arts. 1 a 4, 20, 23, 24, 37 y 90.
+gl: Fontes: Regulamento do Congreso, arts. 1 a 4, 20, 23, 24, 37 e 90.
 
 es: Las consultas del Rey
 gl: As consultas do Rei
@@ -901,6 +937,9 @@ gl: Glosario completo
 
 es: Fuentes: [Real Decreto 806/2026](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20742), [Constitución](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229), [LOREG](https://www.boe.es/buscar/act.php?id=BOE-A-1985-11672), [Reglamento del Congreso](https://www.boe.es/buscar/act.php?id=BOE-A-1982-5196), [Real Decreto 605/1999](https://www.boe.es/buscar/act.php?id=BOE-A-1999-8583) y [Ley 50/1997](https://www.boe.es/buscar/act.php?id=BOE-A-1997-25336).
 gl: Fontes: [Real decreto 806/2026](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20742), [Constitución](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229), [LOREG](https://www.boe.es/buscar/act.php?id=BOE-A-1985-11672), [Regulamento do Congreso](https://www.boe.es/buscar/act.php?id=BOE-A-1982-5196), [Real decreto 605/1999](https://www.boe.es/buscar/act.php?id=BOE-A-1999-8583) e [Lei 50/1997](https://www.boe.es/buscar/act.php?id=BOE-A-1997-25336).
+
+es: Compartir
+gl: Compartir
 
 es: Volver a la salida
 gl: Volver á saída

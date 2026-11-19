@@ -9,7 +9,6 @@ const dec = x => x.toFixed(1).replace('.', ',');
 const nvotos = n => miles(n) + (Math.round(n) === 1 ? ' voto' : ' votos');
 const faltan = n => (n === 1 ? 'falta ' : 'faltan ') + sies(n);
 const mai = s => s.charAt(0).toUpperCase() + s.slice(1);
-const PORRA = '<a href="https://gastiaso.github.io/porra-electoral/">Porra Electoral</a>';
 
 /* provincias: las 52 circunscripciones en el mismo orden que PROV (js/datos.js), con las formas que recomienda la RAG */
 const NOMES = ['Albacete', 'Alacante', 'Almería', 'Áraba', 'Asturias', 'Ávila', 'Badaxoz', 'Illas Baleares', 'Barcelona', 'Biscaia', 'Burgos', 'Cáceres', 'Cádiz',
@@ -59,8 +58,8 @@ const GLOS = {
   censo: ['Censo electoral', 'A lista oficial de quen pode votar. Para votar hai que estar inscrito nela.'],
   mesael: ['Mesa electoral', 'O equipo que atende a urna: un presidente e dous vogais, elixidos por sorteo entre os votantes desa mesa.'],
   junta: ['Xunta electoral', 'O órgano que vixía que as eleccións sexan limpas e fai o reconto oficial. Hai unha central, unha por provincia e outras de zona.'],
-  lista: ['Lista', 'A candidatura dun partido nunha provincia: tantos nomes como escanos se reparten, nunha orde fixa.'],
-  suplente: ['Suplente', 'Quen vai na lista por detrás dos titulares e entra se algún deles deixa o escano.'],
+  lista: ['Lista', 'A candidatura dun partido nunha provincia: tantos candidatos como escanos se reparten, nunha orde fixa, e ata dez suplentes.'],
+  suplente: ['Suplente', 'Quen vai ao final da lista, detrás dos candidatos. Só entra se queda un escano libre e xa non hai candidatos por diante. No Senado, cada candidato leva dous.'],
   quorum: ['Quórum', 'O mínimo de asistentes para que unha votación valla: máis da metade da Cámara.'],
   organica: ['Lei orgánica', 'Unha lei sobre asuntos de máis peso, como os dereitos fundamentais ou as regras electorais. Necesita maioría absoluta do Congreso.'],
   decretoley: ['Decreto lei', 'Unha norma que o Goberno aproba por urxencia. O Congreso ten trinta días para mantela ou tombala.'],
@@ -138,6 +137,7 @@ export const textos = {
     3: 'Máis escuro: menos habitantes por escano',
     4: 'Senado: 209 elixidos, catro por provincia',
     5: '176 de 350: a maioría absoluta',
+    7: 'O Congreso que elixirá presidente<small>O prazo de dous meses comeza coa primeira votación.</small>',
     8: '350 escanos',
     9: 'Cada escano, da cor de quen o gañou',
     10: prov(i) + ': ' + escanos(n),
@@ -168,8 +168,8 @@ export const textos = {
         if (ISLAS[i]) return 'A túa segunda papeleta, a sepia, é a do Senado. ' + En(i) + ' depende da túa illa: ' + ISLAS[i] + '.';
         if (uno) return 'A túa segunda papeleta, a sepia, é a do Senado. ' + suxeito(i, true) + ' ' + verbo(i, 'pasa', 'pasan') + ' dun deputado a <b>dous</b> senadores.';
         return 'A túa segunda papeleta, a sepia, é a do Senado. No mapa, ' + suxeito(i) + ' ' + verbo(i, 'pasa', 'pasan') + ' de ' + n + ' deputados a <b>catro</b> senadores, como calquera provincia da Península.';
-      case 5: return (uno ? 'O deputado ' + de(i) + ' senta' : 'Os ' + n + ' deputados ' + de(i) + ' sentan') + ' cos outros ' + (350 - n) + '. No hemiciclo, o teu voto é un deses asentos.';
-      case 6: return (uno ? 'O deputado ' + de(i) + ' vota co seu partido.' : 'Os ' + n + ' deputados ' + de(i) + ' votan cada un co seu partido.') + ' O teu voto queda á parte, debaixo do hemiciclo: en que bloque estaría depende de a quen votes.';
+      case 5: return (uno ? 'O deputado ' + de(i) + ' senta' : 'Os ' + n + ' deputados ' + de(i) + ' sentan') + ' cos outros ' + (350 - n) + '. ' + (uno ? 'O teu voto conta para ese asento só se o teu partido é o máis votado alí.' : 'O teu voto conta para algún deses asentos só se o teu partido saca escano alí.');
+      case 6: return (uno ? 'O deputado ' + de(i) + ' adoita votar co seu partido.' : 'Os ' + n + ' deputados ' + de(i) + ' adoitan votar co seu partido.') + ' O teu voto queda á parte, debaixo do hemiciclo: en que bloque estaría depende de a quen votes.';
       case 7: return 'A noite do 29N, a túa papeleta cóntase na túa mesa ' + de(i) + ', en público e en voz alta.';
       case 8: return 'Ese é o camiño da túa papeleta ' + en(i) + ': da urna á Moncloa.';
       case 10: return primero ? 'O hexágono dourado é o primeiro escano que se repartiu ' + en(i) + ': foi para <b>' + primero + '</b>.' : '';
@@ -230,6 +230,7 @@ export const textos = {
   copiar: 'Copiar a ligazón a esta combinación',
   copiado: 'Ligazón copiada.',
   copiaManual: 'Copia o enderezo do navegador: xa leva a combinación.',
+  copiaDireccion: 'Copia o enderezo do navegador',
   ariaPartido: (nombre, n, voto) => nombre + ', ' + escanos(n) + ', vota ' + voto + '. Toca para cambiar',
   cuentaSi: n => 'Si: ' + n,
   cuentaAbs: n => 'Abst.: ' + n,
@@ -237,7 +238,7 @@ export const textos = {
   primera: si => si >= 176 ? 'Sae: ten ' + sies(si) + '.' : 'Non sae: ' + faltan(176 - si) + '.',
   segunda: (si, no) => (si > no ? 'Sae: ' : 'Non sae: ') + si + ' a favor fronte a ' + no + ' en contra' + '.',
   anuncioPacto: (si, abs, no, primera, segunda) => 'Si ' + si + ', abstención ' + abs + ', non ' + no + '. Primeira votación: ' + primera + ' Segunda: ' + segunda,
-  porraNota: corte => 'Escanos calculados a partir das últimas enquisas, ata o ' + corte + ' (' + PORRA + '). É unha estimación, non un resultado.',
+  calcNota: data => 'Escanos que cada partido sacou nas eleccións do ' + data + ', as últimas antes do 29N. Non é unha enquisa nin un resultado do 29N.',
 
   /* fase 2: los resultados */
   avisoPrueba: etiqueta => 'Vista previa con datos de proba: ' + etiqueta + '. Non son os resultados do 29N.',

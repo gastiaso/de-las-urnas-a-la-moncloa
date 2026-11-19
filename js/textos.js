@@ -10,7 +10,6 @@ const dec = x => x.toFixed(1).replace('.', ',');
 // Nombre para el texto: «Balears (Illes)» → «Illes Balears», «Coruña (A)» → «A Coruña».
 const prov = i => PROV[i][0].replace(/^(.*) \((.*)\)$/, '$2 $1');
 const faltan = n => (n === 1 ? 'falta ' : 'faltan ') + sies(n);
-const PORRA = '<a href="https://gastiaso.github.io/porra-electoral/">Porra Electoral</a>';
 
 export const ES = {
   cod: 'es',      // carpeta del idioma; el castellano está en la raíz
@@ -26,7 +25,7 @@ export const ES = {
 
   /* textos que en castellano viven en js/datos.js */
   titulos: TITULOS, sen: SEN, glos: GLOS,
-  fecha: f => f,   // la fecha de corte de la estimación, escrita como en js/datos.js («8 de noviembre de 2026»)
+  fecha: f => f,   // una fecha escrita como en js/datos.js («23 de julio de 2023»)
   dato: s => s,    // los textos que vienen dentro de js/resultados.js (etiqueta, fuente e hitos)
 
   /* el escenario */
@@ -41,6 +40,7 @@ export const ES = {
     3: 'Más oscuro: menos habitantes por escaño',
     4: 'Senado: 209 elegidos, cuatro por provincia',
     5: '176 de 350: la mayoría absoluta',
+    7: 'El Congreso que elegirá presidente<small>El plazo de dos meses empieza con la primera votación.</small>',
     8: '350 escaños',
     9: 'Cada escaño, del color de quien lo ganó',
     10: prov(i) + ': ' + escanos(n),
@@ -77,8 +77,8 @@ export const ES = {
         if (this.islas[i]) return 'Tu segunda papeleta, la sepia, es la del Senado. En ' + nom + ' depende de tu isla: ' + this.islas[i] + '.';
         if (uno) return 'Tu segunda papeleta, la sepia, es la del Senado. ' + nom + ' pasa de un diputado a <b>dos</b> senadores.';
         return 'Tu segunda papeleta, la sepia, es la del Senado. En el mapa, ' + nom + ' pasa de ' + n + ' diputados a <b>cuatro</b> senadores, como cualquier provincia de la Península.';
-      case 5: return (uno ? 'El diputado de ' + nom + ' se sienta' : 'Los ' + n + ' diputados de ' + nom + ' se sientan') + ' con los otros ' + (350 - n) + '. En el hemiciclo, tu voto es uno de esos asientos.';
-      case 6: return (uno ? 'El diputado de ' + nom + ' vota con su partido.' : 'Los ' + n + ' diputados de ' + nom + ' votan cada uno con su partido.') + ' Tu voto queda aparte, debajo del hemiciclo: en qué bloque estaría depende de a quién votes.';
+      case 5: return (uno ? 'El diputado de ' + nom + ' se sienta' : 'Los ' + n + ' diputados de ' + nom + ' se sientan') + ' con los otros ' + (350 - n) + '. ' + (uno ? 'Tu voto cuenta para ese asiento solo si tu partido es el más votado allí.' : 'Tu voto cuenta para alguno de esos asientos solo si tu partido saca escaño allí.');
+      case 6: return (uno ? 'El diputado de ' + nom + ' suele votar con su partido.' : 'Los ' + n + ' diputados de ' + nom + ' suelen votar con su partido.') + ' Tu voto queda aparte, debajo del hemiciclo: en qué bloque estaría depende de a quién votes.';
       case 7: return 'La noche del 29N, tu papeleta se cuenta en tu mesa de ' + nom + ', en público y en voz alta.';
       case 8: return 'Ese es el camino de tu papeleta en ' + nom + ': de la urna a la Moncloa.';
       case 10: return primero ? 'El hexágono dorado es el primer escaño que se repartió en ' + nom + ': fue para <b>' + primero + '</b>.' : '';
@@ -140,6 +140,7 @@ export const ES = {
   copiar: 'Copiar enlace a esta combinación',
   copiado: 'Enlace copiado.',
   copiaManual: 'Copia la dirección del navegador: ya lleva la combinación.',
+  copiaDireccion: 'Copia la dirección del navegador',   // botón «Compartir», si no se puede copiar sola
   ariaPartido: (nombre, n, voto) => nombre + ', ' + escanos(n) + ', vota ' + voto + '. Toca para cambiar',
   cuentaSi: n => 'Sí: ' + n,
   cuentaAbs: n => 'Abst.: ' + n,
@@ -147,7 +148,8 @@ export const ES = {
   primera: si => si >= 176 ? 'Sale: tiene ' + si + ' síes.' : 'No sale: ' + faltan(176 - si) + '.',
   segunda: (si, no) => (si > no ? 'Sale: ' : 'No sale: ') + si + ' síes frente a ' + no + ' noes.',
   anuncioPacto: (si, abs, no, primera, segunda) => 'Sí ' + si + ', abstención ' + abs + ', no ' + no + '. Primera votación: ' + primera + ' Segunda: ' + segunda,
-  porraNota: corte => 'Escaños calculados a partir de las últimas encuestas, hasta el ' + corte + ' (' + PORRA + '). Es una estimación, no un resultado.',
+  // fecha: la de las elecciones de las que salen los escaños del paso 6, ya escrita en el idioma (T.fecha)
+  calcNota: fecha => 'Escaños que cada partido sacó en las elecciones del ' + fecha + ', las últimas antes del 29N. No es una encuesta ni un resultado del 29N.',
 
   /* fase 2: los resultados */
   avisoPrueba: etiqueta => 'Vista previa con datos de prueba: ' + etiqueta + '. No son los resultados del 29N.',

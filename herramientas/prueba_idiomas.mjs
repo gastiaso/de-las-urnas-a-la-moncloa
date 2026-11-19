@@ -35,13 +35,13 @@ function frases(t) {
   const o = [], pon = (r, v) => o.push([r, String(v)]);
   pon('miles', t.miles(187817)); pon('dec', t.dec(13.4)); pon('pct', t.pct(0.402)); pon('pctEntero', t.pctEntero(17));
   pon('escanos', [1, 2, 38].map(t.escanos).join(' | ')); pon('sies', [1, 2, 176].map(t.sies).join(' | '));
-  pon('fecha', ['8 de noviembre de 2026', '21 de noviembre de 2026', '2026-11-01'].map(t.fecha).join(' | '));
+  pon('fecha', ['23 de julio de 2023', '8 de noviembre de 2026', '21 de noviembre de 2026', '2026-11-01'].map(t.fecha).join(' | '));
   pon('provLista', PROV.map((_, i) => t.provLista(i)).join(' · ')); pon('prov', PROV.map((_, i) => t.prov(i)).join(' · '));
   for (const s of ['resultados del 23 de julio de 2023', 'Ministerio del Interior, escrutinio del 23J (datos reunidos en Porra Electoral)',
     'Escrutinio provisional del 29 de noviembre de 2026', 'Ministerio del Interior', '29 nov', '4 dic', '23 dic', 'Sin fecha', '1.ª votación', '48 h después', 'Gobierno',
     'Votación.', 'Escrutinio general: el recuento oficial.', 'Se constituyen el Congreso y el Senado.', 'El Rey consulta a los grupos y propone un candidato.',
     'Hacen falta 176 síes. Arranca el reloj de dos meses.', '2.ª votación: más síes que noes.', 'El Rey nombra al presidente.']) pon('dato', s + '  →  ' + t.dato(s));
-  for (const k of [0, 3, 4, 5, 8, 9, 11, 13, 14]) pon('rotulo ' + k, t.rotulo(k, 46, 16, false));
+  for (const k of [0, 3, 4, 5, 7, 8, 9, 11, 13, 14]) pon('rotulo ' + k, t.rotulo(k, 46, 16, false));
   for (const i of PROVS) {
     const n = PROV[i][1];
     pon('rotulo 1', t.rotulo(1, i, n, false)); pon('rotulo 2', t.rotulo(2, i, n, false)); pon('rotulo 2 (repartido)', t.rotulo(2, i, n, true)); pon('rotulo 10', t.rotulo(10, i, n, false));
@@ -65,7 +65,7 @@ function frases(t) {
   for (const si of [176, 175, 120]) pon('primera', t.primera(si));
   pon('segunda', t.segunda(170, 160)); pon('segunda', t.segunda(120, 220));
   pon('anuncioPacto', t.anuncioPacto(170, 20, 160, t.primera(170), t.segunda(170, 160)));
-  pon('porraNota', t.porraNota(t.fecha('8 de noviembre de 2026')));
+  pon('calcNota', t.calcNota(t.fecha('23 de julio de 2023')));
   pon('avisoPrueba', t.avisoPrueba(t.dato('resultados del 23 de julio de 2023')));
   pon('masEscanos', t.masEscanos('PP', 137, t.pct(0.3306), false)); pon('masEscanos (absoluta)', t.masEscanos('PP', 180, t.pct(0.41), true)); pon('participacion', t.participacion(t.pct(0.664)));
   pon('fuenteRes', t.fuenteRes(true, t.dato('resultados del 23 de julio de 2023'), t.dato('Ministerio del Interior, escrutinio del 23J (datos reunidos en Porra Electoral)')));

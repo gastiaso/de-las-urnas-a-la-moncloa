@@ -38,8 +38,6 @@ const plural = i => art(i) === 'les';    // «les Illes Balears» lleva el verbo
 /* fechas: «8 de novembre de 2026», «1 d'abril de 2026» */
 const MESOS = ['gener', 'febrer', 'març', 'abril', 'maig', 'juny', 'juliol', 'agost', 'setembre', 'octubre', 'novembre', 'desembre'];
 const fecha = f => { const p = parteFecha(f); return p ? p.d + ' ' + de(MESOS[p.m - 1]) + ' de ' + p.a : f; };
-// «fins al 8 de novembre», pero «fins a l'1 de novembre» y «fins a l'11 de novembre»
-const finsA = data => (/^(1|11)\D/.test(data) ? "fins a l'" : 'fins al ') + data;
 
 /* textos que vienen dentro de los datos (js/resultados.js): castellano → catalán */
 const DADES = new Map([
@@ -70,7 +68,6 @@ const dato = s => {
   return c !== c.toLowerCase() ? maj(t) : c !== c.toUpperCase() ? minus(t) : t;
 };
 
-const PORRA = '<a href="https://gastiaso.github.io/porra-electoral/">Porra Electoral</a>';
 
 const ILLES = {
   7: "Mallorca escull tres senadors i s'hi marquen dos noms; Menorca, Eivissa i Formentera n'escullen un cadascuna",
@@ -114,8 +111,8 @@ export const textos = {
     censo: ['Cens electoral', 'La llista oficial dels qui poden votar. Per votar cal estar-hi inscrit.'],
     mesael: ['Mesa electoral', "L'equip que atén l'urna: un president i dos vocals, escollits per sorteig entre els votants d'aquesta mesa."],
     junta: ['Junta electoral', "L'òrgan que vigila que les eleccions siguin netes i fa el recompte oficial. N'hi ha una de central, una per província i d'altres de zona."],
-    lista: ['Llista', "La candidatura d'un partit en una província: tants noms com escons es reparteixen, en un ordre fix."],
-    suplente: ['Suplent', "Qui va a la llista darrere dels titulars i entra si algun d'ells deixa l'escó."],
+    lista: ['Llista', "La candidatura d'un partit en una província: tants candidats com escons es reparteixen, en un ordre fix, i fins a deu suplents."],
+    suplente: ['Suplent', "Qui va al final de la llista, darrere dels candidats. Només entra si queda un escó lliure i ja no hi ha candidats per davant. Al Senat, cada candidat en porta dos."],
     quorum: ['Quòrum', "El mínim d'assistents perquè una votació valgui: més de la meitat de la cambra."],
     organica: ['Llei orgànica', 'Una llei sobre assumptes de més pes, com els drets fonamentals o les regles electorals. Necessita majoria absoluta del Congrés.'],
     decretoley: ['Decret llei', 'Una norma que el Govern aprova per urgència. El Congrés té trenta dies per mantenir-la o tombar-la.'],
@@ -138,6 +135,7 @@ export const textos = {
     3: 'Més fosc: menys habitants per escó',
     4: 'Senat: 209 escollits, quatre per província',
     5: '176 de 350: la majoria absoluta',
+    7: 'El Congrés que escollirà president<small>El termini de dos mesos comença amb la primera votació.</small>',
     8: '350 escons',
     9: 'Cada escó, del color de qui el va guanyar',
     10: Prov(i) + ': ' + escons(n),
@@ -169,8 +167,8 @@ export const textos = {
         if (ILLES[i]) return 'La teva segona papereta, la de color sèpia, és la del Senat. ' + AProv(i) + ' depèn de la teva illa: ' + ILLES[i] + '.';
         if (uno) return 'La teva segona papereta, la de color sèpia, és la del Senat. ' + Prov(i) + " passa d'un diputat a <b>dos</b> senadors.";
         return 'La teva segona papereta, la de color sèpia, és la del Senat. Al mapa, ' + prov(i) + (plural(i) ? ' passen de ' : ' passa de ') + n + ' diputats a <b>quatre</b> senadors, com qualsevol província de la Península.';
-      case 5: return (uno ? 'El diputat ' + deProv(i) + ' seu' : 'Els ' + n + ' diputats ' + deProv(i) + ' seuen') + ' amb els altres ' + (350 - n) + ". A l'hemicicle, el teu vot és un d'aquests seients.";
-      case 6: return (uno ? 'El diputat ' + deProv(i) + ' vota amb el seu partit.' : 'Els ' + n + ' diputats ' + deProv(i) + ' voten cadascun amb el seu partit.') + " El teu vot queda a part, sota l'hemicicle: en quin bloc estaria depèn de qui votis.";
+      case 5: return (uno ? 'El diputat ' + deProv(i) + ' seu' : 'Els ' + n + ' diputats ' + deProv(i) + ' seuen') + ' amb els altres ' + (350 - n) + '. ' + (uno ? 'El teu vot compta per a aquest seient només si el teu partit hi és el més votat.' : "El teu vot compta per a algun d'aquests seients només si el teu partit hi treu escó.");
+      case 6: return (uno ? 'El diputat ' + deProv(i) + ' sol votar amb el seu partit.' : 'Els ' + n + ' diputats ' + deProv(i) + ' solen votar amb el seu partit.') + " El teu vot queda a part, sota l'hemicicle: en quin bloc estaria depèn de qui votis.";
       case 7: return 'La nit del 29N, la teva papereta es compta a la teva mesa ' + deProv(i) + ', en públic i en veu alta.';
       case 8: return 'Aquest és el camí de la teva papereta ' + aProv(i) + ": de l'urna a la Moncloa.";
       case 10: return primero ? "L'hexàgon daurat és el primer escó que es va repartir " + aProv(i) + ': va ser per a <b>' + primero + '</b>.' : '';
@@ -232,6 +230,7 @@ export const textos = {
   copiar: "Copia l'enllaç a aquesta combinació",
   copiado: 'Enllaç copiat.',
   copiaManual: "Copia l'adreça del navegador: ja porta la combinació.",
+  copiaDireccion: "Copia l'adreça del navegador",
   ariaPartido: (nombre, n, voto) => nombre + ', ' + escons(n) + ', vota ' + voto + '. Toca per canviar-ho',
   cuentaSi: n => 'Sí: ' + n,
   cuentaAbs: n => 'Abst.: ' + n,
@@ -239,7 +238,7 @@ export const textos = {
   primera: si => si >= 176 ? 'Surt escollit: té ' + sis(si) + '.' : 'No surt escollit: ' + falten(176 - si) + '.',
   segunda: (si, no) => (si > no ? 'Surt escollit: ' : 'No surt escollit: ') + sis(si) + ' contra ' + nos(no) + '.',
   anuncioPacto: (si, abs, no, primera, segunda) => 'Sí ' + si + ', abstenció ' + abs + ', no ' + no + '. Primera votació: ' + primera + ' Segona: ' + segunda,
-  porraNota: corte => 'Escons calculats a partir de les últimes enquestes, ' + finsA(corte) + ' (' + PORRA + '). És una estimació, no un resultat.',
+  calcNota: data => 'Escons que cada partit va treure a les eleccions ' + (/^(1|11)\D/.test(data) ? "de l'" : 'del ') + data + ', les últimes abans del 29N. No és una enquesta ni un resultat del 29N.',
 
   /* fase 2: los resultados */
   avisoPrueba: etiqueta => 'Vista prèvia amb dades de prova: ' + etiqueta + '. No són els resultats del 29N.',
