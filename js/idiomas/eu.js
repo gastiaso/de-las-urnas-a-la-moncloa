@@ -142,14 +142,14 @@ export const textos = {
     designacion: ['Izendapen bidezko senataria', 'Hautesleek aukeratzen ez dutena; autonomia-erkidego bakoitzeko parlamentuak aukeratzen du.'],
     cortes: ['Gorte Nagusiak', 'Kongresua eta Senatua, biak batera. Legeak egiten dituzte, Aurrekontuak onartzen dituzte eta Gobernua kontrolatzen dute.'],
     censo: ['Hautesle-errolda', 'Bozkatu dezaketenen zerrenda ofiziala. Bozkatzeko, zerrenda horretan inskribatuta egon behar da.'],
-    mesael: ['Hauteskunde-mahaia', 'Hautestontziaz arduratzen den taldea: mahaiburu bat eta bi mahaikide, mahai horretako hautesleen artean zozketaz aukeratuak.'],
+    mesael: ['Hauteskunde-mahaia', 'Hautetsontziaz arduratzen den taldea: mahaiburu bat eta bi mahaikide, mahai horretako hautesleen artean zozketaz aukeratuak.'],
     junta: ['Hauteskunde-batzordea', 'Hauteskundeak garbiak izan daitezen zaintzen duen eta kontaketa ofiziala egiten duen organoa. Zentral bat dago, probintzia bakoitzeko bat eta eskualdeko beste batzuk.'],
     lista: ['Zerrenda', 'Alderdi batek probintzia batean aurkezten duen hautagaitza: banatzen diren eserlekuak adina izen, ordena finko batean.'],
     suplente: ['Ordezkoa', 'Zerrendan titularren atzetik doana; haietako batek eserlekua uzten badu sartzen da.'],
     quorum: ['Quoruma', 'Bozketa batek balio izateko gutxienez bertan egon behar dutenak: Ganberaren erdia baino gehiago.'],
     organica: ['Lege organikoa', 'Garrantzi handieneko gaiei buruzko legea, hala nola oinarrizko eskubideei edo hauteskunde-arauei buruzkoa. Kongresuaren gehiengo osoa behar du.'],
     decretoley: ['Lege-dekretua', 'Gobernuak presako kasuetan onartzen duen araua. Kongresuak hogeita hamar egun ditu hari eusteko edo bertan behera uzteko.'],
-    confianza: ['Konfiantza-arazoa', 'Presidenteak berak eskatzen duen bozketa, Kongresuak babesten jarraitzen duela egiaztatzeko. Gehiengo soila aski du; galtzen badu, dimisioa ematen du.'],
+    confianza: ['Konfiantza-mozioa', 'Presidenteak berak eskatzen duen bozketa, Kongresuak babesten jarraitzen duela egiaztatzeko. Gehiengo soila aski du; galtzen badu, dimisioa ematen du.'],
     veto: ['Senatuaren betoa', 'Senatuak Kongresutik datorren lege bati ematen dion ezezkoa. Kongresuak kendu dezake.'],
     permanente: ['Diputazio Iraunkorra', 'Ganberak deseginda daudenean edo biltzen ez direnean guardian geratzen den diputatu talde txikia (eta senatarien beste bat).']
   },
@@ -172,8 +172,8 @@ export const textos = {
     8: '350 eserleku',
     9: 'Eserleku bakoitza, irabazi duenaren kolorez',
     10: nor(i) + ': ' + eserleku(n),
-    11: 'Hautestontzietatik ateratzen den Kongresua',
-    13: 'Hautestontzietatik ateratzen den Kongresua',
+    11: 'Hautetsontzietatik ateratzen den Kongresua',
+    13: 'Hautetsontzietatik ateratzen den Kongresua',
     14: '350 eserleku' }[k] || ''),
   // c: { si, abs, no }, en escaños
   rotuloPacto: c => 'Bai ' + c.si + ' · Abst. ' + c.abs + ' · Ez ' + c.no + '<small>' + (c.si >= 176 ? 'Lehen bozketan ateratzen da: 176 bai edo gehiago.'
@@ -191,7 +191,7 @@ export const textos = {
     const uno = n === 1, senatua = 'Zure bigarren boto-papera, sepia kolorekoa, Senatukoa da. ';
     switch (k) {
       case 0: return 'Zure botoa hexagono urrekara da. Aukeratu non bozkatzen duzun, eta jarrai iezaiozu amaieraraino.';
-      case 1: return (uno ? 'Zure botoa hexagono urrekara da: ' + nongo(i) + ' eserleku bakarra da.' : 'Zure botoa hexagono urrekara da: ' + non(i) + ' dago, zure probintziako eserlekuen artean, teila-kolorez.') + ' Zure boto-paper zuria, Kongresukoa, bere hautestontzira doa.';
+      case 1: return (uno ? 'Zure botoa hexagono urrekara da: ' + nongo(i) + ' eserleku bakarra da.' : 'Zure botoa hexagono urrekara da: ' + non(i) + ' dago, zure probintziako eserlekuen artean, teila-kolorez.') + ' Zure boto-paper zuria, Kongresukoa, bere hautetsontzira doa.';
       case 2: return uno ? 'Zure botoa zure alderdiak ' + non(i) + ' dituen botoei gehitzen zaie. Han eserleku bakarra dago: boto gehien lortzen dituenarentzat da.'
         : 'Zure botoa zure alderdiak ' + non(i) + ' dituen botoei gehitzen zaie, eta alderdi hori probintziako baliozko botoen % 3ra iristen bada bakarrik sartzen da banaketan.';
       case 3:
@@ -205,7 +205,7 @@ export const textos = {
       case 5: return (uno ? nongo(i) + ' diputatua beste ' + (350 - n) + ' diputatuekin batera esertzen da.' : nongo(i) + ' ' + n + ' diputatuak beste ' + (350 - n) + ' diputatuekin batera esertzen dira.') + ' Hemizikloan, zure botoa eserleku horietako bat da.';
       case 6: return (uno ? nongo(i) + ' diputatuak bere alderdiarekin bozkatzen du.' : nongo(i) + ' ' + n + ' diputatuek nork bere alderdiarekin bozkatzen dute.') + ' Zure botoa aparte geratzen da, hemizikloaren azpian: ' + BLOKEA;
       case 7: return 'Azaroaren 29ko gauean, zure boto-papera ' + nongo(i) + ' zure mahaian zenbatzen da, jendaurrean eta ozen.';
-      case 8: return 'Hori da zure boto-paperaren bidea ' + non(i) + ': hautestontzitik Moncloara.';
+      case 8: return 'Hori da zure boto-paperaren bidea ' + non(i) + ': hautetsontzitik Moncloara.';
       case 10: return primero ? 'Hexagono urrekara ' + non(i) + ' banatu zen lehen eserlekua da: <b>' + primero + '</b> alderdiarentzat izan zen.' : '';
       case 11: case 12: return primero ? 'Hexagono urrekara ' + nongo(i) + ' lehen eserlekua da: <b>' + primero + '</b> alderdiarentzat izan zen, han boto gehien lortu zituenarentzat.' : '';
       default: return '';
@@ -224,7 +224,7 @@ export const textos = {
   verTexto: 'Testua bakarrik ikusi',
   tapa: {
     banda: 'Hauteskunde orokorrak · 2026ko azaroaren 29a',
-    titulo: 'Hautestontzietatik Moncloara',
+    titulo: 'Hautetsontzietatik Moncloara',
     sub: 'Milioika boto-paper 350 eserleku bihurtzen dira, eta eserlekuak, Gobernu. Horrela funtzionatzen du.',
     como: 'Nola jarraitu',
     pasos: ['Aukeratu zein probintziatan bozkatzen duzun.', 'Jaitsi: urrats bakoitzean, 350 eserlekuek forma aldatzen dute.', 'Zure botoa hexagono urrekara da: jarrai iezaiozu amaieraraino.'],

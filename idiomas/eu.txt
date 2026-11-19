@@ -7,7 +7,7 @@ es: Qué se vota el 29N y cómo se pasa de una papeleta a un Gobierno, contado c
 eu: Zer bozkatzen den azaroaren 29an eta nola iristen den boto-paper batetik Gobernu batera, Kongresuko 350 eserlekuekin kontatuta.
 
 es: De las urnas a la Moncloa
-eu: Hautestontzietatik Moncloara
+eu: Hautetsontzietatik Moncloara
 
 es: Los 350 escaños del Congreso dibujados como hexágonos sobre el mapa de España, con el título «De las urnas a la Moncloa».
 eu: Kongresuko 350 eserlekuak, hexagono gisa marraztuta Espainiako maparen gainean, «De las urnas a la Moncloa» izenburuarekin.
@@ -91,7 +91,7 @@ es: Los colegios abren de 9:00 a 20:00, sin interrupción. Votas dos veces: una 
 eu: Hauteslekuak 9:00etatik 20:00etara daude zabalik, etenik gabe. Bi aldiz bozkatzen duzu: boto-paper zuri bat Kongresurako eta sepia koloreko beste bat Senaturako, bakoitza bere gutun-azalean.
 
 es: Puedes usar la cabina, pero no es obligatorio. En la mesa, el presidente dice tu nombre, dice «vota» y el sobre entra en la urna.
-eu: Kabina erabil dezakezu, baina ez da nahitaezkoa. Mahaian, mahaiburuak zure izena esaten du, «bozkatzen du» esaten du, eta gutun-azala hautestontzian sartzen da.
+eu: Kabina erabil dezakezu, baina ez da nahitaezkoa. Mahaian, mahaiburuak zure izena esaten du, «bozkatzen du» esaten du, eta gutun-azala hautetsontzian sartzen da.
 
 es: El voto es secreto: nadie puede obligarte a decir qué has votado. Si no puedes leer o manejar las papeletas, puede ayudarte una persona de tu confianza.
 eu: Botoa sekretua da: inork ezin zaitu behartu zer bozkatu duzun esatera. Boto-paperak irakurri edo erabili ezin badituzu, zure konfiantzako pertsona batek lagun diezazuke.
@@ -106,7 +106,7 @@ es: La [[mesael|mesa electoral]] son tres personas: un presidente y dos vocales.
 eu: [[mesael|Hauteskunde-mahaia]] hiru pertsonak osatzen dute: mahaiburu batek eta bi mahaikidek. Zozketaz aukeratzen dira mahai horretako hautesleen artean; irakurtzen eta idazten jakin behar dute, eta hirurogeita hamar urte baino gutxiago izan. Nahitaezkoa da.
 
 es: Cuando cierra el colegio, ellos abren la urna y cuentan los votos en público, uno a uno y en voz alta.
-eu: Hauteslekua ixten denean, haiek hautestontzia ireki eta botoak jendaurrean zenbatzen dituzte, banan-banan eta ozen.
+eu: Hauteslekua ixten denean, haiek hautetsontzia ireki eta botoak jendaurrean zenbatzen dituzte, banan-banan eta ozen.
 
 es: Fuentes: LOREG, arts. 25, 26, 27 y 95.
 eu: Iturriak: LOREG, 25., 26., 27. eta 95. art.
@@ -328,7 +328,7 @@ es: Prueba a marcar (nombres inventados)
 eu: Probatu markatzen (asmatutako izenak)
 
 es: El Senado no elige al presidente ni puede hacerlo caer. Pero sin él no se reforma la Constitución, y le toca elegir a parte del Tribunal Constitucional y del Consejo General del Poder Judicial.
-eu: Senatuak ez du presidentea aukeratzen, eta ezin du erorarazi ere. Baina Senaturik gabe ezin da Konstituzioa erreformatu, eta hari dagokio Konstituzio Auzitegiaren eta Botere Judizialaren Kontseilu Nagusiaren zati bat aukeratzea.
+eu: Senatuak ez du presidentea aukeratzen, eta ezin du erorarazi ere. Baina Senaturik gabe ezin da Konstituzioa erreformatu, eta hari dagokio Auzitegi Konstituzionalaren eta Botere Judizialaren Kontseilu Nagusiaren zati bat aukeratzea.
 
 es: La llave de la reforma constitucional
 eu: Konstituzio-erreformaren giltza
@@ -349,7 +349,7 @@ es: Nombramientos que pasan por el Senado
 eu: Senatutik igarotzen diren izendapenak
 
 es: El Senado propone a cuatro de los doce magistrados del Tribunal Constitucional y elige a diez de los veinte vocales del Consejo General del Poder Judicial, el órgano que gobierna a los jueces; los otros diez, el Congreso. En los dos casos hacen falta tres quintos de los senadores.
-eu: Senatuak Konstituzio Auzitegiko hamabi magistratuetatik lau proposatzen ditu, eta Botere Judizialaren Kontseilu Nagusiko hogei kideetatik hamar aukeratzen ditu; kontseilu hori epaileak gobernatzen dituen organoa da. Beste hamarrak Kongresuak aukeratzen ditu. Bi kasuetan senatarien hiru bosten behar dira.
+eu: Senatuak Auzitegi Konstituzionaleko hamabi magistratuetatik lau proposatzen ditu, eta Botere Judizialaren Kontseilu Nagusiko hogei kideetatik hamar aukeratzen ditu; kontseilu hori epaileak gobernatzen dituen organoa da. Beste hamarrak Kongresuak aukeratzen ditu. Bi kasuetan senatarien hiru bosten behar dira.
 
 es: Eso quiere decir que quien tenga más de dos quintos del Senado puede impedir esos nombramientos.
 eu: Horrek esan nahi du Senatuaren bi bosten baino gehiago duenak izendapen horiek eragotz ditzakeela.
@@ -394,7 +394,7 @@ es: Hay una cosa que solo puede autorizar el Senado, por mayoría absoluta: que 
 eu: Bada gauza bat Senatuak bakarrik baimendu dezakeena, gehiengo osoz: Gobernuak autonomia-erkidego bat legea betetzera behartzea, 155. artikulua.
 
 es: También puede proponer leyes, crear comisiones de investigación y, con 50 senadores, recurrir una ley ante el Tribunal Constitucional. Los acuerdos de cooperación entre comunidades autónomas y el reparto del Fondo de Compensación Interterritorial empiezan en el Senado, aunque, si las dos cámaras no se ponen de acuerdo, decide el Congreso.
-eu: Legeak proposatu ere egin ditzake, ikerketa-batzordeak sortu eta, 50 senatarirekin, lege baten aurkako helegitea jarri Konstituzio Auzitegian. Autonomia-erkidegoen arteko lankidetza-hitzarmenak eta Lurralde arteko Konpentsazio Funtsaren banaketa Senatuan hasten dira; hala ere, bi ganberak ados jartzen ez badira, Kongresuak erabakitzen du.
+eu: Legeak proposatu ere egin ditzake, ikerketa-batzordeak sortu eta, 50 senatarirekin, lege baten aurkako helegitea jarri Auzitegi Konstituzionalean. Autonomia-erkidegoen arteko lankidetza-hitzarmenak eta Lurralde arteko Konpentsazio Funtsaren banaketa Senatuan hasten dira; hala ere, bi ganberak ados jartzen ez badira, Kongresuak erabakitzen du.
 
 es: Fuentes: Constitución, arts. 69, 74.2, 76, 87.1, 90, 145.2, 155, 158.2 y 162.1.
 eu: Iturriak: Konstituzioa, 69., 74.2, 76., 87.1, 90., 145.2, 155., 158.2 eta 162.1 art.
@@ -427,10 +427,10 @@ es: Los senadores que no se votan
 eu: Bozkatzen ez diren senatariak
 
 es: Además de los elegidos en las urnas, cada parlamento autonómico designa un senador, más otro por cada millón de habitantes de su comunidad. Son los [[designacion|senadores por designación]].
-eu: Hautestontzietan aukeratutakoez gain, autonomia-erkidegoko parlamentu bakoitzak senatari bat izendatzen du, eta beste bat erkidegoko milioi bat biztanleko. Horiek dira [[designacion|izendapen bidezko senatariak]].
+eu: Hautetsontzietan aukeratutakoez gain, autonomia-erkidegoko parlamentu bakoitzak senatari bat izendatzen du, eta beste bat erkidegoko milioi bat biztanleko. Horiek dira [[designacion|izendapen bidezko senatariak]].
 
 es: Si un senador elegido en las urnas deja el escaño, lo ocupa su suplente.
-eu: Hautestontzietan aukeratutako senatari batek eserlekua uzten badu, haren ordezkoak betetzen du.
+eu: Hautetsontzietan aukeratutako senatari batek eserlekua uzten badu, haren ordezkoak betetzen du.
 
 es: Fuentes: Constitución, art. 69.5; LOREG, art. 166.
 eu: Iturriak: Konstituzioa, 69.5 art.; LOREG, 166. art.
@@ -465,7 +465,7 @@ es: La mayoría absoluta (176) también hace falta para aprobar las leyes orgán
 eu: Gehiengo osoa (176) lege organikoak eta zentsura-mozioa onartzeko ere behar da.
 
 es: Tres quintos (210): reformar la Constitución y proponer magistrados del Tribunal Constitucional.
-eu: Hiru bosten (210): Konstituzioa erreformatzea eta Konstituzio Auzitegiko magistratuak proposatzea.
+eu: Hiru bosten (210): Konstituzioa erreformatzea eta Auzitegi Konstituzionaleko magistratuak proposatzea.
 
 es: Dos tercios (234): las reformas constitucionales de mayor alcance.
 eu: Bi heren (234): irismen handieneko konstituzio-erreformak.
@@ -498,13 +498,13 @@ es: Fuentes: Constitución, arts. 81 y 86.
 eu: Iturriak: Konstituzioa, 81. eta 86. art.
 
 es: Moción de censura y cuestión de confianza
-eu: Zentsura-mozioa eta konfiantza-arazoa
+eu: Zentsura-mozioa eta konfiantza-mozioa
 
 es: La [[censura|moción de censura]] es la forma de cambiar de presidente sin elecciones. La firman al menos 35 diputados, lleva el nombre de un candidato y necesita mayoría absoluta. Si sale, ese candidato pasa a ser presidente.
 eu: [[censura|Zentsura-mozioa]] hauteskunderik gabe presidentea aldatzeko modua da. Gutxienez 35 diputatuk sinatzen dute, hautagai baten izena darama eta gehiengo osoa behar du. Aurrera ateratzen bada, hautagai hori presidente bihurtzen da.
 
 es: La [[confianza|cuestión de confianza]] va al revés: la pide el propio presidente. Le basta la mayoría simple. Si la pierde, dimite y se busca nuevo presidente.
-eu: [[confianza|Konfiantza-arazoa]] alderantziz doa: presidenteak berak eskatzen du. Gehiengo soila aski du. Galtzen badu, dimisioa ematen du eta presidente berria bilatzen da.
+eu: [[confianza|Konfiantza-mozioa]] alderantziz doa: presidenteak berak eskatzen du. Gehiengo soila aski du. Galtzen badu, dimisioa ematen du eta presidente berria bilatzen da.
 
 es: Fuentes: Constitución, arts. 112, 113 y 114. Los 35 diputados son la décima parte de 350.
 eu: Iturriak: Konstituzioa, 112., 113. eta 114. art. 35 diputatuak 350en hamarrena dira.
@@ -637,7 +637,7 @@ es: Voto en los consulados
 eu: Botoa kontsulatuetan
 
 es: Quien vive en el extranjero puede depositar su voto en una urna de su consulado o embajada. Si lo manda por correo, tiene que enviarlo como tarde el 24. <small>LOREG, art. 75. Fechas: cálculo de los plazos del artículo.</small>
-eu: Atzerrian bizi denak bere kontsulatuko edo enbaxadako hautestontzi batean utz dezake botoa. Postaz bidaltzen badu, beranduenez 24an bidali behar du. <small>LOREG, 75. art. Datak: artikuluko epeen kalkulua.</small>
+eu: Atzerrian bizi denak bere kontsulatuko edo enbaxadako hautetsontzi batean utz dezake botoa. Postaz bidaltzen badu, beranduenez 24an bidali behar du. <small>LOREG, 75. art. Datak: artikuluko epeen kalkulua.</small>
 
 es: 24 a 28 nov
 eu: aza. 24-28
@@ -676,7 +676,7 @@ es: Se vota, de 9:00 a 20:00
 eu: Bozketa, 9:00etatik 20:00etara
 
 es: Los colegios no cierran en todo el día. Al acabar, cada mesa abre la urna y cuenta los votos en público. Por la noche se conoce el recuento provisional. <small>LOREG, arts. 84, 95 y 98.</small>
-eu: Hauteslekuak ez dira egun osoan ixten. Amaitzean, mahai bakoitzak hautestontzia ireki eta botoak jendaurrean zenbatzen ditu. Gauean jakiten da behin-behineko kontaketa. <small>LOREG, 84., 95. eta 98. art.</small>
+eu: Hauteslekuak ez dira egun osoan ixten. Amaitzean, mahai bakoitzak hautetsontzia ireki eta botoak jendaurrean zenbatzen ditu. Gauean jakiten da behin-behineko kontaketa. <small>LOREG, 84., 95. eta 98. art.</small>
 
 es: El recuento oficial
 eu: Kontaketa ofiziala
@@ -796,7 +796,7 @@ es: Existe el voto por correo. Hay que pedirlo en una oficina de Correos, en per
 eu: Posta bidezko botoa dago. Correoseko bulego batean eskatu behar da, aurrez aurre eta NANarekin, bozketa baino hamar egun lehenago arte: azaroaren 29rako, azaroaren 19ra arte. Gero, boto-paperak etxera iristen zaizkizu, eta posta ziurtatuz itzultzen dituzu, zigilurik ordaindu gabe.
 
 es: Quien vive en el extranjero y está inscrito en el censo de residentes ausentes recibe la documentación en casa sin pedirla. Puede votar en una urna de su consulado, del 21 al 26 de noviembre, o mandar el voto por correo al consulado como tarde el 24. Esos votos se cuentan el 4 de diciembre, en el recuento oficial.
-eu: Atzerrian bizi denak, egoiliar absenteen erroldan inskribatuta badago, etxean jasotzen du dokumentazioa, eskatu gabe. Bere kontsulatuko hautestontzi batean bozka dezake, azaroaren 21etik 26ra, edo botoa postaz bidal dezake kontsulatura, beranduenez 24an. Boto horiek abenduaren 4an zenbatzen dira, kontaketa ofizialean.
+eu: Atzerrian bizi denak, egoiliar absenteen erroldan inskribatuta badago, etxean jasotzen du dokumentazioa, eskatu gabe. Bere kontsulatuko hautetsontzi batean bozka dezake, azaroaren 21etik 26ra, edo botoa postaz bidal dezake kontsulatura, beranduenez 24an. Boto horiek abenduaren 4an zenbatzen dira, kontaketa ofizialean.
 
 es: Fuentes: LOREG, arts. 72, 73, 75 y 103. Las fechas son el cálculo de los plazos de esos artículos para el 29N.
 eu: Iturriak: LOREG, 72., 73., 75. eta 103. art. Datak artikulu horietako epeen kalkulua dira, azaroaren 29rako.
@@ -859,7 +859,7 @@ es: El Gobierno que sale sigue [[funciones|en funciones]] hasta que toma posesi�
 eu: Kargua uzten duen Gobernuak [[funciones|jardunean]] jarraitzen du berriak kargua hartu arte. Ohiko gaiak bideratzen ditu, baina ezin du lege-proiekturik aurkeztu, ezta Aurrekontuak ere.
 
 es: Su presidente tampoco puede disolver las Cortes, ni plantear una cuestión de confianza, ni proponer un referéndum.
-eu: Haren presidenteak ere ezin ditu Gorteak desegin, ez konfiantza-arazorik planteatu, ez erreferendumik proposatu.
+eu: Haren presidenteak ere ezin ditu Gorteak desegin, ez konfiantza-moziorik planteatu, ez erreferendumik proposatu.
 
 es: Fuentes: Constitución, art. 101; Ley 50/1997, art. 21.
 eu: Iturriak: Konstituzioa, 101. art.; 50/1997 Legea, 21. art.
@@ -1073,7 +1073,7 @@ eu: Azken urratsa. Ibilbidea amaitzen da Kongresuak presidentea aukeratzen duene
 # ───── Pie de página ─────
 
 es: <b>De las urnas a la Moncloa</b> · Guillermo Astiaso, 2026.
-eu: <b>Hautestontzietatik Moncloara</b> · Guillermo Astiaso, 2026.
+eu: <b>Hautetsontzietatik Moncloara</b> · Guillermo Astiaso, 2026.
 
 es: Código con licencia [MIT](https://github.com/gastiaso/de-las-urnas-a-la-moncloa/blob/main/LICENSE); textos con licencia [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es). Tipografías Courier Prime y Libre Franklin (licencia OFL); mapa de hexágonos generado a partir de los límites provinciales del IGN (CC BY 4.0).
 eu: Kodea [MIT](https://github.com/gastiaso/de-las-urnas-a-la-moncloa/blob/main/LICENSE) lizentziarekin; testuak [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es) lizentziarekin. Courier Prime eta Libre Franklin tipografiak (OFL lizentzia); hexagonoen mapa IGNren probintzia-mugetatik abiatuta sortua (CC BY 4.0).

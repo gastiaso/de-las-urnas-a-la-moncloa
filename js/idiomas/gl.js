@@ -2,8 +2,8 @@
 import { idioma, parteFecha } from '../textos.js';
 
 const escanos = n => n + (n === 1 ? ' escano' : ' escanos');
-const sies = n => n + (n === 1 ? ' si' : ' sis');
-const noes = n => n + (n === 1 ? ' non' : ' nons');
+const sies = n => n + (n === 1 ? ' voto a favor' : ' votos a favor');
+const noes = n => n + (n === 1 ? ' voto en contra' : ' votos en contra');
 const miles = n => Math.round(n).toLocaleString('es-ES');   // miles con punto, igual que en castellano
 const dec = x => x.toFixed(1).replace('.', ',');
 const nvotos = n => miles(n) + (Math.round(n) === 1 ? ' voto' : ' votos');
@@ -90,8 +90,8 @@ const DATOS = {
   'Escrutinio general: el recuento oficial.': 'Escrutinio xeral: o reconto oficial.',
   'Se constituyen el Congreso y el Senado.': 'Constitúense o Congreso e o Senado.',
   'El Rey consulta a los grupos y propone un candidato.': 'O Rei consulta os grupos e propón un candidato.',
-  'Hacen falta 176 síes. Arranca el reloj de dos meses.': 'Fan falta 176 sis. Arrinca o reloxo de dous meses.',
-  '2.ª votación: más síes que noes.': '2.ª votación: máis sis que nons.',
+  'Hacen falta 176 síes. Arranca el reloj de dos meses.': 'Fan falta 176 votos a favor. Arrinca o reloxo de dous meses.',
+  '2.ª votación: más síes que noes.': '2.ª votación: máis votos a favor que en contra.',
   'El Rey nombra al presidente.': 'O Rei nomea o presidente.'
 };
 // Busca sin distinguir si la primera letra llega en mayúscula o en minúscula, y la devuelve como llegó. Si no está, deja el texto igual.
@@ -144,12 +144,12 @@ export const textos = {
     11: 'O Congreso que sae das urnas',
     13: 'O Congreso que sae das urnas',
     14: '350 escanos' }[k] || ''),
-  rotuloPacto: c => 'Si ' + c.si + ' · Abst. ' + c.abs + ' · Non ' + c.no + '<small>' + (c.si >= 176 ? 'Sae á primeira: 176 sis ou máis.'
+  rotuloPacto: c => 'Si ' + c.si + ' · Abst. ' + c.abs + ' · Non ' + c.no + '<small>' + (c.si >= 176 ? 'Sae á primeira: 176 votos a favor ou máis.'
     : c.si > c.no ? 'Non chega a 176, pero sae na segunda votación.'
     : c.si === 0 ? 'Toca os partidos para formar unha maioría.'
     : 'Non sae: ' + faltan(176 - c.si) + ' para chegar a 176.') + '</small>',
   piePacto: 'Cada escano, da cor do seu partido. O teu voto, á parte: en que bloque estaría depende de a quen votes.',
-  piePactoRes: 'Cada escano, da cor do seu partido. Os sis xúntanse á esquerda, despois as abstencións e despois os nons.',
+  piePactoRes: 'Cada escano, da cor do seu partido. Os votos a favor xúntanse á esquerda, despois as abstencións e despois os votos en contra.',
 
   /* la frase de «Tu voto» de cada paso */
   islas: ISLAS,
@@ -226,7 +226,7 @@ export const textos = {
   votoLargo: { no: 'non', si: 'si', abs: 'abstención' },
   ariaBarra: 'Barra de 350 escanos coa marca de 176',
   votacion1: '1.ª votación · maioría absoluta',
-  votacion2: '2.ª votación · máis sis que nons',
+  votacion2: '2.ª votación · máis a favor que en contra',
   copiar: 'Copiar a ligazón a esta combinación',
   copiado: 'Ligazón copiada.',
   copiaManual: 'Copia o enderezo do navegador: xa leva a combinación.',
@@ -235,7 +235,7 @@ export const textos = {
   cuentaAbs: n => 'Abst.: ' + n,
   cuentaNo: n => 'Non: ' + n,
   primera: si => si >= 176 ? 'Sae: ten ' + sies(si) + '.' : 'Non sae: ' + faltan(176 - si) + '.',
-  segunda: (si, no) => (si > no ? 'Sae: ' : 'Non sae: ') + sies(si) + ' fronte a ' + noes(no) + '.',
+  segunda: (si, no) => (si > no ? 'Sae: ' : 'Non sae: ') + si + ' a favor fronte a ' + no + ' en contra' + '.',
   anuncioPacto: (si, abs, no, primera, segunda) => 'Si ' + si + ', abstención ' + abs + ', non ' + no + '. Primeira votación: ' + primera + ' Segunda: ' + segunda,
   porraNota: corte => 'Escanos calculados a partir das últimas enquisas, ata o ' + corte + ' (' + PORRA + '). É unha estimación, non un resultado.',
 

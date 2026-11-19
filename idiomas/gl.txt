@@ -441,7 +441,7 @@ es: 5 · Las mayorías
 gl: 5 · As maiorías
 
 es: Para elegir presidente a la primera hace falta la [[absoluta|mayoría absoluta]]: 176 síes de 350. Si no sale, 48 horas después basta la [[simple|mayoría simple]]: más síes que noes.
-gl: Para elixir presidente á primeira fai falta a [[absoluta|maioría absoluta]]: 176 sis de 350. Se non sae, 48 horas despois abonda coa [[simple|maioría simple]]: máis sis que nons.
+gl: Para elixir presidente á primeira fai falta a [[absoluta|maioría absoluta]]: 176 votos a favor de 350. Se non sae, 48 horas despois abonda coa [[simple|maioría simple]]: máis votos a favor que en contra.
 
 es: En teja, los 176 escaños que marcan la mitad más uno.
 gl: En cor tella, os 176 escanos que marcan a metade máis un.
@@ -450,10 +450,10 @@ es: Por qué la abstención pesa distinto
 gl: Por que a abstención pesa distinto
 
 es: En la primera votación solo cuentan los síes: hay que juntar 176, y quien se abstiene no ayuda.
-gl: Na primeira votación só contan os sis: hai que xuntar 176, e quen se abstén non axuda.
+gl: Na primeira votación só contan os votos a favor: hai que xuntar 176, e quen se abstén non axuda.
 
 es: En la segunda se comparan síes y noes. Ahí, abstenerse en vez de votar no sí ayuda al candidato, porque hay un no menos que superar.
-gl: Na segunda compáranse sis e nons. Aí, absterse en vez de votar que non si que axuda o candidato, porque hai un non menos que superar.
+gl: Na segunda compáranse os votos a favor e os votos en contra. Aí, absterse en vez de votar en contra si que axuda o candidato, porque hai un voto en contra menos que superar.
 
 es: Explicación propia a partir del art. 99.3 de la Constitución.
 gl: Explicación propia a partir do art. 99.3 da Constitución.
@@ -748,7 +748,7 @@ es: Debate y primera votación
 gl: Debate e primeira votación
 
 es: El candidato expone su programa sin límite de tiempo y cada grupo le responde. Necesita 176 síes. Aquí arranca el reloj de dos meses. <small>Constitución, art. 99; Reglamento del Congreso, art. 171.</small>
-gl: O candidato expón o seu programa sen límite de tempo e cada grupo respóndelle. Necesita 176 sis. Aquí arrinca o reloxo de dous meses. <small>Constitución, art. 99; Regulamento do Congreso, art. 171.</small>
+gl: O candidato expón o seu programa sen límite de tempo e cada grupo respóndelle. Necesita 176 votos a favor. Aquí arrinca o reloxo de dous meses. <small>Constitución, art. 99; Regulamento do Congreso, art. 171.</small>
 
 es: D + 48 h
 gl: D + 48 h
@@ -757,7 +757,7 @@ es: Segunda votación
 gl: Segunda votación
 
 es: Si no llegó a 176, basta con más síes que noes. Si tampoco sale, el Rey puede proponer a otro candidato. <small>Constitución, art. 99.3 y 99.4.</small>
-gl: Se non chegou a 176, abonda con máis sis que nons. Se tampouco sae, o Rei pode propoñer outro candidato. <small>Constitución, art. 99.3 e 99.4.</small>
+gl: Se non chegou a 176, abonda con máis votos a favor que en contra. Se tampouco sae, o Rei pode propoñer outro candidato. <small>Constitución, art. 99.3 e 99.4.</small>
 
 es: D + 2 meses
 gl: D + 2 meses
@@ -1025,7 +1025,7 @@ es: Qué mirar en una negociación
 gl: Que mirar nunha negociación
 
 es: Dos números. Si los síes llegan a 176, hay presidente a la primera. Si no llegan, lo que importa es que haya más síes que noes: ahí cada abstención cuenta.
-gl: Dous números. Se os sis chegan a 176, hai presidente á primeira. Se non chegan, o que importa é que haxa máis sis que nons: aí cada abstención conta.
+gl: Dous números. Se os votos a favor chegan a 176, hai presidente á primeira. Se non chegan, o que importa é que haxa máis votos a favor que en contra: aí cada abstención conta.
 
 es: Fuente: Constitución, art. 99.3.
 gl: Fonte: Constitución, art. 99.3.
