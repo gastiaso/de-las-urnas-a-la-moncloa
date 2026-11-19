@@ -6,30 +6,35 @@ import { RES } from './resultados.js';
 
 const $ = (s, r = document) => r.querySelector(s);
 const plural = n => n + (n === 1 ? ' escaño' : ' escaños');
+const sies = n => n + (n === 1 ? ' sí' : ' síes');
+// Nombre para el texto: «Balears (Illes)» → «Illes Balears», «Coruña (A)» → «A Coruña».
+const nombre = i => PROV[i][0].replace(/^(.*) \((.*)\)$/, '$2 $1');
 const miles = n => Math.round(n).toLocaleString('es-ES');
 const pct = x => (x * 100).toFixed(1).replace('.', ',') + ' %';
 const calma = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
 // La fase 2 se abre para todos con RES.abierta; para verla antes, añadir #fase2 a la dirección.
 export const FASE2 = RES.abierta || location.hash === '#fase2';
-export { plural, miles, pct };
+export { plural, sies, nombre, miles, pct };
 
 /* G: setProv, resetBet, reveal, setSen, setPact, setRes, setProvRes, setPact2 (pueden no hacer nada).
    anuncia(texto): mensaje para lectores de pantalla. enLectura(): si se está en modo de solo texto. */
 export function contenido({ G, anuncia = () => {}, enLectura = () => false }) {
 document.body.classList.toggle('fase2', FASE2);
-const st = { prov: PROV_INICIAL, bets: [0, 0, 0, 0, 0], revealed: null, sen: new Set(), pact: {}, pact2: {} };
+// La provincia elegida se recuerda mientras dure la pestaña (sessionStorage: no sale del navegador), para que una recarga
+// no la devuelva a la inicial sin avisar.
+const guardada = (() => { try { const v = sessionStorage.getItem('prov'); return v !== null && PROV[+v] ? +v : null; } catch (e) { return null; } })();
+const st = { prov: guardada === null ? PROV_INICIAL : guardada, bets: [0, 0, 0, 0, 0], revealed: null, sen: new Set(), pact: {}, pact2: {} };
+const recuerda = () => { try { sessionStorage.setItem('prov', st.prov); } catch (e) {} };
 const S = () => PROV[st.prov][1];
-/* calendario del paso 7: cada fecha abre o cierra su explicación; solo una abierta a la vez */
-function cierraHitos(salvo) {
-  document.querySelectorAll('.hito.abierto').forEach(h => { if (h !== salvo) { h.classList.remove('abierto'); $('.fecha', h).setAttribute('aria-expanded', 'false'); } });
-}
+/* calendario del paso 7: cada fecha abre o cierra su explicación, que se despliega debajo sin tapar las fechas siguientes */
 document.addEventListener('click', e => {
-  const f = e.target.closest('.fecha');
-  if (!f) { if (!e.target.closest('.tip')) cierraHitos(null); return; }
-  const h = f.parentElement; cierraHitos(h);
-  f.setAttribute('aria-expanded', h.classList.toggle('abierto') ? 'true' : 'false');
+  const f = e.target.closest('.fecha'); if (!f) return;
+  f.setAttribute('aria-expanded', f.parentElement.classList.toggle('abierto') ? 'true' : 'false');
 });
-addEventListener('keydown', e => { if (e.key === 'Escape' && document.querySelector('.hito.abierto')) { const f = $('.hito.abierto .fecha'); cierraHitos(null); f.focus(); } });
+addEventListener('keydown', e => {
+  const f = e.key === 'Escape' && document.activeElement && document.activeElement.closest('.hito.abierto .fecha');
+  if (f) { f.parentElement.classList.remove('abierto'); f.setAttribute('aria-expanded', 'false'); }
+});
 
 /* glosario */
 document.addEventListener('click', e => {
@@ -50,20 +55,27 @@ Object.values(GLOS).sort((a, b) => a[0].localeCompare(b[0], 'es')).forEach(g => 
   const dd = document.createElement('dd'); dd.textContent = g[1];
   dl.appendChild(dt); dl.appendChild(dd);
 });
-/* al abrir un cajón se cierran los demás de su panel, para que no se haga interminable */
+/* al abrir un cajón se cierran los demás de su panel, para que no se haga interminable.
+   Si se cierra uno que estaba encima, la página se desplaza lo mismo que ha encogido, para que el cajón recién abierto
+   no se vaya por arriba (detrás del escenario, en el móvil). */
 document.addEventListener('toggle', e => {
   const d = e.target; if (!d.open || d.tagName !== 'DETAILS' || enLectura()) return;
-  d.parentElement.querySelectorAll(':scope > details[open]').forEach(o => { if (o !== d) o.open = false; });
+  const otros = [...d.parentElement.querySelectorAll(':scope > details[open]')].filter(o => o !== d);
+  if (!otros.length) return;
+  const sum = d.querySelector('summary') || d, antes = sum.getBoundingClientRect().top;
+  otros.forEach(o => { o.open = false; });
+  const salto = sum.getBoundingClientRect().top - antes;
+  if (Math.abs(salto) > 1) scrollBy({ top: salto, behavior: 'instant' });
 }, true);
 
 /* provincia (el desplegable aparece en el paso 1 y, en la fase 2, en el 10) */
 const sels = [...document.querySelectorAll('.selProv')];
 sels.forEach(sel => {
   PROV.forEach((p, i) => { const o = document.createElement('option'); o.value = i; o.textContent = p[0]; sel.appendChild(o); });
-  sel.addEventListener('change', () => { st.prov = +sel.value; pintaProv(); });
+  sel.addEventListener('change', () => { st.prov = +sel.value; recuerda(); pintaProv(); });
 });
 function pintaProv() {
-  const [n, s] = PROV[st.prov];
+  const s = PROV[st.prov][1], n = nombre(st.prov);
   sels.forEach(sel => { sel.value = st.prov; });
   $('#provTxt').textContent = n + ' elige ' + plural(s) + ' de los 350.';
   $('#betIntro').textContent = n + ' reparte ' + plural(s) + ' entre cinco partidos inventados. ¿Cuántos le das a cada uno?';
@@ -168,7 +180,7 @@ const MEDIA = Math.round(POB.reduce((a, b) => a + b, 0) / 350), MAXH = HAB[HAB.l
 })();
 function pintaHab() {
   const x = HAB.find(y => y.i === st.prov), pos = HAB.indexOf(x) + 1;
-  $('#hab').textContent = 'En ' + x.n + ' hay un escaño por cada ' + miles(x.h) + ' habitantes (puesto ' + pos + ' de 52, de menos a más). La media de España es uno por cada ' + miles(MEDIA) + '.';
+  $('#hab').textContent = 'En ' + nombre(x.i) + ' hay un escaño por cada ' + miles(x.h) + ' habitantes (puesto ' + pos + ' de 52, de menos a más). La media de España es uno por cada ' + miles(MEDIA) + '.';
   $('#barrasHab').querySelectorAll('li').forEach(li => li.classList.toggle('sel', +li.dataset.i === st.prov));
 }
 
@@ -210,9 +222,10 @@ function calculadora(raiz, partidos, estado, alCambiar, clave) {
   raiz.innerHTML = '<div class="tally"><span class="tSi"></span><span class="tAbs"></span><span class="tNo"></span></div><div class="barra" role="img" aria-label="Barra de 350 escaños con la marca de 176"><i class="bSi"></i><i class="bNo"></i><i class="bM"></i></div><div class="ver"><small>1.ª votación · mayoría absoluta</small><b class="v1"></b></div><div class="ver"><small>2.ª votación · más síes que noes</small><b class="v2"></b></div><div class="grid"></div><div class="compartir"><button type="button" class="pill sec">Copiar enlace a esta combinación</button><span class="nota" role="status"></span></div>';
   $('.compartir button', raiz).addEventListener('click', () => {
     const u = new URL(location.href), v = partidos.filter(p => COD[estado[p[0]]]).map(p => p[0] + ':' + COD[estado[p[0]]]).join(',');
-    if (v) u.searchParams.set(clave, v); else u.searchParams.delete(clave);
+    u.search = v ? '?' + clave + '=' + v : '';   // a mano, para que la dirección no salga con %3A y %2C
     try { history.replaceState(null, '', u); } catch (e) {}
-    const ok = () => { $('.compartir .nota', raiz).textContent = 'Enlace copiado.'; }, mal = () => { $('.compartir .nota', raiz).textContent = 'Copia la dirección del navegador: ya lleva la combinación.'; };
+    const bt = $('.compartir button', raiz);
+    const ok = () => { $('.compartir .nota', raiz).textContent = 'Enlace copiado.'; bt.textContent = 'Enlace copiado'; setTimeout(() => { bt.textContent = 'Copiar enlace a esta combinación'; }, 2500); }, mal = () => { $('.compartir .nota', raiz).textContent = 'Copia la dirección del navegador: ya lleva la combinación.'; };
     try { navigator.clipboard.writeText(u.href).then(ok, mal); } catch (e) { mal(); }
   });
   const btns = partidos.map(p => {
@@ -232,7 +245,7 @@ function calculadora(raiz, partidos, estado, alCambiar, clave) {
     $('.tSi', raiz).textContent = 'Sí: ' + si; $('.tAbs', raiz).textContent = 'Abst.: ' + abs; $('.tNo', raiz).textContent = 'No: ' + no;
     $('.bSi', raiz).style.width = (si / 350 * 100).toFixed(2) + '%'; $('.bNo', raiz).style.width = (no / 350 * 100).toFixed(2) + '%';
     const s1 = si >= 176, s2 = si > no;
-    $('.v1', raiz).textContent = s1 ? 'Sale: tiene ' + si + ' síes.' : 'No sale: faltan ' + (176 - si) + ' síes.';
+    $('.v1', raiz).textContent = s1 ? 'Sale: tiene ' + si + ' síes.' : 'No sale: ' + (176 - si === 1 ? 'falta ' : 'faltan ') + sies(176 - si) + '.';
     $('.v2', raiz).textContent = (s2 ? 'Sale: ' : 'No sale: ') + si + ' síes frente a ' + no + ' noes.';
     $('.v1', raiz).className = 'v1' + (s1 ? ' ok' : ''); $('.v2', raiz).className = 'v2' + (s2 ? ' ok' : '');
     if (avisa) anuncia('Sí ' + si + ', abstención ' + abs + ', no ' + no + '. Primera votación: ' + $('.v1', raiz).textContent + ' Segunda: ' + $('.v2', raiz).textContent);
@@ -247,7 +260,7 @@ $('#porraNota').innerHTML = 'Escaños calculados a partir de las últimas encues
 let R = null, pintaPact2 = () => {};
 function pintaProvRes() {
   if (!R) return;
-  const p = R.prov[st.prov], [n] = PROV[st.prov], con = R.partidos.filter(q => p.rep.seats[q.id] > 0).sort((a, b) => p.rep.seats[b.id] - p.rep.seats[a.id]);
+  const p = R.prov[st.prov], n = nombre(st.prov), con = R.partidos.filter(q => p.rep.seats[q.id] > 0).sort((a, b) => p.rep.seats[b.id] - p.rep.seats[a.id]);
   $('#r10').textContent = n + ' repartía ' + plural(p.e) + '.';
   $('#l10').innerHTML = con.map(q => '<li><b>' + q.nombre + '</b><span>' + plural(p.rep.seats[q.id]) + ' · ' + pct(p.votos[q.id] / p.val) + '</span></li>').join('');
   const nom = id => R.partidos.find(q => q.id === id).nombre;
@@ -336,7 +349,7 @@ function sincroniza() {
   if (R) { G.setRes({ porProvincia: R.prov.map(p => R.partidos.flatMap(q => Array(p.rep.seats[q.id]).fill(q.color))), hemi: R.hemi }); pintaProvRes(); pintaPact2(); }
 }
 // Cambiar de provincia desde fuera (por ejemplo, tocando el mapa).
-function eligeProv(i) { st.prov = i; pintaProv(); }
+function eligeProv(i) { st.prov = i; recuerda(); pintaProv(); }
 pintaProv(); pintaSen(); pintaPact(); pintaPact2();
 return { st, S, get R() { return R; }, pintaProv, pintaSen, pintaPact, pintaPact2: () => pintaPact2(), sincroniza, eligeProv, HAB, MEDIA };
 }
