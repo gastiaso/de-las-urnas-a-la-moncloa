@@ -59,7 +59,7 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <label class="sel" for="prov">Elige tu provincia</label>
 <select id="prov" class="selProv"></select>
 <p id="provTxt" aria-live="polite"></p>
-<p class="nota">En el mapa, cada hexágono es un escaño: las provincias crecen o encogen según los escaños que reparten, dentro de la silueta de España. Canarias, abajo a la izquierda.</p>
+<p class="nota solo-js">En el mapa, cada hexágono es un escaño: las provincias crecen o encogen según los escaños que reparten, dentro de la silueta de España. Canarias, abajo a la izquierda.</p>
 <h3>Saber más</h3>
 <details><summary>Por qué unas provincias tienen más escaños</summary>
 <p>Cada provincia tiene de salida dos escaños; Ceuta y Melilla, uno cada una. Son 102. Los otros 248 se reparten según la población.</p>
@@ -436,6 +436,7 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <p class="solo-f2">Hasta aquí, las reglas. Los cinco pasos que siguen cuentan lo que ha pasado.</p>
 <details><summary>Glosario completo</summary><dl class="glosario" id="glosario"></dl></details>
 <p class="fuentes" style="margin-top:8px">Fuentes: <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20742">Real Decreto 806/2026</a>, <a href="https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229">Constitución</a>, <a href="https://www.boe.es/buscar/act.php?id=BOE-A-1985-11672">LOREG</a>, <a href="https://www.boe.es/buscar/act.php?id=BOE-A-1982-5196">Reglamento del Congreso</a>, <a href="https://www.boe.es/buscar/act.php?id=BOE-A-1999-8583">Real Decreto 605/1999</a> y <a href="https://www.boe.es/buscar/act.php?id=BOE-A-1997-25336">Ley 50/1997</a>.</p>
+<button type="button" class="pill solo-js compartir-sitio">Compartir</button>
 <button type="button" class="pill sec" id="volver">Volver a la salida</button>
 <button type="button" class="pill sec" id="soloTexto">Ver solo el texto</button>
 </div>
@@ -567,6 +568,7 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <div class="cuerpo">
 <h2 id="tit14">La Moncloa</h2>
 <p>El último paso. El recorrido termina cuando el Congreso elige presidente y el nuevo Gobierno toma posesión.</p>
+<button type="button" class="pill solo-js compartir-sitio">Compartir</button>
 <button type="button" class="pill sec" id="volver2">Volver a la salida</button>
 </div>
 </article>

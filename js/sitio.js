@@ -40,7 +40,7 @@ const SOBRE = '<path class="sobre" d="M-1.25 -0.85 H1.25 V0.85 H-1.25 Z"/><path 
 esc.innerHTML = '<p class="rotulo"></p><svg viewBox="-0.52 -0.46 1.04 0.96"><g class="piezas">' +
   piezas.map(() => '<g class="p"><g class="env">' + SOBRE + '</g><path class="hx" d="' + hexD(0, 0, 1, 3) + '"/></g>').join('') +
   '</g><g class="hemi-guia" opacity="0"><path class="raya176" d="M0 ' + (HY - HS * 1.03).toFixed(3) + ' V' + (HY - HS * 0.3).toFixed(3) + '"/><text class="t176" x="0" y="' + (HY - HS * 1.06).toFixed(3) + '">176</text></g>' +
-  '<path class="tuyo" d="' + hexD(0, 0, 1, 3) + '"/></svg><span class="marca" hidden>Tu voto</span><p class="pie-escenario"></p>';
+  '<g class="tuyo"><path d="' + hexD(0, 0, 1, 3) + '"/><circle r=".3"/></g></svg><span class="marca" hidden>Tu voto</span><p class="pie-escenario"></p>';
 document.body.appendChild(esc);
 const svgEl = $('svg', esc), gs = $$('.piezas > .p', esc), rotulo = $('.rotulo', esc), pieEsc = $('.pie-escenario', esc);
 const tuyo = $('.tuyo', esc), marca = $('.marca', esc), guia = $('.hemi-guia', esc);
@@ -105,7 +105,7 @@ function destino(estado) {
     return { x: HEX[q.c][0], y: HEX[q.c][1], r: R0, o: 1, f, b: estado === 'hab' && q.p === p0 };
   };
 }
-const ESTADO = { 0: 'mapaSel', 1: 'mapaSel', 2: 'prov', 3: 'hab', 4: 'senado', 5: 'hemi', 6: 'pacto', 7: 'pacto', 8: 'mapaSel', 9: 'res', 10: 'provRes', 11: 'hemiRes', 12: 'pacto', 13: 'hemiRes', 14: 'mapaSel' };
+const ESTADO = { 0: 'mapaSel', 1: 'mapaSel', 2: 'prov', 3: 'hab', 4: 'senado', 5: 'hemi', 6: 'pacto', 7: 'hemi', 8: 'mapaSel', 9: 'res', 10: 'provRes', 11: 'hemiRes', 12: 'pacto', 13: 'hemiRes', 14: 'mapaSel' };
 let forzado = null;   // 'pila' mientras se ve la portada
 const estadoActual = () => forzado || ESTADO[k] || 'mapaSel';
 
@@ -178,6 +178,7 @@ function rotula() {
   let t = { 0: '350 escaños: un hexágono por escaño', 1: nom + ': ' + n + ' de 350',
     2: revelado ? nom + ": así reparte D'Hondt " + (n === 1 ? 'su escaño' : 'sus ' + n) : nom + ': ' + plural(n) + ' por repartir',
     3: 'Más oscuro: menos habitantes por escaño', 4: 'Senado: 209 elegidos, cuatro por provincia', 5: '176 de 350: la mayoría absoluta',
+    7: 'El Congreso que elegirá presidente<small>El plazo de dos meses empieza con la primera votación.</small>',
     8: '350 escaños', 9: 'Cada escaño, del color de quien lo ganó', 10: nom + ': ' + plural(n), 11: 'El Congreso que sale de las urnas',
     13: 'El Congreso que sale de las urnas', 14: '350 escaños' }[k] || '';
   let pie = '';
@@ -204,7 +205,7 @@ const G = {
   resetBet() { revelado = null; if (listo && k === 2) aplica(true); },
   reveal(d) { revelado = agrupa(d.order.map(id => PART.find(p => p[0] === id)[2])); if (listo && k === 2) { aplica(true); rotula(); } },
   setSen() {},
-  setPact(estado, partidos) { pacto6 = bloques(estado, partidos || PORRA.partidos, colorVoto); if (listo && (k === 6 || k === 7)) aplica(true, 700); },
+  setPact(estado, partidos) { pacto6 = bloques(estado, partidos || PORRA.partidos, colorVoto); if (listo && k === 6) aplica(true, 700); },
   setRes(r) { res = r; if (listo && [9, 11, 13].includes(k)) aplica(true); },
   setProvRes(colores) { provRes = agrupa(colores); if (listo && k === 10) aplica(true); },
   setPact2(estado, partidos) {
@@ -241,7 +242,7 @@ function frase(k) {
       if (n === 1) return 'Tu segunda papeleta, la sepia, es la del Senado. ' + nom + ' pasa de un diputado a <b>dos</b> senadores.';
       return 'Tu segunda papeleta, la sepia, es la del Senado. En el mapa, ' + nom + ' pasa de ' + n + ' diputados a <b>cuatro</b> senadores, como cualquier provincia de la Península.';
     case 5: return (uno ? 'El diputado de ' + nom + ' se sienta' : 'Los ' + n + ' diputados de ' + nom + ' se sientan') + ' con los otros ' + (350 - n) + '. ' + (uno ? 'Tu voto cuenta para ese asiento solo si tu partido es el más votado allí.' : 'Tu voto cuenta para alguno de esos asientos solo si tu partido saca escaño allí.');
-    case 6: return (uno ? 'El diputado de ' + nom + ' suele votar lo que decide su partido.' : 'Los ' + n + ' diputados de ' + nom + ' suelen votar lo que decide su partido.') +' Tu voto queda aparte, debajo del hemiciclo: en qué bloque estaría depende de a quién votes.';
+    case 6: return (uno ? 'El diputado de ' + nom + ' suele votar con su partido.' : 'Los ' + n + ' diputados de ' + nom + ' suelen votar con su partido.') +' Tu voto queda aparte, debajo del hemiciclo: en qué bloque estaría depende de a quién votes.';
     case 7: return 'La noche del 29N, tu papeleta se cuenta en tu mesa de ' + nom + ', en público y en voz alta.';
     case 8: return 'Ese es el camino de tu papeleta en ' + nom + ': de la urna a la Moncloa.';
     case 10: if (C.R) { const id = C.R.prov[C.st.prov].rep.order[0], q = C.R.partidos.find(x => x.id === id); return 'El hexágono dorado es el primer escaño que se repartió en ' + nom + ': fue para <b>' + q.nombre + '</b>.'; } return '';
@@ -261,13 +262,14 @@ function pintaTuVoto() {
   const sp = $('#provVoto'); if (sp) sp.value = C.st.prov;
   $$('.tuvoto').forEach(t => { const f = frase(+t.dataset.k); t.hidden = !f; t.innerHTML = f ? '<span class="tv-et">Tu voto</span>' + f : ''; });
 }
-/* salida: elegir dónde votas */
+/* salida: elegir dónde votas. Va justo debajo del título, para que se vea sin bajar nada más cerrar la portada. */
 const salida = $('.paso[data-k="0"] .portada');
 const elige = document.createElement('div'); elige.className = 'elige';
-elige.innerHTML = '<label class="sel" for="provVoto">¿Dónde votas?</label><select id="provVoto"></select><p class="nota">También puedes tocar tu provincia en el mapa.</p>';
+elige.innerHTML = '<label class="sel" for="provVoto">¿Dónde votas?</label><select id="provVoto"></select>';
 PROV.forEach((p, i) => { const o = document.createElement('option'); o.value = i; o.textContent = p[0]; $('select', elige).appendChild(o); });
 $('select', elige).addEventListener('change', e => C.eligeProv(+e.target.value));
-salida.appendChild(elige);
+$('h1', salida).after(elige);
+const tocaMapa = document.createElement('p'); tocaMapa.className = 'nota'; tocaMapa.textContent = 'También puedes tocar tu provincia en el mapa.';
 pintaTuVoto();
 
 /* ---------- navegación: menú de pasos, «Siguiente», solo texto ---------- */
@@ -299,7 +301,8 @@ secs.forEach((s, i) => {
   const kk = casilla(secs[i + 1]), b = document.createElement('button'); b.type = 'button'; b.className = 'sig';
   b.textContent = (i === 0 ? 'Sigue mi voto: ' : 'Siguiente: ') + (kk === 14 ? '' : kk + ' · ') + TITULOS[kk];
   b.addEventListener('click', () => irA(kk, true));
-  ($('.cuerpo', s) || $('.portada', s)).appendChild(b);
+  if (i === 0) { elige.after(b); b.after(tocaMapa); }   // en la salida, el botón va con el desplegable
+  else ($('.cuerpo', s) || $('.portada', s)).appendChild(b);
 });
 function lectura(v) {
   document.body.classList.toggle('lectura', v);
@@ -311,6 +314,15 @@ lectura(false);
 $('#saltar').addEventListener('click', e => { e.preventDefault(); if (portada) portada.cierra(); lectura(true); $('h1', secs[0]).focus(); });
 const st = $('#soloTexto'); if (st) st.addEventListener('click', () => lectura(!enLectura()));
 ['#volver', '#volver2'].forEach(s => { const b = $(s); if (b) b.addEventListener('click', () => irA(0, true)); });
+// Compartir el sitio: la hoja de compartir del teléfono si la hay; si no, se copia la dirección.
+$$('.compartir-sitio').forEach(b => b.addEventListener('click', async () => {
+  const d = { title: document.title, text: 'Qué se vota el 29N y cómo se pasa de una papeleta a un Gobierno.', url: location.origin + location.pathname };
+  const dice = t => { b.textContent = t; anuncia(t); setTimeout(() => { b.textContent = 'Compartir'; }, 2500); };
+  try {
+    if (navigator.share) await navigator.share(d);
+    else { await navigator.clipboard.writeText(d.url); dice('Enlace copiado'); }
+  } catch (e) { if (!e || e.name !== 'AbortError') dice('Copia la dirección del navegador'); }
+}));
 
 /* qué paso se está leyendo: el último cuyo principio ha pasado de la mitad de la pantalla */
 function mira(forzar) {

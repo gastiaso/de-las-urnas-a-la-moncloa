@@ -105,7 +105,7 @@ a{color:var(--ink)}
 .saltar:focus{position:fixed;left:8px;top:52px;z-index:9;background:var(--paper);border:1.5px solid var(--ink);padding:10px 12px;font-weight:700}
 .sig{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;margin-top:24px;min-height:52px;border:1.5px solid var(--ink);background:var(--ink);color:var(--paper);font:inherit;font-size:15px;font-weight:700;text-align:left;padding:8px 14px;cursor:pointer}
 .sig::after{content:'↓';font-size:18px}
-.portada .sig{margin-top:10px;min-height:44px}
+.portada .sig{margin-top:10px;min-height:44px}.portada .sig+.nota{margin-top:8px}.lectura .portada .sig+.nota{display:none}
 .lectura .sig{display:none}
 
 /* casilla 7: calendario por fases; cada fecha despliega qué pasa ese día y su fuente */
@@ -120,11 +120,10 @@ a{color:var(--ink)}
 .hito.clave .que::before{background:var(--teja);border-color:var(--teja)}
 .hito.abierta .que{border-left-style:dashed}
 .hito.abierta .fecha{color:var(--sec)}
-.tip{display:none;position:absolute;left:0;right:0;top:calc(100% - 4px);z-index:3;background:var(--ink);color:var(--paper);padding:10px 12px 11px;font-size:14px;line-height:1.45}
+.tip{display:none;grid-column:1/-1;margin:2px 0 10px;background:var(--ink);color:var(--paper);padding:10px 12px 11px;font-size:14px;line-height:1.45}
 .tip small{display:block;margin-top:6px;font-size:12px;opacity:.85}
 .hito.abierto .tip{display:block}
 .hito.abierto .fecha{background:var(--ink);color:var(--paper);border-bottom-color:var(--ink)}
-@media (hover:hover){.hito:hover .tip{display:block}}
 @media (max-width:420px){.hito{grid-template-columns:88px minmax(0,1fr)}.calendario .fase{padding-left:100px}.fecha{font-size:12.5px;white-space:normal;max-width:88px;line-height:1.25}.lectura .tip{margin-left:100px}}
 .lectura .tip{display:block;position:static;grid-column:1/-1;margin:0 0 8px 122px;background:transparent;color:var(--ink);padding:0;font-size:14px}
 /* pie: autoría, licencias y privacidad */
@@ -174,7 +173,9 @@ main{position:relative;z-index:1}
 .escenario .p .sobre{fill:var(--paper);stroke-width:.05}
 .escenario .p .sobre-solapa{fill:none;stroke-width:.05}
 .escenario .p.borde path{stroke-width:.22}
-.escenario .tuyo{fill:#E0A526;stroke:var(--ink);stroke-width:.14;pointer-events:none}
+.escenario .tuyo{pointer-events:none}
+.escenario .tuyo path{fill:#E0A526;stroke:var(--ink);stroke-width:.14}
+.escenario .tuyo circle{fill:var(--ink)}
 .escenario .raya176{stroke:var(--ink);stroke-width:.003;stroke-dasharray:.01 .007;fill:none}
 .escenario .t176{font:700 .022px 'Courier Prime',monospace;fill:var(--ink);text-anchor:middle}
 .rotulo{position:absolute;left:14px;top:10px;right:14px;margin:0;font-family:'Libre Franklin',system-ui,sans-serif;font-weight:800;font-size:clamp(15px,2.1vw,25px);line-height:1.12;pointer-events:none}
@@ -202,7 +203,7 @@ main{position:relative;z-index:1}
 .estacion{display:flex;align-items:center;gap:8px;font-family:'Libre Franklin',system-ui,sans-serif;font-weight:800;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--teja2);margin:0 0 6px}
 .estacion svg{width:34px;height:34px;flex:none}
 .tuvoto{position:relative;border:1.5px solid var(--ink);background:#FBF0D6;padding:9px 12px 10px 40px;margin:6px 0 12px;font-size:16px}
-.tuvoto::before{content:'';position:absolute;left:12px;top:12px;width:18px;height:20px;background:#E0A526;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+.tuvoto::before{content:'';position:absolute;left:12px;top:12px;width:18px;height:20px;background:radial-gradient(circle,var(--ink) 0 3px,#E0A526 3.5px);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
 .tuvoto .tv-et{display:block;font-family:'Libre Franklin',system-ui,sans-serif;font-weight:800;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--sec);margin-bottom:2px}
 .elige{margin-top:12px}
 .elige .pill{margin-top:4px}

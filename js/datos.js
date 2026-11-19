@@ -9,7 +9,8 @@ export const PROV_INICIAL = 46; // Valencia/València
 export const POB = [390406, 2030037, 773577, 342161, 1013529, 159887, 663886, 1237480, 5983325, 1166816, 361556, 387752, 1257041, 593964, 627173, 494407, 772153, 1135612, 198216, 733365, 832026, 942618, 285390, 535703, 230624, 617604, 446771, 456106, 325759, 7137031, 1791092, 1589138, 683500, 305573, 158687, 1167555, 946225, 327286, 328779, 1082421, 158470, 1976624, 90234, 874808, 136197, 750815, 2758633, 528841, 165275, 991991, 83595, 86780];
 
 // Partidos inventados para explicar el reparto: [letra, % de voto, color, color del texto]
-export const PART = [['A', 40.2, '#2F4B5C', '#fff'], ['B', 31.0, '#D2A24C', '#2B2118'], ['C', 17.2, '#56663F', '#fff'], ['D', 9.2, '#7A4B5E', '#fff'], ['E', 2.4, '#6A645C', '#fff']];
+// Los colores no repiten el tono y el puesto de ningún partido real, y ninguno se parece al dorado de «tu voto».
+export const PART = [['A', 40.2, '#7A4B5E', '#fff'], ['B', 31.0, '#7FA39B', '#2B2118'], ['C', 17.2, '#2F4B5C', '#fff'], ['D', 9.2, '#56663F', '#fff'], ['E', 2.4, '#6A645C', '#fff']];
 
 // Calculadora de pactos: estimación central de escaños de Porra Electoral (web/datos/modelo.json, campo «hemiciclo»),
 // ordenada de izquierda a derecha del hemiciclo. Hay que congelarla antes de la veda y sustituirla por el resultado el 30N.
