@@ -240,8 +240,8 @@ function frase(k) {
       if (ISLAS[nom]) return 'Tu segunda papeleta, la sepia, es la del Senado. En ' + nom + ' depende de tu isla: ' + ISLAS[nom] + '.';
       if (n === 1) return 'Tu segunda papeleta, la sepia, es la del Senado. ' + nom + ' pasa de un diputado a <b>dos</b> senadores.';
       return 'Tu segunda papeleta, la sepia, es la del Senado. En el mapa, ' + nom + ' pasa de ' + n + ' diputados a <b>cuatro</b> senadores, como cualquier provincia de la Península.';
-    case 5: return (uno ? 'El diputado de ' + nom + ' se sienta' : 'Los ' + n + ' diputados de ' + nom + ' se sientan') + ' con los otros ' + (350 - n) + '. En el hemiciclo, tu voto es uno de esos asientos.';
-    case 6: return (uno ? 'El diputado de ' + nom + ' vota con su partido.' : 'Los ' + n + ' diputados de ' + nom + ' votan cada uno con su partido.') + ' Tu voto queda aparte, debajo del hemiciclo: en qué bloque estaría depende de a quién votes.';
+    case 5: return (uno ? 'El diputado de ' + nom + ' se sienta' : 'Los ' + n + ' diputados de ' + nom + ' se sientan') + ' con los otros ' + (350 - n) + '. ' + (uno ? 'Tu voto cuenta para ese asiento solo si tu partido es el más votado allí.' : 'Tu voto cuenta para alguno de esos asientos solo si tu partido saca escaño allí.');
+    case 6: return (uno ? 'El diputado de ' + nom + ' suele votar lo que decide su partido.' : 'Los ' + n + ' diputados de ' + nom + ' suelen votar lo que decide su partido.') +' Tu voto queda aparte, debajo del hemiciclo: en qué bloque estaría depende de a quién votes.';
     case 7: return 'La noche del 29N, tu papeleta se cuenta en tu mesa de ' + nom + ', en público y en voz alta.';
     case 8: return 'Ese es el camino de tu papeleta en ' + nom + ': de la urna a la Moncloa.';
     case 10: if (C.R) { const id = C.R.prov[C.st.prov].rep.order[0], q = C.R.partidos.find(x => x.id === id); return 'El hexágono dorado es el primer escaño que se repartió en ' + nom + ': fue para <b>' + q.nombre + '</b>.'; } return '';

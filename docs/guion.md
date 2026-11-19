@@ -16,8 +16,8 @@ Baja para empezar ↓
 
 **Riel:**
 
-El 29N eliges a quienes se sientan en el Congreso. Hay 350 asientos, que se llaman escaños, y se reparten por circunscripciones: en la práctica, por provincias.
-En el mapa, cada hexágono es un escaño: las provincias crecen o encogen según los escaños que reparten, dentro de la silueta de España. Canarias va en el recuadro.
+El 29N no eliges presidente: eliges a los 350 diputados del Congreso, que son quienes lo eligen. Sus asientos, los escaños, se reparten por circunscripciones: en la práctica, por provincias.
+En el mapa, cada hexágono es un escaño: las provincias crecen o encogen según los escaños que reparten, dentro de la silueta de España. Canarias, abajo a la izquierda.
 
 **Saber más: Por qué unas provincias tienen más escaños**
 
@@ -29,10 +29,10 @@ _Fuentes: LOREG, art. 162; Real Decreto 806/2026, anexo; Real Decreto 1117/2025,
 
 **Saber más: Quién puede votar**
 
-Pueden votar los españoles mayores de edad que estén inscritos en el censo electoral. Solo pierde el derecho quien ha sido condenado por sentencia firme a esa pena, y mientras la cumple.
-Se vota en persona, en la mesa que te toca, y una sola vez. Para identificarte vale el DNI, el pasaporte o el carné de conducir con foto.
+Pueden votar los españoles mayores de edad que estén inscritos en el censo electoral. La ley solo se lo quita a quien sea condenado en firme a perder el derecho de voto, y el Código Penal vigente ya no prevé esa pena.
+Se vota en persona, en la mesa que te toca, y una sola vez. Para identificarte vale el DNI, el pasaporte o el carné de conducir con foto. El 29N vale también el DNI en el móvil (aplicación MiDNI); el carné de conducir de la aplicación miDGT, no.
 
-_Fuentes: LOREG, arts. 2, 3, 4 y 85._
+_Fuentes: LOREG, arts. 2, 3, 4 y 85; Código Penal, art. 39; Junta Electoral Central, Acuerdo 334/2026._
 
 **Saber más: Por qué el 29 de noviembre**
 
@@ -44,7 +44,7 @@ _Fuentes: Constitución, art. 115; LOREG, art. 42.1 y disposición adicional sé
 **Saber más: Cómo es ir a votar**
 
 Los colegios abren de 9:00 a 20:00, sin interrupción. Votas dos veces: una papeleta blanca para el Congreso y otra sepia para el Senado, cada una en su sobre.
-Puedes usar la cabina, pero no es obligatorio. En la mesa, el presidente dice tu nombre, dice «vota» y el sobre entra en la urna.
+Puedes usar la cabina, pero no es obligatorio. En la mesa dices tu nombre y te identificas; el presidente lo repite en voz alta, dice «vota» y tú metes el sobre en la urna.
 El voto es secreto: nadie puede obligarte a decir qué has votado. Si no puedes leer o manejar las papeletas, puede ayudarte una persona de tu confianza.
 
 _Fuentes: LOREG, arts. 5, 84, 86 y 87; Real Decreto 605/1999, art. 4._
@@ -82,7 +82,7 @@ _Fuentes: LOREG, arts. 6, 44 bis, 46 y 96._
 **Riel:**
 
 Reparte todos los escaños antes de apostar.
-El partido E no llega a la barrera del 3 % y se queda fuera del reparto.
+El partido E no llega a la barrera del 3 % y queda fuera. Sin ella tampoco habría sacado escaño, ni en Madrid: a los pequeños los frena que haya pocos escaños.
 
 **Saber más: Cómo se hace el reparto**
 
@@ -102,9 +102,9 @@ _Fuente: Real Decreto-ley 20/1977, de 18 de marzo, sobre Normas Electorales: pre
 **Saber más: La barrera del 3 %**
 
 Antes de repartir se apartan los partidos que no llegan al 3 % de los votos válidos de la provincia. Sus votos no se pasan a nadie: sencillamente no entran en la tabla.
-La barrera se mide provincia a provincia, no en toda España.
+La barrera se mide provincia a provincia, no en toda España. En la práctica solo puede decidir donde se reparten muchos escaños, como Madrid o Barcelona: en las demás provincias, para sacar uno hace falta bastante más del 3 %.
 
-_Fuente: LOREG, art. 163._
+_Fuente: LOREG, art. 163. Dónde puede decidir la barrera es una cuenta propia a partir de la regla._
 
 **Saber más: Blanco, nulo y abstención**
 
@@ -147,8 +147,9 @@ Los mismos porcentajes no dan lo mismo en todas partes. Cuantos menos escaños r
 
 **Saber más: Cuántos habitantes hay detrás de cada escaño**
 
-Los escaños se reparten por población, pero con un mínimo de dos por provincia. Por eso en las provincias pequeñas hacen falta muchos menos habitantes para elegir a un diputado.
+Los escaños se reparten por población, pero con un mínimo de dos por provincia. Por eso cada diputado de una provincia pequeña representa a muchos menos habitantes.
 Para el 29N, en Soria hay un escaño por cada 45.117 habitantes; en Madrid, uno por cada 187.817: cuatro veces más.
+Eso no quiere decir que el voto valga más en Soria. Allí solo se reparten dos escaños, y los votos a quien no quede entre los dos primeros no eligen a nadie. En Madrid, con 38, casi todos los votos van a partidos que sacan algún escaño.
 La cuenta es de habitantes, no de votantes: incluye a menores y a extranjeros, que no votan en estas elecciones.
 
 _Fuentes: Real Decreto 1117/2025, anexo (padrón a 1 de enero de 2025); Real Decreto 806/2026, anexo; LOREG, arts. 2 y 162. Habitantes por escaño: cuenta propia, población entre escaños._
@@ -183,8 +184,9 @@ El Senado no elige al presidente ni puede hacerlo caer. Pero sin él no se refor
 **Saber más: La llave de la reforma constitucional**
 
 Para reformar la Constitución hacen falta tres quintos del Congreso y tres quintos del Senado. Si el Senado no llega a tres quintos, queda otra vía: que lo apruebe por mayoría absoluta y que el Congreso lo apruebe por dos tercios. Sin la mayoría absoluta del Senado, la reforma no sale.
-Las reformas de más calado, las que tocan el título preliminar, los derechos fundamentales o la Corona, exigen dos tercios de cada cámara, disolver las Cortes, que las nuevas lo ratifiquen también por dos tercios y un referéndum.
-En la práctica, quien tenga más de la mitad del Senado puede bloquear cualquier reforma, y quien tenga más de un tercio, las de más calado. Además, una décima parte de los senadores puede exigir que cualquier reforma se vote en referéndum.
+Las reformas de más calado, las que tocan el título preliminar, los derechos fundamentales o la Corona, exigen dos tercios de cada cámara, disolver las Cortes, que las nuevas ratifiquen la decisión y aprueben el texto por dos tercios, y un referéndum.
+En la práctica, quien tenga la mitad del Senado o más puede bloquear cualquier reforma, y quien tenga más de un tercio, las de más calado. Además, en las demás reformas, una décima parte de los senadores o de los diputados puede exigir un referéndum.
+Estas cuentas se hacen sobre todos los senadores, incluidos los que designan los parlamentos autonómicos, no solo sobre los 209 que se votan.
 
 _Fuentes: Constitución, arts. 167 y 168. Las cifras de bloqueo son una cuenta propia a partir de esas mayorías._
 
@@ -235,16 +237,17 @@ _Explicación propia a partir de los arts. 90, 122.3, 159.1, 167 y 168 de la Con
 **Saber más: Los senadores que no se votan**
 
 Además de los elegidos en las urnas, cada parlamento autonómico designa un senador, más otro por cada millón de habitantes de su comunidad. Son los senadores por designación.
+No se eligen el 29N, pero cuentan igual que los demás: las mayorías del Senado se calculan sobre todos los senadores, no solo sobre los 209 que salen de las urnas.
 Si un senador elegido en las urnas deja el escaño, lo ocupa su suplente.
 
-_Fuentes: Constitución, art. 69.5; LOREG, art. 166._
+_Fuentes: Constitución, art. 69.5; LOREG, arts. 165.4 y 166.2._
 
 ## 5 · Las mayorías
 
 **Riel:**
 
 Para elegir presidente a la primera hace falta la mayoría absoluta: 176 síes de 350. Si no sale, 48 horas después basta la mayoría simple: más síes que noes.
-En teja, los 176 escaños que marcan la mitad más uno.
+En teja, los 176 escaños que hacen falta para pasar de la mitad.
 
 **Saber más: Por qué la abstención pesa distinto**
 
@@ -256,10 +259,10 @@ _Explicación propia a partir del art. 99.3 de la Constitución._
 **Saber más: Otras mayorías**
 
 La mayoría absoluta (176) también hace falta para aprobar las leyes orgánicas y la moción de censura.
-Tres quintos (210): reformar la Constitución y proponer magistrados del Tribunal Constitucional.
-Dos tercios (234): las reformas constitucionales de mayor alcance.
+Tres quintos (210): reformar la Constitución, proponer magistrados del Tribunal Constitucional y elegir vocales del Consejo General del Poder Judicial.
+Dos tercios (234): las reformas constitucionales de más calado.
 
-_Fuentes: Constitución, arts. 81, 99, 113, 159, 167 y 168. Las cifras 210 y 234 son el cálculo sobre 350 diputados._
+_Fuentes: Constitución, arts. 81, 99, 113, 159, 167 y 168; Ley Orgánica del Poder Judicial, art. 567.2. Las cifras 210 y 234 son el cálculo sobre 350 diputados._
 
 **Saber más: El día a día: quórum y mayoría simple**
 
@@ -293,14 +296,22 @@ _Fuente: Constitución, art. 134._
 
 **Riel:**
 
-Si ningún partido llega solo a 176, toca pactar. Toca cada partido para cambiar su voto en la investidura: no, sí o abstención.
+Si ningún partido llega solo a 176, hay que pactar. Es presidente quien reúne más síes que noes, sea o no del partido más votado.
+Toca cada partido para cambiar su voto en la investidura: no, sí o abstención. Cada combinación es la investidura de un candidato concreto: tú decides de quién.
 
-**Saber más: Tres maneras de apoyar**
+**Saber más: Cómo se apoya a un candidato**
 
-Un partido puede ayudar a un candidato de tres maneras. Entrando en el Gobierno con él: es una coalición. Votando sí sin entrar en el Gobierno. O absteniéndose, para que le baste con la segunda votación.
-Lo que se pide a cambio no está en ninguna ley: es negociación política.
+Un partido puede ayudar a un candidato con su voto: con un sí, o absteniéndose para que le baste la segunda votación. Y puede ir más allá: entrar en el Gobierno con él (una coalición) o quedarse fuera y pactar su apoyo, para toda la legislatura o ley a ley.
+La investidura solo abre la puerta: después, cada ley y cada Presupuesto necesitan su propia mayoría. Lo que se pide a cambio no está en ninguna ley: es negociación política.
 
 _Explicación propia. Las mayorías, en el art. 99 de la Constitución._
+
+**Saber más: Por qué se mueven partidos enteros**
+
+La calculadora mueve partidos enteros porque los diputados votan casi siempre lo que decide su partido: es la disciplina de voto.
+No es una obligación legal. La Constitución dice que diputados y senadores no están sujetos a mandato imperativo: nadie puede obligarlos legalmente a votar en un sentido.
+
+_Fuente: Constitución, art. 67.2. La disciplina de voto es una explicación propia._
 
 **Saber más: Cómo se vota la investidura**
 
@@ -319,16 +330,16 @@ _Fuentes: Constitución, art. 99; LOREG, art. 42 y disposición adicional sépti
 
 **Saber más: De dónde salen estos escaños**
 
-No son resultados: son escaños calculados a partir de las últimas encuestas por Porra Electoral, que junta las encuestas publicadas y simula el reparto provincia a provincia. El 30N se cambiarán por los escaños de verdad.
+No son resultados: son escaños calculados por Porra Electoral, otra web del autor, que junta las encuestas publicadas y simula el reparto provincia a provincia. El 30N se cambiarán por los escaños de verdad.
 
 _Fuente: Porra Electoral._
 
 **Saber más: Por qué la calculadora lleva fecha**
 
-La ley prohíbe publicar o difundir encuestas electorales en los cinco días anteriores a la votación: para el 29N, del 24 al 28 de noviembre. Por eso la estimación de esta calculadora se congeló antes y lleva la fecha de la última encuesta que incluye.
-Quien vigila que las encuestas cumplan la ley es la Junta Electoral Central.
+La ley prohíbe publicar, difundir o reproducir sondeos electorales en los cinco días anteriores a la votación: para el 29N, del 24 al 28 de noviembre. La estimación de esta calculadora se publicó antes de esos días, lleva la fecha de la última encuesta que incluye y desde entonces no se actualiza.
+Quien vigila que se cumpla es la Junta Electoral Central.
 
-_Fuente: LOREG, art. 69. Del 24 al 28 de noviembre es el cálculo de los cinco días._
+_Fuente: LOREG, art. 69.7. Del 24 al 28 de noviembre es el cálculo de los cinco días._
 
 ## 7 · Del 29N al Gobierno
 
@@ -339,11 +350,11 @@ Toca cada fecha para ver qué pasa ese día.
 · Antes de votar
 · mar 6 oct — Se disuelven las Cortes y se convocan elecciones: El Real Decreto 806/2026 sale en el BOE: disuelve el Congreso y el Senado elegidos en julio de 2023 y fija la votación 54 días después, el domingo 29 de noviembre. (Real Decreto 806/2026, arts. 1 y 2; LOREG, art. 42.1.)
 · vie 13 nov — Empieza la campaña: Quince días en los que los partidos piden el voto con mítines, carteles y anuncios. Arranca a las cero horas. (LOREG, art. 51; Real Decreto 806/2026, art. 4.)
-· jue 19 nov — Último día para pedir el voto por correo: Se pide en una oficina de Correos, en persona y con el DNI. Las papeletas llegan después a casa y se devuelven por correo certificado, sin sello. (LOREG, arts. 72 y 73. Fecha: cálculo del décimo día anterior.)
-· 21 a 26 nov — Voto en los consulados: Quien vive en el extranjero puede depositar su voto en una urna de su consulado o embajada. Si lo manda por correo, tiene que enviarlo como tarde el 24. (LOREG, art. 75. Fechas: cálculo de los plazos del artículo.)
+· jue 19 nov — Último día para pedir el voto por correo: Se pide en una oficina de Correos, en persona y con el DNI, o por internet con certificado electrónico. Las papeletas llegan a casa. El voto se entrega después en una oficina de Correos, identificándose, como tarde el 25 de noviembre, salvo que se amplíe el plazo. (LOREG, arts. 72 y 73; Junta Electoral Central, Instrucción 5/2023 y Acuerdo 11/2023. Fechas: cálculo del décimo día anterior y del último antes del tercero.)
+· 21 a 26 nov — Voto en los consulados: Quien vive en el extranjero puede depositar su voto en una urna de su consulado o embajada. Si lo manda por correo, tiene que enviarlo como tarde el 24 y tiene que llegar al consulado como tarde el 27. (LOREG, art. 75. Fechas: cálculo de los plazos del artículo.)
 · 24 a 28 nov — No se pueden publicar encuestas: La ley prohíbe publicar, difundir o reproducir sondeos electorales en los cinco días anteriores a la votación. (LOREG, art. 69.7.)
 · vie 27 nov — Termina la campaña: A medianoche se acaban los mítines, la propaganda y los actos de campaña. (LOREG, art. 51; Real Decreto 806/2026, art. 4.)
-· sáb 28 nov — Jornada de reflexión: La víspera no puede haber propaganda ni actos de campaña. (LOREG, arts. 51.3 y 53.)
+· sáb 28 nov — Jornada de reflexión: La víspera no puede haber propaganda ni actos de campaña. Tampoco el día de la votación. (LOREG, arts. 51.3 y 53.)
 · La votación
 · dom 29 nov — Se vota, de 9:00 a 20:00: Los colegios no cierran en todo el día. Al acabar, cada mesa abre la urna y cuenta los votos en público. Por la noche se conoce el recuento provisional. (LOREG, arts. 84, 95 y 98.)
 · El recuento oficial
@@ -351,28 +362,29 @@ Toca cada fecha para ver qué pasa ese día.
 · lun 7 dic — Como tarde, termina el escrutinio: Después se proclaman los electos. Desde la proclamación hay tres días para recurrir; los recursos los resuelve el Tribunal Supremo. (LOREG, arts. 107.2, 108 y 112. Fecha: cálculo del octavo día.)
 · Las nuevas Cortes
 · mié 23 dic — Se constituyen el Congreso y el Senado: A las diez de la mañana, cada cámara en su sesión constitutiva. En el Congreso preside al principio el diputado de más edad, se elige la Mesa y los diputados juran o prometen la Constitución. (Real Decreto 806/2026, art. 5; Constitución, art. 72.2; Reglamento del Congreso, arts. 1 a 4 y 37.)
-· hasta el 28 dic — Se forman los grupos parlamentarios: En los cinco días siguientes a la sesión constitutiva. Por regla general hacen falta quince diputados; hay otra vía con cinco si se supera un mínimo de votos. (Reglamento del Congreso, arts. 23 y 24. Fecha: cálculo de los cinco días.)
+· fin de dic — Se forman los grupos parlamentarios: En los cinco días hábiles siguientes a la sesión constitutiva: el plazo acaba en los últimos días de diciembre. Por regla general hacen falta quince diputados; hay otra vía con cinco si se supera un mínimo de votos. (Reglamento del Congreso, arts. 23, 24 y 90 (los plazos por días se cuentan en días hábiles).)
 · 1 ene 2027 — Si no hay Presupuestos nuevos, siguen los anteriores: Se prorrogan automáticamente hasta que se aprueben otros. Un Gobierno en funciones no puede aprobar el proyecto de Presupuestos. (Constitución, art. 134.4; Ley 50/1997, art. 21.5.)
 · La investidura
 · sin fecha — El Rey consulta y propone un candidato: Recibe a los representantes de los grupos con escaños y propone un candidato a través de la presidencia del Congreso. La Constitución no le pone plazo. (Constitución, art. 99.1.)
 · día D — Debate y primera votación: El candidato expone su programa sin límite de tiempo y cada grupo le responde. Necesita 176 síes. Aquí arranca el reloj de dos meses. (Constitución, art. 99; Reglamento del Congreso, art. 171.)
-· D + 48 h — Segunda votación: Si no llegó a 176, basta con más síes que noes. Si tampoco sale, el Rey puede proponer a otro candidato. (Constitución, art. 99.3 y 99.4.)
+· D + 48 h — Segunda votación: Si no llegó a 176, basta con más síes que noes. Si tampoco sale, el Rey puede hacer nuevas propuestas. (Constitución, art. 99.3 y 99.4.)
 · D + 2 meses — Si no hay presidente, nuevas elecciones: Se disuelven las Cortes y se vota 47 días después de la convocatoria. Ha pasado en 2016 y en 2019. (Constitución, art. 99.5; LOREG, disposición adicional séptima; Reales Decretos 184/2016 y 551/2019.)
 · con presidente — Nombramiento y nuevo Gobierno: El Rey nombra presidente al candidato investido y, a propuesta suya, a los ministros. Cuando toman posesión, termina el Gobierno en funciones. (Constitución, arts. 62, 99.3, 100 y 101.)
 
 **Saber más: La campaña y la jornada de reflexión**
 
 La campaña dura quince días: del viernes 13 al viernes 27 de noviembre. Es el tiempo en que los partidos piden el voto con mítines, carteles y anuncios. Antes del 13 no pueden poner carteles ni anuncios electorales.
-El sábado 28, la víspera, no puede haber propaganda ni actos de campaña. Es lo que se conoce como jornada de reflexión.
+El sábado 28, la víspera, no puede haber propaganda ni actos de campaña: es lo que se conoce como jornada de reflexión. Tampoco puede haberlos el domingo de la votación.
 
 _Fuentes: LOREG, arts. 51 y 53; Real Decreto 806/2026, art. 4. «Jornada de reflexión» es el nombre de uso común; la ley habla del periodo en que la campaña ha terminado._
 
 **Saber más: Si ese día no puedes ir**
 
-Existe el voto por correo. Hay que pedirlo en una oficina de Correos, en persona y con el DNI, hasta diez días antes de la votación: para el 29N, hasta el 19 de noviembre. Después te llegan las papeletas a casa y las devuelves por correo certificado, sin pagar sello.
-Quien vive en el extranjero y está inscrito en el censo de residentes ausentes recibe la documentación en casa sin pedirla. Puede votar en una urna de su consulado, del 21 al 26 de noviembre, o mandar el voto por correo al consulado como tarde el 24. Esos votos se cuentan el 4 de diciembre, en el recuento oficial.
+Existe el voto por correo. Hay que pedirlo hasta diez días antes de la votación (para el 29N, hasta el 19 de noviembre): en una oficina de Correos, en persona y con el DNI, o por internet con certificado electrónico. Después te llegan las papeletas a casa.
+El voto no se echa a un buzón: se entrega en una oficina de Correos, identificándote, como tarde el miércoles 25 de noviembre. En otras elecciones, la Junta Electoral Central ha ampliado ese plazo. Si no puedes ir, puede llevarlo otra persona con una autorización firmada por ti y una fotocopia de tu DNI. No se paga sello.
+Quien vive en el extranjero y está inscrito en el censo de residentes ausentes recibe la documentación en casa sin pedirla. Puede votar en una urna de su consulado, del 21 al 26 de noviembre, o mandar el voto por correo al consulado como tarde el 24; si llega después del 27, no vale. Esos votos se cuentan el 4 de diciembre, en el recuento oficial.
 
-_Fuentes: LOREG, arts. 72, 73, 75 y 103. Las fechas son el cálculo de los plazos de esos artículos para el 29N._
+_Fuentes: LOREG, arts. 72, 73, 75 y 103; Junta Electoral Central, Instrucción 5/2023 y Acuerdos 11/2023 y 328/2023. Las fechas son el cálculo de los plazos de esos artículos para el 29N._
 
 **Saber más: La noche electoral no es el resultado oficial**
 
@@ -392,9 +404,9 @@ _Fuentes: Constitución, art. 68.6; Real Decreto 806/2026, art. 5._
 Preside el diputado de más edad, con los dos más jóvenes de secretarios. Lo primero es elegir la Mesa del Congreso. Para presidirla hace falta mayoría absoluta; si nadie la logra, se decide entre los dos más votados.
 Después, los diputados juran o prometen acatar la Constitución y el Congreso queda constituido.
 Para ser diputado de pleno derecho hay que entregar la credencial y la declaración de actividades, y jurar o prometer la Constitución. Quien no lo haga en tres plenos se queda sin derechos ni prerrogativas hasta que lo haga.
-Los grupos parlamentarios se forman en los cinco días siguientes.
+Los grupos parlamentarios se forman en los cinco días hábiles siguientes.
 
-_Fuentes: Reglamento del Congreso, arts. 1 a 4, 20, 23, 24 y 37._
+_Fuentes: Reglamento del Congreso, arts. 1 a 4, 20, 23, 24, 37 y 90._
 
 **Saber más: Las consultas del Rey**
 
@@ -545,7 +557,7 @@ El último paso. El recorrido termina cuando el Congreso elige presidente y el n
 - **Investidura.** La votación en la que el Congreso da su confianza a un candidato a presidente del Gobierno.
 - **Junta electoral.** El órgano que vigila que las elecciones sean limpias y hace el recuento oficial. Hay una central, una por provincia y otras de zona.
 - **Ley orgánica.** Una ley sobre asuntos de más peso, como los derechos fundamentales o las reglas electorales. Necesita mayoría absoluta del Congreso.
-- **Lista.** La candidatura de un partido en una provincia: tantos nombres como escaños se reparten, en un orden fijo.
+- **Lista.** La candidatura de un partido en una provincia: tantos candidatos como escaños se reparten, en un orden fijo, y hasta diez suplentes.
 - **Mayoría absoluta.** Más de la mitad de todos los diputados, voten o no: 176 de 350.
 - **Mayoría simple.** Más votos a favor que en contra. Las abstenciones no cuentan.
 - **Mesa del Congreso.** El órgano que dirige la Cámara: una presidencia, cuatro vicepresidencias y cuatro secretarías. Se elige el primer día.
@@ -554,12 +566,12 @@ El último paso. El recorrido termina cuando el Congreso elige presidente y el n
 - **Quórum.** El mínimo de asistentes para que una votación valga: más de la mitad de la Cámara.
 - **Regla D'Hondt.** La forma de repartir los escaños de cada provincia: se dividen los votos de cada partido entre 1, 2, 3… y los escaños van a los resultados más altos.
 - **Senador por designación.** El que no eligen los votantes, sino el parlamento de cada comunidad autónoma.
-- **Suplente.** Quien va en la lista por detrás de los titulares y entra si alguno de ellos deja el escaño.
+- **Suplente.** Quien va al final de la lista, detrás de los candidatos. Solo entra si queda un escaño libre y ya no hay candidatos por delante. En el Senado, cada candidato lleva dos.
 - **Veto del Senado.** El rechazo del Senado a una ley que viene del Congreso. El Congreso puede levantarlo.
 - **Voto en blanco.** Un sobre sin papeleta. Es un voto válido: no va a ningún partido, pero cuenta en el total.
 - **Voto nulo.** Un voto que no vale: por ejemplo, una papeleta con tachaduras o añadidos, o un sobre que no es el oficial.
 
 # Recuento
 
-- Cajones «saber más»: 59 (3257 palabras).
+- Cajones «saber más»: 60 (3589 palabras).
 - Términos de glosario: 28.

@@ -50,7 +50,7 @@ Cada paso tiene cajones «saber más» con la fuente al pie, y las palabras subr
 
 ## Calendario
 
-- **23 de noviembre:** sale la fase 1, con la calculadora de pactos congelada.
+- **23 de noviembre:** lanzamiento de la fase 1, con la calculadora de pactos congelada.
 - **24 a 28 de noviembre:** la ley prohíbe publicar encuestas esos cinco días (LOREG, art. 69.7). La calculadora no cambia.
 - **Noche del 29 de noviembre:** se cargan los votos del recuento provisional y se abren los pasos 9 a 13.
 - **4 de diciembre:** escrutinio general. Se actualizan los resultados.
