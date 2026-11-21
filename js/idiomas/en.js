@@ -141,6 +141,7 @@ export const textos = {
   dondeVotas: 'Choose a province',
   tocaMapa: 'You can also tap a province on the map.',
   fase2Cerrada: 'Steps 9 to 13 open on 30 November, with the results.',
+  abre30N: '30 Nov',   // junto a cada paso cerrado, en el menú
   sigueMiVoto: 'Follow the vote: ',
   siguiente: 'Next: ',
   verEscanos: 'Back to the 350 seats',

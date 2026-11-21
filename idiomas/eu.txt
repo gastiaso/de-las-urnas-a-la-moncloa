@@ -1139,3 +1139,41 @@ eu: Biztanleak eserlekuko hautesbarruti bakoitzean, gutxienetik gehienera
 
 es: Porcentaje de votos y de escaños de cada partido
 eu: Alderdi bakoitzaren botoen eta eserlekuen ehunekoa
+
+# ───── Pasos 9 a 13, cerrados hasta el 30N ─────
+
+es: A partir del 30N
+eu: Azaroaren 30etik aurrera
+
+es: Se abre el 30N
+eu: Azaroaren 30ean irekiko da
+
+es: El mapa con el color de quien ganó cada escaño, y los votos y los escaños de cada partido.
+eu: Mapa, eserleku bakoitza irabazi duenaren kolorearekin, eta alderdi bakoitzaren botoak eta eserlekuak.
+
+es: Quién se llevó cada escaño donde votas, por cuántos votos se decidió el último y qué habría cambiado con otros votos.
+eu: Nork eraman duen eserleku bakoitza zuk bozkatzen duzun lekuan, zenbat botogatik erabaki zen azkena eta zer aldatuko zen beste boto batzuekin.
+
+es: Por qué el porcentaje de escaños de un partido no coincide con el de sus votos.
+eu: Zergatik ez datorren bat alderdi baten eserlekuen ehunekoa bere botoenarekin.
+
+es: La calculadora de investidura, con los escaños del 29N.
+eu: Inbestiduraren kalkulagailua, azaroaren 29ko eserlekuekin.
+
+es: El calendario hasta la investidura, fecha a fecha.
+eu: Inbestidurara arteko egutegia, egunez egun.
+
+es: 9 · Qué ha pasado
+eu: 9 · Zer gertatu den
+
+es: 10 · En tu provincia
+eu: 10 · Zure probintzian
+
+es: 11 · Votos y escaños
+eu: 11 · Botoak eta eserlekuak
+
+es: 12 · ¿Quién gobierna?
+eu: 12 · Nork gobernatzen du?
+
+es: 13 · Lo que viene
+eu: 13 · Datorrena

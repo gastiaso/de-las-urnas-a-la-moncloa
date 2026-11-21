@@ -1139,3 +1139,41 @@ gl: Habitantes por escano en cada circunscrición, de menos a máis
 
 es: Porcentaje de votos y de escaños de cada partido
 gl: Porcentaxe de votos e de escanos de cada partido
+
+# ───── Pasos 9 a 13, cerrados hasta el 30N ─────
+
+es: A partir del 30N
+gl: A partir do 30N
+
+es: Se abre el 30N
+gl: Ábrese o 30N
+
+es: El mapa con el color de quien ganó cada escaño, y los votos y los escaños de cada partido.
+gl: O mapa coa cor de quen gañou cada escano, e os votos e os escanos de cada partido.
+
+es: Quién se llevó cada escaño donde votas, por cuántos votos se decidió el último y qué habría cambiado con otros votos.
+gl: Quen levou cada escano onde votas, por cantos votos se decidiu o último e que tería cambiado con outros votos.
+
+es: Por qué el porcentaje de escaños de un partido no coincide con el de sus votos.
+gl: Por que a porcentaxe de escanos dun partido non coincide coa dos seus votos.
+
+es: La calculadora de investidura, con los escaños del 29N.
+gl: A calculadora de investidura, cos escanos do 29N.
+
+es: El calendario hasta la investidura, fecha a fecha.
+gl: O calendario ata a investidura, data a data.
+
+es: 9 · Qué ha pasado
+gl: 9 · Que pasou
+
+es: 10 · En tu provincia
+gl: 10 · Na túa provincia
+
+es: 11 · Votos y escaños
+gl: 11 · Votos e escanos
+
+es: 12 · ¿Quién gobierna?
+gl: 12 · Quen goberna?
+
+es: 13 · Lo que viene
+gl: 13 · O que vén

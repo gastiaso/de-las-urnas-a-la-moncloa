@@ -1156,3 +1156,41 @@ título: Who the parties are
 p: The calculator lists the parties that won seats at the 2023 election, from left to right as they are drawn in the chamber. The two big nationwide parties are the Socialists (PSOE), on the centre-left, and the conservative People's Party (PP). Vox is a hard-right party. Sumar is a left-wing alliance, the junior partner in the outgoing coalition government.
 p: The rest stand only in their own territories. From Catalonia: Esquerra (ERC), left-wing Catalan separatists, and Junts, hardline Catalan separatists on the centre-right. From the Basque Country: the Basque Nationalist Party (PNV), moderate Basque nationalists on the centre-right, and EH Bildu, left-wing Basque separatists. UPN is a conservative regionalist party from Navarre; the BNG are left-wing Galician nationalists; Coalición Canaria (CC) is a regionalist party from the Canary Islands.
 nota: General context added for this English edition; it is not in the Spanish original. The labels are the shorthand of the English-language press, not the parties' own descriptions.
+
+# ───── Pasos 9 a 13, cerrados hasta el 30N ─────
+
+es: A partir del 30N
+en: From 30 November
+
+es: Se abre el 30N
+en: Opens on 30 November
+
+es: El mapa con el color de quien ganó cada escaño, y los votos y los escaños de cada partido.
+en: The map with each seat in the colour of the party that won it, and each party's votes and seats.
+
+es: Quién se llevó cada escaño donde votas, por cuántos votos se decidió el último y qué habría cambiado con otros votos.
+en: Who won each seat in a province, by how many votes the last one was decided and what other votes would have changed.
+
+es: Por qué el porcentaje de escaños de un partido no coincide con el de sus votos.
+en: Why a party's share of seats does not match its share of votes.
+
+es: La calculadora de investidura, con los escaños del 29N.
+en: The investiture calculator, with the seats from the 29 November election.
+
+es: El calendario hasta la investidura, fecha a fecha.
+en: The calendar up to the investiture, date by date.
+
+es: 9 · Qué ha pasado
+en: 9 · What happened
+
+es: 10 · En tu provincia
+en: 10 · In one province
+
+es: 11 · Votos y escaños
+en: 11 · Votes and seats
+
+es: 12 · ¿Quién gobierna?
+en: 12 · Who governs?
+
+es: 13 · Lo que viene
+en: 13 · What's next

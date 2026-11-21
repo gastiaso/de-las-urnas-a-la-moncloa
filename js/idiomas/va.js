@@ -182,6 +182,7 @@ export const textos = {
   dondeVotas: 'On votes?',
   tocaMapa: 'També pots tocar la teua província en el mapa.',
   fase2Cerrada: "Els passos 9 a 13 s'obrin el 30N, amb els resultats.",
+  abre30N: '30N',   // junto a cada paso cerrado, en el menú
   sigueMiVoto: 'Seguix el meu vot: ',
   siguiente: 'Següent: ',
   verEscanos: 'Tornar als 350 escons',

@@ -219,6 +219,7 @@ export const textos = {
   dondeVotas: 'Non bozkatzen duzu?',
   tocaMapa: 'Zure probintzia mapan ere uki dezakezu.',
   fase2Cerrada: '9. urratsetik 13.era artekoak azaroaren 30ean irekiko dira, emaitzekin.',
+  abre30N: 'aza. 30',   // junto a cada paso cerrado, en el menú
   sigueMiVoto: 'Jarraitu nire botoari: ',
   siguiente: 'Hurrengoa: ',
   verEscanos: 'Itzuli 350 eserlekuetara',

@@ -184,6 +184,7 @@ export const textos = {
   dondeVotas: 'Onde votas?',
   tocaMapa: 'Tamén podes tocar a túa provincia no mapa.',
   fase2Cerrada: 'Os pasos 9 a 13 ábrense o 30N, cos resultados.',
+  abre30N: '30N',   // junto a cada paso cerrado, en el menú
   sigueMiVoto: 'Segue o meu voto: ',
   siguiente: 'Seguinte: ',
   verEscanos: 'Volver aos 350 escanos',

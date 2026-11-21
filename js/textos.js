@@ -93,6 +93,7 @@ export const ES = {
   dondeVotas: '¿Dónde votas?',
   tocaMapa: 'También puedes tocar tu provincia en el mapa.',
   fase2Cerrada: 'Los pasos 9 a 13 se abren el 30N, con los resultados.',
+  abre30N: '30N',   // junto a cada paso cerrado, en el menú
   sigueMiVoto: 'Sigue mi voto: ',
   siguiente: 'Siguiente: ',
   verEscanos: 'Volver a los 350 escaños',

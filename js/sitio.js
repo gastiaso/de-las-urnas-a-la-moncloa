@@ -255,7 +255,11 @@ secs.forEach(s => {
 });
 const bTexto = document.createElement('button'); bTexto.type = 'button'; indice.appendChild(bTexto);
 bTexto.addEventListener('click', () => { abreIndice(false); lectura(!enLectura()); });
-if (!FASE2) { const pi = document.createElement('p'); pi.textContent = T.fase2Cerrada; indice.appendChild(pi); }
+if (!FASE2) {   // los pasos 9 a 13 se ven en el menú, desactivados, y cada tarjeta cerrada lleva su icono
+  for (let kk = 9; kk <= 13; kk++) { const b = document.createElement('button'); b.type = 'button'; b.disabled = true; b.innerHTML = '<b>' + kk + '</b><span>' + T.titulos[kk] + '</span><small>' + T.abre30N + '</small>'; indice.insertBefore(b, bTexto); }
+  const pi = document.createElement('p'); pi.textContent = T.fase2Cerrada; indice.appendChild(pi);
+  $$('.capado').forEach(c => $('.estacion', c).insertAdjacentHTML('afterbegin', ICONO[+c.dataset.k] || ''));
+}
 // los idiomas: la lista está en el HTML, al principio de la página; se repite en el menú de pasos y en la portada
 const idiomas = $('nav.idiomas');
 if (idiomas) indice.appendChild(idiomas.cloneNode(true));

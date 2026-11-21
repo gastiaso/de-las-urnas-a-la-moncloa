@@ -1139,3 +1139,41 @@ ca: Habitants per escó a cada circumscripció, de menys a més
 
 es: Porcentaje de votos y de escaños de cada partido
 ca: Percentatge de vots i d'escons de cada partit
+
+# ───── Pasos 9 a 13, cerrados hasta el 30N ─────
+
+es: A partir del 30N
+ca: A partir del 30N
+
+es: Se abre el 30N
+ca: S'obre el 30N
+
+es: El mapa con el color de quien ganó cada escaño, y los votos y los escaños de cada partido.
+ca: El mapa amb el color de qui ha guanyat cada escó, i els vots i els escons de cada partit.
+
+es: Quién se llevó cada escaño donde votas, por cuántos votos se decidió el último y qué habría cambiado con otros votos.
+ca: Qui s'ha endut cada escó on votes, per quants vots es va decidir l'últim i què hauria canviat amb uns altres vots.
+
+es: Por qué el porcentaje de escaños de un partido no coincide con el de sus votos.
+ca: Per què el percentatge d'escons d'un partit no coincideix amb el dels seus vots.
+
+es: La calculadora de investidura, con los escaños del 29N.
+ca: La calculadora d'investidura, amb els escons del 29N.
+
+es: El calendario hasta la investidura, fecha a fecha.
+ca: El calendari fins a la investidura, data a data.
+
+es: 9 · Qué ha pasado
+ca: 9 · Què ha passat
+
+es: 10 · En tu provincia
+ca: 10 · A la teva província
+
+es: 11 · Votos y escaños
+ca: 11 · Vots i escons
+
+es: 12 · ¿Quién gobierna?
+ca: 12 · Qui governa?
+
+es: 13 · Lo que viene
+ca: 13 · El que ve
