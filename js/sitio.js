@@ -288,7 +288,11 @@ secs.forEach(s => {
 });
 const bTexto = document.createElement('button'); bTexto.type = 'button'; indice.appendChild(bTexto);
 bTexto.addEventListener('click', () => { abreIndice(false); lectura(!enLectura()); });
-if (!FASE2) { const pi = document.createElement('p'); pi.textContent = 'Los pasos 9 a 13 se abren el 30N, con los resultados.'; indice.appendChild(pi); }
+if (!FASE2) {   // los pasos 9 a 13 se ven en el menú, desactivados, y cada tarjeta cerrada lleva su icono
+  for (let kk = 9; kk <= 13; kk++) { const b = document.createElement('button'); b.type = 'button'; b.disabled = true; b.innerHTML = '<b>' + kk + '</b><span>' + TITULOS[kk] + '</span><small>30N</small>'; indice.insertBefore(b, bTexto); }
+  const pi = document.createElement('p'); pi.textContent = 'Los pasos 9 a 13 se abren el 30N, con los resultados.'; indice.appendChild(pi);
+  $$('.capado').forEach(c => $('.estacion', c).insertAdjacentHTML('afterbegin', ICONO[+c.dataset.k] || ''));
+}
 function abreIndice(v, foco) {
   indice.hidden = !v; $('#donde').setAttribute('aria-expanded', v ? 'true' : 'false');
   if (v && foco) { const bs = $$('button', indice); (bs[Math.max(0, secs.findIndex(s => casilla(s) === k))] || bs[0]).focus(); }

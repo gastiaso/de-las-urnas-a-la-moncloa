@@ -445,6 +445,21 @@ Hasta aquí, las reglas. El 30N se abren cinco pasos más, con los resultados y 
 Hasta aquí, las reglas. Los cinco pasos que siguen cuentan lo que ha pasado.
 Fuentes: Real Decreto 806/2026, Constitución, LOREG, Reglamento del Congreso, Real Decreto 605/1999 y Ley 50/1997.
 
+## A partir del 30N
+
+**Riel:**
+
+9 · Qué ha pasado
+El mapa con el color de quien ganó cada escaño, y los votos y los escaños de cada partido.
+10 · En tu provincia
+Quién se llevó cada escaño donde votas, por cuántos votos se decidió el último y qué habría cambiado con otros votos.
+11 · Votos y escaños
+Por qué el porcentaje de escaños de un partido no coincide con el de sus votos.
+12 · ¿Quién gobierna?
+La calculadora de investidura, con los escaños del 29N.
+13 · Lo que viene
+El calendario hasta la investidura, fecha a fecha.
+
 # Fase 2 · los resultados (cerrada hasta el 30N)
 
 ## 9 · Qué ha pasado
