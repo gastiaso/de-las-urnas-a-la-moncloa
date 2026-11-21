@@ -1,6 +1,6 @@
 // El contenido de los pasos: glosario, calendario, provincia, apuesta, tablas, Senado, calculadoras y resultados.
 // No dibuja nada: los efectos visuales (el escenario de los 350 escaños) le llegan en G.
-import { PROV, PROV_INICIAL, POB, PART, PORRA, SEN, GLOS, COLOR_PARTIDO } from './datos.js';
+import { PROV, PROV_INICIAL, POB, PART, CONGRESO_2023, SEN, GLOS, COLOR_PARTIDO } from './datos.js';
 import { dhondt, reparto } from './dhondt.js';
 import { RES } from './resultados.js';
 
@@ -253,8 +253,8 @@ function calculadora(raiz, partidos, estado, alCambiar, clave) {
   }
   return pinta;
 }
-const pintaPact = calculadora($('#calc6'), PORRA.partidos.map(p => [...p, COLOR_PARTIDO[p[0]]]), st.pact, (e, p) => G.setPact(e, p), 'p6');
-$('#porraNota').innerHTML = 'Escaños calculados a partir de las últimas encuestas, hasta el ' + PORRA.corte + ' (<a href="https://gastiaso.github.io/porra-electoral/">Porra Electoral</a>). Es una estimación, no un resultado.';
+const pintaPact = calculadora($('#calc6'), CONGRESO_2023.partidos.map(p => [...p, COLOR_PARTIDO[p[0]]]), st.pact, (e, p) => G.setPact(e, p), 'p6');
+$('#calcNota').textContent = 'Escaños que cada partido sacó en las elecciones del ' + CONGRESO_2023.fecha + ', las últimas antes del 29N. No es una encuesta ni un resultado del 29N.';
 
 /* ---------- fase 2: los resultados ---------- */
 let R = null, pintaPact2 = () => {};
