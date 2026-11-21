@@ -38,16 +38,16 @@ const TITULOS = ['Saída', 'Que se vota', 'Do voto ao escano', 'Onde votas', 'O 
   'Que pasou', 'Na túa provincia', 'Votos e escanos', 'Quen goberna?', 'O que vén', 'A Moncloa'];
 const SEN = ['Persoa 1 · Partido A', 'Persoa 2 · Partido A', 'Persoa 3 · Partido A', 'Persoa 4 · Partido B', 'Persoa 5 · Partido B', 'Persoa 6 · Partido C'];
 const GLOS = {
-  escano: ['Escano', 'Cada un dos 350 asentos do Congreso. Quen o ocupa é deputado ou deputada.'],
+  escano: ["Escano", "Cada un dos 350 asentos do Congreso; os do Senado tamén se chaman así. Quen ocupa un do Congreso é deputado ou deputada."],
   circ: ['Circunscrición', 'A zona na que se contan os votos e se reparten os escanos. Nas xerais é a provincia; Ceuta e Melilla son unha cada unha.'],
   dhondt: ["Regra D'Hondt", 'A forma de repartir os escanos de cada provincia: divídense os votos de cada partido entre 1, 2, 3… e os escanos van para os resultados máis altos.'],
   barrera: ['Barreira electoral', 'O mínimo para entrar no reparto: o 3 % dos votos válidos da provincia.'],
-  blanco: ['Voto en branco', 'Un sobre sen papeleta. É un voto válido: non vai para ningún partido, pero conta no total.'],
+  blanco: ["Voto en branco", "Un sobre sen papeleta; no Senado, tamén a papeleta sen ningunha cruz. É un voto válido: non vai para ningún partido, pero conta no total."],
   nulo: ['Voto nulo', 'Un voto que non vale: por exemplo, unha papeleta con algo riscado ou engadido, ou un sobre que non é o oficial.'],
   absoluta: ['Maioría absoluta', 'Máis da metade de todos os deputados, voten ou non: 176 de 350.'],
   simple: ['Maioría simple', 'Máis votos a favor que en contra. As abstencións non contan.'],
   investidura: ['Investidura', 'A votación na que o Congreso lle dá a súa confianza a un candidato a presidente do Goberno.'],
-  abstencion: ['Abstención', 'Nin si nin non. Non suma a favor, pero tampouco en contra.'],
+  abstencion: ["Abstención", "Nunhas eleccións, non ir votar. Nunha votación do Congreso, non votar nin si nin non: non suma a favor nin en contra."],
   mesa: ['Mesa do Congreso', 'O órgano que dirixe a Cámara: unha presidencia, catro vicepresidencias e catro secretarías. Elíxese o primeiro día.'],
   grupo: ['Grupo parlamentario', 'A agrupación dos deputados dun partido no Congreso. Por regra xeral fan falta quince; hai outra vía con cinco se se supera un mínimo de votos.'],
   funciones: ['Goberno en funcións', 'O Goberno que xa cesou e segue á fronte ata que entra o novo, con poderes limitados.'],
@@ -65,7 +65,9 @@ const GLOS = {
   decretoley: ['Decreto lei', 'Unha norma que o Goberno aproba por urxencia. O Congreso ten trinta días para mantela ou tombala.'],
   confianza: ['Cuestión de confianza', 'A votación que pide o propio presidente para comprobar que o Congreso o segue apoiando. Abóndalle a maioría simple; se a perde, dimite.'],
   veto: ['Veto do Senado', 'O rexeitamento do Senado a unha lei que vén do Congreso. O Congreso pode levantalo.'],
-  permanente: ['Deputación Permanente', 'O grupo reducido de deputados (e outro de senadores) que queda de garda cando as Cámaras están disoltas ou non se reúnen.']
+  permanente: ["Deputación Permanente", "O grupo reducido que queda de garda en cada cámara cando están disoltas ou non se reúnen. Hai unha no Congreso e outra no Senado."],
+  validos: ["Votos válidos", "Os que van para un partido máis os votos en branco. Os nulos non contan."],
+  hemiciclo: ["Hemiciclo", "O salón de plenos do Congreso, cos escanos en forma de media lúa."]
 };
 
 /* la fecha de corte de la estimación: «8 de noviembre de 2026» o «2026-11-08» → «8 de novembro de 2026» */
@@ -179,7 +181,7 @@ export const textos = {
   },
 
   /* navegación */
-  estacion: (k, ultima) => k === 0 ? 'Saída' : k === 14 ? 'Meta' : 'Paso ' + k + ' de ' + ultima,
+  estacion: (k, ultima) => k === 0 ? 'Saída' : k === 14 ? 'A Moncloa' : 'Paso ' + k + ' de ' + ultima,
   donde: (k, ultima, lectura) => lectura ? 'Índice' : k === 0 ? 'Saída' : k === 14 ? 'A Moncloa' : 'Paso ' + k + ' de ' + ultima,
   dondeVotas: 'Onde votas?',
   tocaMapa: 'Tamén podes tocar a túa provincia no mapa.',
@@ -247,7 +249,7 @@ export const textos = {
   participacion: p => ' Votou o ' + p + ' do censo.',
   thVotos: 'Votos',
   thEscanos: 'Escanos',
-  thPorEscano: 'Por escano',
+  thPorEscano: 'Votos por escano',
   fuenteRes: (prueba, etiqueta, fuente) => (prueba ? 'Datos de proba: ' : '') + etiqueta + '. Fonte: ' + fuente + '. Os escanos calcúlanse aquí cos votos de cada provincia.',
   repartia: (i, n) => suxeito(i, true) + ' ' + verbo(i, 'repartía', 'repartían') + ' ' + escanos(n) + '.',
   ultimo: (ganador, rival, votos) => 'O último escano foi para ' + ganador + '. A ' + rival + (Math.round(votos) === 1 ? ' faltoulle ' : ' faltáronlle ') + nvotos(votos) + ' para quitarllo.',

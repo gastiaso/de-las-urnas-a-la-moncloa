@@ -80,8 +80,8 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <details><summary>Por que unhas provincias teñen máis escanos</summary>
 <p>Cada provincia ten de saída dous escanos; Ceuta e Melilla, un cada unha. Son 102. Os outros 248 repártense segundo a poboación.</p>
 <p>A conta é así: divídese a poboación de todas as provincias entre 248 e sae unha cota. Cada provincia recibe tantos escanos como veces cabe esa cota na súa poboación. Os que sobran van para as provincias que quedaron máis preto de conseguir un máis.</p>
-<p>Para o 29N usouse o padrón a 1 de xaneiro de 2025, e a cota sae duns 197.000 habitantes. Por iso Madrid elixe 38 e Soria, 2.</p>
-<p class="nota">Fontes: LOREG, art. 162; Real decreto 806/2026, anexo; Real decreto 1117/2025, anexo. A cifra de 102 é a suma de 50 provincias por dous, máis Ceuta e Melilla. A cota (197.355) é conta propia, e con ela sae exactamente o reparto do decreto.</p>
+<p>Para o 29N usouse o padrón a 1 de xaneiro de 2025, e a cota é duns 197.000 habitantes. Madrid suma 36 aos seus dous de saída e elixe 38; Soria non chega á cota e queda cos seus dous.</p>
+<p class="nota">Fontes: LOREG (a lei electoral), art. 162; Real decreto 806/2026, anexo; Real decreto 1117/2025, anexo. A cifra de 102 é a suma de 50 provincias por dous, máis Ceuta e Melilla. A cota (197.355) é conta propia, e con ela sae exactamente o reparto do decreto.</p>
 </details>
 <details><summary>Quen pode votar</summary>
 <p>Poden votar os españois maiores de idade que estean inscritos no <button type="button" class="glos" data-g="censo">censo electoral</button>. A lei só lle quita o dereito de voto a quen sexa condenado en firme a perdelo, e o Código Penal vixente xa non prevé esa pena.</p>
@@ -89,7 +89,7 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <p class="nota">Fontes: LOREG, arts. 2, 3, 4 e 85; Código Penal, art. 39; Xunta Electoral Central, Acordo 334/2026.</p>
 </details>
 <details><summary>Por que o 29 de novembro</summary>
-<p>O presidente do Goberno adiantou as eleccións: o decreto que disolveu as Cortes saíu no BOE o 6 de outubro. A lei fixa a votación 54 días despois da convocatoria, e iso cae en domingo 29 de novembro.</p>
+<p>O presidente do Goberno adiantou as eleccións: o decreto que disolveu as Cortes saíu no BOE, o boletín oficial do Estado, o 6 de outubro. A lei fixa a votación 54 días despois da convocatoria, e iso cae en domingo 29 de novembro.</p>
 <p>Se un día houbese que repetir as eleccións, o prazo sería máis curto: 47 días.</p>
 <p class="nota">Fontes: Constitución, art. 115; LOREG, art. 42.1 e disposición adicional sétima; Real decreto 806/2026, arts. 1 e 2, publicado no BOE do 6 de outubro de 2026. O 29 de novembro é o cálculo do día 54.</p>
 </details>
@@ -111,7 +111,7 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 </details>
 <details><summary>Que son as Cortes e para que serven</summary>
 <p>As <button type="button" class="glos" data-g="cortes">Cortes Xerais</button> son o Congreso e o Senado xuntos. Fan as leis, aproban os Orzamentos e controlan o Goberno. Elíxense para catro anos.</p>
-<p>Das dúas cámaras, o Congreso é o que elixe o presidente do Goberno e o que pode levantar os vetos do Senado.</p>
+<p>Das dúas cámaras, o Congreso é o que elixe o presidente do Goberno e o que pode levantar os <button type="button" class="glos" data-g="veto">vetos</button> do Senado.</p>
 <p class="nota">Fontes: Constitución, arts. 66, 68.4, 69.6, 90 e 99.</p>
 </details>
 <details><summary>Como son as listas</summary>
@@ -143,23 +143,23 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <p>Esta é a táboa da túa provincia cos partidos do exemplo. En cor tella, as divisións que levan escano, numeradas na orde en que o conseguen:</p>
 <div class="tabla" id="cocientes"></div>
 <p id="pasoReparto" class="paso-reparto"></p>
-<button type="button" class="pill sec" id="repetirReparto">Ver o reparto paso a paso</button>
-<p>A propia lei pon un exemplo: con 480.000 votos e 8 escanos, o partido máis votado leva catro, o segundo dous, e o terceiro e o cuarto, un cada un.</p>
+<button type="button" class="pill sec" id="repetirReparto">Ver o reparto escano a escano</button>
+<p>A propia lei pon un exemplo: con 480.000 votos repartidos entre seis partidos e 8 escanos, o partido máis votado leva catro, o segundo dous, e o terceiro e o cuarto, un cada un.</p>
 <p class="nota">Fonte: LOREG, art. 163. Na táboa, as porcentaxes inventadas fan de votos.</p>
 </details>
 <details><summary>Desde cando se usa</summary>
-<p>Desde 1977. Fixouna o real decreto lei de normas electorais de marzo daquel ano, que regulou as primeiras eleccións tras a Lei para a reforma política, xa con 350 deputados. Xa lle chamaba «regra d'Hondt», xa poñía a barreira no 3 % e xa traía o mesmo exemplo de 480.000 votos que trae hoxe a lei.</p>
+<p>A regra D'Hondt úsase desde 1977. Fixouna o real decreto lei de normas electorais de marzo daquel ano, que regulou as primeiras eleccións tras a Lei para a reforma política (a que abriu paso ás primeiras eleccións democráticas), xa con 350 deputados. Xa lle chamaba «regra d'Hondt», xa poñía a barreira no 3 % e xa traía o mesmo exemplo de 480.000 votos que trae hoxe a lei.</p>
 <p>Aquel decreto presentábaa como un freo a que o Congreso quedase demasiado fragmentado. E o reparto daquela era outro: Madrid elixía 32 deputados, Barcelona 33 e Soria 3.</p>
 <p class="nota">Fonte: Real decreto lei 20/1977, do 18 de marzo, sobre normas electorais: preámbulo e arts. 19 e 20.</p>
 </details>
 <details><summary>A barreira do 3 %</summary>
-<p>Antes de repartir apártanse os partidos que non chegan ao 3 % dos votos válidos da provincia. Os seus votos non se lle pasan a ninguén: simplemente non entran na táboa.</p>
+<p>Antes de repartir apártanse os partidos que non chegan ao 3 % dos <button type="button" class="glos" data-g="validos">votos válidos</button> da provincia. Os seus votos non se lle pasan a ninguén: simplemente non entran na táboa.</p>
 <p>A barreira mídese provincia a provincia, non en toda España. Na práctica só pode decidir onde se reparten moitos escanos, como Madrid ou Barcelona: nas demais provincias, para sacar un fai falta bastante máis do 3 %.</p>
 <p class="nota">Fonte: LOREG, art. 163. Onde pode decidir a barreira é unha conta propia a partir da regra.</p>
 </details>
 <details><summary>Branco, nulo e abstención</summary>
 <p>O <button type="button" class="glos" data-g="blanco">voto en branco</button> é un sobre baleiro. É válido: non vai para ningún partido, pero conta no total e por iso sobe un pouco o listón do 3 %.</p>
-<p>O <button type="button" class="glos" data-g="nulo">voto nulo</button> non conta para o reparto. É o caso dunha papeleta con algo riscado ou engadido, ou dun sobre que non é o oficial. Se metes dúas papeletas do mesmo partido, vale como un só voto.</p>
+<p>O <button type="button" class="glos" data-g="nulo">voto nulo</button> non conta para o reparto. É nulo, por exemplo, o voto cunha papeleta con algo riscado ou engadido, ou nun sobre que non é o oficial. Se metes dúas papeletas do mesmo partido, vale como un só voto.</p>
 <p>Quen non vai votar abstense: non entra en ningunha conta.</p>
 <p class="nota">Fontes: LOREG, arts. 96 e 108.</p>
 </details>
@@ -176,7 +176,7 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <p class="nota">Fonte: LOREG, art. 163.2.</p>
 </details>
 <details><summary>O último escano</summary>
-<p>O último escano de cada provincia é o máis disputado. Lévao o partido coa seguinte división máis alta, e ás veces outro queda moi preto.</p>
+<p>O último escano de cada provincia adoita ser o máis disputado. Lévao o partido coa seguinte división máis alta, e ás veces outro queda moi preto.</p>
 <p>Cando haxa resultados, no paso 10 verás por cantos votos se decidiu na túa provincia.</p>
 <p class="nota">Explicación propia a partir da regra do art. 163 da LOREG.</p>
 </details>
@@ -201,14 +201,14 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <p class="nota">Fontes: Real decreto 1117/2025, anexo (padrón a 1 de xaneiro de 2025); Real decreto 806/2026, anexo; LOREG, arts. 2 e 162. Habitantes por escano: conta propia, poboación entre escanos.</p>
 </details>
 <details><summary>Por que pasa</summary>
-<p>Con dous escanos só caben os dous partidos máis votados. Con 38, ata un partido co 9 % consegue varios. A regra é a mesma; cambia o tamaño da provincia.</p>
+<p>Con dous escanos entran, como moito, os dous partidos máis votados. Con 38, ata un partido co 9 % consegue varios. A regra é a mesma; cambia o tamaño da provincia.</p>
 <p>No exemplo, con dous escanos non abonda nin un 17 %. Nas provincias pequenas, o listón de verdade está moi por riba do 3 %.</p>
 <p class="nota">Exemplo propio: os mesmos cinco partidos inventados e as mesmas porcentaxes nas dúas provincias.</p>
 </details>
 <details><summary>Que di a Constitución e que di a lei</summary>
-<p>A Constitución fixa tres cousas: que o Congreso teña entre 300 e 400 deputados, que cada provincia sexa unha circunscrición e que o reparto sexa proporcional.</p>
+<p>A Constitución fixa tres cousas: que o Congreso teña entre 300 e 400 deputados, que cada provincia sexa unha circunscrición cun mínimo de escanos e que o reparto sexa proporcional.</p>
 <p>O demais decídeo a lei electoral: que sexan 350, que cada provincia teña dous de saída, a regra D'Hondt e a barreira do 3 %.</p>
-<p>Cambiar a lei electoral esixe maioría absoluta do Congreso, porque é unha <button type="button" class="glos" data-g="organica">lei orgánica</button>. Cambiar a Constitución esixe bastante máis.</p>
+<p>Cambiar a lei electoral esixe <button type="button" class="glos" data-g="absoluta">maioría absoluta</button> do Congreso, porque é unha <button type="button" class="glos" data-g="organica">lei orgánica</button>. Cambiar a Constitución esixe bastante máis.</p>
 <p class="nota">Fontes: Constitución, arts. 68 e 81; LOREG, arts. 162 e 163.</p>
 </details>
 <details><summary>Cantas provincias hai de cada tamaño</summary>
@@ -226,11 +226,11 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <p>Ao Senado vótase doutra maneira: marcas persoas, non listas. Nunha provincia podes marcar ata tres nomes e saen as catro persoas máis votadas.</p>
 <fieldset id="sen"><legend class="nota">Proba a marcar (nomes inventados)</legend></fieldset>
 <p id="senTxt" style="font-weight:700"></p>
-<p>O Senado non elixe o presidente nin pode facelo caer. Pero sen el non se reforma a Constitución, e tócalle elixir parte do Tribunal Constitucional e do Consello Xeral do Poder Xudicial.</p>
+<p>O Senado non elixe o presidente nin o fai caer. Sen el non se reforma a Constitución, e elixe parte do Tribunal Constitucional e do Consello Xeral do Poder Xudicial.</p>
 <h3>Saber máis</h3>
 <details><summary>A chave da reforma constitucional</summary>
 <p>Para reformar a Constitución fan falta tres quintos do Congreso e tres quintos do Senado. Se o Senado non chega a tres quintos, queda outra vía: que o aprobe por maioría absoluta e que o Congreso o aprobe por dous terzos. Sen a maioría absoluta do Senado, a reforma non sae.</p>
-<p>As reformas máis fondas, as que tocan o título preliminar, os dereitos fundamentais ou a Coroa, esixen dous terzos de cada cámara, disolver as Cortes, que as novas ratifiquen a decisión e aproben o texto por dous terzos, e un referendo.</p>
+<p>As reformas máis fondas, as que tocan o título preliminar (os principios de partida, como a soberanía ou a unidade), os dereitos fundamentais ou a Coroa, esixen dous terzos de cada cámara, disolver as Cortes, que as novas ratifiquen a decisión e aproben o texto por dous terzos, e un referendo.</p>
 <p>Na práctica, quen teña a metade do Senado ou máis pode bloquear calquera reforma, e quen teña máis dun terzo, as máis fondas. Ademais, nas demais reformas, unha décima parte dos senadores ou dos deputados pode esixir un referendo.</p>
 <p>Estas contas fanse sobre todos os senadores, incluídos os que designan os parlamentos autonómicos, non só sobre os 209 que se votan.</p>
 <p class="nota">Fontes: Constitución, arts. 167 e 168. As cifras de bloqueo son unha conta propia a partir desas maiorías.</p>
@@ -253,13 +253,13 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 </details>
 <details><summary>Para que serve o Senado</summary>
 <p>A Constitución defíneo como a cámara de representación territorial. Revisa as leis que lle chegan do Congreso: ten dous meses para cambialas ou para vetalas. O Congreso pode levantar ese <button type="button" class="glos" data-g="veto">veto</button>.</p>
-<p>Hai unha cousa que só pode autorizar o Senado, por maioría absoluta: que o Goberno obrigue unha comunidade autónoma a cumprir a lei, o artigo 155.</p>
-<p>Tamén pode propoñer leis, crear comisións de investigación e, con 50 senadores, recorrer unha lei ante o Tribunal Constitucional. Os acordos de cooperación entre comunidades autónomas e o reparto do Fondo de Compensación Interterritorial comezan no Senado, aínda que, se as dúas cámaras non se poñen de acordo, decide o Congreso.</p>
-<p class="nota">Fontes: Constitución, arts. 69, 74.2, 76, 87.1, 90, 145.2, 155, 158.2 e 162.1.</p>
+<p>Hai unha cousa que só pode autorizar o Senado, por maioría absoluta: que o Goberno obrigue unha comunidade autónoma a cumprir a lei. É o artigo 155.</p>
+<p>Tamén pode propoñer leis, crear comisións de investigación e, con 50 senadores, recorrer unha lei ante o Tribunal Constitucional.</p>
+<p class="nota">Fontes: Constitución, arts. 69, 76, 87.1, 90, 155 e 162.1.</p>
 </details>
 <details><summary>O que o Senado non pode facer</summary>
-<p>Non vota a investidura nin a moción de censura: iso é só do Congreso. Tampouco decide sobre os decretos lei do Goberno nin sobre os estados de alarma, excepción e sitio.</p>
-<p>Pode preguntarlle ao Goberno e interpelalo cada semana, pero non facelo caer.</p>
+<p>Non vota a <button type="button" class="glos" data-g="investidura">investidura</button> nin a <button type="button" class="glos" data-g="censura">moción de censura</button>: iso é só do Congreso. Tampouco decide sobre os <button type="button" class="glos" data-g="decretoley">decretos lei</button> do Goberno nin sobre os estados de alarma, excepción e sitio.</p>
+<p>Pode pedirlle explicacións ao Goberno cada semana, pero non facelo caer.</p>
 <p class="nota">Fontes: Constitución, arts. 86, 99, 111, 113 e 116.</p>
 </details>
 <details><summary>Se o Senado ten outra maioría</summary>
@@ -282,7 +282,7 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <div class="cuerpo">
 <h2 id="tit5">5 · As maiorías</h2>
 <p>Para elixir presidente á primeira fai falta a <button type="button" class="glos" data-g="absoluta">maioría absoluta</button>: 176 votos a favor de 350. Se non sae, 48 horas despois abonda coa <button type="button" class="glos" data-g="simple">maioría simple</button>: máis votos a favor que en contra.</p>
-<p class="nota">En cor tella, os 176 escanos que fan falta para pasar da metade.</p>
+<p class="nota">En cor tella, no <button type="button" class="glos" data-g="hemiciclo">hemiciclo</button>, os 176 escanos que fan falta para pasar da metade.</p>
 <h3>Saber máis</h3>
 <details><summary>Por que a abstención pesa distinto</summary>
 <p>Na primeira votación só contan os votos a favor: hai que xuntar 176, e quen se abstén non axuda.</p>
@@ -302,7 +302,7 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 </details>
 <details><summary>Leis orgánicas e decretos lei</summary>
 <p>As leis orgánicas tratan os asuntos de máis peso: os dereitos fundamentais, os estatutos de autonomía ou as regras electorais. Necesitan maioría absoluta do Congreso.</p>
-<p>O <button type="button" class="glos" data-g="decretoley">decreto lei</button> é o atallo do Goberno para casos urxentes: apróbao el só e entra en vigor, pero o Congreso ten trinta días para mantelo ou tombalo.</p>
+<p>O <button type="button" class="glos" data-g="decretoley">decreto lei</button> é a vía do Goberno para casos urxentes: apróbao el só e entra en vigor, pero o Congreso ten trinta días para mantelo ou tombalo.</p>
 <p class="nota">Fontes: Constitución, arts. 81 e 86.</p>
 </details>
 <details><summary>Moción de censura e cuestión de confianza</summary>
@@ -311,8 +311,8 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <p class="nota">Fontes: Constitución, arts. 112, 113 e 114. Os 35 deputados son a décima parte de 350.</p>
 </details>
 <details><summary>Os Orzamentos</summary>
-<p>Prepáraos o Goberno e apróbanos as Cortes. Se o ano comeza sen orzamentos novos, seguen valendo os do ano anterior ata que se aproben.</p>
-<p>Por iso un Goberno sen maioría pode seguir gobernando, pero coas contas doutro ano.</p>
+<p>Prepáraos o Goberno e apróbanos as Cortes. Se o ano comeza sen Orzamentos novos, seguen valendo os do ano anterior ata que se aproben.</p>
+<p>Así, un Goberno que non consegue aprobar os seus Orzamentos pode seguir gobernando coas contas doutro ano.</p>
 <p class="nota">Fonte: Constitución, art. 134.</p>
 </details>
 </div>
@@ -327,6 +327,7 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <p>Toca cada partido para cambiar o seu voto na <button type="button" class="glos" data-g="investidura">investidura</button>: non, si ou <button type="button" class="glos" data-g="abstencion">abstención</button>. Cada combinación é a investidura dun candidato concreto: ti decides de quen.</p>
 <p class="nota" id="calcNota"></p>
 <div class="calc" id="calc6"></div>
+<p class="nota">ERC: Esquerra Republicana de Catalunya · PNV: Partido Nacionalista Vasco · BNG: Bloque Nacionalista Galego · CC: Coalición Canaria · UPN: Unión do Pobo Navarro.</p>
 <h3>Saber máis</h3>
 <details><summary>Como se apoia un candidato</summary>
 <p>Un partido pode axudar un candidato co seu voto: cun si, ou absténdose para que lle abonde a segunda votación. E pode ir máis alá: entrar no Goberno con el (unha coalición) ou quedar fóra e pactar o seu apoio, para toda a lexislatura ou lei a lei.</p>
@@ -339,8 +340,8 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <p class="nota">Fonte: Constitución, art. 67.2. A disciplina de voto é unha explicación propia.</p>
 </details>
 <details><summary>Como se vota a investidura</summary>
-<p>Un a un e en voz alta. Chámase cada deputado por orde alfabética do primeiro apelido, comezando por un sacado á sorte, e responde «si», «non» ou «abstención». Os membros do Goberno que son deputados e a Mesa votan ao final.</p>
-<p>Antes hai debate: o candidato explica o seu programa sen límite de tempo e cada grupo respóndelle durante media hora.</p>
+<p>Un a un e en voz alta. Chámase cada deputado por orde alfabética do primeiro apelido, comezando por un sacado á sorte, e responde «si», «non» ou «abstención». Os membros do Goberno que son deputados e a <button type="button" class="glos" data-g="mesa">Mesa do Congreso</button> votan ao final.</p>
+<p>Antes hai debate: o candidato explica o seu programa sen límite de tempo e cada <button type="button" class="glos" data-g="grupo">grupo parlamentario</button> respóndelle durante media hora.</p>
 <p class="nota">Fontes: Regulamento do Congreso, arts. 85, 86 e 171.</p>
 </details>
 <details><summary>Se a investidura falla</summary>
@@ -368,7 +369,7 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <article class="tarjeta" aria-labelledby="tit7">
 <div class="cuerpo">
 <h2 id="tit7">7 · Do 29N ao Goberno</h2>
-<p>O reloxo de dous meses non arrinca o 29N. Comeza coa primeira votación de <button type="button" class="glos" data-g="investidura">investidura</button>.</p>
+<p>O prazo de dous meses para elixir presidente non arrinca o 29N. Comeza coa primeira votación de <button type="button" class="glos" data-g="investidura">investidura</button>.</p>
 <p class="nota solo-js">Toca cada data para ver o que pasa ese día.</p>
 <ol class="calendario">
 <li class="fase">Antes de votar</li>
@@ -383,13 +384,13 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <li class="hito clave"><button type="button" class="fecha" aria-expanded="false" aria-controls="h8">dom 29 nov</button><span class="que">Vótase, de 9:00 a 20:00</span><span class="tip" id="h8">Os colexios non pechan en todo o día. Ao acabar, cada mesa abre a urna e conta os votos en público. Pola noite coñécese o reconto provisional. <small>LOREG, arts. 84, 95 e 98.</small></span></li>
 <li class="fase">O reconto oficial</li>
 <li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h9">ven 4 dec</button><span class="que">Escrutinio xeral</span><span class="tip" id="h9">As xuntas electorais fan o reconto oficial coas actas das mesas e suman o voto chegado do estranxeiro. <small>LOREG, arts. 75 e 103. Data: cálculo do quinto día.</small></span></li>
-<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h10">lun 7 dec</button><span class="que">Como moi tarde, remata o escrutinio</span><span class="tip" id="h10">Despois proclámanse os electos. Desde a proclamación hai tres días para recorrer; os recursos resólveos o Tribunal Supremo. <small>LOREG, arts. 107.2, 108 e 112. Data: cálculo do oitavo día.</small></span></li>
+<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h10">lun 7 dec</button><span class="que">Como moi tarde, remata o escrutinio</span><span class="tip" id="h10">Despois proclámanse os elixidos. Desde a proclamación hai tres días para recorrer; os recursos resólveos o Tribunal Supremo. <small>LOREG, arts. 107.2, 108 e 112. Data: cálculo do oitavo día.</small></span></li>
 <li class="fase">As novas Cortes</li>
 <li class="hito clave"><button type="button" class="fecha" aria-expanded="false" aria-controls="h11">mér 23 dec</button><span class="que">Constitúense o Congreso e o Senado</span><span class="tip" id="h11">Ás dez da mañá, cada cámara na súa sesión constitutiva. No Congreso preside ao principio o deputado de máis idade, elíxese a Mesa e os deputados xuran ou prometen a Constitución. <small>Real decreto 806/2026, art. 5; Constitución, art. 72.2; Regulamento do Congreso, arts. 1 a 4 e 37.</small></span></li>
 <li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h12">fins de dec</button><span class="que">Fórmanse os grupos parlamentarios</span><span class="tip" id="h12">Nos cinco días hábiles seguintes á sesión constitutiva: o prazo remata nos últimos días de decembro. Por regra xeral fan falta quince deputados; hai outra vía con cinco se se supera un mínimo de votos. <small>Regulamento do Congreso, arts. 23, 24 e 90 (os prazos por días cóntanse en días hábiles).</small></span></li>
-<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h13">1 xan 2027</button><span class="que">Se non hai Orzamentos novos, seguen os anteriores</span><span class="tip" id="h13">Prorróganse automaticamente ata que se aproben outros. Un Goberno en funcións non pode aprobar o proxecto de Orzamentos. <small>Constitución, art. 134.4; Lei 50/1997, art. 21.5.</small></span></li>
+<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h13">ven 1 xan 2027</button><span class="que">Se non hai Orzamentos novos, seguen os anteriores</span><span class="tip" id="h13">Prorróganse automaticamente ata que se aproben outros. Un Goberno en funcións non pode aprobar o proxecto de Orzamentos. <small>Constitución, art. 134.4; Lei 50/1997, art. 21.5.</small></span></li>
 <li class="fase">A investidura</li>
-<li class="hito abierta"><button type="button" class="fecha" aria-expanded="false" aria-controls="h14">sen data</button><span class="que">O Rei consulta e propón un candidato</span><span class="tip" id="h14">Recibe os representantes dos grupos con escanos e propón un candidato a través da presidencia do Congreso. A Constitución non lle pon prazo. <small>Constitución, art. 99.1.</small></span></li>
+<li class="hito abierta"><button type="button" class="fecha" aria-expanded="false" aria-controls="h14">sen data</button><span class="que">O Rei consulta e propón un candidato</span><span class="tip" id="h14">Recibe os representantes dos partidos con escano e propón un candidato a través da presidencia do Congreso. A Constitución non lle pon prazo. <small>Constitución, art. 99.1.</small></span></li>
 <li class="hito abierta clave"><button type="button" class="fecha" aria-expanded="false" aria-controls="h15">día D</button><span class="que">Debate e primeira votación</span><span class="tip" id="h15">O candidato expón o seu programa sen límite de tempo e cada grupo respóndelle. Necesita 176 votos a favor. Aquí arrinca o reloxo de dous meses. <small>Constitución, art. 99; Regulamento do Congreso, art. 171.</small></span></li>
 <li class="hito abierta"><button type="button" class="fecha" aria-expanded="false" aria-controls="h16">D + 48 h</button><span class="que">Segunda votación</span><span class="tip" id="h16">Se non chegou a 176, abonda con máis votos a favor que en contra. Se tampouco sae, o Rei pode facer novas propostas. <small>Constitución, art. 99.3 e 99.4.</small></span></li>
 <li class="hito abierta"><button type="button" class="fecha" aria-expanded="false" aria-controls="h17">D + 2 meses</button><span class="que">Se non hai presidente, novas eleccións</span><span class="tip" id="h17">Disólvense as Cortes e vótase 47 días despois da convocatoria. Pasou en 2016 e en 2019. <small>Constitución, art. 99.5; LOREG, disposición adicional sétima; Reais decretos 184/2016 e 551/2019.</small></span></li>
@@ -409,7 +410,7 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 </details>
 <details><summary>A noite electoral non é o resultado oficial</summary>
 <p>A noite do 29N coñécese un reconto provisional, feito coas actas das mesas. O oficial, o <button type="button" class="glos" data-g="escrutinio">escrutinio xeral</button>, fano as <button type="button" class="glos" data-g="junta">xuntas electorais</button> ao quinto día: o 4 de decembro. Ese día súmase o voto chegado do estranxeiro.</p>
-<p>Ten que estar rematado como moi tarde o oitavo día: o 7 de decembro. Despois proclámanse os deputados. Desde ese momento hai tres días para recorrer, e os recursos resólveos o Tribunal Supremo.</p>
+<p>Ten que estar rematado como moi tarde o oitavo día: o 7 de decembro. Despois proclámanse os elixidos. Desde ese momento hai tres días para recorrer, e os recursos resólveos o Tribunal Supremo.</p>
 <p class="nota">Fontes: LOREG, arts. 75, 98, 103, 107, 108 e 112. O 4 e o 7 de decembro son o cálculo do quinto e do oitavo día.</p>
 </details>
 <details><summary>Por que o 23 de decembro</summary>
@@ -419,7 +420,7 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <details><summary>O primeiro día do Congreso</summary>
 <p>Preside o deputado de máis idade, cos dous máis novos de secretarios. O primeiro é elixir a <button type="button" class="glos" data-g="mesa">Mesa do Congreso</button>. Para presidila fai falta maioría absoluta; se ninguén a logra, decídese entre os dous máis votados.</p>
 <p>Despois, os deputados xuran ou prometen acatar a Constitución e o Congreso queda constituído.</p>
-<p>Para ser deputado de pleno dereito hai que entregar a credencial e a declaración de actividades, e xurar ou prometer a Constitución. Quen non o faga en tres plenos queda sen dereitos nin prerrogativas ata que o faga.</p>
+<p>Para ser deputado de pleno dereito hai que entregar o documento que o acredita como elixido e a declaración de actividades, e xurar ou prometer a Constitución. Quen non o faga en tres plenos queda sen os seus dereitos de deputado ata que o faga.</p>
 <p>Os <button type="button" class="glos" data-g="grupo">grupos parlamentarios</button> fórmanse nos cinco días hábiles seguintes.</p>
 <p class="nota">Fontes: Regulamento do Congreso, arts. 1 a 4, 20, 23, 24, 37 e 90.</p>
 </details>
@@ -429,12 +430,12 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <p class="nota">Fonte: Constitución, arts. 62 e 99.</p>
 </details>
 <details><summary>Quen goberna mentres tanto</summary>
-<p>O Goberno que sae segue <button type="button" class="glos" data-g="funciones">en funcións</button> ata que toma posesión o novo. Despacha os asuntos ordinarios, pero non pode presentar proxectos de lei nin os Orzamentos.</p>
+<p>Tras as eleccións, o Goberno que sae queda <button type="button" class="glos" data-g="funciones">en funcións</button> ata que toma posesión o novo. Despacha os asuntos ordinarios, pero non pode presentar proxectos de lei nin os Orzamentos.</p>
 <p>O seu presidente tampouco pode disolver as Cortes, nin formular unha cuestión de confianza, nin propoñer un referendo.</p>
 <p class="nota">Fontes: Constitución, art. 101; Lei 50/1997, art. 21.</p>
 </details>
 <details><summary>E mentres non hai Cortes</summary>
-<p>Desde que se disolveron as Cámaras ata que se constitúan as novas queda de garda un grupo reducido de deputados e outro de senadores: a <button type="button" class="glos" data-g="permanente">Deputación Permanente</button>.</p>
+<p>Desde que se disolveron as cámaras ata que se constitúan as novas queda de garda un grupo reducido de deputados e outro de senadores: as <button type="button" class="glos" data-g="permanente">Deputacións Permanentes</button>, unha en cada cámara.</p>
 <p>Fai o que nese tempo non pode facer o Congreso: manter ou tombar os <button type="button" class="glos" data-g="decretoley">decretos lei</button> do Goberno e decidir sobre os estados de alarma, excepción e sitio.</p>
 <p class="nota">Fontes: Constitución, arts. 78, 86 e 116.</p>
 </details>
@@ -450,10 +451,10 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <article class="tarjeta" aria-labelledby="tit8">
 <div class="cuerpo">
 <h2 id="tit8">8 · Peche</h2>
-<p class="solo-f1">Ata aquí, as regras. O 30N ábrense cinco pasos máis, cos resultados e o que pase despois.</p>
+<p class="solo-f1">Ata aquí, as regras. O luns 30 de novembro ábrense cinco pasos máis, cos resultados e o que pase despois.</p>
 <p class="solo-f2">Ata aquí, as regras. Os cinco pasos que seguen contan o que pasou.</p>
 <details><summary>Glosario completo</summary><dl class="glosario" id="glosario"></dl></details>
-<p class="fuentes" style="margin-top:8px">Fontes: <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20742">Real decreto 806/2026</a>, <a href="https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229">Constitución</a>, <a href="https://www.boe.es/buscar/act.php?id=BOE-A-1985-11672">LOREG</a>, <a href="https://www.boe.es/buscar/act.php?id=BOE-A-1982-5196">Regulamento do Congreso</a>, <a href="https://www.boe.es/buscar/act.php?id=BOE-A-1999-8583">Real decreto 605/1999</a> e <a href="https://www.boe.es/buscar/act.php?id=BOE-A-1997-25336">Lei 50/1997</a>.</p>
+<p class="fuentes" style="margin-top:8px">Fontes principais: <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20742">Real decreto 806/2026</a>, <a href="https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229">Constitución</a>, <a href="https://www.boe.es/buscar/act.php?id=BOE-A-1985-11672">LOREG (Lei orgánica do réxime electoral xeral)</a>, <a href="https://www.boe.es/buscar/act.php?id=BOE-A-1982-5196">Regulamento do Congreso</a>, <a href="https://www.boe.es/buscar/act.php?id=BOE-A-1999-8583">Real decreto 605/1999</a> e <a href="https://www.boe.es/buscar/act.php?id=BOE-A-1997-25336">Lei 50/1997</a>.</p>
 <button type="button" class="pill solo-js compartir-sitio">Compartir</button>
 <button type="button" class="pill sec" id="volver">Volver á saída</button>
 <button type="button" class="pill sec" id="soloTexto">Ver só o texto</button>
@@ -504,7 +505,7 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 </details>
 <details><summary>Provisional e oficial</summary>
 <p>O que se coñece a noite electoral é un reconto provisional. O oficial fano as xuntas electorais cinco días despois, e é entón cando se suma o voto chegado do estranxeiro.</p>
-<p>Despois proclámanse os deputados. Desde ese momento hai tres días para recorrer, e os recursos resólveos o Tribunal Supremo.</p>
+<p>Despois proclámanse os elixidos. Desde ese momento hai tres días para recorrer, e os recursos resólveos o Tribunal Supremo.</p>
 <p class="nota">Fontes: LOREG, arts. 75, 98, 103, 108 e 112.</p>
 </details>
 <details><summary>Que son os votos válidos</summary>
@@ -535,7 +536,7 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <p id="ysiT" style="font-weight:700"></p>
 <h3>Saber máis</h3>
 <details><summary>Como se calcula o que faltou</summary>
-<p>O último escano lévao a división máis alta que quedaba na táboa. O que lle faltou ao seguinte partido é cantos votos máis necesitaría para que a súa división superase esa, sen que cambie nada máis.</p>
+<p>O último escano lévao a división máis alta que quedaba na táboa. O que lle faltou ao partido que quedou máis preto é cantos votos máis necesitaría para que a súa división superase esa, sen que cambie nada máis.</p>
 <p>É unha conta sobre o papel: na realidade, se un partido sobe, outros baixan.</p>
 <p class="nota">Cálculo propio coa regra do art. 163 da LOREG.</p>
 </details>
@@ -559,11 +560,11 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <h3>Saber máis</h3>
 <details><summary>Por que non coinciden</summary>
 <p>Porque os escanos non se reparten unha vez en toda España, senón 52 veces: unha por provincia. Nas pequenas só entran os partidos máis votados, e os votos dos demais quedan sen escano.</p>
-<p>A iso súmase a barreira do 3 % e que a regra D'Hondt redondea a favor dos partidos con máis votos en cada provincia.</p>
+<p>A iso súmase, onde se reparten moitos escanos, a barreira do 3 % e que a regra D'Hondt redondea a favor dos partidos con máis votos en cada provincia.</p>
 <p class="nota">Explicación propia a partir dos arts. 162 e 163 da LOREG.</p>
 </details>
 <details><summary>Que habería que cambiar para que coincidisen</summary>
-<p>A provincia como circunscrición está na Constitución. O número de deputados (350), o mínimo de dous por provincia, a barreira e a regra de reparto están na lei electoral.</p>
+<p>A provincia como circunscrición, cun mínimo de escanos, está na Constitución. Que ese mínimo sexan dous, o número de deputados (350), a barreira e a regra de reparto están na lei electoral.</p>
 <p>O primeiro esixe reformar a Constitución. O segundo, maioría absoluta do Congreso.</p>
 <p class="nota">Fontes: Constitución, arts. 68 e 81; LOREG, arts. 162 e 163.</p>
 </details>

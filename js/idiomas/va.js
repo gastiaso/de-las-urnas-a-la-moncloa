@@ -78,16 +78,16 @@ const TITOLS = ['Eixida', 'Què es vota', "Del vot a l'escó", 'On votes', 'El S
 const SEN = ['Persona 1 · Partit A', 'Persona 2 · Partit A', 'Persona 3 · Partit A', 'Persona 4 · Partit B', 'Persona 5 · Partit B', 'Persona 6 · Partit C'];
 
 const GLOS = {
-  escano: ['Escó', "Cadascun dels 350 seients del Congrés. Qui l'ocupa és diputat o diputada."],
+  escano: ["Escó", "Cadascun dels 350 seients del Congrés; els del Senat també es diuen així. Qui n'ocupa un en el Congrés és diputat o diputada."],
   circ: ['Circumscripció', 'La zona en què es compten els vots i es repartixen els escons. En les generals és la província; Ceuta i Melilla en són una cadascuna.'],
   dhondt: ["Regla D'Hondt", 'La manera de repartir els escons de cada província: es dividixen els vots de cada partit per 1, 2, 3… i els escons van als resultats més alts.'],
   barrera: ['Barrera electoral', 'El mínim per a entrar en el repartiment: el 3 % dels vots vàlids de la província.'],
-  blanco: ['Vot en blanc', 'Un sobre sense papereta. És un vot vàlid: no va a cap partit, però compta en el total.'],
+  blanco: ["Vot en blanc", "Un sobre sense papereta; en el Senat, també la papereta sense cap creu. És un vot vàlid: no va a cap partit, però compta en el total."],
   nulo: ['Vot nul', "Un vot que no val: per exemple, una papereta amb ratllades o afegits, o un sobre que no és l'oficial."],
   absoluta: ['Majoria absoluta', 'Més de la mitat de tots els diputats, voten o no: 176 de 350.'],
   simple: ['Majoria simple', 'Més vots a favor que en contra. Les abstencions no compten.'],
   investidura: ['Investidura', 'La votació en què el Congrés dona la seua confiança a un candidat a president del Govern.'],
-  abstencion: ['Abstenció', 'Ni sí ni no. No suma a favor, però tampoc en contra.'],
+  abstencion: ["Abstenció", "En unes eleccions, no anar a votar. En una votació del Congrés, no votar ni sí ni no: no suma a favor ni en contra."],
   mesa: ['Mesa del Congrés', "L'òrgan que dirigix la Cambra: una presidència, quatre vicepresidències i quatre secretaries. S'elegix el primer dia."],
   grupo: ['Grup parlamentari', "L'agrupació dels diputats d'un partit en el Congrés. Per regla general en fan falta quinze; hi ha una altra via amb cinc si se supera un mínim de vots."],
   funciones: ['Govern en funcions', 'El Govern que ja ha cessat i continua al capdavant fins que entra el nou, amb poders limitats.'],
@@ -105,7 +105,9 @@ const GLOS = {
   decretoley: ['Decret llei', 'Una norma que el Govern aprova per urgència. El Congrés té trenta dies per a mantindre-la o tombar-la.'],
   confianza: ['Qüestió de confiança', 'La votació que demana el mateix president per a comprovar que el Congrés continua donant-li suport. Li basta la majoria simple; si la perd, dimitix.'],
   veto: ['Veto del Senat', 'El rebuig del Senat a una llei que ve del Congrés. El Congrés pot alçar-lo.'],
-  permanente: ['Diputació Permanent', 'El grup reduït de diputats (i un altre de senadors) que queda de guàrdia quan les Cambres estan dissoltes o no es reunixen.']
+  permanente: ["Diputació Permanent", "El grup reduït que queda de guàrdia en cada cambra quan estan dissoltes o no es reunixen. N'hi ha una en el Congrés i una altra en el Senat."],
+  validos: ["Vots vàlids", "Els que van a un partit més els vots en blanc. Els nuls no compten."],
+  hemiciclo: ["Hemicicle", "La sala de plens del Congrés, amb els escons en forma de mitja lluna."]
 };
 
 export const textos = {
@@ -177,7 +179,7 @@ export const textos = {
   },
 
   /* navegación */
-  estacion: (k, ultima) => k === 0 ? 'Eixida' : k === 14 ? 'Meta' : 'Pas ' + k + ' ' + deN(ultima),
+  estacion: (k, ultima) => k === 0 ? 'Eixida' : k === 14 ? 'La Moncloa' : 'Pas ' + k + ' ' + deN(ultima),
   donde: (k, ultima, lectura) => lectura ? 'Índex' : k === 0 ? 'Eixida' : k === 14 ? 'La Moncloa' : 'Pas ' + k + ' ' + deN(ultima),
   dondeVotas: 'On votes?',
   tocaMapa: 'També pots tocar la teua província en el mapa.',
@@ -245,7 +247,7 @@ export const textos = {
   participacion: p => ' Va votar ' + el(p) + ' del cens.',
   thVotos: 'Vots',
   thEscanos: 'Escons',
-  thPorEscano: 'Per escó',
+  thPorEscano: 'Vots per escó',
   fuenteRes: (prueba, etiqueta, fuente) => (prueba ? 'Dades de prova: ' : '') + etiqueta + '. Font: ' + fuente + '. Els escons es calculen ací amb els vots de cada província.',
   repartia: (i, n) => Prov(i) + verb(i, ' repartia ', ' repartien ') + escons(n) + '.',
   ultimo: (ganador, rival, votos) => "L'últim escó va ser per a " + ganador + '. A ' + rival + ' li van faltar ' + miles(votos) + " vots per a llevar-li'l.",

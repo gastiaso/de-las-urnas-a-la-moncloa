@@ -54,11 +54,11 @@ va: Cada província té d'entrada dos escons; Ceuta i Melilla, un cadascuna. Só
 es: La cuenta es así: se divide la población de todas las provincias entre 248 y sale una cuota. Cada provincia recibe tantos escaños como veces cabe esa cuota en su población. Los que sobran van a las provincias que se quedaron más cerca de conseguir uno más.
 va: El compte és així: es dividix la població de totes les províncies per 248 i ix una quota. Cada província rep tants escons com vegades cap eixa quota en la seua població. Els que sobren van a les províncies que es van quedar més prop d'aconseguir-ne un més.
 
-es: Para el 29N se ha usado el padrón a 1 de enero de 2025, y la cuota sale de unos 197.000 habitantes. Por eso Madrid elige 38 y Soria, 2.
-va: Per al 29N s'ha usat el padró a 1 de gener de 2025, i la quota ix d'uns 197.000 habitants. Per això Madrid n'elegix 38 i Sòria, 2.
+es: Para el 29N se ha usado el padrón a 1 de enero de 2025, y la cuota es de unos 197.000 habitantes. Madrid suma 36 a sus dos de salida y elige 38; Soria no llega a la cuota y se queda con sus dos.
+va: Per al 29N s'ha usat el padró a 1 de gener de 2025, i la quota és d'uns 197.000 habitants. Madrid en suma 36 als seus dos d'eixida i n'elegix 38; Sòria no arriba a la quota i es queda amb els seus dos.
 
-es: Fuentes: LOREG, art. 162; Real Decreto 806/2026, anexo; Real Decreto 1117/2025, anexo. La cifra de 102 es la suma de 50 provincias por dos, más Ceuta y Melilla. La cuota (197.355) es cuenta propia, y con ella sale exactamente el reparto del decreto.
-va: Fonts: LOREG, art. 162; Reial decret 806/2026, annex; Reial decret 1117/2025, annex. La xifra de 102 és la suma de 50 províncies per dos, més Ceuta i Melilla. La quota (197.355) és un compte propi, i amb ella ix exactament el repartiment del decret.
+es: Fuentes: LOREG (la ley electoral), art. 162; Real Decreto 806/2026, anexo; Real Decreto 1117/2025, anexo. La cifra de 102 es la suma de 50 provincias por dos, más Ceuta y Melilla. La cuota (197.355) es cuenta propia, y con ella sale exactamente el reparto del decreto.
+va: Fonts: LOREG (la llei electoral), art. 162; Reial decret 806/2026, annex; Reial decret 1117/2025, annex. La xifra de 102 és la suma de 50 províncies per dos, més Ceuta i Melilla. La quota (197.355) és un compte propi, i amb ella ix exactament el repartiment del decret.
 
 es: Quién puede votar
 va: Qui pot votar
@@ -75,8 +75,8 @@ va: Fonts: LOREG, arts. 2, 3, 4 i 85; Codi Penal, art. 39; Junta Electoral Centr
 es: Por qué el 29 de noviembre
 va: Per què el 29 de novembre
 
-es: El presidente del Gobierno adelantó las elecciones: el decreto que disolvió las Cortes salió en el BOE el 6 de octubre. La ley fija la votación 54 días después de la convocatoria, y eso cae en domingo 29 de noviembre.
-va: El president del Govern va avançar les eleccions: el decret que va dissoldre les Corts va eixir en el BOE el 6 d'octubre. La llei fixa la votació 54 dies després de la convocatòria, i això cau en diumenge 29 de novembre.
+es: El presidente del Gobierno adelantó las elecciones: el decreto que disolvió las Cortes salió en el BOE, el boletín oficial del Estado, el 6 de octubre. La ley fija la votación 54 días después de la convocatoria, y eso cae en domingo 29 de noviembre.
+va: El president del Govern va avançar les eleccions: el decret que va dissoldre les Corts va eixir en el BOE, el butlletí oficial de l'Estat, el 6 d'octubre. La llei fixa la votació 54 dies després de la convocatòria, i això cau en diumenge 29 de novembre.
 
 es: Si un día hubiera que repetir las elecciones, el plazo sería más corto: 47 días.
 va: Si un dia calguera repetir les eleccions, el termini seria més curt: 47 dies.
@@ -129,8 +129,8 @@ va: Què són les Corts i per a què servixen
 es: Las [[cortes|Cortes Generales]] son el Congreso y el Senado juntos. Hacen las leyes, aprueban los Presupuestos y controlan al Gobierno. Se eligen para cuatro años.
 va: Les [[cortes|Corts Generals]] són el Congrés i el Senat junts. Fan les lleis, aproven els Pressupostos i controlen el Govern. S'elegixen per a quatre anys.
 
-es: De las dos cámaras, el Congreso es el que elige al presidente del Gobierno y el que puede levantar los vetos del Senado.
-va: De les dos cambres, el Congrés és el que elegix el president del Govern i el que pot alçar els vetos del Senat.
+es: De las dos cámaras, el Congreso es el que elige al presidente del Gobierno y el que puede levantar los [[veto|vetos]] del Senado.
+va: De les dos cambres, el Congrés és el que elegix el president del Govern i el que pot alçar els [[veto|vetos]] del Senat.
 
 es: Fuentes: Constitución, arts. 66, 68.4, 69.6, 90 y 99.
 va: Fonts: Constitució, arts. 66, 68.4, 69.6, 90 i 99.
@@ -176,11 +176,11 @@ va: Es dividixen els vots de cada partit per 1, 2, 3 i així successivament. Els
 es: Esta es la tabla de tu provincia con los partidos del ejemplo. En teja, las divisiones que se llevan escaño, numeradas en el orden en que lo consiguen:
 va: Esta és la taula de la teua província amb els partits de l'exemple. En color teula, les divisions que s'emporten escó, numerades en l'orde en què l'aconseguixen:
 
-es: Ver el reparto paso a paso
-va: Veure el repartiment pas a pas
+es: Ver el reparto escaño a escaño
+va: Veure el repartiment escó a escó
 
-es: La propia ley pone un ejemplo: con 480.000 votos y 8 escaños, el partido más votado se lleva cuatro, el segundo dos, y el tercero y el cuarto, uno cada uno.
-va: La mateixa llei posa un exemple: amb 480.000 vots i 8 escons, el partit més votat se n'emporta quatre, el segon dos, i el tercer i el quart, un cadascun.
+es: La propia ley pone un ejemplo: con 480.000 votos repartidos entre seis partidos y 8 escaños, el partido más votado se lleva cuatro, el segundo dos, y el tercero y el cuarto, uno cada uno.
+va: La mateixa llei posa un exemple: amb 480.000 vots repartits entre sis partits i 8 escons, el partit més votat se n'emporta quatre, el segon dos, i el tercer i el quart, un cadascun.
 
 es: Fuente: LOREG, art. 163. En la tabla, los porcentajes inventados hacen de votos.
 va: Font: LOREG, art. 163. En la taula, els percentatges inventats fan de vots.
@@ -188,8 +188,8 @@ va: Font: LOREG, art. 163. En la taula, els percentatges inventats fan de vots.
 es: Desde cuándo se usa
 va: Des de quan s'usa
 
-es: Desde 1977. La fijó el real decreto-ley de normas electorales de marzo de aquel año, que reguló las primeras elecciones tras la Ley para la Reforma Política, ya con 350 diputados. Ya la llamaba «regla d'Hondt», ya ponía la barrera en el 3 % y ya traía el mismo ejemplo de 480.000 votos que trae hoy la ley.
-va: Des de 1977. La va fixar el reial decret llei de normes electorals de març d'aquell any, que va regular les primeres eleccions després de la Llei per a la reforma política, ja amb 350 diputats. Ja l'anomenava «regla d'Hondt», ja posava la barrera en el 3 % i ja portava el mateix exemple de 480.000 vots que porta hui la llei.
+es: La regla D'Hondt se usa desde 1977. La fijó el real decreto-ley de normas electorales de marzo de aquel año, que reguló las primeras elecciones tras la Ley para la Reforma Política (la que abrió paso a las primeras elecciones democráticas), ya con 350 diputados. Ya la llamaba «regla d'Hondt», ya ponía la barrera en el 3 % y ya traía el mismo ejemplo de 480.000 votos que trae hoy la ley.
+va: La regla D'Hondt s'usa des de 1977. La va fixar el reial decret llei de normes electorals de març d'aquell any, que va regular les primeres eleccions després de la Llei per a la reforma política (la que va obrir pas a les primeres eleccions democràtiques), ja amb 350 diputats. Ja l'anomenava «regla d'Hondt», ja posava la barrera en el 3 % i ja portava el mateix exemple de 480.000 vots que porta hui la llei.
 
 es: Aquel decreto la presentaba como un freno a que el Congreso quedara demasiado fragmentado. Y el reparto de entonces era otro: Madrid elegía 32 diputados, Barcelona 33 y Soria 3.
 va: Aquell decret la presentava com un fre perquè el Congrés no quedara massa fragmentat. I el repartiment d'aleshores era un altre: Madrid elegia 32 diputats, Barcelona 33 i Sòria 3.
@@ -200,8 +200,8 @@ va: Font: Reial decret llei 20/1977, de 18 de març, sobre normes electorals: pr
 es: La barrera del 3 %
 va: La barrera del 3 %
 
-es: Antes de repartir se apartan los partidos que no llegan al 3 % de los votos válidos de la provincia. Sus votos no se pasan a nadie: sencillamente no entran en la tabla.
-va: Abans de repartir s'aparten els partits que no arriben al 3 % dels vots vàlids de la província. Els seus vots no es passen a ningú: senzillament no entren en la taula.
+es: Antes de repartir se apartan los partidos que no llegan al 3 % de los [[validos|votos válidos]] de la provincia. Sus votos no se pasan a nadie: sencillamente no entran en la tabla.
+va: Abans de repartir s'aparten els partits que no arriben al 3 % dels [[validos|vots vàlids]] de la província. Els seus vots no es passen a ningú: senzillament no entren en la taula.
 
 es: La barrera se mide provincia a provincia, no en toda España. En la práctica solo puede decidir donde se reparten muchos escaños, como Madrid o Barcelona: en las demás provincias, para sacar uno hace falta bastante más del 3 %.
 va: La barrera es mesura província a província, no en tot Espanya. A la pràctica només pot ser decisiva on es repartixen molts escons, com Madrid o Barcelona: en la resta de províncies, per a traure'n un fa falta bastant més del 3 %.
@@ -218,8 +218,8 @@ va: Blanc, nul i abstenció
 es: El [[blanco|voto en blanco]] es un sobre vacío. Es válido: no va a ningún partido, pero cuenta en el total y por eso sube un poco el listón del 3 %.
 va: El [[blanco|vot en blanc]] és un sobre buit. És vàlid: no va a cap partit, però compta en el total i per això puja un poc el llistó del 3 %.
 
-es: El [[nulo|voto nulo]] no cuenta para el reparto. Lo es una papeleta con tachaduras o añadidos, o un sobre que no es el oficial. Si metes dos papeletas del mismo partido, vale como un solo voto.
-va: El [[nulo|vot nul]] no compta per al repartiment. Ho és una papereta amb ratllades o afegits, o un sobre que no és l'oficial. Si poses dos paperetes del mateix partit, val com un sol vot.
+es: El [[nulo|voto nulo]] no cuenta para el reparto. Es nulo, por ejemplo, el voto con una papeleta tachada o con añadidos, o en un sobre que no es el oficial. Si metes dos papeletas del mismo partido, vale como un solo voto.
+va: El [[nulo|vot nul]] no compta per al repartiment. És nul, per exemple, el vot amb una papereta ratllada o amb afegits, o en un sobre que no és l'oficial. Si poses dos paperetes del mateix partit, val com un sol vot.
 
 es: Quien no va a votar se abstiene: no entra en ninguna cuenta.
 va: Qui no va a votar s'absté: no entra en cap compte.
@@ -254,8 +254,8 @@ va: Font: LOREG, art. 163.2.
 es: El último escaño
 va: L'últim escó
 
-es: El último escaño de cada provincia es el más disputado. Se lo lleva el partido con la siguiente división más alta, y a veces otro se queda muy cerca.
-va: L'últim escó de cada província és el més disputat. Se l'emporta el partit amb la següent divisió més alta, i a vegades un altre es queda molt prop.
+es: El último escaño de cada provincia suele ser el más disputado. Se lo lleva el partido con la siguiente división más alta, y a veces otro se queda muy cerca.
+va: L'últim escó de cada província sol ser el més disputat. Se l'emporta el partit amb la següent divisió més alta, i a vegades un altre es queda molt prop.
 
 es: Cuando haya resultados, en el paso 10 verás por cuántos votos se decidió en tu provincia.
 va: Quan hi haja resultats, en el pas 10 veuràs per quants vots es va decidir a la teua província.
@@ -292,8 +292,8 @@ va: Fonts: Reial decret 1117/2025, annex (padró a 1 de gener de 2025); Reial de
 es: Por qué pasa
 va: Per què passa
 
-es: Con dos escaños solo caben los dos partidos más votados. Con 38, hasta un partido con el 9 % consigue varios. La regla es la misma; cambia el tamaño de la provincia.
-va: Amb dos escons només caben els dos partits més votats. Amb 38, fins i tot un partit amb el 9 % n'aconseguix uns quants. La regla és la mateixa; canvia la grandària de la província.
+es: Con dos escaños entran, como mucho, los dos partidos más votados. Con 38, hasta un partido con el 9 % consigue varios. La regla es la misma; cambia el tamaño de la provincia.
+va: Amb dos escons entren, com a molt, els dos partits més votats. Amb 38, fins i tot un partit amb el 9 % n'aconseguix uns quants. La regla és la mateixa; canvia la grandària de la província.
 
 es: En el ejemplo, con dos escaños no basta ni un 17 %. En las provincias pequeñas, el listón de verdad está muy por encima del 3 %.
 va: En l'exemple, amb dos escons no basta ni un 17 %. En les províncies xicotetes, el llistó de veritat està molt per damunt del 3 %.
@@ -304,14 +304,14 @@ va: Exemple propi: els mateixos cinc partits inventats i els mateixos percentatg
 es: Qué dice la Constitución y qué dice la ley
 va: Què diu la Constitució i què diu la llei
 
-es: La Constitución fija tres cosas: que el Congreso tenga entre 300 y 400 diputados, que cada provincia sea una circunscripción y que el reparto sea proporcional.
-va: La Constitució fixa tres coses: que el Congrés tinga entre 300 i 400 diputats, que cada província siga una circumscripció i que el repartiment siga proporcional.
+es: La Constitución fija tres cosas: que el Congreso tenga entre 300 y 400 diputados, que cada provincia sea una circunscripción con un mínimo de escaños y que el reparto sea proporcional.
+va: La Constitució fixa tres coses: que el Congrés tinga entre 300 i 400 diputats, que cada província siga una circumscripció amb un mínim d'escons i que el repartiment siga proporcional.
 
 es: Lo demás lo decide la ley electoral: que sean 350, que cada provincia tenga dos de salida, la regla D'Hondt y la barrera del 3 %.
 va: La resta la decidix la llei electoral: que siguen 350, que cada província en tinga dos d'entrada, la regla D'Hondt i la barrera del 3 %.
 
-es: Cambiar la ley electoral exige mayoría absoluta del Congreso, porque es una [[organica|ley orgánica]]. Cambiar la Constitución exige bastante más.
-va: Canviar la llei electoral exigix majoria absoluta del Congrés, perquè és una [[organica|llei orgànica]]. Canviar la Constitució exigix bastant més.
+es: Cambiar la ley electoral exige [[absoluta|mayoría absoluta]] del Congreso, porque es una [[organica|ley orgánica]]. Cambiar la Constitución exige bastante más.
+va: Canviar la llei electoral exigix [[absoluta|majoria absoluta]] del Congrés, perquè és una [[organica|llei orgànica]]. Canviar la Constitució exigix bastant més.
 
 es: Fuentes: Constitución, arts. 68 y 81; LOREG, arts. 162 y 163.
 va: Fonts: Constitució, arts. 68 i 81; LOREG, arts. 162 i 163.
@@ -333,8 +333,8 @@ va: Al Senat es vota d'una altra manera: marques persones, no llistes. En una pr
 es: Prueba a marcar (nombres inventados)
 va: Prova de marcar (noms inventats)
 
-es: El Senado no elige al presidente ni puede hacerlo caer. Pero sin él no se reforma la Constitución, y le toca elegir a parte del Tribunal Constitucional y del Consejo General del Poder Judicial.
-va: El Senat no elegix el president ni pot fer-lo caure. Però sense ell no es reforma la Constitució, i li toca elegir part del Tribunal Constitucional i del Consell General del Poder Judicial.
+es: El Senado no elige al presidente ni lo hace caer. Sin él no se reforma la Constitución, y elige a parte del Tribunal Constitucional y del Consejo General del Poder Judicial.
+va: El Senat no elegix el president ni el fa caure. Sense ell no es reforma la Constitució, i elegix part del Tribunal Constitucional i del Consell General del Poder Judicial.
 
 es: La llave de la reforma constitucional
 va: La clau de la reforma constitucional
@@ -342,8 +342,8 @@ va: La clau de la reforma constitucional
 es: Para reformar la Constitución hacen falta tres quintos del Congreso y tres quintos del Senado. Si el Senado no llega a tres quintos, queda otra vía: que lo apruebe por mayoría absoluta y que el Congreso lo apruebe por dos tercios. Sin la mayoría absoluta del Senado, la reforma no sale.
 va: Per a reformar la Constitució fan falta tres quints del Congrés i tres quints del Senat. Si el Senat no arriba a tres quints, queda una altra via: que ho aprove per majoria absoluta i que el Congrés ho aprove per dos terços. Sense la majoria absoluta del Senat, la reforma no ix.
 
-es: Las reformas de más calado, las que tocan el título preliminar, los derechos fundamentales o la Corona, exigen dos tercios de cada cámara, disolver las Cortes, que las nuevas ratifiquen la decisión y aprueben el texto por dos tercios, y un referéndum.
-va: Les reformes més profundes, les que toquen el títol preliminar, els drets fonamentals o la Corona, exigixen dos terços de cada cambra, dissoldre les Corts, que les noves ratifiquen la decisió i aproven el text per dos terços, i un referèndum.
+es: Las reformas de más calado, las que tocan el título preliminar (los principios de partida, como la soberanía o la unidad), los derechos fundamentales o la Corona, exigen dos tercios de cada cámara, disolver las Cortes, que las nuevas ratifiquen la decisión y aprueben el texto por dos tercios, y un referéndum.
+va: Les reformes més profundes, les que toquen el títol preliminar (els principis de partida, com la sobirania o la unitat), els drets fonamentals o la Corona, exigixen dos terços de cada cambra, dissoldre les Corts, que les noves ratifiquen la decisió i aproven el text per dos terços, i un referèndum.
 
 es: En la práctica, quien tenga la mitad del Senado o más puede bloquear cualquier reforma, y quien tenga más de un tercio, las de más calado. Además, en las demás reformas, una décima parte de los senadores o de los diputados puede exigir un referéndum.
 va: A la pràctica, qui tinga la mitat del Senat o més pot bloquejar qualsevol reforma, i qui en tinga més d'un terç, les més profundes. A més, en la resta de reformes, una desena part dels senadors o dels diputats pot exigir un referèndum.
@@ -399,23 +399,23 @@ va: Per a què servix el Senat
 es: La Constitución lo define como la cámara de representación territorial. Revisa las leyes que le llegan del Congreso: tiene dos meses para cambiarlas o para vetarlas. El Congreso puede levantar ese [[veto|veto]].
 va: La Constitució el definix com la cambra de representació territorial. Revisa les lleis que li arriben del Congrés: té dos mesos per a canviar-les o per a vetar-les. El Congrés pot alçar eixe [[veto|veto]].
 
-es: Hay una cosa que solo puede autorizar el Senado, por mayoría absoluta: que el Gobierno obligue a una comunidad autónoma a cumplir la ley, el artículo 155.
-va: Hi ha una cosa que només pot autoritzar el Senat, per majoria absoluta: que el Govern obligue una comunitat autònoma a complir la llei, l'article 155.
+es: Hay una cosa que solo puede autorizar el Senado, por mayoría absoluta: que el Gobierno obligue a una comunidad autónoma a cumplir la ley: es el artículo 155.
+va: Hi ha una cosa que només pot autoritzar el Senat, per majoria absoluta: que el Govern obligue una comunitat autònoma a complir la llei. És l'article 155.
 
-es: También puede proponer leyes, crear comisiones de investigación y, con 50 senadores, recurrir una ley ante el Tribunal Constitucional. Los acuerdos de cooperación entre comunidades autónomas y el reparto del Fondo de Compensación Interterritorial empiezan en el Senado, aunque, si las dos cámaras no se ponen de acuerdo, decide el Congreso.
-va: També pot proposar lleis, crear comissions d'investigació i, amb 50 senadors, recórrer una llei davant del Tribunal Constitucional. Els acords de cooperació entre comunitats autònomes i el repartiment del Fons de Compensació Interterritorial comencen en el Senat, encara que, si les dos cambres no es posen d'acord, decidix el Congrés.
+es: También puede proponer leyes, crear comisiones de investigación y, con 50 senadores, recurrir una ley ante el Tribunal Constitucional.
+va: També pot proposar lleis, crear comissions d'investigació i, amb 50 senadors, recórrer una llei davant del Tribunal Constitucional.
 
-es: Fuentes: Constitución, arts. 69, 74.2, 76, 87.1, 90, 145.2, 155, 158.2 y 162.1.
-va: Fonts: Constitució, arts. 69, 74.2, 76, 87.1, 90, 145.2, 155, 158.2 i 162.1.
+es: Fuentes: Constitución, arts. 69, 76, 87.1, 90, 155 y 162.1.
+va: Fonts: Constitució, arts. 69, 76, 87.1, 90, 155 i 162.1.
 
 es: Lo que el Senado no puede hacer
 va: El que el Senat no pot fer
 
-es: No vota la investidura ni la moción de censura: eso es solo del Congreso. Tampoco decide sobre los decretos-leyes del Gobierno ni sobre los estados de alarma, excepción y sitio.
-va: No vota la investidura ni la moció de censura: això és només del Congrés. Tampoc decidix sobre els decrets llei del Govern ni sobre els estats d'alarma, excepció i setge.
+es: No vota la [[investidura|investidura]] ni la [[censura|moción de censura]]: eso es solo del Congreso. Tampoco decide sobre los [[decretoley|decretos-leyes]] del Gobierno ni sobre los estados de alarma, excepción y sitio.
+va: No vota la [[investidura|investidura]] ni la [[censura|moció de censura]]: això és només del Congrés. Tampoc decidix sobre els [[decretoley|decrets llei]] del Govern ni sobre els estats d'alarma, excepció i setge.
 
-es: Puede preguntar e interpelar al Gobierno cada semana, pero no hacerlo caer.
-va: Pot preguntar i interpel·lar el Govern cada setmana, però no fer-lo caure.
+es: Puede pedir explicaciones al Gobierno cada semana, pero no hacerlo caer.
+va: Pot demanar explicacions al Govern cada setmana, però no fer-lo caure.
 
 es: Fuentes: Constitución, arts. 86, 99, 111, 113 y 116.
 va: Fonts: Constitució, arts. 86, 99, 111, 113 i 116.
@@ -455,8 +455,8 @@ va: 5 · Les majories
 es: Para elegir presidente a la primera hace falta la [[absoluta|mayoría absoluta]]: 176 síes de 350. Si no sale, 48 horas después basta la [[simple|mayoría simple]]: más síes que noes.
 va: Per a elegir president a la primera fa falta la [[absoluta|majoria absoluta]]: 176 sís de 350. Si no ix, 48 hores després basta la [[simple|majoria simple]]: més sís que nos.
 
-es: En teja, los 176 escaños que hacen falta para pasar de la mitad.
-va: En color teula, els 176 escons que fan falta per a passar de la mitat.
+es: En teja, en el [[hemiciclo|hemiciclo]], los 176 escaños que hacen falta para pasar de la mitad.
+va: En color teula, en l'[[hemiciclo|hemicicle]], els 176 escons que fan falta per a passar de la mitat.
 
 es: Por qué la abstención pesa distinto
 va: Per què l'abstenció pesa diferent
@@ -464,8 +464,8 @@ va: Per què l'abstenció pesa diferent
 es: En la primera votación solo cuentan los síes: hay que juntar 176, y quien se abstiene no ayuda.
 va: En la primera votació només compten els sís: cal ajuntar-ne 176, i qui s'absté no ajuda.
 
-es: En la segunda se comparan síes y noes. Ahí, abstenerse en vez de votar no sí ayuda al candidato, porque hay un no menos que superar.
-va: En la segona es comparen sís i nos. Allí, abstindre's en lloc de votar que no sí que ajuda el candidat, perquè hi ha un no menys que superar.
+es: En la segunda se comparan síes y noes. Ahí, abstenerse en lugar de votar «no» sí ayuda al candidato, porque hay un no menos que superar.
+va: En la segona es comparen sís i nos. Allí, abstindre's en lloc de votar «no» sí que ajuda el candidat, perquè hi ha un no menys que superar.
 
 es: Explicación propia a partir del art. 99.3 de la Constitución.
 va: Explicació pròpia a partir de l'art. 99.3 de la Constitució.
@@ -503,8 +503,8 @@ va: Lleis orgàniques i decrets llei
 es: Las leyes orgánicas tratan los asuntos de más peso: los derechos fundamentales, los estatutos de autonomía o las reglas electorales. Necesitan mayoría absoluta del Congreso.
 va: Les lleis orgàniques tracten els assumptes de més pes: els drets fonamentals, els estatuts d'autonomia o les regles electorals. Necessiten majoria absoluta del Congrés.
 
-es: El [[decretoley|decreto-ley]] es el atajo del Gobierno para casos urgentes: lo aprueba él solo y entra en vigor, pero el Congreso tiene treinta días para mantenerlo o tumbarlo.
-va: El [[decretoley|decret llei]] és la drecera del Govern per a casos urgents: l'aprova ell a soles i entra en vigor, però el Congrés té trenta dies per a mantindre'l o tombar-lo.
+es: El [[decretoley|decreto-ley]] es la vía del Gobierno para casos urgentes: lo aprueba él solo y entra en vigor, pero el Congreso tiene treinta días para mantenerlo o tumbarlo.
+va: El [[decretoley|decret llei]] és la via del Govern per a casos urgents: l'aprova ell a soles i entra en vigor, però el Congrés té trenta dies per a mantindre'l o tombar-lo.
 
 es: Fuentes: Constitución, arts. 81 y 86.
 va: Fonts: Constitució, arts. 81 i 86.
@@ -524,11 +524,11 @@ va: Fonts: Constitució, arts. 112, 113 i 114. Els 35 diputats són la desena pa
 es: Los Presupuestos
 va: Els Pressupostos
 
-es: Los prepara el Gobierno y los aprueban las Cortes. Si el año empieza sin presupuestos nuevos, siguen valiendo los del año anterior hasta que se aprueben.
-va: Els prepara el Govern i els aproven les Corts. Si l'any comença sense pressupostos nous, continuen valent els de l'any anterior fins que s'aproven.
+es: Los prepara el Gobierno y los aprueban las Cortes. Si el año empieza sin Presupuestos nuevos, siguen valiendo los del año anterior hasta que se aprueben.
+va: Els prepara el Govern i els aproven les Corts. Si l'any comença sense Pressupostos nous, continuen valent els de l'any anterior fins que s'aproven.
 
-es: Por eso un Gobierno sin mayoría puede seguir gobernando, pero con las cuentas de otro año.
-va: Per això un Govern sense majoria pot continuar governant, però amb els comptes d'un altre any.
+es: Así, un Gobierno que no consigue aprobar sus Presupuestos puede seguir gobernando con las cuentas de otro año.
+va: Així, un Govern que no aconseguix aprovar els seus Pressupostos pot continuar governant amb els comptes d'un altre any.
 
 es: Fuente: Constitución, art. 134.
 va: Font: Constitució, art. 134.
@@ -543,6 +543,9 @@ va: Si cap partit arriba a soles a 176, cal pactar. És president qui reunix mé
 
 es: Toca cada partido para cambiar su voto en la [[investidura|investidura]]: no, sí o [[abstencion|abstención]]. Cada combinación es la investidura de un candidato concreto: tú decides de quién.
 va: Toca cada partit per a canviar el seu vot en la [[investidura|investidura]]: no, sí o [[abstencion|abstenció]]. Cada combinació és la investidura d'un candidat concret: tu decidixes de qui.
+
+es: ERC: Esquerra Republicana de Catalunya · PNV: Partido Nacionalista Vasco · BNG: Bloque Nacionalista Galego · CC: Coalición Canaria · UPN: Unión del Pueblo Navarro.
+va: ERC: Esquerra Republicana de Catalunya · PNV: Partit Nacionalista Basc · BNG: Bloc Nacionalista Gallec · CC: Coalició Canària · UPN: Unió del Poble Navarrés.
 
 es: Cómo se apoya a un candidato
 va: Com es dona suport a un candidat
@@ -571,11 +574,11 @@ va: Font: Constitució, art. 67.2. La disciplina de vot és una explicació prò
 es: Cómo se vota la investidura
 va: Com es vota la investidura
 
-es: Uno a uno y en voz alta. Se llama a cada diputado por orden alfabético del primer apellido, empezando por uno sacado a suerte, y responde «sí», «no» o «abstención». Los miembros del Gobierno que son diputados y la Mesa votan al final.
-va: Un a un i en veu alta. Es crida cada diputat per orde alfabètic del primer cognom, començant per un tret a sort, i respon «sí», «no» o «abstenció». Els membres del Govern que són diputats i la Mesa voten al final.
+es: Uno a uno y en voz alta. Se llama a cada diputado por orden alfabético del primer apellido, empezando por uno sacado a suerte, y responde «sí», «no» o «abstención». Los miembros del Gobierno que son diputados y la [[mesa|Mesa del Congreso]] votan al final.
+va: Un a un i en veu alta. Es crida cada diputat per orde alfabètic del primer cognom, començant per un tret a sort, i respon «sí», «no» o «abstenció». Els membres del Govern que són diputats i la [[mesa|Mesa del Congrés]] voten al final.
 
-es: Antes hay debate: el candidato explica su programa sin límite de tiempo y cada grupo le responde durante media hora.
-va: Abans hi ha debat: el candidat explica el seu programa sense límit de temps i cada grup li respon durant mitja hora.
+es: Antes hay debate: el candidato explica su programa sin límite de tiempo y cada [[grupo|grupo parlamentario]] le responde durante media hora.
+va: Abans hi ha debat: el candidat explica el seu programa sense límit de temps i cada [[grupo|grup parlamentari]] li respon durant mitja hora.
 
 es: Fuentes: Reglamento del Congreso, arts. 85, 86 y 171.
 va: Fonts: Reglament del Congrés, arts. 85, 86 i 171.
@@ -627,8 +630,8 @@ va: Font: LOREG, art. 69.7. Del 24 al 28 de novembre és el càlcul dels cinc di
 es: 7 · Del 29N al Gobierno
 va: 7 · Del 29N al Govern
 
-es: El reloj de dos meses no arranca el 29N. Empieza con la primera votación de [[investidura|investidura]].
-va: El rellotge de dos mesos no arranca el 29N. Comença amb la primera votació d'[[investidura|investidura]].
+es: El plazo de dos meses para elegir presidente no arranca el 29N. Empieza con la primera votación de [[investidura|investidura]].
+va: El termini de dos mesos per a elegir president no arranca el 29N. Comença amb la primera votació d'[[investidura|investidura]].
 
 es: Toca cada fecha para ver qué pasa ese día.
 va: Toca cada data per a veure què passa eixe dia.
@@ -729,8 +732,8 @@ va: dl. 7 des.
 es: Como tarde, termina el escrutinio
 va: Com a molt tard, acaba l'escrutini
 
-es: Después se proclaman los electos. Desde la proclamación hay tres días para recurrir; los recursos los resuelve el Tribunal Supremo. <small>LOREG, arts. 107.2, 108 y 112. Fecha: cálculo del octavo día.</small>
-va: Després es proclamen els electes. Des de la proclamació hi ha tres dies per a recórrer; els recursos els resol el Tribunal Suprem. <small>LOREG, arts. 107.2, 108 i 112. Data: càlcul del huité dia.</small>
+es: Después se proclaman los elegidos. Desde la proclamación hay tres días para recurrir; los recursos los resuelve el Tribunal Supremo. <small>LOREG, arts. 107.2, 108 y 112. Fecha: cálculo del octavo día.</small>
+va: Després es proclamen els elegits. Des de la proclamació hi ha tres dies per a recórrer; els recursos els resol el Tribunal Suprem. <small>LOREG, arts. 107.2, 108 i 112. Data: càlcul del huité dia.</small>
 
 es: Las nuevas Cortes
 va: Les noves Corts
@@ -753,8 +756,8 @@ va: Es formen els grups parlamentaris
 es: En los cinco días hábiles siguientes a la sesión constitutiva: el plazo acaba en los últimos días de diciembre. Por regla general hacen falta quince diputados; hay otra vía con cinco si se supera un mínimo de votos. <small>Reglamento del Congreso, arts. 23, 24 y 90 (los plazos por días se cuentan en días hábiles).</small>
 va: En els cinc dies hàbils següents a la sessió constitutiva: el termini acaba en els últims dies de desembre. Per regla general fan falta quinze diputats; hi ha una altra via amb cinc si se supera un mínim de vots. <small>Reglament del Congrés, arts. 23, 24 i 90 (els terminis per dies es compten en dies hàbils).</small>
 
-es: 1 ene 2027
-va: 1 gen. 2027
+es: vie 1 ene 2027
+va: dv. 1 gen. 2027
 
 es: Si no hay Presupuestos nuevos, siguen los anteriores
 va: Si no hi ha Pressupostos nous, continuen els anteriors
@@ -771,8 +774,8 @@ va: sense data
 es: El Rey consulta y propone un candidato
 va: El Rei consulta i proposa un candidat
 
-es: Recibe a los representantes de los grupos con escaños y propone un candidato a través de la presidencia del Congreso. La Constitución no le pone plazo. <small>Constitución, art. 99.1.</small>
-va: Rep els representants dels grups amb escons i proposa un candidat a través de la presidència del Congrés. La Constitució no li posa termini. <small>Constitució, art. 99.1.</small>
+es: Recibe a los representantes de los partidos con escaño y propone un candidato a través de la presidencia del Congreso. La Constitución no le pone plazo. <small>Constitución, art. 99.1.</small>
+va: Rep els representants dels partits amb escó i proposa un candidat a través de la presidència del Congrés. La Constitució no li posa termini. <small>Constitució, art. 99.1.</small>
 
 es: día D
 va: dia D
@@ -843,8 +846,8 @@ va: La nit electoral no és el resultat oficial
 es: La noche del 29N se conoce un recuento provisional, hecho con las actas de las mesas. El oficial, el [[escrutinio|escrutinio general]], lo hacen las [[junta|juntas electorales]] al quinto día: el 4 de diciembre. Ese día se suma el voto llegado del extranjero.
 va: La nit del 29N es coneix un recompte provisional, fet amb les actes de les meses. L'oficial, l'[[escrutinio|escrutini general]], el fan les [[junta|juntes electorals]] al cinqué dia: el 4 de desembre. Eixe dia se suma el vot arribat de l'estranger.
 
-es: Tiene que estar terminado como tarde el octavo día: el 7 de diciembre. Luego se proclaman los diputados. Desde ese momento hay tres días para recurrir, y los recursos los resuelve el Tribunal Supremo.
-va: Ha d'estar acabat com a molt tard el huité dia: el 7 de desembre. Després es proclamen els diputats. Des d'eixe moment hi ha tres dies per a recórrer, i els recursos els resol el Tribunal Suprem.
+es: Tiene que estar terminado como tarde el octavo día: el 7 de diciembre. Luego se proclaman los elegidos. Desde ese momento hay tres días para recurrir, y los recursos los resuelve el Tribunal Supremo.
+va: Ha d'estar acabat com a molt tard el huité dia: el 7 de desembre. Després es proclamen els elegits. Des d'eixe moment hi ha tres dies per a recórrer, i els recursos els resol el Tribunal Suprem.
 
 es: Fuentes: LOREG, arts. 75, 98, 103, 107, 108 y 112. El 4 y el 7 de diciembre son el cálculo del quinto y el octavo día.
 va: Fonts: LOREG, arts. 75, 98, 103, 107, 108 i 112. El 4 i el 7 de desembre són el càlcul del cinqué i el huité dia.
@@ -867,8 +870,8 @@ va: Presidix el diputat de més edat, amb els dos més jóvens de secretaris. La
 es: Después, los diputados juran o prometen acatar la Constitución y el Congreso queda constituido.
 va: Després, els diputats juren o prometen acatar la Constitució i el Congrés queda constituït.
 
-es: Para ser diputado de pleno derecho hay que entregar la credencial y la declaración de actividades, y jurar o prometer la Constitución. Quien no lo haga en tres plenos se queda sin derechos ni prerrogativas hasta que lo haga.
-va: Per a ser diputat de ple dret cal entregar la credencial i la declaració d'activitats, i jurar o prometre la Constitució. Qui no ho faça en tres plens es queda sense drets ni prerrogatives fins que ho faça.
+es: Para ser diputado de pleno derecho hay que entregar el documento que lo acredita como elegido y la declaración de actividades, y jurar o prometer la Constitución. Quien no lo haga en tres plenos se queda sin sus derechos de diputado hasta que lo haga.
+va: Per a ser diputat de ple dret cal entregar el document que l'acredita com a elegit i la declaració d'activitats, i jurar o prometre la Constitució. Qui no ho faça en tres plens es queda sense els seus drets de diputat fins que ho faça.
 
 es: Los [[grupo|grupos parlamentarios]] se forman en los cinco días hábiles siguientes.
 va: Els [[grupo|grups parlamentaris]] es formen en els cinc dies hàbils següents.
@@ -891,8 +894,8 @@ va: Font: Constitució, arts. 62 i 99.
 es: Quién gobierna mientras tanto
 va: Qui governa mentrestant
 
-es: El Gobierno que sale sigue [[funciones|en funciones]] hasta que toma posesión el nuevo. Despacha los asuntos ordinarios, pero no puede presentar proyectos de ley ni los Presupuestos.
-va: El Govern que se'n va continua [[funciones|en funcions]] fins que pren possessió el nou. Despatxa els assumptes ordinaris, però no pot presentar projectes de llei ni els Pressupostos.
+es: Tras las elecciones, el Gobierno que sale queda [[funciones|en funciones]] hasta que toma posesión el nuevo. Despacha los asuntos ordinarios, pero no puede presentar proyectos de ley ni los Presupuestos.
+va: Després de les eleccions, el Govern que se'n va queda [[funciones|en funcions]] fins que pren possessió el nou. Despatxa els assumptes ordinaris, però no pot presentar projectes de llei ni els Pressupostos.
 
 es: Su presidente tampoco puede disolver las Cortes, ni plantear una cuestión de confianza, ni proponer un referéndum.
 va: El seu president tampoc pot dissoldre les Corts, ni plantejar una qüestió de confiança, ni proposar un referèndum.
@@ -903,8 +906,8 @@ va: Fonts: Constitució, art. 101; Llei 50/1997, art. 21.
 es: Y mientras no hay Cortes
 va: I mentres no hi ha Corts
 
-es: Desde que se disolvieron las Cámaras hasta que se constituyan las nuevas queda de guardia un grupo reducido de diputados y otro de senadores: la [[permanente|Diputación Permanente]].
-va: Des que es van dissoldre les Cambres fins que es constituïsquen les noves queda de guàrdia un grup reduït de diputats i un altre de senadors: la [[permanente|Diputació Permanent]].
+es: Desde que se disolvieron las cámaras hasta que se constituyan las nuevas queda de guardia un grupo reducido de diputados y otro de senadores: las [[permanente|Diputaciones Permanentes]], una en cada cámara.
+va: Des que es van dissoldre les cambres fins que es constituïsquen les noves queda de guàrdia un grup reduït de diputats i un altre de senadors: les [[permanente|Diputacions Permanents]], una en cada cambra.
 
 es: Hace lo que en ese tiempo no puede hacer el Congreso: mantener o tumbar los [[decretoley|decretos-leyes]] del Gobierno y decidir sobre los estados de alarma, excepción y sitio.
 va: Fa el que en eixe temps no pot fer el Congrés: mantindre o tombar els [[decretoley|decrets llei]] del Govern i decidir sobre els estats d'alarma, excepció i setge.
@@ -926,8 +929,8 @@ va: Fonts: Constitució, arts. 62, 99, 100 i 101.
 es: 8 · Cierre
 va: 8 · Tancament
 
-es: Hasta aquí, las reglas. El 30N se abren cinco pasos más, con los resultados y lo que pase después.
-va: Fins ací, les regles. El 30N s'obrin cinc passos més, amb els resultats i el que passe després.
+es: Hasta aquí, las reglas. El lunes 30 de noviembre se abren cinco pasos más, con los resultados y lo que pase después.
+va: Fins ací, les regles. El dilluns 30 de novembre s'obrin cinc passos més, amb els resultats i el que passe després.
 
 es: Hasta aquí, las reglas. Los cinco pasos que siguen cuentan lo que ha pasado.
 va: Fins ací, les regles. Els cinc passos que seguixen conten el que ha passat.
@@ -935,8 +938,8 @@ va: Fins ací, les regles. Els cinc passos que seguixen conten el que ha passat.
 es: Glosario completo
 va: Glossari complet
 
-es: Fuentes: [Real Decreto 806/2026](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20742), [Constitución](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229), [LOREG](https://www.boe.es/buscar/act.php?id=BOE-A-1985-11672), [Reglamento del Congreso](https://www.boe.es/buscar/act.php?id=BOE-A-1982-5196), [Real Decreto 605/1999](https://www.boe.es/buscar/act.php?id=BOE-A-1999-8583) y [Ley 50/1997](https://www.boe.es/buscar/act.php?id=BOE-A-1997-25336).
-va: Fonts: [Reial decret 806/2026](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20742), [Constitució](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229), [LOREG](https://www.boe.es/buscar/act.php?id=BOE-A-1985-11672), [Reglament del Congrés](https://www.boe.es/buscar/act.php?id=BOE-A-1982-5196), [Reial decret 605/1999](https://www.boe.es/buscar/act.php?id=BOE-A-1999-8583) i [Llei 50/1997](https://www.boe.es/buscar/act.php?id=BOE-A-1997-25336).
+es: Fuentes principales: [Real Decreto 806/2026](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20742), [Constitución](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229), [LOREG (Ley Orgánica del Régimen Electoral General)](https://www.boe.es/buscar/act.php?id=BOE-A-1985-11672), [Reglamento del Congreso](https://www.boe.es/buscar/act.php?id=BOE-A-1982-5196), [Real Decreto 605/1999](https://www.boe.es/buscar/act.php?id=BOE-A-1999-8583) y [Ley 50/1997](https://www.boe.es/buscar/act.php?id=BOE-A-1997-25336).
+va: Fonts principals: [Reial decret 806/2026](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2026-20742), [Constitució](https://www.boe.es/buscar/act.php?id=BOE-A-1978-31229), [LOREG (Llei orgànica del règim electoral general)](https://www.boe.es/buscar/act.php?id=BOE-A-1985-11672), [Reglament del Congrés](https://www.boe.es/buscar/act.php?id=BOE-A-1982-5196), [Reial decret 605/1999](https://www.boe.es/buscar/act.php?id=BOE-A-1999-8583) i [Llei 50/1997](https://www.boe.es/buscar/act.php?id=BOE-A-1997-25336).
 
 es: Compartir
 va: Compartir
@@ -967,8 +970,8 @@ va: Provisional i oficial
 es: Lo que se conoce la noche electoral es un recuento provisional. El oficial lo hacen las juntas electorales cinco días después, y es entonces cuando se suma el voto llegado del extranjero.
 va: El que es coneix la nit electoral és un recompte provisional. L'oficial el fan les juntes electorals cinc dies després, i és aleshores quan se suma el vot arribat de l'estranger.
 
-es: Después se proclaman los diputados. Desde ese momento hay tres días para recurrir, y los recursos los resuelve el Tribunal Supremo.
-va: Després es proclamen els diputats. Des d'eixe moment hi ha tres dies per a recórrer, i els recursos els resol el Tribunal Suprem.
+es: Después se proclaman los elegidos. Desde ese momento hay tres días para recurrir, y los recursos los resuelve el Tribunal Supremo.
+va: Després es proclamen els elegits. Des d'eixe moment hi ha tres dies per a recórrer, i els recursos els resol el Tribunal Suprem.
 
 es: Fuentes: LOREG, arts. 75, 98, 103, 108 y 112.
 va: Fonts: LOREG, arts. 75, 98, 103, 108 i 112.
@@ -1005,8 +1008,8 @@ va: Quants: <output id="ysiV" for="ysiN"></output>
 es: Cómo se calcula lo que faltó
 va: Com es calcula el que va faltar
 
-es: El último escaño se lo lleva la división más alta que quedaba en la tabla. Lo que le faltó al siguiente partido es cuántos votos más habría necesitado para que su división superase a esa, sin que cambie nada más.
-va: L'últim escó se l'emporta la divisió més alta que quedava en la taula. El que li va faltar al partit següent és quants vots més hauria necessitat perquè la seua divisió superara eixa, sense que canvie res més.
+es: El último escaño se lo lleva la división más alta que quedaba en la tabla. Lo que le faltó al partido que se quedó más cerca es cuántos votos más habría necesitado para que su división superase a esa, sin que cambie nada más.
+va: L'últim escó se l'emporta la divisió més alta que quedava en la taula. El que li va faltar al partit que es va quedar més prop és quants vots més hauria necessitat perquè la seua divisió superara eixa, sense que canvie res més.
 
 es: Es una cuenta sobre el papel: en la realidad, si un partido sube, otros bajan.
 va: És un compte sobre el paper: en la realitat, si un partit puja, altres baixen.
@@ -1037,8 +1040,8 @@ va: Per què no coincidixen
 es: Porque los escaños no se reparten una vez en toda España, sino 52 veces: una por provincia. En las pequeñas solo entran los partidos más votados, y los votos de los demás se quedan sin escaño.
 va: Perquè els escons no es repartixen una vegada en tot Espanya, sinó 52 vegades: una per província. En les xicotetes només entren els partits més votats, i els vots dels altres es queden sense escó.
 
-es: A eso se suma la barrera del 3 % y que la regla D'Hondt redondea a favor de los partidos con más votos en cada provincia.
-va: A això se suma la barrera del 3 % i que la regla D'Hondt arredonix a favor dels partits amb més vots en cada província.
+es: A eso se suma, donde se reparten muchos escaños, la barrera del 3 % y que la regla D'Hondt redondea a favor de los partidos con más votos en cada provincia.
+va: A això se suma, on es repartixen molts escons, la barrera del 3 % i que la regla D'Hondt arredonix a favor dels partits amb més vots en cada província.
 
 es: Explicación propia a partir de los arts. 162 y 163 de la LOREG.
 va: Explicació pròpia a partir dels arts. 162 i 163 de la LOREG.
@@ -1046,8 +1049,8 @@ va: Explicació pròpia a partir dels arts. 162 i 163 de la LOREG.
 es: Qué habría que cambiar para que coincidieran
 va: Què caldria canviar perquè coincidiren
 
-es: La provincia como circunscripción está en la Constitución. El número de diputados (350), el mínimo de dos por provincia, la barrera y la regla de reparto están en la ley electoral.
-va: La província com a circumscripció està en la Constitució. El nombre de diputats (350), el mínim de dos per província, la barrera i la regla de repartiment estan en la llei electoral.
+es: La provincia como circunscripción, con un mínimo de escaños, está en la Constitución. Que ese mínimo sean dos, el número de diputados (350), la barrera y la regla de reparto están en la ley electoral.
+va: La província com a circumscripció, amb un mínim d'escons, està en la Constitució. Que eixe mínim siguen dos, el nombre de diputats (350), la barrera i la regla de repartiment estan en la llei electoral.
 
 es: Lo primero exige reformar la Constitución. Lo segundo, mayoría absoluta del Congreso.
 va: La primera cosa exigix reformar la Constitució. La segona, majoria absoluta del Congrés.
@@ -1162,18 +1165,3 @@ va: La calculadora d'investidura, amb els escons del 29N.
 
 es: El calendario hasta la investidura, fecha a fecha.
 va: El calendari fins a la investidura, data a data.
-
-es: 9 · Qué ha pasado
-va: 9 · Què ha passat
-
-es: 10 · En tu provincia
-va: 10 · A la teua província
-
-es: 11 · Votos y escaños
-va: 11 · Vots i escons
-
-es: 12 · ¿Quién gobierna?
-va: 12 · Qui governa?
-
-es: 13 · Lo que viene
-va: 13 · El que vindrà

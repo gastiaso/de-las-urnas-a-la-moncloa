@@ -33,16 +33,16 @@ export const TITULOS = ['Salida', 'Qué se vota', 'Del voto al escaño', 'Dónde
 export const SEN = ['Persona 1 · Partido A', 'Persona 2 · Partido A', 'Persona 3 · Partido A', 'Persona 4 · Partido B', 'Persona 5 · Partido B', 'Persona 6 · Partido C'];
 
 export const GLOS = {
-  escano: ['Escaño', 'Cada uno de los 350 asientos del Congreso. Quien lo ocupa es diputado o diputada.'],
+  escano: ["Escaño", "Cada uno de los 350 asientos del Congreso; los del Senado también se llaman así. Quien ocupa uno del Congreso es diputado o diputada."],
   circ: ['Circunscripción', 'La zona en la que se cuentan los votos y se reparten los escaños. En las generales es la provincia; Ceuta y Melilla son una cada una.'],
   dhondt: ["Regla D'Hondt", 'La forma de repartir los escaños de cada provincia: se dividen los votos de cada partido entre 1, 2, 3… y los escaños van a los resultados más altos.'],
   barrera: ['Barrera electoral', 'El mínimo para entrar en el reparto: el 3 % de los votos válidos de la provincia.'],
-  blanco: ['Voto en blanco', 'Un sobre sin papeleta. Es un voto válido: no va a ningún partido, pero cuenta en el total.'],
+  blanco: ["Voto en blanco", "Un sobre sin papeleta; en el Senado, también la papeleta sin ninguna cruz. Es un voto válido: no va a ningún partido, pero cuenta en el total."],
   nulo: ['Voto nulo', 'Un voto que no vale: por ejemplo, una papeleta con tachaduras o añadidos, o un sobre que no es el oficial.'],
   absoluta: ['Mayoría absoluta', 'Más de la mitad de todos los diputados, voten o no: 176 de 350.'],
   simple: ['Mayoría simple', 'Más votos a favor que en contra. Las abstenciones no cuentan.'],
   investidura: ['Investidura', 'La votación en la que el Congreso da su confianza a un candidato a presidente del Gobierno.'],
-  abstencion: ['Abstención', 'Ni sí ni no. No suma a favor, pero tampoco en contra.'],
+  abstencion: ["Abstención", "En unas elecciones, no ir a votar. En una votación del Congreso, no votar ni sí ni no: no suma a favor ni en contra."],
   mesa: ['Mesa del Congreso', 'El órgano que dirige la Cámara: una presidencia, cuatro vicepresidencias y cuatro secretarías. Se elige el primer día.'],
   grupo: ['Grupo parlamentario', 'La agrupación de los diputados de un partido en el Congreso. Por regla general hacen falta quince; hay otra vía con cinco si se supera un mínimo de votos.'],
   funciones: ['Gobierno en funciones', 'El Gobierno que ya ha cesado y sigue al frente hasta que entra el nuevo, con poderes limitados.'],
@@ -60,5 +60,7 @@ export const GLOS = {
   decretoley: ['Decreto-ley', 'Una norma que el Gobierno aprueba por urgencia. El Congreso tiene treinta días para mantenerla o tumbarla.'],
   confianza: ['Cuestión de confianza', 'La votación que pide el propio presidente para comprobar que el Congreso lo sigue apoyando. Le basta la mayoría simple; si la pierde, dimite.'],
   veto: ['Veto del Senado', 'El rechazo del Senado a una ley que viene del Congreso. El Congreso puede levantarlo.'],
-  permanente: ['Diputación Permanente', 'El grupo reducido de diputados (y otro de senadores) que queda de guardia cuando las Cámaras están disueltas o no se reúnen.']
+  permanente: ["Diputación Permanente", "El grupo reducido que queda de guardia en cada cámara cuando están disueltas o no se reúnen. Hay una en el Congreso y otra en el Senado."],
+  validos: ["Votos válidos", "Los que van a un partido más los votos en blanco. Los nulos no cuentan."],
+  hemiciclo: ["Hemiciclo", "El salón de plenos del Congreso, con los escaños en forma de media luna."]
 };

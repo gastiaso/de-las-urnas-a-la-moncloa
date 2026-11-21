@@ -23,9 +23,9 @@ En el mapa, cada hexágono es un escaño: las provincias crecen o encogen según
 
 Cada provincia tiene de salida dos escaños; Ceuta y Melilla, uno cada una. Son 102. Los otros 248 se reparten según la población.
 La cuenta es así: se divide la población de todas las provincias entre 248 y sale una cuota. Cada provincia recibe tantos escaños como veces cabe esa cuota en su población. Los que sobran van a las provincias que se quedaron más cerca de conseguir uno más.
-Para el 29N se ha usado el padrón a 1 de enero de 2025, y la cuota sale de unos 197.000 habitantes. Por eso Madrid elige 38 y Soria, 2.
+Para el 29N se ha usado el padrón a 1 de enero de 2025, y la cuota es de unos 197.000 habitantes. Madrid suma 36 a sus dos de salida y elige 38; Soria no llega a la cuota y se queda con sus dos.
 
-_Fuentes: LOREG, art. 162; Real Decreto 806/2026, anexo; Real Decreto 1117/2025, anexo. La cifra de 102 es la suma de 50 provincias por dos, más Ceuta y Melilla. La cuota (197.355) es cuenta propia, y con ella sale exactamente el reparto del decreto._
+_Fuentes: LOREG (la ley electoral), art. 162; Real Decreto 806/2026, anexo; Real Decreto 1117/2025, anexo. La cifra de 102 es la suma de 50 provincias por dos, más Ceuta y Melilla. La cuota (197.355) es cuenta propia, y con ella sale exactamente el reparto del decreto._
 
 **Saber más: Quién puede votar**
 
@@ -36,7 +36,7 @@ _Fuentes: LOREG, arts. 2, 3, 4 y 85; Código Penal, art. 39; Junta Electoral Cen
 
 **Saber más: Por qué el 29 de noviembre**
 
-El presidente del Gobierno adelantó las elecciones: el decreto que disolvió las Cortes salió en el BOE el 6 de octubre. La ley fija la votación 54 días después de la convocatoria, y eso cae en domingo 29 de noviembre.
+El presidente del Gobierno adelantó las elecciones: el decreto que disolvió las Cortes salió en el BOE, el boletín oficial del Estado, el 6 de octubre. La ley fija la votación 54 días después de la convocatoria, y eso cae en domingo 29 de noviembre.
 Si un día hubiera que repetir las elecciones, el plazo sería más corto: 47 días.
 
 _Fuentes: Constitución, art. 115; LOREG, art. 42.1 y disposición adicional séptima; Real Decreto 806/2026, arts. 1 y 2, publicado en el BOE del 6 de octubre de 2026. El 29 de noviembre es el cálculo del día 54._
@@ -88,13 +88,13 @@ El partido E no llega a la barrera del 3 % y queda fuera. Sin ella tampoco habr�
 
 Se dividen los votos de cada partido entre 1, 2, 3 y así sucesivamente. Los escaños van, uno a uno, a los resultados más altos de toda la tabla. Es la regla D'Hondt.
 Esta es la tabla de tu provincia con los partidos del ejemplo. En teja, las divisiones que se llevan escaño, numeradas en el orden en que lo consiguen:
-La propia ley pone un ejemplo: con 480.000 votos y 8 escaños, el partido más votado se lleva cuatro, el segundo dos, y el tercero y el cuarto, uno cada uno.
+La propia ley pone un ejemplo: con 480.000 votos repartidos entre seis partidos y 8 escaños, el partido más votado se lleva cuatro, el segundo dos, y el tercero y el cuarto, uno cada uno.
 
 _Fuente: LOREG, art. 163. En la tabla, los porcentajes inventados hacen de votos._
 
 **Saber más: Desde cuándo se usa**
 
-Desde 1977. La fijó el real decreto-ley de normas electorales de marzo de aquel año, que reguló las primeras elecciones tras la Ley para la Reforma Política, ya con 350 diputados. Ya la llamaba «regla d'Hondt», ya ponía la barrera en el 3 % y ya traía el mismo ejemplo de 480.000 votos que trae hoy la ley.
+La regla D'Hondt se usa desde 1977. La fijó el real decreto-ley de normas electorales de marzo de aquel año, que reguló las primeras elecciones tras la Ley para la Reforma Política (la que abrió paso a las primeras elecciones democráticas), ya con 350 diputados. Ya la llamaba «regla d'Hondt», ya ponía la barrera en el 3 % y ya traía el mismo ejemplo de 480.000 votos que trae hoy la ley.
 Aquel decreto la presentaba como un freno a que el Congreso quedara demasiado fragmentado. Y el reparto de entonces era otro: Madrid elegía 32 diputados, Barcelona 33 y Soria 3.
 
 _Fuente: Real Decreto-ley 20/1977, de 18 de marzo, sobre Normas Electorales: preámbulo y arts. 19 y 20._
@@ -109,7 +109,7 @@ _Fuente: LOREG, art. 163. Dónde puede decidir la barrera es una cuenta propia a
 **Saber más: Blanco, nulo y abstención**
 
 El voto en blanco es un sobre vacío. Es válido: no va a ningún partido, pero cuenta en el total y por eso sube un poco el listón del 3 %.
-El voto nulo no cuenta para el reparto. Lo es una papeleta con tachaduras o añadidos, o un sobre que no es el oficial. Si metes dos papeletas del mismo partido, vale como un solo voto.
+El voto nulo no cuenta para el reparto. Es nulo, por ejemplo, el voto con una papeleta tachada o con añadidos, o en un sobre que no es el oficial. Si metes dos papeletas del mismo partido, vale como un solo voto.
 Quien no va a votar se abstiene: no entra en ninguna cuenta.
 
 _Fuentes: LOREG, arts. 96 y 108._
@@ -134,7 +134,7 @@ _Fuente: LOREG, art. 163.2._
 
 **Saber más: El último escaño**
 
-El último escaño de cada provincia es el más disputado. Se lo lleva el partido con la siguiente división más alta, y a veces otro se queda muy cerca.
+El último escaño de cada provincia suele ser el más disputado. Se lo lleva el partido con la siguiente división más alta, y a veces otro se queda muy cerca.
 Cuando haya resultados, en el paso 10 verás por cuántos votos se decidió en tu provincia.
 
 _Explicación propia a partir de la regla del art. 163 de la LOREG._
@@ -156,14 +156,14 @@ _Fuentes: Real Decreto 1117/2025, anexo (padrón a 1 de enero de 2025); Real Dec
 
 **Saber más: Por qué pasa**
 
-Con dos escaños solo caben los dos partidos más votados. Con 38, hasta un partido con el 9 % consigue varios. La regla es la misma; cambia el tamaño de la provincia.
+Con dos escaños entran, como mucho, los dos partidos más votados. Con 38, hasta un partido con el 9 % consigue varios. La regla es la misma; cambia el tamaño de la provincia.
 En el ejemplo, con dos escaños no basta ni un 17 %. En las provincias pequeñas, el listón de verdad está muy por encima del 3 %.
 
 _Ejemplo propio: los mismos cinco partidos inventados y los mismos porcentajes en las dos provincias._
 
 **Saber más: Qué dice la Constitución y qué dice la ley**
 
-La Constitución fija tres cosas: que el Congreso tenga entre 300 y 400 diputados, que cada provincia sea una circunscripción y que el reparto sea proporcional.
+La Constitución fija tres cosas: que el Congreso tenga entre 300 y 400 diputados, que cada provincia sea una circunscripción con un mínimo de escaños y que el reparto sea proporcional.
 Lo demás lo decide la ley electoral: que sean 350, que cada provincia tenga dos de salida, la regla D'Hondt y la barrera del 3 %.
 Cambiar la ley electoral exige mayoría absoluta del Congreso, porque es una ley orgánica. Cambiar la Constitución exige bastante más.
 
@@ -179,12 +179,12 @@ _Cuenta propia a partir del anexo del Real Decreto 806/2026._
 **Riel:**
 
 Al Senado se vota distinto: marcas personas, no listas. En una provincia puedes marcar hasta tres nombres y salen las cuatro personas más votadas.
-El Senado no elige al presidente ni puede hacerlo caer. Pero sin él no se reforma la Constitución, y le toca elegir a parte del Tribunal Constitucional y del Consejo General del Poder Judicial.
+El Senado no elige al presidente ni lo hace caer. Sin él no se reforma la Constitución, y elige a parte del Tribunal Constitucional y del Consejo General del Poder Judicial.
 
 **Saber más: La llave de la reforma constitucional**
 
 Para reformar la Constitución hacen falta tres quintos del Congreso y tres quintos del Senado. Si el Senado no llega a tres quintos, queda otra vía: que lo apruebe por mayoría absoluta y que el Congreso lo apruebe por dos tercios. Sin la mayoría absoluta del Senado, la reforma no sale.
-Las reformas de más calado, las que tocan el título preliminar, los derechos fundamentales o la Corona, exigen dos tercios de cada cámara, disolver las Cortes, que las nuevas ratifiquen la decisión y aprueben el texto por dos tercios, y un referéndum.
+Las reformas de más calado, las que tocan el título preliminar (los principios de partida, como la soberanía o la unidad), los derechos fundamentales o la Corona, exigen dos tercios de cada cámara, disolver las Cortes, que las nuevas ratifiquen la decisión y aprueben el texto por dos tercios, y un referéndum.
 En la práctica, quien tenga la mitad del Senado o más puede bloquear cualquier reforma, y quien tenga más de un tercio, las de más calado. Además, en las demás reformas, una décima parte de los senadores o de los diputados puede exigir un referéndum.
 Estas cuentas se hacen sobre todos los senadores, incluidos los que designan los parlamentos autonómicos, no solo sobre los 209 que se votan.
 
@@ -215,15 +215,15 @@ _Fuentes: Real Decreto 605/1999, art. 4 y anexo 3; LOREG, arts. 96, 166 y 172.3.
 **Saber más: Para qué sirve el Senado**
 
 La Constitución lo define como la cámara de representación territorial. Revisa las leyes que le llegan del Congreso: tiene dos meses para cambiarlas o para vetarlas. El Congreso puede levantar ese veto.
-Hay una cosa que solo puede autorizar el Senado, por mayoría absoluta: que el Gobierno obligue a una comunidad autónoma a cumplir la ley, el artículo 155.
-También puede proponer leyes, crear comisiones de investigación y, con 50 senadores, recurrir una ley ante el Tribunal Constitucional. Los acuerdos de cooperación entre comunidades autónomas y el reparto del Fondo de Compensación Interterritorial empiezan en el Senado, aunque, si las dos cámaras no se ponen de acuerdo, decide el Congreso.
+Hay una cosa que solo puede autorizar el Senado, por mayoría absoluta: que el Gobierno obligue a una comunidad autónoma a cumplir la ley: es el artículo 155.
+También puede proponer leyes, crear comisiones de investigación y, con 50 senadores, recurrir una ley ante el Tribunal Constitucional.
 
-_Fuentes: Constitución, arts. 69, 74.2, 76, 87.1, 90, 145.2, 155, 158.2 y 162.1._
+_Fuentes: Constitución, arts. 69, 76, 87.1, 90, 155 y 162.1._
 
 **Saber más: Lo que el Senado no puede hacer**
 
 No vota la investidura ni la moción de censura: eso es solo del Congreso. Tampoco decide sobre los decretos-leyes del Gobierno ni sobre los estados de alarma, excepción y sitio.
-Puede preguntar e interpelar al Gobierno cada semana, pero no hacerlo caer.
+Puede pedir explicaciones al Gobierno cada semana, pero no hacerlo caer.
 
 _Fuentes: Constitución, arts. 86, 99, 111, 113 y 116._
 
@@ -247,12 +247,12 @@ _Fuentes: Constitución, art. 69.5; LOREG, arts. 165.4 y 166.2._
 **Riel:**
 
 Para elegir presidente a la primera hace falta la mayoría absoluta: 176 síes de 350. Si no sale, 48 horas después basta la mayoría simple: más síes que noes.
-En teja, los 176 escaños que hacen falta para pasar de la mitad.
+En teja, en el hemiciclo, los 176 escaños que hacen falta para pasar de la mitad.
 
 **Saber más: Por qué la abstención pesa distinto**
 
 En la primera votación solo cuentan los síes: hay que juntar 176, y quien se abstiene no ayuda.
-En la segunda se comparan síes y noes. Ahí, abstenerse en vez de votar no sí ayuda al candidato, porque hay un no menos que superar.
+En la segunda se comparan síes y noes. Ahí, abstenerse en lugar de votar «no» sí ayuda al candidato, porque hay un no menos que superar.
 
 _Explicación propia a partir del art. 99.3 de la Constitución._
 
@@ -274,7 +274,7 @@ _Fuentes: Constitución, art. 79; Reglamento del Congreso, arts. 78, 79 y 88._
 **Saber más: Leyes orgánicas y decretos-leyes**
 
 Las leyes orgánicas tratan los asuntos de más peso: los derechos fundamentales, los estatutos de autonomía o las reglas electorales. Necesitan mayoría absoluta del Congreso.
-El decreto-ley es el atajo del Gobierno para casos urgentes: lo aprueba él solo y entra en vigor, pero el Congreso tiene treinta días para mantenerlo o tumbarlo.
+El decreto-ley es la vía del Gobierno para casos urgentes: lo aprueba él solo y entra en vigor, pero el Congreso tiene treinta días para mantenerlo o tumbarlo.
 
 _Fuentes: Constitución, arts. 81 y 86._
 
@@ -287,8 +287,8 @@ _Fuentes: Constitución, arts. 112, 113 y 114. Los 35 diputados son la décima p
 
 **Saber más: Los Presupuestos**
 
-Los prepara el Gobierno y los aprueban las Cortes. Si el año empieza sin presupuestos nuevos, siguen valiendo los del año anterior hasta que se aprueben.
-Por eso un Gobierno sin mayoría puede seguir gobernando, pero con las cuentas de otro año.
+Los prepara el Gobierno y los aprueban las Cortes. Si el año empieza sin Presupuestos nuevos, siguen valiendo los del año anterior hasta que se aprueben.
+Así, un Gobierno que no consigue aprobar sus Presupuestos puede seguir gobernando con las cuentas de otro año.
 
 _Fuente: Constitución, art. 134._
 
@@ -298,6 +298,7 @@ _Fuente: Constitución, art. 134._
 
 Si ningún partido llega solo a 176, hay que pactar. Es presidente quien reúne más síes que noes, sea o no del partido más votado.
 Toca cada partido para cambiar su voto en la investidura: no, sí o abstención. Cada combinación es la investidura de un candidato concreto: tú decides de quién.
+ERC: Esquerra Republicana de Catalunya · PNV: Partido Nacionalista Vasco · BNG: Bloque Nacionalista Galego · CC: Coalición Canaria · UPN: Unión del Pueblo Navarro.
 
 **Saber más: Cómo se apoya a un candidato**
 
@@ -315,8 +316,8 @@ _Fuente: Constitución, art. 67.2. La disciplina de voto es una explicación pro
 
 **Saber más: Cómo se vota la investidura**
 
-Uno a uno y en voz alta. Se llama a cada diputado por orden alfabético del primer apellido, empezando por uno sacado a suerte, y responde «sí», «no» o «abstención». Los miembros del Gobierno que son diputados y la Mesa votan al final.
-Antes hay debate: el candidato explica su programa sin límite de tiempo y cada grupo le responde durante media hora.
+Uno a uno y en voz alta. Se llama a cada diputado por orden alfabético del primer apellido, empezando por uno sacado a suerte, y responde «sí», «no» o «abstención». Los miembros del Gobierno que son diputados y la Mesa del Congreso votan al final.
+Antes hay debate: el candidato explica su programa sin límite de tiempo y cada grupo parlamentario le responde durante media hora.
 
 _Fuentes: Reglamento del Congreso, arts. 85, 86 y 171._
 
@@ -347,7 +348,7 @@ _Fuente: LOREG, art. 69.7. Del 24 al 28 de noviembre es el cálculo de los cinco
 
 **Riel:**
 
-El reloj de dos meses no arranca el 29N. Empieza con la primera votación de investidura.
+El plazo de dos meses para elegir presidente no arranca el 29N. Empieza con la primera votación de investidura.
 Toca cada fecha para ver qué pasa ese día.
 · Antes de votar
 · mar 6 oct — Se disuelven las Cortes y se convocan elecciones: El Real Decreto 806/2026 sale en el BOE: disuelve el Congreso y el Senado elegidos en julio de 2023 y fija la votación 54 días después, el domingo 29 de noviembre. (Real Decreto 806/2026, arts. 1 y 2; LOREG, art. 42.1.)
@@ -361,13 +362,13 @@ Toca cada fecha para ver qué pasa ese día.
 · dom 29 nov — Se vota, de 9:00 a 20:00: Los colegios no cierran en todo el día. Al acabar, cada mesa abre la urna y cuenta los votos en público. Por la noche se conoce el recuento provisional. (LOREG, arts. 84, 95 y 98.)
 · El recuento oficial
 · vie 4 dic — Escrutinio general: Las juntas electorales hacen el recuento oficial con las actas de las mesas y suman el voto llegado del extranjero. (LOREG, arts. 75 y 103. Fecha: cálculo del quinto día.)
-· lun 7 dic — Como tarde, termina el escrutinio: Después se proclaman los electos. Desde la proclamación hay tres días para recurrir; los recursos los resuelve el Tribunal Supremo. (LOREG, arts. 107.2, 108 y 112. Fecha: cálculo del octavo día.)
+· lun 7 dic — Como tarde, termina el escrutinio: Después se proclaman los elegidos. Desde la proclamación hay tres días para recurrir; los recursos los resuelve el Tribunal Supremo. (LOREG, arts. 107.2, 108 y 112. Fecha: cálculo del octavo día.)
 · Las nuevas Cortes
 · mié 23 dic — Se constituyen el Congreso y el Senado: A las diez de la mañana, cada cámara en su sesión constitutiva. En el Congreso preside al principio el diputado de más edad, se elige la Mesa y los diputados juran o prometen la Constitución. (Real Decreto 806/2026, art. 5; Constitución, art. 72.2; Reglamento del Congreso, arts. 1 a 4 y 37.)
 · fin de dic — Se forman los grupos parlamentarios: En los cinco días hábiles siguientes a la sesión constitutiva: el plazo acaba en los últimos días de diciembre. Por regla general hacen falta quince diputados; hay otra vía con cinco si se supera un mínimo de votos. (Reglamento del Congreso, arts. 23, 24 y 90 (los plazos por días se cuentan en días hábiles).)
-· 1 ene 2027 — Si no hay Presupuestos nuevos, siguen los anteriores: Se prorrogan automáticamente hasta que se aprueben otros. Un Gobierno en funciones no puede aprobar el proyecto de Presupuestos. (Constitución, art. 134.4; Ley 50/1997, art. 21.5.)
+· vie 1 ene 2027 — Si no hay Presupuestos nuevos, siguen los anteriores: Se prorrogan automáticamente hasta que se aprueben otros. Un Gobierno en funciones no puede aprobar el proyecto de Presupuestos. (Constitución, art. 134.4; Ley 50/1997, art. 21.5.)
 · La investidura
-· sin fecha — El Rey consulta y propone un candidato: Recibe a los representantes de los grupos con escaños y propone un candidato a través de la presidencia del Congreso. La Constitución no le pone plazo. (Constitución, art. 99.1.)
+· sin fecha — El Rey consulta y propone un candidato: Recibe a los representantes de los partidos con escaño y propone un candidato a través de la presidencia del Congreso. La Constitución no le pone plazo. (Constitución, art. 99.1.)
 · día D — Debate y primera votación: El candidato expone su programa sin límite de tiempo y cada grupo le responde. Necesita 176 síes. Aquí arranca el reloj de dos meses. (Constitución, art. 99; Reglamento del Congreso, art. 171.)
 · D + 48 h — Segunda votación: Si no llegó a 176, basta con más síes que noes. Si tampoco sale, el Rey puede hacer nuevas propuestas. (Constitución, art. 99.3 y 99.4.)
 · D + 2 meses — Si no hay presidente, nuevas elecciones: Se disuelven las Cortes y se vota 47 días después de la convocatoria. Ha pasado en 2016 y en 2019. (Constitución, art. 99.5; LOREG, disposición adicional séptima; Reales Decretos 184/2016 y 551/2019.)
@@ -391,7 +392,7 @@ _Fuentes: LOREG, arts. 72, 73, 75 y 103; Junta Electoral Central, Instrucción 5
 **Saber más: La noche electoral no es el resultado oficial**
 
 La noche del 29N se conoce un recuento provisional, hecho con las actas de las mesas. El oficial, el escrutinio general, lo hacen las juntas electorales al quinto día: el 4 de diciembre. Ese día se suma el voto llegado del extranjero.
-Tiene que estar terminado como tarde el octavo día: el 7 de diciembre. Luego se proclaman los diputados. Desde ese momento hay tres días para recurrir, y los recursos los resuelve el Tribunal Supremo.
+Tiene que estar terminado como tarde el octavo día: el 7 de diciembre. Luego se proclaman los elegidos. Desde ese momento hay tres días para recurrir, y los recursos los resuelve el Tribunal Supremo.
 
 _Fuentes: LOREG, arts. 75, 98, 103, 107, 108 y 112. El 4 y el 7 de diciembre son el cálculo del quinto y el octavo día._
 
@@ -405,7 +406,7 @@ _Fuentes: Constitución, art. 68.6; Real Decreto 806/2026, art. 5._
 
 Preside el diputado de más edad, con los dos más jóvenes de secretarios. Lo primero es elegir la Mesa del Congreso. Para presidirla hace falta mayoría absoluta; si nadie la logra, se decide entre los dos más votados.
 Después, los diputados juran o prometen acatar la Constitución y el Congreso queda constituido.
-Para ser diputado de pleno derecho hay que entregar la credencial y la declaración de actividades, y jurar o prometer la Constitución. Quien no lo haga en tres plenos se queda sin derechos ni prerrogativas hasta que lo haga.
+Para ser diputado de pleno derecho hay que entregar el documento que lo acredita como elegido y la declaración de actividades, y jurar o prometer la Constitución. Quien no lo haga en tres plenos se queda sin sus derechos de diputado hasta que lo haga.
 Los grupos parlamentarios se forman en los cinco días hábiles siguientes.
 
 _Fuentes: Reglamento del Congreso, arts. 1 a 4, 20, 23, 24, 37 y 90._
@@ -419,14 +420,14 @@ _Fuente: Constitución, arts. 62 y 99._
 
 **Saber más: Quién gobierna mientras tanto**
 
-El Gobierno que sale sigue en funciones hasta que toma posesión el nuevo. Despacha los asuntos ordinarios, pero no puede presentar proyectos de ley ni los Presupuestos.
+Tras las elecciones, el Gobierno que sale queda en funciones hasta que toma posesión el nuevo. Despacha los asuntos ordinarios, pero no puede presentar proyectos de ley ni los Presupuestos.
 Su presidente tampoco puede disolver las Cortes, ni plantear una cuestión de confianza, ni proponer un referéndum.
 
 _Fuentes: Constitución, art. 101; Ley 50/1997, art. 21._
 
 **Saber más: Y mientras no hay Cortes**
 
-Desde que se disolvieron las Cámaras hasta que se constituyan las nuevas queda de guardia un grupo reducido de diputados y otro de senadores: la Diputación Permanente.
+Desde que se disolvieron las cámaras hasta que se constituyan las nuevas queda de guardia un grupo reducido de diputados y otro de senadores: las Diputaciones Permanentes, una en cada cámara.
 Hace lo que en ese tiempo no puede hacer el Congreso: mantener o tumbar los decretos-leyes del Gobierno y decidir sobre los estados de alarma, excepción y sitio.
 
 _Fuentes: Constitución, arts. 78, 86 y 116._
@@ -441,9 +442,9 @@ _Fuentes: Constitución, arts. 62, 99, 100 y 101._
 
 **Riel:**
 
-Hasta aquí, las reglas. El 30N se abren cinco pasos más, con los resultados y lo que pase después.
+Hasta aquí, las reglas. El lunes 30 de noviembre se abren cinco pasos más, con los resultados y lo que pase después.
 Hasta aquí, las reglas. Los cinco pasos que siguen cuentan lo que ha pasado.
-Fuentes: Real Decreto 806/2026, Constitución, LOREG, Reglamento del Congreso, Real Decreto 605/1999 y Ley 50/1997.
+Fuentes principales: Real Decreto 806/2026, Constitución, LOREG (Ley Orgánica del Régimen Electoral General), Reglamento del Congreso, Real Decreto 605/1999 y Ley 50/1997.
 
 ## A partir del 30N
 
@@ -473,7 +474,7 @@ _Explicación propia._
 **Saber más: Provisional y oficial**
 
 Lo que se conoce la noche electoral es un recuento provisional. El oficial lo hacen las juntas electorales cinco días después, y es entonces cuando se suma el voto llegado del extranjero.
-Después se proclaman los diputados. Desde ese momento hay tres días para recurrir, y los recursos los resuelve el Tribunal Supremo.
+Después se proclaman los elegidos. Desde ese momento hay tres días para recurrir, y los recursos los resuelve el Tribunal Supremo.
 
 _Fuentes: LOREG, arts. 75, 98, 103, 108 y 112._
 
@@ -491,7 +492,7 @@ Pasa votos de un partido a otro y mira cómo cambia el reparto de tu provincia. 
 
 **Saber más: Cómo se calcula lo que faltó**
 
-El último escaño se lo lleva la división más alta que quedaba en la tabla. Lo que le faltó al siguiente partido es cuántos votos más habría necesitado para que su división superase a esa, sin que cambie nada más.
+El último escaño se lo lleva la división más alta que quedaba en la tabla. Lo que le faltó al partido que se quedó más cerca es cuántos votos más habría necesitado para que su división superase a esa, sin que cambie nada más.
 Es una cuenta sobre el papel: en la realidad, si un partido sube, otros bajan.
 
 _Cálculo propio con la regla del art. 163 de la LOREG._
@@ -507,13 +508,13 @@ _Fuente: LOREG, art. 164._
 **Saber más: Por qué no coinciden**
 
 Porque los escaños no se reparten una vez en toda España, sino 52 veces: una por provincia. En las pequeñas solo entran los partidos más votados, y los votos de los demás se quedan sin escaño.
-A eso se suma la barrera del 3 % y que la regla D'Hondt redondea a favor de los partidos con más votos en cada provincia.
+A eso se suma, donde se reparten muchos escaños, la barrera del 3 % y que la regla D'Hondt redondea a favor de los partidos con más votos en cada provincia.
 
 _Explicación propia a partir de los arts. 162 y 163 de la LOREG._
 
 **Saber más: Qué habría que cambiar para que coincidieran**
 
-La provincia como circunscripción está en la Constitución. El número de diputados (350), el mínimo de dos por provincia, la barrera y la regla de reparto están en la ley electoral.
+La provincia como circunscripción, con un mínimo de escaños, está en la Constitución. Que ese mínimo sean dos, el número de diputados (350), la barrera y la regla de reparto están en la ley electoral.
 Lo primero exige reformar la Constitución. Lo segundo, mayoría absoluta del Congreso.
 
 _Fuentes: Constitución, arts. 68 y 81; LOREG, arts. 162 y 163._
@@ -559,18 +560,19 @@ El último paso. El recorrido termina cuando el Congreso elige presidente y el n
 
 # Glosario
 
-- **Abstención.** Ni sí ni no. No suma a favor, pero tampoco en contra.
+- **Abstención.** En unas elecciones, no ir a votar. En una votación del Congreso, no votar ni sí ni no: no suma a favor ni en contra.
 - **Barrera electoral.** El mínimo para entrar en el reparto: el 3 % de los votos válidos de la provincia.
 - **Censo electoral.** La lista oficial de quienes pueden votar. Para votar hay que estar inscrito en ella.
 - **Circunscripción.** La zona en la que se cuentan los votos y se reparten los escaños. En las generales es la provincia; Ceuta y Melilla son una cada una.
 - **Cortes Generales.** El Congreso y el Senado juntos. Hacen las leyes, aprueban los Presupuestos y controlan al Gobierno.
 - **Cuestión de confianza.** La votación que pide el propio presidente para comprobar que el Congreso lo sigue apoyando. Le basta la mayoría simple; si la pierde, dimite.
 - **Decreto-ley.** Una norma que el Gobierno aprueba por urgencia. El Congreso tiene treinta días para mantenerla o tumbarla.
-- **Diputación Permanente.** El grupo reducido de diputados (y otro de senadores) que queda de guardia cuando las Cámaras están disueltas o no se reúnen.
-- **Escaño.** Cada uno de los 350 asientos del Congreso. Quien lo ocupa es diputado o diputada.
+- **Diputación Permanente.** El grupo reducido que queda de guardia en cada cámara cuando están disueltas o no se reúnen. Hay una en el Congreso y otra en el Senado.
+- **Escaño.** Cada uno de los 350 asientos del Congreso; los del Senado también se llaman así. Quien ocupa uno del Congreso es diputado o diputada.
 - **Escrutinio general.** El recuento oficial, que hacen las juntas electorales cinco días después de votar.
 - **Gobierno en funciones.** El Gobierno que ya ha cesado y sigue al frente hasta que entra el nuevo, con poderes limitados.
 - **Grupo parlamentario.** La agrupación de los diputados de un partido en el Congreso. Por regla general hacen falta quince; hay otra vía con cinco si se supera un mínimo de votos.
+- **Hemiciclo.** El salón de plenos del Congreso, con los escaños en forma de media luna.
 - **Investidura.** La votación en la que el Congreso da su confianza a un candidato a presidente del Gobierno.
 - **Junta electoral.** El órgano que vigila que las elecciones sean limpias y hace el recuento oficial. Hay una central, una por provincia y otras de zona.
 - **Ley orgánica.** Una ley sobre asuntos de más peso, como los derechos fundamentales o las reglas electorales. Necesita mayoría absoluta del Congreso.
@@ -585,10 +587,11 @@ El último paso. El recorrido termina cuando el Congreso elige presidente y el n
 - **Senador por designación.** El que no eligen los votantes, sino el parlamento de cada comunidad autónoma.
 - **Suplente.** Quien va al final de la lista, detrás de los candidatos. Solo entra si queda un escaño libre y ya no hay candidatos por delante. En el Senado, cada candidato lleva dos.
 - **Veto del Senado.** El rechazo del Senado a una ley que viene del Congreso. El Congreso puede levantarlo.
-- **Voto en blanco.** Un sobre sin papeleta. Es un voto válido: no va a ningún partido, pero cuenta en el total.
+- **Voto en blanco.** Un sobre sin papeleta; en el Senado, también la papeleta sin ninguna cruz. Es un voto válido: no va a ningún partido, pero cuenta en el total.
 - **Voto nulo.** Un voto que no vale: por ejemplo, una papeleta con tachaduras o añadidos, o un sobre que no es el oficial.
+- **Votos válidos.** Los que van a un partido más los votos en blanco. Los nulos no cuentan.
 
 # Recuento
 
-- Cajones «saber más»: 60 (3604 palabras).
-- Términos de glosario: 28.
+- Cajones «saber más»: 60 (3664 palabras).
+- Términos de glosario: 30.

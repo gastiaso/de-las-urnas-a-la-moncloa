@@ -67,8 +67,8 @@ export const ES = {
     switch (k) {
       case 0: return 'Tu voto es el hexágono dorado. Elige dónde votas y síguelo hasta el final.';
       case 1: return (uno ? 'Tu voto es el hexágono dorado: es el único escaño de ' + nom + '.' : 'Tu voto es el hexágono dorado: está en ' + nom + ', entre los escaños de tu provincia, en teja.') + ' Tu papeleta blanca, la del Congreso, va a su urna.';
-      case 2: return uno ? 'Tu voto se suma al de tu partido en ' + nom + '. Allí hay un solo escaño: es para el más votado.'
-        : 'Tu voto se suma al de tu partido en ' + nom + ', y solo entra en el reparto si ese partido llega al 3 % de los votos válidos de la provincia.';
+      case 2: return uno ? 'Tu voto se suma a los de tu partido en ' + nom + '. Allí hay un solo escaño: es para el más votado.'
+        : 'Tu voto se suma a los de tu partido en ' + nom + ', que solo entra en el reparto si llega al 3 % de los votos válidos.';
       case 3:
         if (uno) return 'En ' + nom + ' hay un solo escaño: con los cinco partidos inventados del paso 2, solo entraría el más votado.';
         if (n === 2 || n === 38) return 'Con los cinco partidos inventados del paso 2, en ' + nom + ' entran <b>' + entran + '</b>. Es uno de los dos extremos de la tabla.';
@@ -88,7 +88,7 @@ export const ES = {
   },
 
   /* navegación */
-  estacion: (k, ultima) => k === 0 ? 'Salida' : k === 14 ? 'Meta' : 'Paso ' + k + ' de ' + ultima,
+  estacion: (k, ultima) => k === 0 ? 'Salida' : k === 14 ? 'La Moncloa' : 'Paso ' + k + ' de ' + ultima,
   donde: (k, ultima, lectura) => lectura ? 'Índice' : k === 0 ? 'Salida' : k === 14 ? 'La Moncloa' : 'Paso ' + k + ' de ' + ultima,
   dondeVotas: '¿Dónde votas?',
   tocaMapa: 'También puedes tocar tu provincia en el mapa.',
@@ -158,7 +158,7 @@ export const ES = {
   participacion: p => ' Votó el ' + p + ' del censo.',
   thVotos: 'Votos',
   thEscanos: 'Escaños',
-  thPorEscano: 'Por escaño',
+  thPorEscano: 'Votos por escaño',
   fuenteRes: (prueba, etiqueta, fuente) => (prueba ? 'Datos de prueba: ' : '') + etiqueta + '. Fuente: ' + fuente + '. Los escaños se calculan aquí con los votos de cada provincia.',
   repartia: (i, n) => prov(i) + ' repartía ' + escanos(n) + '.',
   ultimo: (ganador, rival, votos) => 'El último escaño fue para ' + ganador + '. A ' + rival + ' le faltaron ' + miles(votos) + ' votos para quitárselo.',
