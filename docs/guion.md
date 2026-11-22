@@ -353,7 +353,7 @@ Toca cada fecha para ver qué pasa ese día.
 · Antes de votar
 · mar 6 oct — Se disuelven las Cortes y se convocan elecciones: El Real Decreto 806/2026 sale en el BOE: disuelve el Congreso y el Senado elegidos en julio de 2023 y fija la votación 54 días después, el domingo 29 de noviembre. (Real Decreto 806/2026, arts. 1 y 2; LOREG, art. 42.1.)
 · vie 13 nov — Empieza la campaña: Quince días en los que los partidos piden el voto con mítines, carteles y anuncios. Arranca a las cero horas. (LOREG, art. 51; Real Decreto 806/2026, art. 4.)
-· jue 19 nov — Último día para pedir el voto por correo: Se pide en una oficina de Correos, en persona y con el DNI, o por internet con certificado electrónico. Las papeletas llegan a casa. El voto se entrega después en una oficina de Correos, identificándose, como tarde el 25 de noviembre, salvo que se amplíe el plazo. (LOREG, arts. 72 y 73; Junta Electoral Central, Instrucción 5/2023 y Acuerdo 11/2023. Fechas: cálculo del décimo día anterior y del último antes del tercero.)
+· jue 19 nov — Último día para pedir el voto por correo: Se pide en una oficina de Correos, en persona y con el DNI, o por internet con certificado electrónico. Las papeletas llegan a casa. El voto se entrega después en una oficina de Correos, identificándose, como tarde el jueves 26 de noviembre a las 14:00: la Junta Electoral Central ha ampliado un día el plazo legal, que acababa el 25. (LOREG, arts. 72 y 73; Junta Electoral Central, Instrucción 5/2023, Acuerdo 11/2023 y ampliación del plazo para el 29N (expediente 320/518). Fechas: cálculo del décimo día anterior y del último antes del tercero.)
 · 21 a 26 nov — Voto en los consulados: Quien vive en el extranjero puede depositar su voto en una urna de su consulado o embajada. Si lo manda por correo, tiene que enviarlo como tarde el 24 y tiene que llegar al consulado como tarde el 27. (LOREG, art. 75. Fechas: cálculo de los plazos del artículo.)
 · 24 a 28 nov — No se pueden publicar encuestas: La ley prohíbe publicar, difundir o reproducir sondeos electorales en los cinco días anteriores a la votación. (LOREG, art. 69.7.)
 · vie 27 nov — Termina la campaña: A medianoche se acaban los mítines, la propaganda y los actos de campaña. (LOREG, art. 51; Real Decreto 806/2026, art. 4.)
@@ -384,7 +384,7 @@ _Fuentes: LOREG, arts. 51 y 53; Real Decreto 806/2026, art. 4. «Jornada de refl
 **Saber más: Si ese día no puedes ir**
 
 Existe el voto por correo. Hay que pedirlo hasta diez días antes de la votación (para el 29N, hasta el 19 de noviembre): en una oficina de Correos, en persona y con el DNI, o por internet con certificado electrónico. Después te llegan las papeletas a casa.
-El voto no se echa a un buzón: se entrega en una oficina de Correos, identificándote, como tarde el miércoles 25 de noviembre. En otras elecciones, la Junta Electoral Central ha ampliado ese plazo. Si no puedes ir, puede llevarlo otra persona con una autorización firmada por ti y una fotocopia de tu DNI. No se paga sello.
+El voto no se echa a un buzón: se entrega en una oficina de Correos, identificándote, como tarde el jueves 26 de noviembre a las 14:00. La ley fija el plazo en el miércoles 25, pero la Junta Electoral Central lo ha ampliado un día para estas elecciones. Si no puedes ir, puede llevarlo otra persona con una autorización firmada por ti y una fotocopia de tu DNI. No se paga sello.
 Quien vive en el extranjero y está inscrito en el censo de residentes ausentes recibe la documentación en casa sin pedirla. Puede votar en una urna de su consulado, del 21 al 26 de noviembre, o mandar el voto por correo al consulado como tarde el 24; si llega después del 27, no vale. Esos votos se cuentan el 4 de diciembre, en el recuento oficial.
 
 _Fuentes: LOREG, arts. 72, 73, 75 y 103; Junta Electoral Central, Instrucción 5/2023 y Acuerdos 11/2023 y 328/2023. Las fechas son el cálculo de los plazos de esos artículos para el 29N._
@@ -593,5 +593,5 @@ El último paso. El recorrido termina cuando el Congreso elige presidente y el n
 
 # Recuento
 
-- Cajones «saber más»: 60 (3664 palabras).
+- Cajones «saber más»: 60 (3678 palabras).
 - Términos de glosario: 30.
