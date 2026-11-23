@@ -448,7 +448,7 @@ _Fuentes: Constitución, arts. 62, 99, 100 y 101._
 **Riel:**
 
 Hasta aquí, las reglas. El lunes 30 de noviembre se abren cinco pasos más, con los resultados y lo que pase después.
-Hasta aquí, las reglas. Los cinco pasos que siguen cuentan lo que ha pasado.
+Los cinco pasos que siguen cuentan lo que ha pasado.
 Fuentes principales: Real Decreto 806/2026, Constitución, LOREG (Ley Orgánica del Régimen Electoral General), Reglamento del Congreso, Real Decreto 605/1999 y Ley 50/1997.
 
 ## A partir del 30N

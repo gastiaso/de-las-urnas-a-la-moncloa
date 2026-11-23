@@ -950,8 +950,8 @@ gl: 8 · Peche
 es: Hasta aquí, las reglas. El lunes 30 de noviembre se abren cinco pasos más, con los resultados y lo que pase después.
 gl: Ata aquí, as regras. O luns 30 de novembro ábrense cinco pasos máis, cos resultados e o que pase despois.
 
-es: Hasta aquí, las reglas. Los cinco pasos que siguen cuentan lo que ha pasado.
-gl: Ata aquí, as regras. Os cinco pasos que seguen contan o que pasou.
+es: Los cinco pasos que siguen cuentan lo que ha pasado.
+gl: Os cinco pasos que seguen contan o que pasou.
 
 es: Glosario completo
 gl: Glosario completo

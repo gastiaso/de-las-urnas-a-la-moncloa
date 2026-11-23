@@ -951,8 +951,8 @@ en: 8 · Wrap-up
 es: Hasta aquí, las reglas. El lunes 30 de noviembre se abren cinco pasos más, con los resultados y lo que pase después.
 en: Those are the rules. On Monday 30 November five more steps open, with the results and whatever happens next.
 
-es: Hasta aquí, las reglas. Los cinco pasos que siguen cuentan lo que ha pasado.
-en: Those are the rules. The five steps that follow tell what has happened.
+es: Los cinco pasos que siguen cuentan lo que ha pasado.
+en: The five steps that follow tell what has happened.
 
 es: Glosario completo
 en: Full glossary

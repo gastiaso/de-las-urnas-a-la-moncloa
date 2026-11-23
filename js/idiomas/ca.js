@@ -203,6 +203,7 @@ export const textos = {
   abre30N: '30N',   // junto a cada paso cerrado, en el menú
   sigueMiVoto: 'Segueix el meu vot: ',
   irResultados: 'Anar als resultats: ',   // fase 2: atajo de la salida al paso 9
+  reglasFin: 'Fins aquí, les regles',   // fase 2: título del paso 8, que deja de ser el cierre
   siguiente: 'Següent: ',
   verEscanos: 'Torna als 350 escons',
   verTexto: 'Mostra només el text',

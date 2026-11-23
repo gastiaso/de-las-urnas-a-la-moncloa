@@ -950,8 +950,8 @@ eu: 8 · Itxiera
 es: Hasta aquí, las reglas. El lunes 30 de noviembre se abren cinco pasos más, con los resultados y lo que pase después.
 eu: Honaino, arauak. Azaroaren 30ean, astelehena, beste bost urrats irekiko dira, emaitzekin eta ondoren gertatzen denarekin.
 
-es: Hasta aquí, las reglas. Los cinco pasos que siguen cuentan lo que ha pasado.
-eu: Honaino, arauak. Ondorengo bost urratsek gertatu dena kontatzen dute.
+es: Los cinco pasos que siguen cuentan lo que ha pasado.
+eu: Ondorengo bost urratsek gertatu dena kontatzen dute.
 
 es: Glosario completo
 eu: Glosario osoa

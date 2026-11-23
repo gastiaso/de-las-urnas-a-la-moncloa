@@ -155,6 +155,7 @@ export const textos = {
   abre30N: '30 Nov',   // junto a cada paso cerrado, en el menú
   sigueMiVoto: 'Follow the vote: ',
   irResultados: 'Go to the results: ',   // fase 2: atajo de la salida al paso 9
+  reglasFin: 'Those are the rules',   // fase 2: título del paso 8, que deja de ser el cierre
   siguiente: 'Next: ',
   verEscanos: 'Back to the 350 seats',
   verTexto: 'Text only',

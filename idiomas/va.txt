@@ -950,8 +950,8 @@ va: 8 · Tancament
 es: Hasta aquí, las reglas. El lunes 30 de noviembre se abren cinco pasos más, con los resultados y lo que pase después.
 va: Fins ací, les regles. El dilluns 30 de novembre s'obrin cinc passos més, amb els resultats i el que passe després.
 
-es: Hasta aquí, las reglas. Los cinco pasos que siguen cuentan lo que ha pasado.
-va: Fins ací, les regles. Els cinc passos que seguixen conten el que ha passat.
+es: Los cinco pasos que siguen cuentan lo que ha pasado.
+va: Els cinc passos que seguixen conten el que ha passat.
 
 es: Glosario completo
 va: Glossari complet

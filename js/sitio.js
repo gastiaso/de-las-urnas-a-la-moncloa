@@ -19,6 +19,7 @@ function anuncia(t) { clearTimeout(tA); anuncio.textContent = ''; tA = setTimeou
 const enLectura = () => document.body.classList.contains('lectura');
 const secs = $$('.paso').filter(s => FASE2 || !s.classList.contains('f2'));
 const casilla = s => +s.dataset.k, ULTIMA = FASE2 ? 13 : 8;
+const titulo = kk => FASE2 && kk === 8 ? T.reglasFin : T.titulos[kk];   // en la fase 2, el paso 8 deja de ser el cierre
 
 /* ---------- el escenario ---------- */
 const gC = geometria(false), gS = geometria(true);
@@ -359,6 +360,8 @@ C.sincroniza();
 function frase(k) {
   const i = C.st.prov, n = PROV[i][1];
   if (k === 9) return C.R ? T.frase2023(i, C.R.frente2023(i)) : '';   // fase 2: tu provincia frente a 2023
+  if (FASE2 && k === 8) return '';   // fase 2: «Ese es el camino de tu papeleta…» pasa del paso 8 a «La Moncloa»
+  if (FASE2 && k === 14) k = 8;
   // con los cinco partidos inventados del paso 2: cuántos entran en tu provincia y en las dos de los extremos
   const entran = e => Object.values(dhondt(e).seats).filter(x => x > 0).length;
   // fase 2: el partido que se llevó el primer escaño de tu provincia
@@ -371,6 +374,7 @@ secs.forEach(s => {
   et.innerHTML = ICONO[kk] + '<span>' + T.estacion(kk, ULTIMA) + '</span>';
   cu.insertBefore(et, h);
   if (h.firstChild && h.firstChild.nodeType === 3) h.firstChild.data = h.firstChild.data.replace(/^\d+ · /, '');   // «1 · Qué se vota»: el número ya lo dice la línea de encima
+  if (FASE2 && kk === 8) h.textContent = titulo(8);
   const tv = document.createElement('div'); tv.className = 'tuvoto'; tv.dataset.k = kk; h.after(tv);
 });
 let enviado = 0;   // paso de la calculadora a la que se ha llegado por un enlace sin haber elegido provincia (ver al final)
@@ -403,7 +407,7 @@ const irA = (kk, foco, dentro) => {   // dentro: un elemento del paso al que baj
 };
 secs.forEach(s => {
   const kk = casilla(s), b = document.createElement('button'); b.type = 'button'; b.dataset.k = kk;
-  b.innerHTML = '<b>' + (kk === 0 ? '·' : kk === 14 ? '·' : kk) + '</b><span>' + T.titulos[kk] + '</span>';
+  b.innerHTML = '<b>' + (kk === 0 ? '·' : kk === 14 ? '·' : kk) + '</b><span>' + titulo(kk) + '</span>';
   b.addEventListener('click', () => { abreIndice(false); irA(kk, true); });
   indice.appendChild(b);
 });
@@ -427,7 +431,7 @@ indice.addEventListener('focusout', e => { if (e.relatedTarget && !indice.contai
 secs.forEach((s, i) => {
   if (i === secs.length - 1) return;
   const kk = casilla(secs[i + 1]), b = document.createElement('button'); b.type = 'button'; b.className = 'sig';
-  b.textContent = (i === 0 ? T.sigueMiVoto : T.siguiente) + (kk === 14 ? '' : kk + ' · ') + T.titulos[kk];
+  b.textContent = (i === 0 ? T.sigueMiVoto : T.siguiente) + (kk === 14 ? '' : kk + ' · ') + titulo(kk);
   b.addEventListener('click', () => irA(kk, true));
   if (i === 0) { elige.after(b); b.after(tocaMapa); b.addEventListener('click', () => C.recuerda()); }   // en la salida, el botón va con el desplegable; pulsarlo acepta la provincia
   else ($('.cuerpo', s) || $('.portada', s)).appendChild(b);
@@ -437,6 +441,11 @@ if (FASE2) {   // en la fase 2, la salida lleva primero un atajo a los resultado
   b.textContent = T.irResultados + '9 · ' + T.titulos[9];
   b.addEventListener('click', () => { C.recuerda(); irA(9, true); });
   const s0 = $('.sig', salida); s0.classList.add('sec'); s0.before(b);
+  // el paso 8 ya no cierra el recorrido: el glosario, las fuentes y «Ver solo el texto» se mudan a «La Moncloa», que ya tiene
+  // su «Compartir» y su «Volver a la salida» (los del paso 8 son .solo-f1)
+  const p8 = $('.paso[data-k="8"] .cuerpo');
+  $('.paso[data-k="14"] .compartir-sitio').before($('#glosario', p8).closest('details'), $('.fuentes', p8));
+  $('#volver2').after($('#soloTexto'));
 }
 function lectura(v) {
   document.body.classList.toggle('lectura', v);

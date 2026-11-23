@@ -109,6 +109,7 @@ export const ES = {
   abre30N: '30N',   // junto a cada paso cerrado, en el menú
   sigueMiVoto: 'Sigue mi voto: ',
   irResultados: 'Ir a los resultados: ',   // fase 2: atajo de la salida al paso 9
+  reglasFin: 'Hasta aquí, las reglas',   // fase 2: título del paso 8, que deja de ser el cierre
   siguiente: 'Siguiente: ',
   verEscanos: 'Volver a los 350 escaños',
   verTexto: 'Ver solo el texto',
