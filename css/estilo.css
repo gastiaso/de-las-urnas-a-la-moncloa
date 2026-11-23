@@ -104,7 +104,7 @@ a{color:var(--ink)}
 .fuentes{font-size:13px}
 .aviso{display:none}
 
-@media (max-width:374px){.bar b{font-size:11.5px}}
+@media (max-width:374px){.bar b{font-size:11.5px}.escenario .rotulo .esc-hab{font-size:10.5px}.escenario .rotulo .esc-hab i{width:12px}}
 
 /* accesibilidad: foco visible, texto solo para lectores de pantalla y enlaces que aparecen al tabular */
 :focus-visible{outline:3px solid var(--teja);outline-offset:2px}
@@ -204,6 +204,8 @@ main{position:relative;z-index:1}
 .escenario .t176{font:700 .022px 'Courier Prime',monospace;fill:var(--ink);text-anchor:middle}
 .rotulo{position:absolute;left:14px;top:10px;right:14px;margin:0;font-family:'Libre Franklin',system-ui,sans-serif;font-weight:800;font-size:clamp(15px,2.1vw,25px);line-height:1.12;pointer-events:none}
 .rotulo small{display:block;font-family:'Courier Prime',monospace;font-weight:700;font-size:13px;color:var(--sec);margin-top:3px}
+.rotulo .esc-hab{display:flex;align-items:center;gap:0;margin-top:5px;font-family:'Courier Prime',monospace;font-weight:700;font-size:12.5px;color:var(--sec)}
+.rotulo .esc-hab i{display:block;width:18px;height:10px;border:1px solid var(--ink);border-left-width:0}.rotulo .esc-hab i:first-of-type{margin-left:6px;border-left-width:1px}.rotulo .esc-hab i:last-of-type{margin-right:6px}
 .marca{position:absolute;left:0;top:0;pointer-events:none;transform:translate(-50%,-100%);background:var(--ink);color:#fff;font-size:11.5px;font-weight:700;line-height:1;padding:4px 7px 5px;border-radius:3px;white-space:nowrap;transition:opacity .3s}
 .marca::after{content:'';position:absolute;left:50%;bottom:-5px;margin-left:-5px;border:5px solid transparent;border-bottom:0;border-top-color:var(--ink)}
 .marca[hidden]{display:block;opacity:0}
@@ -219,6 +221,7 @@ main{position:relative;z-index:1}
   .escenario svg{height:calc(100% - 24px);margin-top:22px}
   .rotulo{top:5px;left:10px;right:10px;font-size:14.5px}
   .rotulo small{display:inline;margin:0 0 0 6px;font-size:12px}
+  .rotulo .esc-hab{position:absolute;right:0;top:calc(35vh - 30px);margin:0;font-size:11.5px}   /* la escala, abajo a la derecha, donde el mapa deja hueco */
   main{padding:calc(35vh + 56px) 10px 30vh}
   .paso{min-height:65vh}
   .pie-escenario{display:none}

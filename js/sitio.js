@@ -191,7 +191,9 @@ function rotula() {
     pie = k === 12 ? T.piePactoRes : T.piePacto;
   }
   if (est === 'pila') t = '';
-  rotulo.innerHTML = t; pieEsc.textContent = pie;
+  // paso 3: la escala de habitantes por escaño, de la provincia con menos a la que tiene más (los cinco tonos son quintos de la lista)
+  const leyenda = est === 'hab' && C ? '<span class="esc-hab" aria-hidden="true">' + T.miles(C.HAB[0].h) + ESC_HAB.map(c => '<i style="background:' + c + '"></i>').join('') + T.miles(C.HAB[C.HAB.length - 1].h) + '</span>' : '';
+  rotulo.innerHTML = t + leyenda; pieEsc.textContent = pie;
   // para lectores de pantalla, el escenario dice qué enseña en cada paso: el rótulo, el pie y qué es el hexágono dorado
   const punto = s => /[.:?!]$/.test(s) ? s : s + '.', limpio = punto(t.replace('<small>', '. ').replace(/<[^>]+>/g, '').trim());
   esc.setAttribute('aria-label', !t ? T.ariaEscenario : T.ariaPaso(limpio + (pie ? ' ' + punto(pie) : ''), piezaTuya() ? textoMarca() : ''));
