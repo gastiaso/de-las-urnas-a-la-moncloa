@@ -164,6 +164,113 @@ function ponMarca() {
   marca.textContent = textoMarca(); marca.hidden = false;
 }
 
+/* el rótulo de la provincia elegida: su nombre, en una etiqueta de papel, junto a ella en los mapas. No sale en el paso 1,
+   cuyo rótulo de arriba ya la nombra, ni en la portada ni en el modo solo texto. Se prueban posiciones alrededor de la
+   provincia y se queda la que menos estorba: nunca encima del hexágono dorado, de la marca ni de los escaños de la provincia.
+   En los mapas de dato (habitantes por escaño y resultados) tampoco tapa los de las demás: si no hay hueco al lado ni junto a
+   la marca «Tu voto», va al más cercano, con una raya hasta la provincia. Es solo visual: el escenario se anuncia como imagen. */
+const MAPAS = ['mapaSel', 'hab', 'senado', 'res'], DATO = ['hab', 'res'];
+const capaRot = document.createElement('div'); capaRot.className = 'rot-prov fuera'; capaRot.setAttribute('aria-hidden', 'true');
+capaRot.innerHTML = '<i hidden></i><span></span>';
+esc.insertBefore(capaRot, marca);
+const rotSel = $('span', capaRot), rayaRot = $('i', capaRot);
+let claveRot = '', esperaRot = false, tRot = 0;
+const claveRotulo = () => { const est = estadoActual(); return MAPAS.includes(est) && k !== 1 && !enLectura() && !document.body.classList.contains('intro') ? est + sel() : ''; };
+function ponRotulo() {
+  const clave = claveRot = claveRotulo(), m = svgEl.getScreenCTM(), e = esc.getBoundingClientRect();
+  if (esc.classList.contains('mueve')) { clearTimeout(tRot); tRot = setTimeout(ponRotulo, 200); }   // el escenario aún cambia de tamaño
+  if (!clave || !m || !e.width || esc.classList.contains('mueve')) { capaRot.classList.add('fuera'); return; }
+  const p0 = sel(), peso = DATO.includes(estadoActual()) ? 600 : 3, s = m.a, X = x => m.e - e.left + s * x, Y = y => m.f - e.top + s * y;
+  // los escaños a la vista, en píxeles del escenario: centro, medio ancho y medio alto, y si son de la elegida
+  const hs = piezas.filter(q => q.cur.o > 0.5 && q.cur.r > 0).map(q => ({ x: X(q.cur.x), y: Y(q.cur.y), a: s * q.cur.r * 0.866, b: s * q.cur.r, mia: q.p === p0 }));
+  const mias = hs.filter(o => o.mia); if (!mias.length) { capaRot.classList.add('fuera'); return; }
+  // dónde puede ir la etiqueta: dentro del escenario, debajo del rótulo de arriba y encima del pie
+  const tR = rotulo.textContent ? rotulo.getBoundingClientRect().bottom - e.top : 0, tP = pieEsc.textContent && pieEsc.offsetHeight ? pieEsc.getBoundingClientRect().top - e.top : e.height;
+  const zy0 = Math.max(4, tR + 4), zy1 = Math.min(e.height, tP) - 4;
+  // lo que no se tapa nunca: el hexágono dorado, la marca y lo que cuelgue del rótulo de arriba (una leyenda, por ejemplo)
+  const fijos = [...rotulo.children].map(el => el.getBoundingClientRect()).filter(r => r.width).map(r => [r.left - e.left - 2, r.top - e.top - 2, r.right - e.left + 2, r.bottom - e.top + 2]), q = piezaTuya();
+  if (q && q !== 'aparte') { const r = s * Math.max(q.cur.r * 1.12, 0.012) + 2, x = X(q.cur.x), y = Y(q.cur.y); fijos.push([x - r, y - r, x + r, y + r]); }
+  // la marca señala un escaño de la provincia: una etiqueta pegada a ella también queda unida a la provincia
+  let mc = null;
+  if (!marca.hidden) { const r = marca.getBoundingClientRect(); mc = { x: (r.left + r.right) / 2 - e.left, y: (r.top + r.bottom) / 2 - e.top, a: r.width / 2, b: r.height / 2 }; fijos.push([mc.x - mc.a - 2, mc.y - mc.b - 2, mc.x + mc.a + 2, mc.y + mc.b + 2]); }
+  // se buscan posiciones a menos de un cuarto del escenario de la provincia, cada pocos píxeles
+  const bx0 = Math.min(...mias.map(o => o.x - o.a)), bx1 = Math.max(...mias.map(o => o.x + o.a)), by0 = Math.min(...mias.map(o => o.y - o.b)), by1 = Math.max(...mias.map(o => o.y + o.b));
+  const cx = (bx0 + bx1) / 2, cy = (by0 + by1) / 2, D = 0.25 * Math.min(e.width, e.height), pas = Math.max(3, e.width / 130), junto = Math.max(4, mias[0].b * 0.6) + 2;
+  // cuánto tapa una caja de los escaños de una lista (en escaños: 1 = uno entero), con una rejilla de 2 px o más sumada
+  // de antemano (tabla de áreas acumuladas), para no recorrer los 350 escaños en cada posición que se prueba
+  const G = Math.max(2, Math.round(mias[0].b / 3)), nx = Math.ceil(e.width / G), ny = Math.ceil(e.height / G), W1 = nx + 1;
+  const ci = (v, n, sube) => Math.max(0, Math.min(n, sube ? Math.floor(v / G - 0.5) + 1 : Math.ceil(v / G - 0.5)));
+  const tabla = lista => {
+    const S = new Float32Array(W1 * (ny + 1));
+    for (const o of lista) {
+      const v = G * G / (4 * o.a * o.b), mg = G / 2, i0 = ci(o.x - o.a - mg, nx), i1 = ci(o.x + o.a + mg, nx, 1), j0 = ci(o.y - o.b - mg, ny), j1 = ci(o.y + o.b + mg, ny, 1);   // con media celda de más, por si acaso
+      for (let j = j0; j < j1; j++) for (let i = i0; i < i1; i++) S[(j + 1) * W1 + i + 1] += v;
+    }
+    for (let j = 1; j <= ny; j++) for (let i = 1; i <= nx; i++) S[j * W1 + i] += S[(j - 1) * W1 + i] + S[j * W1 + i - 1] - S[(j - 1) * W1 + i - 1];
+    return (x, y, w, h) => { const i0 = ci(x, nx), i1 = ci(x + w, nx, 1), j0 = ci(y, ny), j1 = ci(y + h, ny, 1);
+      return i1 <= i0 || j1 <= j0 ? 0 : S[j1 * W1 + i1] - S[j0 * W1 + i1] - S[j1 * W1 + i0] + S[j0 * W1 + i0]; };
+  };
+  const tapaMias = tabla(mias), tapaOtras = tabla(hs.filter(o => !o.mia));
+  const cruza = ([ax, ay, bx, by], f) => { let t0 = 0, t1 = 1; const dx = bx - ax, dy = by - ay;
+    for (const [p, v] of [[-dx, ax - f[0]], [dx, f[2] - ax], [-dy, ay - f[1]], [dy, f[3] - ay]]) { if (!p) { if (v < 0) return false; continue; } const r = v / p; if (p < 0) t0 = Math.max(t0, r); else t1 = Math.min(t1, r); }
+    return t0 <= t1; };
+  // la mejor posición para una etiqueta de w × h. Coste: tapar escaños de la provincia (casi prohibido) o de las demás
+  // (caro en los mapas de dato), alejarse de ella, quedar más cerca de otra provincia que de la suya y necesitar raya
+  // (más aún si la raya cruza el hexágono dorado o la marca). Primero se prueba cada tres pasos, para tener una cota, y luego en todos.
+  function busca(w, h, extra, pas, min) {
+    // distancia de la etiqueta a un escaño y raya del borde de la etiqueta al del escaño
+    const dista = (o, x, y) => { const dx = Math.max(o.x - o.a - x - w, 0, x - o.x - o.a), dy = Math.max(o.y - o.b - y - h, 0, y - o.y - o.b); return Math.sqrt(dx * dx + dy * dy); };
+    const trazo = (x, y, o) => { const px = Math.max(x, Math.min(x + w, o.x)), py = Math.max(y, Math.min(y + h, o.y)), L = Math.hypot(o.x - px, o.y - py) || 1; return [px, py, o.x - (o.x - px) * o.a / L, o.y - (o.y - py) * o.a / L, L - o.a]; };
+    const x0 = Math.max(4, bx0 - D - w), x1 = Math.min(e.width - 4 - w, bx1 + D), y0 = Math.max(zy0, by0 - D - h), y1 = Math.min(zy1 - h, by1 + D);
+    let mejor = null;
+    for (let y = y0; y <= y1; y += pas) for (let x = x0; x <= x1; x += pas) {
+      if (fijos.some(f => x < f[2] && f[0] < x + w && y < f[3] && f[1] < y + h)) continue;
+      let c = extra + tapaMias(x, y, w, h) * 1000 + tapaOtras(x, y, w, h) * peso, hueco = Infinity, cerca = null;
+      const dx = Math.max(bx0 - x - w, 0, x - bx1), dy = Math.max(by0 - y - h, 0, y - by1), dm = mc ? dista(mc, x, y) + 3 : Infinity;   // pegada a la marca cuenta como 3 px más lejos
+      if (c + Math.min(Math.sqrt(dx * dx + dy * dy), dm) >= min) continue;   // ni pegada a la provincia mejoraría
+      for (const o of mias) { const d = dista(o, x, y); if (d < hueco) { hueco = d; cerca = o; } }
+      const conRaya = hueco > junto && dm > junto;
+      if (!conRaya) hueco = Math.min(hueco, dm);
+      c += hueco + (hueco < 2 ? (2 - hueco) * 3 : 0) + (conRaya ? 25 : 0) + 0.03 * Math.abs(x + w / 2 - cx) + (y + h / 2 < cy ? 1 : 0);
+      // otra provincia más cerca que la suya: se mira si alguna asoma a menos de la cuarta parte, la mitad… del hueco
+      if (c < min && hueco > 2) for (let f = 0; f < 1; f += 0.25) { const d = hueco * f; if (tapaOtras(x - d, y - d, w + 2 * d, h + 2 * d) > 0.01) { c += (hueco - d) * 4; break; } }
+      if (c < min && conRaya && fijos.some(f => cruza(trazo(x, y, cerca), f))) c += 300;
+      if (c < min) { min = c; mejor = { x, y, c, raya: conRaya ? trazo(x, y, cerca) : null }; }
+    }
+    return mejor;
+  }
+  // el nombre en una línea y, si es largo para el escenario y tiene espacios, también partido en dos
+  const nom = T.provMapa(p0), esp = [...nom].map((c, i) => c === ' ' ? i : -1).filter(i => i > 0);
+  const corte = esp.length ? esp.reduce((a, i) => Math.abs(i - nom.length / 2) < Math.abs(a - nom.length / 2) ? i : a) : -1;
+  const escribe = dos => { rotSel.textContent = dos ? nom.slice(0, corte) : nom; if (dos) rotSel.append(document.createElement('br'), nom.slice(corte + 1)); return [rotSel.offsetWidth, rotSel.offsetHeight]; };
+  let mejor = null;
+  [false, true].forEach(dos => {
+    if (dos && (corte < 0 || escribe(false)[0] < 0.3 * e.width)) return;
+    const [w, h] = escribe(dos), r0 = busca(w, h, dos ? 5 : 0, pas * 3, Infinity), r = (r0 && busca(w, h, dos ? 5 : 0, pas, r0.c + 1e-6)) || r0;
+    if (r && (!mejor || r.c < mejor.c)) mejor = { ...r, dos };
+  });
+  if (!mejor) { capaRot.classList.add('fuera'); return; }
+  escribe(mejor.dos);
+  rotSel.style.left = mejor.x.toFixed(1) + 'px'; rotSel.style.top = mejor.y.toFixed(1) + 'px';
+  rayaRot.hidden = !mejor.raya;
+  if (mejor.raya) {
+    const [px, py, qx, qy, L] = mejor.raya;
+    rayaRot.style.left = px.toFixed(1) + 'px'; rayaRot.style.top = py.toFixed(1) + 'px'; rayaRot.style.width = Math.max(0, L).toFixed(1) + 'px';
+    rayaRot.style.transform = 'rotate(' + Math.atan2(qy - py, qx - px).toFixed(4) + 'rad)';
+  }
+  capaRot.classList.remove('fuera');
+}
+// antes de mover las piezas: si cambia el mapa o la provincia, el rótulo se esconde y vuelve cuando el escenario se para
+function preparaRotulo() {
+  const quieto = piezas.every(q => ((q.ini.o || 0) < 0.01 && (q.fin.o || 0) < 0.01) || ['x', 'y', 'r', 'o'].every(z => Math.abs((q.ini[z] || 0) - (q.fin[z] || 0)) < 1e-4));
+  if (claveRotulo() !== claveRot) capaRot.classList.add('fuera');
+  esperaRot = !quieto; if (quieto) requestAnimationFrame(() => { if (!esperaRot) ponRotulo(); });
+}
+const rotuloAlParar = () => { if (esperaRot) { esperaRot = false; ponRotulo(); } };
+// si el escenario cambia de tamaño (ventana, giro, salida de la portada) o llega la fuente, se recoloca
+new ResizeObserver(() => { clearTimeout(tRot); tRot = setTimeout(() => { if (!esperaRot) ponRotulo(); }, 150); }).observe(esc);
+if (document.fonts) document.fonts.ready.then(() => { if (!esperaRot) ponRotulo(); });
+
 /* animación: cada pieza va de su posición a la nueva, con un pequeño retraso de oeste a este */
 let anim = 0;
 function aplica(suave, dur0) {
@@ -180,6 +287,7 @@ function aplica(suave, dur0) {
   esc.dataset.est = est;   // en los mapas, el contorno de cada hexágono se aclara para que se lean los bordes (css/estilo.css)
   rotulaHemi(est === 'pacto' ? (k === 12 ? pacto12 : pacto6) : null);
   rotHemi.style.transitionDelay = est === 'pacto' && llega ? Math.max(0, llega - 200) + 'ms' : '0ms'; rotHemi.classList.toggle('ve', est === 'pacto');
+  preparaRotulo();
   cancelAnimationFrame(anim);
   const paso = now => {
     let sigue = false;
@@ -194,7 +302,7 @@ function aplica(suave, dur0) {
       if (a.e || b.e) { q.env.style.opacity = c.e.toFixed(3); q.hx.style.opacity = (1 - c.e).toFixed(3); }
     });
     ponMarca();
-    if (sigue) anim = requestAnimationFrame(paso);
+    if (sigue) anim = requestAnimationFrame(paso); else rotuloAlParar();
   };
   anim = requestAnimationFrame(paso);
   rotula();

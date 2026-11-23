@@ -96,6 +96,7 @@ export const textos = {
   pctEntero: n => n + ' %',
   provLista,
   prov,
+  provMapa: provLista,                    // en el rótulo del mapa: «València», «La Rioja», «Illes Balears»
   escanos: escons, sies: sis,
 
   /* textos que en castellano viven en js/datos.js */

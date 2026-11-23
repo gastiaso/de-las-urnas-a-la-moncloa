@@ -120,6 +120,7 @@ export const textos = {
   pctEntero: n => '% ' + n,
   provLista: nor,                         // en los desplegables y en las barras
   prov: nor,                              // dentro de una frase, en caso absoluto; las demás formas, en PROB
+  provMapa: nor,                          // en el rótulo de la provincia elegida, sobre el mapa
   escanos: eserleku, sies: bai,
 
   /* textos que en castellano viven en js/datos.js */

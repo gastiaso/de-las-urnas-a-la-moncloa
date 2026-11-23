@@ -31,6 +31,7 @@ export const ES = {
   pctEntero: n => n + ' %',
   provLista: i => PROV[i][0],             // en los desplegables y en las barras
   prov,                                   // dentro de una frase
+  provMapa: prov,                         // en el rótulo de la provincia elegida, sobre el mapa
   escanos, sies,
 
   /* textos que en castellano viven en js/datos.js */

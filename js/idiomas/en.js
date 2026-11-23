@@ -47,6 +47,7 @@ export const textos = {
   pctEntero: n => n + '%',
   provLista: i => N[i][0],
   prov,
+  provMapa: i => prov(i).replace(/^the /, ''),   // en el rótulo del mapa, sin «the»: «Balearic Islands», «A Coruña»
   escanos, sies,
 
   titulos: ['Start', "What's being elected", 'From votes to seats', 'Where the vote is cast', 'The Senate', 'Majorities', 'Deals', 'From 29 November to a government', 'Wrap-up',

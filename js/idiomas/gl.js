@@ -131,6 +131,7 @@ export const textos = {
   pctEntero: n => n + ' %',
   provLista,
   prov,
+  provMapa: prov,                         // en el rótulo del mapa: «A Coruña», «Illas Baleares»
   escanos, sies,
 
   /* textos que en castellano viven en js/datos.js */
