@@ -142,6 +142,8 @@ a{color:var(--ink)}
 .hito.abierto .tip{display:block}
 .hito.abierto .fecha{background:var(--ink);color:var(--paper);border-bottom-color:var(--ink)}
 @media (max-width:420px){.hito{grid-template-columns:88px minmax(0,1fr)}.calendario .fase{padding-left:100px}.fecha{font-size:12.5px;white-space:normal;max-width:88px;line-height:1.25}.lectura .tip{margin-left:100px}}
+/* por debajo de 340 px (zoom de página en el móvil): calendario en una columna y calculadora de tres en fondo */
+@media (max-width:340px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hito{grid-template-columns:1fr}.fecha{justify-self:start;max-width:none;text-align:left}.calendario .fase{padding-left:0}.lectura .tip{margin-left:0}}
 .lectura .tip{display:block;position:static;grid-column:1/-1;margin:0 0 8px 122px;background:transparent;color:var(--ink);padding:0;font-size:14px}
 /* pie: autoría, licencias y privacidad */
 .pie{position:relative;z-index:1;opacity:.999;background:var(--ground);border-top:1.5px solid var(--ink);padding:20px 16px 28px;font-size:13px;color:var(--sec)}
@@ -242,6 +244,13 @@ main{position:relative;z-index:1}
 }
 /* tableta: un escenario algo más alto, para que el mapa no se quede en 300 px */
 @media (min-width:600px) and (max-width:899px){.escenario{height:42vh}main{padding-top:calc(42vh + 56px)}.rotulo .esc-hab{top:calc(42vh - 30px)}}
+/* ventana baja y ancha (móvil apaisado, portátil con el zoom al 200 %): el escenario a la derecha, como en escritorio */
+@media (max-width:899px) and (max-height:520px) and (min-width:560px){
+  .escenario{top:44px;left:auto;right:0;bottom:0;width:46vw;height:auto;border-bottom:0;border-left:1.5px solid var(--ink)}
+  main{width:54vw;padding:56px 10px 30vh}
+  .pie{width:54vw}
+  .rotulo .esc-hab{position:static;margin-top:4px}
+}
 /* cada paso: su número, su icono y la frase de tu provincia */
 .estacion{display:flex;align-items:center;gap:8px;font-family:'Libre Franklin',system-ui,sans-serif;font-weight:800;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--teja2);margin:0 0 6px}
 .estacion svg{width:34px;height:34px;flex:none}

@@ -152,7 +152,7 @@ const textoMarca = () => {
 function ponMarca() {
   const q = piezaTuya();
   if (!q) { tuyo.setAttribute('opacity', 0); marca.hidden = true; return; }
-  const c = q === 'aparte' ? { x: HX, y: HY + 0.2, r: 0.022, o: 1 } : q.cur;   // aparte: debajo de los rótulos de los bloques
+  const c = q === 'aparte' ? { x: HX, y: HY + 0.24, r: 0.022, o: 1 } : q.cur;   // aparte: debajo de los rótulos de los bloques
   const r = q === 'aparte' ? c.r : Math.max(c.r * 1.12, 0.012);
   tuyo.setAttribute('transform', 'translate(' + c.x.toFixed(4) + ' ' + c.y.toFixed(4) + ') scale(' + r.toFixed(5) + ')');
   tuyo.setAttribute('opacity', (q === 'aparte' ? 1 : c.o).toFixed(2));
