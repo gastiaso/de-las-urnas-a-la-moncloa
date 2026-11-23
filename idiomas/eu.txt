@@ -955,6 +955,12 @@ eu: Testua bakarrik ikusi
 es: 9 · Qué ha pasado
 eu: 9 · Zer gertatu den
 
+es: Frente a 2023
+eu: 2023rekin alderatuta
+
+es: <i class="lv"></i> 2023 <i class="le"></i> 29N
+eu: <i class="lv"></i> 2023 <i class="le"></i> aza. 29
+
 es: Cómo leer el mapa
 eu: Nola irakurri mapa
 
@@ -963,6 +969,21 @@ eu: Hexagono bakoitza eserleku bat da, eta kontaketaren arabera dagokion alderdi
 
 es: Explicación propia.
 eu: Azalpen propioa.
+
+es: Cómo se compara con 2023
+eu: Nola alderatzen den 2023rekin
+
+es: Entre unas elecciones y otras, los partidos cambian de nombre y de socios. Cada uno se compara con su candidatura de 2023. Si no la tenía, porque no se presentó o iba dentro de otra, sale sin cifra. Los casos dudosos llevan una nota.
+eu: Hauteskunde batzuetatik besteetara, alderdiek izena eta bazkideak aldatzen dituzte. Bakoitza 2023ko bere hautagaitzarekin alderatzen da. Ez bazuen, aurkeztu ez zelako edo beste baten barruan joan zelako, zifrarik gabe ateratzen da. Kasu zalantzazkoek ohar bat dute.
+
+es: Dos provincias reparten distinto que en 2023: Cádiz pasa de 9 escaños a 8 y Madrid, de 37 a 38. El reparto entre provincias se ajusta a la población de cada una.
+eu: Bi probintziak 2023an ez bezala banatzen dituzte eserlekuak: Cadiz 9tik 8ra igarotzen da, eta Madril, 37tik 38ra. Probintzien arteko banaketa bakoitzaren biztanleriara egokitzen da.
+
+es: Los escaños de 2023 son los definitivos. Los del 29N no lo son hasta el escrutinio general, que suma el voto llegado del extranjero.
+eu: 2023ko eserlekuak behin betikoak dira. Azaroaren 29koak ez dira behin betikoak zenbaketa orokorra egin arte; orduan gehitzen da atzerritik iritsitako botoa.
+
+es: Fuentes: Junta Electoral Central, resultados de las elecciones del 23 de julio de 2023 ([BOE del 1 de septiembre de 2023](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-18907)); Real Decreto 806/2026, anexo; LOREG, arts. 75, 103 y 162.
+eu: Iturriak: Hauteskunde Batzorde Zentrala, 2023ko uztailaren 23ko hauteskundeen emaitzak ([2023ko irailaren 1eko BOE](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-18907)); 806/2026 Errege Dekretua, eranskina; LOREG, 75., 103. eta 162. art.
 
 es: Provisional y oficial
 eu: Behin-behinekoa eta ofiziala

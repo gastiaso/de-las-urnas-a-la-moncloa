@@ -159,6 +159,10 @@ a{color:var(--ink)}
 .votesc .gv{background:var(--sec)}.votesc .ge{background:var(--teja)}
 .votesc .gx{text-align:right;font-size:11.5px;line-height:1.25;font-variant-numeric:tabular-nums}
 .leyenda i{display:inline-block;width:14px;height:7px;margin:0 4px 0 8px;vertical-align:1px}.leyenda .lv{background:var(--sec);margin-left:0}.leyenda .le{background:var(--teja)}
+/* casilla 9: frente a 2023. Las mismas barras (gris, 2023; teja, 29N) y una columna más con la diferencia de escaños */
+.votesc.comp23 li{grid-template-columns:minmax(0,9em) minmax(0,1fr) 2.4em 3.8em}
+.votesc.comp23 .gd{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+.votesc.comp23 li.sin .gd{font-weight:400;color:var(--sec)}
 /* casilla 10: ¿y si…? */
 .ysi select{margin-bottom:6px}
 .ysi input[type=range]{margin-bottom:6px}

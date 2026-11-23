@@ -262,6 +262,38 @@ export const textos = {
   thEscanos: 'Escanos',
   thPorEscano: 'Votos por escano',
   fuenteRes: (prueba, etiqueta, fuente) => (prueba ? 'Datos de proba: ' + etiqueta : mai(etiqueta)) + '. Fonte: ' + fuente + '. Os escanos calcúlanse aquí cos votos de cada provincia; os oficiais proclámanos as xuntas electorais.',
+  /* paso 9: frente a 2023 */
+  lista: xs => xs.length < 2 ? xs.join('') : xs.slice(0, -1).join(', ') + ' e ' + xs[xs.length - 1],
+  frente2023(gana, mas, pierde, menos, todos) {
+    if (!gana.length && !pierde.length) return todos ? 'Cada partido ten os mesmos escanos que nas xerais de 2023.' : 'Os partidos que se poden comparar con 2023 teñen os mesmos escanos que entón.';
+    const g = gana.length ? (gana.length > 1 ? 'os que máis escanos gañan: ' : 'o que máis escanos gaña: ') + this.lista(gana) + ' (+' + mas + ')' : '';
+    const p = pierde.length ? (pierde.length > 1 ? 'os que máis ' : 'o que máis ') + (g ? '' : 'escanos ') + (pierde.length > 1 ? 'perden: ' : 'perde: ') + this.lista(pierde) + ' (−' + menos + ')' : '';
+    return 'Fronte ás xerais de 2023, ' + [g, p].filter(Boolean).join('; ') + '.' + (todos && !p ? ' Ningún perde escanos.' : todos && !g ? ' Ningún gaña escanos.' : '');
+  },
+  tabla2023: 'Escanos de cada partido en 2023 e o 29N',
+  th2023: '2023',
+  th29N: '29N',
+  thDif: 'Diferenza',
+  nuevo: 'novo',
+  sinCifra: { nuevo: 'non se presentou en 2023', falta: 'sen equivalente en 2023', solo2023: 'sen equivalente o 29N', dentro: ref => 'en 2023, dentro de ' + ref },
+  notas2023: {
+    faSumar: 'O Frente Amplio compárase con Sumar, que en 2023 incluía a Podemos.',
+    faNuevo: 'O Frente Amplio non se presentou en 2023.',
+    sumar: 'En 2023, Sumar incluía a Podemos.',
+    podemos: 'Podemos foi en 2023 dentro de Sumar: non ten cifra propia coa que comparalo.',
+    aa: 'En 2023, Adelante Andalucía só se presentou en Cádiz, e non sacou escano.',
+    salf: 'SALF non se presentou en 2023.' },
+  fuente2023: 'Escanos de 2023: os proclamados pola <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-18907">Xunta Electoral Central</a>.',
+  frase2023(i, { e, e23, cambios, iguales, sin, antes }) {
+    const d = e - e23, b = c => '<b>' + c.nombre + '</b>', o = [];
+    if (!cambios.length && !sin.length && !antes.length) return e === 1 ? En(i) + ', o escano é para o mesmo partido que en 2023.' : En(i) + ', os ' + e + ' escanos repártense igual que en 2023.';
+    if (d) o.push(En(i) + ' hai ' + escanos(e) + ', ' + (Math.abs(d) === 1 ? 'un' : Math.abs(d)) + (d > 0 ? ' máis' : ' menos') + ' que en 2023.');
+    const cm = this.lista(cambios.map(c => b(c) + ' ' + c.signo)), ig = iguales.length ? this.lista(iguales) + ', sen cambios' : '';
+    if (cm || ig) o.push((d ? 'Por partidos: ' : En(i) + ', fronte a 2023: ') + [cm, ig].filter(Boolean).join('; ') + '.');
+    if (sin.length) o.push('Non se poden comparar con 2023: ' + this.lista(sin.map(c => b(c) + ' (' + escanos(c.n) + ')')) + '.');
+    if (antes.length) o.push('Sen equivalente o 29N: ' + this.lista(antes.map(c => b(c) + ' (' + escanos(c.n) + ' en 2023)')) + '.');
+    return o.join(' ');
+  },
   repartia: (i, n) => suxeito(i, true) + ' ' + verbo(i, 'repartía', 'repartían') + ' ' + escanos(n) + '.',
   ultimo: (ganador, rival, votos) => 'O último escano foi para ' + oP(ganador) + '. ' + mai(aoP(rival)) + (Math.round(votos) === 1 ? ' faltoulle ' : ' faltáronlle ') + nvotos(votos) + ' para quitarllo.',
   provisionalUltimo: ' É o reconto provisional: o voto chegado do estranxeiro, que se suma o 4 de decembro, pode cambialo.',

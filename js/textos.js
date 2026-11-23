@@ -172,6 +172,45 @@ export const ES = {
   thEscanos: 'Escaños',
   thPorEscano: 'Votos por escaño',
   fuenteRes: (prueba, etiqueta, fuente) => (prueba ? 'Datos de prueba: ' + etiqueta : may(etiqueta)) + '. Fuente: ' + fuente + '. Los escaños se calculan aquí con los votos de cada provincia; los oficiales los proclaman las juntas electorales.',
+  /* paso 9: frente a 2023. Qué partido se compara con cuál está en js/equivalencias.js. */
+  lista: xs => xs.length < 2 ? xs.join('') : xs.slice(0, -1).join(', ') + ' y ' + xs[xs.length - 1],
+  // gana, pierde: los partidos que más escaños ganan y más pierden (varios si empatan, ninguno si nadie gana o pierde);
+  // mas, menos: cuántos; todos: si todos los partidos tienen cifra de 2023 con la que compararse
+  frente2023(gana, mas, pierde, menos, todos) {
+    if (!gana.length && !pierde.length) return todos ? 'Cada partido tiene los mismos escaños que en las generales de 2023.' : 'Los partidos que se pueden comparar con 2023 tienen los mismos escaños que entonces.';
+    const g = gana.length ? (gana.length > 1 ? 'los que más escaños ganan: ' : 'el que más escaños gana: ') + this.lista(gana) + ' (+' + mas + ')' : '';
+    const p = pierde.length ? (pierde.length > 1 ? 'los que más ' : 'el que más ') + (g ? '' : 'escaños ') + (pierde.length > 1 ? 'pierden: ' : 'pierde: ') + this.lista(pierde) + ' (−' + menos + ')' : '';
+    return 'Frente a las generales de 2023, ' + [g, p].filter(Boolean).join('; ') + '.' + (todos && !p ? ' Ninguno pierde escaños.' : todos && !g ? ' Ninguno gana escaños.' : '');
+  },
+  tabla2023: 'Escaños de cada partido en 2023 y el 29N',
+  th2023: '2023',
+  th29N: '29N',
+  thDif: 'Diferencia',
+  nuevo: 'nuevo',   // en la columna de la diferencia, el partido que no se presentó en 2023
+  // por qué un partido sale sin cifra (los tipos de js/equivalencias.js); ref: la candidatura de 2023 dentro de la que iba
+  sinCifra: { nuevo: 'no se presentó en 2023', falta: 'sin equivalente en 2023', solo2023: 'sin equivalente el 29N', dentro: ref => 'en 2023, dentro de ' + ref },
+  // las notas de js/equivalencias.js, que salen con un asterisco
+  notas2023: {
+    faSumar: 'El Frente Amplio se compara con Sumar, que en 2023 incluía a Podemos.',
+    faNuevo: 'El Frente Amplio no se presentó en 2023.',
+    sumar: 'En 2023, Sumar incluía a Podemos.',
+    podemos: 'Podemos fue en 2023 dentro de Sumar: no tiene cifra propia con la que comparar.',
+    aa: 'En 2023, Adelante Andalucía solo se presentó en Cádiz, y no sacó escaño.',
+    salf: 'SALF no se presentó en 2023.' },
+  fuente2023: 'Escaños de 2023: los proclamados por la <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-18907">Junta Electoral Central</a>.',
+  // La frase de «Tu voto» del paso 9. e, e23: escaños que reparte la provincia ahora y en 2023; cambios: [{ nombre, signo }],
+  // los partidos con más o menos escaños («+2», «−1»); iguales: [nombre], los que tienen los mismos; sin: [{ nombre, n }], los
+  // que tienen escaños y no tienen cifra de 2023; antes: [{ nombre, n }], los de 2023 sin equivalente, con sus escaños de entonces
+  frase2023(i, { e, e23, cambios, iguales, sin, antes }) {
+    const nom = prov(i), d = e - e23, b = c => '<b>' + c.nombre + '</b>', o = [];
+    if (!cambios.length && !sin.length && !antes.length) return e === 1 ? 'En ' + nom + ', el escaño es para el mismo partido que en 2023.' : 'En ' + nom + ', los ' + e + ' escaños se reparten igual que en 2023.';
+    if (d) o.push('En ' + nom + ' hay ' + escanos(e) + ', ' + (Math.abs(d) === 1 ? 'uno' : Math.abs(d)) + (d > 0 ? ' más' : ' menos') + ' que en 2023.');
+    const cm = this.lista(cambios.map(c => b(c) + ' ' + c.signo)), ig = iguales.length ? this.lista(iguales) + ', sin cambios' : '';
+    if (cm || ig) o.push((d ? 'Por partidos: ' : 'En ' + nom + ', frente a 2023: ') + [cm, ig].filter(Boolean).join('; ') + '.');
+    if (sin.length) o.push('No se pueden comparar con 2023: ' + this.lista(sin.map(c => b(c) + ' (' + escanos(c.n) + ')')) + '.');
+    if (antes.length) o.push('Sin equivalente el 29N: ' + this.lista(antes.map(c => b(c) + ' (' + escanos(c.n) + ' en 2023)')) + '.');
+    return o.join(' ');
+  },
   repartia: (i, n) => prov(i) + ' repartía ' + escanos(n) + '.',
   ultimo: (ganador, rival, votos) => 'El último escaño fue para ' + elP(ganador) + '. ' + may(alP(rival)) + (votos === 1 ? ' le faltó 1 voto' : ' le faltaron ' + miles(votos) + ' votos') + ' para quitárselo.',
   // tras ultimo, mientras los resultados sean provisionales

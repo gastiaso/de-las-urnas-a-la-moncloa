@@ -259,6 +259,38 @@ export const textos = {
   thEscanos: 'Escons',
   thPorEscano: 'Vots per escó',
   fuenteRes: (prueba, etiqueta, fuente) => (prueba ? 'Dades de prova: ' + etiqueta : maj(etiqueta)) + '. Font: ' + fuente + '. Els escons es calculen ací amb els vots de cada província; els oficials els proclamen les juntes electorals.',
+  /* paso 9: frente a 2023 */
+  lista: xs => xs.length < 2 ? xs.join('') : xs.slice(0, -1).join(', ') + ' i ' + xs[xs.length - 1],
+  frente2023(gana, mas, pierde, menos, todos) {
+    if (!gana.length && !pierde.length) return todos ? 'Cada partit té els mateixos escons que en les generals de 2023.' : 'Els partits que es poden comparar amb 2023 tenen els mateixos escons que aleshores.';
+    const g = gana.length ? (gana.length > 1 ? 'els que guanyen més escons: ' : 'el que guanya més escons: ') + this.lista(gana) + ' (+' + mas + ')' : '';
+    const p = pierde.length ? (pierde.length > 1 ? (g ? 'els que en perden més: ' : 'els que perden més escons: ') : (g ? 'el que en perd més: ' : 'el que perd més escons: ')) + this.lista(pierde) + ' (−' + menos + ')' : '';
+    return 'Respecte a les generals de 2023, ' + [g, p].filter(Boolean).join('; ') + '.' + (todos && !p ? ' Cap partit en perd.' : todos && !g ? ' Cap partit en guanya.' : '');
+  },
+  tabla2023: 'Escons de cada partit en 2023 i el 29N',
+  th2023: '2023',
+  th29N: '29N',
+  thDif: 'Diferència',
+  nuevo: 'nou',
+  sinCifra: { nuevo: 'no es va presentar en 2023', falta: 'sense equivalent en 2023', solo2023: 'sense equivalent el 29N', dentro: ref => 'en 2023, dins ' + de(ref) },
+  notas2023: {
+    faSumar: 'El Frente Amplio es compara amb Sumar, que en 2023 incloïa Podemos.',
+    faNuevo: 'El Frente Amplio no es va presentar en 2023.',
+    sumar: 'En 2023, Sumar incloïa Podemos.',
+    podemos: 'Podemos es va presentar en 2023 dins de Sumar: no té xifra pròpia amb què comparar-lo.',
+    aa: 'En 2023, Adelante Andalucía només es va presentar a Cadis, i no va traure escó.',
+    salf: 'SALF no es va presentar en 2023.' },
+  fuente2023: 'Escons de 2023: els proclamats per la <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-18907">Junta Electoral Central</a>.',
+  frase2023(i, { e, e23, cambios, iguales, sin, antes }) {
+    const d = e - e23, A = maj(aProv(i)), b = c => '<b>' + c.nombre + '</b>', o = [];
+    if (!cambios.length && !sin.length && !antes.length) return e === 1 ? A + ", l'escó és per al mateix partit que en 2023." : A + ', els ' + e + ' escons es repartixen igual que en 2023.';
+    if (d) o.push(A + ' hi ha ' + escons(e) + ', ' + (Math.abs(d) === 1 ? 'un' : Math.abs(d)) + (d > 0 ? ' més' : ' menys') + ' que en 2023.');
+    const cm = this.lista(cambios.map(c => b(c) + ' ' + c.signo)), ig = iguales.length ? this.lista(iguales) + ', sense canvis' : '';
+    if (cm || ig) o.push((d ? 'Per partits: ' : A + ', respecte a 2023: ') + [cm, ig].filter(Boolean).join('; ') + '.');
+    if (sin.length) o.push('No es poden comparar amb 2023: ' + this.lista(sin.map(c => b(c) + ' (' + escons(c.n) + ')')) + '.');
+    if (antes.length) o.push('Sense equivalent el 29N: ' + this.lista(antes.map(c => b(c) + ' (' + escons(c.n) + ' en 2023)')) + '.');
+    return o.join(' ');
+  },
   repartia: (i, n) => Prov(i) + verb(i, ' repartia ', ' repartien ') + escons(n) + '.',
   ultimo: (ganador, rival, votos) => "L'últim escó va ser " + perA(elP(ganador)) + '. ' + maj(a(elP(rival))) + (votos === 1 ? ' li va faltar 1 vot' : ' li van faltar ' + miles(votos) + ' vots') + " per a llevar-li'l.",
   provisionalUltimo: " És el recompte provisional: el vot arribat de l'estranger, que se suma el 4 de desembre, el pot canviar.",

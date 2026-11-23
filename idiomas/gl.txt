@@ -955,6 +955,12 @@ gl: Ver só o texto
 es: 9 · Qué ha pasado
 gl: 9 · Que pasou
 
+es: Frente a 2023
+gl: Fronte a 2023
+
+es: <i class="lv"></i> 2023 <i class="le"></i> 29N
+gl: <i class="lv"></i> 2023 <i class="le"></i> 29N
+
 es: Cómo leer el mapa
 gl: Como ler o mapa
 
@@ -963,6 +969,21 @@ gl: Cada hexágono é un escano, coa cor do partido ao que lle corresponde segun
 
 es: Explicación propia.
 gl: Explicación propia.
+
+es: Cómo se compara con 2023
+gl: Como se compara con 2023
+
+es: Entre unas elecciones y otras, los partidos cambian de nombre y de socios. Cada uno se compara con su candidatura de 2023. Si no la tenía, porque no se presentó o iba dentro de otra, sale sin cifra. Los casos dudosos llevan una nota.
+gl: Dunhas eleccións a outras, os partidos cambian de nome e de socios. Cada un compárase coa súa candidatura de 2023. Se non a tiña, porque non se presentou ou ía dentro doutra, sae sen cifra. Os casos dubidosos levan unha nota.
+
+es: Dos provincias reparten distinto que en 2023: Cádiz pasa de 9 escaños a 8 y Madrid, de 37 a 38. El reparto entre provincias se ajusta a la población de cada una.
+gl: Dúas provincias reparten distinto que en 2023: Cádiz pasa de 9 escanos a 8 e Madrid, de 37 a 38. O reparto entre provincias axústase á poboación de cada unha.
+
+es: Los escaños de 2023 son los definitivos. Los del 29N no lo son hasta el escrutinio general, que suma el voto llegado del extranjero.
+gl: Os escanos de 2023 son os definitivos. Os do 29N non o son ata o escrutinio xeral, que suma o voto chegado do estranxeiro.
+
+es: Fuentes: Junta Electoral Central, resultados de las elecciones del 23 de julio de 2023 ([BOE del 1 de septiembre de 2023](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-18907)); Real Decreto 806/2026, anexo; LOREG, arts. 75, 103 y 162.
+gl: Fontes: Xunta Electoral Central, resultados das eleccións do 23 de xullo de 2023 ([BOE do 1 de setembro de 2023](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-18907)); Real decreto 806/2026, anexo; LOREG, arts. 75, 103 e 162.
 
 es: Provisional y oficial
 gl: Provisional e oficial

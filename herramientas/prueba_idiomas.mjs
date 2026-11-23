@@ -69,6 +69,15 @@ function frases(t) {
   pon('segunda', t.segunda(170, 160)); pon('segunda', t.segunda(120, 220));
   pon('anuncioPacto', t.anuncioPacto(170, 20, 160, t.primera(170), t.segunda(170, 160)));
   pon('calcNota', t.calcNota(t.fecha('23 de julio de 2023')));
+  // paso 9, frente a 2023 (ver js/equivalencias.js)
+  for (const x of [[['PP'], 18, ['Vox'], 13, true], [['PP', 'PSOE'], 3, [], 0, true], [[], 0, ['UPN'], 1, false], [[], 0, [], 0, true], [[], 0, [], 0, false]]) pon('frente2023', t.frente2023(...x));
+  pon('lista', [[], ['PP'], ['PP', 'Vox'], ['PP', 'PSOE', 'Vox']].map(t.lista).join(' | '));
+  pon('sinCifra', [t.sinCifra.nuevo, t.sinCifra.falta, t.sinCifra.solo2023, t.sinCifra.dentro('Sumar')].join(' | '));
+  const sin = [{ nombre: 'Frente Amplio', n: 4 }, { nombre: 'SALF', n: 2 }, { nombre: 'Podemos', n: 1 }], antes = [{ nombre: 'Sumar', n: 6 }];
+  for (const [i, e, e23, cambios, iguales, s, a] of [[29, 38, 37, [{ nombre: 'PP', signo: '+1' }, { nombre: 'Vox', signo: '−1' }], ['PSOE'], sin, antes], [12, 8, 9, [{ nombre: 'PSOE', signo: '−1' }], ['PP', 'Vox'], [], [{ nombre: 'Sumar', n: 1 }]],
+    [46, 16, 16, [], ['PP', 'PSOE', 'Vox'], [{ nombre: 'Frente Amplio', n: 3 }], [{ nombre: 'Sumar', n: 3 }]], [7, 8, 8, [{ nombre: 'PP', signo: '+2' }], [], [], []], [17, 8, 8, [], [], [], []], [50, 1, 1, [], [], [], []],
+    [50, 1, 1, [{ nombre: 'PP', signo: '−1' }, { nombre: 'PSOE', signo: '+1' }], [], [], []], [35, 8, 8, [], ['PSOE'], [], [{ nombre: 'Sumar', n: 1 }, { nombre: 'Nueva Canarias', n: 1 }]]])
+    pon('frase2023', t.frase2023(i, { e, e23, cambios, iguales, sin: s, antes: a }));
   pon('avisoPrueba', t.avisoPrueba(t.dato('resultados del 23 de julio de 2023')));
   pon('masEscanos', t.masEscanos('PP', 137, t.pct(0.3306), false)); pon('masEscanos (absoluta)', t.masEscanos('PP', 180, t.pct(0.41), true)); pon('participacion', t.participacion(t.pct(0.664)));
   pon('fuenteRes', t.fuenteRes(true, t.dato('resultados del 23 de julio de 2023'), t.dato('Ministerio del Interior, escrutinio del 23J (datos reunidos en Porra Electoral)')));

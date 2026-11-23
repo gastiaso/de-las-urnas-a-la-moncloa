@@ -955,6 +955,12 @@ va: Veure només el text
 es: 9 · Qué ha pasado
 va: 9 · Què ha passat
 
+es: Frente a 2023
+va: Respecte a 2023
+
+es: <i class="lv"></i> 2023 <i class="le"></i> 29N
+va: <i class="lv"></i> 2023 <i class="le"></i> 29N
+
 es: Cómo leer el mapa
 va: Com llegir el mapa
 
@@ -963,6 +969,21 @@ va: Cada hexàgon és un escó, amb el color del partit a qui correspon segons e
 
 es: Explicación propia.
 va: Explicació pròpia.
+
+es: Cómo se compara con 2023
+va: Com es compara amb 2023
+
+es: Entre unas elecciones y otras, los partidos cambian de nombre y de socios. Cada uno se compara con su candidatura de 2023. Si no la tenía, porque no se presentó o iba dentro de otra, sale sin cifra. Los casos dudosos llevan una nota.
+va: D'unes eleccions a unes altres, els partits canvien de nom i de socis. Cadascun es compara amb la seua candidatura de 2023. Si no en tenia, perquè no s'hi va presentar o anava dins d'una altra, ix sense xifra. Els casos dubtosos porten una nota.
+
+es: Dos provincias reparten distinto que en 2023: Cádiz pasa de 9 escaños a 8 y Madrid, de 37 a 38. El reparto entre provincias se ajusta a la población de cada una.
+va: Dos províncies repartixen diferent que en 2023: Cadis passa de 9 escons a 8 i Madrid, de 37 a 38. El repartiment entre províncies s'ajusta a la població de cadascuna.
+
+es: Los escaños de 2023 son los definitivos. Los del 29N no lo son hasta el escrutinio general, que suma el voto llegado del extranjero.
+va: Els escons de 2023 són els definitius. Els del 29N no ho són fins a l'escrutini general, que hi suma el vot arribat de l'estranger.
+
+es: Fuentes: Junta Electoral Central, resultados de las elecciones del 23 de julio de 2023 ([BOE del 1 de septiembre de 2023](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-18907)); Real Decreto 806/2026, anexo; LOREG, arts. 75, 103 y 162.
+va: Fonts: Junta Electoral Central, resultats de les eleccions del 23 de juliol de 2023 ([BOE de l'1 de setembre de 2023](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-18907)); Reial decret 806/2026, annex; LOREG, arts. 75, 103 i 162.
 
 es: Provisional y oficial
 va: Provisional i oficial
