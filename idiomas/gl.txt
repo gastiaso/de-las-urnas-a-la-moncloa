@@ -194,8 +194,11 @@ gl: A regra D'Hondt úsase desde 1977. Fixouna o real decreto lei de normas elec
 es: Aquel decreto la presentaba como un freno a que el Congreso quedara demasiado fragmentado. Y el reparto de entonces era otro: Madrid elegía 32 diputados, Barcelona 33 y Soria 3.
 gl: Aquel decreto presentábaa como un freo a que o Congreso quedase demasiado fragmentado. E o reparto daquela era outro: Madrid elixía 32 deputados, Barcelona 33 e Soria 3.
 
-es: Fuente: Real Decreto-ley 20/1977, de 18 de marzo, sobre Normas Electorales: preámbulo y arts. 19 y 20.
-gl: Fonte: Real decreto lei 20/1977, do 18 de marzo, sobre normas electorais: preámbulo e arts. 19 e 20.
+es: La regla lleva el nombre de Victor D'Hondt (1841-1901), profesor de Derecho civil en la Universidad de Gante. La propuso en un libro de 1882. Bélgica la adoptó en 1899 y la estrenó en las elecciones de 1900.
+gl: A regra leva o nome de Victor D'Hondt (1841-1901), profesor de dereito civil na Universidade de Gante. Propúxoa nun libro de 1882. Bélxica adoptouna en 1899 e estreouna nas eleccións de 1900.
+
+es: Fuentes: Real Decreto-ley 20/1977, de 18 de marzo, sobre Normas Electorales: preámbulo y arts. 19 y 20; V. D'Hondt, <i>Système pratique et raisonné de représentation proportionnelle</i> (1882); G. Beatse, en <i>Liber memorialis</i> de la Universidad de Gante, t. I (1913), pp. 428-429; F. Dhondt, <i>Seqüência</i>, n.º 86 (2020).
+gl: Fontes: Real decreto lei 20/1977, do 18 de marzo, sobre normas electorais: preámbulo e arts. 19 e 20; V. D'Hondt, <i>Système pratique et raisonné de représentation proportionnelle</i> (1882); G. Beatse, en <i>Liber memorialis</i> da Universidade de Gante, t. I (1913), pp. 428-429; F. Dhondt, <i>Seqüência</i>, n.º 86 (2020).
 
 es: La barrera del 3 %
 gl: A barreira do 3 %

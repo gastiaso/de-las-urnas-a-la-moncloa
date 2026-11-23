@@ -194,8 +194,11 @@ eu: D'Hondt legea 1977tik erabiltzen da. Urte hartako martxoko hauteskunde-araue
 es: Aquel decreto la presentaba como un freno a que el Congreso quedara demasiado fragmentado. Y el reparto de entonces era otro: Madrid elegía 32 diputados, Barcelona 33 y Soria 3.
 eu: Dekretu hark Kongresua gehiegi zatituta ez geratzeko balazta gisa aurkezten zuen. Eta orduko banaketa bestelakoa zen: Madrilek 32 diputatu aukeratzen zituen; Bartzelonak, 33, eta Soriak, 3.
 
-es: Fuente: Real Decreto-ley 20/1977, de 18 de marzo, sobre Normas Electorales: preámbulo y arts. 19 y 20.
-eu: Iturria: 20/1977 Errege Lege Dekretua, martxoaren 18koa, Hauteskunde Arauei buruzkoa: hitzaurrea eta 19. eta 20. art.
+es: La regla lleva el nombre de Victor D'Hondt (1841-1901), profesor de Derecho civil en la Universidad de Gante. La propuso en un libro de 1882. Bélgica la adoptó en 1899 y la estrenó en las elecciones de 1900.
+eu: Legeak Victor D'Hondten (1841-1901) izena darama; Genteko Unibertsitateko Zuzenbide Zibileko irakaslea zen. 1882ko liburu batean proposatu zuen. Belgikak 1899an hartu zuen, eta 1900eko hauteskundeetan erabili zuen lehen aldiz.
+
+es: Fuentes: Real Decreto-ley 20/1977, de 18 de marzo, sobre Normas Electorales: preámbulo y arts. 19 y 20; V. D'Hondt, <i>Système pratique et raisonné de représentation proportionnelle</i> (1882); G. Beatse, en <i>Liber memorialis</i> de la Universidad de Gante, t. I (1913), pp. 428-429; F. Dhondt, <i>Seqüência</i>, n.º 86 (2020).
+eu: Iturriak: 20/1977 Errege Lege Dekretua, martxoaren 18koa, Hauteskunde Arauei buruzkoa: hitzaurrea eta 19. eta 20. art.; V. D'Hondt, <i>Système pratique et raisonné de représentation proportionnelle</i> (1882); G. Beatse, Genteko Unibertsitateko <i>Liber memorialis</i>, I. liburukia (1913), 428-429 or.; F. Dhondt, <i>Seqüência</i>, 86. zk. (2020).
 
 es: La barrera del 3 %
 eu: % 3ko langa

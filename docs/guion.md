@@ -96,8 +96,9 @@ _Fuente: LOREG, art. 163. En la tabla, los porcentajes inventados hacen de votos
 
 La regla D'Hondt se usa desde 1977. La fijó el real decreto-ley de normas electorales de marzo de aquel año, que reguló las primeras elecciones tras la Ley para la Reforma Política (la que abrió paso a las primeras elecciones democráticas), ya con 350 diputados. Ya la llamaba «regla d'Hondt», ya ponía la barrera en el 3 % y ya traía el mismo ejemplo de 480.000 votos que trae hoy la ley.
 Aquel decreto la presentaba como un freno a que el Congreso quedara demasiado fragmentado. Y el reparto de entonces era otro: Madrid elegía 32 diputados, Barcelona 33 y Soria 3.
+La regla lleva el nombre de Victor D'Hondt (1841-1901), profesor de Derecho civil en la Universidad de Gante. La propuso en un libro de 1882. Bélgica la adoptó en 1899 y la estrenó en las elecciones de 1900.
 
-_Fuente: Real Decreto-ley 20/1977, de 18 de marzo, sobre Normas Electorales: preámbulo y arts. 19 y 20._
+_Fuentes: Real Decreto-ley 20/1977, de 18 de marzo, sobre Normas Electorales: preámbulo y arts. 19 y 20; V. D'Hondt, Système pratique et raisonné de représentation proportionnelle (1882); G. Beatse, en Liber memorialis de la Universidad de Gante, t. I (1913), pp. 428-429; F. Dhondt, Seqüência, n.º 86 (2020)._
 
 **Saber más: La barrera del 3 %**
 
@@ -593,5 +594,5 @@ El último paso. El recorrido termina cuando el Congreso elige presidente y el n
 
 # Recuento
 
-- Cajones «saber más»: 60 (3678 palabras).
+- Cajones «saber más»: 60 (3716 palabras).
 - Términos de glosario: 30.

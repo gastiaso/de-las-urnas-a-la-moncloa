@@ -194,8 +194,11 @@ ca: La regla D'Hondt es fa servir des del 1977. La va fixar el reial decret llei
 es: Aquel decreto la presentaba como un freno a que el Congreso quedara demasiado fragmentado. Y el reparto de entonces era otro: Madrid elegía 32 diputados, Barcelona 33 y Soria 3.
 ca: Aquell decret la presentava com un fre perquè el Congrés no quedés massa fragmentat. I el repartiment d'aleshores era un altre: Madrid escollia 32 diputats, Barcelona 33 i Sòria 3.
 
-es: Fuente: Real Decreto-ley 20/1977, de 18 de marzo, sobre Normas Electorales: preámbulo y arts. 19 y 20.
-ca: Font: Reial decret llei 20/1977, de 18 de març, sobre normes electorals: preàmbul i arts. 19 i 20.
+es: La regla lleva el nombre de Victor D'Hondt (1841-1901), profesor de Derecho civil en la Universidad de Gante. La propuso en un libro de 1882. Bélgica la adoptó en 1899 y la estrenó en las elecciones de 1900.
+ca: La regla porta el nom de Victor D'Hondt (1841-1901), professor de dret civil a la Universitat de Gant. La va proposar en un llibre del 1882. Bèlgica la va adoptar el 1899 i la va estrenar a les eleccions del 1900.
+
+es: Fuentes: Real Decreto-ley 20/1977, de 18 de marzo, sobre Normas Electorales: preámbulo y arts. 19 y 20; V. D'Hondt, <i>Système pratique et raisonné de représentation proportionnelle</i> (1882); G. Beatse, en <i>Liber memorialis</i> de la Universidad de Gante, t. I (1913), pp. 428-429; F. Dhondt, <i>Seqüência</i>, n.º 86 (2020).
+ca: Fonts: Reial decret llei 20/1977, de 18 de març, sobre normes electorals: preàmbul i arts. 19 i 20; V. D'Hondt, <i>Système pratique et raisonné de représentation proportionnelle</i> (1882); G. Beatse, a <i>Liber memorialis</i> de la Universitat de Gant, vol. I (1913), pp. 428-429; F. Dhondt, <i>Seqüência</i>, núm. 86 (2020).
 
 es: La barrera del 3 %
 ca: La barrera del 3 %
