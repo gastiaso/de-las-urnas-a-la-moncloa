@@ -248,8 +248,8 @@ export const textos = {
   nuevo: 'new',
   sinCifra: { nuevo: 'did not stand in 2023', falta: 'no equivalent in 2023', solo2023: 'no equivalent on 29 November', dentro: ref => 'in 2023, part of ' + ref },
   notas2023: {
-    faSumar: 'Frente Amplio is compared with Sumar, which in 2023 included Podemos.',
-    faNuevo: 'Frente Amplio did not stand in 2023.',
+    faSumar: 'The Frente Amplio is compared with Sumar, which in 2023 included Podemos.',
+    faNuevo: 'The Frente Amplio did not stand in 2023.',
     sumar: 'In 2023, Sumar included Podemos.',
     podemos: 'In 2023, Podemos stood as part of Sumar: it has no figure of its own to compare with.',
     aa: 'In 2023, Adelante Andalucía stood only in Cádiz, and won no seat.',
