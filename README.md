@@ -143,7 +143,7 @@ Las calculadoras de pactos se pueden compartir: la combinación va en la direcci
 | `js/referencia_2023.js` y `js/equivalencias.js` | Escaños del 23J por provincia (generados con `herramientas/referencia_2023.py`) y con qué partido de 2023 se compara cada uno en el paso 9 |
 | `herramientas/` | Generadores del mapa, de los resultados y del guion; conversor y cotejo de resultados |
 | `fuentes/` | Courier Prime y Libre Franklin en woff2, con su licencia |
-| `img/` | Imagen para compartir (1200 × 630), favicon e icono |
+| `img/` | Imagen para compartir (1200 × 630; se regenera con `node herramientas/compartir.mjs`), favicon e icono |
 | `datos/prueba_23J.csv` | Votos del 23J por circunscripción, para probar la fase 2 |
 | `datos/escanos_oficiales_23J.csv` | Escaños oficiales del 23J por circunscripción, para probar el cotejo |
 | `datos/siglas.csv` y `datos/siglas_23J.csv` | De las siglas del Ministerio a los partidos de la web (la segunda, solo para el 23J) |
