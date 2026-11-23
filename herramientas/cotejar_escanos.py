@@ -9,12 +9,17 @@ interior_a_csv.py con --oficiales; los partidos con los mismos id que la web; lo
 Filas con provincia «Total» (o «España») dan el total nacional oficial de cada partido, que también se coteja:
 es lo más rápido de copiar a mano la noche electoral (datos/plantilla_oficiales.csv).
 
+Al final lista los «últimos escaños» más ajustados: por defecto, por los votos que le faltaron al rival sobre los
+válidos de la provincia; con --en-bruto, por los votos que le faltaron, sin más. El escaño más ajustado de España se
+elige en bruto: el primero de esa lista.
+
 Sale con código 0 si todo coincide, 1 si hay alguna diferencia (o faltan provincias, salvo con --parcial)
 y 2 si los archivos no se pueden leer.
 
 Uso (desde la carpeta del repositorio):
   py herramientas/cotejar_escanos.py js/resultados.js datos/escanos_oficiales_29N.csv
   py herramientas/cotejar_escanos.py datos/simulacro_23J.csv datos/escanos_oficiales_23J.csv
+  py herramientas/cotejar_escanos.py js/resultados.js datos/escanos_oficiales_29N.csv --en-bruto --ajustados 5
 """
 import argparse, collections, csv, json, re, sys
 from escrutinio import NOMBRES, faltan_para_ultimo, leer_texto, provincia, reparto, sin_acentos
@@ -74,6 +79,7 @@ def main():
     a.add_argument('--escanos', default='escanos', help='columna de escaños del CSV (escanos_2023 para el 23J)')
     a.add_argument('--parcial', action='store_true', help='no dar por fallo las provincias sin escaños oficiales')
     a.add_argument('--ajustados', type=int, default=8, help='cuántos «últimos escaños» más ajustados listar (0: ninguno)')
+    a.add_argument('--en-bruto', action='store_true', help='ordenar los más ajustados por votos que faltaron, no por su %% sobre los válidos')
     o = a.parse_args()
 
     try:
@@ -128,8 +134,9 @@ def main():
         print('\nTotal nacional oficial: %s.' % ', '.join('%s %d' % x for x in nac.most_common()))
         print('TOTAL NACIONAL: ' + ('DIFERENCIAS (calculado - oficial): ' + ', '.join(dif_nac) if dif_nac else 'coincide.'))
     if o.ajustados and ajust:
-        print('\nÚltimos escaños más ajustados (votos que le faltaron al rival, sobre los válidos de la provincia):')
-        for pct, n, ult, riv, falt in sorted(ajust)[:o.ajustados]:
+        print('\nÚltimos escaños más ajustados (votos que le faltaron al rival, %s):'
+              % ('en bruto' if o.en_bruto else 'sobre los válidos de la provincia'))
+        for pct, n, ult, riv, falt in sorted(ajust, key=lambda x: (x[4], x[0]) if o.en_bruto else x)[:o.ajustados]:
             print('  %-24s %-6s se lo lleva; a %-6s le faltaron %7d votos (%.2f %%)' % (n, ult, riv, falt, 100 * pct))
     fallo = bool(difs) or bool(dif_nac) or (bool(sin_oficial) and not o.parcial) or bool(extra)
     print('\nRESULTADO: ' + ('HAY DIFERENCIAS O FALTAN DATOS' if fallo else 'TODO COINCIDE'))
