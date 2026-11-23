@@ -244,7 +244,10 @@ def leer_carpeta(carpeta, campo, eleccion):
         if not f.is_file(): continue
         try:
             b = f.read_bytes()
-            d = json.loads((gzip.decompress(b) if b[:2] == b'\x1f\x8b' else b).decode('utf-8-sig'))
+            if b[:2] == b'\x1f\x8b': b = gzip.decompress(b)
+            try: texto = b.decode('utf-8-sig')
+            except UnicodeDecodeError: texto = b.decode('cp1252')   # pegado y guardado en ANSI con el Bloc de notas
+            d = json.loads(texto)
         except (ValueError, UnicodeDecodeError, OSError, EOFError):
             ignorados += 1; continue
         nac, usados = clasificar(d, f.name, campo, eleccion, provs, nac)
