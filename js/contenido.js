@@ -330,7 +330,9 @@ if (FASE2) {
   const corto = q => q.nombre.replace('Coalición Canaria', 'CC').replace('Adelante Andalucía', 'AA').replace('Frente Amplio', 'FA').replace('EH Bildu', 'Bildu');
   pintaPact2 = calculadora($('#calc12'), R.partidos.filter(q => q.esc > 0).map(q => [corto(q), q.nombre, q.esc, q.color]), st.pact2, (e, p) => G.setPact2(e, p), 'p12');
   /* 13 */
-  const hoy = new Date().toISOString().slice(0, 10), sig = RES.hitos.find(h => !h.f || h.f > hoy);
+  // la fecha de hoy en la hora del lector (toISOString daría la de Greenwich: entre las 0:00 y la 1:00, la de ayer)
+  const ahora = new Date(), hoy = ahora.getFullYear() + '-' + String(ahora.getMonth() + 1).padStart(2, '0') + '-' + String(ahora.getDate()).padStart(2, '0');
+  const sig = RES.hitos.find(h => !h.f || h.f > hoy);
   $('#r13').textContent = sig ? T.loSiguiente(T.dato(sig.t)) : T.calendarioCompleto;
   $('#l13').innerHTML = RES.hitos.map(h => '<li class="' + (h.f && h.f <= hoy ? 'hecho' : h === sig ? 'clave' : '') + '"><b>' + T.dato(h.r) + '</b><span>' + T.dato(h.t) + '</span></li>').join('');
   R.hemi = []; R.partidos.forEach(q => { for (let i = 0; i < q.esc; i++) R.hemi.push(q.color); });
