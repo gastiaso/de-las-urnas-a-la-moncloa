@@ -120,6 +120,7 @@ export const textos = {
   pctEntero: n => n + ' %',
   provLista: i => LLISTA[i] || Prov(i),
   prov,
+  provMapa: i => LLISTA[i] || Prov(i),    // en el rótulo del mapa, como en los desplegables: «La Rioja», «Illes Balears»
   escanos: escons, sies: sis,
 
   /* textos que en castellano viven en js/datos.js */
