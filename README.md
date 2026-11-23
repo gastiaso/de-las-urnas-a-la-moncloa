@@ -133,7 +133,7 @@ Las calculadoras de pactos se pueden compartir: la combinación va en la direcci
 | `js/cartograma.js` y `js/resultados.js` | Posición de los hexágonos y resultados de la fase 2 (generados) |
 | `herramientas/` | Generadores del mapa, de los resultados y del guion |
 | `fuentes/` | Courier Prime y Libre Franklin en woff2, con su licencia |
-| `img/` | Imagen para compartir (1200 × 630), favicon e icono |
+| `img/` | Imagen para compartir (1200 × 630; se regenera con `node herramientas/compartir.mjs`), favicon e icono |
 | `datos/prueba_23J.csv` | Votos del 23J por circunscripción, para probar la fase 2 |
 | `docs/guion.md` | Todo el texto del sitio con la fuente de cada cajón (generado) |
 | `idiomas/` y `js/idiomas/` | Las traducciones: las frases de la página (`xx.txt`) y los textos del JavaScript (`xx.js`) de cada idioma |
