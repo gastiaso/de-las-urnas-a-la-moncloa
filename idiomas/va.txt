@@ -979,6 +979,12 @@ va: Respecte a 2023
 es: <i class="lv"></i> 2023 <i class="le"></i> 29N
 va: <i class="lv"></i> 2023 <i class="le"></i> 29N
 
+es: El Senado
+va: El Senat
+
+es: Faltan los [[designacion|senadores por designación]], que nombran los parlamentos autonómicos después de las elecciones. Hasta entonces no hay un total oficial de senadores por partido.
+va: Hi falten els [[designacion|senadors per designació]], que nomenen els parlaments autonòmics després de les eleccions. Fins llavors no hi ha un total oficial de senadors per partit.
+
 es: Cómo leer el mapa
 va: Com llegir el mapa
 
@@ -1023,6 +1029,18 @@ va: Què són els vots vàlids
 
 es: Los porcentajes se calculan sobre los votos válidos: los que van a un partido más los votos en blanco. Los nulos quedan fuera.
 va: Els percentatges es calculen sobre els vots vàlids: els que van a un partit més els vots en blanc. Els nuls queden fora.
+
+es: Cómo salen los senadores
+va: Com ixen els senadors
+
+es: En el Senado no hay listas ni regla D'Hondt: salen las personas más votadas de cada provincia o isla, hasta cubrir los puestos que le tocan.
+va: En el Senat no hi ha llistes ni regla D'Hondt: ixen les persones més votades de cada província o illa, fins a cobrir els llocs que li toquen.
+
+es: Aquí se suman por partido. Las candidaturas que solo se presentan en una isla o una provincia salen con su propio nombre.
+va: Ací se sumen per partit. Les candidatures que només es presenten en una illa o una província ixen amb el seu propi nom.
+
+es: Fuentes: LOREG, art. 166; Real Decreto 806/2026, art. 3. La suma por partido es propia.
+va: Fonts: LOREG, art. 166; Reial decret 806/2026, art. 3. La suma per partit és pròpia.
 
 # ───── 10 · En tu provincia ─────
 

@@ -50,6 +50,7 @@ const DADES = {
   'Ministerio del Interior, escrutinio provisional': "Ministeri de l'Interior, escrutini provisional",
   'escrutinio general del 4 de diciembre de 2026': 'escrutini general del 4 de desembre de 2026',
   'Ministerio del Interior, escrutinio general': "Ministeri de l'Interior, escrutini general",
+  'Junta Electoral Central, senadores proclamados el 23J (BOE del 1 de septiembre de 2023)': "Junta Electoral Central, senadors proclamats el 23J (BOE de l'1 de setembre de 2023)",
   '29 nov': '29 nov.', '4 dic': '4 des.', '23 dic': '23 des.',
   'Sin fecha': 'Sense data',
   '1.ª votación': '1a votació',
@@ -270,6 +271,11 @@ export const textos = {
   thEscanos: 'Escons',
   thPorEscano: 'Vots per escó',
   fuenteRes: (prueba, etiqueta, fuente) => (prueba ? 'Dades de prova: ' + etiqueta : maj(etiqueta)) + '. Font: ' + fuente + '. Els escons es calculen ací amb els vots de cada província; els oficials els proclamen les juntes electorals.',
+  thSenadores: 'Senadors',
+  senMas: (nombres, n, total) => nombres.length > 1
+    ? 'Els partits amb més senadors elegits en les urnes són ' + textos.lista(nombres.map(p => elP(p))) + ', amb ' + n + ' cadascun, ' + deN(total) + '.'
+    : maj(elP(nombres[0])) + ' és el partit amb més senadors elegits en les urnes: ' + n + ' ' + deN(total) + '.',
+  fuenteSen: (prueba, etiqueta, fuente) => (prueba ? 'Dades de prova: ' + etiqueta : maj(etiqueta)) + '. Font: ' + fuente + '. En cada província o illa ixen els candidats més votats; els proclamen les juntes electorals.',
   /* paso 9: frente a 2023 */
   lista: xs => xs.length < 2 ? xs.join('') : xs.slice(0, -1).join(', ') + ' i ' + xs[xs.length - 1],
   frente2023(gana, mas, pierde, menos, todos) {
@@ -306,6 +312,12 @@ export const textos = {
   ultimo: (ganador, rival, votos) => "L'últim escó va ser " + perA(elP(ganador)) + '. ' + maj(a(elP(rival))) + (votos === 1 ? ' li va faltar 1 vot' : ' li van faltar ' + miles(votos) + ' vots') + " per a llevar-li'l.",
   provisionalUltimo: " És el recompte provisional: el vot arribat de l'estranger, que se suma el 4 de desembre, el pot canviar.",
   unico: ganador => "L'escó va ser " + perA(elP(ganador)) + '.',
+  senProv(i, circs) {
+    const rep = ps => ps.length === 1 ? de(elP(ps[0][0])) : this.lista(ps.map(([p, n]) => n + ' ' + de(elP(p))));
+    if (!circs[0].isla) return 'En el Senat, els ' + circs[0].n + ' senadors ' + deProv(i) + ' són ' + rep(circs[0].partidos) + '.';
+    return 'En el Senat, ' + aProv(i) + ' cada illa elegix els seus. ' + circs.map(c => c.isla + ': ' + (c.partidos.length === 1 ? c.n + ' ' : '') + rep(c.partidos) + '.').join(' ');
+  },
+  isla: s => ({ Ibiza: 'Eivissa', 'Ibiza y Formentera': 'Eivissa i Formentera', 'Gran Canaria': 'Gran Canària' })[s] || s,
   provisional12: "Són els escons del recompte provisional. L'escrutini general del 4 de desembre suma el vot arribat de l'estranger i en pot moure algun.",
   votos: n => miles(n) + (Math.round(n) === 1 ? ' vot' : ' vots'),
   ysiIguales: 'Tria dos partits diferents.',

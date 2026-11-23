@@ -470,6 +470,10 @@ El calendario hasta la investidura, fecha a fecha.
 
 ## 9 · Qué ha pasado
 
+**Riel:**
+
+Faltan los senadores por designación, que nombran los parlamentos autonómicos después de las elecciones. Hasta entonces no hay un total oficial de senadores por partido.
+
 **Saber más: Cómo leer el mapa**
 
 Cada hexágono es un escaño, con el color del partido al que le corresponde según el recuento. Las provincias grandes ocupan más porque reparten más escaños, no porque tengan más territorio.
@@ -497,6 +501,13 @@ _Fuentes: LOREG, arts. 75, 98, 103, 108 y 112. 2023: cálculo propio con los res
 Los porcentajes se calculan sobre los votos válidos: los que van a un partido más los votos en blanco. Los nulos quedan fuera.
 
 _Fuentes: LOREG, arts. 96 y 108._
+
+**Saber más: Cómo salen los senadores**
+
+En el Senado no hay listas ni regla D'Hondt: salen las personas más votadas de cada provincia o isla, hasta cubrir los puestos que le tocan.
+Aquí se suman por partido. Las candidaturas que solo se presentan en una isla o una provincia salen con su propio nombre.
+
+_Fuentes: LOREG, art. 166; Real Decreto 806/2026, art. 3. La suma por partido es propia._
 
 ## 10 · En tu provincia
 
@@ -608,5 +619,5 @@ El último paso. El recorrido termina cuando el Congreso elige presidente y el n
 
 # Recuento
 
-- Cajones «saber más»: 61 (3975 palabras).
+- Cajones «saber más»: 62 (4023 palabras).
 - Términos de glosario: 30.

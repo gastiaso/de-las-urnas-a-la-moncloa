@@ -291,6 +291,12 @@ function pintaProvRes() {
     : (p.rep.ultimo ? T.unico(nom(p.rep.ultimo.id)) : '');
   // mientras sea provisional, el aviso de que puede cambiar va detrás, sin negrita
   if (PROVISIONAL && p.rep.rival) { const s = document.createElement('span'); s.style.fontWeight = 'normal'; s.textContent = T.provisionalUltimo; $('#u10').appendChild(s); }
+  // los senadores elegidos en la provincia (en Baleares y Canarias, isla por isla), si js/resultados.js los trae
+  if (RES.senado) {
+    const S = RES.senado, cs = S.circ.filter(c => c.p === st.prov);
+    $('#s10').hidden = !cs.length;
+    $('#s10').textContent = T.senProv(st.prov, cs.map(c => ({ isla: cs.length > 1 ? T.isla(c.c) : null, n: c.n, partidos: c.r.map(([k, n]) => [S.partidos[k].nombre, n]) })));
+  }
   G.setProvRes(p.rep.order.map(id => R.partidos.find(q => q.id === id).color), p.e);
   preparaYsi();
 }
@@ -359,6 +365,14 @@ if (FASE2) {
   $('#t9c').innerHTML = '<table><caption>' + T.tabla2023 + '</caption><tr><th>' + T.partido + '</th><th>' + T.th2023 + '</th><th>' + T.th29N + '</th><th>' + T.thDif + '</th></tr>'
     + nac.map(f => '<tr><td>' + f.nombre + '</td><td>' + (f.antes ?? raya) + '</td><td>' + (f.ahora ?? raya) + '</td><td>' + (f.dif === null ? nota(f) || sinCifra(f) : signo(f.dif) + (nota(f) ? '. ' + nota(f) : '')) + '</td></tr>').join('') + '</table>';
   $('#n9').innerHTML = [...nac.filter(nota).map(f => '* ' + nota(f)), ...nac.filter(f => f.dif === null && f.tipo !== 'nuevo' && !nota(f)).map(f => f.nombre + ': ' + sinCifra(f) + '.'), T.fuente2023].join(' ');
+  /* 9 · el Senado: los senadores elegidos en las urnas, si js/resultados.js los trae (herramientas/resultados.py --senado) */
+  if (RES.senado) {
+    const ps = [...RES.senado.partidos].sort((a, b) => b.n - a.n), tot = ps.reduce((a, q) => a + q.n, 0);
+    $('#sen9').hidden = false;
+    $('#r9s').textContent = T.senMas(ps.filter(q => q.n === ps[0].n).map(q => q.nombre), ps[0].n, tot) + (PROVISIONAL ? T.provisionalRes : '');
+    $('#t9s').innerHTML = '<table><tr><th>' + T.partido + '</th><th>' + T.thSenadores + '</th></tr>' + ps.map(q => '<tr><td>' + pt(q) + q.nombre + '</td><td>' + q.n + '</td></tr>').join('') + '</table>';
+    $('#f9s').textContent = T.fuenteSen(RES.prueba, etiqueta, T.dato(RES.senado.fuente));
+  }
   // La frase de «Tu voto» del paso 9 (T.frase2023): qué cambia en la provincia i frente a 2023.
   R.frente2023 = i => { const p = R.prov[i], r = escanos2023(PROV[i][0]); return resumen(compara(R.partidos, par, p.rep.seats, r.esc), p.e, r.e); };
   /* 11 */

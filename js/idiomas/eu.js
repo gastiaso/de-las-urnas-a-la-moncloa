@@ -85,6 +85,7 @@ const DATUAK = {
   'ministerio del Interior, escrutinio provisional': 'Barne Ministerioa, behin-behineko zenbaketa',
   'escrutinio general del 4 de diciembre de 2026': '2026ko abenduaren 4ko zenbaketa orokorra',
   'ministerio del Interior, escrutinio general': 'Barne Ministerioa, zenbaketa orokorra',
+  'junta Electoral Central, senadores proclamados el 23J (BOE del 1 de septiembre de 2023)': 'Hauteskunde Batzorde Zentrala, uztailaren 23an aldarrikatutako senatariak (BOE, 2023ko irailaren 1a)',
   '29 nov': 'aza. 29',
   '4 dic': 'abe. 4',
   '23 dic': 'abe. 23',
@@ -304,6 +305,11 @@ export const textos = {
   thEscanos: 'Eserlekuak',
   thPorEscano: 'Botoak eserlekuko',
   fuenteRes: (prueba, etiqueta, fuente) => (prueba ? 'Probako datuak: ' + etiqueta : etiqueta.charAt(0).toUpperCase() + etiqueta.slice(1)) + '. Iturria: ' + fuente + '. Eserlekuak hemen kalkulatzen dira, probintzia bakoitzeko botoekin; ofizialak hauteskunde-batzordeek aldarrikatzen dituzte.',
+  thSenadores: 'Senatariak',
+  senMas: (nombres, n, total) => nombres.length > 1
+    ? 'Hautetsontzietan aukeratutako senatari gehien dituzten alderdiak ' + textos.lista(nombres) + ' dira: ' + n + ' bakoitzak, ' + tik(total) + '.'
+    : nombres[0] + ' da hautetsontzietan aukeratutako senatari gehien dituen alderdia: ' + tik(total) + ' ' + n + '.',
+  fuenteSen: (prueba, etiqueta, fuente) => (prueba ? 'Probako datuak: ' + etiqueta : etiqueta.charAt(0).toUpperCase() + etiqueta.slice(1)) + '. Iturria: ' + fuente + '. Probintzia edo uharte bakoitzean boto gehien dituzten hautagaiak ateratzen dira; hauteskunde-batzordeek aldarrikatzen dituzte.',
   /* paso 9: frente a 2023. Los nombres de los partidos, en caso absoluto, como en el resto de frases */
   lista: xs => xs.length < 2 ? xs.join('') : xs.slice(0, -1).join(', ') + ' eta ' + xs[xs.length - 1],
   frente2023(gana, mas, pierde, menos, todos) {
@@ -340,6 +346,13 @@ export const textos = {
   ultimo: (ganador, rival, votos) => 'Azken eserlekua ' + ganador + ' alderdiarentzat izan zen. ' + rival + ' alderdiari ' + boto(votos) + (votos === 1 ? ' falta izan zitzaion' : ' falta izan zitzaizkion') + ' eserleku hori kentzeko.',
   provisionalUltimo: ' Behin-behineko kontaketa da: atzerritik iritsitako botoak, abenduaren 4an gehitzen denak, alda dezake.',
   unico: ganador => 'Eserlekua ' + ganador + ' alderdiarentzat izan zen.',
+  // paso 10: sin declinar los nombres de los partidos ni de las islas («PP 3 eta PSOE 1»)
+  senProv(i, circs) {
+    const rep = ps => this.lista(ps.map(([p, n]) => p + ' ' + n)), c = circs[0];
+    if (!c.isla) return 'Senatuan, ' + nongo(i) + ' ' + c.n + ' senatariak ' + (c.partidos.length === 1 ? c.partidos[0][0] + ' alderdikoak dira.' : 'hauek dira: ' + rep(c.partidos) + '.');
+    return 'Senatuan, ' + nongo(i) + ' uharte bakoitzak bereak aukeratzen ditu. ' + circs.map(x => x.isla + ': ' + rep(x.partidos) + '.').join(' ');
+  },
+  isla: s => ({ Ibiza: 'Eivissa', 'Ibiza y Formentera': 'Eivissa eta Formentera', 'Gran Canaria': 'Kanaria Handia' })[s] || s,
   provisional12: 'Behin-behineko kontaketako eserlekuak dira. Abenduaren 4ko zenbaketa orokorrak atzerritik iritsitako botoa gehitzen du, eta eserlekuren bat mugi dezake.',
   votos: boto,
   ysiIguales: 'Aukeratu bi alderdi desberdin.',

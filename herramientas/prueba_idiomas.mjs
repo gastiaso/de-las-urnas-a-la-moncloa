@@ -91,6 +91,21 @@ function frases(t) {
   pon('provisional', [t.provisionalRes, t.provisionalUltimo, t.provisional12].join(' | '));
   pon('ysiCambia', t.ysiCambia(12500, 'Vox', 'PSOE', 'PSOE')); pon('ysiNoCambia', t.ysiNoCambia(300, 'PP')); pon('sinEscano', t.sinEscano(1234567, t.pct(0.051)));
   pon('loSiguiente', t.loSiguiente(t.dato('Escrutinio general: el recuento oficial.')));
+  // el Senado (pasos 9 y 10): RES.senado, que escribe herramientas/resultados.py --senado
+  const fSen = 'Junta Electoral Central, senadores proclamados el 23J (BOE del 1 de septiembre de 2023)';
+  pon('dato', fSen + '  →  ' + t.dato(fSen));
+  pon('senMas', t.senMas(['PP'], 120, 208)); pon('senMas (sin artículo)', t.senMas(['Sumar'], 50, 209)); pon('senMas (empate)', t.senMas(['PP', 'PSOE'], 100, 209));
+  pon('fuenteSen', t.fuenteSen(true, t.dato('resultados del 23 de julio de 2023'), t.dato(fSen)));
+  pon('fuenteSen (noche)', t.fuenteSen(false, t.dato('escrutinio provisional del 29 de noviembre de 2026, con el 99,9 % escrutado'), t.dato('Ministerio del Interior, escrutinio provisional')));
+  pon('isla', ['Mallorca', 'Ibiza', 'Formentera', 'Ibiza y Formentera', 'Gran Canaria', 'La Gomera', 'El Hierro'].map(t.isla).join(' · '));
+  const una = (n, partidos) => [{ isla: null, n, partidos }], islas = xs => xs.map(([s, n, partidos]) => ({ isla: t.isla(s), n, partidos }));
+  for (const [i, c] of [[0, una(4, [['PP', 3], ['PSOE', 1]])], [42, una(4, [['PP', 4]])], [50, una(2, [['PP', 2]])], [9, una(4, [['PNV', 3], ['PSOE', 1]])],
+    [20, una(4, [['PSOE', 2], ['Junts', 1], ['ERC', 1]])], [17, una(4, [['PP', 3], ['BNG', 1]])], [37, una(4, [['Vox', 2], ['EH Bildu', 2]])],
+    [7, islas([['Mallorca', 3, [['PP', 2], ['PSOE', 1]]], ['Menorca', 1, [['PP', 1]]], ['Ibiza', 1, [['PSOE', 1]]], ['Formentera', 1, [['Sa Unió', 1]]]])],
+    [7, islas([['Mallorca', 3, [['PP', 2], ['PSOE', 1]]], ['Menorca', 1, [['PP', 1]]], ['Ibiza y Formentera', 1, [['Eivissa i Formentera al Senat', 1]]]])],
+    [35, islas([['Gran Canaria', 3, [['PSOE', 2], ['PP', 1]]], ['Lanzarote', 1, [['PSOE', 1]]], ['Fuerteventura', 1, [['PSOE', 1]]]])],
+    [39, islas([['Tenerife', 3, [['PSOE', 2], ['PP', 1]]], ['La Palma', 1, [['PSOE', 1]]], ['La Gomera', 1, [['ASG', 1]]], ['El Hierro', 1, [['AHI', 1]]]])]])
+    pon('senProv', t.senProv(i, c));
   return o;
 }
 const sueltos = (t, ruta = '') => Object.entries(t).flatMap(([k, v]) => tipo(v) === 'texto' ? [[ruta + k, v]] : tipo(v) === 'objeto' ? sueltos(v, ruta + k + '.') : tipo(v) === 'lista' ? v.map((x, i) => [ruta + k + '[' + i + ']', Array.isArray(x) ? x.join(' — ') : x]) : []);
