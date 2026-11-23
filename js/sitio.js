@@ -9,10 +9,11 @@ import { HEX, HEX_SEN } from './cartograma.js';
 import { geometria, tonoProv, hexD, TEJA } from './mapa.js';
 import { hemi } from './hemiciclo.js';
 import { ICONO } from './fichas.js';
+import { MONCLOA } from './moncloa.js';
 
 const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
 const calma = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
-const GRIS = '#D2CDC2', ORO = '#E0A526';
+const GRIS = '#D2CDC2', ORO = '#E0A526', TINTA = '#2B2118';
 const anuncio = $('#anuncio'); let tA = 0;
 function anuncia(t) { clearTimeout(tA); anuncio.textContent = ''; tA = setTimeout(() => { anuncio.textContent = t; }, 60); }
 const enLectura = () => document.body.classList.contains('lectura');
@@ -110,6 +111,12 @@ function destino(estado) {
     const color = estado === 'hemi' ? (i => i < 176 ? TEJA : GRIS) : (i => (res && res.hemi[i]) || GRIS);
     return q => q.c === undefined ? { x: HX, y: HY, r: 0, o: 0, f: GRIS } : { ...enHemi(q.asiento), r: 0.0125, o: 1, f: color(q.asiento) };
   }
+  if (estado === 'moncloa') {   // último paso: los 350 escaños escriben «LA MONCLOA»; el tuyo, en el centro de la primera O
+    const tuya = piezas.find(q => q.p === p0 && q.j === 0), sitio = new Map(); let n = 0;
+    conC.forEach(q => { if (q === tuya) sitio.set(q, MONCLOA.oro); else { if (n === MONCLOA.oro) n++; sitio.set(q, n++); } });
+    return q => q.c === undefined ? { x: 0, y: 0, r: 0, o: 0, f: GRIS }
+      : { x: MONCLOA.celdas[sitio.get(q)][0], y: MONCLOA.celdas[sitio.get(q)][1], r: MONCLOA.r, o: 1, f: TINTA };
+  }
   if (estado === 'pacto') {
     const b = k === 12 ? pacto12 : pacto6;
     return q => q.c === undefined || !b ? { x: HX, y: HY, r: q.c === undefined ? 0 : 0.0125, o: q.c === undefined ? 0 : 1, f: GRIS, ...(q.c === undefined ? {} : enHemi(q.asiento)) }
@@ -126,7 +133,7 @@ function destino(estado) {
     return { x: HEX[q.c][0], y: HEX[q.c][1], r: R0, o: 1, f, b: estado === 'hab' && q.p === p0 };
   };
 }
-const ESTADO = { 0: 'mapaSel', 1: 'mapaSel', 2: 'prov', 3: 'hab', 4: 'senado', 5: 'hemi', 6: 'pacto', 7: 'hemi', 8: 'mapaSel', 9: 'res', 10: 'provRes', 11: 'hemiRes', 12: 'pacto', 13: 'hemiRes', 14: 'mapaSel' };
+const ESTADO = { 0: 'mapaSel', 1: 'mapaSel', 2: 'prov', 3: 'hab', 4: 'senado', 5: 'hemi', 6: 'pacto', 7: 'hemi', 8: 'mapaSel', 9: 'res', 10: 'provRes', 11: 'hemiRes', 12: 'pacto', 13: 'hemiRes', 14: 'moncloa' };
 let forzado = null;   // 'pila' mientras se ve la portada
 const estadoActual = () => forzado || ESTADO[k] || 'mapaSel';
 
@@ -161,7 +168,7 @@ function ponMarca() {
   const pt = svgEl.createSVGPoint(); pt.x = c.x; pt.y = c.y - r * 1.15;
   const s = pt.matrixTransform(m);
   marca.style.left = (s.x - e.left) + 'px'; marca.style.top = (s.y - e.top - 4) + 'px';
-  marca.textContent = textoMarca(); marca.hidden = false;
+  marca.textContent = textoMarca(); marca.hidden = estadoActual() === 'moncloa';
 }
 
 /* el rótulo de la provincia elegida: su nombre, en una etiqueta de papel, junto a ella en los mapas. No sale en el paso 1,
@@ -389,7 +396,7 @@ pintaTuVoto();
 const indice = $('#indice');
 const irA = (kk, foco, dentro) => {   // dentro: un elemento del paso al que bajar, en vez de su principio
   const s = secs.find(x => casilla(x) === kk); if (!s) return;
-  const e = esc.getBoundingClientRect(), tope = e.width >= innerWidth - 1 && !enLectura() ? e.bottom + 8 : 56;   // bajo el escenario si va arriba a todo el ancho
+  const e = esc.getBoundingClientRect(), tope = e.width >= document.documentElement.clientWidth - 1 && !enLectura() ? e.bottom + 8 : 56;   // bajo el escenario si va arriba a todo el ancho
   const y = kk === 0 ? 0 : (dentro || s).getBoundingClientRect().top + scrollY - tope;
   scrollTo({ top: y, behavior: calma() || Math.abs(y - scrollY) > innerHeight * 3 ? 'auto' : 'smooth' });
   if (foco) { const t = $('h1, h2', s); t.tabIndex = -1; t.focus({ preventScroll: true }); }
