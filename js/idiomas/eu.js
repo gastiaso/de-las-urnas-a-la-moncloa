@@ -317,7 +317,7 @@ export const textos = {
     const cm = this.lista(cambios.map(c => b(c) + ' ' + c.signo)), ig = iguales.length ? this.lista(iguales) + ', aldaketarik gabe' : '';
     if (cm || ig) o.push((d ? 'Alderdika: ' : non(i) + ', 2023rekin alderatuta: ') + [cm, ig].filter(Boolean).join('; ') + '.');
     if (sin.length) o.push('2023rekin alderatu ezin direnak: ' + this.lista(sin.map(c => b(c) + ' (' + eserleku(c.n) + ')')) + '.');
-    if (antes.length) o.push('2023an, ' + this.lista(antes.map(c => b(c) + ' hautagaitzak ' + (c.n === 1 ? 'eserleku bat zuen' : c.n + ' eserleku zituen'))) + '.');
+    if (antes.length) o.push('Azaroaren 29an baliokiderik gabe: ' + this.lista(antes.map(c => b(c) + ' (' + eserleku(c.n) + ' 2023an)')) + '.');
     return o.join(' ');
   },
   repartia: (i, n) => non(i) + ' ' + eserleku(n) + (n === 1 ? ' banatzen zen.' : ' banatzen ziren.'),

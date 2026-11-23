@@ -237,7 +237,7 @@ export const textos = {
     const cm = this.lista(cambios.map(c => b(c) + ' ' + c.signo)), ig = iguales.length ? this.lista(iguales) + ' unchanged' : '';
     if (cm || ig) o.push((d ? 'By party: ' : 'In ' + nom + ', compared with 2023: ') + [cm, ig].filter(Boolean).join('; ') + '.');
     if (sin.length) o.push('Cannot be compared with 2023: ' + this.lista(sin.map(c => b(c) + ' (' + escanos(c.n) + ')')) + '.');
-    if (antes.length) o.push('In 2023, ' + this.lista(antes.map(c => b(c) + ' had ' + escanos(c.n))) + '.');
+    if (antes.length) o.push('No equivalent on 29 November: ' + this.lista(antes.map(c => b(c) + ' (' + escanos(c.n) + ' in 2023)')) + '.');
     return o.join(' ');
   },
   repartia: (i, n) => 'There ' + (n === 1 ? 'was ' : 'were ') + escanos(n) + ' to share out in ' + prov(i) + '.',

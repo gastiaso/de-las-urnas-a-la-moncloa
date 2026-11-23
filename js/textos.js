@@ -179,8 +179,8 @@ export const ES = {
   sinCifra: { nuevo: 'no se presentó en 2023', falta: 'sin equivalente en 2023', solo2023: 'sin equivalente el 29N', dentro: ref => 'en 2023, dentro de ' + ref },
   // las notas de js/equivalencias.js, que salen con un asterisco
   notas2023: {
-    faSumar: 'Frente Amplio se compara con Sumar, que en 2023 incluía a Podemos.',
-    faNuevo: 'Frente Amplio no se presentó en 2023.',
+    faSumar: 'El Frente Amplio se compara con Sumar, que en 2023 incluía a Podemos.',
+    faNuevo: 'El Frente Amplio no se presentó en 2023.',
     sumar: 'En 2023, Sumar incluía a Podemos.',
     podemos: 'Podemos fue en 2023 dentro de Sumar: no tiene cifra propia con la que comparar.',
     aa: 'En 2023, Adelante Andalucía solo se presentó en Cádiz, y no sacó escaño.',
@@ -196,7 +196,7 @@ export const ES = {
     const cm = this.lista(cambios.map(c => b(c) + ' ' + c.signo)), ig = iguales.length ? this.lista(iguales) + ', sin cambios' : '';
     if (cm || ig) o.push((d ? 'Por partidos: ' : 'En ' + nom + ', frente a 2023: ') + [cm, ig].filter(Boolean).join('; ') + '.');
     if (sin.length) o.push('No se pueden comparar con 2023: ' + this.lista(sin.map(c => b(c) + ' (' + escanos(c.n) + ')')) + '.');
-    if (antes.length) o.push('En 2023, ' + this.lista(antes.map(c => b(c) + ' tenía ' + escanos(c.n))) + '.');
+    if (antes.length) o.push('Sin equivalente el 29N: ' + this.lista(antes.map(c => b(c) + ' (' + escanos(c.n) + ' en 2023)')) + '.');
     return o.join(' ');
   },
   repartia: (i, n) => prov(i) + ' repartía ' + escanos(n) + '.',

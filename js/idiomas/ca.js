@@ -266,8 +266,8 @@ export const textos = {
   nuevo: 'nou',
   sinCifra: { nuevo: 'no es va presentar el 2023', falta: 'sense equivalent el 2023', solo2023: 'sense equivalent el 29N', dentro: ref => 'el 2023, dins ' + de(ref) },
   notas2023: {
-    faSumar: 'Frente Amplio es compara amb Sumar, que el 2023 incloïa Podemos.',
-    faNuevo: 'Frente Amplio no es va presentar el 2023.',
+    faSumar: 'El Frente Amplio es compara amb Sumar, que el 2023 incloïa Podemos.',
+    faNuevo: 'El Frente Amplio no es va presentar el 2023.',
     sumar: 'El 2023, Sumar incloïa Podemos.',
     podemos: 'Podemos es va presentar el 2023 dins de Sumar: no té xifra pròpia amb què comparar-lo.',
     aa: 'El 2023, Adelante Andalucía només es va presentar a Cadis, i no va treure escó.',
@@ -280,7 +280,7 @@ export const textos = {
     const cm = this.lista(cambios.map(c => b(c) + ' ' + c.signo)), ig = iguales.length ? this.lista(iguales) + ', sense canvis' : '';
     if (cm || ig) o.push((d ? 'Per partits: ' : AProv(i) + ', respecte al 2023: ') + [cm, ig].filter(Boolean).join('; ') + '.');
     if (sin.length) o.push('No es poden comparar amb el 2023: ' + this.lista(sin.map(c => b(c) + ' (' + escons(c.n) + ')')) + '.');
-    if (antes.length) o.push('El 2023, ' + this.lista(antes.map(c => b(c) + ' tenia ' + escons(c.n))) + '.');
+    if (antes.length) o.push('Sense equivalent el 29N: ' + this.lista(antes.map(c => b(c) + ' (' + escons(c.n) + ' el 2023)')) + '.');
     return o.join(' ');
   },
   repartia: (i, n) => Prov(i) + (plural(i) ? ' repartien ' : ' repartia ') + escons(n) + '.',
