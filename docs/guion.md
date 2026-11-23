@@ -467,16 +467,17 @@ El calendario hasta la investidura, fecha a fecha.
 
 **Saber más: Cómo leer el mapa**
 
-Cada hexágono es un escaño y lleva el color del partido que lo ha ganado. Las provincias grandes ocupan más porque reparten más escaños, no porque tengan más territorio.
+Cada hexágono es un escaño, con el color del partido al que le corresponde según el recuento. Las provincias grandes ocupan más porque reparten más escaños, no porque tengan más territorio.
 
 _Explicación propia._
 
 **Saber más: Provisional y oficial**
 
 Lo que se conoce la noche electoral es un recuento provisional. El oficial lo hacen las juntas electorales cinco días después, y es entonces cuando se suma el voto llegado del extranjero.
+Ese voto puede mover los escaños más ajustados: por eso el reparto oficial puede no coincidir con el de la noche. En 2023 cambió uno de Madrid, que pasó del PSOE al PP. Sin ese voto, el PP sumaba 136 escaños y el PSOE, 122; con él, 137 y 121.
 Después se proclaman los elegidos. Desde ese momento hay tres días para recurrir, y los recursos los resuelve el Tribunal Supremo.
 
-_Fuentes: LOREG, arts. 75, 98, 103, 108 y 112._
+_Fuentes: LOREG, arts. 75, 98, 103, 108 y 112. 2023: cálculo propio con los resultados oficiales del Ministerio del Interior._
 
 **Saber más: Qué son los votos válidos**
 
@@ -493,6 +494,7 @@ Pasa votos de un partido a otro y mira cómo cambia el reparto de tu provincia. 
 **Saber más: Cómo se calcula lo que faltó**
 
 El último escaño se lo lleva la división más alta que quedaba en la tabla. Lo que le faltó al partido que se quedó más cerca es cuántos votos más habría necesitado para que su división superase a esa, sin que cambie nada más.
+Si ese partido no llegaba al 3 %, se cuentan también los votos que le faltaban para pasar la barrera. Y si las dos divisiones empatan, el escaño es del partido con más votos.
 Es una cuenta sobre el papel: en la realidad, si un partido sube, otros bajan.
 
 _Cálculo propio con la regla del art. 163 de la LOREG._
@@ -523,7 +525,7 @@ _Fuentes: Constitución, arts. 68 y 81; LOREG, arts. 162 y 163._
 
 **Riel:**
 
-Estos son los escaños de verdad. Toca cada partido para cambiar su voto en la investidura: no, sí o abstención.
+Estos son los escaños del 29N. Toca cada partido para cambiar su voto en la investidura: no, sí o abstención.
 
 **Saber más: Qué mirar en una negociación**
 
@@ -593,5 +595,5 @@ El último paso. El recorrido termina cuando el Congreso elige presidente y el n
 
 # Recuento
 
-- Cajones «saber más»: 60 (3678 palabras).
+- Cajones «saber más»: 60 (3764 palabras).
 - Términos de glosario: 30.

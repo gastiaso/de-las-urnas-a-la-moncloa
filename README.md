@@ -111,6 +111,7 @@ Con un nombre de archivo `.png` como argumento, dibuja además una vista previa.
 # 2. Generar el archivo de resultados y abrir la fase para todo el mundo
 python3 herramientas/resultados.py datos/resultados_29N.csv --abierta \
     --etiqueta "escrutinio provisional del 29 de noviembre de 2026" --fuente "Ministerio del Interior" > js/resultados.js
+# 3. Con el escrutinio general (4 de diciembre), lo mismo y además --general: la web deja de decir que es provisional
 ```
 
 Antes de escribir nada, `resultados.py` comprueba que estén las 52 circunscripciones con los nombres de `js/datos.js`, que sus escaños coincidan con el decreto y que cuadren los votos. Si el CSV trae `censo`, `votantes` y `nulos`, el paso 9 da la participación.
@@ -154,7 +155,7 @@ node herramientas/prueba_idiomas.mjs       # comprueba que a los textos del Java
 - `idiomas/xx.txt` lleva cada frase de la página en castellano y, debajo, su traducción. Si una frase de `index.html` cambia o es nueva, el generador la apunta al final de cada archivo para traducirla y, mientras tanto, la página de ese idioma la muestra en castellano.
 - `js/idiomas/xx.js` lleva los textos del JavaScript, con las mismas entradas que `js/textos.js`, y los nombres de las provincias en ese idioma.
 - La edición inglesa no es una traducción literal: está adaptada para quien lee desde fuera de España. Explica lo que aquí se da por sabido, no habla de «tu voto» sino de un voto que se sigue, y añade dos cajones propios («Spain in brief» y «Who the parties are»).
-- La etiqueta y la fuente que se pasan a `herramientas/resultados.py` llegan a la página en castellano: para que salgan traducidas hay que añadirlas a la lista `dato` de cada `js/idiomas/xx.js`.
+- La etiqueta y la fuente que se pasan a `herramientas/resultados.py` llegan a la página en castellano: para que salgan traducidas hay que añadirlas a la lista `dato` de cada `js/idiomas/xx.js`. Ya están las de la noche del 29N y las del 4 de diciembre (`escrutinio provisional del 29 de noviembre de 2026, con el 99,9 % escrutado`, con cualquier porcentaje; `escrutinio general del 4 de diciembre de 2026`; `Ministerio del Interior, escrutinio provisional` y `…, escrutinio general`).
 - La imagen para compartir (`img/compartir.jpg`) es la misma en todos los idiomas y lleva el título en castellano.
 - Para quitar o añadir un idioma hay que tocar tres sitios: la lista `LENGUAS` de `herramientas/idiomas.py`, la lista `<nav class="idiomas">` de `index.html` y sus enlaces `hreflang` de la cabecera.
 
