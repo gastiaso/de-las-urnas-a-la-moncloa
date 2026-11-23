@@ -130,6 +130,7 @@ export const textos = {
 
   /* el escenario */
   ariaEscenario: 'Os 350 escanos do Congreso, que cambian de forma en cada paso. O hexágono dourado é o teu voto.',
+  ariaPaso: (texto, marca) => texto + (marca ? ' Hexágono dourado: ' + marca.charAt(0).toLowerCase() + marca.slice(1) + '.' : ''),
   tuVoto: 'O teu voto',
   primerEscano: i => '1.º escano ' + de(i),
   rotulo: (k, i, n, revelado) => ({

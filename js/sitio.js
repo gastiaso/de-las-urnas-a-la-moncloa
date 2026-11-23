@@ -192,6 +192,9 @@ function rotula() {
   }
   if (est === 'pila') t = '';
   rotulo.innerHTML = t; pieEsc.textContent = pie;
+  // para lectores de pantalla, el escenario dice qué enseña en cada paso: el rótulo, el pie y qué es el hexágono dorado
+  const punto = s => /[.:?!]$/.test(s) ? s : s + '.', limpio = punto(t.replace('<small>', '. ').replace(/<[^>]+>/g, '').trim());
+  esc.setAttribute('aria-label', !t ? T.ariaEscenario : T.ariaPaso(limpio + (pie ? ' ' + punto(pie) : ''), piezaTuya() ? textoMarca() : ''));
 }
 // tocar una provincia en el mapa la elige
 svgEl.addEventListener('click', e => { const g = e.target.closest('.p'); if (g && C && ['mapaSel', 'hab', 'senado', 'res'].includes(estadoActual())) C.eligeProv(+g.dataset.p); });

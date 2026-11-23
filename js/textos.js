@@ -30,6 +30,8 @@ export const ES = {
 
   /* el escenario */
   ariaEscenario: 'Los 350 escaños del Congreso, que cambian de forma en cada paso. El hexágono dorado es tu voto.',
+  // lo que dice el escenario al lector de pantalla en cada paso: texto (rótulo y pie, ya con punto) y marca (T.tuVoto, T.primerEscano o vacío)
+  ariaPaso: (texto, marca) => texto + (marca ? ' Hexágono dorado: ' + marca.charAt(0).toLowerCase() + marca.slice(1) + '.' : ''),
   tuVoto: 'Tu voto',
   primerEscano: i => '1.er escaño de ' + prov(i),
   // k: paso; i: provincia; n: sus escaños; revelado: si ya se ha hecho la apuesta del paso 2

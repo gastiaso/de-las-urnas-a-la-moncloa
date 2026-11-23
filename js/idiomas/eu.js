@@ -161,6 +161,7 @@ export const textos = {
 
   /* el escenario */
   ariaEscenario: 'Kongresuko 350 eserlekuak, urrats bakoitzean forma aldatzen dutenak. Hexagono urrekara zure botoa da.',
+  ariaPaso: (texto, marca) => texto + (marca ? ' Hexagono urrekara: ' + marca.replace(/^Zure/, 'zure') + '.' : ''),
   tuVoto: 'Zure botoa',
   primerEscano: i => nongo(i) + ' 1. eserlekua',
   // k: paso; i: provincia; n: sus escaños; revelado: si ya se ha hecho la apuesta del paso 2

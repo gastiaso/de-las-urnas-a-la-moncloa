@@ -84,6 +84,7 @@ export const textos = {
 
   /* el escenario */
   ariaEscenario: 'The 350 seats in Congress, which change shape at every step. The gold hexagon is the vote being followed.',
+  ariaPaso: (texto, marca) => texto + (marca ? ' Gold hexagon: ' + marca.charAt(0).toLowerCase() + marca.slice(1) + '.' : ''),
   tuVoto: 'One vote',
   primerEscano: i => '1st seat in ' + prov(i),
   rotulo: (k, i, n, revelado) => ({
