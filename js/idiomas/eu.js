@@ -185,6 +185,7 @@ export const textos = {
     11: 'Hautetsontzietatik ateratzen den Kongresua',
     13: 'Hautetsontzietatik ateratzen den Kongresua',
     14: '350 eserleku' }[k] || ''),
+  rotuloSenRes: 'Senatua: hautetsontzietan aukeratutakoak, alderdika',
   // c: { si, abs, no }, en escaños
   rotuloPacto: c => 'Bai ' + c.si + ' · Abst. ' + c.abs + ' · Ez ' + c.no + '<small>' + (c.si >= 176 ? 'Lehen bozketan lortzen du: aldeko 176 boto edo gehiago.'
     : c.si > c.no ? 'Ez da 176ra iristen, baina bigarren bozketan lortzen du.'

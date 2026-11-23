@@ -109,6 +109,7 @@ export const textos = {
     11: 'The Congress that came out of the ballot boxes',
     13: 'The Congress that came out of the ballot boxes',
     14: '350 seats' }[k] || ''),
+  rotuloSenRes: 'Senate: those elected at the ballot box, by party',
   rotuloPacto: c => 'Yes ' + c.si + ' · Abst. ' + c.abs + ' · No ' + c.no + '<small>' + (c.si >= 176 ? 'Elected at the first vote: 176 yes votes or more.'
     : c.si > c.no ? 'Short of 176, but elected at the second vote.'
     : c.si === 0 ? 'Tap the parties to build a majority.'

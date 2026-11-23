@@ -1,12 +1,13 @@
 // De las urnas a la Moncloa: el texto a un lado y, al otro, un escenario con los 350 escaños del Congreso, que cambian
 // de forma en cada paso (mapa, reparto de tu provincia, habitantes por escaño, Senado, hemiciclo, pactos).
 // Tu voto es el hexágono dorado: se sigue de principio a fin. Al entrar, una montaña de sobres se convierte en el mapa.
-import { PROV, PART, CONGRESO_2023, COLOR_PARTIDO } from './datos.js';
+import { PROV, PART, CONGRESO_2023, COLOR_PARTIDO, SENADO } from './datos.js';
 import { T } from './textos.js';
 import { contenido, FASE2 } from './contenido.js';
 import { dhondt } from './dhondt.js';
 import { HEX, HEX_SEN } from './cartograma.js';
-import { geometria, tonoProv, hexD, TEJA } from './mapa.js';
+import { geometria, tonoProv, hexD, TEJA, PAPEL } from './mapa.js';
+import { RES } from './resultados.js';
 import { hemi } from './hemiciclo.js';
 import { ICONO } from './fichas.js';
 import { MONCLOA } from './moncloa.js';
@@ -59,6 +60,22 @@ const sel = () => C ? C.st.prov : 0;
 const R0 = gC.R * 0.92, RS = gS.R * 0.92;
 const agrupa = cols => { const n = {}; cols.forEach(c => { n[c] = (n[c] || 0) + 1; }); return Object.keys(n).sort((a, b) => n[b] - n[a]).flatMap(c => Array(n[c]).fill(c)); };
 const ESC_HAB = ['#7A2A16', '#9C3D25', '#C9773F', '#E2B77A', '#F1E2C2'];
+/* Senado del paso 9 (fase 2): cada hexágono, del color del partido de su senador. Cada circunscripción de js/resultados.js va a
+   los hexágonos de su isla o provincia (la sexta columna de HEX_SEN); la que no está en SENADO (en 2023, «Ibiza y Formentera»,
+   que votaban juntas) va a los de las islas de su provincia sin datos, y el que sobra queda en blanco. Dentro de cada una, de
+   más a menos senadores (y, si empatan, en el orden de los partidos de js/resultados.js), en el orden de HEX_SEN. */
+const NEUTRO = '#C9C1B4';   // el de herramientas/resultados.py, por si un partido llegara sin color
+function coloresSenado(S) {
+  const f = [], nombre = i => SENADO[HEX_SEN[i][5]][0], todos = HEX_SEN.map((_, i) => i), conDatos = new Set(S.circ.map(c => c.c));
+  S.circ.forEach(c => {
+    let hs = todos.filter(i => nombre(i) === c.c);
+    if (!hs.length) hs = todos.filter(i => HEX_SEN[i][2] === c.p && !conDatos.has(nombre(i)));
+    const cols = [...c.r].sort((a, b) => b[1] - a[1] || a[0] - b[0]).flatMap(([q, n]) => Array(n).fill(S.partidos[q].color || NEUTRO));
+    hs.forEach((i, j) => { if (cols[j]) f[i] = cols[j]; });
+  });
+  return f;
+}
+const senRes = FASE2 && RES.senado ? coloresSenado(RES.senado) : [];
 
 /* Pactos: cada asiento lleva el color de su partido; los partidos se agrupan en sí, abstención y no, por ese orden
    y, dentro de cada grupo, de izquierda a derecha. Devuelve, para cada asiento base, su nuevo sitio y su color. */
@@ -105,9 +122,9 @@ function destino(estado) {
       return { x: -(Math.min(cols, n0) - 1) * w / 2 - (filas > 1 ? w / 4 : 0) + c * w + (fl % 2) * w / 2, y: 0.05 - (filas - 1) * h / 2 + fl * h, r: r * 0.95, o: 1, f: orden ? orden[i] || GRIS : GRIS };
     };
   }
-  if (estado === 'senado') return q => q.s === undefined
+  if (estado === 'senado' || estado === 'senadoRes') return q => q.s === undefined
     ? { x: HEX[q.c][0], y: HEX[q.c][1], r: 0, o: 0, f: tonoProv(q.p) }
-    : { x: HEX_SEN[q.s][0], y: HEX_SEN[q.s][1], r: RS, o: 1, f: q.p === p0 ? TEJA : tonoProv(q.p) };
+    : { x: HEX_SEN[q.s][0], y: HEX_SEN[q.s][1], r: RS, o: 1, f: estado === 'senadoRes' ? senRes[q.s] || PAPEL : q.p === p0 ? TEJA : tonoProv(q.p) };
   if (estado === 'hemi' || estado === 'hemiRes') {
     const color = estado === 'hemi' ? (i => i < 176 ? TEJA : GRIS) : (i => (res && res.hemi[i]) || GRIS);
     return q => q.c === undefined ? { x: HX, y: HY, r: 0, o: 0, f: GRIS } : { ...enHemi(q.asiento), r: 0.0125, o: 1, f: color(q.asiento) };
@@ -136,7 +153,9 @@ function destino(estado) {
 }
 const ESTADO = { 0: 'mapaSel', 1: 'mapaSel', 2: 'prov', 3: 'hab', 4: 'senado', 5: 'hemi', 6: 'pacto', 7: 'hemi', 8: 'mapaSel', 9: 'res', 10: 'provRes', 11: 'hemiRes', 12: 'pacto', 13: 'hemiRes', 14: 'moncloa' };
 let forzado = null;   // 'pila' mientras se ve la portada
-const estadoActual = () => forzado || ESTADO[k] || 'mapaSel';
+let senado9 = false;   // paso 9: el lector ha bajado hasta el bloque «El Senado» y el escenario enseña el Senado (ver mira)
+const sen9 = $('#sen9');
+const estadoActual = () => forzado || (k === 9 && senado9 ? 'senadoRes' : ESTADO[k]) || 'mapaSel';
 
 /* el hexágono dorado: tu voto. Va encima de una de las piezas de tu provincia o, en los pactos de la fase 1, aparte. */
 function piezaTuya() {
@@ -177,7 +196,7 @@ function ponMarca() {
    provincia y se queda la que menos estorba: nunca encima del hexágono dorado, de la marca ni de los escaños de la provincia.
    En los mapas de dato (habitantes por escaño y resultados) tampoco tapa los de las demás: si no hay hueco al lado ni junto a
    la marca «Tu voto», va al más cercano, con una raya hasta la provincia. Es solo visual: el escenario se anuncia como imagen. */
-const MAPAS = ['mapaSel', 'hab', 'senado', 'res'], DATO = ['hab', 'res'];
+const MAPAS = ['mapaSel', 'hab', 'senado', 'res', 'senadoRes'], DATO = ['hab', 'res', 'senadoRes'];
 const capaRot = document.createElement('div'); capaRot.className = 'rot-prov fuera'; capaRot.setAttribute('aria-hidden', 'true');
 capaRot.innerHTML = '<i hidden></i><span></span>';
 esc.insertBefore(capaRot, marca);
@@ -272,7 +291,8 @@ function ponRotulo() {
 function preparaRotulo() {
   const quieto = piezas.every(q => ((q.ini.o || 0) < 0.01 && (q.fin.o || 0) < 0.01) || ['x', 'y', 'r', 'o'].every(z => Math.abs((q.ini[z] || 0) - (q.fin[z] || 0)) < 1e-4));
   if (claveRotulo() !== claveRot) capaRot.classList.add('fuera');
-  esperaRot = !quieto; if (quieto) requestAnimationFrame(() => { if (!esperaRot) ponRotulo(); });
+  // quieto (otra provincia en el mismo mapa): la marca se coloca antes que el rótulo, que la esquiva, y no después
+  esperaRot = !quieto; if (quieto) requestAnimationFrame(() => { if (!esperaRot) { ponMarca(); ponRotulo(); } });
 }
 const rotuloAlParar = () => { if (esperaRot) { esperaRot = false; ponRotulo(); } };
 // si el escenario cambia de tamaño (ventana, giro, salida de la portada) o llega la fuente, se recoloca
@@ -291,7 +311,7 @@ function aplica(suave, dur0) {
   });
   guia.setAttribute('opacity', est === 'pacto' || est === 'hemi' || est === 'hemiRes' ? 1 : 0);
   const llega = dur ? dur + Math.max(...piezas.map(q => q.ret)) : 0;   // ms hasta que la última pieza está en su sitio
-  [[bordesC, ['mapaSel', 'hab', 'res'].includes(est)], [bordesS, est === 'senado']].forEach(([b, v]) => { b.style.transitionDelay = v && llega ? Math.max(0, llega - 200) + 'ms' : '0ms'; b.classList.toggle('ve', v); });
+  [[bordesC, ['mapaSel', 'hab', 'res'].includes(est)], [bordesS, est === 'senado' || est === 'senadoRes']].forEach(([b, v]) => { b.style.transitionDelay = v && llega ? Math.max(0, llega - 200) + 'ms' : '0ms'; b.classList.toggle('ve', v); });
   esc.dataset.est = est;   // en los mapas, el contorno de cada hexágono se aclara para que se lean los bordes (css/estilo.css)
   rotulaHemi(est === 'pacto' ? (k === 12 ? pacto12 : pacto6) : null);
   rotHemi.style.transitionDelay = est === 'pacto' && llega ? Math.max(0, llega - 200) + 'ms' : '0ms'; rotHemi.classList.toggle('ve', est === 'pacto');
@@ -324,6 +344,7 @@ function rotula() {
     if (b) t = T.rotuloPacto(b.cuenta);
     pie = k === 12 ? T.piePactoRes : T.piePacto;
   }
+  if (est === 'senadoRes') t = T.rotuloSenRes;
   if (est === 'pila') t = '';
   // paso 3: la escala de habitantes por escaño, de la provincia con menos a la que tiene más (los cinco tonos son quintos de la lista)
   const leyenda = est === 'hab' && C ? '<span class="esc-hab" aria-hidden="true">' + T.miles(C.HAB[0].h) + ESC_HAB.map(c => '<i style="background:' + c + '"></i>').join('') + T.miles(C.HAB[C.HAB.length - 1].h) + '</span>' : '';
@@ -333,7 +354,7 @@ function rotula() {
   esc.setAttribute('aria-label', !t ? T.ariaEscenario : T.ariaPaso(limpio + (pie ? ' ' + punto(pie) : ''), piezaTuya() ? textoMarca() : ''));
 }
 // tocar una provincia en el mapa la elige
-svgEl.addEventListener('click', e => { const g = e.target.closest('.p'); if (g && C && ['mapaSel', 'hab', 'senado', 'res'].includes(estadoActual())) C.eligeProv(+g.dataset.p); });
+svgEl.addEventListener('click', e => { const g = e.target.closest('.p'); if (g && C && MAPAS.includes(estadoActual())) C.eligeProv(+g.dataset.p); });
 addEventListener('resize', () => ponMarca());
 
 /* ---------- el contenido, con los efectos del escenario ---------- */
@@ -468,13 +489,15 @@ $$('.compartir-sitio').forEach(b => b.addEventListener('click', async () => {
   } catch (e) { if (!e || e.name !== 'AbortError') dice(T.copiaDireccion); }
 }));
 
-/* qué paso se está leyendo: el último cuyo principio ha pasado de la mitad de la pantalla */
+/* qué paso se está leyendo: el último cuyo principio ha pasado de la mitad de la pantalla. En el paso 9, lo mismo con el bloque
+   «El Senado» (si hay datos del Senado): desde ahí, el escenario enseña el Senado; al volver arriba, otra vez el Congreso. */
 function mira(forzar) {
   let a = 0;
   secs.forEach(s => { if (s.getBoundingClientRect().top < innerHeight * 0.55) a = casilla(s); });
+  const s9 = a === 9 && !!sen9 && !sen9.hidden && sen9.getBoundingClientRect().top < innerHeight * 0.55;
   $('#donde').textContent = T.donde(a, ULTIMA, enLectura()) + ' ▾';
   $$('button[data-k]', indice).forEach(b => { if (+b.dataset.k === a) b.setAttribute('aria-current', 'step'); else b.removeAttribute('aria-current'); });   // el menú marca dónde estás
-  if (a !== k || forzar) { k = a; if (listo) aplica(true); pintaTuVoto(); }
+  if (a !== k || s9 !== senado9 || forzar) { k = a; senado9 = s9; if (listo) aplica(true); pintaTuVoto(); }
 }
 let pend = false;
 addEventListener('scroll', () => { if (!pend) { pend = true; requestAnimationFrame(() => { pend = false; mira(); }); } }, { passive: true });

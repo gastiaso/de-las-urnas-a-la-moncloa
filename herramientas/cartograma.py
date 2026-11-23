@@ -10,6 +10,7 @@ Método:
 4. Baleares, Ceuta y Melilla se colocan en el mar, junto a su posición real; Canarias, en un recuadro al suroeste.
 
 Uso: python3 herramientas/cartograma.py [vista.png] > js/cartograma.js
+     y, después, py herramientas/islas_senado.py, que en el Senado coloca Baleares y Canarias isla por isla (sin shapely).
 Requiere numpy, scipy y shapely. Geometría: herramientas/geo/provincias-es-atlas.json (IGN, CC BY 4.0, vía es-atlas).
 """
 import json, math, sys, os

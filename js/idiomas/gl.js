@@ -159,6 +159,7 @@ export const textos = {
     11: 'O Congreso que sae das urnas',
     13: 'O Congreso que sae das urnas',
     14: '350 escanos' }[k] || ''),
+  rotuloSenRes: 'Senado: os elixidos nas urnas, por partido',
   rotuloPacto: c => 'Si ' + c.si + ' · Abst. ' + c.abs + ' · Non ' + c.no + '<small>' + (c.si >= 176 ? 'Sae á primeira: 176 votos a favor ou máis.'
     : c.si > c.no ? 'Non chega a 176, pero sae na segunda votación.'
     : c.si === 0 ? 'Toca os partidos para formar unha maioría.'

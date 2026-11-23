@@ -60,6 +60,8 @@ export const ES = {
     11: 'El Congreso que sale de las urnas',
     13: 'El Congreso que sale de las urnas',
     14: '350 escaños' }[k] || ''),
+  // paso 9, al bajar hasta el bloque «El Senado»: el mapa del Senado, con cada senador del color de su partido
+  rotuloSenRes: 'Senado: los elegidos en las urnas, por partido',
   // c: { si, abs, no }, en escaños
   rotuloPacto: c => 'Sí ' + c.si + ' · Abst. ' + c.abs + ' · No ' + c.no + '<small>' + (c.si >= 176 ? 'Sale a la primera: 176 síes o más.'
     : c.si > c.no ? 'No llega a 176, pero sale en la segunda votación.'

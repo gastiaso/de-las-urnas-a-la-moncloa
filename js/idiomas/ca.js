@@ -159,6 +159,7 @@ export const textos = {
     11: 'El Congrés que surt de les urnes',
     13: 'El Congrés que surt de les urnes',
     14: '350 escons' }[k] || ''),
+  rotuloSenRes: 'Senat: els escollits a les urnes, per partit',
   // c: { si, abs, no }, en escaños
   rotuloPacto: c => 'Sí ' + c.si + ' · Abst. ' + c.abs + ' · No ' + c.no + '<small>' + (c.si >= 176 ? 'Surt escollit a la primera: 176 sís o més.'
     : c.si > c.no ? 'No arriba a 176, però surt escollit a la segona votació.'
