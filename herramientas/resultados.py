@@ -25,12 +25,12 @@ import argparse, csv, json, re, sys, pathlib
 TINTA = '#2B2118'
 NEUTRO = '#C9C1B4'   # Senado: candidaturas que no están en META (una agrupación de una sola isla, por ejemplo)
 # Orden de izquierda a derecha del hemiciclo y color de cada partido. Orden y colores son provisionales.
-META = [('BILDU', 'EH Bildu', '#7C9440', '#fff'), ('ERC', 'ERC', '#EFD27A', TINTA), ('AA', 'Adelante Andalucía', '#4E9C8F', '#fff'),
+META = [('BILDU', 'EH Bildu', '#868A42', '#fff'), ('ERC', 'ERC', '#EFD27A', TINTA), ('AA', 'Adelante Andalucía', '#4E9C8F', '#fff'),
         ('POD', 'Podemos', '#6B4A86', '#fff'), ('FA', 'Frente Amplio', '#B4527A', '#fff'), ('SUMAR', 'Sumar', '#B4527A', '#fff'),
         ('COMP', 'Compromís', '#DE7740', TINTA), ('UPC', 'Unidad del Pueblo Canario', '#BC9FC6', TINTA),
         ('BNG', 'BNG', '#86AFCF', TINTA), ('PSOE', 'PSOE', '#B5382E', '#fff'), ('GBAI', 'Geroa Bai', '#8CCFA4', TINTA), ('PNV', 'PNV', '#2E6B4A', '#fff'),
         ('TE', 'Teruel Existe', '#D98A8F', TINTA), ('SY', 'Soria ¡Ya!', '#8C78C8', TINTA),
-        ('CC', 'Coalición Canaria', '#C9A227', TINTA), ('JUNTS', 'Junts', '#2A9D97', '#fff'), ('UPN', 'UPN', '#8C5A3C', '#fff'),
+        ('CC', 'Coalición Canaria', '#A8862A', TINTA), ('JUNTS', 'Junts', '#2A8FA8', '#fff'), ('UPN', 'UPN', '#8C5A3C', '#fff'),
         ('SALF', 'SALF', '#8A8378', '#fff'), ('PP', 'PP', '#2F5D8C', '#fff'), ('VOX', 'Vox', '#5F9E3A', '#fff')]
 HITOS = [('2026-11-29', '29 nov', 'Votación.'), ('2026-12-04', '4 dic', 'Escrutinio general: el recuento oficial.'),
          ('2026-12-23', '23 dic', 'Se constituyen el Congreso y el Senado.'), (None, 'Sin fecha', 'El Rey consulta a los grupos y propone un candidato.'),

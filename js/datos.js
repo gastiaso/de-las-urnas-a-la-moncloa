@@ -26,8 +26,8 @@ export const PART = [['A', 40.2, '#7A4B5E', '#fff'], ['B', 31.0, '#7FA39B', '#2B
 
 // Color de cada partido: los habituales, algo apagados para que convivan con la paleta del sitio (los mismos que usa
 // herramientas/resultados.py en la fase 2). Son provisionales.
-export const COLOR_PARTIDO = { Bildu: '#7C9440', ERC: '#EFD27A', AA: '#4E9C8F', FA: '#B4527A', Sumar: '#B4527A', BNG: '#86AFCF', PSOE: '#B5382E',
-  PNV: '#2E6B4A', CC: '#C9A227', Junts: '#2A9D97', UPN: '#8C5A3C', PP: '#2F5D8C', Vox: '#5F9E3A' };
+export const COLOR_PARTIDO = { Bildu: '#868A42', ERC: '#EFD27A', AA: '#4E9C8F', FA: '#B4527A', Sumar: '#B4527A', BNG: '#86AFCF', PSOE: '#B5382E',
+  PNV: '#2E6B4A', CC: '#A8862A', Junts: '#2A8FA8', UPN: '#8C5A3C', PP: '#2F5D8C', Vox: '#5F9E3A' };
 
 // Calculadora de pactos del paso 6: los escaños que salieron de las elecciones del 23 de julio de 2023, proclamados por la
 // Junta Electoral Central (BOE-A-2023-18907; los 121 del PSOE incluyen los 19 del PSC). Son un resultado, no una encuesta,
