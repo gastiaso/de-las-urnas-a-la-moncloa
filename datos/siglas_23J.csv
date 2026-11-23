@@ -1,0 +1,10 @@
+# Solo para el simulacro con el 23J: candidaturas sin escaño que pasaron del 3 % en alguna provincia.
+# En datos/prueba_23J.csv van en OTROS. No usar el 29N: SY, por ejemplo, vuelve a presentarse.
+siglas,id,nota
+CUP-PR,OTROS,Barcelona y Girona
+NC-bc,OTROS,Las Palmas
+EXISTE,OTROS,Teruel Existe
+SY,OTROS,Soria ¡Ya!
+U.P.L.,OTROS,Unión del Pueblo Leonés
+XAV,OTROS,Por Ávila
+CpM,OTROS,Coalición por Melilla

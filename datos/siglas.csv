@@ -1,0 +1,49 @@
+# Siglas de las candidaturas (tal como las escribe el Ministerio del Interior) y el partido de la web al que se suman.
+# id: uno de los partidos de META en herramientas/resultados.py, u OTROS para sumarlo a «otros».
+# Mayúsculas, acentos, puntos, espacios y guiones no cuentan: «B.N.G.» = «BNG», «EH Bildu» = «EH BILDU».
+# Las candidaturas del 23J que van a OTROS están aparte, en datos/siglas_23J.csv (solo para el simulacro).
+# Una candidatura que no está aquí va a OTROS si no llega al 3 % en ninguna provincia ni saca escaño;
+# si llega, interior_a_csv.py se para y pide añadirla. Las líneas con # no cuentan.
+siglas,id,nota
+PP,PP,
+PSOE,PSOE,
+PSC,PSOE,PSC-PSOE
+PSdeG-PSOE,PSOE,
+PSE-EE (PSOE),PSOE,2023
+PSE-EE,PSOE,
+PSIB-PSOE,PSOE,
+PSN-PSOE,PSOE,
+VOX,VOX,
+ERC,ERC,
+JxCAT - JUNTS,JUNTS,2023
+JxCat,JUNTS,2026
+JUNTS,JUNTS,
+EH Bildu,BILDU,
+EAJ-PNV,PNV,
+PNV,PNV,
+B.N.G.,BNG,
+CCa,CC,2023
+CC,CC,
+1.ªCAN-CCa,CC,"2026, Las Palmas: Municipalistas Primero Canarias-Coalición Canaria"
+CCa-1.ªCAN,CC,"2026, Santa Cruz de Tenerife: Coalición Canaria-Municipalistas Primero Canarias"
+U.P.N.,UPN,2023
+UPN,UPN,
+SUMAR,SUMAR,2023
+SUMAR - ECP,SUMAR,2023
+SUMAR - COMPROMÍS,SUMAR,2023
+SUMAR ARAGÓN,SUMAR,2023
+MÉS PER MALLORCA-MÉS PER MENORCA-SUMAR,SUMAR,2023
+PODEMOS,POD,2026
+SALF,SALF,2026: Se Acabó La Fiesta
+ADELANTE ANDALUCÍA,AA,2026
+FA,FA,2026: Frente Amplio
+FRENTE AMPLIO-FRONTE AMPLA,FA,"2026, Galicia: marca de Frente Amplio (confirmar)"
+FRENTE AMPLIO-FRONTE ZABALA,FA,"2026, Álava y Navarra: marca de Frente Amplio (confirmar)"
+COMUNS-FRONT AMPLI,FA,"2026, Cataluña: Comuns-Front Ampli (confirmar)"
+CHA-IU-MS-FRENTE AMPLIO,FA,"2026, Huesca y Zaragoza: Chunta Aragonesista-Frente Amplio Aragón (confirmar)"
+ARAMÉS-EU-MS,FA,"2026, Illes Balears: Aramés-Front Ampli (confirmar)"
+# 2026, SIN DECIDIR (F04). Si alguna llega al 3 % en su provincia, interior_a_csv.py se parará hasta que tenga fila:
+#   UPN-PP (Navarra, coalición UPN con PP): ¿PP, UPN o un id nuevo?
+#   COMPROMIS-EUPV-PODEM-ERPV (Compromís: Front Valencià): ¿FA, POD, un id nuevo u OTROS?
+#   "NC-BC, PODEMOS, IU, SUMAR" (Unidad del Pueblo Canario): ¿id nuevo u OTROS?
+#   GBAI (Geroa Bai), TERUEL EXISTE, SY (Soria ¡Ya!), ALHORA, D.R.G (Drago Canarias): ¿id nuevo u OTROS?
