@@ -263,6 +263,10 @@ export const textos = {
   senTope: 'Hiru bakarrik. Kendu marka bat aldatzeko.',
   senMarcadas: n => '3tik ' + n + ' markatu ' + (n === 1 ? 'duzu' : 'dituzu') + '.',
 
+  /* paso 7: la etiqueta junto a lo que pasa hoy o, si hoy no hay nada, junto a lo siguiente */
+  calHoy: 'gaur',
+  calSiguiente: 'hurrengoa',
+
   /* calculadoras de pactos (pasos 6 y 12) */
   voto: { no: 'Ez', si: 'Bai', abs: 'Abst.' },
   votoLargo: { no: 'ez', si: 'bai', abs: 'abstentzioa' },

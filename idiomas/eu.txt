@@ -9,6 +9,9 @@ eu: Zer bozkatzen den azaroaren 29an eta nola iristen den boto-paper batetik Gob
 es: De las urnas a la Moncloa
 eu: Hautetsontzietatik Moncloara
 
+es: De las urnas a la Moncloa · Cómo funcionan las elecciones del 29N
+eu: Hautetsontzietatik Moncloara · Nola funtzionatzen duten azaroaren 29ko hauteskundeek
+
 es: Los 350 escaños del Congreso dibujados como hexágonos sobre el mapa de España, con el título «De las urnas a la Moncloa».
 eu: Kongresuko 350 eserlekuak, hexagono gisa marraztuta Espainiako maparen gainean, «De las urnas a la Moncloa» izenburuarekin.
 
@@ -38,6 +41,9 @@ eu: 1 · Zer bozkatzen den
 
 es: El 29N no eliges presidente: eliges a los 350 diputados del Congreso, que son quienes lo eligen. Sus asientos, los [[escano|escaños]], se reparten por [[circ|circunscripciones]]: en la práctica, por provincias.
 eu: Azaroaren 29an ez duzu presidentea aukeratuko: Kongresuko 350 diputatuak aukeratuko dituzu, eta haiek aukeratuko dute presidentea. Haien aulkiak, [[escano|eserlekuak]], [[circ|hautesbarrutika]] banatzen dira: praktikan, probintziaka.
+
+es: Toca las palabras subrayadas para ver qué significan.
+eu: Ukitu azpimarratutako hitzak zer esan nahi duten ikusteko.
 
 es: Elige tu provincia
 eu: Aukeratu zure probintzia

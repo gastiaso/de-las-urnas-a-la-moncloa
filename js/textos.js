@@ -137,6 +137,10 @@ export const ES = {
   senTope: 'Solo tres. Quita una marca para cambiarla.',
   senMarcadas: n => 'Has marcado ' + n + ' de 3.',
 
+  /* paso 7: la etiqueta junto a lo que pasa hoy o, si hoy no hay nada, junto a lo siguiente */
+  calHoy: 'hoy',
+  calSiguiente: 'lo siguiente',
+
   /* calculadoras de pactos (pasos 6 y 12) */
   voto: { no: 'No', si: 'Sí', abs: 'Abst.' },
   votoLargo: { no: 'no', si: 'sí', abs: 'abstención' },

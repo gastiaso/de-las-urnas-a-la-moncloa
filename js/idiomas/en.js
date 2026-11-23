@@ -184,6 +184,10 @@ export const textos = {
   senTope: 'Three at most. Untick one to change it.',
   senMarcadas: n => 'You have marked ' + n + ' of 3.',
 
+  /* paso 7: la etiqueta junto a lo que pasa hoy o, si hoy no hay nada, junto a lo siguiente */
+  calHoy: 'today',
+  calSiguiente: 'next',
+
   /* calculadoras de pactos */
   voto: { no: 'No', si: 'Yes', abs: 'Abst.' },
   votoLargo: { no: 'votes no', si: 'votes yes', abs: 'abstains' },

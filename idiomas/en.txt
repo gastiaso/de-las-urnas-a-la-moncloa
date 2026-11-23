@@ -10,6 +10,9 @@ en: What Spain votes on in the general election of 29 November 2026 and how a ba
 es: De las urnas a la Moncloa
 en: From the ballot box to La Moncloa
 
+es: De las urnas a la Moncloa · Cómo funcionan las elecciones del 29N
+en: From the ballot box to La Moncloa · How Spain's general election of 29 November works
+
 es: Los 350 escaños del Congreso dibujados como hexágonos sobre el mapa de España, con el título «De las urnas a la Moncloa».
 en: The 350 seats in Spain's Congress drawn as hexagons on a map of Spain, under the Spanish title “De las urnas a la Moncloa”.
 
@@ -39,6 +42,9 @@ en: 1 · What's being elected
 
 es: El 29N no eliges presidente: eliges a los 350 diputados del Congreso, que son quienes lo eligen. Sus asientos, los [[escano|escaños]], se reparten por [[circ|circunscripciones]]: en la práctica, por provincias.
 en: On Sunday 29 November, Spain does not elect a prime minister: it elects the 350 members of the Congress of Deputies, the lower house of parliament, and they choose the prime minister. Their [[escano|seats]] (escaños, in Spanish) are shared out by [[circ|constituency]]: in practice, by province. ¶ There is no single national count: there are 52 separate contests.
+
+es: Toca las palabras subrayadas para ver qué significan.
+en: Tap the underlined words to see what they mean.
 
 es: Elige tu provincia
 en: Choose a province

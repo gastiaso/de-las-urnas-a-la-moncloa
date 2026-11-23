@@ -9,6 +9,9 @@ gl: Que se vota o 29N e como se pasa dunha papeleta a un Goberno, contado cos 35
 es: De las urnas a la Moncloa
 gl: Das urnas á Moncloa
 
+es: De las urnas a la Moncloa · Cómo funcionan las elecciones del 29N
+gl: Das urnas á Moncloa · Como funcionan as eleccións do 29N
+
 es: Los 350 escaños del Congreso dibujados como hexágonos sobre el mapa de España, con el título «De las urnas a la Moncloa».
 gl: Os 350 escanos do Congreso debuxados como hexágonos sobre o mapa de España, co título «De las urnas a la Moncloa».
 
@@ -38,6 +41,9 @@ gl: 1 · Que se vota
 
 es: El 29N no eliges presidente: eliges a los 350 diputados del Congreso, que son quienes lo eligen. Sus asientos, los [[escano|escaños]], se reparten por [[circ|circunscripciones]]: en la práctica, por provincias.
 gl: O 29N non elixes presidente: elixes os 350 deputados do Congreso, que son os que o elixen. Os seus asentos, os [[escano|escanos]], repártense por [[circ|circunscricións]]: na práctica, por provincias.
+
+es: Toca las palabras subrayadas para ver qué significan.
+gl: Toca as palabras subliñadas para ver que significan.
 
 es: Elige tu provincia
 gl: Elixe a túa provincia

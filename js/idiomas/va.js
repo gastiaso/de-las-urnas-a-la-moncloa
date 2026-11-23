@@ -225,6 +225,10 @@ export const textos = {
   senTope: 'Només tres. Lleva una marca per a canviar-la.',
   senMarcadas: n => "N'has marcat " + n + ' de 3.',
 
+  /* paso 7: la etiqueta junto a lo que pasa hoy o, si hoy no hay nada, junto a lo siguiente */
+  calHoy: 'hui',
+  calSiguiente: 'el següent',
+
   /* calculadoras de pactos (pasos 6 y 12) */
   voto: { no: 'No', si: 'Sí', abs: 'Abst.' },
   votoLargo: { no: 'no', si: 'sí', abs: 'abstenció' },

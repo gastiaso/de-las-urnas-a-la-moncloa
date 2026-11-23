@@ -32,6 +32,14 @@ addEventListener('keydown', e => {
   const f = e.key === 'Escape' && document.activeElement && document.activeElement.closest('.hito.abierto .fecha');
   if (f) { f.parentElement.classList.remove('abierto'); f.setAttribute('aria-expanded', 'false'); }
 });
+// dónde está hoy: lo pasado, en gris; lo que pasa hoy o, si hoy no hay nada, lo siguiente, con una etiqueta (fecha local del navegador)
+(() => {
+  const d = new Date(), hoy = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+  const hs = [...document.querySelectorAll('.calendario .hito[data-f]')], fin = h => h.dataset.hasta || h.dataset.f;
+  const ahora = hs.filter(h => h.dataset.f <= hoy && fin(h) >= hoy), marca = ahora.length ? ahora : hs.filter(h => h.dataset.f > hoy).slice(0, 1);
+  hs.forEach(h => { if (fin(h) < hoy) h.classList.add('pasado'); });
+  marca.forEach(h => h.querySelector('.que').insertAdjacentHTML('beforeend', ' <span class="ahora">' + (ahora.length ? T.calHoy : T.calSiguiente) + '</span>'));
+})();
 
 /* glosario */
 document.addEventListener('click', e => {

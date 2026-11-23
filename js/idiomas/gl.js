@@ -227,6 +227,10 @@ export const textos = {
   senTope: 'Só tres. Quita unha marca para cambiala.',
   senMarcadas: n => 'Marcaches ' + n + ' de 3.',
 
+  /* paso 7: la etiqueta junto a lo que pasa hoy o, si hoy no hay nada, junto a lo siguiente */
+  calHoy: 'hoxe',
+  calSiguiente: 'o seguinte',
+
   /* calculadoras de pactos (pasos 6 y 12) */
   voto: { no: 'Non', si: 'Si', abs: 'Abst.' },
   votoLargo: { no: 'non', si: 'si', abs: 'abstención' },

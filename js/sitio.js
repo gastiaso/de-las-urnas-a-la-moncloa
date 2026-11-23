@@ -280,7 +280,8 @@ pintaTuVoto();
 const indice = $('#indice');
 const irA = (kk, foco, dentro) => {   // dentro: un elemento del paso al que bajar, en vez de su principio
   const s = secs.find(x => casilla(x) === kk); if (!s) return;
-  const y = kk === 0 ? 0 : (dentro || s).getBoundingClientRect().top + scrollY - (innerWidth < 900 && !enLectura() ? innerHeight * 0.35 + 52 : 56);
+  const e = esc.getBoundingClientRect(), tope = e.width >= innerWidth - 1 && !enLectura() ? e.bottom + 8 : 56;   // bajo el escenario si va arriba a todo el ancho
+  const y = kk === 0 ? 0 : (dentro || s).getBoundingClientRect().top + scrollY - tope;
   scrollTo({ top: y, behavior: calma() || Math.abs(y - scrollY) > innerHeight * 3 ? 'auto' : 'smooth' });
   if (foco) { const t = $('h1, h2', s); t.tabIndex = -1; t.focus({ preventScroll: true }); }
 };
