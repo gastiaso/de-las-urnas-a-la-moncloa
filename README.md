@@ -153,7 +153,7 @@ Las calculadoras de pactos se pueden compartir: la combinación va en la direcci
 | `idiomas/` y `js/idiomas/` | Las traducciones: las frases de la página (`xx.txt`) y los textos del JavaScript (`xx.js`) de cada idioma |
 | `ca/`, `va/`, `gl/`, `eu/` y `en/` | La página en catalán, valenciano, gallego, euskera e inglés (generadas) |
 
-Tras cambiar un texto en `index.html`, hay que regenerar el guion (`python3 herramientas/guion.py > docs/guion.md`) y las páginas de los demás idiomas.
+Tras cambiar un texto en `index.html`, hay que regenerar el guion (`py herramientas/guion.py`, que escribe `docs/guion.md`) y las páginas de los demás idiomas.
 
 ### Idiomas
 

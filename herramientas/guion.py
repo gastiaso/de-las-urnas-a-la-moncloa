@@ -1,7 +1,15 @@
 """Genera docs/guion.md a partir de index.html y del glosario de js/datos.js, para que el guion
-y el sitio no se separen nunca. Uso: python3 herramientas/guion.py > docs/guion.md   (necesita Node para leer el glosario)
+y el sitio no se separen nunca. Necesita Node para leer el glosario.
+
+Uso:  py herramientas/guion.py             escribe docs/guion.md (UTF-8, finales de línea LF), desde cualquier carpeta
+      py herramientas/guion.py --salida -  lo saca por pantalla en vez de escribirlo
+
+Escribe el archivo él mismo: en Windows, «> docs/guion.md» falla con algunos caracteres en la consola,
+y en PowerShell 5.1 el «>» escribe en UTF-16.
 """
-import json, re, subprocess, sys
+import json, pathlib, re, subprocess, sys
+
+RAIZ = pathlib.Path(__file__).resolve().parent.parent
 from html.parser import HTMLParser
 
 class Lector(HTMLParser):
@@ -31,13 +39,13 @@ class Lector(HTMLParser):
     def handle_data(self, d):
         if self.txt is not None: self.txt.append(d)
 
-html = open('index.html', encoding='utf-8').read()
+html = (RAIZ / 'index.html').read_text(encoding='utf-8')
 html = re.sub(r'<details class="formatos">.*?</details>', '', html, flags=re.S)   # selector de formatos de prueba: no es contenido
 # Calendario de la casilla 7: cada hito sale como «fecha — qué pasa: explicación (fuente)».
 html = re.sub(r'<li class="fase">(.*?)</li>', r'<li>\1</li>', html)
 html = re.sub(r'<li class="hito[^"]*"[^>]*><button[^>]*>(.*?)</button><span class="que">(.*?)</span><span class="tip"[^>]*>(.*?) <small>(.*?)</small></span></li>', r'<li>\1 — \2: \3 (\4)</li>', html)
 L = Lector(); L.feed(html)
-glos = json.loads(subprocess.run(['node', '--input-type=module', '-e', "import {GLOS} from './js/datos.js'; console.log(JSON.stringify(GLOS))"], capture_output=True, text=True, encoding='utf-8', check=True).stdout)
+glos = json.loads(subprocess.run(['node', '--input-type=module', '-e', "import {GLOS} from './js/datos.js'; console.log(JSON.stringify(GLOS))"], capture_output=True, text=True, encoding='utf-8', check=True, cwd=RAIZ).stdout)
 o = ['# Guion · De las urnas a la Moncloa', '',
      'Generado desde `index.html` con `herramientas/guion.py`: es, palabra por palabra, el texto que lleva el sitio.',
      'Cada cajón «saber más» lleva al final sus fuentes. Los textos que dependen de los datos (provincia elegida, resultados) se rellenan solos y aquí aparecen vacíos.', '']
@@ -55,4 +63,9 @@ for g in sorted(glos.values(), key=lambda g: g[0].lower()): o.append('- **%s.** 
 cajones = sum(len([m for m in s['mas'] if m['t'] != 'Glosario completo']) for s in L.secs)
 palabras = sum(len(' '.join(m['p']).split()) for s in L.secs for m in s['mas'])
 o += ['', '# Recuento', '', '- Cajones «saber más»: %d (%d palabras).' % (cajones, palabras), '- Términos de glosario: %d.' % len(glos)]
-print('\n'.join(o))
+texto = '\n'.join(o) + '\n'
+if sys.argv[1:] == ['--salida', '-']:
+    sys.stdout.reconfigure(encoding='utf-8'); sys.stdout.write(texto)
+else:
+    (RAIZ / 'docs' / 'guion.md').write_text(texto, encoding='utf-8', newline='\n')
+    print('docs/guion.md: %d renglones, %d cajones, %d entradas de glosario' % (texto.count('\n'), cajones, len(glos)))   # sin tildes: la consola de Windows no siempre las escribe bien
