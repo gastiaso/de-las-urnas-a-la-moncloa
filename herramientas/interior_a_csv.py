@@ -166,6 +166,16 @@ def traducir(prov, tabla):
     return graves
 
 
+def tabla_siglas(siglas=None, alias=()):
+    """Tabla de traducción: los archivos de siglas (por defecto, datos/siglas.csv) y los --alias SIGLAS=ID."""
+    tabla = {}
+    for s in siglas or [str(RAIZ / 'datos' / 'siglas.csv')]: tabla.update(leer_siglas(s))
+    for x in alias:
+        if '=' not in x: sys.exit('ERROR: --alias necesita SIGLAS=ID, por ejemplo --alias "UPN-PP=UPN"')
+        s, i = x.rsplit('=', 1); tabla[clave_siglas(s)] = i.strip()
+    return tabla
+
+
 def main():
     a = argparse.ArgumentParser(description=__doc__.split('\n')[0])
     a.add_argument('formato', choices=['dat', 'largo']); a.add_argument('entrada')
@@ -174,15 +184,15 @@ def main():
     a.add_argument('--siglas', action='append', help='tabla de siglas; se puede repetir (por defecto, datos/siglas.csv)')
     a.add_argument('--alias', action='append', default=[], metavar='SIGLAS=ID', help='traducción extra; se puede repetir')
     o = a.parse_args()
-
-    tabla = {}
-    for s in o.siglas or [str(RAIZ / 'datos' / 'siglas.csv')]: tabla.update(leer_siglas(s))
-    for x in o.alias:
-        if '=' not in x: sys.exit('ERROR: --alias necesita SIGLAS=ID, por ejemplo --alias "UPN-PP=UPN"')
-        s, i = x.rsplit('=', 1); tabla[clave_siglas(s)] = i.strip()
+    tabla = tabla_siglas(o.siglas, o.alias)
     prov = leer_dat(o.entrada) if o.formato == 'dat' else leer_largo(o.entrada)
-
     if not prov: sys.exit('ERROR: %s no tiene datos' % o.entrada)
+    convertir(prov, tabla, o.csv, o.oficiales)
+
+
+def convertir(prov, tabla, salida_csv, salida_oficiales=None):
+    """Traduce las siglas y escribe el CSV de resultados.py y, si se pide, el de escaños oficiales.
+    Lo usan main() y capturar_web.py. Devuelve prov con los votos ('votos') y escaños ('esc') por id."""
     faltan = [n for n in NOMBRES if n not in prov]
     if faltan: print('AVISO: faltan %d circunscripciones: %s' % (len(faltan), ', '.join(faltan)), file=sys.stderr)
     graves = traducir(prov, tabla)
@@ -207,19 +217,19 @@ def main():
         print('AVISO: sin censo o votantes en %d circunscripciones (%s): el CSV va sin censo, votantes ni nulos '
               'y la web no dará la participación.' % (len(sin), ', '.join(sin[:6]) + ('...' if len(sin) > 6 else '')), file=sys.stderr)
     cab = ['district', 'escanos', 'validos'] + ids + ['OTROS', 'BLANCO'] + (['censo', 'votantes', 'nulos'] if con_censo else [])
-    with open(o.csv, 'w', encoding='utf-8', newline='') as f:
+    with open(salida_csv, 'w', encoding='utf-8', newline='') as f:
         w = csv.writer(f, lineterminator='\n'); w.writerow(cab)
         for n in NOMBRES:
             if n not in prov: continue
             p = prov[n]
             w.writerow([n, p['escanos'], p['validos']] + [p['votos'][i] for i in ids] + [p['votos']['OTROS'], p['blancos']]
                        + ([p['censo'], p['votantes'], p['nulos'] or 0] if con_censo else []))
-    print('Escrito %s: %d circunscripciones, partidos %s.' % (o.csv, len(prov), ', '.join(ids)), file=sys.stderr)
+    print('Escrito %s: %d circunscripciones, partidos %s.' % (salida_csv, len(prov), ', '.join(ids)), file=sys.stderr)
 
-    if o.oficiales:
+    if salida_oficiales:
         sin = [n for n in NOMBRES if n in prov and not prov[n]['con_escanos']]
         if sin: print('AVISO: sin escaños oficiales en %d circunscripciones (no van al CSV de oficiales): %s' % (len(sin), ', '.join(sin)), file=sys.stderr)
-        with open(o.oficiales, 'w', encoding='utf-8', newline='') as f:
+        with open(salida_oficiales, 'w', encoding='utf-8', newline='') as f:
             w = csv.writer(f, lineterminator='\n'); w.writerow(['provincia', 'partido', 'escanos'])
             for n in NOMBRES:
                 if n in prov and prov[n]['con_escanos']:
@@ -227,7 +237,8 @@ def main():
                         if e: w.writerow([n, i, e])
         tot = collections.Counter()
         for p in prov.values(): tot.update(p['esc'])
-        print('Escrito %s: %d escaños (%s).' % (o.oficiales, sum(tot.values()), ', '.join('%s %d' % x for x in tot.most_common() if x[1])), file=sys.stderr)
+        print('Escrito %s: %d escaños (%s).' % (salida_oficiales, sum(tot.values()), ', '.join('%s %d' % x for x in tot.most_common() if x[1])), file=sys.stderr)
+    return prov
 
 
 if __name__ == '__main__':

@@ -120,6 +120,7 @@ En Windows, `herramientas/escribir_resultados.py` (mismos argumentos) hace lo mi
 Otras herramientas para la noche electoral:
 
 - `herramientas/interior_a_csv.py` pasa al CSV de `resultados.py` los ficheros de resultados del Ministerio del Interior (formato de infoelectoral) o un CSV largo hecho a mano (`datos/plantilla_largo.csv`). Las siglas se traducen a los partidos de la web con `datos/siglas.csv`.
+- `herramientas/capturar_web.py` lee los resultados de la web oficial de resultados, provincia a provincia, si sirve JSON como la del 23J, y escribe los mismos CSV. Sin credenciales y con una pausa entre peticiones. `herramientas/simular_web.py` monta una copia de esa web con los ficheros oficiales del 23J, para ensayar.
 - `herramientas/cotejar_escanos.py` recalcula el reparto y lo compara, provincia a provincia, con los escaños oficiales (`datos/plantilla_oficiales.csv`). Con los ficheros oficiales del 23J da los 350 escaños sin ninguna diferencia (`datos/escanos_oficiales_23J.csv`).
 
 Las calculadoras de pactos se pueden compartir: la combinación va en la dirección (`?p6=PSOE:s,PNV:a` para el paso 6, `?p12=` para el 12).
