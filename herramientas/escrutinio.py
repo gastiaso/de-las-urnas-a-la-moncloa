@@ -135,15 +135,30 @@ def reparto(escanos, votos, validos, barrera=0.03):
     return seats, q, avisos
 
 
+def hasta_barrera(v, validos, barrera=0.03):
+    """Votos que le faltan a una candidatura para llegar a la barrera; al sumárselos también crecen los válidos."""
+    x = max(0, math.ceil((barrera * validos - v) / (1 - barrera)))
+    while (v + x) / (validos + x) < barrera: x += 1
+    while x > 0 and (v + x - 1) / (validos + x - 1) >= barrera: x -= 1
+    return x
+
+
 def faltan_para_ultimo(escanos_por_id, votos, validos, barrera=0.03):
-    """Para el último escaño: quién se lo llevó y cuántos votos le faltaron al rival más cercano (como la web)."""
+    """Para el último escaño: quién se lo llevó y cuántos votos le faltaron al rival más cercano, con la cuenta de
+    js/dhondt.js desde F17a: en enteros; a igual cociente gana la de más votos (LOREG, art. 163.1.d); y cuenta también
+    a las que no llegan a la barrera, con los votos que les faltan para pasarla."""
     dentro = [(i, v) for i, v in votos if v > 0 and v / validos >= barrera]
-    cocientes = [(v / escanos_por_id[i], i) for i, v in dentro if escanos_por_id[i]]
+    # El último escaño dado: el cociente más bajo de los que tienen escaño (a igual cociente, el de menos votos;
+    # y a igualdad de votos, el que va después en la lista, como en el reparto).
+    cocientes = [(v / escanos_por_id[i], v, -k, i) for k, (i, v) in enumerate(dentro) if escanos_por_id[i]]
     if not cocientes: return None
-    q, ultimo = min(cocientes)
+    _, vu, _, ultimo = min(cocientes)
+    su = escanos_por_id[ultimo]
     rival = None
-    for i, v in dentro:
-        if i == ultimo: continue
-        faltan = math.floor(q * (escanos_por_id[i] + 1) - v) + 1
+    for i, v in votos:
+        if i == ultimo or v <= 0: continue
+        d = vu * (escanos_por_id[i] + 1) - v * su   # lo que le falta, multiplicado por los escaños del último
+        faltan = d // su if d % su == 0 and v + d // su > vu else d // su + 1
+        if (i, v) not in dentro: faltan = max(faltan, hasta_barrera(v, validos, barrera))
         if rival is None or faltan < rival[1]: rival = (i, faltan)
     return (ultimo, rival) if rival else None
