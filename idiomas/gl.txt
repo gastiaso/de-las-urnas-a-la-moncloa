@@ -1011,6 +1011,9 @@ gl: Como se calcula o que faltou
 es: El último escaño se lo lleva la división más alta que quedaba en la tabla. Lo que le faltó al partido que se quedó más cerca es cuántos votos más habría necesitado para que su división superase a esa, sin que cambie nada más.
 gl: O último escano lévao a división máis alta que quedaba na táboa. O que lle faltou ao partido que quedou máis preto é cantos votos máis necesitaría para que a súa división superase esa, sen que cambie nada máis.
 
+es: Si ese partido no llegaba al 3 %, se cuentan también los votos que le faltaban para pasar la barrera. Y si las dos divisiones empatan, el escaño es del partido con más votos.
+gl: Se ese partido non chegaba ao 3 %, cóntanse tamén os votos que lle faltaban para superar a barreira. E se as dúas divisións empatan, o escano é para o partido con máis votos.
+
 es: Es una cuenta sobre el papel: en la realidad, si un partido sube, otros bajan.
 gl: É unha conta sobre o papel: na realidade, se un partido sobe, outros baixan.
 

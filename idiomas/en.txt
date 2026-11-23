@@ -1012,6 +1012,9 @@ en: How the shortfall is calculated
 es: El último escaño se lo lleva la división más alta que quedaba en la tabla. Lo que le faltó al partido que se quedó más cerca es cuántos votos más habría necesitado para que su división superase a esa, sin que cambie nada más.
 en: The last seat goes to the highest result left in the table. The shortfall of the party that came closest is how many more votes it would have needed for its own result to beat that one, with nothing else changing.
 
+es: Si ese partido no llegaba al 3 %, se cuentan también los votos que le faltaban para pasar la barrera. Y si las dos divisiones empatan, el escaño es del partido con más votos.
+en: If that party was below 3%, the votes it needed to pass the threshold also count. And if the two results tie, the seat goes to the party with more votes.
+
 es: Es una cuenta sobre el papel: en la realidad, si un partido sube, otros bajan.
 en: It is a calculation on paper: in reality, if one party goes up, others go down.
 

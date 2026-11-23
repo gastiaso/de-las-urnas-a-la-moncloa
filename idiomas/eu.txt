@@ -1011,6 +1011,9 @@ eu: Nola kalkulatzen den zenbat falta izan zen
 es: El último escaño se lo lleva la división más alta que quedaba en la tabla. Lo que le faltó al partido que se quedó más cerca es cuántos votos más habría necesitado para que su división superase a esa, sin que cambie nada más.
 eu: Azken eserlekua taulan geratzen zen zatidura handienak lortzen du. Gertuen geratu zen alderdiari falta izan zitzaiona hau da: zenbat boto gehiago beharko zituen bere zatidurak hura gainditzeko, beste ezer aldatu gabe.
 
+es: Si ese partido no llegaba al 3 %, se cuentan también los votos que le faltaban para pasar la barrera. Y si las dos divisiones empatan, el escaño es del partido con más votos.
+eu: Alderdi hori % 3ra iristen ez bazen, langa gainditzeko falta zitzaizkion botoak ere zenbatzen dira. Eta bi zatidurak berdinak badira, boto gehien dituen alderdiarentzat da eserlekua.
+
 es: Es una cuenta sobre el papel: en la realidad, si un partido sube, otros bajan.
 eu: Paper gaineko kalkulua da: errealitatean, alderdi bat igotzen bada, beste batzuk jaitsi egiten dira.
 
