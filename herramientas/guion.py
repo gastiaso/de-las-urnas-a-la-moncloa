@@ -35,7 +35,7 @@ html = open('index.html', encoding='utf-8').read()
 html = re.sub(r'<details class="formatos">.*?</details>', '', html, flags=re.S)   # selector de formatos de prueba: no es contenido
 # Calendario de la casilla 7: cada hito sale como «fecha — qué pasa: explicación (fuente)».
 html = re.sub(r'<li class="fase">(.*?)</li>', r'<li>\1</li>', html)
-html = re.sub(r'<li class="hito[^"]*"><button[^>]*>(.*?)</button><span class="que">(.*?)</span><span class="tip"[^>]*>(.*?) <small>(.*?)</small></span></li>', r'<li>\1 — \2: \3 (\4)</li>', html)
+html = re.sub(r'<li class="hito[^"]*"[^>]*><button[^>]*>(.*?)</button><span class="que">(.*?)</span><span class="tip"[^>]*>(.*?) <small>(.*?)</small></span></li>', r'<li>\1 — \2: \3 (\4)</li>', html)
 L = Lector(); L.feed(html)
 glos = json.loads(subprocess.run(['node', '--input-type=module', '-e', "import {GLOS} from './js/datos.js'; console.log(JSON.stringify(GLOS))"], capture_output=True, text=True, encoding='utf-8', check=True).stdout)
 o = ['# Guion · De las urnas a la Moncloa', '',
