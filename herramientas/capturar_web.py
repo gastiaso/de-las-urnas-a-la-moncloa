@@ -26,7 +26,7 @@ Uso (desde la carpeta del repositorio; cada orden en una sola línea):
   py herramientas/capturar_web.py --carpeta ../descargas/interior/web_29N/20261129-231500 --csv ...   (sin red)
 --base también acepta una carpeta con la misma estructura que la web (la que escribe simular_web.py, para ensayar).
 """
-import argparse, collections, csv, datetime, gzip, hashlib, json, pathlib, re, sys, time, urllib.error, urllib.request
+import argparse, collections, csv, datetime, gzip, hashlib, http.client, json, pathlib, re, sys, time, urllib.error, urllib.request
 from escrutinio import DECRETO, INE, NOMBRES, clave_siglas, provincia, sin_acentos
 from interior_a_csv import convertir, tabla_siglas
 
@@ -73,18 +73,20 @@ class Lector:
             if ':' not in c: para('--cabecera necesita «Nombre: valor»')
             k, v = c.split(':', 1); self.cab[k.strip()] = v.strip()
         self.guardar = None
-        if guardar:
+        if guardar:   # la subcarpeta se crea con el primer archivo: si nada responde, no queda una carpeta vacía
             self.guardar = pathlib.Path(guardar) / datetime.datetime.now().strftime('%Y%m%d-%H%M%S')
-            self.guardar.mkdir(parents=True, exist_ok=False)
 
     def bajar(self, ruta, nombre):
-        if self.web:
+        if pathlib.Path(ruta).is_file():   # un archivo ya guardado (el nomenclátor bajado con el navegador, por ejemplo)
+            datos = pathlib.Path(ruta).read_bytes()
+        elif self.web:
             datos = self._http(self.base.rstrip('/') + '/' + ruta.lstrip('/'))
         else:
             p = pathlib.Path(self.base, *[x for x in ruta.split('?')[0].split('/') if x])
             if not p.is_file(): para('no existe %s' % p)
             datos = p.read_bytes()
         if self.guardar:   # cada archivo con su huella en el momento, aunque luego algo falle
+            self.guardar.mkdir(parents=True, exist_ok=True)
             (self.guardar / nombre).write_bytes(datos)
             with open(self.guardar / 'SHA256SUMS.txt', 'a', encoding='utf-8', newline='\n') as f:
                 f.write('%s *%s\n' % (hashlib.sha256(datos).hexdigest(), nombre))
@@ -108,14 +110,14 @@ class Lector:
                 if e.code != 429 and e.code < 500: para('%s responde %d' % (url, e.code))
                 motivo = 'HTTP %d' % e.code
                 retraso = min(60, int(e.headers.get('Retry-After') or 0) or 10 * (intento + 1))
-            except (urllib.error.URLError, TimeoutError, ConnectionError) as e:
-                motivo, retraso = str(getattr(e, 'reason', e)), 5 * (intento + 1)
+            except (urllib.error.URLError, TimeoutError, ConnectionError, http.client.HTTPException) as e:
+                motivo, retraso = str(getattr(e, 'reason', e)) or type(e).__name__, 5 * (intento + 1)
             if intento < 3:
                 aviso('%s: %s. Otro intento dentro de %d s.' % (url, motivo, retraso)); time.sleep(retraso)
         para('%s no responde tras 4 intentos' % url)
 
     def cerrar(self, nota):
-        if not self.guardar: return
+        if not self.guardar or not self.guardar.is_dir(): return
         (self.guardar / 'captura.txt').write_text(nota, encoding='utf-8')
         print('JSON guardados en %s (con SHA256SUMS.txt). Se pueden volver a leer con --carpeta.' % self.guardar)
 
@@ -300,7 +302,7 @@ def main():
     a.add_argument('--ruta', default=RUTA, help='ruta del escrutinio de cada ámbito (por defecto, la del 23J: %(default)s)')
     a.add_argument('--mapa', action='store_true', help='una sola petición: el total nacional con el mapa de las provincias')
     a.add_argument('--ruta-mapa', default=RUTA_MAPA, help='ruta del total nacional con el mapa (por defecto, %(default)s)')
-    a.add_argument('--nomenclator', default=NOMENCLATOR, help='ruta del nomenclátor (por defecto, %(default)s)')
+    a.add_argument('--nomenclator', default=NOMENCLATOR, help='ruta del nomenclátor en la web, o un archivo ya guardado (por defecto, %(default)s)')
     a.add_argument('--eleccion', type=int, default=2, help='elección en el nomenclátor (2 = Congreso, como el 23J)')
     a.add_argument('--guardar', metavar='CARPETA', help='guardar cada JSON bajado en una subcarpeta con la fecha y la hora')
     a.add_argument('--csv', help='CSV de salida para resultados.py')
@@ -343,7 +345,8 @@ def main():
         if '{scope}' in o.ruta:
             nac_id, ids = del_nomenclator(lector.bajar(o.nomenclator, 'nomenclator.json'), o.eleccion)
         codigos = [c for c, n in sorted(INE.items(), key=lambda x: NOMBRES.index(x[1])) if not solo or n in solo]
-        print('Bajando %d provincias de %s (una petición cada %s s)...' % (len(codigos), o.base, coma(o.pausa, 1)), file=sys.stderr)
+        print('Bajando %d provincias de %s%s...' % (len(codigos), o.base, ' (una petición cada %s s)' % coma(o.pausa, 1) if lector.web else ''),
+              file=sys.stderr)
         leidas, nac = {}, None
         for c in codigos:
             n = INE[c]
