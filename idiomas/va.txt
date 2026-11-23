@@ -958,8 +958,8 @@ va: 9 · Què ha passat
 es: Cómo leer el mapa
 va: Com llegir el mapa
 
-es: Cada hexágono es un escaño y lleva el color del partido que lo ha ganado. Las provincias grandes ocupan más porque reparten más escaños, no porque tengan más territorio.
-va: Cada hexàgon és un escó i porta el color del partit que l'ha guanyat. Les províncies grans ocupen més perquè repartixen més escons, no perquè tinguen més territori.
+es: Cada hexágono es un escaño, con el color del partido al que le corresponde según el recuento. Las provincias grandes ocupan más porque reparten más escaños, no porque tengan más territorio.
+va: Cada hexàgon és un escó, amb el color del partit a qui correspon segons el recompte. Les províncies grans ocupen més perquè repartixen més escons, no perquè tinguen més territori.
 
 es: Explicación propia.
 va: Explicació pròpia.
@@ -970,11 +970,14 @@ va: Provisional i oficial
 es: Lo que se conoce la noche electoral es un recuento provisional. El oficial lo hacen las juntas electorales cinco días después, y es entonces cuando se suma el voto llegado del extranjero.
 va: El que es coneix la nit electoral és un recompte provisional. L'oficial el fan les juntes electorals cinc dies després, i és aleshores quan se suma el vot arribat de l'estranger.
 
+es: Ese voto puede mover los escaños más ajustados: por eso el reparto oficial puede no coincidir con el de la noche. En 2023 cambió uno de Madrid, que pasó del PSOE al PP. Sin ese voto, el PP sumaba 136 escaños y el PSOE, 122; con él, 137 y 121.
+va: Eixe vot pot moure els escons més ajustats: per això el repartiment oficial pot no coincidir amb el de la nit. En 2023 en va canviar un de Madrid, que va passar del PSOE al PP. Sense eixe vot, el PP sumava 136 escons i el PSOE, 122; una vegada sumat, 137 i 121.
+
 es: Después se proclaman los elegidos. Desde ese momento hay tres días para recurrir, y los recursos los resuelve el Tribunal Supremo.
 va: Després es proclamen els elegits. Des d'eixe moment hi ha tres dies per a recórrer, i els recursos els resol el Tribunal Suprem.
 
-es: Fuentes: LOREG, arts. 75, 98, 103, 108 y 112.
-va: Fonts: LOREG, arts. 75, 98, 103, 108 i 112.
+es: Fuentes: LOREG, arts. 75, 98, 103, 108 y 112. 2023: cálculo propio con los resultados oficiales del Ministerio del Interior.
+va: Fonts: LOREG, arts. 75, 98, 103, 108 i 112. 2023: càlcul propi amb els resultats oficials del Ministeri de l'Interior.
 
 es: Qué son los votos válidos
 va: Què són els vots vàlids
@@ -1063,8 +1066,8 @@ va: La primera cosa exigix reformar la Constitució. La segona, majoria absoluta
 es: 12 · ¿Quién gobierna?
 va: 12 · Qui governa?
 
-es: Estos son los escaños de verdad. Toca cada partido para cambiar su voto en la investidura: no, sí o abstención.
-va: Estos són els escons de veritat. Toca cada partit per a canviar el seu vot en la investidura: no, sí o abstenció.
+es: Estos son los escaños del 29N. Toca cada partido para cambiar su voto en la investidura: no, sí o abstención.
+va: Estos són els escons del 29N. Toca cada partit per a canviar el seu vot en la investidura: no, sí o abstenció.
 
 es: Qué mirar en una negociación
 va: Què mirar en una negociació

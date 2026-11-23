@@ -11,6 +11,9 @@ const { escanos: plural, miles, pct } = T;
 const calma = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
 // La fase 2 se abre para todos con RES.abierta; para verla antes, añadir #fase2 a la dirección.
 export const FASE2 = RES.abierta || location.hash === '#fase2';
+// Hasta el escrutinio general (4-dic), los resultados son provisionales y los textos lo dicen. Se quita con
+// herramientas/resultados.py --general; si js/resultados.js no lo trae, se da por provisional.
+const PROVISIONAL = RES.provisional !== false;
 
 /* G: setProv, resetBet, reveal, setSen, setPact, setRes, setProvRes, setPact2 (pueden no hacer nada).
    anuncia(texto): mensaje para lectores de pantalla. enLectura(): si se está en modo de solo texto. */
@@ -263,6 +266,8 @@ function pintaProvRes() {
   $('#u10').textContent = p.rep.ultimo && p.rep.rival
     ? T.ultimo(nom(p.rep.ultimo.id), nom(p.rep.rival.id), p.rep.rival.faltan)
     : (p.rep.ultimo ? T.unico(nom(p.rep.ultimo.id)) : '');
+  // mientras sea provisional, el aviso de que puede cambiar va detrás, sin negrita
+  if (PROVISIONAL && p.rep.rival) { const s = document.createElement('span'); s.style.fontWeight = 'normal'; s.textContent = T.provisionalUltimo; $('#u10').appendChild(s); }
   G.setProvRes(p.rep.order.map(id => R.partidos.find(q => q.id === id).color), p.e);
   preparaYsi();
 }
@@ -317,6 +322,7 @@ if (FASE2) {
     const censo = RES.prov.reduce((x, p) => x + p.censo, 0), vot = RES.prov.reduce((x, p) => x + p.votantes, 0);
     $('#r9').textContent += T.participacion(pct(vot / censo));
   }
+  if (PROVISIONAL) { $('#r9').textContent += T.provisionalRes; $('#n12').textContent = T.provisional12; $('#n12').hidden = false; }
   $('#t9').innerHTML = '<table><tr><th>' + T.partido + '</th><th>' + T.thVotos + '</th><th>' + T.thEscanos + '</th></tr>' + orden.filter(q => q.esc > 0).map(q => '<tr><td>' + pt(q) + q.nombre + '</td><td>' + pct(q.votos / val) + '</td><td>' + q.esc + '</td></tr>').join('') + '</table>';
   $('#f9').textContent = T.fuenteRes(RES.prueba, etiqueta, T.dato(RES.fuente));
   /* 11 */

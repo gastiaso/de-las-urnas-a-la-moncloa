@@ -959,8 +959,8 @@ en: 9 · What happened
 es: Cómo leer el mapa
 en: How to read the map
 
-es: Cada hexágono es un escaño y lleva el color del partido que lo ha ganado. Las provincias grandes ocupan más porque reparten más escaños, no porque tengan más territorio.
-en: Each hexagon is a seat, in the colour of the party that won it. Big provinces take up more room because they elect more seats, not because they have more territory.
+es: Cada hexágono es un escaño, con el color del partido al que le corresponde según el recuento. Las provincias grandes ocupan más porque reparten más escaños, no porque tengan más territorio.
+en: Each hexagon is a seat, in the colour of the party it goes to according to the count. Big provinces take up more room because they elect more seats, not because they have more territory.
 
 es: Explicación propia.
 en: Own explanation.
@@ -971,11 +971,14 @@ en: Provisional and official
 es: Lo que se conoce la noche electoral es un recuento provisional. El oficial lo hacen las juntas electorales cinco días después, y es entonces cuando se suma el voto llegado del extranjero.
 en: What is known on election night is a provisional count. The official one is carried out by the electoral boards five days later, and that is when the votes from abroad are added.
 
+es: Ese voto puede mover los escaños más ajustados: por eso el reparto oficial puede no coincidir con el de la noche. En 2023 cambió uno de Madrid, que pasó del PSOE al PP. Sin ese voto, el PP sumaba 136 escaños y el PSOE, 122; con él, 137 y 121.
+en: Those votes can move the closest seats, so the official share-out may not match the one on election night. In 2023 they moved one in Madrid from the PSOE to the PP. Without them, the PP had 136 seats and the PSOE 122; with them, 137 and 121.
+
 es: Después se proclaman los elegidos. Desde ese momento hay tres días para recurrir, y los recursos los resuelve el Tribunal Supremo.
 en: Those elected are then proclaimed. From that moment there are three days to appeal, and appeals are decided by the Supreme Court.
 
-es: Fuentes: LOREG, arts. 75, 98, 103, 108 y 112.
-en: Sources: LOREG, arts. 75, 98, 103, 108 and 112.
+es: Fuentes: LOREG, arts. 75, 98, 103, 108 y 112. 2023: cálculo propio con los resultados oficiales del Ministerio del Interior.
+en: Sources: LOREG, arts. 75, 98, 103, 108 and 112. 2023: own calculation with the official results of the Ministry of the Interior.
 
 es: Qué son los votos válidos
 en: What valid votes are
@@ -1064,8 +1067,8 @@ en: The first requires amending the Constitution. The second, an absolute majori
 es: 12 · ¿Quién gobierna?
 en: 12 · Who governs?
 
-es: Estos son los escaños de verdad. Toca cada partido para cambiar su voto en la investidura: no, sí o abstención.
-en: These are the real seats. Tap each party to change how it votes in the investiture: no, yes or abstain.
+es: Estos son los escaños del 29N. Toca cada partido para cambiar su voto en la investidura: no, sí o abstención.
+en: These are the seats from 29 November. Tap each party to change how it votes in the investiture: no, yes or abstain.
 
 es: Qué mirar en una negociación
 en: What to watch in a negotiation

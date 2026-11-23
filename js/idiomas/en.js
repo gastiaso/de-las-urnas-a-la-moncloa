@@ -1,6 +1,6 @@
 // Textos del JavaScript en inglés. Mismas entradas que js/textos.js.
 // La edición inglesa está adaptada para un lector de fuera de España: no habla de «tu voto», sino de un voto que se sigue.
-import { idioma, parteFecha } from '../textos.js';
+import { idioma, parteFecha, parteEscrutado, ARTICULO } from '../textos.js';
 
 // Las 52 circunscripciones, en el orden de PROV (js/datos.js): [en los desplegables, dentro de una frase]
 const N = [['Albacete'], ['Alicante'], ['Almería'], ['Álava'], ['Asturias'], ['Ávila'], ['Badajoz'], ['Balearic Islands', 'the Balearic Islands'], ['Barcelona'], ['Bizkaia'],
@@ -16,6 +16,8 @@ const sies = n => n + (n === 1 ? ' yes vote' : ' yes votes');
 const miles = n => Math.round(n).toLocaleString('en-GB');
 const dec = x => x.toFixed(1);
 const diputados = (i, n) => n === 1 ? 'The deputy for ' + prov(i) : 'The ' + n + ' deputies for ' + prov(i);
+// Partidos con artículo (ARTICULO, en js/textos.js): «the PP», «the PSOE»; sin él, «Vox», «Sumar». b: en negrita, con el artículo fuera.
+const theP = (p, b) => (ARTICULO[p] ? 'the ' : '') + (b ? '<b>' + p + '</b>' : p);
 const MESES = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 // Textos que llegan en castellano dentro de js/resultados.js (los escribe herramientas/resultados.py)
 const DATOS = {
@@ -23,6 +25,9 @@ const DATOS = {
   'ministerio del interior, escrutinio del 23j (datos reunidos en porra electoral)': 'Ministry of the Interior, count of the 23 July election (data compiled by Porra Electoral)',
   'escrutinio provisional del 29 de noviembre de 2026': 'provisional count of 29 November 2026',
   'ministerio del interior': 'Ministry of the Interior',
+  'ministerio del interior, escrutinio provisional': 'Ministry of the Interior, provisional count',
+  'escrutinio general del 4 de diciembre de 2026': 'general count of 4 December 2026',
+  'ministerio del interior, escrutinio general': 'Ministry of the Interior, general count',
   '29 nov': '29 Nov', '4 dic': '4 Dec', '23 dic': '23 Dec', 'sin fecha': 'No date', '1.ª votación': '1st vote', '48 h después': '48 h later', 'gobierno': 'Government',
   'votación.': 'Polling day.',
   'escrutinio general: el recuento oficial.': 'General count: the official tally.',
@@ -80,7 +85,8 @@ export const textos = {
     hemiciclo: ["The chamber (hemiciclo)", "The debating chamber of Congress, with the seats laid out in a half-circle."]
   },
   fecha: f => { const x = parteFecha(f); return x ? x.d + ' ' + MESES[x.m - 1] + ' ' + x.a : f; },
-  dato: s => DATOS[String(s).toLowerCase()] || s,
+  // la etiqueta de la noche lleva el porcentaje escrutado: «…, with 99.9% of the vote counted»
+  dato: s => { const e = parteEscrutado(s); return e ? (DATOS[e.t.toLowerCase()] || e.t) + ', with ' + e.n.replace(',', '.') + '% of the vote counted' : DATOS[String(s).toLowerCase()] || s; },
 
   /* el escenario */
   ariaEscenario: 'The 350 seats in Congress, which change shape at every step. The gold hexagon is the vote being followed.',
@@ -95,7 +101,7 @@ export const textos = {
     5: '176 of 350: the absolute majority',
     7: 'The Congress that will choose the prime minister<small>The two-month deadline starts with the first vote.</small>',
     8: '350 seats',
-    9: 'Each seat in the colour of the party that won it',
+    9: 'Each seat in the colour of its party',
     10: may(prov(i)) + ': ' + escanos(n),
     11: 'The Congress that came out of the ballot boxes',
     13: 'The Congress that came out of the ballot boxes',
@@ -131,8 +137,8 @@ export const textos = {
       case 6: return diputados(i, n) + (uno ? ' usually votes with their party.' : ' usually vote with their party.') + ' The vote being followed stands apart, below the chamber: which bloc it would be in depends on the party it went to.';
       case 7: return 'On the night of 29 November, that ballot paper is counted at its polling station in ' + nom + ', in public and out loud.';
       case 8: return 'That is the path of one ballot paper cast in ' + nom + ': from the ballot box to La Moncloa.';
-      case 10: return primero ? 'The gold hexagon is the first seat shared out in ' + nom + ': it went to <b>' + primero + '</b>.' : '';
-      case 11: case 12: return primero ? 'The gold hexagon is the first seat in ' + nom + ': it went to <b>' + primero + '</b>, the party with most votes there.' : '';
+      case 10: return primero ? 'The gold hexagon is the first seat shared out in ' + nom + ': it went to ' + theP(primero, true) + '.' : '';
+      case 11: case 12: return primero ? 'The gold hexagon is the first seat in ' + nom + ': it went to ' + theP(primero, true) + ', the party with most votes there.' : '';
       default: return '';
     }
   },
@@ -202,19 +208,22 @@ export const textos = {
 
   /* fase 2 */
   avisoPrueba: etiqueta => 'Preview with test data: ' + etiqueta + '. These are not the results of 29 November.',
-  masEscanos: (nombre, n, pctVotos, absoluta) => nombre + ' is the party with most seats: ' + n + ', with ' + pctVotos + ' of the vote. ' + (absoluta ? 'That is more than the 176 of an absolute majority.' : 'No party reaches the 176 of an absolute majority on its own.'),
+  masEscanos: (nombre, n, pctVotos, absoluta) => may(theP(nombre)) + ' is the party with most seats: ' + n + ', with ' + pctVotos + ' of the vote. ' + (absoluta ? 'That is more than the 176 of an absolute majority.' : 'No party reaches the 176 of an absolute majority on its own.'),
   participacion: p => ' Turnout was ' + p + ' of the electoral register.',
+  provisionalRes: ' These are provisional results until the general count on 4 December, which adds the votes from abroad.',
   thVotos: 'Votes',
   thEscanos: 'Seats',
   thPorEscano: 'Votes per seat',
-  fuenteRes: (prueba, etiqueta, fuente) => (prueba ? 'Test data: ' + etiqueta : may(etiqueta)) + '. Source: ' + fuente + '. The seats are calculated here from the votes in each province.',
+  fuenteRes: (prueba, etiqueta, fuente) => (prueba ? 'Test data: ' + etiqueta : may(etiqueta)) + '. Source: ' + fuente + '. The seats are calculated here from the votes in each province; the official ones are proclaimed by the electoral boards.',
   repartia: (i, n) => 'There ' + (n === 1 ? 'was ' : 'were ') + escanos(n) + ' to share out in ' + prov(i) + '.',
-  ultimo: (ganador, rival, votos) => 'The last seat went to ' + ganador + '. ' + rival + ' fell ' + miles(votos) + ' votes short of taking it.',
-  unico: ganador => 'The seat went to ' + ganador + '.',
+  ultimo: (ganador, rival, votos) => 'The last seat went to ' + theP(ganador) + '. ' + may(theP(rival)) + ' fell ' + (votos === 1 ? '1 vote' : miles(votos) + ' votes') + ' short of taking it.',
+  provisionalUltimo: ' This is the provisional count: the votes from abroad, added on 4 December, could change it.',
+  unico: ganador => 'The seat went to ' + theP(ganador) + '.',
+  provisional12: 'These are the seats from the provisional count. The general count on 4 December adds the votes from abroad and could move some of them.',
   votos: n => miles(n) + ' votes',
   ysiIguales: 'Choose two different parties.',
-  ysiCambia: (n, de, a, ultimo) => 'With ' + miles(n) + ' votes moved from ' + de + ' to ' + a + ', the share-out changes. The last seat would go to ' + ultimo + '.',
-  ysiNoCambia: (n, ultimo) => 'With ' + miles(n) + ' votes moved, the share-out does not change. The last seat still goes to ' + ultimo + '.',
+  ysiCambia: (n, de, a, ultimo) => 'With ' + miles(n) + ' votes moved from ' + theP(de) + ' to ' + theP(a) + ', the share-out changes. The last seat would go to ' + theP(ultimo) + '.',
+  ysiNoCambia: (n, ultimo) => 'With ' + miles(n) + ' votes moved, the share-out does not change. The last seat still goes to ' + theP(ultimo) + '.',
   votosYEscanos: "A party's share of the seats almost never matches its share of the votes.",
   sinEscano: (n, p) => miles(n) + ' votes (' + p + ') went to candidacies that won no seat in their province.',
   loSiguiente: t => 'Next: ' + min(t),

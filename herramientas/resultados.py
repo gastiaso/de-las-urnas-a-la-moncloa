@@ -15,6 +15,8 @@ Uso:
       --etiqueta "Resultados del 23 de julio de 2023" --fuente "Ministerio del Interior, escrutinio del 23J" > js/resultados.js
   python3 herramientas/resultados.py datos/resultados_29N.csv --abierta \
       --etiqueta "Escrutinio provisional del 29 de noviembre de 2026" --fuente "Ministerio del Interior" > js/resultados.js
+  Con el escrutinio general (4-dic), además --general: la web deja de decir que los resultados son provisionales.
+  Las etiquetas y fuentes que la web traduce están en la lista «dato» de cada js/idiomas/xx.js; otra cualquiera sale en castellano.
 """
 import argparse, csv, json, re, sys, pathlib
 
@@ -33,6 +35,7 @@ HITOS = [('2026-11-29', '29 nov', 'Votación.'), ('2026-12-04', '4 dic', 'Escrut
 a = argparse.ArgumentParser(); a.add_argument('csv'); a.add_argument('--escanos', default='escanos')
 a.add_argument('--etiqueta', default=''); a.add_argument('--fuente', default='')
 a.add_argument('--prueba', action='store_true'); a.add_argument('--abierta', action='store_true')
+a.add_argument('--general', action='store_true', help='escrutinio general (4-dic): los resultados dejan de ser provisionales')
 o = a.parse_args()
 filas = list(csv.DictReader(open(o.csv, encoding='utf-8')))
 assert len(filas) == 52, 'Tiene que haber 52 circunscripciones'
@@ -65,9 +68,12 @@ for f in filas:
     prov.append(q)
 assert sum(p['e'] for p in prov) == 350, 'Los escaños no suman 350'
 for m in avisos: print('AVISO (datos de prueba) · ' + m, file=sys.stderr)
-res = {'abierta': o.abierta, 'prueba': o.prueba, 'etiqueta': o.etiqueta, 'fuente': o.fuente,
+if 'general' in o.etiqueta.lower() and not o.general:
+    print('AVISO · la etiqueta habla del escrutinio general y falta --general: la web seguirá diciendo que es provisional', file=sys.stderr)
+res = {'abierta': o.abierta, 'prueba': o.prueba, 'provisional': not o.general, 'etiqueta': o.etiqueta, 'fuente': o.fuente,
        'partidos': [{'id': p[0], 'nombre': p[1], 'color': p[2], 'tinta': p[3]} for p in partidos],
        'prov': prov, 'hitos': [{'f': h[0], 'r': h[1], 't': h[2]} for h in HITOS]}
 print('// Generado con herramientas/resultados.py. No editar a mano: cambiar el CSV y volver a generar.')
-print('// «abierta» abre la fase 2 para todo el mundo; «prueba» avisa de que no son los resultados del 29N.')
+print('// «abierta» abre la fase 2 para todo el mundo; «prueba» avisa de que no son los resultados del 29N;')
+print('// «provisional» (hasta el escrutinio general del 4-dic) lo dice en los pasos 9, 10 y 12.')
 print('export const RES = ' + json.dumps(res, ensure_ascii=False, separators=(',', ':')) + ';')
