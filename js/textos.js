@@ -40,6 +40,8 @@ export const ES = {
 
   /* el escenario */
   ariaEscenario: 'Los 350 escaños del Congreso, que cambian de forma en cada paso. El hexágono dorado es tu voto.',
+  // lo que dice el escenario al lector de pantalla en cada paso: texto (rótulo y pie, ya con punto) y marca (T.tuVoto, T.primerEscano o vacío)
+  ariaPaso: (texto, marca) => texto + (marca ? ' Hexágono dorado: ' + marca.charAt(0).toLowerCase() + marca.slice(1) + '.' : ''),
   tuVoto: 'Tu voto',
   primerEscano: i => '1.er escaño de ' + prov(i),
   // k: paso; i: provincia; n: sus escaños; revelado: si ya se ha hecho la apuesta del paso 2
@@ -105,6 +107,7 @@ export const ES = {
   fase2Cerrada: 'Los pasos 9 a 13 se abren el 30N, con los resultados.',
   abre30N: '30N',   // junto a cada paso cerrado, en el menú
   sigueMiVoto: 'Sigue mi voto: ',
+  irResultados: 'Ir a los resultados: ',   // fase 2: atajo de la salida al paso 9
   siguiente: 'Siguiente: ',
   verEscanos: 'Volver a los 350 escaños',
   verTexto: 'Ver solo el texto',
@@ -119,12 +122,15 @@ export const ES = {
 
   /* paso 1 */
   provElige: (i, n) => prov(i) + ' elige ' + escanos(n) + ' de los 350.',
+  // en el recuadro «Tu voto» del paso 1, si no se ha elegido provincia; a y b envuelven el enlace al desplegable
+  cambiaProv: (i, a, b) => '¿No votas en ' + prov(i) + '? ' + a + 'Cámbiala aquí debajo' + b + '.',
 
   /* paso 2: la apuesta y la tabla de divisiones */
   apuestaIntro: (i, n) => prov(i) + ' reparte ' + escanos(n) + ' entre cinco partidos inventados. ¿Cuántos le das a cada uno?',
   ariaApuesta: letra => 'Escaños para el partido ' + letra,
   resto: q => q === 0 ? 'Todo repartido.' : q === 1 ? 'Te queda 1 escaño por repartir.' : 'Te quedan ' + q + ' escaños por repartir.',
-  dhondtDa: n => "D'Hondt le da " + n,
+  tuApuesta: 'Tu apuesta',   // sobre la columna de cifras
+  dhondtDa: (n, tuyo) => "D'Hondt: " + n + ' · tú: ' + tuyo,   // tras apostar: lo que da D'Hondt y lo que apostaste
   acierto: (aciertos, total) => 'Has acertado ' + aciertos + ' de ' + total + '.',
   partido: 'Partido',
   fuera: ' (fuera)',
@@ -142,6 +148,10 @@ export const ES = {
   senTope: 'Solo tres. Quita una marca para cambiarla.',
   senMarcadas: n => 'Has marcado ' + n + ' de 3.',
 
+  /* paso 7: la etiqueta junto a lo que pasa hoy o, si hoy no hay nada, junto a lo siguiente */
+  calHoy: 'hoy',
+  calSiguiente: 'lo siguiente',
+
   /* calculadoras de pactos (pasos 6 y 12) */
   voto: { no: 'No', si: 'Sí', abs: 'Abst.' },
   votoLargo: { no: 'no', si: 'sí', abs: 'abstención' },
@@ -149,6 +159,9 @@ export const ES = {
   votacion1: '1.ª votación · mayoría absoluta',
   votacion2: '2.ª votación · más síes que noes',
   copiar: 'Copiar enlace a esta combinación',
+  compartirComb: 'Compartir esta combinación',   // en el móvil, con la hoja de compartir del teléfono
+  // quien llega por un enlace con una combinación y sin haber elegido provincia; a y b envuelven el enlace a la salida
+  enviada: (a, b) => 'Te han enviado esta combinación. Cámbiala o ' + a + 'empieza por el principio' + b + '.',
   copiado: 'Enlace copiado.',
   copiaManual: 'Copia la dirección del navegador: ya lleva la combinación.',
   copiaDireccion: 'Copia la dirección del navegador',   // botón «Compartir», si no se puede copiar sola

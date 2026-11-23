@@ -43,7 +43,14 @@ esc.innerHTML = '<p class="rotulo"></p><svg viewBox="-0.52 -0.46 1.04 0.96"><g c
 document.body.appendChild(esc);
 const svgEl = $('svg', esc), gs = $$('.piezas > .p', esc), rotulo = $('.rotulo', esc), pieEsc = $('.pie-escenario', esc);
 const tuyo = $('.tuyo', esc), marca = $('.marca', esc), guia = $('.hemi-guia', esc);
+guia.insertAdjacentHTML('afterend', '<g class="hemi-rot"></g>'); const rotHemi = $('.hemi-rot', esc);   // rótulos de los pactos (ver rotulaHemi)
 piezas.forEach((q, i) => { q.el = gs[i]; q.hx = $('.hx', gs[i]); q.env = $('.env', gs[i]); q.cur = { x: 0, y: 0, r: 0, o: 0, a: 0, e: 0 }; q.el.dataset.p = q.p; q.env.style.opacity = 0; });
+// Bordes de provincia y de comunidad, costa y recuadro de Canarias (las rayas que calcula mapa.js), encima de las piezas.
+// Solo se ven en los mapas, y cuando las piezas ya han llegado a su sitio (ver aplica).
+const raya = s => s.map(q => 'M' + q[0].toFixed(4) + ' ' + q[1].toFixed(4) + 'L' + q[2].toFixed(4) + ' ' + q[3].toFixed(4)).join('');
+const bordes = (g, c) => { const [x0, z0, x1, z1] = g.marco; return '<g class="bordes ' + c + '"><path class="b-prov" d="' + raya(g.prov) + '"/><path class="b-ccaa" d="' + raya(g.ccaa) + '"/><path class="b-costa" d="' + raya(g.costa) + '"/><rect class="b-marco" x="' + x0 + '" y="' + z0 + '" width="' + (x1 - x0).toFixed(4) + '" height="' + (z1 - z0).toFixed(4) + '"/></g>'; };
+$('.piezas', esc).insertAdjacentHTML('afterend', bordes(gC, 'bc') + bordes(gS, 'bs'));
+const bordesC = $('.bc', esc), bordesS = $('.bs', esc);
 
 let C = null, k = 0, revelado = null, pacto6 = null, pacto12 = null, res = null, provRes = null, listo = false;
 const sel = () => C ? C.st.prov : 0;
@@ -63,6 +70,21 @@ function bloques(estado, partidos, color) {
     base.forEach((b, i) => { if (b === p) sitio[i] = n++; });
   }));
   return { sitio, color: base.map(p => color(p)), partido: base.map(p => p[0]), cuenta };
+}
+/* Pactos: «Sí», «Abst.» y «No» bajo la base del hemiciclo, cada uno a la altura de su bloque, y, en escritorio, el nombre de
+   los partidos con 15 escaños o más en el centro de sus asientos. Así el hemiciclo no se lee solo por el color. */
+function rotulaHemi(b) {
+  if (!b) { rotHemi.innerHTML = ''; return; }
+  const xs = []; let ini = 0;
+  ['si', 'abs', 'no'].forEach(e => { const n = b.cuenta[e]; if (n) xs.push([e, HX + Math.cos(HM[Math.floor(ini + n / 2)].t) * HS * 0.62]); ini += n; });
+  for (let i = 1; i < xs.length; i++) xs[i][1] = Math.max(xs[i][1], xs[i - 1][1] + 0.15);   // que no se pisen
+  const sobra = xs.length ? xs[xs.length - 1][1] - 0.42 : 0; if (sobra > 0) xs.forEach(x => { x[1] -= sobra; });
+  let h = xs.map(([e, x]) => '<text class="r-bloque" x="' + x.toFixed(3) + '" y="' + (HY + 0.055).toFixed(3) + '">' + T.voto[e] + '</text>').join('');
+  if (innerWidth >= 900) {
+    const cen = {}; b.partido.forEach((p, i) => { const q = enHemi(b.sitio[i]), c = cen[p] = cen[p] || { x: 0, y: 0, n: 0 }; c.x += q.x; c.y += q.y; c.n++; });
+    h += Object.entries(cen).filter(([, c]) => c.n >= 15).map(([p, c]) => '<text class="r-partido" x="' + (c.x / c.n).toFixed(3) + '" y="' + (c.y / c.n + 0.008).toFixed(3) + '">' + p + '</text>').join('');
+  }
+  rotHemi.innerHTML = h;
 }
 
 // destino de cada pieza: posición (x, y), radio r, opacidad o, giro a, sobre e (1 = sobre, 0 = hexágono) y color f
@@ -130,7 +152,7 @@ const textoMarca = () => {
 function ponMarca() {
   const q = piezaTuya();
   if (!q) { tuyo.setAttribute('opacity', 0); marca.hidden = true; return; }
-  const c = q === 'aparte' ? { x: HX, y: HY + 0.13, r: 0.022, o: 1 } : q.cur;
+  const c = q === 'aparte' ? { x: HX, y: HY + 0.24, r: 0.022, o: 1 } : q.cur;   // aparte: debajo de los rótulos de los bloques
   const r = q === 'aparte' ? c.r : Math.max(c.r * 1.12, 0.012);
   tuyo.setAttribute('transform', 'translate(' + c.x.toFixed(4) + ' ' + c.y.toFixed(4) + ') scale(' + r.toFixed(5) + ')');
   tuyo.setAttribute('opacity', (q === 'aparte' ? 1 : c.o).toFixed(2));
@@ -153,6 +175,11 @@ function aplica(suave, dur0) {
     q.hx.style.fill = q.fin.f; q.el.classList.toggle('borde', !!q.fin.b);
   });
   guia.setAttribute('opacity', est === 'pacto' || est === 'hemi' || est === 'hemiRes' ? 1 : 0);
+  const llega = dur ? dur + Math.max(...piezas.map(q => q.ret)) : 0;   // ms hasta que la última pieza está en su sitio
+  [[bordesC, ['mapaSel', 'hab', 'res'].includes(est)], [bordesS, est === 'senado']].forEach(([b, v]) => { b.style.transitionDelay = v && llega ? Math.max(0, llega - 200) + 'ms' : '0ms'; b.classList.toggle('ve', v); });
+  esc.dataset.est = est;   // en los mapas, el contorno de cada hexágono se aclara para que se lean los bordes (css/estilo.css)
+  rotulaHemi(est === 'pacto' ? (k === 12 ? pacto12 : pacto6) : null);
+  rotHemi.style.transitionDelay = est === 'pacto' && llega ? Math.max(0, llega - 200) + 'ms' : '0ms'; rotHemi.classList.toggle('ve', est === 'pacto');
   cancelAnimationFrame(anim);
   const paso = now => {
     let sigue = false;
@@ -182,7 +209,12 @@ function rotula() {
     pie = k === 12 ? T.piePactoRes : T.piePacto;
   }
   if (est === 'pila') t = '';
-  rotulo.innerHTML = t; pieEsc.textContent = pie;
+  // paso 3: la escala de habitantes por escaño, de la provincia con menos a la que tiene más (los cinco tonos son quintos de la lista)
+  const leyenda = est === 'hab' && C ? '<span class="esc-hab" aria-hidden="true">' + T.miles(C.HAB[0].h) + ESC_HAB.map(c => '<i style="background:' + c + '"></i>').join('') + T.miles(C.HAB[C.HAB.length - 1].h) + '</span>' : '';
+  rotulo.innerHTML = t + leyenda; pieEsc.textContent = pie;
+  // para lectores de pantalla, el escenario dice qué enseña en cada paso: el rótulo, el pie y qué es el hexágono dorado
+  const punto = s => /[.:?!]$/.test(s) ? s : s + '.', limpio = punto(t.replace('<small>', '. ').replace(/<[^>]+>/g, '').trim());
+  esc.setAttribute('aria-label', !t ? T.ariaEscenario : T.ariaPaso(limpio + (pie ? ' ' + punto(pie) : ''), piezaTuya() ? textoMarca() : ''));
 }
 // tocar una provincia en el mapa la elige
 svgEl.addEventListener('click', e => { const g = e.target.closest('.p'); if (g && C && ['mapaSel', 'hab', 'senado', 'res'].includes(estadoActual())) C.eligeProv(+g.dataset.p); });
@@ -223,13 +255,18 @@ secs.forEach(s => {
   const et = document.createElement('p'); et.className = 'estacion';
   et.innerHTML = ICONO[kk] + '<span>' + T.estacion(kk, ULTIMA) + '</span>';
   cu.insertBefore(et, h);
+  if (h.firstChild && h.firstChild.nodeType === 3) h.firstChild.data = h.firstChild.data.replace(/^\d+ · /, '');   // «1 · Qué se vota»: el número ya lo dice la línea de encima
   const tv = document.createElement('div'); tv.className = 'tuvoto'; tv.dataset.k = kk; h.after(tv);
 });
+let enviado = 0;   // paso de la calculadora a la que se ha llegado por un enlace sin haber elegido provincia (ver al final)
 function pintaTuVoto() {
   if (!C) return;
   const sp = $('#provVoto'); if (sp) sp.value = C.st.prov;
-  $$('.tuvoto').forEach(t => { const f = frase(+t.dataset.k); t.hidden = !f; t.innerHTML = f ? '<span class="tv-et">' + T.tuVoto + '</span>' + f : ''; });
+  $$('.tuvoto').forEach(t => { const f = frase(+t.dataset.k); t.hidden = !f || (+t.dataset.k === enviado && !C.st.elegida); t.innerHTML = f ? '<span class="tv-et">' + T.tuVoto + '</span>' + f : ''; });
+  // paso 1: si no se ha elegido provincia, el recuadro lo dice y lleva al desplegable
+  const t1 = $('.tuvoto[data-k="1"]'); if (t1 && !t1.hidden && !C.st.elegida) t1.insertAdjacentHTML('beforeend', '<span class="tv-cambia">' + T.cambiaProv(C.st.prov, '<button type="button" class="enlace">', '</button>') + '</span>');
 }
+document.addEventListener('click', e => { if (e.target.closest('.tv-cambia .enlace')) { irA(1, false, $('#prov')); $('#prov').focus({ preventScroll: true }); } });
 /* salida: elegir dónde votas. Va justo debajo del título, para que se vea sin bajar nada más cerrar la portada. */
 const salida = $('.paso[data-k="0"] .portada');
 const elige = document.createElement('div'); elige.className = 'elige';
@@ -242,14 +279,15 @@ pintaTuVoto();
 
 /* ---------- navegación: menú de pasos, «Siguiente», solo texto ---------- */
 const indice = $('#indice');
-const irA = (kk, foco) => {
+const irA = (kk, foco, dentro) => {   // dentro: un elemento del paso al que bajar, en vez de su principio
   const s = secs.find(x => casilla(x) === kk); if (!s) return;
-  const y = kk === 0 ? 0 : s.getBoundingClientRect().top + scrollY - (innerWidth < 900 && !enLectura() ? innerHeight * 0.35 + 52 : 56);
+  const e = esc.getBoundingClientRect(), tope = e.width >= innerWidth - 1 && !enLectura() ? e.bottom + 8 : 56;   // bajo el escenario si va arriba a todo el ancho
+  const y = kk === 0 ? 0 : (dentro || s).getBoundingClientRect().top + scrollY - tope;
   scrollTo({ top: y, behavior: calma() || Math.abs(y - scrollY) > innerHeight * 3 ? 'auto' : 'smooth' });
   if (foco) { const t = $('h1, h2', s); t.tabIndex = -1; t.focus({ preventScroll: true }); }
 };
 secs.forEach(s => {
-  const kk = casilla(s), b = document.createElement('button'); b.type = 'button';
+  const kk = casilla(s), b = document.createElement('button'); b.type = 'button'; b.dataset.k = kk;
   b.innerHTML = '<b>' + (kk === 0 ? '·' : kk === 14 ? '·' : kk) + '</b><span>' + T.titulos[kk] + '</span>';
   b.addEventListener('click', () => { abreIndice(false); irA(kk, true); });
   indice.appendChild(b);
@@ -276,9 +314,15 @@ secs.forEach((s, i) => {
   const kk = casilla(secs[i + 1]), b = document.createElement('button'); b.type = 'button'; b.className = 'sig';
   b.textContent = (i === 0 ? T.sigueMiVoto : T.siguiente) + (kk === 14 ? '' : kk + ' · ') + T.titulos[kk];
   b.addEventListener('click', () => irA(kk, true));
-  if (i === 0) { elige.after(b); b.after(tocaMapa); }   // en la salida, el botón va con el desplegable
+  if (i === 0) { elige.after(b); b.after(tocaMapa); b.addEventListener('click', () => C.recuerda()); }   // en la salida, el botón va con el desplegable; pulsarlo acepta la provincia
   else ($('.cuerpo', s) || $('.portada', s)).appendChild(b);
 });
+if (FASE2) {   // en la fase 2, la salida lleva primero un atajo a los resultados; el recorrido por las reglas queda de segundo
+  const b = document.createElement('button'); b.type = 'button'; b.className = 'sig';
+  b.textContent = T.irResultados + '9 · ' + T.titulos[9];
+  b.addEventListener('click', () => { C.recuerda(); irA(9, true); });
+  const s0 = $('.sig', salida); s0.classList.add('sec'); s0.before(b);
+}
 function lectura(v) {
   document.body.classList.toggle('lectura', v);
   const t = v ? T.verEscanos : T.verTexto;
@@ -305,6 +349,7 @@ function mira(forzar) {
   let a = 0;
   secs.forEach(s => { if (s.getBoundingClientRect().top < innerHeight * 0.55) a = casilla(s); });
   $('#donde').textContent = T.donde(a, ULTIMA, enLectura()) + ' ▾';
+  $$('button[data-k]', indice).forEach(b => { if (+b.dataset.k === a) b.setAttribute('aria-current', 'step'); else b.removeAttribute('aria-current'); });   // el menú marca dónde estás
   if (a !== k || forzar) { k = a; if (listo) aplica(true); pintaTuVoto(); }
 }
 let pend = false;
@@ -345,6 +390,19 @@ if (!saltaPortada) {
   setTimeout(() => $('.boton', tapa).focus({ preventScroll: true, focusVisible: false }), 50);
 } else { listo = true; }
 mira(true);
-// Enlace compartido a una calculadora (?p6=…): se va directo a ese paso.
-const m = location.search.match(/[?&]p(6|12)=/); if (m) setTimeout(() => irA(+m[1]), 80);
+// Enlace compartido a una calculadora (?p6=…): se baja directo a ella, salvo al recargar (el navegador ya vuelve a donde se estaba).
+// Si quien llega no ha elegido provincia, el recuadro «Tu voto» de ese paso no sale y una línea dice de dónde viene la combinación.
+const m = location.search.match(/[?&]p(6|12)=/), kEnlace = m ? +m[1] : 0;
+const recarga = (() => { try { return performance.getEntriesByType('navigation')[0].type === 'reload'; } catch (e) { return false; } })();
+if (kEnlace && !recarga && secs.some(s => casilla(s) === kEnlace)) {
+  let destino = $('#calc' + kEnlace);
+  if (!C.st.elegida) {
+    enviado = kEnlace; pintaTuVoto();
+    const p = document.createElement('p'); p.className = 'enviada';
+    p.innerHTML = T.enviada('<button type="button" class="enlace">', '</button>');
+    $('button', p).addEventListener('click', () => irA(0, true));
+    (kEnlace === 6 ? $('#calcNota') : destino).before(p); destino = p;
+  }
+  setTimeout(() => irA(kEnlace, false, destino), 80);
+}
 window.__sitio = { aplica, irA, C: () => C };

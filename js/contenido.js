@@ -23,8 +23,9 @@ document.body.classList.toggle('fase2', FASE2);
 // La provincia elegida se recuerda mientras dure la pestaña (sessionStorage: no sale del navegador), para que una recarga
 // no la devuelva a la inicial sin avisar.
 const guardada = (() => { try { const v = sessionStorage.getItem('prov'); return v !== null && PROV[+v] ? +v : null; } catch (e) { return null; } })();
-const st = { prov: guardada === null ? PROV_INICIAL : guardada, bets: [0, 0, 0, 0, 0], revealed: null, sen: new Set(), pact: {}, pact2: {} };
-const recuerda = () => { try { sessionStorage.setItem('prov', st.prov); } catch (e) {} };
+// elegida: si el lector ha elegido provincia (o ha aceptado la inicial) en esta pestaña; si no, la de «Tu voto» es la inicial por defecto.
+const st = { prov: guardada === null ? PROV_INICIAL : guardada, elegida: guardada !== null, bets: [0, 0, 0, 0, 0], revealed: null, sen: new Set(), pact: {}, pact2: {} };
+const recuerda = () => { st.elegida = true; try { sessionStorage.setItem('prov', st.prov); } catch (e) {} };
 const S = () => PROV[st.prov][1];
 /* calendario del paso 7: cada fecha abre o cierra su explicación, que se despliega debajo sin tapar las fechas siguientes */
 document.addEventListener('click', e => {
@@ -35,6 +36,14 @@ addEventListener('keydown', e => {
   const f = e.key === 'Escape' && document.activeElement && document.activeElement.closest('.hito.abierto .fecha');
   if (f) { f.parentElement.classList.remove('abierto'); f.setAttribute('aria-expanded', 'false'); }
 });
+// dónde está hoy: lo pasado, en gris; lo que pasa hoy o, si hoy no hay nada, lo siguiente, con una etiqueta (fecha local del navegador)
+(() => {
+  const d = new Date(), hoy = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+  const hs = [...document.querySelectorAll('.calendario .hito[data-f]')], fin = h => h.dataset.hasta || h.dataset.f;
+  const ahora = hs.filter(h => h.dataset.f <= hoy && fin(h) >= hoy), marca = ahora.length ? ahora : hs.filter(h => h.dataset.f > hoy).slice(0, 1);
+  hs.forEach(h => { if (fin(h) < hoy) h.classList.add('pasado'); });
+  marca.forEach(h => h.querySelector('.que').insertAdjacentHTML('beforeend', ' <span class="ahora">' + (ahora.length ? T.calHoy : T.calSiguiente) + '</span>'));
+})();
 
 /* glosario */
 document.addEventListener('click', e => {
@@ -86,6 +95,7 @@ function pintaProv() {
 
 /* apuesta */
 const sl = $('#sliders');
+sl.insertAdjacentHTML('afterbegin', '<p class="fila-cab">' + T.tuApuesta + '</p>');   // sobre la columna de cifras
 const filas = PART.map((p, i) => {
   const f = document.createElement('div'); f.className = 'fila';
   f.innerHTML = '<span class="ficha" style="background:' + p[2] + ';color:' + p[3] + '">' + p[0] + '</span><small>' + T.pctEntero(Math.round(p[1])) + '</small><span class="mid"><input type="range" min="0" step="1" value="0" aria-label="' + T.ariaApuesta(p[0]) + '"><span class="real" hidden></span></span><output>0</output>';
@@ -107,7 +117,7 @@ function pintaBet() {
 }
 function resetBet() {
   st.bets = [0, 0, 0, 0, 0]; st.revealed = null;
-  filas.forEach(f => { const r = $('input', f); r.max = S(); r.value = 0; r.hidden = false; $('.real', f).hidden = true; });
+  filas.forEach(f => { const r = $('input', f); r.max = S(); r.value = 0; r.hidden = false; $('.real', f).hidden = true; f.classList.remove('acierto', 'fallo'); });
   $('#betRes').hidden = true; $('#apostar').hidden = false; $('#betErr').hidden = true;
   pintaBet(); G.resetBet(S());
 }
@@ -117,7 +127,8 @@ $('#apostar').addEventListener('click', () => {
   let hit = 0;
   filas.forEach((f, i) => {
     const id = PART[i][0]; hit += Math.min(st.bets[i], d.seats[id]);
-    const r = $('.real', f); r.hidden = false; r.textContent = T.dhondtDa(d.seats[id]);
+    const r = $('.real', f); r.hidden = false; r.textContent = T.dhondtDa(d.seats[id], st.bets[i]);
+    f.classList.toggle('acierto', st.bets[i] === d.seats[id]); f.classList.toggle('fallo', st.bets[i] !== d.seats[id]);
     $('input', f).hidden = true;
   });
   $('#betHit').textContent = T.acierto(hit, S());
@@ -219,18 +230,28 @@ function calculadora(raiz, partidos, estado, alCambiar, clave) {
     const q = new URLSearchParams(location.search).get(clave);
     if (q) q.split(',').forEach(x => { const [id, c] = x.split(':'); if (DEC[c] && partidos.some(p => p[0] === id)) estado[id] = DEC[c]; });
   } catch (e) {}
-  raiz.innerHTML = '<div class="tally"><span class="tSi"></span><span class="tAbs"></span><span class="tNo"></span></div><div class="barra" role="img" aria-label="' + T.ariaBarra + '"><i class="bSi"></i><i class="bNo"></i><i class="bM"></i></div><div class="ver"><small>' + T.votacion1 + '</small><b class="v1"></b></div><div class="ver"><small>' + T.votacion2 + '</small><b class="v2"></b></div><div class="grid"></div><div class="compartir"><button type="button" class="pill sec">' + T.copiar + '</button><span class="nota" role="status"></span></div>';
-  $('.compartir button', raiz).addEventListener('click', () => {
+  // En un teléfono con hoja de compartir, el botón comparte la combinación con su resultado; si no, copia el enlace.
+  const comparte = !!navigator.share && matchMedia('(pointer: coarse)').matches, rotBoton = comparte ? T.compartirComb : T.copiar;
+  raiz.innerHTML = '<div class="tally"><span class="tSi"></span><span class="tAbs"></span><span class="tNo"></span></div><div class="barra" role="img" aria-label="' + T.ariaBarra + '"><i class="bSi"></i><i class="bNo"></i><i class="bM"></i></div><div class="ver"><small>' + T.votacion1 + '</small><b class="v1"></b></div><div class="ver"><small>' + T.votacion2 + '</small><b class="v2"></b></div><div class="grid"></div><div class="compartir"><button type="button" class="pill sec">' + rotBoton + '</button><span class="nota" role="status"></span></div>';
+  // La dirección lleva siempre la combinación (así también vale el «compartir» del navegador).
+  const ponEnlace = () => {
     const u = new URL(location.href), v = partidos.filter(p => COD[estado[p[0]]]).map(p => p[0] + ':' + COD[estado[p[0]]]).join(',');
     u.search = v ? '?' + clave + '=' + v : '';   // a mano, para que la dirección no salga con %3A y %2C
     try { history.replaceState(null, '', u); } catch (e) {}
-    const bt = $('.compartir button', raiz);
-    const ok = () => { $('.compartir .nota', raiz).textContent = T.copiado; bt.textContent = T.copiado.replace(/\.$/, ''); setTimeout(() => { bt.textContent = T.copiar; }, 2500); }, mal = () => { $('.compartir .nota', raiz).textContent = T.copiaManual; };
-    try { navigator.clipboard.writeText(u.href).then(ok, mal); } catch (e) { mal(); }
+    return u.href;
+  };
+  let cuenta = { si: 0, abs: 0, no: 350 };
+  $('.compartir button', raiz).addEventListener('click', async () => {
+    const url = ponEnlace(), bt = $('.compartir button', raiz);
+    const ok = () => { $('.compartir .nota', raiz).textContent = T.copiado; bt.textContent = T.copiado.replace(/\.$/, ''); setTimeout(() => { bt.textContent = rotBoton; }, 2500); }, mal = () => { $('.compartir .nota', raiz).textContent = T.copiaManual; };
+    const copia = () => { try { navigator.clipboard.writeText(url).then(ok, mal); } catch (e) { mal(); } };
+    if (!comparte) { copia(); return; }
+    try { await navigator.share({ title: document.title, text: T.rotuloPacto(cuenta).replace('<small>', '. ').replace(/<[^>]+>/g, ''), url }); }
+    catch (e) { if (!e || e.name !== 'AbortError') copia(); }
   });
   const btns = partidos.map(p => {
     const b = document.createElement('button'); b.type = 'button';
-    b.addEventListener('click', () => { const e = estado[p[0]] || 'no'; estado[p[0]] = ORD[(ORD.indexOf(e) + 1) % 3]; pinta(true); });
+    b.addEventListener('click', () => { const e = estado[p[0]] || 'no'; estado[p[0]] = ORD[(ORD.indexOf(e) + 1) % 3]; pinta(true); ponEnlace(); });
     $('.grid', raiz).appendChild(b); return b;
   });
   function pinta(avisa) {
@@ -242,6 +263,7 @@ function calculadora(raiz, partidos, estado, alCambiar, clave) {
       btns[i].innerHTML = '<b>' + (p[3] ? '<i class="pt" style="background:' + p[3] + '"></i>' : '') + p[0] + ' ' + p[2] + '</b><span>' + TXT[e] + '</span>';
       btns[i].setAttribute('aria-label', T.ariaPartido(p[1], p[2], LARGO[e]));
     });
+    cuenta = { si, abs, no };
     $('.tSi', raiz).textContent = T.cuentaSi(si); $('.tAbs', raiz).textContent = T.cuentaAbs(abs); $('.tNo', raiz).textContent = T.cuentaNo(no);
     $('.bSi', raiz).style.width = (si / 350 * 100).toFixed(2) + '%'; $('.bNo', raiz).style.width = (no / 350 * 100).toFixed(2) + '%';
     const s1 = si >= 176, s2 = si > no;
@@ -369,5 +391,5 @@ function sincroniza() {
 // Cambiar de provincia desde fuera (por ejemplo, tocando el mapa).
 function eligeProv(i) { st.prov = i; recuerda(); pintaProv(); }
 pintaProv(); pintaSen(); pintaPact(); pintaPact2();
-return { st, S, get R() { return R; }, pintaProv, pintaSen, pintaPact, pintaPact2: () => pintaPact2(), sincroniza, eligeProv, HAB, MEDIA };
+return { st, S, get R() { return R; }, pintaProv, pintaSen, pintaPact, pintaPact2: () => pintaPact2(), sincroniza, eligeProv, recuerda, HAB, MEDIA };
 }

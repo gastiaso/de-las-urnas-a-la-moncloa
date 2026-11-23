@@ -9,6 +9,9 @@ va: Què es vota el 29N i com es passa d'una papereta a un Govern, contat amb el
 es: De las urnas a la Moncloa
 va: De les urnes a la Moncloa
 
+es: De las urnas a la Moncloa · Cómo funcionan las elecciones del 29N
+va: De les urnes a la Moncloa · Com funcionen les eleccions del 29N
+
 es: Los 350 escaños del Congreso dibujados como hexágonos sobre el mapa de España, con el título «De las urnas a la Moncloa».
 va: Els 350 escons del Congrés dibuixats com a hexàgons sobre el mapa d'Espanya, amb el títol «De las urnas a la Moncloa».
 
@@ -38,6 +41,9 @@ va: 1 · Què es vota
 
 es: El 29N no eliges presidente: eliges a los 350 diputados del Congreso, que son quienes lo eligen. Sus asientos, los [[escano|escaños]], se reparten por [[circ|circunscripciones]]: en la práctica, por provincias.
 va: El 29N no elegixes president: elegixes els 350 diputats del Congrés, que són els qui l'elegixen. Els seus seients, els [[escano|escons]], es repartixen per [[circ|circumscripcions]]: a la pràctica, per províncies.
+
+es: Toca las palabras subrayadas para ver qué significan.
+va: Toca les paraules subratllades per a veure què volen dir.
 
 es: Elige tu provincia
 va: Tria la teua província

@@ -13,6 +13,7 @@ html,body{margin:0;background:var(--ground);color:var(--ink);font-family:'Courie
 #indice{position:fixed;top:44px;left:0;right:0;z-index:6;background:var(--paper);border-bottom:1.5px solid var(--ink);padding:8px 16px 14px;max-height:calc(100vh - 44px);overflow:auto}
 #indice button{display:flex;gap:10px;width:100%;min-height:44px;align-items:center;border:0;border-top:1.5px solid var(--ink);background:transparent;color:var(--ink);font:inherit;font-size:15px;text-align:left;cursor:pointer}
 #indice button b{font-family:'Libre Franklin',system-ui,sans-serif;font-weight:800}
+#indice button[aria-current]{color:var(--teja2);font-weight:700}#indice button[aria-current]::after{content:'←';margin-left:auto;padding-right:4px}
 #indice p{margin:8px 0 0;font-size:13px;color:var(--sec)}
 h1,h2{font-family:'Libre Franklin',system-ui,sans-serif;font-weight:800;letter-spacing:-0.01em;margin:0 0 6px}
 h1{font-size:30px;line-height:1.02}
@@ -23,7 +24,7 @@ h2{font-size:19px;line-height:1.1}
 p{margin:0 0 8px}
 p:last-child{margin-bottom:0}
 .nota{font-size:13px;color:var(--sec)}
-.glos{font:inherit;font-weight:700;color:var(--ink);background:transparent;border:0;border-bottom:2px dashed var(--teja);padding:0;cursor:pointer}
+.glos{font:inherit;font-weight:700;color:var(--ink);background:transparent;border:0;text-decoration:underline dashed var(--teja) 2px;text-underline-offset:4px;padding:0;cursor:pointer}
 .def{margin:0 0 8px;padding:8px 10px;border:1.5px solid var(--ink);background:var(--ground);font-size:14px}
 .def b,dl.glosario dt{font-family:'Libre Franklin',system-ui,sans-serif;font-weight:800}
 dl.glosario{margin:0;font-size:14px}
@@ -48,6 +49,10 @@ label.sel{display:block;font-size:13px;font-weight:700;margin-bottom:4px}
 .fila small{font-size:13px}
 .fila output{font-family:'Libre Franklin',system-ui,sans-serif;font-weight:800;font-size:17px;text-align:right}
 .fila .real{font-size:13px;font-weight:700}
+/* la apuesta: la columna de cifras es la tuya; tras apostar, ✓ si aciertas y la fila en teja con ✗ si fallas */
+.fila-cab{margin:0 0 2px;text-align:right;font-family:'Libre Franklin',system-ui,sans-serif;font-weight:800;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--sec)}
+.fila.acierto .real::before{content:'✓ ';content:'✓ ' / ''}
+.fila.fallo .real::before{content:'✗ ';content:'✗ ' / ''}.fila.fallo .real,.fila.fallo output{color:var(--teja2)}
 input[type=range]{width:100%;height:44px;accent-color:var(--teja);margin:0}
 .pill{width:100%;height:46px;border:1.5px solid var(--ink);border-radius:23px;background:var(--ink);color:var(--paper);font:inherit;font-size:16px;font-weight:700;cursor:pointer;margin-top:6px}
 .pill.sec{background:transparent;color:var(--ink)}
@@ -95,6 +100,7 @@ fieldset input{width:22px;height:22px;accent-color:var(--teja);margin:0}
 .ver{border-top:1.5px solid var(--ink);padding:5px 0;font-size:14px}
 .ver small{display:block;font-size:12px;font-weight:700}
 .ver b.ok{color:var(--teja2)}
+.ver b::before{content:'✗ ';content:'✗ ' / ''}.ver b.ok::before{content:'✓ ';content:'✓ ' / ''}   /* «Sale» y «No sale» no se distinguen solo por el color */
 .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin:6px 0}
 .grid button{height:44px;padding:0 2px;border:1.5px solid var(--ink);border-radius:22px;font:inherit;font-size:12px;font-weight:700;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.15}
 .grid button b{font-family:'Libre Franklin',system-ui,sans-serif;font-weight:800;font-size:13px}
@@ -103,7 +109,7 @@ a{color:var(--ink)}
 .fuentes{font-size:13px}
 .aviso{display:none}
 
-@media (max-width:374px){.bar b{font-size:11.5px}}
+@media (max-width:374px){.bar b{font-size:11.5px}.escenario .rotulo .esc-hab{font-size:10.5px}.escenario .rotulo .esc-hab i{width:12px}}
 
 /* accesibilidad: foco visible, texto solo para lectores de pantalla y enlaces que aparecen al tabular */
 :focus-visible{outline:3px solid var(--teja);outline-offset:2px}
@@ -114,6 +120,7 @@ a{color:var(--ink)}
 .sig{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;margin-top:24px;min-height:52px;border:1.5px solid var(--ink);background:var(--ink);color:var(--paper);font:inherit;font-size:15px;font-weight:700;text-align:left;padding:8px 14px;cursor:pointer}
 .sig::after{content:'↓';font-size:18px}
 .portada .sig{margin-top:10px;min-height:44px}.portada .sig+.nota{margin-top:8px}.lectura .portada .sig+.nota{display:none}
+.sig.sec{background:transparent;color:var(--ink)}.portada .sig+.sig{margin-top:8px}
 .lectura .sig{display:none}
 
 /* casilla 7: calendario por fases; cada fecha despliega qué pasa ese día y su fuente */
@@ -126,6 +133,8 @@ a{color:var(--ink)}
 .que::before{content:'';position:absolute;left:-6.5px;top:12px;width:9px;height:9px;border-radius:50%;background:var(--paper);border:1.5px solid var(--ink)}
 .hito.clave .que{font-weight:700;color:var(--teja2)}
 .hito.clave .que::before{background:var(--teja);border-color:var(--teja)}
+.hito.pasado .que,.hito.pasado .fecha{color:var(--sec)}.hito.pasado .que::before{background:var(--ground);border-color:var(--sec)}
+.hito .ahora{display:inline-block;margin-left:4px;padding:1px 6px 2px;background:var(--teja);color:#fff;font-family:'Libre Franklin',system-ui,sans-serif;font-weight:800;font-size:11px;letter-spacing:.06em;text-transform:uppercase;line-height:1.2;vertical-align:1px}
 .hito.abierta .que{border-left-style:dashed}
 .hito.abierta .fecha{color:var(--sec)}
 .tip{display:none;grid-column:1/-1;margin:2px 0 10px;background:var(--ink);color:var(--paper);padding:10px 12px 11px;font-size:14px;line-height:1.45}
@@ -133,6 +142,8 @@ a{color:var(--ink)}
 .hito.abierto .tip{display:block}
 .hito.abierto .fecha{background:var(--ink);color:var(--paper);border-bottom-color:var(--ink)}
 @media (max-width:420px){.hito{grid-template-columns:88px minmax(0,1fr)}.calendario .fase{padding-left:100px}.fecha{font-size:12.5px;white-space:normal;max-width:88px;line-height:1.25}.lectura .tip{margin-left:100px}}
+/* por debajo de 340 px (zoom de página en el móvil): calendario en una columna y calculadora de tres en fondo */
+@media (max-width:340px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hito{grid-template-columns:1fr}.fecha{justify-self:start;max-width:none;text-align:left}.calendario .fase{padding-left:0}.lectura .tip{margin-left:0}}
 .lectura .tip{display:block;position:static;grid-column:1/-1;margin:0 0 8px 122px;background:transparent;color:var(--ink);padding:0;font-size:14px}
 /* pie: autoría, licencias y privacidad */
 .pie{position:relative;z-index:1;opacity:.999;background:var(--ground);border-top:1.5px solid var(--ink);padding:20px 16px 28px;font-size:13px;color:var(--sec)}
@@ -151,6 +162,9 @@ a{color:var(--ink)}
 .barras li.sel .bb i{background:var(--teja)}
 /* calculadora: copiar el enlace con la combinación */
 .compartir{margin-top:8px}.compartir .nota{display:block;margin-top:4px;min-height:1.2em}
+/* quien llega por un enlace a una calculadora sin haber elegido provincia */
+.enviada{font-size:14.5px;font-weight:700;border-left:3px solid var(--teja);padding:2px 0 2px 10px;margin:10px 0}
+.enlace{font:inherit;color:inherit;background:none;border:0;padding:0;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
 /* casilla 11: votos (gris) frente a escaños (teja) de cada partido */
 .votesc{list-style:none;margin:8px 0 4px;padding:0;font-size:12.5px}
 .votesc li{display:grid;grid-template-columns:minmax(0,9em) minmax(0,1fr) 4.6em;gap:8px;align-items:center;padding:3px 0;border-top:1px solid var(--ground)}
@@ -185,13 +199,33 @@ main{position:relative;z-index:1}
 .escenario .p .sobre{fill:var(--paper);stroke-width:.05}
 .escenario .p .sobre-solapa{fill:none;stroke-width:.05}
 .escenario .p.borde path{stroke-width:.22}
+.escenario:is([data-est=mapaSel],[data-est=hab],[data-est=senado],[data-est=res]) .p{cursor:pointer}   /* en los mapas, tocar una provincia la elige */
+/* bordes de provincia, comunidad y costa, y recuadro de Canarias: grosor en píxeles de pantalla, el mismo a cualquier tamaño del mapa */
+.escenario .bordes{fill:none;stroke:var(--ink);stroke-linecap:round;pointer-events:none;opacity:0;transition:opacity .25s}
+.escenario .bordes.ve{opacity:1;transition-duration:.45s}
+.escenario .bordes path,.escenario .bordes rect{vector-effect:non-scaling-stroke}
+.escenario:is([data-est=mapaSel],[data-est=hab],[data-est=senado]) .p:not(.borde) .hx{stroke:rgba(43,33,24,.32)}
+.escenario .b-prov{stroke-width:1.1px}.escenario .b-ccaa{stroke-width:2px}.escenario .b-costa{stroke-width:2.4px}.escenario .b-marco{stroke-width:1.3px;stroke-dasharray:6 4}
+/* resultados: sobre los colores de los partidos, los bordes interiores van en blanco papel */
+.escenario[data-est=res] .p .hx{stroke:none}
+.escenario[data-est=res] :is(.b-prov,.b-ccaa){stroke:var(--paper);stroke-width:2.4px}
+@media (max-width:899px){.escenario .b-prov{stroke-width:.75px}.escenario .b-ccaa{stroke-width:1.15px}.escenario .b-costa{stroke-width:1.3px}.escenario .b-marco{stroke-width:.9px;stroke-dasharray:3 2}
+  .escenario[data-est=res] :is(.b-prov,.b-ccaa){stroke-width:1.5px}}
 .escenario .tuyo{pointer-events:none}
 .escenario .tuyo path{fill:#E0A526;stroke:var(--ink);stroke-width:.14}
 .escenario .tuyo circle{fill:var(--ink)}
 .escenario .raya176{stroke:var(--ink);stroke-width:.003;stroke-dasharray:.01 .007;fill:none}
 .escenario .t176{font:700 .022px 'Courier Prime',monospace;fill:var(--ink);text-anchor:middle}
+/* pactos: «Sí», «Abst.» y «No» bajo el hemiciclo y, en escritorio, el nombre de los partidos grandes, con un halo del color del fondo */
+.escenario .hemi-rot{pointer-events:none;opacity:0;transition:opacity .2s}.escenario .hemi-rot.ve{opacity:1;transition-duration:.4s}
+.escenario .hemi-rot text{font-family:'Libre Franklin',system-ui,sans-serif;font-weight:800;text-anchor:middle;fill:var(--ink);paint-order:stroke;stroke-linejoin:round}
+.escenario .r-bloque{font-size:.026px;text-transform:uppercase;letter-spacing:.06em;stroke:var(--ground);stroke-width:.006px}
+.escenario .r-partido{font-size:.024px;stroke:var(--paper);stroke-width:.009px}
+@media (max-width:899px){.escenario .r-bloque{font-size:.042px;stroke-width:.008px}}
 .rotulo{position:absolute;left:14px;top:10px;right:14px;margin:0;font-family:'Libre Franklin',system-ui,sans-serif;font-weight:800;font-size:clamp(15px,2.1vw,25px);line-height:1.12;pointer-events:none}
 .rotulo small{display:block;font-family:'Courier Prime',monospace;font-weight:700;font-size:13px;color:var(--sec);margin-top:3px}
+.rotulo .esc-hab{display:flex;align-items:center;gap:0;margin-top:5px;font-family:'Courier Prime',monospace;font-weight:700;font-size:12.5px;color:var(--sec)}
+.rotulo .esc-hab i{display:block;width:18px;height:10px;border:1px solid var(--ink);border-left-width:0}.rotulo .esc-hab i:first-of-type{margin-left:6px;border-left-width:1px}.rotulo .esc-hab i:last-of-type{margin-right:6px}
 .marca{position:absolute;left:0;top:0;pointer-events:none;transform:translate(-50%,-100%);background:var(--ink);color:#fff;font-size:11.5px;font-weight:700;line-height:1;padding:4px 7px 5px;border-radius:3px;white-space:nowrap;transition:opacity .3s}
 .marca::after{content:'';position:absolute;left:50%;bottom:-5px;margin-left:-5px;border:5px solid transparent;border-bottom:0;border-top-color:var(--ink)}
 .marca[hidden]{display:block;opacity:0}
@@ -199,7 +233,7 @@ main{position:relative;z-index:1}
 @media (min-width:900px){
   .escenario{top:44px;right:0;bottom:0;width:56vw;border-left:1.5px solid var(--ink)}
   .rotulo{top:18px;left:24px}
-  main{width:44vw;max-width:640px;margin-left:max(16px,calc(44vw - 660px));padding:64px 20px 40vh 0}
+  main{width:44vw;max-width:640px;margin-left:max(16px,calc(44vw - 660px));padding:64px 32px 40vh 0}
   .pie{width:44vw}
 }
 @media (max-width:899px){
@@ -207,15 +241,26 @@ main{position:relative;z-index:1}
   .escenario svg{height:calc(100% - 24px);margin-top:22px}
   .rotulo{top:5px;left:10px;right:10px;font-size:14.5px}
   .rotulo small{display:inline;margin:0 0 0 6px;font-size:12px}
+  .rotulo .esc-hab{position:absolute;right:0;top:calc(35vh - 30px);margin:0;font-size:11.5px}   /* la escala, abajo a la derecha, donde el mapa deja hueco */
   main{padding:calc(35vh + 56px) 10px 30vh}
   .paso{min-height:65vh}
   .pie-escenario{display:none}
+}
+/* tableta: un escenario algo más alto, para que el mapa no se quede en 300 px */
+@media (min-width:600px) and (max-width:899px){.escenario{height:42vh}main{padding-top:calc(42vh + 56px)}.rotulo .esc-hab{top:calc(42vh - 30px)}}
+/* ventana baja y ancha (móvil apaisado, portátil con el zoom al 200 %): el escenario a la derecha, como en escritorio */
+@media (max-width:899px) and (max-height:520px) and (min-width:560px){
+  .escenario{top:44px;left:auto;right:0;bottom:0;width:46vw;height:auto;border-bottom:0;border-left:1.5px solid var(--ink)}
+  main{width:54vw;padding:56px 10px 30vh}
+  .pie{width:54vw}
+  .rotulo .esc-hab{position:static;margin-top:4px}
 }
 /* cada paso: su número, su icono y la frase de tu provincia */
 .estacion{display:flex;align-items:center;gap:8px;font-family:'Libre Franklin',system-ui,sans-serif;font-weight:800;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--teja2);margin:0 0 6px}
 .estacion svg{width:34px;height:34px;flex:none}
 .tuvoto{position:relative;border:1.5px solid var(--ink);background:#FBF0D6;padding:9px 12px 10px 40px;margin:6px 0 12px;font-size:16px}
 .tuvoto::before{content:'';position:absolute;left:12px;top:12px;width:18px;height:20px;background:radial-gradient(circle,var(--ink) 0 3px,#E0A526 3.5px);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+.tuvoto .tv-cambia{display:block;margin-top:6px;font-size:15px;font-weight:700;color:var(--teja2)}
 .tuvoto .tv-et{display:block;font-family:'Libre Franklin',system-ui,sans-serif;font-weight:800;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--sec);margin-bottom:2px}
 .elige{margin-top:12px}
 .elige .pill{margin-top:4px}

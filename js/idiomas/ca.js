@@ -139,6 +139,7 @@ export const textos = {
 
   /* el escenario */
   ariaEscenario: "Els 350 escons del Congrés, que canvien de forma a cada pas. L'hexàgon daurat és el teu vot.",
+  ariaPaso: (texto, marca) => texto + (marca ? ' Hexàgon daurat: ' + marca.charAt(0).toLowerCase() + marca.slice(1) + '.' : ''),
   tuVoto: 'El teu vot',
   primerEscano: i => '1r escó ' + deProv(i),
   // k: paso; i: provincia; n: sus escaños; revelado: si ya se ha hecho la apuesta del paso 2
@@ -199,6 +200,7 @@ export const textos = {
   fase2Cerrada: "Els passos del 9 al 13 s'obren el 30N, amb els resultats.",
   abre30N: '30N',   // junto a cada paso cerrado, en el menú
   sigueMiVoto: 'Segueix el meu vot: ',
+  irResultados: 'Anar als resultats: ',   // fase 2: atajo de la salida al paso 9
   siguiente: 'Següent: ',
   verEscanos: 'Torna als 350 escons',
   verTexto: 'Mostra només el text',
@@ -213,12 +215,14 @@ export const textos = {
 
   /* paso 1 */
   provElige: (i, n) => Prov(i) + (plural(i) ? ' escullen ' : ' escull ') + escons(n) + ' dels 350.',
+  cambiaProv: (i, a, b) => 'No votes ' + aProv(i) + '? ' + a + 'Canvia-la aquí sota' + b + '.',   // recuadro del paso 1 sin provincia elegida
 
   /* paso 2: la apuesta y la tabla de divisiones */
   apuestaIntro: (i, n) => Prov(i) + (plural(i) ? ' reparteixen ' : ' reparteix ') + escons(n) + ' entre cinc partits inventats. Quants en dones a cadascun?',
   ariaApuesta: letra => 'Escons per al partit ' + letra,
   resto: q => q === 0 ? 'Tot repartit.' : q === 1 ? 'Et queda 1 escó per repartir.' : 'Et queden ' + q + ' escons per repartir.',
-  dhondtDa: n => "D'Hondt li'n dona " + n,
+  tuApuesta: 'La teva aposta',   // sobre la columna de cifras
+  dhondtDa: (n, tuyo) => "D'Hondt: " + n + ' · tu: ' + tuyo,
   acierto: (aciertos, total) => "N'has encertat " + aciertos + ' de ' + total + '.',
   partido: 'Partit',
   fuera: ' (fora)',
@@ -236,6 +240,10 @@ export const textos = {
   senTope: 'Només tres. Treu una marca per canviar-la.',
   senMarcadas: n => "N'has marcat " + n + ' de 3.',
 
+  /* paso 7: la etiqueta junto a lo que pasa hoy o, si hoy no hay nada, junto a lo siguiente */
+  calHoy: 'avui',
+  calSiguiente: 'el que ve ara',
+
   /* calculadoras de pactos (pasos 6 y 12) */
   voto: { no: 'No', si: 'Sí', abs: 'Abst.' },
   votoLargo: { no: 'no', si: 'sí', abs: 'abstenció' },
@@ -243,6 +251,8 @@ export const textos = {
   votacion1: '1a votació · majoria absoluta',
   votacion2: '2a votació · més sís que nos',
   copiar: "Copia l'enllaç a aquesta combinació",
+  compartirComb: 'Comparteix aquesta combinació',   // en el móvil, con la hoja de compartir del teléfono
+  enviada: (a, b) => "T'han enviat aquesta combinació. Canvia-la o " + a + 'comença pel principi' + b + '.',
   copiado: 'Enllaç copiat.',
   copiaManual: "Copia l'adreça del navegador: ja porta la combinació.",
   copiaDireccion: "Copia l'adreça del navegador",

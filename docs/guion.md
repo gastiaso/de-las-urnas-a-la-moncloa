@@ -17,6 +17,7 @@ Baja para empezar ↓
 **Riel:**
 
 El 29N no eliges presidente: eliges a los 350 diputados del Congreso, que son quienes lo eligen. Sus asientos, los escaños, se reparten por circunscripciones: en la práctica, por provincias.
+Toca las palabras subrayadas para ver qué significan.
 En el mapa, cada hexágono es un escaño: las provincias crecen o encogen según los escaños que reparten, dentro de la silueta de España. Canarias, abajo a la izquierda.
 
 **Saber más: Por qué unas provincias tienen más escaños**

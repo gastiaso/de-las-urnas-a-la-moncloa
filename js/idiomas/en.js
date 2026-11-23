@@ -90,6 +90,7 @@ export const textos = {
 
   /* el escenario */
   ariaEscenario: 'The 350 seats in Congress, which change shape at every step. The gold hexagon is the vote being followed.',
+  ariaPaso: (texto, marca) => texto + (marca ? ' Gold hexagon: ' + marca.charAt(0).toLowerCase() + marca.slice(1) + '.' : ''),
   tuVoto: 'One vote',
   primerEscano: i => '1st seat in ' + prov(i),
   rotulo: (k, i, n, revelado) => ({
@@ -151,6 +152,7 @@ export const textos = {
   fase2Cerrada: 'Steps 9 to 13 open on 30 November, with the results.',
   abre30N: '30 Nov',   // junto a cada paso cerrado, en el menú
   sigueMiVoto: 'Follow the vote: ',
+  irResultados: 'Go to the results: ',   // fase 2: atajo de la salida al paso 9
   siguiente: 'Next: ',
   verEscanos: 'Back to the 350 seats',
   verTexto: 'Text only',
@@ -165,12 +167,14 @@ export const textos = {
 
   /* paso 1 */
   provElige: (i, n) => 'Voters in ' + prov(i) + ' elect ' + n + ' of the 350 deputies.',
+  cambiaProv: (i, a, b) => 'The vote being followed is cast in ' + prov(i) + '. ' + a + 'Choose another province below' + b + '.',   // recuadro del paso 1 sin provincia elegida
 
   /* paso 2 */
   apuestaIntro: (i, n) => 'In ' + prov(i) + ' there ' + (n === 1 ? 'is ' : 'are ') + escanos(n) + ' to share out among five made-up parties. How many would you give each one?',
   ariaApuesta: letra => 'Seats for party ' + letra,
   resto: q => q === 0 ? 'All shared out.' : q === 1 ? 'You have 1 seat left to share out.' : 'You have ' + q + ' seats left to share out.',
-  dhondtDa: n => "D'Hondt gives it " + n,
+  tuApuesta: 'Your bet',   // sobre la columna de cifras
+  dhondtDa: (n, tuyo) => "D'Hondt: " + n + ' · you: ' + tuyo,
   acierto: (aciertos, total) => 'You got ' + aciertos + ' of ' + total + ' right.',
   partido: 'Party',
   fuera: ' (out)',
@@ -187,6 +191,10 @@ export const textos = {
   senTope: 'Three at most. Untick one to change it.',
   senMarcadas: n => 'You have marked ' + n + ' of 3.',
 
+  /* paso 7: la etiqueta junto a lo que pasa hoy o, si hoy no hay nada, junto a lo siguiente */
+  calHoy: 'today',
+  calSiguiente: 'next',
+
   /* calculadoras de pactos */
   voto: { no: 'No', si: 'Yes', abs: 'Abst.' },
   votoLargo: { no: 'votes no', si: 'votes yes', abs: 'abstains' },
@@ -194,6 +202,8 @@ export const textos = {
   votacion1: '1st vote · absolute majority',
   votacion2: '2nd vote · more yes than no',
   copiar: 'Copy a link to this combination',
+  compartirComb: 'Share this combination',   // en el móvil, con la hoja de compartir del teléfono
+  enviada: (a, b) => 'Someone has sent you this combination. Change it or ' + a + 'start from the beginning' + b + '.',
   copiado: 'Link copied.',
   copiaManual: "Copy the address from the browser: it already carries the combination.",
   copiaDireccion: 'Copy the address from the browser',

@@ -140,6 +140,7 @@ export const textos = {
 
   /* el escenario */
   ariaEscenario: 'Os 350 escanos do Congreso, que cambian de forma en cada paso. O hexágono dourado é o teu voto.',
+  ariaPaso: (texto, marca) => texto + (marca ? ' Hexágono dourado: ' + marca.charAt(0).toLowerCase() + marca.slice(1) + '.' : ''),
   tuVoto: 'O teu voto',
   primerEscano: i => '1.º escano ' + de(i),
   rotulo: (k, i, n, revelado) => ({
@@ -198,6 +199,7 @@ export const textos = {
   fase2Cerrada: 'Os pasos 9 a 13 ábrense o 30N, cos resultados.',
   abre30N: '30N',   // junto a cada paso cerrado, en el menú
   sigueMiVoto: 'Segue o meu voto: ',
+  irResultados: 'Ir aos resultados: ',   // fase 2: atajo de la salida al paso 9
   siguiente: 'Seguinte: ',
   verEscanos: 'Volver aos 350 escanos',
   verTexto: 'Ver só o texto',
@@ -212,12 +214,14 @@ export const textos = {
 
   /* paso 1 */
   provElige: (i, n) => suxeito(i, true) + ' ' + verbo(i, 'elixe', 'elixen') + ' ' + escanos(n) + ' dos 350.',
+  cambiaProv: (i, a, b) => 'Non votas ' + en(i) + '? ' + a + 'Cámbiaa aquí abaixo' + b + '.',   // recuadro del paso 1 sin provincia elegida
 
   /* paso 2: la apuesta y la tabla de divisiones */
   apuestaIntro: (i, n) => suxeito(i, true) + ' ' + verbo(i, 'reparte', 'reparten') + ' ' + escanos(n) + ' entre cinco partidos inventados. Cantos lle dás a cada un?',
   ariaApuesta: letra => 'Escanos para o partido ' + letra,
   resto: q => q === 0 ? 'Todo repartido.' : q === 1 ? 'Quédache 1 escano por repartir.' : 'Quédanche ' + q + ' escanos por repartir.',
-  dhondtDa: n => "D'Hondt dálle " + n,
+  tuApuesta: 'A túa aposta',   // sobre la columna de cifras
+  dhondtDa: (n, tuyo) => "D'Hondt: " + n + ' · ti: ' + tuyo,
   acierto: (aciertos, total) => 'Acertaches ' + aciertos + ' de ' + total + '.',
   partido: 'Partido',
   fuera: ' (fóra)',
@@ -234,6 +238,10 @@ export const textos = {
   senTope: 'Só tres. Quita unha marca para cambiala.',
   senMarcadas: n => 'Marcaches ' + n + ' de 3.',
 
+  /* paso 7: la etiqueta junto a lo que pasa hoy o, si hoy no hay nada, junto a lo siguiente */
+  calHoy: 'hoxe',
+  calSiguiente: 'o seguinte',
+
   /* calculadoras de pactos (pasos 6 y 12) */
   voto: { no: 'Non', si: 'Si', abs: 'Abst.' },
   votoLargo: { no: 'non', si: 'si', abs: 'abstención' },
@@ -241,6 +249,8 @@ export const textos = {
   votacion1: '1.ª votación · maioría absoluta',
   votacion2: '2.ª votación · máis a favor que en contra',
   copiar: 'Copiar a ligazón a esta combinación',
+  compartirComb: 'Compartir esta combinación',   // en el móvil, con la hoja de compartir del teléfono
+  enviada: (a, b) => 'Enviáronche esta combinación. Cámbiaa ou ' + a + 'empeza polo principio' + b + '.',
   copiado: 'Ligazón copiada.',
   copiaManual: 'Copia o enderezo do navegador: xa leva a combinación.',
   copiaDireccion: 'Copia o enderezo do navegador',

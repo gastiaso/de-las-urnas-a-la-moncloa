@@ -165,6 +165,7 @@ export const textos = {
 
   /* el escenario */
   ariaEscenario: 'Kongresuko 350 eserlekuak, urrats bakoitzean forma aldatzen dutenak. Hexagono urrekara zure botoa da.',
+  ariaPaso: (texto, marca) => texto + (marca ? ' Hexagono urrekara: ' + marca.replace(/^Zure/, 'zure') + '.' : ''),
   tuVoto: 'Zure botoa',
   primerEscano: i => nongo(i) + ' 1. eserlekua',
   // k: paso; i: provincia; n: sus escaños; revelado: si ya se ha hecho la apuesta del paso 2
@@ -227,6 +228,7 @@ export const textos = {
   fase2Cerrada: '9. urratsetik 13.era artekoak azaroaren 30ean irekiko dira, emaitzekin.',
   abre30N: 'aza. 30',   // junto a cada paso cerrado, en el menú
   sigueMiVoto: 'Jarraitu nire botoari: ',
+  irResultados: 'Emaitzetara joan: ',   // fase 2: atajo de la salida al paso 9
   siguiente: 'Hurrengoa: ',
   verEscanos: 'Itzuli 350 eserlekuetara',
   verTexto: 'Testua bakarrik ikusi',
@@ -241,12 +243,14 @@ export const textos = {
 
   /* paso 1 */
   provElige: (i, n) => nork(i) + ' 350 eserlekuetatik ' + n + ' aukeratzen ' + (PLURALA.includes(i) ? (n === 1 ? 'dute' : 'dituzte') : (n === 1 ? 'du' : 'ditu')) + '.',
+  cambiaProv: (i, a, b) => 'Ez duzu ' + non(i) + ' bozkatzen? ' + a + 'Aldatu hemen behean' + b + '.',   // recuadro del paso 1 sin provincia elegida
 
   /* paso 2: la apuesta y la tabla de divisiones */
   apuestaIntro: (i, n) => non(i) + ' ' + eserleku(n) + (n === 1 ? ' banatzen da' : ' banatzen dira') + ' asmatutako bost alderdiren artean. Zenbat emango dizkiozu bakoitzari?',
   ariaApuesta: letra => letra + ' alderdiarentzako eserlekuak',
   resto: q => q === 0 ? 'Dena banatuta.' : q === 1 ? 'Eserleku bat geratzen zaizu banatzeko.' : q + ' eserleku geratzen zaizkizu banatzeko.',
-  dhondtDa: n => "D'Hondt legearen arabera: " + n,
+  tuApuesta: 'Zure apustua',   // sobre la columna de cifras
+  dhondtDa: (n, tuyo) => "D'Hondt: " + n + ' · zuk: ' + tuyo,
   acierto: (aciertos, total) => tik(total) + ' ' + aciertos + ' asmatu ' + (aciertos === 1 ? 'duzu' : 'dituzu') + '.',
   partido: 'Alderdia',
   fuera: ' (kanpoan)',
@@ -264,6 +268,10 @@ export const textos = {
   senTope: 'Hiru bakarrik. Kendu marka bat aldatzeko.',
   senMarcadas: n => '3tik ' + n + ' markatu ' + (n === 1 ? 'duzu' : 'dituzu') + '.',
 
+  /* paso 7: la etiqueta junto a lo que pasa hoy o, si hoy no hay nada, junto a lo siguiente */
+  calHoy: 'gaur',
+  calSiguiente: 'hurrengoa',
+
   /* calculadoras de pactos (pasos 6 y 12) */
   voto: { no: 'Ez', si: 'Bai', abs: 'Abst.' },
   votoLargo: { no: 'ez', si: 'bai', abs: 'abstentzioa' },
@@ -271,6 +279,8 @@ export const textos = {
   votacion1: '1. bozketa · gehiengo osoa',
   votacion2: '2. bozketa · ezezkoak baino baiezko gehiago',
   copiar: 'Kopiatu konbinazio honen esteka',
+  compartirComb: 'Partekatu konbinazio hau',   // en el móvil, con la hoja de compartir del teléfono
+  enviada: (a, b) => 'Konbinazio hau bidali dizute. Aldatu edo ' + a + 'hasi hasieratik' + b + '.',
   copiado: 'Esteka kopiatuta.',
   copiaManual: 'Kopiatu nabigatzaileko helbidea: konbinazioa barruan darama.',
   copiaDireccion: 'Kopiatu nabigatzaileko helbidea',
