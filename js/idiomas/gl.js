@@ -232,6 +232,8 @@ export const textos = {
   votacion1: '1.ª votación · maioría absoluta',
   votacion2: '2.ª votación · máis a favor que en contra',
   copiar: 'Copiar a ligazón a esta combinación',
+  compartirComb: 'Compartir esta combinación',   // en el móvil, con la hoja de compartir del teléfono
+  enviada: (a, b) => 'Enviáronche esta combinación. Cámbiaa ou ' + a + 'empeza polo principio' + b + '.',
   copiado: 'Ligazón copiada.',
   copiaManual: 'Copia o enderezo do navegador: xa leva a combinación.',
   copiaDireccion: 'Copia o enderezo do navegador',

@@ -268,6 +268,8 @@ export const textos = {
   votacion1: '1. bozketa · gehiengo osoa',
   votacion2: '2. bozketa · ezezkoak baino baiezko gehiago',
   copiar: 'Kopiatu konbinazio honen esteka',
+  compartirComb: 'Partekatu konbinazio hau',   // en el móvil, con la hoja de compartir del teléfono
+  enviada: (a, b) => 'Konbinazio hau bidali dizute. Aldatu edo ' + a + 'hasi hasieratik' + b + '.',
   copiado: 'Esteka kopiatuta.',
   copiaManual: 'Kopiatu nabigatzaileko helbidea: konbinazioa barruan darama.',
   copiaDireccion: 'Kopiatu nabigatzaileko helbidea',

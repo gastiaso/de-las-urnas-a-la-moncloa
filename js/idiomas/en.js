@@ -189,6 +189,8 @@ export const textos = {
   votacion1: '1st vote · absolute majority',
   votacion2: '2nd vote · more yes than no',
   copiar: 'Copy a link to this combination',
+  compartirComb: 'Share this combination',   // en el móvil, con la hoja de compartir del teléfono
+  enviada: (a, b) => 'Someone has sent you this combination. Change it or ' + a + 'start from the beginning' + b + '.',
   copiado: 'Link copied.',
   copiaManual: "Copy the address from the browser: it already carries the combination.",
   copiaDireccion: 'Copy the address from the browser',

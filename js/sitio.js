@@ -233,10 +233,11 @@ secs.forEach(s => {
   cu.insertBefore(et, h);
   const tv = document.createElement('div'); tv.className = 'tuvoto'; tv.dataset.k = kk; h.after(tv);
 });
+let enviado = 0;   // paso de la calculadora a la que se ha llegado por un enlace sin haber elegido provincia (ver al final)
 function pintaTuVoto() {
   if (!C) return;
   const sp = $('#provVoto'); if (sp) sp.value = C.st.prov;
-  $$('.tuvoto').forEach(t => { const f = frase(+t.dataset.k); t.hidden = !f; t.innerHTML = f ? '<span class="tv-et">' + T.tuVoto + '</span>' + f : ''; });
+  $$('.tuvoto').forEach(t => { const f = frase(+t.dataset.k); t.hidden = !f || (+t.dataset.k === enviado && !C.st.elegida); t.innerHTML = f ? '<span class="tv-et">' + T.tuVoto + '</span>' + f : ''; });
 }
 /* salida: elegir dónde votas. Va justo debajo del título, para que se vea sin bajar nada más cerrar la portada. */
 const salida = $('.paso[data-k="0"] .portada');
@@ -250,9 +251,9 @@ pintaTuVoto();
 
 /* ---------- navegación: menú de pasos, «Siguiente», solo texto ---------- */
 const indice = $('#indice');
-const irA = (kk, foco) => {
+const irA = (kk, foco, dentro) => {   // dentro: un elemento del paso al que bajar, en vez de su principio
   const s = secs.find(x => casilla(x) === kk); if (!s) return;
-  const y = kk === 0 ? 0 : s.getBoundingClientRect().top + scrollY - (innerWidth < 900 && !enLectura() ? innerHeight * 0.35 + 52 : 56);
+  const y = kk === 0 ? 0 : (dentro || s).getBoundingClientRect().top + scrollY - (innerWidth < 900 && !enLectura() ? innerHeight * 0.35 + 52 : 56);
   scrollTo({ top: y, behavior: calma() || Math.abs(y - scrollY) > innerHeight * 3 ? 'auto' : 'smooth' });
   if (foco) { const t = $('h1, h2', s); t.tabIndex = -1; t.focus({ preventScroll: true }); }
 };
@@ -284,13 +285,13 @@ secs.forEach((s, i) => {
   const kk = casilla(secs[i + 1]), b = document.createElement('button'); b.type = 'button'; b.className = 'sig';
   b.textContent = (i === 0 ? T.sigueMiVoto : T.siguiente) + (kk === 14 ? '' : kk + ' · ') + T.titulos[kk];
   b.addEventListener('click', () => irA(kk, true));
-  if (i === 0) { elige.after(b); b.after(tocaMapa); }   // en la salida, el botón va con el desplegable
+  if (i === 0) { elige.after(b); b.after(tocaMapa); b.addEventListener('click', () => C.recuerda()); }   // en la salida, el botón va con el desplegable; pulsarlo acepta la provincia
   else ($('.cuerpo', s) || $('.portada', s)).appendChild(b);
 });
 if (FASE2) {   // en la fase 2, la salida lleva primero un atajo a los resultados; el recorrido por las reglas queda de segundo
   const b = document.createElement('button'); b.type = 'button'; b.className = 'sig';
   b.textContent = T.irResultados + '9 · ' + T.titulos[9];
-  b.addEventListener('click', () => irA(9, true));
+  b.addEventListener('click', () => { C.recuerda(); irA(9, true); });
   const s0 = $('.sig', salida); s0.classList.add('sec'); s0.before(b);
 }
 function lectura(v) {
@@ -359,6 +360,19 @@ if (!saltaPortada) {
   setTimeout(() => $('.boton', tapa).focus({ preventScroll: true, focusVisible: false }), 50);
 } else { listo = true; }
 mira(true);
-// Enlace compartido a una calculadora (?p6=…): se va directo a ese paso.
-const m = location.search.match(/[?&]p(6|12)=/); if (m) setTimeout(() => irA(+m[1]), 80);
+// Enlace compartido a una calculadora (?p6=…): se baja directo a ella, salvo al recargar (el navegador ya vuelve a donde se estaba).
+// Si quien llega no ha elegido provincia, el recuadro «Tu voto» de ese paso no sale y una línea dice de dónde viene la combinación.
+const m = location.search.match(/[?&]p(6|12)=/), kEnlace = m ? +m[1] : 0;
+const recarga = (() => { try { return performance.getEntriesByType('navigation')[0].type === 'reload'; } catch (e) { return false; } })();
+if (kEnlace && !recarga && secs.some(s => casilla(s) === kEnlace)) {
+  let destino = $('#calc' + kEnlace);
+  if (!C.st.elegida) {
+    enviado = kEnlace; pintaTuVoto();
+    const p = document.createElement('p'); p.className = 'enviada';
+    p.innerHTML = T.enviada('<button type="button" class="enlace">', '</button>');
+    $('button', p).addEventListener('click', () => irA(0, true));
+    (kEnlace === 6 ? $('#calcNota') : destino).before(p); destino = p;
+  }
+  setTimeout(() => irA(kEnlace, false, destino), 80);
+}
 window.__sitio = { aplica, irA, C: () => C };

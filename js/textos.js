@@ -140,6 +140,9 @@ export const ES = {
   votacion1: '1.ª votación · mayoría absoluta',
   votacion2: '2.ª votación · más síes que noes',
   copiar: 'Copiar enlace a esta combinación',
+  compartirComb: 'Compartir esta combinación',   // en el móvil, con la hoja de compartir del teléfono
+  // quien llega por un enlace con una combinación y sin haber elegido provincia; a y b envuelven el enlace a la salida
+  enviada: (a, b) => 'Te han enviado esta combinación. Cámbiala o ' + a + 'empieza por el principio' + b + '.',
   copiado: 'Enlace copiado.',
   copiaManual: 'Copia la dirección del navegador: ya lleva la combinación.',
   copiaDireccion: 'Copia la dirección del navegador',   // botón «Compartir», si no se puede copiar sola
