@@ -29,7 +29,7 @@ Uso (desde la carpeta del repositorio; cada orden en una sola línea):
       --oficiales datos/escanos_oficiales_29N.csv
 """
 import argparse, collections, csv, pathlib, re, sys, zipfile
-from escrutinio import DECRETO, INE, NOMBRES, RAIZ, clave_siglas, leer_siglas, provincia
+from escrutinio import DECRETO, INE, NOMBRES, RAIZ, clave_siglas, leer_siglas, leer_texto, provincia
 
 ESPECIALES = {'_blancos', '_validos', '_nulos', '_votantes', '_censo', '_escanos'}
 
@@ -92,7 +92,7 @@ def leer_dat(ruta):
 
 # ---------- entrada «largo»: un CSV por provincia y candidatura ----------
 def leer_largo(ruta):
-    with open(ruta, encoding='utf-8-sig', newline='') as f:
+    with leer_texto(ruta) as f:
         lineas = [l for l in f if l.strip() and not l.lstrip().startswith('#')]   # las líneas con # no cuentan
     muestra = ''.join(lineas[:20])
     sep = ';' if muestra.count(';') > muestra.count(',') else ','

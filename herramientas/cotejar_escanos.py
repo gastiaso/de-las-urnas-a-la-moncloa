@@ -17,7 +17,7 @@ Uso (desde la carpeta del repositorio):
   py herramientas/cotejar_escanos.py datos/simulacro_23J.csv datos/escanos_oficiales_23J.csv
 """
 import argparse, collections, csv, json, re, sys
-from escrutinio import NOMBRES, faltan_para_ultimo, provincia, reparto, sin_acentos
+from escrutinio import NOMBRES, faltan_para_ultimo, leer_texto, provincia, reparto, sin_acentos
 
 FIJAS = {'district', 'ccaa', 'escanos', 'escanos_2023', 'validos', 'OTROS', 'BLANCO', 'censo', 'votantes', 'nulos'}
 
@@ -47,7 +47,7 @@ def leer_calculo(ruta, col_escanos):
 
 
 def leer_oficiales(ruta):
-    with open(ruta, encoding='utf-8-sig', newline='') as f:
+    with leer_texto(ruta) as f:
         lineas = [l for l in f if l.strip() and not l.lstrip().startswith('#')]   # las líneas con # no cuentan
     muestra = ''.join(lineas[:20])
     filas = list(csv.DictReader(lineas, delimiter=';' if muestra.count(';') > muestra.count(',') else ','))

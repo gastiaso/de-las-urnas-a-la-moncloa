@@ -10,6 +10,7 @@ Uso (desde la carpeta del repositorio):
   py herramientas/escribir_resultados.py datos/prueba_23J.csv --escanos escanos_2023 --prueba --salida C:/temp/r.js
 """
 import os, pathlib, subprocess, sys
+import escrutinio   # noqa: F401 (solo por los acentos en la consola de Windows)
 
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
 args = sys.argv[1:]

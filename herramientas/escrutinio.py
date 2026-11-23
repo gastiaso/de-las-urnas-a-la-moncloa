@@ -2,9 +2,38 @@
 siglas de los partidos y el reparto D'Hondt, el mismo que hace la web (js/dhondt.js).
 No se ejecuta solo.
 """
-import csv, json, math, re, pathlib, unicodedata
+import csv, io, json, math, os, re, pathlib, sys, unicodedata
 
 RAIZ = pathlib.Path(__file__).resolve().parent.parent
+
+
+def consola_windows():
+    """En Windows, si la salida va a una tubería (PowerShell con | o ISE) y no a la consola, Python escribe en ANSI
+    y PowerShell lo lee en la página de la consola (850): «Cádiz» sale «Cßdiz». Se escribe en la de la consola."""
+    if sys.platform != 'win32' or os.environ.get('PYTHONIOENCODING'): return   # si se pide una codificación, esa
+    try:
+        import ctypes
+        cp = ctypes.windll.kernel32.GetConsoleOutputCP()
+        for s in (sys.stdout, sys.stderr):
+            if cp and not s.isatty(): s.reconfigure(encoding='cp%d' % cp, errors='replace')
+    except (AttributeError, LookupError, OSError, ValueError):
+        pass
+
+consola_windows()
+
+
+def leer_texto(ruta):
+    """Un CSV en UTF-8 (con BOM o sin él), en UTF-16 (el «>» de PowerShell 5.1) o en ANSI (Excel, «CSV delimitado
+    por comas»), devuelto como texto que se puede leer línea a línea con csv."""
+    b = pathlib.Path(ruta).read_bytes()
+    if b[:2] in (b'\xff\xfe', b'\xfe\xff'): return io.StringIO(b.decode('utf-16'), newline='')
+    try: return io.StringIO(b.decode('utf-8-sig'), newline='')
+    except UnicodeDecodeError: pass
+    try: texto = b.decode('cp1252')
+    except UnicodeDecodeError: sys.exit('ERROR: %s no está en UTF-8 ni en ANSI. Guardarlo como «CSV UTF-8».' % ruta)
+    print('AVISO: %s no está en UTF-8: se lee como ANSI (Windows-1252), que es como lo guarda Excel. '
+          'Comprobar los acentos de las provincias y las siglas.' % ruta, file=sys.stderr)
+    return io.StringIO(texto, newline='')
 
 # Circunscripciones y escaños del decreto, tal como están en js/datos.js (anexo del Real Decreto 806/2026).
 _datos = (RAIZ / 'js' / 'datos.js').read_text(encoding='utf-8')
@@ -72,7 +101,7 @@ def clave_siglas(s):
 def leer_siglas(ruta):
     """datos/siglas.csv: siglas,id[,nota]. id es un partido de META en resultados.py, u OTROS."""
     tabla = {}
-    with open(ruta, encoding='utf-8') as f:
+    with leer_texto(ruta) as f:
         for fila in csv.DictReader(l for l in f if l.strip() and not l.lstrip().startswith('#')):
             k = clave_siglas(fila['siglas'])
             if k: tabla[k] = fila['id'].strip()
