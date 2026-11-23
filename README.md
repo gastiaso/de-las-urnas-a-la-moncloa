@@ -112,6 +112,7 @@ Con un nombre de archivo `.png` como argumento, dibuja además una vista previa.
 python3 herramientas/resultados.py datos/resultados_29N.csv --abierta \
     --etiqueta "escrutinio provisional del 29 de noviembre de 2026" --fuente "Ministerio del Interior" > js/resultados.js
 # 3. Con el escrutinio general (4 de diciembre), lo mismo y además --general: la web deja de decir que es provisional
+# 4. El Senado, si se tiene: --senado datos/senado_29N.csv (senadores por circunscripción y partido; ver datos/plantilla_senado.csv)
 ```
 
 Antes de escribir nada, `resultados.py` comprueba que estén las 52 circunscripciones con los nombres de `js/datos.js`, que sus escaños coincidan con el decreto y que cuadren los votos. Si el CSV trae `censo`, `votantes` y `nulos`, el paso 9 da la participación.
@@ -122,6 +123,7 @@ Otras herramientas para la noche electoral:
 
 - `herramientas/interior_a_csv.py` pasa al CSV de `resultados.py` los ficheros de resultados del Ministerio del Interior (formato de infoelectoral) o un CSV largo hecho a mano (`datos/plantilla_largo.csv`). Las siglas se traducen a los partidos de la web con `datos/siglas.csv`.
 - `herramientas/capturar_web.py` lee los resultados de la web oficial de resultados, provincia a provincia, si sirve JSON como la del 23J, y escribe los mismos CSV. Sin credenciales y con una pausa entre peticiones. `herramientas/simular_web.py` monta una copia de esa web con los ficheros oficiales del 23J, para ensayar.
+- `herramientas/senado.py` comprueba el CSV del Senado (senadores elegidos por circunscripción y partido) frente a las 60 circunscripciones y los 209 senadores del Real Decreto 806/2026, y se para si no cuadra. `herramientas/capturar_senado.py` lo escribe desde la web oficial de resultados, como `capturar_web.py` con el Congreso. Prueba con el 23J: `datos/senado_23J.csv`, cotejado con la proclamación de la Junta Electoral Central (208 senadores).
 - `herramientas/cotejar_escanos.py` recalcula el reparto y lo compara, provincia a provincia, con los escaños oficiales (`datos/plantilla_oficiales.csv`). Con los ficheros oficiales del 23J da los 350 escaños sin ninguna diferencia (`datos/escanos_oficiales_23J.csv`).
 
 Las calculadoras de pactos se pueden compartir: la combinación va en la dirección (`?p6=PSOE:s,PNV:a` para el paso 6, `?p12=` para el 12).
@@ -149,6 +151,7 @@ Las calculadoras de pactos se pueden compartir: la combinación va en la direcci
 | `datos/escanos_oficiales_23J.csv` | Escaños oficiales del 23J por circunscripción, para probar el cotejo |
 | `datos/siglas.csv` y `datos/siglas_23J.csv` | De las siglas del Ministerio a los partidos de la web (la segunda, solo para el 23J) |
 | `datos/plantilla_largo.csv` y `datos/plantilla_oficiales.csv` | Plantillas para copiar resultados y escaños a mano |
+| `datos/senado_23J.csv` y `datos/plantilla_senado.csv` | Senadores del 23J por circunscripción y partido, para probar la fase 2, y plantilla para copiarlos a mano el 29N |
 | `docs/guion.md` | Todo el texto del sitio con la fuente de cada cajón (generado) |
 | `idiomas/` y `js/idiomas/` | Las traducciones: las frases de la página (`xx.txt`) y los textos del JavaScript (`xx.js`) de cada idioma |
 | `ca/`, `va/`, `gl/`, `eu/` y `en/` | La página en catalán, valenciano, gallego, euskera e inglés (generadas) |
@@ -178,7 +181,7 @@ node herramientas/prueba_idiomas.mjs       # comprueba que a los textos del Java
 - **Habitantes no son votantes.** Los habitantes por escaño salen de la población oficial, que incluye a menores y a extranjeros que no votan en estas elecciones.
 - **La calculadora de pactos mira atrás.** Hasta el 30N lleva los escaños de 2023, no una previsión del 29N.
 - **La noche electoral no da el resultado oficial.** Los primeros resultados son del recuento provisional; el oficial, con el voto desde el extranjero, llega el 4 de diciembre.
-- **El Senado, solo en las reglas.** Los pasos de resultados dan los del Congreso; los del Senado, todavía no.
+- **El Senado, a medias.** Los pasos 9 y 10 dan los senadores elegidos en las urnas, sumados por partido; los que designan los parlamentos autonómicos llegan después y no están.
 - **Es una introducción.** Los cajones dan la norma exacta, pero no cubren todos los casos que prevé la ley.
 
 ## Cómo citar

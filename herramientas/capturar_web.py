@@ -25,6 +25,7 @@ Uso (desde la carpeta del repositorio; cada orden en una sola línea):
   py herramientas/capturar_web.py --revisar archivo.json                (qué se lee de un JSON guardado desde el navegador)
   py herramientas/capturar_web.py --carpeta ../descargas/interior/web_29N/20261129-231500 --csv ...   (sin red)
 --base también acepta una carpeta con la misma estructura que la web (la que escribe simular_web.py, para ensayar).
+El Senado, con herramientas/capturar_senado.py y los mismos parámetros.
 """
 import argparse, collections, csv, datetime, gzip, hashlib, http.client, json, pathlib, re, sys, time, urllib.error, urllib.request
 from escrutinio import DECRETO, INE, NOMBRES, clave_siglas, provincia, sin_acentos

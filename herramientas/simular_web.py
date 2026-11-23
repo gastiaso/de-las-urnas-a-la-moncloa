@@ -12,6 +12,9 @@ Uso (desde la carpeta del repositorio; cada orden en una sola línea):
 o, para probar también las peticiones, servir la carpeta y pasar la dirección:
   py -m http.server 8840 --directory C:/temp/web23J      y      --base http://localhost:8840
 Opciones para ensayar fallos: --escrutado Madrid=97.3 (provincia sin terminar), --falta Soria (sin escrutinio).
+Con --senado datos/senado_23J.csv (y el nomenclátor archivado) añade el Senado, para ensayar capturar_senado.py: los
+senadores de cada circunscripción en «cargos», con la forma del total nacional del Senado archivado. Los votos de cada
+candidato no se simulan (el capturador no los lee).
 """
 import argparse, collections, gzip, json, pathlib, sys
 from escrutinio import INE, NOMBRES, provincia
@@ -49,6 +52,7 @@ def main():
     a.add_argument('--nomenclator', help='nomenclátor archivado del 23J (si no, uno inventado)')
     a.add_argument('--escrutado', action='append', default=[], metavar='PROVINCIA=PCT', help='mesas escrutadas de una provincia')
     a.add_argument('--falta', action='append', default=[], metavar='PROVINCIA', help='provincia todavía sin escrutinio')
+    a.add_argument('--senado', help='CSV del Senado (como datos/senado_23J.csv): añade el Senado; necesita --nomenclator')
     o = a.parse_args()
     prov = leer_dat(o.dat)
     porc = {n: 100.0 for n in NOMBRES}
@@ -92,6 +96,32 @@ def main():
     (d / '1').mkdir(exist_ok=True)
     (d / '1' / '30').write_text(json.dumps(dict(nac, mapa=mapa), ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
     print('Web simulada en %s: 52 provincias, el total nacional y el nacional con el mapa de provincias.' % sal)
+    if o.senado:
+        if not o.nomenclator: sys.exit('--senado necesita --nomenclator (el archivado del 23J, que trae el Senado)')
+        print('Senado: %d circunscripciones y el total nacional.' % senado_simulado(o.senado, base, nom))
+
+
+def senado_simulado(ruta, base, nom):
+    """El Senado (elección 3) de la web simulada: getScopeData/{scope}/2/3/1/0 de cada circunscripción y del total."""
+    import senado
+    from capturar_senado import del_nomenclator
+    s = senado.leer(ruta, prueba=True)
+    nac_id, ids = del_nomenclator(nom, 3)
+    amb = {x['c']: x for x in next(a['ambitos'] for a in nom['amb'] if a['elec'] == 3)}
+    def escribe(sid, x, cuenta, circ):
+        partidos = [{'siglas': i, 'codigo': str(k), 'cargos': pd(n), 'nombre': i, 'votos': pd(0), 'porcentaje': pd(0.0), 'orden': k,
+                     'candidatos': None, 'agrupaciones': []} for k, (i, n) in enumerate(cuenta.most_common(), 1)]
+        d = {'scope': {'codigo': x['co'], 'nombre': x['n'], 'nivel': x['l'], 'padres': [], 'apertura': None, 'avances': None,
+                       'escrutinio': {'envio': 140, 'fecha': FECHA, 'porcMesasEscrutadas': pd(100.0), 'cargos': sum(cuenta.values()), 'partidos': partidos},
+                       'escrutinioAnt': None, 'envio': 140, 'isCircuns': circ, 'mapa': None, 'id': {'scopeId': sid, 'eleccion': 3}, 'showEscrutinio': True}}
+        dd = base / sid / '2' / '3' / '1'; dd.mkdir(parents=True, exist_ok=True)
+        (dd / '0').write_text(json.dumps(d, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
+    tot = collections.Counter()
+    for c in s['circ']:
+        if c['c'] not in ids: sys.exit('el nomenclátor no tiene %s en el Senado' % c['c'])
+        escribe(ids[c['c']], amb[ids[c['c']]], collections.Counter(c['r']), 1); tot.update(c['r'])
+    escribe(nac_id, amb[nac_id], tot, 2)
+    return len(s['circ'])
 
 
 if __name__ == '__main__':
