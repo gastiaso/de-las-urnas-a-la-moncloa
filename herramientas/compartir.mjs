@@ -96,7 +96,12 @@ try {
 } catch (e) {
   console.error('Error: ' + e.message); process.exitCode = 1;
 } finally {
+  // cerrar Edge y esperar a que suelte el perfil temporal antes de borrarlo
+  const salio = edge.exitCode !== null ? Promise.resolve() : new Promise(ok => edge.once('exit', ok));
   if (ws) { try { await Promise.race([envia('Browser.close'), espera(2000)]); } catch {} try { ws.close(); } catch {} }
+  await Promise.race([salio, espera(5000)]);
   edge.kill(); servidor.close();
-  for (let i = 0; i < 10; i++) { try { await rm(perfil, { recursive: true, force: true }); break; } catch { await espera(300); } }
+  let borrado = false;
+  for (let i = 0; i < 30 && !borrado; i++) { try { await rm(perfil, { recursive: true, force: true }); borrado = true; } catch { await espera(300); } }
+  if (!borrado) console.warn('Aviso: no he podido borrar el perfil temporal ' + perfil);
 }
