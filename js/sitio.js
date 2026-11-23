@@ -62,7 +62,7 @@ const ESC_HAB = ['#7A2A16', '#9C3D25', '#C9773F', '#E2B77A', '#F1E2C2'];
 /* Senado del paso 9 (fase 2): cada hexágono, del color del partido de su senador. Cada circunscripción de js/resultados.js va a
    los hexágonos de su isla o provincia (la sexta columna de HEX_SEN); la que no está en SENADO (en 2023, «Ibiza y Formentera»,
    que votaban juntas) va a los de las islas de su provincia sin datos, y el que sobra queda en blanco. Dentro de cada una, de
-   más a menos senadores (y, si empatan, en el orden de los partidos de js/resultados.js) y, en el mapa, de oeste a este. */
+   más a menos senadores (y, si empatan, en el orden de los partidos de js/resultados.js), en el orden de HEX_SEN. */
 const NEUTRO = '#C9C1B4';   // el de herramientas/resultados.py, por si un partido llegara sin color
 function coloresSenado(S) {
   const f = [], nombre = i => SENADO[HEX_SEN[i][5]][0], todos = HEX_SEN.map((_, i) => i), conDatos = new Set(S.circ.map(c => c.c));
