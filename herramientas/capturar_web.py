@@ -8,7 +8,10 @@ Supone una web como la del 23J (resultados.generales23j.es), que cargaba cada á
     (escaños), votosBlancos, votosNulos, votosValidos, votosTotales, censoNocheEscrutado y porcMesasEscrutadas.
 Si la web del 29N usa otra dirección u otras rutas, se cambian con --base, --nomenclator y --ruta sin tocar el código
 ({scope} es el identificador del nomenclátor; {codigo}, el código INE de la provincia, «28»).
-Si no hay forma de bajarlos con el script, los JSON guardados desde el navegador (F12, Red) se leen con --carpeta.
+Con --mapa se pide una sola cosa: el total nacional con el mapa de las provincias (…/{scope}/1/2/1/1/30). En el 23J
+el total nacional traía así el ámbito entero de cada comunidad; con provincias y escrutinio no está comprobado.
+Si no hay forma de bajarlos con el script, los JSON guardados desde el navegador (F12, Red) se leen con --carpeta
+(también un solo JSON nacional con el mapa de provincias).
 
 Sin credenciales: si la web pide usuario y contraseña (401) o niega el acceso (403), se para. Una petición cada
 --pausa segundos (1 por defecto), con un User-Agent genérico. Avisa del porcentaje escrutado de cada provincia:
@@ -18,6 +21,7 @@ Uso (desde la carpeta del repositorio; cada orden en una sola línea):
   py herramientas/capturar_web.py --base https://resultados.29neleccionesgenerales.es --guardar ../descargas/interior/web_29N
       --csv datos/resultados_29N.csv --oficiales datos/escanos_oficiales_29N.csv --largo datos/resultados_29N_largo.csv
   py herramientas/capturar_web.py --base https://... --solo Soria      (una provincia: ¿responde la web y se entiende?)
+  py herramientas/capturar_web.py --base https://... --mapa --csv ...  (las 52 de una vez, si la web las da así)
   py herramientas/capturar_web.py --revisar archivo.json                (qué se lee de un JSON guardado desde el navegador)
   py herramientas/capturar_web.py --carpeta ../descargas/interior/web_29N/20261129-231500 --csv ...   (sin red)
 --base también acepta una carpeta con la misma estructura que la web (la que escribe simular_web.py, para ensayar).
@@ -27,6 +31,7 @@ from escrutinio import DECRETO, INE, NOMBRES, clave_siglas, provincia, sin_acent
 from interior_a_csv import convertir, tabla_siglas
 
 RUTA = 'backend-difu/scope/data/getScopeData/{scope}/1/2/1/0'
+RUTA_MAPA = 'backend-difu/scope/data/getScopeData/{scope}/1/2/1/1/30'
 NOMENCLATOR = 'backend-difu/nomenclator/getNomenclator'
 AGENTE = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'
 NIVEL_NACIONAL, NIVEL_PROVINCIA = 1, 30
@@ -208,6 +213,28 @@ def a_provincia(r, n):
     return p
 
 
+def clasificar(d, donde, campo, eleccion, provs, nac=None):
+    """Mete en provs las provincias de una respuesta (la propia o las de su «mapa») y devuelve el total nacional
+    si la respuesta lo es. Lo que no es un ámbito del Congreso (nomenclátor, Senado...) no cuenta."""
+    if not isinstance(d, dict): return nac, 0
+    ambitos = [d.get('scope', d)] + [x for x in d.get('mapa') or [] if isinstance(x, dict) and 'nivel' in x]
+    usados = 0
+    for s in ambitos:
+        if not isinstance(s, dict) or 'nivel' not in s: continue
+        if (s.get('id') or {}).get('eleccion', eleccion) != eleccion: continue   # el Senado, por ejemplo
+        codigo = str(s.get('codigo') or '').zfill(2)
+        if s['nivel'] == NIVEL_NACIONAL:
+            r = escrutinio({'scope': s}, campo, donde); usados += 1
+            if nac is None or nac['filas'] is None or (r['filas'] is not None and (r.get('envio') or 0) >= (nac.get('envio') or 0)): nac = r
+        elif s['nivel'] == NIVEL_PROVINCIA and codigo in INE:
+            r = escrutinio({'scope': s}, campo, '%s (%s)' % (donde, INE[codigo])); n = INE[codigo]; usados += 1
+            if n in provs:
+                aviso('%s está dos veces (envíos %s y %s); se queda el más alto' % (n, provs[n].get('envio'), r.get('envio')))
+                if (r.get('envio') or 0) < (provs[n].get('envio') or 0): continue
+            provs[n] = r
+    return nac, usados
+
+
 def leer_carpeta(carpeta, campo, eleccion):
     """Ámbitos de los JSON de una carpeta (guardados con --guardar o a mano): provincias y total nacional."""
     provs, nac, ignorados = {}, None, 0
@@ -216,20 +243,10 @@ def leer_carpeta(carpeta, campo, eleccion):
         try:
             b = f.read_bytes()
             d = json.loads((gzip.decompress(b) if b[:2] == b'\x1f\x8b' else b).decode('utf-8-sig'))
-            s = d.get('scope', d)
-            nivel, codigo = s['nivel'], str(s.get('codigo') or '')
-            if (s.get('id') or {}).get('eleccion', eleccion) != eleccion: raise KeyError('otra elección')   # el Senado, por ejemplo
-        except (ValueError, UnicodeDecodeError, AttributeError, KeyError, TypeError, OSError):
+        except (ValueError, UnicodeDecodeError, OSError, EOFError):
             ignorados += 1; continue
-        if nivel == NIVEL_NACIONAL: nac = escrutinio(d, campo, f.name)
-        elif nivel == NIVEL_PROVINCIA and codigo.zfill(2) in INE:
-            r = escrutinio(d, campo, f.name); n = INE[codigo.zfill(2)]
-            if n in provs:
-                viejo = provs[n]
-                aviso('%s está en dos archivos; se usa el de envío más alto (%s frente a %s)' % (n, r.get('envio'), viejo.get('envio')))
-                if (r.get('envio') or 0) < (viejo.get('envio') or 0): continue
-            provs[n] = r
-        else: ignorados += 1
+        nac, usados = clasificar(d, f.name, campo, eleccion, provs, nac)
+        if not usados: ignorados += 1
     print('Leídos de %s: %d provincias%s%s.' % (carpeta, len(provs), ' y el total nacional' if nac else '',
                                                ', %d archivos más que no son del Congreso por provincia' % ignorados if ignorados else ''))
     return provs, nac
@@ -281,6 +298,8 @@ def main():
     a.add_argument('--revisar', metavar='JSON', help='enseñar lo que se lee de un JSON guardado, sin escribir nada')
     a.add_argument('--solo', action='append', metavar='PROVINCIA', help='bajar solo esta provincia y enseñarla, sin escribir nada')
     a.add_argument('--ruta', default=RUTA, help='ruta del escrutinio de cada ámbito (por defecto, la del 23J: %(default)s)')
+    a.add_argument('--mapa', action='store_true', help='una sola petición: el total nacional con el mapa de las provincias')
+    a.add_argument('--ruta-mapa', default=RUTA_MAPA, help='ruta del total nacional con el mapa (por defecto, %(default)s)')
     a.add_argument('--nomenclator', default=NOMENCLATOR, help='ruta del nomenclátor (por defecto, %(default)s)')
     a.add_argument('--eleccion', type=int, default=2, help='elección en el nomenclátor (2 = Congreso, como el 23J)')
     a.add_argument('--guardar', metavar='CARPETA', help='guardar cada JSON bajado en una subcarpeta con la fecha y la hora')
@@ -308,6 +327,15 @@ def main():
     lector = None
     if o.carpeta:
         leidas, nac = leer_carpeta(o.carpeta, o.campo, o.eleccion)
+        if solo: leidas = {n: r for n, r in leidas.items() if n in solo}
+    elif o.mapa:
+        lector = Lector(o.base, o.pausa, o.agente, o.cabecera, o.guardar)
+        nac_id, _ = del_nomenclator(lector.bajar(o.nomenclator, 'nomenclator.json'), o.eleccion)
+        print('Bajando el total nacional con el mapa de provincias de %s...' % o.base, file=sys.stderr)
+        leidas = {}
+        nac, _ = clasificar(lector.bajar(o.ruta_mapa.format(scope=nac_id), 'nacional_mapa.json'), 'total nacional con mapa',
+                            o.campo, o.eleccion, leidas)
+        if len(leidas) < 52: aviso('el mapa trae %d provincias. Sin --mapa se piden una a una.' % len(leidas))
         if solo: leidas = {n: r for n, r in leidas.items() if n in solo}
     else:
         lector = Lector(o.base, o.pausa, o.agente, o.cabecera, o.guardar)

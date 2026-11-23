@@ -69,11 +69,13 @@ def main():
         amb = [{'i': 0, 'c': NAC, 'co': '1', 'n': 'España', 'l': 1}] + [{'i': k, 'c': ids[c], 'co': c, 'n': n, 'l': 30} for k, (c, n) in enumerate(INE.items(), 1)]
         nomen.write_text(json.dumps({'ver': 1, 'amb': [{'elec': 2, 'ord': 1, 'ambitos': amb}]}, ensure_ascii=False), encoding='utf-8')
     cods = {n: c for c, n in INE.items()}
+    mapa = []
     for k, n in enumerate(NOMBRES):
         p = prov[n]
         d = base / ids[cods[n]] / '1' / '2' / '1'; d.mkdir(parents=True, exist_ok=True)
-        (d / '0').write_text(json.dumps(ambito(ids[cods[n]], cods[n], p['nombre_fichero'], 30, 1, p, p['filas'], porc[n], 130 + k % 3),
-                                        ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
+        x = ambito(ids[cods[n]], cods[n], p['nombre_fichero'], 30, 1, p, p['filas'], porc[n], 130 + k % 3)
+        (d / '0').write_text(json.dumps(x, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
+        mapa.append(x['scope'])
     # Total nacional: candidaturas sumadas por su cabecera nacional, como en la web.
     tot, filas = collections.Counter(), {}
     for n in NOMBRES:
@@ -84,9 +86,12 @@ def main():
             g = filas.setdefault(s, {'siglas': s, 'nombre': s, 'votos': 0, 'escanos': 0}); g['votos'] += f['votos']; g['escanos'] += f['escanos']
     hechas = [v for v in porc.values() if v is not None]
     d = base / NAC / '1' / '2' / '1'; d.mkdir(parents=True, exist_ok=True)
-    (d / '0').write_text(json.dumps(ambito(NAC, '1', 'España', 1, 2, tot, list(filas.values()), min(hechas), 132),
-                                    ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
-    print('Web simulada en %s: 52 provincias y el total nacional.' % sal)
+    nac = ambito(NAC, '1', 'España', 1, 2, tot, list(filas.values()), min(hechas), 132)
+    (d / '0').write_text(json.dumps(nac, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
+    # El total nacional con el mapa de provincias (--mapa de capturar_web.py), como el nacional con comunidades del 23J.
+    (d / '1').mkdir(exist_ok=True)
+    (d / '1' / '30').write_text(json.dumps(dict(nac, mapa=mapa), ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
+    print('Web simulada en %s: 52 provincias, el total nacional y el nacional con el mapa de provincias.' % sal)
 
 
 if __name__ == '__main__':
