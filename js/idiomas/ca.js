@@ -209,7 +209,8 @@ export const textos = {
   apuestaIntro: (i, n) => Prov(i) + (plural(i) ? ' reparteixen ' : ' reparteix ') + escons(n) + ' entre cinc partits inventats. Quants en dones a cadascun?',
   ariaApuesta: letra => 'Escons per al partit ' + letra,
   resto: q => q === 0 ? 'Tot repartit.' : q === 1 ? 'Et queda 1 escó per repartir.' : 'Et queden ' + q + ' escons per repartir.',
-  dhondtDa: n => "D'Hondt li'n dona " + n,
+  tuApuesta: 'La teva aposta',   // sobre la columna de cifras
+  dhondtDa: (n, tuyo) => "D'Hondt: " + n + ' · tu: ' + tuyo,
   acierto: (aciertos, total) => "N'has encertat " + aciertos + ' de ' + total + '.',
   partido: 'Partit',
   fuera: ' (fora)',

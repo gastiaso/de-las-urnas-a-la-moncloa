@@ -167,7 +167,8 @@ export const textos = {
   apuestaIntro: (i, n) => 'In ' + prov(i) + ' there ' + (n === 1 ? 'is ' : 'are ') + escanos(n) + ' to share out among five made-up parties. How many would you give each one?',
   ariaApuesta: letra => 'Seats for party ' + letra,
   resto: q => q === 0 ? 'All shared out.' : q === 1 ? 'You have 1 seat left to share out.' : 'You have ' + q + ' seats left to share out.',
-  dhondtDa: n => "D'Hondt gives it " + n,
+  tuApuesta: 'Your bet',   // sobre la columna de cifras
+  dhondtDa: (n, tuyo) => "D'Hondt: " + n + ' · you: ' + tuyo,
   acierto: (aciertos, total) => 'You got ' + aciertos + ' of ' + total + ' right.',
   partido: 'Party',
   fuera: ' (out)',

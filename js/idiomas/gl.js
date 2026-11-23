@@ -210,7 +210,8 @@ export const textos = {
   apuestaIntro: (i, n) => suxeito(i, true) + ' ' + verbo(i, 'reparte', 'reparten') + ' ' + escanos(n) + ' entre cinco partidos inventados. Cantos lle dás a cada un?',
   ariaApuesta: letra => 'Escanos para o partido ' + letra,
   resto: q => q === 0 ? 'Todo repartido.' : q === 1 ? 'Quédache 1 escano por repartir.' : 'Quédanche ' + q + ' escanos por repartir.',
-  dhondtDa: n => "D'Hondt dálle " + n,
+  tuApuesta: 'A túa aposta',   // sobre la columna de cifras
+  dhondtDa: (n, tuyo) => "D'Hondt: " + n + ' · ti: ' + tuyo,
   acierto: (aciertos, total) => 'Acertaches ' + aciertos + ' de ' + total + '.',
   partido: 'Partido',
   fuera: ' (fóra)',

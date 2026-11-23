@@ -119,7 +119,8 @@ export const ES = {
   apuestaIntro: (i, n) => prov(i) + ' reparte ' + escanos(n) + ' entre cinco partidos inventados. ¿Cuántos le das a cada uno?',
   ariaApuesta: letra => 'Escaños para el partido ' + letra,
   resto: q => q === 0 ? 'Todo repartido.' : q === 1 ? 'Te queda 1 escaño por repartir.' : 'Te quedan ' + q + ' escaños por repartir.',
-  dhondtDa: n => "D'Hondt le da " + n,
+  tuApuesta: 'Tu apuesta',   // sobre la columna de cifras
+  dhondtDa: (n, tuyo) => "D'Hondt: " + n + ' · tú: ' + tuyo,   // tras apostar: lo que da D'Hondt y lo que apostaste
   acierto: (aciertos, total) => 'Has acertado ' + aciertos + ' de ' + total + '.',
   partido: 'Partido',
   fuera: ' (fuera)',

@@ -57,7 +57,7 @@ function frases(t) {
   for (const k of [0, 3, 14]) { pon('estacion', t.estacion(k, 8)); pon('donde', t.donde(k, 8, false)); }
   pon('donde (solo texto)', t.donde(3, 8, true));
   pon('ariaApuesta', t.ariaApuesta('A')); for (const q of [0, 1, 5]) pon('resto', t.resto(q));
-  pon('dhondtDa', t.dhondtDa(3)); pon('acierto', t.acierto(12, 16));
+  pon('dhondtDa', t.dhondtDa(3, 2)); pon('acierto', t.acierto(12, 16));
   pon('repartoPaso', t.repartoPaso(3, 16, 'A', t.dec(20.1), 0)); pon('repartoPaso (fuera de la tabla)', t.repartoPaso(16, 16, 'A', t.dec(5.7), 7)); pon('repartoFin', t.repartoFin('A 7, B 5, C 3, D 1'));
   pon('comparacion', t.comparacion(1, 16)); pon('tamanos', t.tamanos(28, 17, 7)); for (const n of [0, 1, 3]) pon('senMarcadas', t.senMarcadas(n));
   pon('ariaPartido', t.ariaPartido('Coalición Canaria', 1, t.votoLargo.abs)); pon('ariaPartido', t.ariaPartido('PSOE', 110, t.votoLargo.si));

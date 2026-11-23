@@ -245,7 +245,8 @@ export const textos = {
   apuestaIntro: (i, n) => non(i) + ' ' + eserleku(n) + (n === 1 ? ' banatzen da' : ' banatzen dira') + ' asmatutako bost alderdiren artean. Zenbat emango dizkiozu bakoitzari?',
   ariaApuesta: letra => letra + ' alderdiarentzako eserlekuak',
   resto: q => q === 0 ? 'Dena banatuta.' : q === 1 ? 'Eserleku bat geratzen zaizu banatzeko.' : q + ' eserleku geratzen zaizkizu banatzeko.',
-  dhondtDa: n => "D'Hondt legearen arabera: " + n,
+  tuApuesta: 'Zure apustua',   // sobre la columna de cifras
+  dhondtDa: (n, tuyo) => "D'Hondt: " + n + ' · zuk: ' + tuyo,
   acierto: (aciertos, total) => tik(total) + ' ' + aciertos + ' asmatu ' + (aciertos === 1 ? 'duzu' : 'dituzu') + '.',
   partido: 'Alderdia',
   fuera: ' (kanpoan)',

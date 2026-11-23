@@ -49,6 +49,10 @@ label.sel{display:block;font-size:13px;font-weight:700;margin-bottom:4px}
 .fila small{font-size:13px}
 .fila output{font-family:'Libre Franklin',system-ui,sans-serif;font-weight:800;font-size:17px;text-align:right}
 .fila .real{font-size:13px;font-weight:700}
+/* la apuesta: la columna de cifras es la tuya; tras apostar, ✓ si aciertas y la fila en teja con ✗ si fallas */
+.fila-cab{margin:0 0 2px;text-align:right;font-family:'Libre Franklin',system-ui,sans-serif;font-weight:800;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--sec)}
+.fila.acierto .real::before{content:'✓ ';content:'✓ ' / ''}
+.fila.fallo .real::before{content:'✗ ';content:'✗ ' / ''}.fila.fallo .real,.fila.fallo output{color:var(--teja2)}
 input[type=range]{width:100%;height:44px;accent-color:var(--teja);margin:0}
 .pill{width:100%;height:46px;border:1.5px solid var(--ink);border-radius:23px;background:var(--ink);color:var(--paper);font:inherit;font-size:16px;font-weight:700;cursor:pointer;margin-top:6px}
 .pill.sec{background:transparent;color:var(--ink)}

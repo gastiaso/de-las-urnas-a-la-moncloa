@@ -91,6 +91,7 @@ function pintaProv() {
 
 /* apuesta */
 const sl = $('#sliders');
+sl.insertAdjacentHTML('afterbegin', '<p class="fila-cab">' + T.tuApuesta + '</p>');   // sobre la columna de cifras
 const filas = PART.map((p, i) => {
   const f = document.createElement('div'); f.className = 'fila';
   f.innerHTML = '<span class="ficha" style="background:' + p[2] + ';color:' + p[3] + '">' + p[0] + '</span><small>' + T.pctEntero(Math.round(p[1])) + '</small><span class="mid"><input type="range" min="0" step="1" value="0" aria-label="' + T.ariaApuesta(p[0]) + '"><span class="real" hidden></span></span><output>0</output>';
@@ -112,7 +113,7 @@ function pintaBet() {
 }
 function resetBet() {
   st.bets = [0, 0, 0, 0, 0]; st.revealed = null;
-  filas.forEach(f => { const r = $('input', f); r.max = S(); r.value = 0; r.hidden = false; $('.real', f).hidden = true; });
+  filas.forEach(f => { const r = $('input', f); r.max = S(); r.value = 0; r.hidden = false; $('.real', f).hidden = true; f.classList.remove('acierto', 'fallo'); });
   $('#betRes').hidden = true; $('#apostar').hidden = false; $('#betErr').hidden = true;
   pintaBet(); G.resetBet(S());
 }
@@ -122,7 +123,8 @@ $('#apostar').addEventListener('click', () => {
   let hit = 0;
   filas.forEach((f, i) => {
     const id = PART[i][0]; hit += Math.min(st.bets[i], d.seats[id]);
-    const r = $('.real', f); r.hidden = false; r.textContent = T.dhondtDa(d.seats[id]);
+    const r = $('.real', f); r.hidden = false; r.textContent = T.dhondtDa(d.seats[id], st.bets[i]);
+    f.classList.toggle('acierto', st.bets[i] === d.seats[id]); f.classList.toggle('fallo', st.bets[i] !== d.seats[id]);
     $('input', f).hidden = true;
   });
   $('#betHit').textContent = T.acierto(hit, S());
