@@ -199,18 +199,18 @@ main{position:relative;z-index:1}
 .escenario .p .sobre{fill:var(--paper);stroke-width:.05}
 .escenario .p .sobre-solapa{fill:none;stroke-width:.05}
 .escenario .p.borde path{stroke-width:.22}
-.escenario:is([data-est=mapaSel],[data-est=hab],[data-est=senado],[data-est=res]) .p{cursor:pointer}   /* en los mapas, tocar una provincia la elige */
+.escenario:is([data-est=mapaSel],[data-est=hab],[data-est=senado],[data-est=res],[data-est=senadoRes]) .p{cursor:pointer}   /* en los mapas, tocar una provincia la elige */
 /* bordes de provincia, comunidad y costa, y recuadro de Canarias: grosor en píxeles de pantalla, el mismo a cualquier tamaño del mapa */
 .escenario .bordes{fill:none;stroke:var(--ink);stroke-linecap:round;pointer-events:none;opacity:0;transition:opacity .25s}
 .escenario .bordes.ve{opacity:1;transition-duration:.45s}
 .escenario .bordes path,.escenario .bordes rect{vector-effect:non-scaling-stroke}
 .escenario:is([data-est=mapaSel],[data-est=hab],[data-est=senado]) .p:not(.borde) .hx{stroke:rgba(43,33,24,.32)}
 .escenario .b-prov{stroke-width:1.1px}.escenario .b-ccaa{stroke-width:2px}.escenario .b-costa{stroke-width:2.4px}.escenario .b-marco{stroke-width:1.3px;stroke-dasharray:6 4}
-/* resultados: sobre los colores de los partidos, los bordes interiores van en blanco papel */
-.escenario[data-est=res] .p .hx{stroke:none}
-.escenario[data-est=res] :is(.b-prov,.b-ccaa){stroke:var(--paper);stroke-width:2.4px}
+/* resultados (Congreso y Senado): sobre los colores de los partidos, los bordes interiores van en blanco papel */
+.escenario:is([data-est=res],[data-est=senadoRes]) .p .hx{stroke:none}
+.escenario:is([data-est=res],[data-est=senadoRes]) :is(.b-prov,.b-ccaa){stroke:var(--paper);stroke-width:2.4px}
 @media (max-width:899px){.escenario .b-prov{stroke-width:.75px}.escenario .b-ccaa{stroke-width:1.15px}.escenario .b-costa{stroke-width:1.3px}.escenario .b-marco{stroke-width:.9px;stroke-dasharray:3 2}
-  .escenario[data-est=res] :is(.b-prov,.b-ccaa){stroke-width:1.5px}}
+  .escenario:is([data-est=res],[data-est=senadoRes]) :is(.b-prov,.b-ccaa){stroke-width:1.5px}}
 .escenario .tuyo{pointer-events:none}
 .escenario .tuyo path{fill:#E0A526;stroke:var(--ink);stroke-width:.14}
 .escenario .tuyo circle{fill:var(--ink)}
