@@ -238,10 +238,12 @@ _Explicación propia a partir de los arts. 90, 122.3, 159.1, 167 y 168 de la Con
 **Saber más: Los senadores que no se votan**
 
 Además de los elegidos en las urnas, cada parlamento autonómico designa un senador, más otro por cada millón de habitantes de su comunidad. Son los senadores por designación.
+En la legislatura de 2023 a 2026 fueron 58, y el Senado tuvo 266 miembros. El número se recalcula con cada elección general, con la población oficial de ese momento.
 No se eligen el 29N, pero cuentan igual que los demás: las mayorías del Senado se calculan sobre todos los senadores, no solo sobre los 209 que salen de las urnas.
+Tras las elecciones, cada parlamento autonómico confirma a los suyos o los designa de nuevo, según sus propias normas.
 Si un senador elegido en las urnas deja el escaño, lo ocupa su suplente.
 
-_Fuentes: Constitución, art. 69.5; LOREG, arts. 165.4 y 166.2._
+_Fuentes: Constitución, art. 69.5; LOREG, arts. 165.4 y 166.2; Reglamento del Senado, art. 1.2, y normas de designación de cada comunidad; Senado, cuadro de evolución del número de senadores designados (revisado el 12 de marzo de 2024) y composición del Senado (revisada el 20 de mayo de 2026)._
 
 ## 5 · Las mayorías
 
@@ -594,5 +596,5 @@ El último paso. El recorrido termina cuando el Congreso elige presidente y el n
 
 # Recuento
 
-- Cajones «saber más»: 60 (3716 palabras).
+- Cajones «saber más»: 60 (3765 palabras).
 - Términos de glosario: 30.
