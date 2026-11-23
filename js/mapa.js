@@ -15,7 +15,7 @@ function vecino(c, r, d) {
 }
 const RAD = Math.PI / 180;
 
-// Geometría de una de las dos capas: Congreso (350) o Senado (209 elegidos).
+// Geometría de una de las dos capas: Congreso (350) o Senado (209 elegidos; en Baleares y Canarias, isla por isla).
 const cache = {};
 export function geometria(sen) {
   const k = sen ? 's' : 'c'; if (cache[k]) return cache[k];
@@ -28,6 +28,7 @@ export function geometria(sen) {
       const a1 = (60 * d - 30) * RAD, a2 = (60 * d + 30) * RAD;
       const s = [h[0] + R * Math.cos(a1), h[1] + R * Math.sin(a1), h[0] + R * Math.cos(a2), h[1] + R * Math.sin(a2)];
       if (j === undefined) costa.push(s);
+      else if (j > i && sen && H[j][2] === h[2] && H[j][5] !== h[5]) costa.push(s);   // dos islas que se tocan (Ibiza y Formentera): mar
       else if (j > i && H[j][2] !== h[2]) (COMUNIDAD[H[j][2]] !== COMUNIDAD[h[2]] ? ccaa : prov).push(s);
     }
   });
