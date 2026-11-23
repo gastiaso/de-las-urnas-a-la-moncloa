@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>From the ballot box to La Moncloa</title>
+<title>From the ballot box to La Moncloa · How Spain's general election of 29 November works</title>
 <meta name="description" content="What Spain votes on in the general election of 29 November 2026 and how a ballot paper becomes a government, explained with the 350 seats in Congress.">
 <meta name="author" content="Guillermo Astiaso">
 <meta name="theme-color" content="#E4E2DC">
@@ -74,6 +74,7 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <h2 id="tit1">1 · What's being elected</h2>
 <p>On Sunday 29 November, Spain does not elect a prime minister: it elects the 350 members of the Congress of Deputies, the lower house of parliament, and they choose the prime minister. Their <button type="button" class="glos" data-g="escano">seats</button> (escaños, in Spanish) are shared out by <button type="button" class="glos" data-g="circ">constituency</button>: in practice, by province.</p>
 <p>There is no single national count: there are 52 separate contests.</p>
+<p class="nota solo-js">Tap the underlined words to see what they mean.</p>
 <label class="sel" for="prov">Choose a province</label>
 <select id="prov" class="selProv"></select>
 <p id="provTxt" aria-live="polite"></p>
@@ -161,7 +162,9 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <details><summary>How long it has been used</summary>
 <p>The D'Hondt method has been used since 1977. It was set by the royal decree-law on electoral rules of March that year, which governed the first elections after the Political Reform Act that opened the way out of the Franco dictatorship, already with 350 deputies. It already called it the “d'Hondt rule”, already set the threshold at 3% and already carried the same 480,000-vote example the law gives today.</p>
 <p>That decree presented it as a brake on Congress becoming too fragmented. And the share-out between provinces was different then: Madrid elected 32 deputies, Barcelona 33 and Soria 3.</p>
-<p class="nota">Source: Royal Decree-Law 20/1977 of 18 March on electoral rules: preamble and arts. 19 and 20.</p>
+<p>The method is named after Victor D'Hondt (1841-1901), a professor of civil law at Ghent University. He proposed it in an 1882 book. Belgium adopted it in 1899 and first used it in the 1900 elections.</p>
+<p>In an 1878 pamphlet he had argued for a different system. He says himself that he changed his mind after criticism from a Ghent lawyer.</p>
+<p class="nota">Sources: Royal Decree-Law 20/1977 of 18 March on electoral rules: preamble and arts. 19 and 20; V. D'Hondt, <i>Système pratique et raisonné de représentation proportionnelle</i> (1882); G. Beatse, in Ghent University's <i>Liber memorialis</i>, vol. I (1913), pp. 428-429; F. Dhondt, <i>Seqüência</i>, no. 86 (2020).</p>
 </details>
 <details><summary>The 3% threshold</summary>
 <p>Before the share-out, parties with less than 3% of the <button type="button" class="glos" data-g="validos">valid votes</button> in the province are set aside. Their votes are not passed on to anyone: they simply do not enter the table.</p>
@@ -199,9 +202,9 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <article class="tarjeta" aria-labelledby="tit3">
 <div class="cuerpo">
 <h2 id="tit3">3 · Where the vote is cast</h2>
+<p id="hab" aria-live="polite"></p>
 <p>The same percentages do not produce the same result everywhere. The fewer seats a province elects, the fewer parties get in.</p>
 <ul class="lista" id="comp"></ul>
-<p id="hab" aria-live="polite"></p>
 <h3>More detail</h3>
 <details><summary>How many inhabitants stand behind each seat</summary>
 <p>Seats are shared out by population, but with a minimum of two per province. That is why each deputy from a small province represents far fewer inhabitants.</p>
@@ -280,9 +283,11 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 </details>
 <details><summary>The senators nobody votes for</summary>
 <p>Besides those elected at the ballot box, each regional parliament appoints one senator, plus another for every million inhabitants of its autonomous community. These are the <button type="button" class="glos" data-g="designacion">appointed senators</button>.</p>
+<p>In the 2023-2026 parliamentary term there were 58, and the Senate had 266 members. The number is recalculated at each general election, using the official population at that time.</p>
 <p>They are not elected on 29 November, but they count the same as the rest: Senate majorities are calculated on all senators, not only on the 209 who come out of the ballot box.</p>
+<p>After the election, each regional parliament either confirms its senators or appoints them afresh, under its own rules.</p>
 <p>If a senator elected at the ballot box gives up the seat, their substitute takes it.</p>
-<p class="nota">Sources: Constitution, art. 69.5; LOREG, arts. 165.4 and 166.2.</p>
+<p class="nota">Sources: Constitution, art. 69.5; LOREG, arts. 165.4 and 166.2; Standing Orders of the Senate, art. 1.2, and each community's rules on appointment; Senate, table of the number of appointed senators over time (revised 12 March 2024) and composition of the Senate (revised 20 May 2026).</p>
 </details>
 </div>
 </article>
@@ -388,22 +393,22 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <p class="nota solo-js">Tap each date to see what happens that day.</p>
 <ol class="calendario">
 <li class="fase">Before the vote</li>
-<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h1">Tue 6 Oct</button><span class="que">Parliament is dissolved and the election is called</span><span class="tip" id="h1">Royal Decree 806/2026 is published in the BOE: it dissolves the Congress and Senate elected in July 2023 and sets polling day 54 days later, on Sunday 29 November. <small>Royal Decree 806/2026, arts. 1 and 2; LOREG, art. 42.1.</small></span></li>
-<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h2">Fri 13 Nov</button><span class="que">The campaign begins</span><span class="tip" id="h2">Fifteen days in which the parties ask for votes with rallies, posters and adverts. It starts at midnight. <small>LOREG, art. 51; Royal Decree 806/2026, art. 4.</small></span></li>
-<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h3">Thu 19 Nov</button><span class="que">Last day to apply for a postal vote</span><span class="tip" id="h3">Voters apply at a post office, in person and with their identity card, or online with a digital certificate. The ballot papers arrive at home. The vote is then handed in at a post office, with proof of identity, by 2pm on Thursday 26 November at the latest: the Central Electoral Board has extended the legal deadline, which ended on the 25th, by one day. <small>LOREG, arts. 72 and 73; Central Electoral Board, Instruction 5/2023, Decision 11/2023 and the extension of the deadline for this election (file 320/518). Dates: own count of the tenth day before polling day and of the last day before the third.</small></span></li>
-<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h4">21–26 Nov</button><span class="que">Voting at consulates</span><span class="tip" id="h4">Spaniards living abroad can put their vote in a ballot box at their consulate or embassy. If they send it by post, they must do so by the 24th at the latest, and it must reach the consulate by the 27th. <small>LOREG, art. 75. Dates: own count of the deadlines in that article.</small></span></li>
-<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h5">24–28 Nov</button><span class="que">No polls may be published</span><span class="tip" id="h5">The law bans publishing, disseminating or reproducing election polls in the five days before polling day. <small>LOREG, art. 69.7.</small></span></li>
-<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h6">Fri 27 Nov</button><span class="que">The campaign ends</span><span class="tip" id="h6">At midnight the rallies, the advertising and the campaign events stop. <small>LOREG, art. 51; Royal Decree 806/2026, art. 4.</small></span></li>
-<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h7">Sat 28 Nov</button><span class="que">Day of reflection</span><span class="tip" id="h7">On the eve of the vote there can be no advertising or campaign events. Nor on polling day itself. <small>LOREG, arts. 51.3 and 53.</small></span></li>
+<li class="hito" data-f="2026-10-06"><button type="button" class="fecha" aria-expanded="false" aria-controls="h1">Tue 6 Oct</button><span class="que">Parliament is dissolved and the election is called</span><span class="tip" id="h1">Royal Decree 806/2026 is published in the BOE: it dissolves the Congress and Senate elected in July 2023 and sets polling day 54 days later, on Sunday 29 November. <small>Royal Decree 806/2026, arts. 1 and 2; LOREG, art. 42.1.</small></span></li>
+<li class="hito" data-f="2026-11-13"><button type="button" class="fecha" aria-expanded="false" aria-controls="h2">Fri 13 Nov</button><span class="que">The campaign begins</span><span class="tip" id="h2">Fifteen days in which the parties ask for votes with rallies, posters and adverts. It starts at midnight. <small>LOREG, art. 51; Royal Decree 806/2026, art. 4.</small></span></li>
+<li class="hito" data-f="2026-11-19"><button type="button" class="fecha" aria-expanded="false" aria-controls="h3">Thu 19 Nov</button><span class="que">Last day to apply for a postal vote</span><span class="tip" id="h3">Voters apply at a post office, in person and with their identity card, or online with a digital certificate. The ballot papers arrive at home. The vote is then handed in at a post office, with proof of identity, by 2pm on Thursday 26 November at the latest: the Central Electoral Board has extended the legal deadline, which ended on the 25th, by one day. <small>LOREG, arts. 72 and 73; Central Electoral Board, Instruction 5/2023, Decision 11/2023 and the extension of the deadline for this election (file 320/518). Dates: own count of the tenth day before polling day and of the last day before the third.</small></span></li>
+<li class="hito" data-f="2026-11-21" data-hasta="2026-11-26"><button type="button" class="fecha" aria-expanded="false" aria-controls="h4">21–26 Nov</button><span class="que">Voting at consulates</span><span class="tip" id="h4">Spaniards living abroad can put their vote in a ballot box at their consulate or embassy. If they send it by post, they must do so by the 24th at the latest, and it must reach the consulate by the 27th. <small>LOREG, art. 75. Dates: own count of the deadlines in that article.</small></span></li>
+<li class="hito" data-f="2026-11-24" data-hasta="2026-11-28"><button type="button" class="fecha" aria-expanded="false" aria-controls="h5">24–28 Nov</button><span class="que">No polls may be published</span><span class="tip" id="h5">The law bans publishing, disseminating or reproducing election polls in the five days before polling day. <small>LOREG, art. 69.7.</small></span></li>
+<li class="hito" data-f="2026-11-27"><button type="button" class="fecha" aria-expanded="false" aria-controls="h6">Fri 27 Nov</button><span class="que">The campaign ends</span><span class="tip" id="h6">At midnight the rallies, the advertising and the campaign events stop. <small>LOREG, art. 51; Royal Decree 806/2026, art. 4.</small></span></li>
+<li class="hito" data-f="2026-11-28"><button type="button" class="fecha" aria-expanded="false" aria-controls="h7">Sat 28 Nov</button><span class="que">Day of reflection</span><span class="tip" id="h7">On the eve of the vote there can be no advertising or campaign events. Nor on polling day itself. <small>LOREG, arts. 51.3 and 53.</small></span></li>
 <li class="fase">Polling day</li>
-<li class="hito clave"><button type="button" class="fecha" aria-expanded="false" aria-controls="h8">Sun 29 Nov</button><span class="que">Voting, from 9am to 8pm</span><span class="tip" id="h8">Polling stations stay open all day. When they close, each one opens its ballot box and counts the votes in public. The provisional count is known that night. <small>LOREG, arts. 84, 95 and 98.</small></span></li>
+<li class="hito clave" data-f="2026-11-29"><button type="button" class="fecha" aria-expanded="false" aria-controls="h8">Sun 29 Nov</button><span class="que">Voting, from 9am to 8pm</span><span class="tip" id="h8">Polling stations stay open all day. When they close, each one opens its ballot box and counts the votes in public. The provisional count is known that night. <small>LOREG, arts. 84, 95 and 98.</small></span></li>
 <li class="fase">The official count</li>
-<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h9">Fri 4 Dec</button><span class="que">General count</span><span class="tip" id="h9">The electoral boards carry out the official count from the polling stations' tally sheets and add the votes that have arrived from abroad. <small>LOREG, arts. 75 and 103. Date: own count of the fifth day.</small></span></li>
-<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h10">Mon 7 Dec</button><span class="que">The count ends, at the latest</span><span class="tip" id="h10">Those elected are then proclaimed. From the proclamation there are three days to appeal; appeals are decided by the Supreme Court. <small>LOREG, arts. 107.2, 108 and 112. Date: own count of the eighth day.</small></span></li>
+<li class="hito" data-f="2026-12-04"><button type="button" class="fecha" aria-expanded="false" aria-controls="h9">Fri 4 Dec</button><span class="que">General count</span><span class="tip" id="h9">The electoral boards carry out the official count from the polling stations' tally sheets and add the votes that have arrived from abroad. <small>LOREG, arts. 75 and 103. Date: own count of the fifth day.</small></span></li>
+<li class="hito" data-f="2026-12-07"><button type="button" class="fecha" aria-expanded="false" aria-controls="h10">Mon 7 Dec</button><span class="que">The count ends, at the latest</span><span class="tip" id="h10">Those elected are then proclaimed. From the proclamation there are three days to appeal; appeals are decided by the Supreme Court. <small>LOREG, arts. 107.2, 108 and 112. Date: own count of the eighth day.</small></span></li>
 <li class="fase">The new parliament</li>
-<li class="hito clave"><button type="button" class="fecha" aria-expanded="false" aria-controls="h11">Wed 23 Dec</button><span class="que">Congress and the Senate are constituted</span><span class="tip" id="h11">At ten in the morning, each chamber holds its opening sitting. In Congress the oldest deputy presides at first, the Bureau is elected and deputies swear or promise to uphold the Constitution. <small>Royal Decree 806/2026, art. 5; Constitution, art. 72.2; Standing Orders of Congress, arts. 1 to 4 and 37.</small></span></li>
-<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h12">late Dec</button><span class="que">Parliamentary groups are formed</span><span class="tip" id="h12">In the five working days after the opening sitting: the deadline falls in the last days of December. As a rule fifteen deputies are needed; there is another route with five if a minimum share of the vote is reached. <small>Standing Orders of Congress, arts. 23, 24 and 90 (deadlines set in days are counted in working days).</small></span></li>
-<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h13">Fri 1 Jan 2027</button><span class="que">With no new budget, the old one carries on</span><span class="tip" id="h13">It is extended automatically until another is passed. A caretaker government cannot approve a draft budget. <small>Constitution, art. 134.4; Law 50/1997, art. 21.5.</small></span></li>
+<li class="hito clave" data-f="2026-12-23"><button type="button" class="fecha" aria-expanded="false" aria-controls="h11">Wed 23 Dec</button><span class="que">Congress and the Senate are constituted</span><span class="tip" id="h11">At ten in the morning, each chamber holds its opening sitting. In Congress the oldest deputy presides at first, the Bureau is elected and deputies swear or promise to uphold the Constitution. <small>Royal Decree 806/2026, art. 5; Constitution, art. 72.2; Standing Orders of Congress, arts. 1 to 4 and 37.</small></span></li>
+<li class="hito" data-f="2026-12-24" data-hasta="2026-12-31"><button type="button" class="fecha" aria-expanded="false" aria-controls="h12">late Dec</button><span class="que">Parliamentary groups are formed</span><span class="tip" id="h12">In the five working days after the opening sitting: the deadline falls in the last days of December. As a rule fifteen deputies are needed; there is another route with five if a minimum share of the vote is reached. <small>Standing Orders of Congress, arts. 23, 24 and 90 (deadlines set in days are counted in working days).</small></span></li>
+<li class="hito" data-f="2027-01-01"><button type="button" class="fecha" aria-expanded="false" aria-controls="h13">Fri 1 Jan 2027</button><span class="que">With no new budget, the old one carries on</span><span class="tip" id="h13">It is extended automatically until another is passed. A caretaker government cannot approve a draft budget. <small>Constitution, art. 134.4; Law 50/1997, art. 21.5.</small></span></li>
 <li class="fase">The investiture</li>
 <li class="hito abierta"><button type="button" class="fecha" aria-expanded="false" aria-controls="h14">no date</button><span class="que">The King consults and nominates a candidate</span><span class="tip" id="h14">He receives the representatives of the parties with seats and nominates a candidate through the speaker of Congress. The Constitution sets no deadline. <small>Constitution, art. 99.1.</small></span></li>
 <li class="hito abierta clave"><button type="button" class="fecha" aria-expanded="false" aria-controls="h15">D-day</button><span class="que">Debate and first vote</span><span class="tip" id="h15">The candidate sets out a programme with no time limit and each group replies. 176 yes votes are needed. This is where the two-month clock starts. <small>Constitution, art. 99; Standing Orders of Congress, art. 171.</small></span></li>
@@ -513,15 +518,28 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <p id="r9"></p>
 <div class="tabla" id="t9"></div>
 <p class="nota" id="f9"></p>
+<h3>Compared with 2023</h3>
+<p id="c9"></p>
+<ol class="votesc comp23" id="g9" aria-hidden="true"></ol>
+<p class="nota leyenda" aria-hidden="true"><i class="lv"></i> 2023 <i class="le"></i> 29 Nov</p>
+<div class="tabla vh" id="t9c"></div>
+<p class="nota" id="n9"></p>
 <h3>More detail</h3>
 <details><summary>How to read the map</summary>
-<p>Each hexagon is a seat, in the colour of the party that won it. Big provinces take up more room because they elect more seats, not because they have more territory.</p>
+<p>Each hexagon is a seat, in the colour of the party it goes to according to the count. Big provinces take up more room because they elect more seats, not because they have more territory.</p>
 <p class="nota">Own explanation.</p>
+</details>
+<details><summary>How the comparison with 2023 works</summary>
+<p>Between one election and the next, parties change their names and their partners. Each party is compared with its own candidacy in 2023. If it had none, because it did not stand or ran inside another one, it is shown without a figure. Doubtful cases carry a note.</p>
+<p>Two provinces elect a different number of seats from 2023: Cádiz goes from 9 to 8 and Madrid from 37 to 38. The share-out between provinces follows the population of each one.</p>
+<p>The 2023 seats are final. Those of 29 November are not final until the general count, which adds the votes cast from abroad.</p>
+<p class="nota">Sources: Central Electoral Board, results of the election of 23 July 2023 (<a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-18907">official gazette, BOE, of 1 September 2023</a>); Royal Decree 806/2026, annex; LOREG, arts. 75, 103 and 162.</p>
 </details>
 <details><summary>Provisional and official</summary>
 <p>What is known on election night is a provisional count. The official one is carried out by the electoral boards five days later, and that is when the votes from abroad are added.</p>
+<p>Those votes can move the closest seats, so the official share-out may not match the one on election night. In 2023 they moved one in Madrid from the PSOE to the PP. Without them, the PP had 136 seats and the PSOE 122; with them, 137 and 121.</p>
 <p>Those elected are then proclaimed. From that moment there are three days to appeal, and appeals are decided by the Supreme Court.</p>
-<p class="nota">Sources: LOREG, arts. 75, 98, 103, 108 and 112.</p>
+<p class="nota">Sources: LOREG, arts. 75, 98, 103, 108 and 112. 2023: own calculation with the official results of the Ministry of the Interior.</p>
 </details>
 <details><summary>What valid votes are</summary>
 <p>Percentages are calculated on valid votes: those cast for a party plus blank votes. Spoilt votes are left out.</p>
@@ -552,6 +570,7 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <h3>More detail</h3>
 <details><summary>How the shortfall is calculated</summary>
 <p>The last seat goes to the highest result left in the table. The shortfall of the party that came closest is how many more votes it would have needed for its own result to beat that one, with nothing else changing.</p>
+<p>If that party was below 3%, the votes it needed to pass the threshold also count. And if the two results tie, the seat goes to the party with more votes.</p>
 <p>It is a calculation on paper: in reality, if one party goes up, others go down.</p>
 <p class="nota">Own calculation with the rule in art. 163 of the LOREG.</p>
 </details>
@@ -591,7 +610,8 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <article class="tarjeta" aria-labelledby="tit12">
 <div class="cuerpo">
 <h2 id="tit12">12 · Who governs?</h2>
-<p>These are the real seats. Tap each party to change how it votes in the investiture: no, yes or abstain.</p>
+<p>These are the seats from 29 November. Tap each party to change how it votes in the investiture: no, yes or abstain.</p>
+<p class="nota" id="n12" hidden></p>
 <div class="calc" id="calc12"></div>
 <h3>More detail</h3>
 <details><summary>What to watch in a negotiation</summary>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>Imagen para compartir</title>
+<!-- Plantilla de img/compartir.jpg (1200 × 630). La fotografía herramientas/compartir.mjs; abierta en el navegador
+     (con el sitio servido) se ve tal cual. Mapa, colores y letras son los del sitio: js/mapa.js y css/estilo.css.
+     La imagen es la misma en todas las ediciones y va en castellano. -->
+<link rel="stylesheet" href="../css/estilo.css">
+<style>
+html,body{width:1200px;height:630px;overflow:hidden}
+.lienzo{position:relative;width:1200px;height:630px;background:var(--ground)}
+.texto{position:absolute;left:64px;top:0;bottom:0;width:530px;display:flex;flex-direction:column;justify-content:center}
+.banda{margin:0 0 22px;font-weight:700;font-size:24px;letter-spacing:.06em;text-transform:uppercase;color:var(--teja2)}
+.texto h1{margin:0;font-size:90px;line-height:.98;letter-spacing:-0.02em}
+.sub{margin:34px 0 0;font-weight:700;font-size:36px;line-height:1.22}
+.dibujo{position:absolute}
+.dibujo svg{display:block;width:100%;height:100%;overflow:visible}
+.dibujo .tuyo path{fill:#E0A526;stroke:var(--ink);stroke-width:.14;stroke-linejoin:round}   /* ORO de js/sitio.js */
+.dibujo .tuyo circle{fill:var(--ink)}
+/* la etiqueta «Tu voto» del escenario (.marca, css/estilo.css), a la escala de la imagen */
+.lienzo .marca{font-size:26px;padding:7px 12px 9px;border-radius:4px}
+.lienzo .marca::after{bottom:-8px;margin-left:-8px;border-width:8px}
+</style>
+</head>
+<body>
+<div class="lienzo">
+  <div class="texto">
+    <p class="banda">Elecciones generales · 29N</p>
+    <h1>De las urnas<br>a la Moncloa</h1>
+    <p class="sub">Cómo se pasa de tu papeleta a un Gobierno.</p>
+  </div>
+  <div class="dibujo"></div>
+  <span class="marca">Tu voto</span>
+</div>
+<script type="module">
+import { geometria, svg, SVG_CSS, tonoProv, hexD, TEJA } from '../js/mapa.js';
+import { PROV_INICIAL } from '../js/datos.js';
+
+// Dónde va el mapa: un recuadro de la imagen, en px. El mapa se ajusta a él sin deformarse.
+const CAJA = { x: 598, y: 34, w: 572, h: 562 };
+// Tamaño del hexágono dorado respecto al de un escaño. En el escenario es 0,92 × 1,12 ≈ 1,03; aquí, algo mayor,
+// para que se vea en la miniatura.
+const MARCA = 1.4;
+
+const g = geometria(false), p0 = PROV_INICIAL;
+const caja = document.querySelector('.dibujo');
+caja.innerHTML = '<style>' + SVG_CSS + '</style>' + svg({ color: i => g.H[i][2] === p0 ? TEJA : tonoProv(g.H[i][2]) });
+const s = caja.querySelector('svg');
+
+// Encuadre: lo que ocupan los hexágonos y el recuadro de Canarias, sin el margen del cuadrado de -0,5 a 0,5.
+const xs = g.H.flatMap(h => [h[0] - g.R, h[0] + g.R]).concat([g.marco[0], g.marco[2]]);
+const zs = g.H.flatMap(h => [h[1] - g.R, h[1] + g.R]).concat([g.marco[1], g.marco[3]]);
+const m = 0.006, x0 = Math.min(...xs) - m, x1 = Math.max(...xs) + m, z0 = Math.min(...zs) - m, z1 = Math.max(...zs) + m;
+const esc = Math.min(CAJA.w / (x1 - x0), CAJA.h / (z1 - z0)), W = (x1 - x0) * esc, H = (z1 - z0) * esc;
+s.setAttribute('viewBox', [x0, z0, x1 - x0, z1 - z0].map(v => v.toFixed(4)).join(' '));
+Object.assign(caja.style, { left: (CAJA.x + (CAJA.w - W) / 2) + 'px', top: (CAJA.y + (CAJA.h - H) / 2) + 'px', width: W + 'px', height: H + 'px' });
+
+// Tu voto: el primer escaño de la provincia (el más al oeste), como en el paso 1.
+const h = g.H[g.H.findIndex(h => h[2] === p0)], r = g.R * MARCA;
+s.insertAdjacentHTML('beforeend', '<g class="tuyo" transform="translate(' + h[0] + ' ' + h[1] + ') scale(' + r.toFixed(5) + ')"><path d="' + hexD(0, 0, 1, 3) + '"/><circle r=".3"/></g>');
+const pt = s.createSVGPoint(); pt.x = h[0]; pt.y = h[1] - r * 1.15;
+const q = pt.matrixTransform(s.getScreenCTM()), marca = document.querySelector('.marca');
+marca.style.left = q.x + 'px'; marca.style.top = (q.y - 6) + 'px';
+
+// Lista cuando han cargado las dos letras (la foto espera a window.listo).
+Promise.all(['800 92px "Libre Franklin"', '700 38px "Courier Prime"'].map(f => document.fonts.load(f)))
+  .then(() => document.fonts.ready).then(() => { window.listo = true; });
+</script>
+</body>
+</html>

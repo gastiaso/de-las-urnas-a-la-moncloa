@@ -4,6 +4,7 @@ import { PROV, PROV_INICIAL, POB, PART, CONGRESO_2023, COLOR_PARTIDO } from './d
 import { T } from './textos.js';
 import { dhondt, reparto } from './dhondt.js';
 import { RES } from './resultados.js';
+import { empareja, compara, escanos2023, extremos, resumen, signo } from './equivalencias.js';
 
 const $ = (s, r = document) => r.querySelector(s);
 // Los textos y la forma de escribir números y provincias, en el idioma de la página (js/textos.js).
@@ -11,6 +12,9 @@ const { escanos: plural, miles, pct } = T;
 const calma = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
 // La fase 2 se abre para todos con RES.abierta; para verla antes, añadir #fase2 a la dirección.
 export const FASE2 = RES.abierta || location.hash === '#fase2';
+// Hasta el escrutinio general (4-dic), los resultados son provisionales y los textos lo dicen. Se quita con
+// herramientas/resultados.py --general; si js/resultados.js no lo trae, se da por provisional.
+const PROVISIONAL = RES.provisional !== false;
 
 /* G: setProv, resetBet, reveal, setSen, setPact, setRes, setProvRes, setPact2 (pueden no hacer nada).
    anuncia(texto): mensaje para lectores de pantalla. enLectura(): si se está en modo de solo texto. */
@@ -19,8 +23,9 @@ document.body.classList.toggle('fase2', FASE2);
 // La provincia elegida se recuerda mientras dure la pestaña (sessionStorage: no sale del navegador), para que una recarga
 // no la devuelva a la inicial sin avisar.
 const guardada = (() => { try { const v = sessionStorage.getItem('prov'); return v !== null && PROV[+v] ? +v : null; } catch (e) { return null; } })();
-const st = { prov: guardada === null ? PROV_INICIAL : guardada, bets: [0, 0, 0, 0, 0], revealed: null, sen: new Set(), pact: {}, pact2: {} };
-const recuerda = () => { try { sessionStorage.setItem('prov', st.prov); } catch (e) {} };
+// elegida: si el lector ha elegido provincia (o ha aceptado la inicial) en esta pestaña; si no, la de «Tu voto» es la inicial por defecto.
+const st = { prov: guardada === null ? PROV_INICIAL : guardada, elegida: guardada !== null, bets: [0, 0, 0, 0, 0], revealed: null, sen: new Set(), pact: {}, pact2: {} };
+const recuerda = () => { st.elegida = true; try { sessionStorage.setItem('prov', st.prov); } catch (e) {} };
 const S = () => PROV[st.prov][1];
 /* calendario del paso 7: cada fecha abre o cierra su explicación, que se despliega debajo sin tapar las fechas siguientes */
 document.addEventListener('click', e => {
@@ -31,6 +36,14 @@ addEventListener('keydown', e => {
   const f = e.key === 'Escape' && document.activeElement && document.activeElement.closest('.hito.abierto .fecha');
   if (f) { f.parentElement.classList.remove('abierto'); f.setAttribute('aria-expanded', 'false'); }
 });
+// dónde está hoy: lo pasado, en gris; lo que pasa hoy o, si hoy no hay nada, lo siguiente, con una etiqueta (fecha local del navegador)
+(() => {
+  const d = new Date(), hoy = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+  const hs = [...document.querySelectorAll('.calendario .hito[data-f]')], fin = h => h.dataset.hasta || h.dataset.f;
+  const ahora = hs.filter(h => h.dataset.f <= hoy && fin(h) >= hoy), marca = ahora.length ? ahora : hs.filter(h => h.dataset.f > hoy).slice(0, 1);
+  hs.forEach(h => { if (fin(h) < hoy) h.classList.add('pasado'); });
+  marca.forEach(h => h.querySelector('.que').insertAdjacentHTML('beforeend', ' <span class="ahora">' + (ahora.length ? T.calHoy : T.calSiguiente) + '</span>'));
+})();
 
 /* glosario */
 document.addEventListener('click', e => {
@@ -82,6 +95,7 @@ function pintaProv() {
 
 /* apuesta */
 const sl = $('#sliders');
+sl.insertAdjacentHTML('afterbegin', '<p class="fila-cab">' + T.tuApuesta + '</p>');   // sobre la columna de cifras
 const filas = PART.map((p, i) => {
   const f = document.createElement('div'); f.className = 'fila';
   f.innerHTML = '<span class="ficha" style="background:' + p[2] + ';color:' + p[3] + '">' + p[0] + '</span><small>' + T.pctEntero(Math.round(p[1])) + '</small><span class="mid"><input type="range" min="0" step="1" value="0" aria-label="' + T.ariaApuesta(p[0]) + '"><span class="real" hidden></span></span><output>0</output>';
@@ -103,7 +117,7 @@ function pintaBet() {
 }
 function resetBet() {
   st.bets = [0, 0, 0, 0, 0]; st.revealed = null;
-  filas.forEach(f => { const r = $('input', f); r.max = S(); r.value = 0; r.hidden = false; $('.real', f).hidden = true; });
+  filas.forEach(f => { const r = $('input', f); r.max = S(); r.value = 0; r.hidden = false; $('.real', f).hidden = true; f.classList.remove('acierto', 'fallo'); });
   $('#betRes').hidden = true; $('#apostar').hidden = false; $('#betErr').hidden = true;
   pintaBet(); G.resetBet(S());
 }
@@ -113,7 +127,8 @@ $('#apostar').addEventListener('click', () => {
   let hit = 0;
   filas.forEach((f, i) => {
     const id = PART[i][0]; hit += Math.min(st.bets[i], d.seats[id]);
-    const r = $('.real', f); r.hidden = false; r.textContent = T.dhondtDa(d.seats[id]);
+    const r = $('.real', f); r.hidden = false; r.textContent = T.dhondtDa(d.seats[id], st.bets[i]);
+    f.classList.toggle('acierto', st.bets[i] === d.seats[id]); f.classList.toggle('fallo', st.bets[i] !== d.seats[id]);
     $('input', f).hidden = true;
   });
   $('#betHit').textContent = T.acierto(hit, S());
@@ -215,18 +230,28 @@ function calculadora(raiz, partidos, estado, alCambiar, clave) {
     const q = new URLSearchParams(location.search).get(clave);
     if (q) q.split(',').forEach(x => { const [id, c] = x.split(':'); if (DEC[c] && partidos.some(p => p[0] === id)) estado[id] = DEC[c]; });
   } catch (e) {}
-  raiz.innerHTML = '<div class="tally"><span class="tSi"></span><span class="tAbs"></span><span class="tNo"></span></div><div class="barra" role="img" aria-label="' + T.ariaBarra + '"><i class="bSi"></i><i class="bNo"></i><i class="bM"></i></div><div class="ver"><small>' + T.votacion1 + '</small><b class="v1"></b></div><div class="ver"><small>' + T.votacion2 + '</small><b class="v2"></b></div><div class="grid"></div><div class="compartir"><button type="button" class="pill sec">' + T.copiar + '</button><span class="nota" role="status"></span></div>';
-  $('.compartir button', raiz).addEventListener('click', () => {
+  // En un teléfono con hoja de compartir, el botón comparte la combinación con su resultado; si no, copia el enlace.
+  const comparte = !!navigator.share && matchMedia('(pointer: coarse)').matches, rotBoton = comparte ? T.compartirComb : T.copiar;
+  raiz.innerHTML = '<div class="tally"><span class="tSi"></span><span class="tAbs"></span><span class="tNo"></span></div><div class="barra" role="img" aria-label="' + T.ariaBarra + '"><i class="bSi"></i><i class="bNo"></i><i class="bM"></i></div><div class="ver"><small>' + T.votacion1 + '</small><b class="v1"></b></div><div class="ver"><small>' + T.votacion2 + '</small><b class="v2"></b></div><div class="grid"></div><div class="compartir"><button type="button" class="pill sec">' + rotBoton + '</button><span class="nota" role="status"></span></div>';
+  // La dirección lleva siempre la combinación (así también vale el «compartir» del navegador).
+  const ponEnlace = () => {
     const u = new URL(location.href), v = partidos.filter(p => COD[estado[p[0]]]).map(p => p[0] + ':' + COD[estado[p[0]]]).join(',');
     u.search = v ? '?' + clave + '=' + v : '';   // a mano, para que la dirección no salga con %3A y %2C
     try { history.replaceState(null, '', u); } catch (e) {}
-    const bt = $('.compartir button', raiz);
-    const ok = () => { $('.compartir .nota', raiz).textContent = T.copiado; bt.textContent = T.copiado.replace(/\.$/, ''); setTimeout(() => { bt.textContent = T.copiar; }, 2500); }, mal = () => { $('.compartir .nota', raiz).textContent = T.copiaManual; };
-    try { navigator.clipboard.writeText(u.href).then(ok, mal); } catch (e) { mal(); }
+    return u.href;
+  };
+  let cuenta = { si: 0, abs: 0, no: 350 };
+  $('.compartir button', raiz).addEventListener('click', async () => {
+    const url = ponEnlace(), bt = $('.compartir button', raiz);
+    const ok = () => { $('.compartir .nota', raiz).textContent = T.copiado; bt.textContent = T.copiado.replace(/\.$/, ''); setTimeout(() => { bt.textContent = rotBoton; }, 2500); }, mal = () => { $('.compartir .nota', raiz).textContent = T.copiaManual; };
+    const copia = () => { try { navigator.clipboard.writeText(url).then(ok, mal); } catch (e) { mal(); } };
+    if (!comparte) { copia(); return; }
+    try { await navigator.share({ title: document.title, text: T.rotuloPacto(cuenta).replace('<small>', '. ').replace(/<[^>]+>/g, ''), url }); }
+    catch (e) { if (!e || e.name !== 'AbortError') copia(); }
   });
   const btns = partidos.map(p => {
     const b = document.createElement('button'); b.type = 'button';
-    b.addEventListener('click', () => { const e = estado[p[0]] || 'no'; estado[p[0]] = ORD[(ORD.indexOf(e) + 1) % 3]; pinta(true); });
+    b.addEventListener('click', () => { const e = estado[p[0]] || 'no'; estado[p[0]] = ORD[(ORD.indexOf(e) + 1) % 3]; pinta(true); ponEnlace(); });
     $('.grid', raiz).appendChild(b); return b;
   });
   function pinta(avisa) {
@@ -238,6 +263,7 @@ function calculadora(raiz, partidos, estado, alCambiar, clave) {
       btns[i].innerHTML = '<b>' + (p[3] ? '<i class="pt" style="background:' + p[3] + '"></i>' : '') + p[0] + ' ' + p[2] + '</b><span>' + TXT[e] + '</span>';
       btns[i].setAttribute('aria-label', T.ariaPartido(p[1], p[2], LARGO[e]));
     });
+    cuenta = { si, abs, no };
     $('.tSi', raiz).textContent = T.cuentaSi(si); $('.tAbs', raiz).textContent = T.cuentaAbs(abs); $('.tNo', raiz).textContent = T.cuentaNo(no);
     $('.bSi', raiz).style.width = (si / 350 * 100).toFixed(2) + '%'; $('.bNo', raiz).style.width = (no / 350 * 100).toFixed(2) + '%';
     const s1 = si >= 176, s2 = si > no;
@@ -263,6 +289,8 @@ function pintaProvRes() {
   $('#u10').textContent = p.rep.ultimo && p.rep.rival
     ? T.ultimo(nom(p.rep.ultimo.id), nom(p.rep.rival.id), p.rep.rival.faltan)
     : (p.rep.ultimo ? T.unico(nom(p.rep.ultimo.id)) : '');
+  // mientras sea provisional, el aviso de que puede cambiar va detrás, sin negrita
+  if (PROVISIONAL && p.rep.rival) { const s = document.createElement('span'); s.style.fontWeight = 'normal'; s.textContent = T.provisionalUltimo; $('#u10').appendChild(s); }
   G.setProvRes(p.rep.order.map(id => R.partidos.find(q => q.id === id).color), p.e);
   preparaYsi();
 }
@@ -317,8 +345,22 @@ if (FASE2) {
     const censo = RES.prov.reduce((x, p) => x + p.censo, 0), vot = RES.prov.reduce((x, p) => x + p.votantes, 0);
     $('#r9').textContent += T.participacion(pct(vot / censo));
   }
+  if (PROVISIONAL) { $('#r9').textContent += T.provisionalRes; $('#n12').textContent = T.provisional12; $('#n12').hidden = false; }
   $('#t9').innerHTML = '<table><tr><th>' + T.partido + '</th><th>' + T.thVotos + '</th><th>' + T.thEscanos + '</th></tr>' + orden.filter(q => q.esc > 0).map(q => '<tr><td>' + pt(q) + q.nombre + '</td><td>' + pct(q.votos / val) + '</td><td>' + q.esc + '</td></tr>').join('') + '</table>';
   $('#f9').textContent = T.fuenteRes(RES.prueba, etiqueta, T.dato(RES.fuente));
+  /* 9 · frente a 2023: los escaños de cada partido frente a los del 23J, con las parejas de js/equivalencias.js */
+  const par = empareja(R.partidos), nac = compara(R.partidos, par, Object.fromEntries(R.partidos.map(q => [q.id, q.esc])), escanos2023().esc);
+  const x9 = extremos(nac), raya = '—';
+  const sinCifra = f => f.tipo === 'dentro' ? T.sinCifra.dentro(f.ref) : T.sinCifra[f.tipo] || T.sinCifra.falta, nota = f => (f.nota && T.notas2023[f.nota]) || '';
+  $('#c9').textContent = T.frente2023(x9.gana, x9.mas, x9.pierde, x9.menos, x9.todos);
+  const tope9 = Math.max(...nac.map(f => Math.max(f.antes || 0, f.ahora || 0))), ancho = n => ((n || 0) / tope9 * 100).toFixed(1) + '%';
+  $('#g9').innerHTML = nac.map(f => '<li class="' + (f.dif === null ? 'sin' : '') + '"><span class="gn">' + pt(f) + f.nombre + (nota(f) ? '*' : '') + '</span><span class="gb"><i class="gv" style="width:' + ancho(f.antes) + '"></i><i class="ge" style="width:' + ancho(f.ahora) + '"></i></span>'
+    + '<span class="gx">' + (f.antes ?? raya) + '<br>' + (f.ahora ?? raya) + '</span><span class="gd">' + (f.dif !== null ? signo(f.dif) : f.tipo === 'nuevo' ? T.nuevo : raya) + '</span></li>').join('');
+  $('#t9c').innerHTML = '<table><caption>' + T.tabla2023 + '</caption><tr><th>' + T.partido + '</th><th>' + T.th2023 + '</th><th>' + T.th29N + '</th><th>' + T.thDif + '</th></tr>'
+    + nac.map(f => '<tr><td>' + f.nombre + '</td><td>' + (f.antes ?? raya) + '</td><td>' + (f.ahora ?? raya) + '</td><td>' + (f.dif === null ? nota(f) || sinCifra(f) : signo(f.dif) + (nota(f) ? '. ' + nota(f) : '')) + '</td></tr>').join('') + '</table>';
+  $('#n9').innerHTML = [...nac.filter(nota).map(f => '* ' + nota(f)), ...nac.filter(f => f.dif === null && f.tipo !== 'nuevo' && !nota(f)).map(f => f.nombre + ': ' + sinCifra(f) + '.'), T.fuente2023].join(' ');
+  // La frase de «Tu voto» del paso 9 (T.frase2023): qué cambia en la provincia i frente a 2023.
+  R.frente2023 = i => { const p = R.prov[i], r = escanos2023(PROV[i][0]); return resumen(compara(R.partidos, par, p.rep.seats, r.esc), p.e, r.e); };
   /* 11 */
   const sin = R.partidos.reduce((a, q) => a + q.perdidos, 0), otros = RES.prov.reduce((a, p) => a + p.otros, 0);
   $('#r11').textContent = T.votosYEscanos;
@@ -330,7 +372,9 @@ if (FASE2) {
   const corto = q => q.nombre.replace('Coalición Canaria', 'CC').replace('Adelante Andalucía', 'AA').replace('Frente Amplio', 'FA').replace('EH Bildu', 'Bildu');
   pintaPact2 = calculadora($('#calc12'), R.partidos.filter(q => q.esc > 0).map(q => [corto(q), q.nombre, q.esc, q.color]), st.pact2, (e, p) => G.setPact2(e, p), 'p12');
   /* 13 */
-  const hoy = new Date().toISOString().slice(0, 10), sig = RES.hitos.find(h => !h.f || h.f > hoy);
+  // la fecha de hoy en la hora del lector (toISOString daría la de Greenwich: entre las 0:00 y la 1:00, la de ayer)
+  const ahora = new Date(), hoy = ahora.getFullYear() + '-' + String(ahora.getMonth() + 1).padStart(2, '0') + '-' + String(ahora.getDate()).padStart(2, '0');
+  const sig = RES.hitos.find(h => !h.f || h.f > hoy);
   $('#r13').textContent = sig ? T.loSiguiente(T.dato(sig.t)) : T.calendarioCompleto;
   $('#l13').innerHTML = RES.hitos.map(h => '<li class="' + (h.f && h.f <= hoy ? 'hecho' : h === sig ? 'clave' : '') + '"><b>' + T.dato(h.r) + '</b><span>' + T.dato(h.t) + '</span></li>').join('');
   R.hemi = []; R.partidos.forEach(q => { for (let i = 0; i < q.esc; i++) R.hemi.push(q.color); });
@@ -347,5 +391,5 @@ function sincroniza() {
 // Cambiar de provincia desde fuera (por ejemplo, tocando el mapa).
 function eligeProv(i) { st.prov = i; recuerda(); pintaProv(); }
 pintaProv(); pintaSen(); pintaPact(); pintaPact2();
-return { st, S, get R() { return R; }, pintaProv, pintaSen, pintaPact, pintaPact2: () => pintaPact2(), sincroniza, eligeProv, HAB, MEDIA };
+return { st, S, get R() { return R; }, pintaProv, pintaSen, pintaPact, pintaPact2: () => pintaPact2(), sincroniza, eligeProv, recuerda, HAB, MEDIA };
 }

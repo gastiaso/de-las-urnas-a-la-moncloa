@@ -10,6 +10,16 @@ const dec = x => x.toFixed(1).replace('.', ',');
 // Nombre para el texto: «Balears (Illes)» → «Illes Balears», «Coruña (A)» → «A Coruña».
 const prov = i => PROV[i][0].replace(/^(.*) \((.*)\)$/, '$2 $1');
 const faltan = n => (n === 1 ? 'falta ' : 'faltan ') + sies(n);
+const may = s => s.charAt(0).toUpperCase() + s.slice(1);
+
+// Partidos que se nombran con artículo, por el nombre que llevan en js/resultados.js (m: masculino; f: femenino). Los demás
+// van sin él: «Vox», «Sumar», «EH Bildu», «Junts», «Compromís». Cada idioma pone su artículo y sus contracciones.
+// Un partido nuevo que lleve artículo («la CUP») se añade aquí y vale para todos los idiomas.
+export const ARTICULO = { PP: 'm', PSOE: 'm', PNV: 'm', BNG: 'm', 'Frente Amplio': 'm' };
+// p: nombre del partido; b: en negrita (el artículo queda fuera de la negrita)
+const elP = (p, b) => (ARTICULO[p] ? (ARTICULO[p] === 'f' ? 'la ' : 'el ') : '') + (b ? '<b>' + p + '</b>' : p);   // «el PP», «Vox»
+const alP = p => ARTICULO[p] === 'm' ? 'al ' + p : 'a ' + elP(p);      // «al PSOE», «a Sumar»
+const delP = p => ARTICULO[p] === 'm' ? 'del ' + p : 'de ' + elP(p);   // «del PP», «de Vox»
 
 export const ES = {
   cod: 'es',      // carpeta del idioma; el castellano está en la raíz
@@ -21,6 +31,7 @@ export const ES = {
   pctEntero: n => n + ' %',
   provLista: i => PROV[i][0],             // en los desplegables y en las barras
   prov,                                   // dentro de una frase
+  provMapa: prov,                         // en el rótulo de la provincia elegida, sobre el mapa
   escanos, sies,
 
   /* textos que en castellano viven en js/datos.js */
@@ -30,6 +41,8 @@ export const ES = {
 
   /* el escenario */
   ariaEscenario: 'Los 350 escaños del Congreso, que cambian de forma en cada paso. El hexágono dorado es tu voto.',
+  // lo que dice el escenario al lector de pantalla en cada paso: texto (rótulo y pie, ya con punto) y marca (T.tuVoto, T.primerEscano o vacío)
+  ariaPaso: (texto, marca) => texto + (marca ? ' Hexágono dorado: ' + marca.charAt(0).toLowerCase() + marca.slice(1) + '.' : ''),
   tuVoto: 'Tu voto',
   primerEscano: i => '1.er escaño de ' + prov(i),
   // k: paso; i: provincia; n: sus escaños; revelado: si ya se ha hecho la apuesta del paso 2
@@ -42,7 +55,7 @@ export const ES = {
     5: '176 de 350: la mayoría absoluta',
     7: 'El Congreso que elegirá presidente<small>El plazo de dos meses empieza con la primera votación.</small>',
     8: '350 escaños',
-    9: 'Cada escaño, del color de quien lo ganó',
+    9: 'Cada escaño, del color de su partido',
     10: prov(i) + ': ' + escanos(n),
     11: 'El Congreso que sale de las urnas',
     13: 'El Congreso que sale de las urnas',
@@ -81,8 +94,8 @@ export const ES = {
       case 6: return (uno ? 'El diputado de ' + nom + ' suele votar con su partido.' : 'Los ' + n + ' diputados de ' + nom + ' suelen votar con su partido.') + ' Tu voto queda aparte, debajo del hemiciclo: en qué bloque estaría depende de a quién votes.';
       case 7: return 'La noche del 29N, tu papeleta se cuenta en tu mesa de ' + nom + ', en público y en voz alta.';
       case 8: return 'Ese es el camino de tu papeleta en ' + nom + ': de la urna a la Moncloa.';
-      case 10: return primero ? 'El hexágono dorado es el primer escaño que se repartió en ' + nom + ': fue para <b>' + primero + '</b>.' : '';
-      case 11: case 12: return primero ? 'El hexágono dorado es el primer escaño de ' + nom + ': fue para <b>' + primero + '</b>, el partido más votado allí.' : '';
+      case 10: return primero ? 'El hexágono dorado es el primer escaño que se repartió en ' + nom + ': fue para ' + elP(primero, true) + '.' : '';
+      case 11: case 12: return primero ? 'El hexágono dorado es el primer escaño de ' + nom + ': fue para ' + elP(primero, true) + ', el partido más votado allí.' : '';
       default: return '';
     }
   },
@@ -95,6 +108,7 @@ export const ES = {
   fase2Cerrada: 'Los pasos 9 a 13 se abren el 30N, con los resultados.',
   abre30N: '30N',   // junto a cada paso cerrado, en el menú
   sigueMiVoto: 'Sigue mi voto: ',
+  irResultados: 'Ir a los resultados: ',   // fase 2: atajo de la salida al paso 9
   siguiente: 'Siguiente: ',
   verEscanos: 'Volver a los 350 escaños',
   verTexto: 'Ver solo el texto',
@@ -109,12 +123,15 @@ export const ES = {
 
   /* paso 1 */
   provElige: (i, n) => prov(i) + ' elige ' + escanos(n) + ' de los 350.',
+  // en el recuadro «Tu voto» del paso 1, si no se ha elegido provincia; a y b envuelven el enlace al desplegable
+  cambiaProv: (i, a, b) => '¿No votas en ' + prov(i) + '? ' + a + 'Cámbiala aquí debajo' + b + '.',
 
   /* paso 2: la apuesta y la tabla de divisiones */
   apuestaIntro: (i, n) => prov(i) + ' reparte ' + escanos(n) + ' entre cinco partidos inventados. ¿Cuántos le das a cada uno?',
   ariaApuesta: letra => 'Escaños para el partido ' + letra,
   resto: q => q === 0 ? 'Todo repartido.' : q === 1 ? 'Te queda 1 escaño por repartir.' : 'Te quedan ' + q + ' escaños por repartir.',
-  dhondtDa: n => "D'Hondt le da " + n,
+  tuApuesta: 'Tu apuesta',   // sobre la columna de cifras
+  dhondtDa: (n, tuyo) => "D'Hondt: " + n + ' · tú: ' + tuyo,   // tras apostar: lo que da D'Hondt y lo que apostaste
   acierto: (aciertos, total) => 'Has acertado ' + aciertos + ' de ' + total + '.',
   partido: 'Partido',
   fuera: ' (fuera)',
@@ -132,6 +149,10 @@ export const ES = {
   senTope: 'Solo tres. Quita una marca para cambiarla.',
   senMarcadas: n => 'Has marcado ' + n + ' de 3.',
 
+  /* paso 7: la etiqueta junto a lo que pasa hoy o, si hoy no hay nada, junto a lo siguiente */
+  calHoy: 'hoy',
+  calSiguiente: 'lo siguiente',
+
   /* calculadoras de pactos (pasos 6 y 12) */
   voto: { no: 'No', si: 'Sí', abs: 'Abst.' },
   votoLargo: { no: 'no', si: 'sí', abs: 'abstención' },
@@ -139,6 +160,9 @@ export const ES = {
   votacion1: '1.ª votación · mayoría absoluta',
   votacion2: '2.ª votación · más síes que noes',
   copiar: 'Copiar enlace a esta combinación',
+  compartirComb: 'Compartir esta combinación',   // en el móvil, con la hoja de compartir del teléfono
+  // quien llega por un enlace con una combinación y sin haber elegido provincia; a y b envuelven el enlace a la salida
+  enviada: (a, b) => 'Te han enviado esta combinación. Cámbiala o ' + a + 'empieza por el principio' + b + '.',
   copiado: 'Enlace copiado.',
   copiaManual: 'Copia la dirección del navegador: ya lleva la combinación.',
   copiaDireccion: 'Copia la dirección del navegador',   // botón «Compartir», si no se puede copiar sola
@@ -154,19 +178,64 @@ export const ES = {
 
   /* fase 2: los resultados */
   avisoPrueba: etiqueta => 'Vista previa con datos de prueba: ' + etiqueta + '. No son los resultados del 29N.',
-  masEscanos: (nombre, n, pctVotos, absoluta) => nombre + ' es el partido con más escaños: ' + n + ', con el ' + pctVotos + ' de los votos. ' + (absoluta ? 'Supera los 176 de la mayoría absoluta.' : 'Ningún partido llega solo a los 176 de la mayoría absoluta.'),
+  masEscanos: (nombre, n, pctVotos, absoluta) => may(elP(nombre)) + ' es el partido con más escaños: ' + n + ', con el ' + pctVotos + ' de los votos. ' + (absoluta ? 'Supera los 176 de la mayoría absoluta.' : 'Ningún partido llega solo a los 176 de la mayoría absoluta.'),
   participacion: p => ' Votó el ' + p + ' del censo.',
+  // tras masEscanos (y participacion), mientras los resultados sean provisionales
+  provisionalRes: ' Son resultados provisionales hasta el escrutinio general del 4 de diciembre, que suma el voto llegado del extranjero.',
   thVotos: 'Votos',
   thEscanos: 'Escaños',
   thPorEscano: 'Votos por escaño',
-  fuenteRes: (prueba, etiqueta, fuente) => (prueba ? 'Datos de prueba: ' : '') + etiqueta + '. Fuente: ' + fuente + '. Los escaños se calculan aquí con los votos de cada provincia.',
+  fuenteRes: (prueba, etiqueta, fuente) => (prueba ? 'Datos de prueba: ' + etiqueta : may(etiqueta)) + '. Fuente: ' + fuente + '. Los escaños se calculan aquí con los votos de cada provincia; los oficiales los proclaman las juntas electorales.',
+  /* paso 9: frente a 2023. Qué partido se compara con cuál está en js/equivalencias.js. */
+  lista: xs => xs.length < 2 ? xs.join('') : xs.slice(0, -1).join(', ') + ' y ' + xs[xs.length - 1],
+  // gana, pierde: los partidos que más escaños ganan y más pierden (varios si empatan, ninguno si nadie gana o pierde);
+  // mas, menos: cuántos; todos: si todos los partidos tienen cifra de 2023 con la que compararse
+  frente2023(gana, mas, pierde, menos, todos) {
+    if (!gana.length && !pierde.length) return todos ? 'Cada partido tiene los mismos escaños que en las generales de 2023.' : 'Los partidos que se pueden comparar con 2023 tienen los mismos escaños que entonces.';
+    const g = gana.length ? (gana.length > 1 ? 'los que más escaños ganan: ' : 'el que más escaños gana: ') + this.lista(gana) + ' (+' + mas + ')' : '';
+    const p = pierde.length ? (pierde.length > 1 ? 'los que más ' : 'el que más ') + (g ? '' : 'escaños ') + (pierde.length > 1 ? 'pierden: ' : 'pierde: ') + this.lista(pierde) + ' (−' + menos + ')' : '';
+    return 'Frente a las generales de 2023, ' + [g, p].filter(Boolean).join('; ') + '.' + (todos && !p ? ' Ninguno pierde escaños.' : todos && !g ? ' Ninguno gana escaños.' : '');
+  },
+  tabla2023: 'Escaños de cada partido en 2023 y el 29N',
+  th2023: '2023',
+  th29N: '29N',
+  thDif: 'Diferencia',
+  nuevo: 'nuevo',   // en la columna de la diferencia, el partido que no se presentó en 2023
+  // por qué un partido sale sin cifra (los tipos de js/equivalencias.js); ref: la candidatura de 2023 dentro de la que iba
+  sinCifra: { nuevo: 'no se presentó en 2023', falta: 'sin equivalente en 2023', solo2023: 'sin equivalente el 29N', dentro: ref => 'en 2023, dentro de ' + ref },
+  // las notas de js/equivalencias.js, que salen con un asterisco
+  notas2023: {
+    faSumar: 'El Frente Amplio se compara con Sumar, que en 2023 incluía a Podemos.',
+    faNuevo: 'El Frente Amplio no se presentó en 2023.',
+    sumar: 'En 2023, Sumar incluía a Podemos.',
+    podemos: 'Podemos fue en 2023 dentro de Sumar: no tiene cifra propia con la que comparar.',
+    aa: 'En 2023, Adelante Andalucía solo se presentó en Cádiz, y no sacó escaño.',
+    salf: 'SALF no se presentó en 2023.' },
+  fuente2023: 'Escaños de 2023: los proclamados por la <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-18907">Junta Electoral Central</a>.',
+  // La frase de «Tu voto» del paso 9. e, e23: escaños que reparte la provincia ahora y en 2023; cambios: [{ nombre, signo }],
+  // los partidos con más o menos escaños («+2», «−1»); iguales: [nombre], los que tienen los mismos; sin: [{ nombre, n }], los
+  // que tienen escaños y no tienen cifra de 2023; antes: [{ nombre, n }], los de 2023 sin equivalente, con sus escaños de entonces
+  frase2023(i, { e, e23, cambios, iguales, sin, antes }) {
+    const nom = prov(i), d = e - e23, b = c => '<b>' + c.nombre + '</b>', o = [];
+    if (!cambios.length && !sin.length && !antes.length) return e === 1 ? 'En ' + nom + ', el escaño es para el mismo partido que en 2023.' : 'En ' + nom + ', los ' + e + ' escaños se reparten igual que en 2023.';
+    if (d) o.push('En ' + nom + ' hay ' + escanos(e) + ', ' + (Math.abs(d) === 1 ? 'uno' : Math.abs(d)) + (d > 0 ? ' más' : ' menos') + ' que en 2023.');
+    const cm = this.lista(cambios.map(c => b(c) + ' ' + c.signo)), ig = iguales.length ? this.lista(iguales) + ', sin cambios' : '';
+    if (cm || ig) o.push((d ? 'Por partidos: ' : 'En ' + nom + ', frente a 2023: ') + [cm, ig].filter(Boolean).join('; ') + '.');
+    if (sin.length) o.push('No se pueden comparar con 2023: ' + this.lista(sin.map(c => b(c) + ' (' + escanos(c.n) + ')')) + '.');
+    if (antes.length) o.push('Sin equivalente el 29N: ' + this.lista(antes.map(c => b(c) + ' (' + escanos(c.n) + ' en 2023)')) + '.');
+    return o.join(' ');
+  },
   repartia: (i, n) => prov(i) + ' repartía ' + escanos(n) + '.',
-  ultimo: (ganador, rival, votos) => 'El último escaño fue para ' + ganador + '. A ' + rival + ' le faltaron ' + miles(votos) + ' votos para quitárselo.',
-  unico: ganador => 'El escaño fue para ' + ganador + '.',
+  ultimo: (ganador, rival, votos) => 'El último escaño fue para ' + elP(ganador) + '. ' + may(alP(rival)) + (votos === 1 ? ' le faltó 1 voto' : ' le faltaron ' + miles(votos) + ' votos') + ' para quitárselo.',
+  // tras ultimo, mientras los resultados sean provisionales
+  provisionalUltimo: ' Es el recuento provisional: el voto llegado del extranjero, que se suma el 4 de diciembre, puede cambiarlo.',
+  unico: ganador => 'El escaño fue para ' + elP(ganador) + '.',
+  // paso 12, bajo «Estos son los escaños del 29N», mientras los resultados sean provisionales
+  provisional12: 'Son los escaños del recuento provisional. El escrutinio general del 4 de diciembre suma el voto llegado del extranjero y puede mover alguno.',
   votos: n => miles(n) + ' votos',
   ysiIguales: 'Elige dos partidos distintos.',
-  ysiCambia: (n, de, a, ultimo) => 'Con ' + miles(n) + ' votos de ' + de + ' a ' + a + ', cambia el reparto. El último escaño sería para ' + ultimo + '.',
-  ysiNoCambia: (n, ultimo) => 'Con ' + miles(n) + ' votos, el reparto no cambia. El último escaño sigue siendo para ' + ultimo + '.',
+  ysiCambia: (n, de, a, ultimo) => 'Con ' + miles(n) + ' votos ' + delP(de) + ' ' + alP(a) + ', cambia el reparto. El último escaño sería para ' + elP(ultimo) + '.',
+  ysiNoCambia: (n, ultimo) => 'Con ' + miles(n) + ' votos, el reparto no cambia. El último escaño sigue siendo para ' + elP(ultimo) + '.',
   votosYEscanos: 'El porcentaje de escaños de un partido casi nunca coincide con su porcentaje de votos.',
   sinEscano: (n, p) => miles(n) + ' votos (' + p + ') fueron a candidaturas que no lograron escaño en su provincia.',
   loSiguiente: t => 'Lo siguiente: ' + t.charAt(0).toLowerCase() + t.slice(1),
@@ -176,6 +245,13 @@ export const ES = {
 // Los textos en uso. La página de cada idioma carga antes su js/idiomas/xx.js, que llama a idioma() con los suyos.
 export const T = { ...ES };
 export function idioma(textos) { Object.assign(T, textos); }
+
+// Para los demás idiomas: la etiqueta de la noche lleva el porcentaje escrutado, que cambia («…, con el 99,9 % escrutado»).
+// Devuelve { t: la etiqueta sin el porcentaje, n: el número escrito «99,9» }, o null si no lo lleva.
+export function parteEscrutado(s) {
+  const x = /^(.+), con el (\d{1,3}(?:[.,]\d+)?) ?% escrutado$/.exec(String(s).trim());
+  return x ? { t: x[1], n: x[2].replace('.', ',') } : null;
+}
 
 // Para los demás idiomas: descompone una fecha escrita en castellano («8 de noviembre de 2026») o como 2026-11-08.
 // Devuelve { d, m, a }, con el mes de 1 a 12, o null si no la entiende.

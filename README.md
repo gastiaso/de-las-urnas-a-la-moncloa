@@ -111,9 +111,18 @@ Con un nombre de archivo `.png` como argumento, dibuja además una vista previa.
 # 2. Generar el archivo de resultados y abrir la fase para todo el mundo
 python3 herramientas/resultados.py datos/resultados_29N.csv --abierta \
     --etiqueta "escrutinio provisional del 29 de noviembre de 2026" --fuente "Ministerio del Interior" > js/resultados.js
+# 3. Con el escrutinio general (4 de diciembre), lo mismo y además --general: la web deja de decir que es provisional
 ```
 
 Antes de escribir nada, `resultados.py` comprueba que estén las 52 circunscripciones con los nombres de `js/datos.js`, que sus escaños coincidan con el decreto y que cuadren los votos. Si el CSV trae `censo`, `votantes` y `nulos`, el paso 9 da la participación.
+
+En Windows, `herramientas/escribir_resultados.py` (mismos argumentos) hace lo mismo sin la redirección `>`, que en PowerShell puede estropear los acentos.
+
+Otras herramientas para la noche electoral:
+
+- `herramientas/interior_a_csv.py` pasa al CSV de `resultados.py` los ficheros de resultados del Ministerio del Interior (formato de infoelectoral) o un CSV largo hecho a mano (`datos/plantilla_largo.csv`). Las siglas se traducen a los partidos de la web con `datos/siglas.csv`.
+- `herramientas/capturar_web.py` lee los resultados de la web oficial de resultados, provincia a provincia, si sirve JSON como la del 23J, y escribe los mismos CSV. Sin credenciales y con una pausa entre peticiones. `herramientas/simular_web.py` monta una copia de esa web con los ficheros oficiales del 23J, para ensayar.
+- `herramientas/cotejar_escanos.py` recalcula el reparto y lo compara, provincia a provincia, con los escaños oficiales (`datos/plantilla_oficiales.csv`). Con los ficheros oficiales del 23J da los 350 escaños sin ninguna diferencia (`datos/escanos_oficiales_23J.csv`).
 
 Las calculadoras de pactos se pueden compartir: la combinación va en la dirección (`?p6=PSOE:s,PNV:a` para el paso 6, `?p12=` para el 12).
 
@@ -131,10 +140,14 @@ Las calculadoras de pactos se pueden compartir: la combinación va en la direcci
 | `js/mapa.js` y `js/hemiciclo.js` | Geometría del mapa de hexágonos y de los 350 asientos del hemiciclo |
 | `js/fichas.js` | Iconos de cada paso |
 | `js/cartograma.js` y `js/resultados.js` | Posición de los hexágonos y resultados de la fase 2 (generados) |
-| `herramientas/` | Generadores del mapa, de los resultados y del guion |
+| `js/referencia_2023.js` y `js/equivalencias.js` | Escaños del 23J por provincia (generados con `herramientas/referencia_2023.py`) y con qué partido de 2023 se compara cada uno en el paso 9 |
+| `herramientas/` | Generadores del mapa, de los resultados y del guion; conversor y cotejo de resultados |
 | `fuentes/` | Courier Prime y Libre Franklin en woff2, con su licencia |
-| `img/` | Imagen para compartir (1200 × 630), favicon e icono |
+| `img/` | Imagen para compartir (1200 × 630; se regenera con `node herramientas/compartir.mjs`), favicon e icono |
 | `datos/prueba_23J.csv` | Votos del 23J por circunscripción, para probar la fase 2 |
+| `datos/escanos_oficiales_23J.csv` | Escaños oficiales del 23J por circunscripción, para probar el cotejo |
+| `datos/siglas.csv` y `datos/siglas_23J.csv` | De las siglas del Ministerio a los partidos de la web (la segunda, solo para el 23J) |
+| `datos/plantilla_largo.csv` y `datos/plantilla_oficiales.csv` | Plantillas para copiar resultados y escaños a mano |
 | `docs/guion.md` | Todo el texto del sitio con la fuente de cada cajón (generado) |
 | `idiomas/` y `js/idiomas/` | Las traducciones: las frases de la página (`xx.txt`) y los textos del JavaScript (`xx.js`) de cada idioma |
 | `ca/`, `va/`, `gl/`, `eu/` y `en/` | La página en catalán, valenciano, gallego, euskera e inglés (generadas) |
@@ -154,7 +167,7 @@ node herramientas/prueba_idiomas.mjs       # comprueba que a los textos del Java
 - `idiomas/xx.txt` lleva cada frase de la página en castellano y, debajo, su traducción. Si una frase de `index.html` cambia o es nueva, el generador la apunta al final de cada archivo para traducirla y, mientras tanto, la página de ese idioma la muestra en castellano.
 - `js/idiomas/xx.js` lleva los textos del JavaScript, con las mismas entradas que `js/textos.js`, y los nombres de las provincias en ese idioma.
 - La edición inglesa no es una traducción literal: está adaptada para quien lee desde fuera de España. Explica lo que aquí se da por sabido, no habla de «tu voto» sino de un voto que se sigue, y añade dos cajones propios («Spain in brief» y «Who the parties are»).
-- La etiqueta y la fuente que se pasan a `herramientas/resultados.py` llegan a la página en castellano: para que salgan traducidas hay que añadirlas a la lista `dato` de cada `js/idiomas/xx.js`.
+- La etiqueta y la fuente que se pasan a `herramientas/resultados.py` llegan a la página en castellano: para que salgan traducidas hay que añadirlas a la lista `dato` de cada `js/idiomas/xx.js`. Ya están las de la noche del 29N y las del 4 de diciembre (`escrutinio provisional del 29 de noviembre de 2026, con el 99,9 % escrutado`, con cualquier porcentaje; `escrutinio general del 4 de diciembre de 2026`; `Ministerio del Interior, escrutinio provisional` y `…, escrutinio general`).
 - La imagen para compartir (`img/compartir.jpg`) es la misma en todos los idiomas y lleva el título en castellano.
 - Para quitar o añadir un idioma hay que tocar tres sitios: la lista `LENGUAS` de `herramientas/idiomas.py`, la lista `<nav class="idiomas">` de `index.html` y sus enlaces `hreflang` de la cabecera.
 

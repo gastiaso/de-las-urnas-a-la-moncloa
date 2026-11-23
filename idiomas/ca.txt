@@ -9,6 +9,9 @@ ca: Què es vota el 29N i com es passa d'una papereta a un Govern, explicat amb 
 es: De las urnas a la Moncloa
 ca: De les urnes a la Moncloa
 
+es: De las urnas a la Moncloa · Cómo funcionan las elecciones del 29N
+ca: De les urnes a la Moncloa · Com funcionen les eleccions del 29N
+
 es: Los 350 escaños del Congreso dibujados como hexágonos sobre el mapa de España, con el título «De las urnas a la Moncloa».
 ca: Els 350 escons del Congrés dibuixats com a hexàgons sobre el mapa d'Espanya, amb el títol «De las urnas a la Moncloa».
 
@@ -38,6 +41,9 @@ ca: 1 · Què es vota
 
 es: El 29N no eliges presidente: eliges a los 350 diputados del Congreso, que son quienes lo eligen. Sus asientos, los [[escano|escaños]], se reparten por [[circ|circunscripciones]]: en la práctica, por provincias.
 ca: El 29N no esculls president: esculls els 350 diputats del Congrés, que són els qui l'escullen. Els seus seients, els [[escano|escons]], es reparteixen per [[circ|circumscripcions]]: a la pràctica, per províncies.
+
+es: Toca las palabras subrayadas para ver qué significan.
+ca: Toca les paraules subratllades per veure què volen dir.
 
 es: Elige tu provincia
 ca: Tria la teva província
@@ -194,8 +200,14 @@ ca: La regla D'Hondt es fa servir des del 1977. La va fixar el reial decret llei
 es: Aquel decreto la presentaba como un freno a que el Congreso quedara demasiado fragmentado. Y el reparto de entonces era otro: Madrid elegía 32 diputados, Barcelona 33 y Soria 3.
 ca: Aquell decret la presentava com un fre perquè el Congrés no quedés massa fragmentat. I el repartiment d'aleshores era un altre: Madrid escollia 32 diputats, Barcelona 33 i Sòria 3.
 
-es: Fuente: Real Decreto-ley 20/1977, de 18 de marzo, sobre Normas Electorales: preámbulo y arts. 19 y 20.
-ca: Font: Reial decret llei 20/1977, de 18 de març, sobre normes electorals: preàmbul i arts. 19 i 20.
+es: La regla lleva el nombre de Victor D'Hondt (1841-1901), profesor de Derecho civil en la Universidad de Gante. La propuso en un libro de 1882. Bélgica la adoptó en 1899 y la estrenó en las elecciones de 1900.
+ca: La regla porta el nom de Victor D'Hondt (1841-1901), professor de dret civil a la Universitat de Gant. La va proposar en un llibre del 1882. Bèlgica la va adoptar el 1899 i la va estrenar a les eleccions del 1900.
+
+es: En un folleto de 1878 había defendido otro sistema. Él mismo cuenta que cambió de idea por las críticas de un abogado de Gante.
+ca: En un fullet del 1878 havia defensat un altre sistema. Ell mateix explica que va canviar d'idea per les crítiques d'un advocat de Gant.
+
+es: Fuentes: Real Decreto-ley 20/1977, de 18 de marzo, sobre Normas Electorales: preámbulo y arts. 19 y 20; V. D'Hondt, <i>Système pratique et raisonné de représentation proportionnelle</i> (1882); G. Beatse, en <i>Liber memorialis</i> de la Universidad de Gante, t. I (1913), pp. 428-429; F. Dhondt, <i>Seqüência</i>, n.º 86 (2020).
+ca: Fonts: Reial decret llei 20/1977, de 18 de març, sobre normes electorals: preàmbul i arts. 19 i 20; V. D'Hondt, <i>Système pratique et raisonné de représentation proportionnelle</i> (1882); G. Beatse, a <i>Liber memorialis</i> de la Universitat de Gant, vol. I (1913), pp. 428-429; F. Dhondt, <i>Seqüência</i>, núm. 86 (2020).
 
 es: La barrera del 3 %
 ca: La barrera del 3 %
@@ -438,14 +450,20 @@ ca: Els senadors que no es voten
 es: Además de los elegidos en las urnas, cada parlamento autonómico designa un senador, más otro por cada millón de habitantes de su comunidad. Son los [[designacion|senadores por designación]].
 ca: A més dels escollits a les urnes, cada parlament autonòmic designa un senador, més un altre per cada milió d'habitants de la seva comunitat. Són els [[designacion|senadors per designació]].
 
+es: En la legislatura de 2023 a 2026 fueron 58, y el Senado tuvo 266 miembros. El número se recalcula con cada elección general, con la población oficial de ese momento.
+ca: En la legislatura del 2023 al 2026 en van ser 58, i el Senat va tenir 266 membres. El nombre es torna a calcular a cada elecció general, amb la població oficial d'aquell moment.
+
 es: No se eligen el 29N, pero cuentan igual que los demás: las mayorías del Senado se calculan sobre todos los senadores, no solo sobre los 209 que salen de las urnas.
 ca: No s'escullen el 29N, però compten igual que els altres: les majories del Senat es calculen sobre tots els senadors, no només sobre els 209 que surten de les urnes.
+
+es: Tras las elecciones, cada parlamento autonómico confirma a los suyos o los designa de nuevo, según sus propias normas.
+ca: Després de les eleccions, cada parlament autonòmic confirma els seus o els torna a designar, segons les seves pròpies normes.
 
 es: Si un senador elegido en las urnas deja el escaño, lo ocupa su suplente.
 ca: Si un senador escollit a les urnes deixa l'escó, l'ocupa el seu suplent.
 
-es: Fuentes: Constitución, art. 69.5; LOREG, arts. 165.4 y 166.2.
-ca: Fonts: Constitució, art. 69.5; LOREG, arts. 165.4 i 166.2.
+es: Fuentes: Constitución, art. 69.5; LOREG, arts. 165.4 y 166.2; Reglamento del Senado, art. 1.2, y normas de designación de cada comunidad; Senado, cuadro de evolución del número de senadores designados (revisado el 12 de marzo de 2024) y composición del Senado (revisada el 20 de mayo de 2026).
+ca: Fonts: Constitució, art. 69.5; LOREG, arts. 165.4 i 166.2; Reglament del Senat, art. 1.2, i normes de designació de cada comunitat; Senat, quadre d'evolució del nombre de senadors designats (revisat el 12 de març de 2024) i composició del Senat (revisada el 20 de maig de 2026).
 
 # ───── 5 · Las mayorías ─────
 
@@ -955,14 +973,35 @@ ca: Mostra només el text
 es: 9 · Qué ha pasado
 ca: 9 · Què ha passat
 
+es: Frente a 2023
+ca: Respecte al 2023
+
+es: <i class="lv"></i> 2023 <i class="le"></i> 29N
+ca: <i class="lv"></i> 2023 <i class="le"></i> 29N
+
 es: Cómo leer el mapa
 ca: Com es llegeix el mapa
 
-es: Cada hexágono es un escaño y lleva el color del partido que lo ha ganado. Las provincias grandes ocupan más porque reparten más escaños, no porque tengan más territorio.
-ca: Cada hexàgon és un escó i porta el color del partit que l'ha guanyat. Les províncies grans ocupen més perquè reparteixen més escons, no perquè tinguin més territori.
+es: Cada hexágono es un escaño, con el color del partido al que le corresponde según el recuento. Las provincias grandes ocupan más porque reparten más escaños, no porque tengan más territorio.
+ca: Cada hexàgon és un escó, amb el color del partit a qui correspon segons el recompte. Les províncies grans ocupen més perquè reparteixen més escons, no perquè tinguin més territori.
 
 es: Explicación propia.
 ca: Explicació pròpia.
+
+es: Cómo se compara con 2023
+ca: Com es compara amb el 2023
+
+es: Entre unas elecciones y otras, los partidos cambian de nombre y de socios. Cada uno se compara con su candidatura de 2023. Si no la tenía, porque no se presentó o iba dentro de otra, sale sin cifra. Los casos dudosos llevan una nota.
+ca: D'unes eleccions a unes altres, els partits canvien de nom i de socis. Cadascun es compara amb la seva candidatura del 2023. Si no en tenia, perquè no s'hi va presentar o anava dins d'una altra, surt sense xifra. Els casos dubtosos porten una nota.
+
+es: Dos provincias reparten distinto que en 2023: Cádiz pasa de 9 escaños a 8 y Madrid, de 37 a 38. El reparto entre provincias se ajusta a la población de cada una.
+ca: Dues províncies reparteixen diferent que el 2023: Cadis passa de 9 escons a 8 i Madrid, de 37 a 38. El repartiment entre províncies s'ajusta a la població de cadascuna.
+
+es: Los escaños de 2023 son los definitivos. Los del 29N no lo son hasta el escrutinio general, que suma el voto llegado del extranjero.
+ca: Els escons del 2023 són els definitius. Els del 29N no ho són fins a l'escrutini general, que hi suma el vot arribat de l'estranger.
+
+es: Fuentes: Junta Electoral Central, resultados de las elecciones del 23 de julio de 2023 ([BOE del 1 de septiembre de 2023](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-18907)); Real Decreto 806/2026, anexo; LOREG, arts. 75, 103 y 162.
+ca: Fonts: Junta Electoral Central, resultats de les eleccions del 23 de juliol de 2023 ([BOE de l'1 de setembre de 2023](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-18907)); Reial decret 806/2026, annex; LOREG, arts. 75, 103 i 162.
 
 es: Provisional y oficial
 ca: Provisional i oficial
@@ -970,11 +1009,14 @@ ca: Provisional i oficial
 es: Lo que se conoce la noche electoral es un recuento provisional. El oficial lo hacen las juntas electorales cinco días después, y es entonces cuando se suma el voto llegado del extranjero.
 ca: El que es coneix la nit electoral és un recompte provisional. L'oficial el fan les juntes electorals cinc dies després, i és llavors quan s'hi suma el vot arribat de l'estranger.
 
+es: Ese voto puede mover los escaños más ajustados: por eso el reparto oficial puede no coincidir con el de la noche. En 2023 cambió uno de Madrid, que pasó del PSOE al PP. Sin ese voto, el PP sumaba 136 escaños y el PSOE, 122; con él, 137 y 121.
+ca: Aquest vot pot moure els escons més ajustats: per això el repartiment oficial pot no coincidir amb el de la nit. El 2023 en va canviar un de Madrid, que va passar del PSOE al PP. Sense aquest vot, el PP sumava 136 escons i el PSOE, 122; un cop sumat, 137 i 121.
+
 es: Después se proclaman los elegidos. Desde ese momento hay tres días para recurrir, y los recursos los resuelve el Tribunal Supremo.
 ca: Després es proclamen els elegits. Des d'aquell moment hi ha tres dies per presentar recurs, i els recursos els resol el Tribunal Suprem.
 
-es: Fuentes: LOREG, arts. 75, 98, 103, 108 y 112.
-ca: Fonts: LOREG, arts. 75, 98, 103, 108 i 112.
+es: Fuentes: LOREG, arts. 75, 98, 103, 108 y 112. 2023: cálculo propio con los resultados oficiales del Ministerio del Interior.
+ca: Fonts: LOREG, arts. 75, 98, 103, 108 i 112. 2023: càlcul propi amb els resultats oficials del Ministeri de l'Interior.
 
 es: Qué son los votos válidos
 ca: Què són els vots vàlids
@@ -1010,6 +1052,9 @@ ca: Com es calcula el que va faltar
 
 es: El último escaño se lo lleva la división más alta que quedaba en la tabla. Lo que le faltó al partido que se quedó más cerca es cuántos votos más habría necesitado para que su división superase a esa, sin que cambie nada más.
 ca: L'últim escó se l'enduu la divisió més alta que quedava a la taula. El que li va faltar al partit que es va quedar més a prop és quants vots més hauria necessitat perquè la seva divisió superés aquesta, sense que canviï res més.
+
+es: Si ese partido no llegaba al 3 %, se cuentan también los votos que le faltaban para pasar la barrera. Y si las dos divisiones empatan, el escaño es del partido con más votos.
+ca: Si aquest partit no arribava al 3 %, també es compten els vots que li faltaven per superar la barrera. I si les dues divisions empaten, l'escó és per al partit amb més vots.
 
 es: Es una cuenta sobre el papel: en la realidad, si un partido sube, otros bajan.
 ca: És un càlcul sobre el paper: a la realitat, si un partit puja, d'altres baixen.
@@ -1060,8 +1105,8 @@ ca: La primera cosa exigeix reformar la Constitució. La segona, majoria absolut
 es: 12 · ¿Quién gobierna?
 ca: 12 · Qui governa?
 
-es: Estos son los escaños de verdad. Toca cada partido para cambiar su voto en la investidura: no, sí o abstención.
-ca: Aquests són els escons de debò. Toca cada partit per canviar el seu vot a la investidura: no, sí o abstenció.
+es: Estos son los escaños del 29N. Toca cada partido para cambiar su voto en la investidura: no, sí o abstención.
+ca: Aquests són els escons del 29N. Toca cada partit per canviar el seu vot a la investidura: no, sí o abstenció.
 
 es: Qué mirar en una negociación
 ca: Què cal mirar en una negociació

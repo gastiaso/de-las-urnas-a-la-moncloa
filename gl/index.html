@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Das urnas á Moncloa</title>
+<title>Das urnas á Moncloa · Como funcionan as eleccións do 29N</title>
 <meta name="description" content="Que se vota o 29N e como se pasa dunha papeleta a un Goberno, contado cos 350 escanos do Congreso.">
 <meta name="author" content="Guillermo Astiaso">
 <meta name="theme-color" content="#E4E2DC">
@@ -72,6 +72,7 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <div class="cuerpo">
 <h2 id="tit1">1 · Que se vota</h2>
 <p>O 29N non elixes presidente: elixes os 350 deputados do Congreso, que son os que o elixen. Os seus asentos, os <button type="button" class="glos" data-g="escano">escanos</button>, repártense por <button type="button" class="glos" data-g="circ">circunscricións</button>: na práctica, por provincias.</p>
+<p class="nota solo-js">Toca as palabras subliñadas para ver que significan.</p>
 <label class="sel" for="prov">Elixe a túa provincia</label>
 <select id="prov" class="selProv"></select>
 <p id="provTxt" aria-live="polite"></p>
@@ -150,7 +151,9 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <details><summary>Desde cando se usa</summary>
 <p>A regra D'Hondt úsase desde 1977. Fixouna o real decreto lei de normas electorais de marzo daquel ano, que regulou as primeiras eleccións tras a Lei para a reforma política (a que abriu paso ás primeiras eleccións democráticas), xa con 350 deputados. Xa lle chamaba «regra d'Hondt», xa poñía a barreira no 3 % e xa traía o mesmo exemplo de 480.000 votos que trae hoxe a lei.</p>
 <p>Aquel decreto presentábaa como un freo a que o Congreso quedase demasiado fragmentado. E o reparto daquela era outro: Madrid elixía 32 deputados, Barcelona 33 e Soria 3.</p>
-<p class="nota">Fonte: Real decreto lei 20/1977, do 18 de marzo, sobre normas electorais: preámbulo e arts. 19 e 20.</p>
+<p>A regra leva o nome de Victor D'Hondt (1841-1901), profesor de dereito civil na Universidade de Gante. Propúxoa nun libro de 1882. Bélxica adoptouna en 1899 e estreouna nas eleccións de 1900.</p>
+<p>Nun folleto de 1878 defendera outro sistema. El mesmo conta que cambiou de idea polas críticas dun avogado de Gante.</p>
+<p class="nota">Fontes: Real decreto lei 20/1977, do 18 de marzo, sobre normas electorais: preámbulo e arts. 19 e 20; V. D'Hondt, <i>Système pratique et raisonné de représentation proportionnelle</i> (1882); G. Beatse, en <i>Liber memorialis</i> da Universidade de Gante, t. I (1913), pp. 428-429; F. Dhondt, <i>Seqüência</i>, n.º 86 (2020).</p>
 </details>
 <details><summary>A barreira do 3 %</summary>
 <p>Antes de repartir apártanse os partidos que non chegan ao 3 % dos <button type="button" class="glos" data-g="validos">votos válidos</button> da provincia. Os seus votos non se lle pasan a ninguén: simplemente non entran na táboa.</p>
@@ -188,9 +191,9 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <article class="tarjeta" aria-labelledby="tit3">
 <div class="cuerpo">
 <h2 id="tit3">3 · Onde votas</h2>
+<p id="hab" aria-live="polite"></p>
 <p>As mesmas porcentaxes non dan o mesmo en todas partes. Cantos menos escanos reparte unha provincia, menos partidos entran.</p>
 <ul class="lista" id="comp"></ul>
-<p id="hab" aria-live="polite"></p>
 <h3>Saber máis</h3>
 <details><summary>Cantos habitantes hai detrás de cada escano</summary>
 <p>Os escanos repártense por poboación, pero cun mínimo de dous por provincia. Por iso cada deputado dunha provincia pequena representa moitos menos habitantes.</p>
@@ -269,9 +272,11 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 </details>
 <details><summary>Os senadores que non se votan</summary>
 <p>Ademais dos elixidos nas urnas, cada parlamento autonómico designa un senador, máis outro por cada millón de habitantes da súa comunidade. Son os <button type="button" class="glos" data-g="designacion">senadores por designación</button>.</p>
+<p>Na lexislatura de 2023 a 2026 foron 58, e o Senado tivo 266 membros. O número recalcúlase con cada elección xeral, coa poboación oficial dese momento.</p>
 <p>Non se elixen o 29N, pero contan igual ca os demais: as maiorías do Senado calcúlanse sobre todos os senadores, non só sobre os 209 que saen das urnas.</p>
+<p>Despois das eleccións, cada parlamento autonómico confirma os seus ou desígnaos de novo, segundo as súas propias normas.</p>
 <p>Se un senador elixido nas urnas deixa o escano, ocúpao o seu suplente.</p>
-<p class="nota">Fontes: Constitución, art. 69.5; LOREG, arts. 165.4 e 166.2.</p>
+<p class="nota">Fontes: Constitución, art. 69.5; LOREG, arts. 165.4 e 166.2; Regulamento do Senado, art. 1.2, e normas de designación de cada comunidade; Senado, cadro de evolución do número de senadores designados (revisado o 12 de marzo de 2024) e composición do Senado (revisada o 20 de maio de 2026).</p>
 </details>
 </div>
 </article>
@@ -373,22 +378,22 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <p class="nota solo-js">Toca cada data para ver o que pasa ese día.</p>
 <ol class="calendario">
 <li class="fase">Antes de votar</li>
-<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h1">mar 6 out</button><span class="que">Disólvense as Cortes e convócanse eleccións</span><span class="tip" id="h1">O Real decreto 806/2026 sae no BOE: disolve o Congreso e o Senado elixidos en xullo de 2023 e fixa a votación 54 días despois, o domingo 29 de novembro. <small>Real decreto 806/2026, arts. 1 e 2; LOREG, art. 42.1.</small></span></li>
-<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h2">ven 13 nov</button><span class="que">Comeza a campaña</span><span class="tip" id="h2">Quince días nos que os partidos piden o voto con mitins, carteis e anuncios. Arrinca ás cero horas. <small>LOREG, art. 51; Real decreto 806/2026, art. 4.</small></span></li>
-<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h3">xov 19 nov</button><span class="que">Último día para pedir o voto por correo</span><span class="tip" id="h3">Pídese nunha oficina de Correos, en persoa e co DNI, ou por internet con certificado electrónico. As papeletas chegan á casa. O voto entrégase despois nunha oficina de Correos, identificándose, como moi tarde o xoves 26 de novembro ás 14:00: a Xunta Electoral Central ampliou un día o prazo legal, que remataba o 25. <small>LOREG, arts. 72 e 73; Xunta Electoral Central, Instrución 5/2023, Acordo 11/2023 e ampliación do prazo para o 29N (expediente 320/518). Datas: cálculo do décimo día anterior e do último antes do terceiro.</small></span></li>
-<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h4">21 a 26 nov</button><span class="que">Voto nos consulados</span><span class="tip" id="h4">Quen vive no estranxeiro pode depositar o seu voto nunha urna do seu consulado ou embaixada. Se o manda por correo, ten que envialo como moi tarde o 24 e ten que chegar ao consulado como moi tarde o 27. <small>LOREG, art. 75. Datas: cálculo dos prazos do artigo.</small></span></li>
-<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h5">24 a 28 nov</button><span class="que">Non se poden publicar enquisas</span><span class="tip" id="h5">A lei prohibe publicar, difundir ou reproducir sondaxes electorais nos cinco días anteriores á votación. <small>LOREG, art. 69.7.</small></span></li>
-<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h6">ven 27 nov</button><span class="que">Remata a campaña</span><span class="tip" id="h6">Á medianoite acábanse os mitins, a propaganda e os actos de campaña. <small>LOREG, art. 51; Real decreto 806/2026, art. 4.</small></span></li>
-<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h7">sáb 28 nov</button><span class="que">Xornada de reflexión</span><span class="tip" id="h7">A véspera non pode haber propaganda nin actos de campaña. Tampouco o día da votación. <small>LOREG, arts. 51.3 e 53.</small></span></li>
+<li class="hito" data-f="2026-10-06"><button type="button" class="fecha" aria-expanded="false" aria-controls="h1">mar 6 out</button><span class="que">Disólvense as Cortes e convócanse eleccións</span><span class="tip" id="h1">O Real decreto 806/2026 sae no BOE: disolve o Congreso e o Senado elixidos en xullo de 2023 e fixa a votación 54 días despois, o domingo 29 de novembro. <small>Real decreto 806/2026, arts. 1 e 2; LOREG, art. 42.1.</small></span></li>
+<li class="hito" data-f="2026-11-13"><button type="button" class="fecha" aria-expanded="false" aria-controls="h2">ven 13 nov</button><span class="que">Comeza a campaña</span><span class="tip" id="h2">Quince días nos que os partidos piden o voto con mitins, carteis e anuncios. Arrinca ás cero horas. <small>LOREG, art. 51; Real decreto 806/2026, art. 4.</small></span></li>
+<li class="hito" data-f="2026-11-19"><button type="button" class="fecha" aria-expanded="false" aria-controls="h3">xov 19 nov</button><span class="que">Último día para pedir o voto por correo</span><span class="tip" id="h3">Pídese nunha oficina de Correos, en persoa e co DNI, ou por internet con certificado electrónico. As papeletas chegan á casa. O voto entrégase despois nunha oficina de Correos, identificándose, como moi tarde o xoves 26 de novembro ás 14:00: a Xunta Electoral Central ampliou un día o prazo legal, que remataba o 25. <small>LOREG, arts. 72 e 73; Xunta Electoral Central, Instrución 5/2023, Acordo 11/2023 e ampliación do prazo para o 29N (expediente 320/518). Datas: cálculo do décimo día anterior e do último antes do terceiro.</small></span></li>
+<li class="hito" data-f="2026-11-21" data-hasta="2026-11-26"><button type="button" class="fecha" aria-expanded="false" aria-controls="h4">21 a 26 nov</button><span class="que">Voto nos consulados</span><span class="tip" id="h4">Quen vive no estranxeiro pode depositar o seu voto nunha urna do seu consulado ou embaixada. Se o manda por correo, ten que envialo como moi tarde o 24 e ten que chegar ao consulado como moi tarde o 27. <small>LOREG, art. 75. Datas: cálculo dos prazos do artigo.</small></span></li>
+<li class="hito" data-f="2026-11-24" data-hasta="2026-11-28"><button type="button" class="fecha" aria-expanded="false" aria-controls="h5">24 a 28 nov</button><span class="que">Non se poden publicar enquisas</span><span class="tip" id="h5">A lei prohibe publicar, difundir ou reproducir sondaxes electorais nos cinco días anteriores á votación. <small>LOREG, art. 69.7.</small></span></li>
+<li class="hito" data-f="2026-11-27"><button type="button" class="fecha" aria-expanded="false" aria-controls="h6">ven 27 nov</button><span class="que">Remata a campaña</span><span class="tip" id="h6">Á medianoite acábanse os mitins, a propaganda e os actos de campaña. <small>LOREG, art. 51; Real decreto 806/2026, art. 4.</small></span></li>
+<li class="hito" data-f="2026-11-28"><button type="button" class="fecha" aria-expanded="false" aria-controls="h7">sáb 28 nov</button><span class="que">Xornada de reflexión</span><span class="tip" id="h7">A véspera non pode haber propaganda nin actos de campaña. Tampouco o día da votación. <small>LOREG, arts. 51.3 e 53.</small></span></li>
 <li class="fase">A votación</li>
-<li class="hito clave"><button type="button" class="fecha" aria-expanded="false" aria-controls="h8">dom 29 nov</button><span class="que">Vótase, de 9:00 a 20:00</span><span class="tip" id="h8">Os colexios non pechan en todo o día. Ao acabar, cada mesa abre a urna e conta os votos en público. Pola noite coñécese o reconto provisional. <small>LOREG, arts. 84, 95 e 98.</small></span></li>
+<li class="hito clave" data-f="2026-11-29"><button type="button" class="fecha" aria-expanded="false" aria-controls="h8">dom 29 nov</button><span class="que">Vótase, de 9:00 a 20:00</span><span class="tip" id="h8">Os colexios non pechan en todo o día. Ao acabar, cada mesa abre a urna e conta os votos en público. Pola noite coñécese o reconto provisional. <small>LOREG, arts. 84, 95 e 98.</small></span></li>
 <li class="fase">O reconto oficial</li>
-<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h9">ven 4 dec</button><span class="que">Escrutinio xeral</span><span class="tip" id="h9">As xuntas electorais fan o reconto oficial coas actas das mesas e suman o voto chegado do estranxeiro. <small>LOREG, arts. 75 e 103. Data: cálculo do quinto día.</small></span></li>
-<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h10">lun 7 dec</button><span class="que">Como moi tarde, remata o escrutinio</span><span class="tip" id="h10">Despois proclámanse os elixidos. Desde a proclamación hai tres días para recorrer; os recursos resólveos o Tribunal Supremo. <small>LOREG, arts. 107.2, 108 e 112. Data: cálculo do oitavo día.</small></span></li>
+<li class="hito" data-f="2026-12-04"><button type="button" class="fecha" aria-expanded="false" aria-controls="h9">ven 4 dec</button><span class="que">Escrutinio xeral</span><span class="tip" id="h9">As xuntas electorais fan o reconto oficial coas actas das mesas e suman o voto chegado do estranxeiro. <small>LOREG, arts. 75 e 103. Data: cálculo do quinto día.</small></span></li>
+<li class="hito" data-f="2026-12-07"><button type="button" class="fecha" aria-expanded="false" aria-controls="h10">lun 7 dec</button><span class="que">Como moi tarde, remata o escrutinio</span><span class="tip" id="h10">Despois proclámanse os elixidos. Desde a proclamación hai tres días para recorrer; os recursos resólveos o Tribunal Supremo. <small>LOREG, arts. 107.2, 108 e 112. Data: cálculo do oitavo día.</small></span></li>
 <li class="fase">As novas Cortes</li>
-<li class="hito clave"><button type="button" class="fecha" aria-expanded="false" aria-controls="h11">mér 23 dec</button><span class="que">Constitúense o Congreso e o Senado</span><span class="tip" id="h11">Ás dez da mañá, cada cámara na súa sesión constitutiva. No Congreso preside ao principio o deputado de máis idade, elíxese a Mesa e os deputados xuran ou prometen a Constitución. <small>Real decreto 806/2026, art. 5; Constitución, art. 72.2; Regulamento do Congreso, arts. 1 a 4 e 37.</small></span></li>
-<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h12">fins de dec</button><span class="que">Fórmanse os grupos parlamentarios</span><span class="tip" id="h12">Nos cinco días hábiles seguintes á sesión constitutiva: o prazo remata nos últimos días de decembro. Por regra xeral fan falta quince deputados; hai outra vía con cinco se se supera un mínimo de votos. <small>Regulamento do Congreso, arts. 23, 24 e 90 (os prazos por días cóntanse en días hábiles).</small></span></li>
-<li class="hito"><button type="button" class="fecha" aria-expanded="false" aria-controls="h13">ven 1 xan 2027</button><span class="que">Se non hai Orzamentos novos, seguen os anteriores</span><span class="tip" id="h13">Prorróganse automaticamente ata que se aproben outros. Un Goberno en funcións non pode aprobar o proxecto de Orzamentos. <small>Constitución, art. 134.4; Lei 50/1997, art. 21.5.</small></span></li>
+<li class="hito clave" data-f="2026-12-23"><button type="button" class="fecha" aria-expanded="false" aria-controls="h11">mér 23 dec</button><span class="que">Constitúense o Congreso e o Senado</span><span class="tip" id="h11">Ás dez da mañá, cada cámara na súa sesión constitutiva. No Congreso preside ao principio o deputado de máis idade, elíxese a Mesa e os deputados xuran ou prometen a Constitución. <small>Real decreto 806/2026, art. 5; Constitución, art. 72.2; Regulamento do Congreso, arts. 1 a 4 e 37.</small></span></li>
+<li class="hito" data-f="2026-12-24" data-hasta="2026-12-31"><button type="button" class="fecha" aria-expanded="false" aria-controls="h12">fins de dec</button><span class="que">Fórmanse os grupos parlamentarios</span><span class="tip" id="h12">Nos cinco días hábiles seguintes á sesión constitutiva: o prazo remata nos últimos días de decembro. Por regra xeral fan falta quince deputados; hai outra vía con cinco se se supera un mínimo de votos. <small>Regulamento do Congreso, arts. 23, 24 e 90 (os prazos por días cóntanse en días hábiles).</small></span></li>
+<li class="hito" data-f="2027-01-01"><button type="button" class="fecha" aria-expanded="false" aria-controls="h13">ven 1 xan 2027</button><span class="que">Se non hai Orzamentos novos, seguen os anteriores</span><span class="tip" id="h13">Prorróganse automaticamente ata que se aproben outros. Un Goberno en funcións non pode aprobar o proxecto de Orzamentos. <small>Constitución, art. 134.4; Lei 50/1997, art. 21.5.</small></span></li>
 <li class="fase">A investidura</li>
 <li class="hito abierta"><button type="button" class="fecha" aria-expanded="false" aria-controls="h14">sen data</button><span class="que">O Rei consulta e propón un candidato</span><span class="tip" id="h14">Recibe os representantes dos partidos con escano e propón un candidato a través da presidencia do Congreso. A Constitución non lle pon prazo. <small>Constitución, art. 99.1.</small></span></li>
 <li class="hito abierta clave"><button type="button" class="fecha" aria-expanded="false" aria-controls="h15">día D</button><span class="que">Debate e primeira votación</span><span class="tip" id="h15">O candidato expón o seu programa sen límite de tempo e cada grupo respóndelle. Necesita 176 votos a favor. Aquí arrinca o reloxo de dous meses. <small>Constitución, art. 99; Regulamento do Congreso, art. 171.</small></span></li>
@@ -498,15 +503,28 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <p id="r9"></p>
 <div class="tabla" id="t9"></div>
 <p class="nota" id="f9"></p>
+<h3>Fronte a 2023</h3>
+<p id="c9"></p>
+<ol class="votesc comp23" id="g9" aria-hidden="true"></ol>
+<p class="nota leyenda" aria-hidden="true"><i class="lv"></i> 2023 <i class="le"></i> 29N</p>
+<div class="tabla vh" id="t9c"></div>
+<p class="nota" id="n9"></p>
 <h3>Saber máis</h3>
 <details><summary>Como ler o mapa</summary>
-<p>Cada hexágono é un escano e leva a cor do partido que o gañou. As provincias grandes ocupan máis porque reparten máis escanos, non porque teñan máis territorio.</p>
+<p>Cada hexágono é un escano, coa cor do partido ao que lle corresponde segundo o reconto. As provincias grandes ocupan máis porque reparten máis escanos, non porque teñan máis territorio.</p>
 <p class="nota">Explicación propia.</p>
+</details>
+<details><summary>Como se compara con 2023</summary>
+<p>Dunhas eleccións a outras, os partidos cambian de nome e de socios. Cada un compárase coa súa candidatura de 2023. Se non a tiña, porque non se presentou ou ía dentro doutra, sae sen cifra. Os casos dubidosos levan unha nota.</p>
+<p>Dúas provincias reparten distinto que en 2023: Cádiz pasa de 9 escanos a 8 e Madrid, de 37 a 38. O reparto entre provincias axústase á poboación de cada unha.</p>
+<p>Os escanos de 2023 son os definitivos. Os do 29N non o son ata o escrutinio xeral, que suma o voto chegado do estranxeiro.</p>
+<p class="nota">Fontes: Xunta Electoral Central, resultados das eleccións do 23 de xullo de 2023 (<a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-18907">BOE do 1 de setembro de 2023</a>); Real decreto 806/2026, anexo; LOREG, arts. 75, 103 e 162.</p>
 </details>
 <details><summary>Provisional e oficial</summary>
 <p>O que se coñece a noite electoral é un reconto provisional. O oficial fano as xuntas electorais cinco días despois, e é entón cando se suma o voto chegado do estranxeiro.</p>
+<p>Ese voto pode mover os escanos máis axustados: por iso o reparto oficial pode non coincidir co da noite. En 2023 cambiou un de Madrid, que pasou do PSOE ao PP. Sen ese voto, o PP sumaba 136 escanos e o PSOE, 122; unha vez sumado, 137 e 121.</p>
 <p>Despois proclámanse os elixidos. Desde ese momento hai tres días para recorrer, e os recursos resólveos o Tribunal Supremo.</p>
-<p class="nota">Fontes: LOREG, arts. 75, 98, 103, 108 e 112.</p>
+<p class="nota">Fontes: LOREG, arts. 75, 98, 103, 108 e 112. 2023: cálculo propio cos resultados oficiais do Ministerio do Interior.</p>
 </details>
 <details><summary>Que son os votos válidos</summary>
 <p>As porcentaxes calcúlanse sobre os votos válidos: os que van para un partido máis os votos en branco. Os nulos quedan fóra.</p>
@@ -537,6 +555,7 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <h3>Saber máis</h3>
 <details><summary>Como se calcula o que faltou</summary>
 <p>O último escano lévao a división máis alta que quedaba na táboa. O que lle faltou ao partido que quedou máis preto é cantos votos máis necesitaría para que a súa división superase esa, sen que cambie nada máis.</p>
+<p>Se ese partido non chegaba ao 3 %, cóntanse tamén os votos que lle faltaban para superar a barreira. E se as dúas divisións empatan, o escano é para o partido con máis votos.</p>
 <p>É unha conta sobre o papel: na realidade, se un partido sobe, outros baixan.</p>
 <p class="nota">Cálculo propio coa regra do art. 163 da LOREG.</p>
 </details>
@@ -576,7 +595,8 @@ main{width:auto;max-width:680px;margin:0 auto;padding:56px 10px 24px}.paso{min-h
 <article class="tarjeta" aria-labelledby="tit12">
 <div class="cuerpo">
 <h2 id="tit12">12 · Quen goberna?</h2>
-<p>Estes son os escanos de verdade. Toca cada partido para cambiar o seu voto na investidura: non, si ou abstención.</p>
+<p>Estes son os escanos do 29N. Toca cada partido para cambiar o seu voto na investidura: non, si ou abstención.</p>
+<p class="nota" id="n12" hidden></p>
 <div class="calc" id="calc12"></div>
 <h3>Saber máis</h3>
 <details><summary>Que mirar nunha negociación</summary>

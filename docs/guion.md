@@ -17,6 +17,7 @@ Baja para empezar ↓
 **Riel:**
 
 El 29N no eliges presidente: eliges a los 350 diputados del Congreso, que son quienes lo eligen. Sus asientos, los escaños, se reparten por circunscripciones: en la práctica, por provincias.
+Toca las palabras subrayadas para ver qué significan.
 En el mapa, cada hexágono es un escaño: las provincias crecen o encogen según los escaños que reparten, dentro de la silueta de España. Canarias, abajo a la izquierda.
 
 **Saber más: Por qué unas provincias tienen más escaños**
@@ -96,8 +97,10 @@ _Fuente: LOREG, art. 163. En la tabla, los porcentajes inventados hacen de votos
 
 La regla D'Hondt se usa desde 1977. La fijó el real decreto-ley de normas electorales de marzo de aquel año, que reguló las primeras elecciones tras la Ley para la Reforma Política (la que abrió paso a las primeras elecciones democráticas), ya con 350 diputados. Ya la llamaba «regla d'Hondt», ya ponía la barrera en el 3 % y ya traía el mismo ejemplo de 480.000 votos que trae hoy la ley.
 Aquel decreto la presentaba como un freno a que el Congreso quedara demasiado fragmentado. Y el reparto de entonces era otro: Madrid elegía 32 diputados, Barcelona 33 y Soria 3.
+La regla lleva el nombre de Victor D'Hondt (1841-1901), profesor de Derecho civil en la Universidad de Gante. La propuso en un libro de 1882. Bélgica la adoptó en 1899 y la estrenó en las elecciones de 1900.
+En un folleto de 1878 había defendido otro sistema. Él mismo cuenta que cambió de idea por las críticas de un abogado de Gante.
 
-_Fuente: Real Decreto-ley 20/1977, de 18 de marzo, sobre Normas Electorales: preámbulo y arts. 19 y 20._
+_Fuentes: Real Decreto-ley 20/1977, de 18 de marzo, sobre Normas Electorales: preámbulo y arts. 19 y 20; V. D'Hondt, Système pratique et raisonné de représentation proportionnelle (1882); G. Beatse, en Liber memorialis de la Universidad de Gante, t. I (1913), pp. 428-429; F. Dhondt, Seqüência, n.º 86 (2020)._
 
 **Saber más: La barrera del 3 %**
 
@@ -237,10 +240,12 @@ _Explicación propia a partir de los arts. 90, 122.3, 159.1, 167 y 168 de la Con
 **Saber más: Los senadores que no se votan**
 
 Además de los elegidos en las urnas, cada parlamento autonómico designa un senador, más otro por cada millón de habitantes de su comunidad. Son los senadores por designación.
+En la legislatura de 2023 a 2026 fueron 58, y el Senado tuvo 266 miembros. El número se recalcula con cada elección general, con la población oficial de ese momento.
 No se eligen el 29N, pero cuentan igual que los demás: las mayorías del Senado se calculan sobre todos los senadores, no solo sobre los 209 que salen de las urnas.
+Tras las elecciones, cada parlamento autonómico confirma a los suyos o los designa de nuevo, según sus propias normas.
 Si un senador elegido en las urnas deja el escaño, lo ocupa su suplente.
 
-_Fuentes: Constitución, art. 69.5; LOREG, arts. 165.4 y 166.2._
+_Fuentes: Constitución, art. 69.5; LOREG, arts. 165.4 y 166.2; Reglamento del Senado, art. 1.2, y normas de designación de cada comunidad; Senado, cuadro de evolución del número de senadores designados (revisado el 12 de marzo de 2024) y composición del Senado (revisada el 20 de mayo de 2026)._
 
 ## 5 · Las mayorías
 
@@ -467,16 +472,25 @@ El calendario hasta la investidura, fecha a fecha.
 
 **Saber más: Cómo leer el mapa**
 
-Cada hexágono es un escaño y lleva el color del partido que lo ha ganado. Las provincias grandes ocupan más porque reparten más escaños, no porque tengan más territorio.
+Cada hexágono es un escaño, con el color del partido al que le corresponde según el recuento. Las provincias grandes ocupan más porque reparten más escaños, no porque tengan más territorio.
 
 _Explicación propia._
+
+**Saber más: Cómo se compara con 2023**
+
+Entre unas elecciones y otras, los partidos cambian de nombre y de socios. Cada uno se compara con su candidatura de 2023. Si no la tenía, porque no se presentó o iba dentro de otra, sale sin cifra. Los casos dudosos llevan una nota.
+Dos provincias reparten distinto que en 2023: Cádiz pasa de 9 escaños a 8 y Madrid, de 37 a 38. El reparto entre provincias se ajusta a la población de cada una.
+Los escaños de 2023 son los definitivos. Los del 29N no lo son hasta el escrutinio general, que suma el voto llegado del extranjero.
+
+_Fuentes: Junta Electoral Central, resultados de las elecciones del 23 de julio de 2023 (BOE del 1 de septiembre de 2023); Real Decreto 806/2026, anexo; LOREG, arts. 75, 103 y 162._
 
 **Saber más: Provisional y oficial**
 
 Lo que se conoce la noche electoral es un recuento provisional. El oficial lo hacen las juntas electorales cinco días después, y es entonces cuando se suma el voto llegado del extranjero.
+Ese voto puede mover los escaños más ajustados: por eso el reparto oficial puede no coincidir con el de la noche. En 2023 cambió uno de Madrid, que pasó del PSOE al PP. Sin ese voto, el PP sumaba 136 escaños y el PSOE, 122; con él, 137 y 121.
 Después se proclaman los elegidos. Desde ese momento hay tres días para recurrir, y los recursos los resuelve el Tribunal Supremo.
 
-_Fuentes: LOREG, arts. 75, 98, 103, 108 y 112._
+_Fuentes: LOREG, arts. 75, 98, 103, 108 y 112. 2023: cálculo propio con los resultados oficiales del Ministerio del Interior._
 
 **Saber más: Qué son los votos válidos**
 
@@ -493,6 +507,7 @@ Pasa votos de un partido a otro y mira cómo cambia el reparto de tu provincia. 
 **Saber más: Cómo se calcula lo que faltó**
 
 El último escaño se lo lleva la división más alta que quedaba en la tabla. Lo que le faltó al partido que se quedó más cerca es cuántos votos más habría necesitado para que su división superase a esa, sin que cambie nada más.
+Si ese partido no llegaba al 3 %, se cuentan también los votos que le faltaban para pasar la barrera. Y si las dos divisiones empatan, el escaño es del partido con más votos.
 Es una cuenta sobre el papel: en la realidad, si un partido sube, otros bajan.
 
 _Cálculo propio con la regla del art. 163 de la LOREG._
@@ -523,7 +538,7 @@ _Fuentes: Constitución, arts. 68 y 81; LOREG, arts. 162 y 163._
 
 **Riel:**
 
-Estos son los escaños de verdad. Toca cada partido para cambiar su voto en la investidura: no, sí o abstención.
+Estos son los escaños del 29N. Toca cada partido para cambiar su voto en la investidura: no, sí o abstención.
 
 **Saber más: Qué mirar en una negociación**
 
@@ -593,5 +608,5 @@ El último paso. El recorrido termina cuando el Congreso elige presidente y el n
 
 # Recuento
 
-- Cajones «saber más»: 60 (3678 palabras).
+- Cajones «saber más»: 61 (3975 palabras).
 - Términos de glosario: 30.

@@ -1,5 +1,5 @@
 // Textos del JavaScript en valenciano. Mismas entradas que js/textos.js.
-import { idioma, parteFecha } from '../textos.js';
+import { idioma, parteFecha, parteEscrutado, ARTICULO } from '../textos.js';
 
 /* números: como en castellano, miles con punto y decimales con coma */
 const miles = n => Math.round(n).toLocaleString('es-ES');
@@ -32,6 +32,10 @@ const de = nom => /^el /.test(nom) ? 'del ' + nom.slice(3) : /^els /.test(nom) ?
 const a = nom => /^el /.test(nom) ? 'al ' + nom.slice(3) : /^els /.test(nom) ? 'als ' + nom.slice(4) : 'a ' + nom;
 const deProv = i => de(NOMS[i]), aProv = i => a(NOMS[i]);
 const verb = (i, singular, plural) => PLURAL[i] ? plural : singular;
+// Partidos con artículo (ARTICULO, en js/textos.js): «el PP», que de() y a() vuelven «del PP» y «al PP»; «per al PP», «per a Sumar».
+// p: nombre del partido; b: en negrita, con el artículo fuera. Los que llevan artículo empiezan por consonante: sin apóstrofo.
+const elP = (p, b) => (ARTICULO[p] ? (ARTICULO[p] === 'f' ? 'la ' : 'el ') : '') + (b ? '<b>' + p + '</b>' : p);
+const perA = s => /^el /.test(s) ? 'per al ' + s.slice(3) : 'per a ' + s;
 
 /* fechas: «8 de novembre de 2026», «1 d'abril de 2027» */
 const MESOS = ['de gener', 'de febrer', 'de març', "d'abril", 'de maig', 'de juny', 'de juliol', "d'agost", 'de setembre', "d'octubre", 'de novembre', 'de desembre'];
@@ -43,6 +47,9 @@ const DADES = {
   'Ministerio del Interior, escrutinio del 23J (datos reunidos en Porra Electoral)': "Ministeri de l'Interior, escrutini del 23J (dades reunides en Porra Electoral)",
   'Escrutinio provisional del 29 de noviembre de 2026': 'Escrutini provisional del 29 de novembre de 2026',
   'Ministerio del Interior': "Ministeri de l'Interior",
+  'Ministerio del Interior, escrutinio provisional': "Ministeri de l'Interior, escrutini provisional",
+  'escrutinio general del 4 de diciembre de 2026': 'escrutini general del 4 de desembre de 2026',
+  'Ministerio del Interior, escrutinio general': "Ministeri de l'Interior, escrutini general",
   '29 nov': '29 nov.', '4 dic': '4 des.', '23 dic': '23 des.',
   'Sin fecha': 'Sense data',
   '1.ª votación': '1a votació',
@@ -59,7 +66,7 @@ const DADES = {
 const MES_CURT = { ene: 'gen.', feb: 'febr.', mar: 'març', abr: 'abr.', may: 'maig', jun: 'juny', jul: 'jul.', ago: 'ag.', sep: 'set.', oct: 'oct.', nov: 'nov.', dic: 'des.' };
 // Busca el texto sin distinguir la mayúscula de la primera letra y devuelve la traducción con la misma inicial que traía.
 // Lo que no está en el diccionario se devuelve tal cual, salvo las fechas cortas de los hitos («7 dic» → «7 des.»).
-const dato = s => {
+const datoFijo = s => {
   if (typeof s !== 'string' || !s) return s;
   const c = s.charAt(0), resto = s.slice(1);
   const t = DADES[s] || DADES[c.toLowerCase() + resto] || DADES[c.toUpperCase() + resto];
@@ -67,6 +74,8 @@ const dato = s => {
   const x = /^(\d{1,2}) (ene|feb|mar|abr|may|jun|jul|ago|sep|oct|nov|dic)$/i.exec(s);
   return x ? x[1] + ' ' + MES_CURT[x[2].toLowerCase()] : s;
 };
+// La etiqueta de la noche lleva el porcentaje escrutado: «…, amb el 99,9 % escrutat», «amb l'11 %».
+const dato = s => { const e = parteEscrutado(s); return e ? datoFijo(e.t) + ', amb ' + el(e.n) + ' % escrutat' : datoFijo(s); };
 
 const ILLES = {
   7: "Mallorca elegix tres senadors i es marquen dos noms; Menorca, Eivissa i Formentera n'elegixen un cadascuna",
@@ -120,6 +129,7 @@ export const textos = {
   pctEntero: n => n + ' %',
   provLista: i => LLISTA[i] || Prov(i),
   prov,
+  provMapa: i => LLISTA[i] || Prov(i),    // en el rótulo del mapa, como en los desplegables: «La Rioja», «Illes Balears»
   escanos: escons, sies: sis,
 
   /* textos que en castellano viven en js/datos.js */
@@ -128,6 +138,7 @@ export const textos = {
 
   /* el escenario */
   ariaEscenario: "Els 350 escons del Congrés, que canvien de forma en cada pas. L'hexàgon daurat és el teu vot.",
+  ariaPaso: (texto, marca) => texto + (marca ? ' Hexàgon daurat: ' + marca.charAt(0).toLowerCase() + marca.slice(1) + '.' : ''),
   tuVoto: 'El teu vot',
   primerEscano: i => '1r escó ' + deProv(i),
   rotulo: (k, i, n, revelado) => ({
@@ -139,7 +150,7 @@ export const textos = {
     5: '176 de 350: la majoria absoluta',
     7: 'El Congrés que elegirà president<small>El termini de dos mesos comença amb la primera votació.</small>',
     8: '350 escons',
-    9: 'Cada escó, del color de qui el va guanyar',
+    9: 'Cada escó, del color del seu partit',
     10: Prov(i) + ': ' + escons(n),
     11: 'El Congrés que ix de les urnes',
     13: 'El Congrés que ix de les urnes',
@@ -172,8 +183,8 @@ export const textos = {
       case 6: return (uno ? 'El diputat ' + deProv(i) + ' sol votar amb el seu partit.' : 'Els ' + n + ' diputats ' + deProv(i) + ' solen votar amb el seu partit.') + " El teu vot queda a banda, davall de l'hemicicle: en quin bloc estaria depén de qui votes.";
       case 7: return 'La nit del 29N, la teua papereta es compta en la teua mesa ' + deProv(i) + ', en públic i en veu alta.';
       case 8: return 'Eixe és el camí de la teua papereta ' + aProv(i) + ": de l'urna a la Moncloa.";
-      case 10: return primero ? "L'hexàgon daurat és el primer escó que es va repartir " + aProv(i) + ': va ser per a <b>' + primero + '</b>.' : '';
-      case 11: case 12: return primero ? "L'hexàgon daurat és el primer escó " + deProv(i) + ': va ser per a <b>' + primero + '</b>, el partit més votat allí.' : '';
+      case 10: return primero ? "L'hexàgon daurat és el primer escó que es va repartir " + aProv(i) + ': va ser ' + perA(elP(primero, true)) + '.' : '';
+      case 11: case 12: return primero ? "L'hexàgon daurat és el primer escó " + deProv(i) + ': va ser ' + perA(elP(primero, true)) + ', el partit més votat allí.' : '';
       default: return '';
     }
   },
@@ -186,6 +197,7 @@ export const textos = {
   fase2Cerrada: "Els passos 9 a 13 s'obrin el 30N, amb els resultats.",
   abre30N: '30N',   // junto a cada paso cerrado, en el menú
   sigueMiVoto: 'Seguix el meu vot: ',
+  irResultados: 'Anar als resultats: ',   // fase 2: atajo de la salida al paso 9
   siguiente: 'Següent: ',
   verEscanos: 'Tornar als 350 escons',
   verTexto: 'Veure només el text',
@@ -200,12 +212,14 @@ export const textos = {
 
   /* paso 1 */
   provElige: (i, n) => Prov(i) + verb(i, ' elegix ', ' elegixen ') + escons(n) + ' dels 350.',
+  cambiaProv: (i, a, b) => 'No votes ' + aProv(i) + '? ' + a + 'Canvia-la ací davall' + b + '.',   // recuadro del paso 1 sin provincia elegida
 
   /* paso 2: la apuesta y la tabla de divisiones */
   apuestaIntro: (i, n) => Prov(i) + verb(i, ' repartix ', ' repartixen ') + escons(n) + ' entre cinc partits inventats. Quants en dones a cadascun?',
   ariaApuesta: letra => 'Escons per al partit ' + letra,
   resto: q => q === 0 ? 'Tot repartit.' : q === 1 ? 'Et queda 1 escó per repartir.' : 'Et queden ' + q + ' escons per repartir.',
-  dhondtDa: n => "D'Hondt li'n dona " + n,
+  tuApuesta: 'La teua aposta',   // sobre la columna de cifras
+  dhondtDa: (n, tuyo) => "D'Hondt: " + n + ' · tu: ' + tuyo,
   acierto: (aciertos, total) => "N'has encertat " + aciertos + ' ' + deN(total) + '.',
   partido: 'Partit',
   fuera: ' (fora)',
@@ -222,6 +236,10 @@ export const textos = {
   senTope: 'Només tres. Lleva una marca per a canviar-la.',
   senMarcadas: n => "N'has marcat " + n + ' de 3.',
 
+  /* paso 7: la etiqueta junto a lo que pasa hoy o, si hoy no hay nada, junto a lo siguiente */
+  calHoy: 'hui',
+  calSiguiente: 'el següent',
+
   /* calculadoras de pactos (pasos 6 y 12) */
   voto: { no: 'No', si: 'Sí', abs: 'Abst.' },
   votoLargo: { no: 'no', si: 'sí', abs: 'abstenció' },
@@ -229,6 +247,8 @@ export const textos = {
   votacion1: '1a votació · majoria absoluta',
   votacion2: '2a votació · més sís que nos',
   copiar: "Copiar l'enllaç a esta combinació",
+  compartirComb: 'Compartir esta combinació',   // en el móvil, con la hoja de compartir del teléfono
+  enviada: (a, b) => "T'han enviat esta combinació. Canvia-la o " + a + 'comença pel principi' + b + '.',
   copiado: 'Enllaç copiat.',
   copiaManual: "Copia l'adreça del navegador: ja porta la combinació.",
   copiaDireccion: "Copia l'adreça del navegador",
@@ -243,19 +263,54 @@ export const textos = {
 
   /* fase 2: los resultados */
   avisoPrueba: etiqueta => 'Vista prèvia amb dades de prova: ' + etiqueta + '. No són els resultats del 29N.',
-  masEscanos: (nombre, n, pctVotos, absoluta) => nombre + ' és el partit amb més escons: ' + n + ', amb ' + el(pctVotos) + ' dels vots. ' + (absoluta ? 'Supera els 176 de la majoria absoluta.' : 'Cap partit arriba a soles als 176 de la majoria absoluta.'),
+  masEscanos: (nombre, n, pctVotos, absoluta) => maj(elP(nombre)) + ' és el partit amb més escons: ' + n + ', amb ' + el(pctVotos) + ' dels vots. ' + (absoluta ? 'Supera els 176 de la majoria absoluta.' : 'Cap partit arriba a soles als 176 de la majoria absoluta.'),
   participacion: p => ' Va votar ' + el(p) + ' del cens.',
+  provisionalRes: " Són resultats provisionals fins a l'escrutini general del 4 de desembre, que suma el vot arribat de l'estranger.",
   thVotos: 'Vots',
   thEscanos: 'Escons',
   thPorEscano: 'Vots per escó',
-  fuenteRes: (prueba, etiqueta, fuente) => (prueba ? 'Dades de prova: ' : '') + etiqueta + '. Font: ' + fuente + '. Els escons es calculen ací amb els vots de cada província.',
+  fuenteRes: (prueba, etiqueta, fuente) => (prueba ? 'Dades de prova: ' + etiqueta : maj(etiqueta)) + '. Font: ' + fuente + '. Els escons es calculen ací amb els vots de cada província; els oficials els proclamen les juntes electorals.',
+  /* paso 9: frente a 2023 */
+  lista: xs => xs.length < 2 ? xs.join('') : xs.slice(0, -1).join(', ') + ' i ' + xs[xs.length - 1],
+  frente2023(gana, mas, pierde, menos, todos) {
+    if (!gana.length && !pierde.length) return todos ? 'Cada partit té els mateixos escons que en les generals de 2023.' : 'Els partits que es poden comparar amb 2023 tenen els mateixos escons que aleshores.';
+    const g = gana.length ? (gana.length > 1 ? 'els que guanyen més escons: ' : 'el que guanya més escons: ') + this.lista(gana) + ' (+' + mas + ')' : '';
+    const p = pierde.length ? (pierde.length > 1 ? (g ? 'els que en perden més: ' : 'els que perden més escons: ') : (g ? 'el que en perd més: ' : 'el que perd més escons: ')) + this.lista(pierde) + ' (−' + menos + ')' : '';
+    return 'Respecte a les generals de 2023, ' + [g, p].filter(Boolean).join('; ') + '.' + (todos && !p ? ' Cap partit en perd.' : todos && !g ? ' Cap partit en guanya.' : '');
+  },
+  tabla2023: 'Escons de cada partit en 2023 i el 29N',
+  th2023: '2023',
+  th29N: '29N',
+  thDif: 'Diferència',
+  nuevo: 'nou',
+  sinCifra: { nuevo: 'no es va presentar en 2023', falta: 'sense equivalent en 2023', solo2023: 'sense equivalent el 29N', dentro: ref => 'en 2023, dins ' + de(ref) },
+  notas2023: {
+    faSumar: 'El Frente Amplio es compara amb Sumar, que en 2023 incloïa Podemos.',
+    faNuevo: 'El Frente Amplio no es va presentar en 2023.',
+    sumar: 'En 2023, Sumar incloïa Podemos.',
+    podemos: 'Podemos es va presentar en 2023 dins de Sumar: no té xifra pròpia amb què comparar-lo.',
+    aa: 'En 2023, Adelante Andalucía només es va presentar a Cadis, i no va traure escó.',
+    salf: 'SALF no es va presentar en 2023.' },
+  fuente2023: 'Escons de 2023: els proclamats per la <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-18907">Junta Electoral Central</a>.',
+  frase2023(i, { e, e23, cambios, iguales, sin, antes }) {
+    const d = e - e23, A = maj(aProv(i)), b = c => '<b>' + c.nombre + '</b>', o = [];
+    if (!cambios.length && !sin.length && !antes.length) return e === 1 ? A + ", l'escó és per al mateix partit que en 2023." : A + ', els ' + e + ' escons es repartixen igual que en 2023.';
+    if (d) o.push(A + ' hi ha ' + escons(e) + ', ' + (Math.abs(d) === 1 ? 'un' : Math.abs(d)) + (d > 0 ? ' més' : ' menys') + ' que en 2023.');
+    const cm = this.lista(cambios.map(c => b(c) + ' ' + c.signo)), ig = iguales.length ? this.lista(iguales) + ', sense canvis' : '';
+    if (cm || ig) o.push((d ? 'Per partits: ' : A + ', respecte a 2023: ') + [cm, ig].filter(Boolean).join('; ') + '.');
+    if (sin.length) o.push('No es poden comparar amb 2023: ' + this.lista(sin.map(c => b(c) + ' (' + escons(c.n) + ')')) + '.');
+    if (antes.length) o.push('Sense equivalent el 29N: ' + this.lista(antes.map(c => b(c) + ' (' + escons(c.n) + ' en 2023)')) + '.');
+    return o.join(' ');
+  },
   repartia: (i, n) => Prov(i) + verb(i, ' repartia ', ' repartien ') + escons(n) + '.',
-  ultimo: (ganador, rival, votos) => "L'últim escó va ser per a " + ganador + '. A ' + rival + ' li van faltar ' + miles(votos) + " vots per a llevar-li'l.",
-  unico: ganador => "L'escó va ser per a " + ganador + '.',
+  ultimo: (ganador, rival, votos) => "L'últim escó va ser " + perA(elP(ganador)) + '. ' + maj(a(elP(rival))) + (votos === 1 ? ' li va faltar 1 vot' : ' li van faltar ' + miles(votos) + ' vots') + " per a llevar-li'l.",
+  provisionalUltimo: " És el recompte provisional: el vot arribat de l'estranger, que se suma el 4 de desembre, el pot canviar.",
+  unico: ganador => "L'escó va ser " + perA(elP(ganador)) + '.',
+  provisional12: "Són els escons del recompte provisional. L'escrutini general del 4 de desembre suma el vot arribat de l'estranger i en pot moure algun.",
   votos: n => miles(n) + (Math.round(n) === 1 ? ' vot' : ' vots'),
   ysiIguales: 'Tria dos partits diferents.',
-  ysiCambia: (n, deQui, aQui, ultimo) => 'Amb ' + miles(n) + ' vots ' + de(deQui) + ' a ' + aQui + ", canvia el repartiment. L'últim escó seria per a " + ultimo + '.',
-  ysiNoCambia: (n, ultimo) => 'Amb ' + miles(n) + " vots, el repartiment no canvia. L'últim escó continua sent per a " + ultimo + '.',
+  ysiCambia: (n, deQui, aQui, ultimo) => 'Amb ' + miles(n) + ' vots ' + de(elP(deQui)) + ' ' + a(elP(aQui)) + ", canvia el repartiment. L'últim escó seria " + perA(elP(ultimo)) + '.',
+  ysiNoCambia: (n, ultimo) => 'Amb ' + miles(n) + " vots, el repartiment no canvia. L'últim escó continua sent " + perA(elP(ultimo)) + '.',
   votosYEscanos: "El percentatge d'escons d'un partit quasi mai coincidix amb el seu percentatge de vots.",
   sinEscano: (n, p) => miles(n) + ' vots (' + p + ') van anar a candidatures que no van aconseguir escó en la seua província.',
   loSiguiente: t => 'El següent: ' + t.charAt(0).toLowerCase() + t.slice(1),

@@ -41,6 +41,9 @@ function frases(t) {
     'Escrutinio provisional del 29 de noviembre de 2026', 'Ministerio del Interior', '29 nov', '4 dic', '23 dic', 'Sin fecha', '1.ª votación', '48 h después', 'Gobierno',
     'Votación.', 'Escrutinio general: el recuento oficial.', 'Se constituyen el Congreso y el Senado.', 'El Rey consulta a los grupos y propone un candidato.',
     'Hacen falta 176 síes. Arranca el reloj de dos meses.', '2.ª votación: más síes que noes.', 'El Rey nombra al presidente.']) pon('dato', s + '  →  ' + t.dato(s));
+  // las etiquetas y fuentes de la noche del 29N y del 4-dic (guion de la noche); la de la noche lleva el porcentaje escrutado
+  for (const s of ['escrutinio provisional del 29 de noviembre de 2026, con el 99,9 % escrutado', 'escrutinio provisional del 29 de noviembre de 2026, con el 11 % escrutado',
+    'Ministerio del Interior, escrutinio provisional', 'escrutinio general del 4 de diciembre de 2026', 'Ministerio del Interior, escrutinio general']) pon('dato', s + '  →  ' + t.dato(s));
   for (const k of [0, 3, 4, 5, 7, 8, 9, 11, 13, 14]) pon('rotulo ' + k, t.rotulo(k, 46, 16, false));
   for (const i of PROVS) {
     const n = PROV[i][1];
@@ -57,7 +60,7 @@ function frases(t) {
   for (const k of [0, 3, 14]) { pon('estacion', t.estacion(k, 8)); pon('donde', t.donde(k, 8, false)); }
   pon('donde (solo texto)', t.donde(3, 8, true));
   pon('ariaApuesta', t.ariaApuesta('A')); for (const q of [0, 1, 5]) pon('resto', t.resto(q));
-  pon('dhondtDa', t.dhondtDa(3)); pon('acierto', t.acierto(12, 16));
+  pon('dhondtDa', t.dhondtDa(3, 2)); pon('acierto', t.acierto(12, 16));
   pon('repartoPaso', t.repartoPaso(3, 16, 'A', t.dec(20.1), 0)); pon('repartoPaso (fuera de la tabla)', t.repartoPaso(16, 16, 'A', t.dec(5.7), 7)); pon('repartoFin', t.repartoFin('A 7, B 5, C 3, D 1'));
   pon('comparacion', t.comparacion(1, 16)); pon('tamanos', t.tamanos(28, 17, 7)); for (const n of [0, 1, 3]) pon('senMarcadas', t.senMarcadas(n));
   pon('ariaPartido', t.ariaPartido('Coalición Canaria', 1, t.votoLargo.abs)); pon('ariaPartido', t.ariaPartido('PSOE', 110, t.votoLargo.si));
@@ -66,11 +69,26 @@ function frases(t) {
   pon('segunda', t.segunda(170, 160)); pon('segunda', t.segunda(120, 220));
   pon('anuncioPacto', t.anuncioPacto(170, 20, 160, t.primera(170), t.segunda(170, 160)));
   pon('calcNota', t.calcNota(t.fecha('23 de julio de 2023')));
+  // paso 9, frente a 2023 (ver js/equivalencias.js)
+  for (const x of [[['PP'], 18, ['Vox'], 13, true], [['PP', 'PSOE'], 3, [], 0, true], [[], 0, ['UPN'], 1, false], [[], 0, [], 0, true], [[], 0, [], 0, false]]) pon('frente2023', t.frente2023(...x));
+  pon('lista', [[], ['PP'], ['PP', 'Vox'], ['PP', 'PSOE', 'Vox']].map(t.lista).join(' | '));
+  pon('sinCifra', [t.sinCifra.nuevo, t.sinCifra.falta, t.sinCifra.solo2023, t.sinCifra.dentro('Sumar')].join(' | '));
+  const sin = [{ nombre: 'Frente Amplio', n: 4 }, { nombre: 'SALF', n: 2 }, { nombre: 'Podemos', n: 1 }], antes = [{ nombre: 'Sumar', n: 6 }];
+  for (const [i, e, e23, cambios, iguales, s, a] of [[29, 38, 37, [{ nombre: 'PP', signo: '+1' }, { nombre: 'Vox', signo: '−1' }], ['PSOE'], sin, antes], [12, 8, 9, [{ nombre: 'PSOE', signo: '−1' }], ['PP', 'Vox'], [], [{ nombre: 'Sumar', n: 1 }]],
+    [46, 16, 16, [], ['PP', 'PSOE', 'Vox'], [{ nombre: 'Frente Amplio', n: 3 }], [{ nombre: 'Sumar', n: 3 }]], [7, 8, 8, [{ nombre: 'PP', signo: '+2' }], [], [], []], [17, 8, 8, [], [], [], []], [50, 1, 1, [], [], [], []],
+    [50, 1, 1, [{ nombre: 'PP', signo: '−1' }, { nombre: 'PSOE', signo: '+1' }], [], [], []], [35, 8, 8, [], ['PSOE'], [], [{ nombre: 'Sumar', n: 1 }, { nombre: 'Nueva Canarias', n: 1 }]]])
+    pon('frase2023', t.frase2023(i, { e, e23, cambios, iguales, sin: s, antes: a }));
   pon('avisoPrueba', t.avisoPrueba(t.dato('resultados del 23 de julio de 2023')));
   pon('masEscanos', t.masEscanos('PP', 137, t.pct(0.3306), false)); pon('masEscanos (absoluta)', t.masEscanos('PP', 180, t.pct(0.41), true)); pon('participacion', t.participacion(t.pct(0.664)));
   pon('fuenteRes', t.fuenteRes(true, t.dato('resultados del 23 de julio de 2023'), t.dato('Ministerio del Interior, escrutinio del 23J (datos reunidos en Porra Electoral)')));
   pon('fuenteRes', t.fuenteRes(false, t.dato('Escrutinio provisional del 29 de noviembre de 2026'), t.dato('Ministerio del Interior')));
+  pon('fuenteRes (noche)', t.fuenteRes(false, t.dato('escrutinio provisional del 29 de noviembre de 2026, con el 99,9 % escrutado'), t.dato('Ministerio del Interior, escrutinio provisional')));
+  pon('fuenteRes (4-dic)', t.fuenteRes(false, t.dato('escrutinio general del 4 de diciembre de 2026'), t.dato('Ministerio del Interior, escrutinio general')));
   pon('ultimo', t.ultimo('PP', 'PSOE', 1340)); pon('unico', t.unico('PP')); pon('votos', t.votos(12500));
+  // partidos sin artículo (ARTICULO, en js/textos.js) y avisos de resultados provisionales
+  pon('ultimo (sin artículo)', t.ultimo('Sumar', 'EH Bildu', 1)); pon('unico (sin artículo)', t.unico('Vox')); pon('masEscanos (sin artículo)', t.masEscanos('Sumar', 31, t.pct(0.124), false));
+  pon('ysiCambia (artículos)', t.ysiCambia(12500, 'PP', 'Sumar', 'PNV')); pon('frase 11 (sin artículo)', t.frase(11, { i: 9, n: 8, entran: 3, soria: 2, madrid: 4, primero: 'EH Bildu' }));
+  pon('provisional', [t.provisionalRes, t.provisionalUltimo, t.provisional12].join(' | '));
   pon('ysiCambia', t.ysiCambia(12500, 'Vox', 'PSOE', 'PSOE')); pon('ysiNoCambia', t.ysiNoCambia(300, 'PP')); pon('sinEscano', t.sinEscano(1234567, t.pct(0.051)));
   pon('loSiguiente', t.loSiguiente(t.dato('Escrutinio general: el recuento oficial.')));
   return o;

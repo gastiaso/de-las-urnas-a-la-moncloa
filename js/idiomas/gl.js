@@ -1,5 +1,5 @@
 // Textos del JavaScript en gallego. Mismas entradas que js/textos.js.
-import { idioma, parteFecha } from '../textos.js';
+import { idioma, parteFecha, parteEscrutado, ARTICULO } from '../textos.js';
 
 const escanos = n => n + (n === 1 ? ' escano' : ' escanos');
 const sies = n => n + (n === 1 ? ' voto a favor' : ' votos a favor');
@@ -32,6 +32,11 @@ const En = i => mai(en(i));
 // la provincia de sujeto: al empezar la frase («As Illas Baleares», «A Coruña») o en medio («as Illas Baleares», «A Coruña»)
 const suxeito = (i, inicio) => { const p = ARTIGO[i]; return !p ? NOMES[i] : (p.propio || inicio ? mai(p.art) : p.art) + ' ' + p.nome; };
 const verbo = (i, singular, plural) => ARTIGO[i] && ARTIGO[i].plural ? plural : singular;
+// Partidos con artículo (ARTICULO, en js/textos.js): «o PP», «ao PSOE», «do BNG»; sin él, «Vox», «a Sumar», «de EH Bildu».
+// p: nombre del partido; b: en negrita, con el artículo fuera
+const oP = (p, b) => (ARTICULO[p] ? (ARTICULO[p] === 'f' ? 'a ' : 'o ') : '') + (b ? '<b>' + p + '</b>' : p);
+const aoP = p => ARTICULO[p] ? (ARTICULO[p] === 'f' ? 'á ' : 'ao ') + p : 'a ' + p;
+const doP = p => ARTICULO[p] ? (ARTICULO[p] === 'f' ? 'da ' : 'do ') + p : 'de ' + p;
 
 /* textos que en castellano viven en js/datos.js */
 const TITULOS = ['Saída', 'Que se vota', 'Do voto ao escano', 'Onde votas', 'O Senado', 'As maiorías', 'Pactos', 'Do 29N ao Goberno', 'Peche',
@@ -80,6 +85,9 @@ const DATOS = {
   'Ministerio del Interior, escrutinio del 23J (datos reunidos en Porra Electoral)': 'Ministerio do Interior, escrutinio do 23J (datos reunidos en Porra Electoral)',
   'Escrutinio provisional del 29 de noviembre de 2026': 'Escrutinio provisional do 29 de novembro de 2026',
   'Ministerio del Interior': 'Ministerio do Interior',
+  'Ministerio del Interior, escrutinio provisional': 'Ministerio do Interior, escrutinio provisional',
+  'escrutinio general del 4 de diciembre de 2026': 'escrutinio xeral do 4 de decembro de 2026',
+  'Ministerio del Interior, escrutinio general': 'Ministerio do Interior, escrutinio xeral',
   '29 nov': '29 nov',
   '4 dic': '4 dec',
   '23 dic': '23 dec',
@@ -96,7 +104,7 @@ const DATOS = {
   'El Rey nombra al presidente.': 'O Rei nomea o presidente.'
 };
 // Busca sin distinguir si la primera letra llega en mayúscula o en minúscula, y la devuelve como llegó. Si no está, deja el texto igual.
-const dato = s => {
+const datoFijo = s => {
   if (typeof s !== 'string' || !s) return s;
   if (s in DATOS) return DATOS[s];
   const c = s.charAt(0), resto = s.slice(1), mayuscula = c !== c.toLowerCase();
@@ -105,6 +113,8 @@ const dato = s => {
   const t = DATOS[otra];
   return (mayuscula ? t.charAt(0).toUpperCase() : t.charAt(0).toLowerCase()) + t.slice(1);
 };
+// La etiqueta de la noche lleva el porcentaje escrutado: «…, co 99,9 % escrutado».
+const dato = s => { const e = parteEscrutado(s); return e ? datoFijo(e.t) + ', co ' + e.n + ' % escrutado' : datoFijo(s); };
 
 const ISLAS = {
   7: 'Mallorca elixe tres senadores e márcanse dous nomes; Menorca, Ibiza e Formentera elixen un cada unha',
@@ -121,6 +131,7 @@ export const textos = {
   pctEntero: n => n + ' %',
   provLista,
   prov,
+  provMapa: prov,                         // en el rótulo del mapa: «A Coruña», «Illas Baleares»
   escanos, sies,
 
   /* textos que en castellano viven en js/datos.js */
@@ -130,6 +141,7 @@ export const textos = {
 
   /* el escenario */
   ariaEscenario: 'Os 350 escanos do Congreso, que cambian de forma en cada paso. O hexágono dourado é o teu voto.',
+  ariaPaso: (texto, marca) => texto + (marca ? ' Hexágono dourado: ' + marca.charAt(0).toLowerCase() + marca.slice(1) + '.' : ''),
   tuVoto: 'O teu voto',
   primerEscano: i => '1.º escano ' + de(i),
   rotulo: (k, i, n, revelado) => ({
@@ -141,7 +153,7 @@ export const textos = {
     5: '176 de 350: a maioría absoluta',
     7: 'O Congreso que elixirá presidente<small>O prazo de dous meses comeza coa primeira votación.</small>',
     8: '350 escanos',
-    9: 'Cada escano, da cor de quen o gañou',
+    9: 'Cada escano, da cor do seu partido',
     10: prov(i) + ': ' + escanos(n),
     11: 'O Congreso que sae das urnas',
     13: 'O Congreso que sae das urnas',
@@ -174,8 +186,8 @@ export const textos = {
       case 6: return (uno ? 'O deputado ' + de(i) + ' adoita votar co seu partido.' : 'Os ' + n + ' deputados ' + de(i) + ' adoitan votar co seu partido.') + ' O teu voto queda á parte, debaixo do hemiciclo: en que bloque estaría depende de a quen votes.';
       case 7: return 'A noite do 29N, a túa papeleta cóntase na túa mesa ' + de(i) + ', en público e en voz alta.';
       case 8: return 'Ese é o camiño da túa papeleta ' + en(i) + ': da urna á Moncloa.';
-      case 10: return primero ? 'O hexágono dourado é o primeiro escano que se repartiu ' + en(i) + ': foi para <b>' + primero + '</b>.' : '';
-      case 11: case 12: return primero ? 'O hexágono dourado é o primeiro escano ' + de(i) + ': foi para <b>' + primero + '</b>, o partido máis votado alí.' : '';
+      case 10: return primero ? 'O hexágono dourado é o primeiro escano que se repartiu ' + en(i) + ': foi para ' + oP(primero, true) + '.' : '';
+      case 11: case 12: return primero ? 'O hexágono dourado é o primeiro escano ' + de(i) + ': foi para ' + oP(primero, true) + ', o partido máis votado alí.' : '';
       default: return '';
     }
   },
@@ -188,6 +200,7 @@ export const textos = {
   fase2Cerrada: 'Os pasos 9 a 13 ábrense o 30N, cos resultados.',
   abre30N: '30N',   // junto a cada paso cerrado, en el menú
   sigueMiVoto: 'Segue o meu voto: ',
+  irResultados: 'Ir aos resultados: ',   // fase 2: atajo de la salida al paso 9
   siguiente: 'Seguinte: ',
   verEscanos: 'Volver aos 350 escanos',
   verTexto: 'Ver só o texto',
@@ -202,12 +215,14 @@ export const textos = {
 
   /* paso 1 */
   provElige: (i, n) => suxeito(i, true) + ' ' + verbo(i, 'elixe', 'elixen') + ' ' + escanos(n) + ' dos 350.',
+  cambiaProv: (i, a, b) => 'Non votas ' + en(i) + '? ' + a + 'Cámbiaa aquí abaixo' + b + '.',   // recuadro del paso 1 sin provincia elegida
 
   /* paso 2: la apuesta y la tabla de divisiones */
   apuestaIntro: (i, n) => suxeito(i, true) + ' ' + verbo(i, 'reparte', 'reparten') + ' ' + escanos(n) + ' entre cinco partidos inventados. Cantos lle dás a cada un?',
   ariaApuesta: letra => 'Escanos para o partido ' + letra,
   resto: q => q === 0 ? 'Todo repartido.' : q === 1 ? 'Quédache 1 escano por repartir.' : 'Quédanche ' + q + ' escanos por repartir.',
-  dhondtDa: n => "D'Hondt dálle " + n,
+  tuApuesta: 'A túa aposta',   // sobre la columna de cifras
+  dhondtDa: (n, tuyo) => "D'Hondt: " + n + ' · ti: ' + tuyo,
   acierto: (aciertos, total) => 'Acertaches ' + aciertos + ' de ' + total + '.',
   partido: 'Partido',
   fuera: ' (fóra)',
@@ -224,6 +239,10 @@ export const textos = {
   senTope: 'Só tres. Quita unha marca para cambiala.',
   senMarcadas: n => 'Marcaches ' + n + ' de 3.',
 
+  /* paso 7: la etiqueta junto a lo que pasa hoy o, si hoy no hay nada, junto a lo siguiente */
+  calHoy: 'hoxe',
+  calSiguiente: 'o seguinte',
+
   /* calculadoras de pactos (pasos 6 y 12) */
   voto: { no: 'Non', si: 'Si', abs: 'Abst.' },
   votoLargo: { no: 'non', si: 'si', abs: 'abstención' },
@@ -231,6 +250,8 @@ export const textos = {
   votacion1: '1.ª votación · maioría absoluta',
   votacion2: '2.ª votación · máis a favor que en contra',
   copiar: 'Copiar a ligazón a esta combinación',
+  compartirComb: 'Compartir esta combinación',   // en el móvil, con la hoja de compartir del teléfono
+  enviada: (a, b) => 'Enviáronche esta combinación. Cámbiaa ou ' + a + 'empeza polo principio' + b + '.',
   copiado: 'Ligazón copiada.',
   copiaManual: 'Copia o enderezo do navegador: xa leva a combinación.',
   copiaDireccion: 'Copia o enderezo do navegador',
@@ -245,19 +266,54 @@ export const textos = {
 
   /* fase 2: los resultados */
   avisoPrueba: etiqueta => 'Vista previa con datos de proba: ' + etiqueta + '. Non son os resultados do 29N.',
-  masEscanos: (nombre, n, pctVotos, absoluta) => nombre + ' é o partido con máis escanos: ' + n + ', co ' + pctVotos + ' dos votos. ' + (absoluta ? 'Supera os 176 da maioría absoluta.' : 'Ningún partido chega el só aos 176 da maioría absoluta.'),
+  masEscanos: (nombre, n, pctVotos, absoluta) => mai(oP(nombre)) + ' é o partido con máis escanos: ' + n + ', co ' + pctVotos + ' dos votos. ' + (absoluta ? 'Supera os 176 da maioría absoluta.' : 'Ningún partido chega el só aos 176 da maioría absoluta.'),
   participacion: p => ' Votou o ' + p + ' do censo.',
+  provisionalRes: ' Son resultados provisionais ata o escrutinio xeral do 4 de decembro, que suma o voto chegado do estranxeiro.',
   thVotos: 'Votos',
   thEscanos: 'Escanos',
   thPorEscano: 'Votos por escano',
-  fuenteRes: (prueba, etiqueta, fuente) => (prueba ? 'Datos de proba: ' : '') + etiqueta + '. Fonte: ' + fuente + '. Os escanos calcúlanse aquí cos votos de cada provincia.',
+  fuenteRes: (prueba, etiqueta, fuente) => (prueba ? 'Datos de proba: ' + etiqueta : mai(etiqueta)) + '. Fonte: ' + fuente + '. Os escanos calcúlanse aquí cos votos de cada provincia; os oficiais proclámanos as xuntas electorais.',
+  /* paso 9: frente a 2023 */
+  lista: xs => xs.length < 2 ? xs.join('') : xs.slice(0, -1).join(', ') + ' e ' + xs[xs.length - 1],
+  frente2023(gana, mas, pierde, menos, todos) {
+    if (!gana.length && !pierde.length) return todos ? 'Cada partido ten os mesmos escanos que nas xerais de 2023.' : 'Os partidos que se poden comparar con 2023 teñen os mesmos escanos que entón.';
+    const g = gana.length ? (gana.length > 1 ? 'os que máis escanos gañan: ' : 'o que máis escanos gaña: ') + this.lista(gana) + ' (+' + mas + ')' : '';
+    const p = pierde.length ? (pierde.length > 1 ? 'os que máis ' : 'o que máis ') + (g ? '' : 'escanos ') + (pierde.length > 1 ? 'perden: ' : 'perde: ') + this.lista(pierde) + ' (−' + menos + ')' : '';
+    return 'Fronte ás xerais de 2023, ' + [g, p].filter(Boolean).join('; ') + '.' + (todos && !p ? ' Ningún perde escanos.' : todos && !g ? ' Ningún gaña escanos.' : '');
+  },
+  tabla2023: 'Escanos de cada partido en 2023 e o 29N',
+  th2023: '2023',
+  th29N: '29N',
+  thDif: 'Diferenza',
+  nuevo: 'novo',
+  sinCifra: { nuevo: 'non se presentou en 2023', falta: 'sen equivalente en 2023', solo2023: 'sen equivalente o 29N', dentro: ref => 'en 2023, dentro de ' + ref },
+  notas2023: {
+    faSumar: 'O Frente Amplio compárase con Sumar, que en 2023 incluía a Podemos.',
+    faNuevo: 'O Frente Amplio non se presentou en 2023.',
+    sumar: 'En 2023, Sumar incluía a Podemos.',
+    podemos: 'Podemos foi en 2023 dentro de Sumar: non ten cifra propia coa que comparalo.',
+    aa: 'En 2023, Adelante Andalucía só se presentou en Cádiz, e non sacou escano.',
+    salf: 'SALF non se presentou en 2023.' },
+  fuente2023: 'Escanos de 2023: os proclamados pola <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-18907">Xunta Electoral Central</a>.',
+  frase2023(i, { e, e23, cambios, iguales, sin, antes }) {
+    const d = e - e23, b = c => '<b>' + c.nombre + '</b>', o = [];
+    if (!cambios.length && !sin.length && !antes.length) return e === 1 ? En(i) + ', o escano é para o mesmo partido que en 2023.' : En(i) + ', os ' + e + ' escanos repártense igual que en 2023.';
+    if (d) o.push(En(i) + ' hai ' + escanos(e) + ', ' + (Math.abs(d) === 1 ? 'un' : Math.abs(d)) + (d > 0 ? ' máis' : ' menos') + ' que en 2023.');
+    const cm = this.lista(cambios.map(c => b(c) + ' ' + c.signo)), ig = iguales.length ? this.lista(iguales) + ', sen cambios' : '';
+    if (cm || ig) o.push((d ? 'Por partidos: ' : En(i) + ', fronte a 2023: ') + [cm, ig].filter(Boolean).join('; ') + '.');
+    if (sin.length) o.push('Non se poden comparar con 2023: ' + this.lista(sin.map(c => b(c) + ' (' + escanos(c.n) + ')')) + '.');
+    if (antes.length) o.push('Sen equivalente o 29N: ' + this.lista(antes.map(c => b(c) + ' (' + escanos(c.n) + ' en 2023)')) + '.');
+    return o.join(' ');
+  },
   repartia: (i, n) => suxeito(i, true) + ' ' + verbo(i, 'repartía', 'repartían') + ' ' + escanos(n) + '.',
-  ultimo: (ganador, rival, votos) => 'O último escano foi para ' + ganador + '. A ' + rival + (Math.round(votos) === 1 ? ' faltoulle ' : ' faltáronlle ') + nvotos(votos) + ' para quitarllo.',
-  unico: ganador => 'O escano foi para ' + ganador + '.',
+  ultimo: (ganador, rival, votos) => 'O último escano foi para ' + oP(ganador) + '. ' + mai(aoP(rival)) + (Math.round(votos) === 1 ? ' faltoulle ' : ' faltáronlle ') + nvotos(votos) + ' para quitarllo.',
+  provisionalUltimo: ' É o reconto provisional: o voto chegado do estranxeiro, que se suma o 4 de decembro, pode cambialo.',
+  unico: ganador => 'O escano foi para ' + oP(ganador) + '.',
+  provisional12: 'Son os escanos do reconto provisional. O escrutinio xeral do 4 de decembro suma o voto chegado do estranxeiro e pode mover algún.',
   votos: nvotos,
   ysiIguales: 'Elixe dous partidos distintos.',
-  ysiCambia: (n, orixe, destino, ultimo) => 'Con ' + nvotos(n) + ' de ' + orixe + ' a ' + destino + ', cambia o reparto. O último escano sería para ' + ultimo + '.',
-  ysiNoCambia: (n, ultimo) => 'Con ' + nvotos(n) + ', o reparto non cambia. O último escano segue sendo para ' + ultimo + '.',
+  ysiCambia: (n, orixe, destino, ultimo) => 'Con ' + nvotos(n) + ' ' + doP(orixe) + ' ' + aoP(destino) + ', cambia o reparto. O último escano sería para ' + oP(ultimo) + '.',
+  ysiNoCambia: (n, ultimo) => 'Con ' + nvotos(n) + ', o reparto non cambia. O último escano segue sendo para ' + oP(ultimo) + '.',
   votosYEscanos: 'A porcentaxe de escanos dun partido case nunca coincide coa súa porcentaxe de votos.',
   sinEscano: (n, p) => miles(n) + ' votos (' + p + ') foron para candidaturas que non lograron escano na súa provincia.',
   loSiguiente: t => 'O seguinte: ' + t.charAt(0).toLowerCase() + t.slice(1),

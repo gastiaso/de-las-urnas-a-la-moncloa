@@ -1,5 +1,5 @@
 // Textos del JavaScript en euskera. Mismas entradas que js/textos.js.
-import { idioma, parteFecha } from '../textos.js';
+import { idioma, parteFecha, parteEscrutado } from '../textos.js';
 
 // Las 52 circunscripciones, en el mismo orden que PROV (js/datos.js), con los exónimos de Euskaltzaindia y las formas
 // declinadas que usan las frases: [NOR (absoluto), NON (inesivo), NONGO (genitivo locativo), NORK (ergativo)].
@@ -82,6 +82,9 @@ const DATUAK = {
   'ministerio del Interior, escrutinio del 23J (datos reunidos en Porra Electoral)': 'Barne Ministerioa, uztailaren 23ko zenbaketa (Porra Electoralen bildutako datuak)',
   'escrutinio provisional del 29 de noviembre de 2026': '2026ko azaroaren 29ko behin-behineko zenbaketa',
   'ministerio del Interior': 'Barne Ministerioa',
+  'ministerio del Interior, escrutinio provisional': 'Barne Ministerioa, behin-behineko zenbaketa',
+  'escrutinio general del 4 de diciembre de 2026': '2026ko abenduaren 4ko zenbaketa orokorra',
+  'ministerio del Interior, escrutinio general': 'Barne Ministerioa, zenbaketa orokorra',
   '29 nov': 'aza. 29',
   '4 dic': 'abe. 4',
   '23 dic': 'abe. 23',
@@ -117,6 +120,7 @@ export const textos = {
   pctEntero: n => '% ' + n,
   provLista: nor,                         // en los desplegables y en las barras
   prov: nor,                              // dentro de una frase, en caso absoluto; las demás formas, en PROB
+  provMapa: nor,                          // en el rótulo de la provincia elegida, sobre el mapa
   escanos: eserleku, sies: bai,
 
   /* textos que en castellano viven en js/datos.js */
@@ -157,10 +161,12 @@ export const textos = {
   },
   // La fecha de las elecciones, ya en el caso que pide calcNota («… hauteskundeetan»): «2023ko uztailaren 23ko». El sufijo depende del día y del año.
   fecha: f => { const x = parteFecha(f); return x ? x.a + (kons(x.a) ? 'eko ' : 'ko ') + HIL[x.m - 1] + 'aren ' + x.d + (kons(x.d) ? 'eko' : 'ko') : f; },
-  dato: s => DATUAK[txikiz(String(s))] || s,
+  // la etiqueta de la noche lleva el porcentaje escrutado: «…, botoen % 99,9 zenbatuta»
+  dato: s => { const e = parteEscrutado(s); return e ? (DATUAK[txikiz(e.t)] || e.t) + ', botoen % ' + e.n + ' zenbatuta' : DATUAK[txikiz(String(s))] || s; },
 
   /* el escenario */
   ariaEscenario: 'Kongresuko 350 eserlekuak, urrats bakoitzean forma aldatzen dutenak. Hexagono urrekara zure botoa da.',
+  ariaPaso: (texto, marca) => texto + (marca ? ' Hexagono urrekara: ' + marca.replace(/^Zure/, 'zure') + '.' : ''),
   tuVoto: 'Zure botoa',
   primerEscano: i => nongo(i) + ' 1. eserlekua',
   // k: paso; i: provincia; n: sus escaños; revelado: si ya se ha hecho la apuesta del paso 2
@@ -173,7 +179,7 @@ export const textos = {
     5: '350etik 176: gehiengo osoa',
     7: 'Presidentea aukeratuko duen Kongresua<small>Bi hilabeteko epea lehen bozketarekin hasten da.</small>',
     8: '350 eserleku',
-    9: 'Eserleku bakoitza, irabazi duenaren kolorez',
+    9: 'Eserleku bakoitza, bere alderdiaren kolorez',
     10: nor(i) + ': ' + eserleku(n),
     11: 'Hautetsontzietatik ateratzen den Kongresua',
     13: 'Hautetsontzietatik ateratzen den Kongresua',
@@ -223,6 +229,7 @@ export const textos = {
   fase2Cerrada: '9. urratsetik 13.era artekoak azaroaren 30ean irekiko dira, emaitzekin.',
   abre30N: 'aza. 30',   // junto a cada paso cerrado, en el menú
   sigueMiVoto: 'Jarraitu nire botoari: ',
+  irResultados: 'Emaitzetara joan: ',   // fase 2: atajo de la salida al paso 9
   siguiente: 'Hurrengoa: ',
   verEscanos: 'Itzuli 350 eserlekuetara',
   verTexto: 'Testua bakarrik ikusi',
@@ -237,12 +244,14 @@ export const textos = {
 
   /* paso 1 */
   provElige: (i, n) => nork(i) + ' 350 eserlekuetatik ' + n + ' aukeratzen ' + (PLURALA.includes(i) ? (n === 1 ? 'dute' : 'dituzte') : (n === 1 ? 'du' : 'ditu')) + '.',
+  cambiaProv: (i, a, b) => 'Ez duzu ' + non(i) + ' bozkatzen? ' + a + 'Aldatu hemen behean' + b + '.',   // recuadro del paso 1 sin provincia elegida
 
   /* paso 2: la apuesta y la tabla de divisiones */
   apuestaIntro: (i, n) => non(i) + ' ' + eserleku(n) + (n === 1 ? ' banatzen da' : ' banatzen dira') + ' asmatutako bost alderdiren artean. Zenbat emango dizkiozu bakoitzari?',
   ariaApuesta: letra => letra + ' alderdiarentzako eserlekuak',
   resto: q => q === 0 ? 'Dena banatuta.' : q === 1 ? 'Eserleku bat geratzen zaizu banatzeko.' : q + ' eserleku geratzen zaizkizu banatzeko.',
-  dhondtDa: n => "D'Hondt legearen arabera: " + n,
+  tuApuesta: 'Zure apustua',   // sobre la columna de cifras
+  dhondtDa: (n, tuyo) => "D'Hondt: " + n + ' · zuk: ' + tuyo,
   acierto: (aciertos, total) => tik(total) + ' ' + aciertos + ' asmatu ' + (aciertos === 1 ? 'duzu' : 'dituzu') + '.',
   partido: 'Alderdia',
   fuera: ' (kanpoan)',
@@ -260,6 +269,10 @@ export const textos = {
   senTope: 'Hiru bakarrik. Kendu marka bat aldatzeko.',
   senMarcadas: n => '3tik ' + n + ' markatu ' + (n === 1 ? 'duzu' : 'dituzu') + '.',
 
+  /* paso 7: la etiqueta junto a lo que pasa hoy o, si hoy no hay nada, junto a lo siguiente */
+  calHoy: 'gaur',
+  calSiguiente: 'hurrengoa',
+
   /* calculadoras de pactos (pasos 6 y 12) */
   voto: { no: 'Ez', si: 'Bai', abs: 'Abst.' },
   votoLargo: { no: 'ez', si: 'bai', abs: 'abstentzioa' },
@@ -267,6 +280,8 @@ export const textos = {
   votacion1: '1. bozketa · gehiengo osoa',
   votacion2: '2. bozketa · ezezkoak baino baiezko gehiago',
   copiar: 'Kopiatu konbinazio honen esteka',
+  compartirComb: 'Partekatu konbinazio hau',   // en el móvil, con la hoja de compartir del teléfono
+  enviada: (a, b) => 'Konbinazio hau bidali dizute. Aldatu edo ' + a + 'hasi hasieratik' + b + '.',
   copiado: 'Esteka kopiatuta.',
   copiaManual: 'Kopiatu nabigatzaileko helbidea: konbinazioa barruan darama.',
   copiaDireccion: 'Kopiatu nabigatzaileko helbidea',
@@ -284,13 +299,48 @@ export const textos = {
   avisoPrueba: etiqueta => 'Aurrebista, probako datuekin: ' + etiqueta + '. Ez dira azaroaren 29ko emaitzak.',
   masEscanos: (nombre, n, pctVotos, absoluta) => nombre + ' da eserleku gehien dituen alderdia: ' + n + ' eserleku, botoen ' + pctVotos + ' lortuta. ' + (absoluta ? 'Gehiengo osoaren 176 eserlekuetara iristen da.' : 'Alderdi bakar bat ere ez da bere kabuz iristen gehiengo osoaren 176 eserlekuetara.'),
   participacion: p => ' Parte-hartzea: erroldaren ' + p + '.',
+  provisionalRes: ' Behin-behineko emaitzak dira abenduaren 4ko zenbaketa orokorrera arte; orduan gehitzen da atzerritik iritsitako botoa.',
   thVotos: 'Botoak',
   thEscanos: 'Eserlekuak',
   thPorEscano: 'Botoak eserlekuko',
-  fuenteRes: (prueba, etiqueta, fuente) => (prueba ? 'Probako datuak: ' : '') + etiqueta + '. Iturria: ' + fuente + '. Eserlekuak hemen kalkulatzen dira, probintzia bakoitzeko botoekin.',
+  fuenteRes: (prueba, etiqueta, fuente) => (prueba ? 'Probako datuak: ' + etiqueta : etiqueta.charAt(0).toUpperCase() + etiqueta.slice(1)) + '. Iturria: ' + fuente + '. Eserlekuak hemen kalkulatzen dira, probintzia bakoitzeko botoekin; ofizialak hauteskunde-batzordeek aldarrikatzen dituzte.',
+  /* paso 9: frente a 2023. Los nombres de los partidos, en caso absoluto, como en el resto de frases */
+  lista: xs => xs.length < 2 ? xs.join('') : xs.slice(0, -1).join(', ') + ' eta ' + xs[xs.length - 1],
+  frente2023(gana, mas, pierde, menos, todos) {
+    if (!gana.length && !pierde.length) return todos ? 'Alderdi bakoitzak 2023ko hauteskunde orokorretan adina eserleku ditu.' : 'Alderatu daitezkeen alderdiek 2023an adina eserleku dituzte.';
+    const g = gana.length ? 'eserleku gehien irabazten ' + (gana.length > 1 ? 'dituztenak: ' : 'dituena: ') + this.lista(gana) + ' (+' + mas + ')' : '';
+    const p = pierde.length ? (g ? 'gehien galtzen ' + (pierde.length > 1 ? 'dutenak: ' : 'duena: ') : 'eserleku gehien galtzen ' + (pierde.length > 1 ? 'dituztenak: ' : 'dituena: ')) + this.lista(pierde) + ' (−' + menos + ')' : '';
+    return '2023ko hauteskunde orokorrekin alderatuta, ' + [g, p].filter(Boolean).join('; ') + '.' + (todos && !p ? ' Alderdi bakar batek ere ez du eserlekurik galtzen.' : todos && !g ? ' Alderdi bakar batek ere ez du eserlekurik irabazten.' : '');
+  },
+  tabla2023: 'Alderdi bakoitzaren eserlekuak 2023an eta azaroaren 29an',
+  th2023: '2023',
+  th29N: 'aza. 29',
+  thDif: 'Aldea',
+  nuevo: 'berria',
+  sinCifra: { nuevo: 'ez zen 2023an aurkeztu', falta: '2023an baliokiderik gabe', solo2023: 'azaroaren 29an baliokiderik gabe', dentro: ref => '2023an, ' + ref + ' hautagaitzaren barruan' },
+  notas2023: {
+    faSumar: 'Frente Amplio Sumar koalizioarekin alderatzen da; 2023an, Podemos ere koalizio horretan zegoen.',
+    faNuevo: 'Frente Amplio ez zen 2023an aurkeztu.',
+    sumar: '2023an, Podemos ere Sumar koalizioan zegoen.',
+    podemos: 'Podemos 2023an Sumar koalizioaren barruan aurkeztu zen: ez du alderatzeko zifra propiorik.',
+    aa: '2023an, Adelante Andalucía Cadizen bakarrik aurkeztu zen, eta ez zuen eserlekurik lortu.',
+    salf: 'SALF ez zen 2023an aurkeztu.' },
+  fuente2023: '2023ko eserlekuak: <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-18907">Hauteskunde Batzorde Zentralak</a> aldarrikatutakoak.',
+  frase2023(i, { e, e23, cambios, iguales, sin, antes }) {
+    const d = e - e23, b = c => '<b>' + c.nombre + '</b>', o = [];
+    if (!cambios.length && !sin.length && !antes.length) return e === 1 ? nongo(i) + ' eserlekua 2023an bezala alderdi berarentzat da.' : nongo(i) + ' ' + e + ' eserlekuak 2023an bezala banatzen dira.';
+    if (d) o.push(non(i) + ' ' + (e === 1 ? 'eserleku bat dago' : e + ' eserleku daude') + ', 2023an baino ' + (Math.abs(d) === 1 ? 'bat' : Math.abs(d)) + (d > 0 ? ' gehiago.' : ' gutxiago.'));
+    const cm = this.lista(cambios.map(c => b(c) + ' ' + c.signo)), ig = iguales.length ? this.lista(iguales) + ', aldaketarik gabe' : '';
+    if (cm || ig) o.push((d ? 'Alderdika: ' : non(i) + ', 2023rekin alderatuta: ') + [cm, ig].filter(Boolean).join('; ') + '.');
+    if (sin.length) o.push('2023rekin alderatu ezin direnak: ' + this.lista(sin.map(c => b(c) + ' (' + eserleku(c.n) + ')')) + '.');
+    if (antes.length) o.push('Azaroaren 29an baliokiderik gabe: ' + this.lista(antes.map(c => b(c) + ' (' + eserleku(c.n) + ' 2023an)')) + '.');
+    return o.join(' ');
+  },
   repartia: (i, n) => non(i) + ' ' + eserleku(n) + (n === 1 ? ' banatzen zen.' : ' banatzen ziren.'),
   ultimo: (ganador, rival, votos) => 'Azken eserlekua ' + ganador + ' alderdiarentzat izan zen. ' + rival + ' alderdiari ' + boto(votos) + (votos === 1 ? ' falta izan zitzaion' : ' falta izan zitzaizkion') + ' eserleku hori kentzeko.',
+  provisionalUltimo: ' Behin-behineko kontaketa da: atzerritik iritsitako botoak, abenduaren 4an gehitzen denak, alda dezake.',
   unico: ganador => 'Eserlekua ' + ganador + ' alderdiarentzat izan zen.',
+  provisional12: 'Behin-behineko kontaketako eserlekuak dira. Abenduaren 4ko zenbaketa orokorrak atzerritik iritsitako botoa gehitzen du, eta eserlekuren bat mugi dezake.',
   votos: boto,
   ysiIguales: 'Aukeratu bi alderdi desberdin.',
   ysiCambia: (n, de, a, ultimo) => de + ' alderditik ' + a + ' alderdira ' + boto(n) + ' pasatuta, banaketa aldatu egiten da. Azken eserlekua ' + ultimo + ' alderdiarentzat izango litzateke.',
