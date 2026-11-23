@@ -290,7 +290,8 @@ function ponRotulo() {
 function preparaRotulo() {
   const quieto = piezas.every(q => ((q.ini.o || 0) < 0.01 && (q.fin.o || 0) < 0.01) || ['x', 'y', 'r', 'o'].every(z => Math.abs((q.ini[z] || 0) - (q.fin[z] || 0)) < 1e-4));
   if (claveRotulo() !== claveRot) capaRot.classList.add('fuera');
-  esperaRot = !quieto; if (quieto) requestAnimationFrame(() => { if (!esperaRot) ponRotulo(); });
+  // quieto (otra provincia en el mismo mapa): la marca se coloca antes que el rótulo, que la esquiva, y no después
+  esperaRot = !quieto; if (quieto) requestAnimationFrame(() => { if (!esperaRot) { ponMarca(); ponRotulo(); } });
 }
 const rotuloAlParar = () => { if (esperaRot) { esperaRot = false; ponRotulo(); } };
 // si el escenario cambia de tamaño (ventana, giro, salida de la portada) o llega la fuente, se recoloca
