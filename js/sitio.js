@@ -44,6 +44,12 @@ document.body.appendChild(esc);
 const svgEl = $('svg', esc), gs = $$('.piezas > .p', esc), rotulo = $('.rotulo', esc), pieEsc = $('.pie-escenario', esc);
 const tuyo = $('.tuyo', esc), marca = $('.marca', esc), guia = $('.hemi-guia', esc);
 piezas.forEach((q, i) => { q.el = gs[i]; q.hx = $('.hx', gs[i]); q.env = $('.env', gs[i]); q.cur = { x: 0, y: 0, r: 0, o: 0, a: 0, e: 0 }; q.el.dataset.p = q.p; q.env.style.opacity = 0; });
+// Bordes de provincia y de comunidad, costa y recuadro de Canarias (las rayas que calcula mapa.js), encima de las piezas.
+// Solo se ven en los mapas, y cuando las piezas ya han llegado a su sitio (ver aplica).
+const raya = s => s.map(q => 'M' + q[0].toFixed(4) + ' ' + q[1].toFixed(4) + 'L' + q[2].toFixed(4) + ' ' + q[3].toFixed(4)).join('');
+const bordes = (g, c) => { const [x0, z0, x1, z1] = g.marco; return '<g class="bordes ' + c + '"><path class="b-prov" d="' + raya(g.prov) + '"/><path class="b-ccaa" d="' + raya(g.ccaa) + '"/><path class="b-costa" d="' + raya(g.costa) + '"/><rect class="b-marco" x="' + x0 + '" y="' + z0 + '" width="' + (x1 - x0).toFixed(4) + '" height="' + (z1 - z0).toFixed(4) + '"/></g>'; };
+$('.piezas', esc).insertAdjacentHTML('afterend', bordes(gC, 'bc') + bordes(gS, 'bs'));
+const bordesC = $('.bc', esc), bordesS = $('.bs', esc);
 
 let C = null, k = 0, revelado = null, pacto6 = null, pacto12 = null, res = null, provRes = null, listo = false;
 const sel = () => C ? C.st.prov : 0;
@@ -153,6 +159,9 @@ function aplica(suave, dur0) {
     q.hx.style.fill = q.fin.f; q.el.classList.toggle('borde', !!q.fin.b);
   });
   guia.setAttribute('opacity', est === 'pacto' || est === 'hemi' || est === 'hemiRes' ? 1 : 0);
+  const llega = dur ? dur + Math.max(...piezas.map(q => q.ret)) : 0;   // ms hasta que la última pieza está en su sitio
+  [[bordesC, ['mapaSel', 'hab', 'res'].includes(est)], [bordesS, est === 'senado']].forEach(([b, v]) => { b.style.transitionDelay = v && llega ? Math.max(0, llega - 200) + 'ms' : '0ms'; b.classList.toggle('ve', v); });
+  esc.dataset.est = est;   // en los mapas, el contorno de cada hexágono se aclara para que se lean los bordes (css/estilo.css)
   cancelAnimationFrame(anim);
   const paso = now => {
     let sigue = false;
