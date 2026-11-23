@@ -131,6 +131,7 @@ Las calculadoras de pactos se pueden compartir: la combinación va en la direcci
 | `js/mapa.js` y `js/hemiciclo.js` | Geometría del mapa de hexágonos y de los 350 asientos del hemiciclo |
 | `js/fichas.js` | Iconos de cada paso |
 | `js/cartograma.js` y `js/resultados.js` | Posición de los hexágonos y resultados de la fase 2 (generados) |
+| `js/referencia_2023.js` y `js/equivalencias.js` | Escaños del 23J por provincia (generados con `herramientas/referencia_2023.py`) y con qué partido de 2023 se compara cada uno en el paso 9 |
 | `herramientas/` | Generadores del mapa, de los resultados y del guion |
 | `fuentes/` | Courier Prime y Libre Franklin en woff2, con su licencia |
 | `img/` | Imagen para compartir (1200 × 630), favicon e icono |

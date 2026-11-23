@@ -288,6 +288,38 @@ export const textos = {
   thEscanos: 'Eserlekuak',
   thPorEscano: 'Botoak eserlekuko',
   fuenteRes: (prueba, etiqueta, fuente) => (prueba ? 'Probako datuak: ' : '') + etiqueta + '. Iturria: ' + fuente + '. Eserlekuak hemen kalkulatzen dira, probintzia bakoitzeko botoekin.',
+  /* paso 9: frente a 2023. Los nombres de los partidos, en caso absoluto, como en el resto de frases */
+  lista: xs => xs.length < 2 ? xs.join('') : xs.slice(0, -1).join(', ') + ' eta ' + xs[xs.length - 1],
+  frente2023(gana, mas, pierde, menos, todos) {
+    if (!gana.length && !pierde.length) return todos ? 'Alderdi bakoitzak 2023ko hauteskunde orokorretan adina eserleku ditu.' : 'Alderatu daitezkeen alderdiek 2023an adina eserleku dituzte.';
+    const g = gana.length ? 'eserleku gehien irabazten ' + (gana.length > 1 ? 'dituztenak: ' : 'dituena: ') + this.lista(gana) + ' (+' + mas + ')' : '';
+    const p = pierde.length ? (g ? 'gehien galtzen ' + (pierde.length > 1 ? 'dutenak: ' : 'duena: ') : 'eserleku gehien galtzen ' + (pierde.length > 1 ? 'dituztenak: ' : 'dituena: ')) + this.lista(pierde) + ' (−' + menos + ')' : '';
+    return '2023ko hauteskunde orokorrekin alderatuta, ' + [g, p].filter(Boolean).join('; ') + '.' + (todos && !p ? ' Alderdi bakar batek ere ez du eserlekurik galtzen.' : todos && !g ? ' Alderdi bakar batek ere ez du eserlekurik irabazten.' : '');
+  },
+  tabla2023: 'Alderdi bakoitzaren eserlekuak 2023an eta azaroaren 29an',
+  th2023: '2023',
+  th29N: 'aza. 29',
+  thDif: 'Aldea',
+  nuevo: 'berria',
+  sinCifra: { nuevo: 'ez zen 2023an aurkeztu', falta: '2023an baliokiderik gabe', solo2023: 'azaroaren 29an baliokiderik gabe', dentro: ref => '2023an, ' + ref + ' hautagaitzaren barruan' },
+  notas2023: {
+    faSumar: 'Frente Amplio Sumar koalizioarekin alderatzen da; 2023an, Podemos ere koalizio horretan zegoen.',
+    faNuevo: 'Frente Amplio ez zen 2023an aurkeztu.',
+    sumar: '2023an, Podemos ere Sumar koalizioan zegoen.',
+    podemos: 'Podemos 2023an Sumar koalizioaren barruan aurkeztu zen: ez du alderatzeko zifra propiorik.',
+    aa: '2023an, Adelante Andalucía Cadizen bakarrik aurkeztu zen, eta ez zuen eserlekurik lortu.',
+    salf: 'SALF ez zen 2023an aurkeztu.' },
+  fuente2023: '2023ko eserlekuak: <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-18907">Hauteskunde Batzorde Zentralak</a> aldarrikatutakoak.',
+  frase2023(i, { e, e23, cambios, iguales, sin, antes }) {
+    const d = e - e23, b = c => '<b>' + c.nombre + '</b>', o = [];
+    if (!cambios.length && !sin.length && !antes.length) return e === 1 ? nongo(i) + ' eserlekua 2023an bezala alderdi berarentzat da.' : nongo(i) + ' ' + e + ' eserlekuak 2023an bezala banatzen dira.';
+    if (d) o.push(non(i) + ' ' + (e === 1 ? 'eserleku bat dago' : e + ' eserleku daude') + ', 2023an baino ' + (Math.abs(d) === 1 ? 'bat' : Math.abs(d)) + (d > 0 ? ' gehiago.' : ' gutxiago.'));
+    const cm = this.lista(cambios.map(c => b(c) + ' ' + c.signo)), ig = iguales.length ? this.lista(iguales) + ', aldaketarik gabe' : '';
+    if (cm || ig) o.push((d ? 'Alderdika: ' : non(i) + ', 2023rekin alderatuta: ') + [cm, ig].filter(Boolean).join('; ') + '.');
+    if (sin.length) o.push('2023rekin alderatu ezin direnak: ' + this.lista(sin.map(c => b(c) + ' (' + eserleku(c.n) + ')')) + '.');
+    if (antes.length) o.push('2023an, ' + this.lista(antes.map(c => b(c) + ' hautagaitzak ' + (c.n === 1 ? 'eserleku bat zuen' : c.n + ' eserleku zituen'))) + '.');
+    return o.join(' ');
+  },
   repartia: (i, n) => non(i) + ' ' + eserleku(n) + (n === 1 ? ' banatzen zen.' : ' banatzen ziren.'),
   ultimo: (ganador, rival, votos) => 'Azken eserlekua ' + ganador + ' alderdiarentzat izan zen. ' + rival + ' alderdiari ' + boto(votos) + (votos === 1 ? ' falta izan zitzaion' : ' falta izan zitzaizkion') + ' eserleku hori kentzeko.',
   unico: ganador => 'Eserlekua ' + ganador + ' alderdiarentzat izan zen.',

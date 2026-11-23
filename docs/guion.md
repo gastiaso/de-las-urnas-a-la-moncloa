@@ -471,6 +471,14 @@ Cada hexágono es un escaño y lleva el color del partido que lo ha ganado. Las 
 
 _Explicación propia._
 
+**Saber más: Cómo se compara con 2023**
+
+Entre unas elecciones y otras, los partidos cambian de nombre y de socios. Cada uno se compara con su candidatura de 2023. Si no la tenía, porque no se presentó o iba dentro de otra, sale sin cifra. Los casos dudosos llevan una nota.
+Dos provincias reparten distinto que en 2023: Cádiz pasa de 9 escaños a 8 y Madrid, de 37 a 38. El reparto entre provincias se ajusta a la población de cada una.
+Los escaños de 2023 son los definitivos. Los del 29N no lo son hasta el escrutinio general, que suma el voto llegado del extranjero.
+
+_Fuentes: Junta Electoral Central, resultados de las elecciones del 23 de julio de 2023 (BOE del 1 de septiembre de 2023); Real Decreto 806/2026, anexo; LOREG, arts. 75, 103 y 162._
+
 **Saber más: Provisional y oficial**
 
 Lo que se conoce la noche electoral es un recuento provisional. El oficial lo hacen las juntas electorales cinco días después, y es entonces cuando se suma el voto llegado del extranjero.
@@ -593,5 +601,5 @@ El último paso. El recorrido termina cuando el Congreso elige presidente y el n
 
 # Recuento
 
-- Cajones «saber más»: 60 (3678 palabras).
+- Cajones «saber más»: 61 (3778 palabras).
 - Términos de glosario: 30.

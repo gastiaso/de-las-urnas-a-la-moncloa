@@ -956,6 +956,12 @@ en: Text only
 es: 9 · Qué ha pasado
 en: 9 · What happened
 
+es: Frente a 2023
+en: Compared with 2023
+
+es: <i class="lv"></i> 2023 <i class="le"></i> 29N
+en: <i class="lv"></i> 2023 <i class="le"></i> 29 Nov
+
 es: Cómo leer el mapa
 en: How to read the map
 
@@ -964,6 +970,21 @@ en: Each hexagon is a seat, in the colour of the party that won it. Big province
 
 es: Explicación propia.
 en: Own explanation.
+
+es: Cómo se compara con 2023
+en: How the comparison with 2023 works
+
+es: Entre unas elecciones y otras, los partidos cambian de nombre y de socios. Cada uno se compara con su candidatura de 2023. Si no la tenía, porque no se presentó o iba dentro de otra, sale sin cifra. Los casos dudosos llevan una nota.
+en: Between one election and the next, parties change their names and their partners. Each party is compared with its own candidacy in 2023. If it had none, because it did not stand or ran inside another one, it is shown without a figure. Doubtful cases carry a note.
+
+es: Dos provincias reparten distinto que en 2023: Cádiz pasa de 9 escaños a 8 y Madrid, de 37 a 38. El reparto entre provincias se ajusta a la población de cada una.
+en: Two provinces elect a different number of seats from 2023: Cádiz goes from 9 to 8 and Madrid from 37 to 38. The share-out between provinces follows the population of each one.
+
+es: Los escaños de 2023 son los definitivos. Los del 29N no lo son hasta el escrutinio general, que suma el voto llegado del extranjero.
+en: The 2023 seats are final. Those of 29 November are not final until the general count, which adds the votes cast from abroad.
+
+es: Fuentes: Junta Electoral Central, resultados de las elecciones del 23 de julio de 2023 ([BOE del 1 de septiembre de 2023](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-18907)); Real Decreto 806/2026, anexo; LOREG, arts. 75, 103 y 162.
+en: Sources: Central Electoral Board, results of the election of 23 July 2023 ([official gazette, BOE, of 1 September 2023](https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-18907)); Royal Decree 806/2026, annex; LOREG, arts. 75, 103 and 162.
 
 es: Provisional y oficial
 en: Provisional and official

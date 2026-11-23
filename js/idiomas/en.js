@@ -208,6 +208,38 @@ export const textos = {
   thEscanos: 'Seats',
   thPorEscano: 'Votes per seat',
   fuenteRes: (prueba, etiqueta, fuente) => (prueba ? 'Test data: ' + etiqueta : may(etiqueta)) + '. Source: ' + fuente + '. The seats are calculated here from the votes in each province.',
+  /* paso 9: frente a 2023 */
+  lista: xs => xs.length < 2 ? xs.join('') : xs.slice(0, -1).join(', ') + ' and ' + xs[xs.length - 1],
+  frente2023(gana, mas, pierde, menos, todos) {
+    if (!gana.length && !pierde.length) return todos ? 'Every party has the same number of seats as at the 2023 general election.' : 'The parties that can be compared with 2023 have the same number of seats as then.';
+    const g = gana.length ? (gana.length > 1 ? 'the parties gaining most seats are ' : 'the party gaining most seats is ') + this.lista(gana) + ' (+' + mas + ')' : '';
+    const p = pierde.length ? (pierde.length > 1 ? (g ? 'those losing most are ' : 'the parties losing most seats are ') : (g ? 'the one losing most is ' : 'the party losing most seats is ')) + this.lista(pierde) + ' (−' + menos + ')' : '';
+    return 'Compared with the 2023 general election, ' + [g, p].filter(Boolean).join('; ') + '.' + (todos && !p ? ' No party loses seats.' : todos && !g ? ' No party gains seats.' : '');
+  },
+  tabla2023: 'Seats for each party in 2023 and on 29 November',
+  th2023: '2023',
+  th29N: '29 Nov',
+  thDif: 'Change',
+  nuevo: 'new',
+  sinCifra: { nuevo: 'did not stand in 2023', falta: 'no equivalent in 2023', solo2023: 'no equivalent on 29 November', dentro: ref => 'in 2023, part of ' + ref },
+  notas2023: {
+    faSumar: 'Frente Amplio is compared with Sumar, which in 2023 included Podemos.',
+    faNuevo: 'Frente Amplio did not stand in 2023.',
+    sumar: 'In 2023, Sumar included Podemos.',
+    podemos: 'In 2023, Podemos stood as part of Sumar: it has no figure of its own to compare with.',
+    aa: 'In 2023, Adelante Andalucía stood only in Cádiz, and won no seat.',
+    salf: 'SALF did not stand in 2023.' },
+  fuente2023: '2023 seats: as declared by the <a href="https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-18907">Central Electoral Board</a>.',
+  frase2023(i, { e, e23, cambios, iguales, sin, antes }) {
+    const nom = prov(i), d = e - e23, b = c => '<b>' + c.nombre + '</b>', o = [];
+    if (!cambios.length && !sin.length && !antes.length) return e === 1 ? 'In ' + nom + ', the seat goes to the same party as in 2023.' : 'In ' + nom + ', the ' + e + ' seats are shared out as in 2023.';
+    if (d) o.push('There ' + (e === 1 ? 'is ' : 'are ') + escanos(e) + ' in ' + nom + ', ' + (Math.abs(d) === 1 ? 'one' : Math.abs(d)) + (d > 0 ? ' more' : ' fewer') + ' than in 2023.');
+    const cm = this.lista(cambios.map(c => b(c) + ' ' + c.signo)), ig = iguales.length ? this.lista(iguales) + ' unchanged' : '';
+    if (cm || ig) o.push((d ? 'By party: ' : 'In ' + nom + ', compared with 2023: ') + [cm, ig].filter(Boolean).join('; ') + '.');
+    if (sin.length) o.push('Cannot be compared with 2023: ' + this.lista(sin.map(c => b(c) + ' (' + escanos(c.n) + ')')) + '.');
+    if (antes.length) o.push('In 2023, ' + this.lista(antes.map(c => b(c) + ' had ' + escanos(c.n))) + '.');
+    return o.join(' ');
+  },
   repartia: (i, n) => 'There ' + (n === 1 ? 'was ' : 'were ') + escanos(n) + ' to share out in ' + prov(i) + '.',
   ultimo: (ganador, rival, votos) => 'The last seat went to ' + ganador + '. ' + rival + ' fell ' + miles(votos) + ' votes short of taking it.',
   unico: ganador => 'The seat went to ' + ganador + '.',

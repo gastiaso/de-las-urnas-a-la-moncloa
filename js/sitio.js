@@ -211,6 +211,7 @@ C.sincroniza();
 // La frase de cada paso está en js/textos.js (T.frase); aquí se calculan los datos que necesita.
 function frase(k) {
   const i = C.st.prov, n = PROV[i][1];
+  if (k === 9) return C.R ? T.frase2023(i, C.R.frente2023(i)) : '';   // fase 2: tu provincia frente a 2023
   // con los cinco partidos inventados del paso 2: cuántos entran en tu provincia y en las dos de los extremos
   const entran = e => Object.values(dhondt(e).seats).filter(x => x > 0).length;
   // fase 2: el partido que se llevó el primer escaño de tu provincia

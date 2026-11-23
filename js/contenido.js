@@ -4,6 +4,7 @@ import { PROV, PROV_INICIAL, POB, PART, CONGRESO_2023, COLOR_PARTIDO } from './d
 import { T } from './textos.js';
 import { dhondt, reparto } from './dhondt.js';
 import { RES } from './resultados.js';
+import { empareja, compara, escanos2023, extremos, resumen, signo } from './equivalencias.js';
 
 const $ = (s, r = document) => r.querySelector(s);
 // Los textos y la forma de escribir números y provincias, en el idioma de la página (js/textos.js).
@@ -319,6 +320,19 @@ if (FASE2) {
   }
   $('#t9').innerHTML = '<table><tr><th>' + T.partido + '</th><th>' + T.thVotos + '</th><th>' + T.thEscanos + '</th></tr>' + orden.filter(q => q.esc > 0).map(q => '<tr><td>' + pt(q) + q.nombre + '</td><td>' + pct(q.votos / val) + '</td><td>' + q.esc + '</td></tr>').join('') + '</table>';
   $('#f9').textContent = T.fuenteRes(RES.prueba, etiqueta, T.dato(RES.fuente));
+  /* 9 · frente a 2023: los escaños de cada partido frente a los del 23J, con las parejas de js/equivalencias.js */
+  const par = empareja(R.partidos), nac = compara(R.partidos, par, Object.fromEntries(R.partidos.map(q => [q.id, q.esc])), escanos2023().esc);
+  const x9 = extremos(nac), raya = '—';
+  const sinCifra = f => f.tipo === 'dentro' ? T.sinCifra.dentro(f.ref) : T.sinCifra[f.tipo] || T.sinCifra.falta, nota = f => (f.nota && T.notas2023[f.nota]) || '';
+  $('#c9').textContent = T.frente2023(x9.gana, x9.mas, x9.pierde, x9.menos, x9.todos);
+  const tope9 = Math.max(...nac.map(f => Math.max(f.antes || 0, f.ahora || 0))), ancho = n => ((n || 0) / tope9 * 100).toFixed(1) + '%';
+  $('#g9').innerHTML = nac.map(f => '<li class="' + (f.dif === null ? 'sin' : '') + '"><span class="gn">' + pt(f) + f.nombre + (nota(f) ? '*' : '') + '</span><span class="gb"><i class="gv" style="width:' + ancho(f.antes) + '"></i><i class="ge" style="width:' + ancho(f.ahora) + '"></i></span>'
+    + '<span class="gx">' + (f.antes ?? raya) + '<br>' + (f.ahora ?? raya) + '</span><span class="gd">' + (f.dif !== null ? signo(f.dif) : f.tipo === 'nuevo' ? T.nuevo : raya) + '</span></li>').join('');
+  $('#t9c').innerHTML = '<table><caption>' + T.tabla2023 + '</caption><tr><th>' + T.partido + '</th><th>' + T.th2023 + '</th><th>' + T.th29N + '</th><th>' + T.thDif + '</th></tr>'
+    + nac.map(f => '<tr><td>' + f.nombre + '</td><td>' + (f.antes ?? raya) + '</td><td>' + (f.ahora ?? raya) + '</td><td>' + (f.dif === null ? nota(f) || sinCifra(f) : signo(f.dif) + (nota(f) ? '. ' + nota(f) : '')) + '</td></tr>').join('') + '</table>';
+  $('#n9').innerHTML = [...nac.filter(nota).map(f => '* ' + nota(f)), ...nac.filter(f => f.dif === null && f.tipo !== 'nuevo' && !nota(f)).map(f => f.nombre + ': ' + sinCifra(f) + '.'), T.fuente2023].join(' ');
+  // La frase de «Tu voto» del paso 9 (T.frase2023): qué cambia en la provincia i frente a 2023.
+  R.frente2023 = i => { const p = R.prov[i], r = escanos2023(PROV[i][0]); return resumen(compara(R.partidos, par, p.rep.seats, r.esc), p.e, r.e); };
   /* 11 */
   const sin = R.partidos.reduce((a, q) => a + q.perdidos, 0), otros = RES.prov.reduce((a, p) => a + p.otros, 0);
   $('#r11').textContent = T.votosYEscanos;
