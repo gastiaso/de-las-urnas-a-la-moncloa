@@ -198,6 +198,9 @@ en: That decree presented it as a brake on Congress becoming too fragmented. And
 es: La regla lleva el nombre de Victor D'Hondt (1841-1901), profesor de Derecho civil en la Universidad de Gante. La propuso en un libro de 1882. Bélgica la adoptó en 1899 y la estrenó en las elecciones de 1900.
 en: The method is named after Victor D'Hondt (1841-1901), a professor of civil law at Ghent University. He proposed it in an 1882 book. Belgium adopted it in 1899 and first used it in the 1900 elections.
 
+es: En un folleto de 1878 había defendido otro sistema. Él mismo cuenta que cambió de idea por las críticas de un abogado de Gante.
+en: In an 1878 pamphlet he had argued for a different system. He says himself that he changed his mind after criticism from a Ghent lawyer.
+
 es: Fuentes: Real Decreto-ley 20/1977, de 18 de marzo, sobre Normas Electorales: preámbulo y arts. 19 y 20; V. D'Hondt, <i>Système pratique et raisonné de représentation proportionnelle</i> (1882); G. Beatse, en <i>Liber memorialis</i> de la Universidad de Gante, t. I (1913), pp. 428-429; F. Dhondt, <i>Seqüência</i>, n.º 86 (2020).
 en: Sources: Royal Decree-Law 20/1977 of 18 March on electoral rules: preamble and arts. 19 and 20; V. D'Hondt, <i>Système pratique et raisonné de représentation proportionnelle</i> (1882); G. Beatse, in Ghent University's <i>Liber memorialis</i>, vol. I (1913), pp. 428-429; F. Dhondt, <i>Seqüência</i>, no. 86 (2020).
 

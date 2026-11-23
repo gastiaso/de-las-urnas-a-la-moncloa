@@ -197,6 +197,9 @@ eu: Dekretu hark Kongresua gehiegi zatituta ez geratzeko balazta gisa aurkezten 
 es: La regla lleva el nombre de Victor D'Hondt (1841-1901), profesor de Derecho civil en la Universidad de Gante. La propuso en un libro de 1882. Bélgica la adoptó en 1899 y la estrenó en las elecciones de 1900.
 eu: Legeak Victor D'Hondten (1841-1901) izena darama; Genteko Unibertsitateko Zuzenbide Zibileko irakaslea zen. 1882ko liburu batean proposatu zuen. Belgikak 1899an hartu zuen, eta 1900eko hauteskundeetan erabili zuen lehen aldiz.
 
+es: En un folleto de 1878 había defendido otro sistema. Él mismo cuenta que cambió de idea por las críticas de un abogado de Gante.
+eu: 1878ko liburuxka batean beste sistema bat defendatu zuen. Berak kontatzen duenez, Genteko abokatu baten kritikengatik aldatu zuen iritziz.
+
 es: Fuentes: Real Decreto-ley 20/1977, de 18 de marzo, sobre Normas Electorales: preámbulo y arts. 19 y 20; V. D'Hondt, <i>Système pratique et raisonné de représentation proportionnelle</i> (1882); G. Beatse, en <i>Liber memorialis</i> de la Universidad de Gante, t. I (1913), pp. 428-429; F. Dhondt, <i>Seqüência</i>, n.º 86 (2020).
 eu: Iturriak: 20/1977 Errege Lege Dekretua, martxoaren 18koa, Hauteskunde Arauei buruzkoa: hitzaurrea eta 19. eta 20. art.; V. D'Hondt, <i>Système pratique et raisonné de représentation proportionnelle</i> (1882); G. Beatse, Genteko Unibertsitateko <i>Liber memorialis</i>, I. liburukia (1913), 428-429 or.; F. Dhondt, <i>Seqüência</i>, 86. zk. (2020).
 
