@@ -29,7 +29,7 @@ export const EQUIV = {
   PNV: { ref: 'PNV', tipo: 'igual' },
   BNG: { ref: 'BNG', tipo: 'igual' },
   CC: { ref: 'CC', tipo: 'igual' },
-  UPN: { ref: 'UPN', tipo: 'igual' },       // si el 29N va con el PP en Navarra (UPN-PP, sin decidir: F04b), pasarlo a 'cambio' con nota
+  UPN: { ref: 'UPN', tipo: 'igual' },       // el 29N, UPN-PP cuenta como PP (datos/siglas.csv): sin votos propios, UPN sale «sin equivalente el 29N»
   FA: { a: { ref: 'SUMAR', tipo: 'cambio', nota: 'faSumar' }, b: { tipo: 'nuevo', nota: 'faNuevo' } }[FA_FRENTE_A_SUMAR],
   // Para los datos de prueba del 23J. El 29N no se espera ninguna candidatura con este id (datos/siglas.csv, en cotejo-29N);
   // si la hubiera, no sería la coalición de 2023: revisar esta línea antes de publicar.

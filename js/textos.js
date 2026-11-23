@@ -13,9 +13,9 @@ const faltan = n => (n === 1 ? 'falta ' : 'faltan ') + sies(n);
 const may = s => s.charAt(0).toUpperCase() + s.slice(1);
 
 // Partidos que se nombran con artículo, por el nombre que llevan en js/resultados.js (m: masculino; f: femenino). Los demás
-// van sin él: «Vox», «Sumar», «EH Bildu», «Junts», «Compromís». Cada idioma pone su artículo y sus contracciones.
-// Un partido nuevo que lleve artículo («la CUP») se añade aquí y vale para todos los idiomas.
-export const ARTICULO = { PP: 'm', PSOE: 'm', PNV: 'm', BNG: 'm', 'Frente Amplio': 'm' };
+// van sin él: «Vox», «Sumar», «EH Bildu», «Junts», «Compromís», «Geroa Bai», «Teruel Existe», «Soria ¡Ya!». Cada idioma pone su
+// artículo y sus contracciones. Un partido nuevo que lleve artículo («la CUP») se añade aquí y vale para todos los idiomas.
+export const ARTICULO = { PP: 'm', PSOE: 'm', PNV: 'm', BNG: 'm', 'Frente Amplio': 'm', 'Unidad del Pueblo Canario': 'f' };
 // p: nombre del partido; b: en negrita (el artículo queda fuera de la negrita)
 const elP = (p, b) => (ARTICULO[p] ? (ARTICULO[p] === 'f' ? 'la ' : 'el ') : '') + (b ? '<b>' + p + '</b>' : p);   // «el PP», «Vox»
 const alP = p => ARTICULO[p] === 'm' ? 'al ' + p : 'a ' + elP(p);      // «al PSOE», «a Sumar»

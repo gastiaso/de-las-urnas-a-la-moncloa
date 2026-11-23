@@ -27,7 +27,9 @@ NEUTRO = '#C9C1B4'   # Senado: candidaturas que no están en META (una agrupaci�
 # Orden de izquierda a derecha del hemiciclo y color de cada partido. Orden y colores son provisionales.
 META = [('BILDU', 'EH Bildu', '#7C9440', '#fff'), ('ERC', 'ERC', '#D9A62E', TINTA), ('AA', 'Adelante Andalucía', '#3E7C59', '#fff'),
         ('POD', 'Podemos', '#6B4A86', '#fff'), ('FA', 'Frente Amplio', '#B4527A', '#fff'), ('SUMAR', 'Sumar', '#B4527A', '#fff'),
-        ('BNG', 'BNG', '#86AFCF', TINTA), ('PSOE', 'PSOE', '#B5382E', '#fff'), ('PNV', 'PNV', '#2E6B4A', '#fff'),
+        ('COMP', 'Compromís', '#DE7740', TINTA), ('UPC', 'Unidad del Pueblo Canario', '#BC9FC6', TINTA),
+        ('BNG', 'BNG', '#86AFCF', TINTA), ('PSOE', 'PSOE', '#B5382E', '#fff'), ('GBAI', 'Geroa Bai', '#8CCFA4', TINTA), ('PNV', 'PNV', '#2E6B4A', '#fff'),
+        ('TE', 'Teruel Existe', '#D98A8F', TINTA), ('SY', 'Soria ¡Ya!', '#8C78C8', TINTA),
         ('CC', 'Coalición Canaria', '#E3CC6B', TINTA), ('JUNTS', 'Junts', '#2A9D97', '#fff'), ('UPN', 'UPN', '#8C5A3C', '#fff'),
         ('SALF', 'SALF', '#8A8378', '#fff'), ('PP', 'PP', '#2F5D8C', '#fff'), ('VOX', 'Vox', '#5F9E3A', '#fff')]
 HITOS = [('2026-11-29', '29 nov', 'Votación.'), ('2026-12-04', '4 dic', 'Escrutinio general: el recuento oficial.'),

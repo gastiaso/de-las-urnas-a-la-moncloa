@@ -28,6 +28,7 @@ CC,CC,
 CCa-1.ªCAN,CC,"2026, Santa Cruz de Tenerife: Coalición Canaria-Municipalistas Primero Canarias"
 U.P.N.,UPN,2023
 UPN,UPN,
+UPN-PP,PP,"2026, Navarra: UPN en coalición con el PP; cuenta como PP"
 SUMAR,SUMAR,2023
 SUMAR - ECP,SUMAR,2023
 SUMAR - COMPROMÍS,SUMAR,2023
@@ -42,8 +43,10 @@ FRENTE AMPLIO-FRONTE ZABALA,FA,"2026, Álava y Navarra: marca de Frente Amplio (
 COMUNS-FRONT AMPLI,FA,"2026, Cataluña: Comuns-Front Ampli (confirmar)"
 CHA-IU-MS-FRENTE AMPLIO,FA,"2026, Huesca y Zaragoza: Chunta Aragonesista-Frente Amplio Aragón (confirmar)"
 ARAMÉS-EU-MS,FA,"2026, Illes Balears: Aramés-Front Ampli (confirmar)"
-# 2026, SIN DECIDIR (F04). Si alguna llega al 3 % en su provincia, interior_a_csv.py se parará hasta que tenga fila:
-#   UPN-PP (Navarra, coalición UPN con PP): ¿PP, UPN o un id nuevo?
-#   COMPROMIS-EUPV-PODEM-ERPV (Compromís: Front Valencià): ¿FA, POD, un id nuevo u OTROS?
-#   "NC-BC, PODEMOS, IU, SUMAR" (Unidad del Pueblo Canario): ¿id nuevo u OTROS?
-#   GBAI (Geroa Bai), TERUEL EXISTE, SY (Soria ¡Ya!), ALHORA, D.R.G (Drago Canarias): ¿id nuevo u OTROS?
+COMPROMIS-EUPV-PODEM-ERPV,COMP,"2026, Comunitat Valenciana: Compromís"
+"NC-BC, PODEMOS, IU, SUMAR",UPC,"2026, Canarias: Unidad del Pueblo Canario"
+GBAI,GBAI,"2026, Navarra: Geroa Bai"
+TERUEL EXISTE,TE,"2026: Teruel Existe"
+SY,SY,"2026: Soria ¡Ya!"
+ALHORA,OTROS,"2026, Cataluña"
+D.R.G,OTROS,"2026, Canarias: Drago Canarias"

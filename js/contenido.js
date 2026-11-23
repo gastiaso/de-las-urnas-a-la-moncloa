@@ -383,7 +383,8 @@ if (FASE2) {
   $('#g11').innerHTML = orden.filter(q => q.esc > 0).map(q => '<li><span class="gn">' + pt(q) + q.nombre + '</span><span class="gb"><i class="gv" style="width:' + (q.votos / val / tope * 100).toFixed(1) + '%"></i><i class="ge" style="width:' + (q.esc / 350 / tope * 100).toFixed(1) + '%"></i></span><span class="gx">' + pct(q.votos / val) + '<br>' + pct(q.esc / 350) + '</span></li>').join('');
   $('#s11').textContent = T.sinEscano(sin + otros, pct((sin + otros) / val));
   /* 12 */
-  const corto = q => q.nombre.replace('Coalición Canaria', 'CC').replace('Adelante Andalucía', 'AA').replace('Frente Amplio', 'FA').replace('EH Bildu', 'Bildu');
+  const corto = q => q.nombre.replace('Coalición Canaria', 'CC').replace('Adelante Andalucía', 'AA').replace('Frente Amplio', 'FA').replace('EH Bildu', 'Bildu')
+    .replace('Unidad del Pueblo Canario', 'UPC').replace('Teruel Existe', 'TE');
   pintaPact2 = calculadora($('#calc12'), R.partidos.filter(q => q.esc > 0).map(q => [corto(q), q.nombre, q.esc, q.color]), st.pact2, (e, p) => G.setPact2(e, p), 'p12');
   /* 13 */
   // la fecha de hoy en la hora del lector (toISOString daría la de Greenwich: entre las 0:00 y la 1:00, la de ayer)
