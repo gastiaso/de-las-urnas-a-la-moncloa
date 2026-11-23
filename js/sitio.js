@@ -287,6 +287,12 @@ secs.forEach((s, i) => {
   if (i === 0) { elige.after(b); b.after(tocaMapa); }   // en la salida, el botón va con el desplegable
   else ($('.cuerpo', s) || $('.portada', s)).appendChild(b);
 });
+if (FASE2) {   // en la fase 2, la salida lleva primero un atajo a los resultados; el recorrido por las reglas queda de segundo
+  const b = document.createElement('button'); b.type = 'button'; b.className = 'sig';
+  b.textContent = T.irResultados + '9 · ' + T.titulos[9];
+  b.addEventListener('click', () => irA(9, true));
+  const s0 = $('.sig', salida); s0.classList.add('sec'); s0.before(b);
+}
 function lectura(v) {
   document.body.classList.toggle('lectura', v);
   const t = v ? T.verEscanos : T.verTexto;

@@ -145,6 +145,7 @@ export const textos = {
   fase2Cerrada: 'Steps 9 to 13 open on 30 November, with the results.',
   abre30N: '30 Nov',   // junto a cada paso cerrado, en el menú
   sigueMiVoto: 'Follow the vote: ',
+  irResultados: 'Go to the results: ',   // fase 2: atajo de la salida al paso 9
   siguiente: 'Next: ',
   verEscanos: 'Back to the 350 seats',
   verTexto: 'Text only',

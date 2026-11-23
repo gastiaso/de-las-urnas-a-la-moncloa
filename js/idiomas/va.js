@@ -186,6 +186,7 @@ export const textos = {
   fase2Cerrada: "Els passos 9 a 13 s'obrin el 30N, amb els resultats.",
   abre30N: '30N',   // junto a cada paso cerrado, en el menú
   sigueMiVoto: 'Seguix el meu vot: ',
+  irResultados: 'Anar als resultats: ',   // fase 2: atajo de la salida al paso 9
   siguiente: 'Següent: ',
   verEscanos: 'Tornar als 350 escons',
   verTexto: 'Veure només el text',

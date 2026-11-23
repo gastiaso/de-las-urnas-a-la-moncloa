@@ -114,6 +114,7 @@ a{color:var(--ink)}
 .sig{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;margin-top:24px;min-height:52px;border:1.5px solid var(--ink);background:var(--ink);color:var(--paper);font:inherit;font-size:15px;font-weight:700;text-align:left;padding:8px 14px;cursor:pointer}
 .sig::after{content:'↓';font-size:18px}
 .portada .sig{margin-top:10px;min-height:44px}.portada .sig+.nota{margin-top:8px}.lectura .portada .sig+.nota{display:none}
+.sig.sec{background:transparent;color:var(--ink)}.portada .sig+.sig{margin-top:8px}
 .lectura .sig{display:none}
 
 /* casilla 7: calendario por fases; cada fecha despliega qué pasa ese día y su fuente */

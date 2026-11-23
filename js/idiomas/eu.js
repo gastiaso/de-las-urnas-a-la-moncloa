@@ -223,6 +223,7 @@ export const textos = {
   fase2Cerrada: '9. urratsetik 13.era artekoak azaroaren 30ean irekiko dira, emaitzekin.',
   abre30N: 'aza. 30',   // junto a cada paso cerrado, en el menú
   sigueMiVoto: 'Jarraitu nire botoari: ',
+  irResultados: 'Emaitzetara joan: ',   // fase 2: atajo de la salida al paso 9
   siguiente: 'Hurrengoa: ',
   verEscanos: 'Itzuli 350 eserlekuetara',
   verTexto: 'Testua bakarrik ikusi',
