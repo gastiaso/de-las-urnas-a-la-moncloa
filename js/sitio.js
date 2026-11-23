@@ -151,7 +151,7 @@ const MAPAS = ['mapaSel', 'hab', 'senado', 'res'], DATO = ['hab', 'res'];
 const capaRot = document.createElement('div'); capaRot.className = 'rot-prov fuera'; capaRot.setAttribute('aria-hidden', 'true');
 capaRot.innerHTML = '<i hidden></i><span></span>';
 esc.insertBefore(capaRot, marca);
-const rotSel = $('span', capaRot), raya = $('i', capaRot);
+const rotSel = $('span', capaRot), rayaRot = $('i', capaRot);
 let claveRot = '', esperaRot = false, tRot = 0;
 const claveRotulo = () => { const est = estadoActual(); return MAPAS.includes(est) && k !== 1 && !enLectura() && !document.body.classList.contains('intro') ? est + sel() : ''; };
 function ponRotulo() {
@@ -165,8 +165,8 @@ function ponRotulo() {
   // dónde puede ir la etiqueta: dentro del escenario, debajo del rótulo de arriba y encima del pie
   const tR = rotulo.textContent ? rotulo.getBoundingClientRect().bottom - e.top : 0, tP = pieEsc.textContent && pieEsc.offsetHeight ? pieEsc.getBoundingClientRect().top - e.top : e.height;
   const zy0 = Math.max(4, tR + 4), zy1 = Math.min(e.height, tP) - 4;
-  // lo que no se tapa nunca: el hexágono dorado y la marca
-  const fijos = [], q = piezaTuya();
+  // lo que no se tapa nunca: el hexágono dorado, la marca y lo que cuelgue del rótulo de arriba (una leyenda, por ejemplo)
+  const fijos = [...rotulo.children].map(el => el.getBoundingClientRect()).filter(r => r.width).map(r => [r.left - e.left - 2, r.top - e.top - 2, r.right - e.left + 2, r.bottom - e.top + 2]), q = piezaTuya();
   if (q && q !== 'aparte') { const r = s * Math.max(q.cur.r * 1.12, 0.012) + 2, x = X(q.cur.x), y = Y(q.cur.y); fijos.push([x - r, y - r, x + r, y + r]); }
   // la marca señala un escaño de la provincia: una etiqueta pegada a ella también queda unida a la provincia
   let mc = null;
@@ -230,11 +230,11 @@ function ponRotulo() {
   if (!mejor) { capaRot.classList.add('fuera'); return; }
   escribe(mejor.dos);
   rotSel.style.left = mejor.x.toFixed(1) + 'px'; rotSel.style.top = mejor.y.toFixed(1) + 'px';
-  raya.hidden = !mejor.raya;
+  rayaRot.hidden = !mejor.raya;
   if (mejor.raya) {
     const [px, py, qx, qy, L] = mejor.raya;
-    raya.style.left = px.toFixed(1) + 'px'; raya.style.top = py.toFixed(1) + 'px'; raya.style.width = Math.max(0, L).toFixed(1) + 'px';
-    raya.style.transform = 'rotate(' + Math.atan2(qy - py, qx - px).toFixed(4) + 'rad)';
+    rayaRot.style.left = px.toFixed(1) + 'px'; rayaRot.style.top = py.toFixed(1) + 'px'; rayaRot.style.width = Math.max(0, L).toFixed(1) + 'px';
+    rayaRot.style.transform = 'rotate(' + Math.atan2(qy - py, qx - px).toFixed(4) + 'rad)';
   }
   capaRot.classList.remove('fuera');
 }
