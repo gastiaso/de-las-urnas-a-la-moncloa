@@ -43,6 +43,7 @@ esc.innerHTML = '<p class="rotulo"></p><svg viewBox="-0.52 -0.46 1.04 0.96"><g c
 document.body.appendChild(esc);
 const svgEl = $('svg', esc), gs = $$('.piezas > .p', esc), rotulo = $('.rotulo', esc), pieEsc = $('.pie-escenario', esc);
 const tuyo = $('.tuyo', esc), marca = $('.marca', esc), guia = $('.hemi-guia', esc);
+guia.insertAdjacentHTML('afterend', '<g class="hemi-rot"></g>'); const rotHemi = $('.hemi-rot', esc);   // rótulos de los pactos (ver rotulaHemi)
 piezas.forEach((q, i) => { q.el = gs[i]; q.hx = $('.hx', gs[i]); q.env = $('.env', gs[i]); q.cur = { x: 0, y: 0, r: 0, o: 0, a: 0, e: 0 }; q.el.dataset.p = q.p; q.env.style.opacity = 0; });
 // Bordes de provincia y de comunidad, costa y recuadro de Canarias (las rayas que calcula mapa.js), encima de las piezas.
 // Solo se ven en los mapas, y cuando las piezas ya han llegado a su sitio (ver aplica).
@@ -69,6 +70,21 @@ function bloques(estado, partidos, color) {
     base.forEach((b, i) => { if (b === p) sitio[i] = n++; });
   }));
   return { sitio, color: base.map(p => color(p)), partido: base.map(p => p[0]), cuenta };
+}
+/* Pactos: «Sí», «Abst.» y «No» bajo la base del hemiciclo, cada uno a la altura de su bloque, y, en escritorio, el nombre de
+   los partidos con 15 escaños o más en el centro de sus asientos. Así el hemiciclo no se lee solo por el color. */
+function rotulaHemi(b) {
+  if (!b) { rotHemi.innerHTML = ''; return; }
+  const xs = []; let ini = 0;
+  ['si', 'abs', 'no'].forEach(e => { const n = b.cuenta[e]; if (n) xs.push([e, HX + Math.cos(HM[Math.floor(ini + n / 2)].t) * HS * 0.62]); ini += n; });
+  for (let i = 1; i < xs.length; i++) xs[i][1] = Math.max(xs[i][1], xs[i - 1][1] + 0.15);   // que no se pisen
+  const sobra = xs.length ? xs[xs.length - 1][1] - 0.42 : 0; if (sobra > 0) xs.forEach(x => { x[1] -= sobra; });
+  let h = xs.map(([e, x]) => '<text class="r-bloque" x="' + x.toFixed(3) + '" y="' + (HY + 0.055).toFixed(3) + '">' + T.voto[e] + '</text>').join('');
+  if (innerWidth >= 900) {
+    const cen = {}; b.partido.forEach((p, i) => { const q = enHemi(b.sitio[i]), c = cen[p] = cen[p] || { x: 0, y: 0, n: 0 }; c.x += q.x; c.y += q.y; c.n++; });
+    h += Object.entries(cen).filter(([, c]) => c.n >= 15).map(([p, c]) => '<text class="r-partido" x="' + (c.x / c.n).toFixed(3) + '" y="' + (c.y / c.n + 0.008).toFixed(3) + '">' + p + '</text>').join('');
+  }
+  rotHemi.innerHTML = h;
 }
 
 // destino de cada pieza: posición (x, y), radio r, opacidad o, giro a, sobre e (1 = sobre, 0 = hexágono) y color f
@@ -136,7 +152,7 @@ const textoMarca = () => {
 function ponMarca() {
   const q = piezaTuya();
   if (!q) { tuyo.setAttribute('opacity', 0); marca.hidden = true; return; }
-  const c = q === 'aparte' ? { x: HX, y: HY + 0.13, r: 0.022, o: 1 } : q.cur;
+  const c = q === 'aparte' ? { x: HX, y: HY + 0.2, r: 0.022, o: 1 } : q.cur;   // aparte: debajo de los rótulos de los bloques
   const r = q === 'aparte' ? c.r : Math.max(c.r * 1.12, 0.012);
   tuyo.setAttribute('transform', 'translate(' + c.x.toFixed(4) + ' ' + c.y.toFixed(4) + ') scale(' + r.toFixed(5) + ')');
   tuyo.setAttribute('opacity', (q === 'aparte' ? 1 : c.o).toFixed(2));
@@ -162,6 +178,8 @@ function aplica(suave, dur0) {
   const llega = dur ? dur + Math.max(...piezas.map(q => q.ret)) : 0;   // ms hasta que la última pieza está en su sitio
   [[bordesC, ['mapaSel', 'hab', 'res'].includes(est)], [bordesS, est === 'senado']].forEach(([b, v]) => { b.style.transitionDelay = v && llega ? Math.max(0, llega - 200) + 'ms' : '0ms'; b.classList.toggle('ve', v); });
   esc.dataset.est = est;   // en los mapas, el contorno de cada hexágono se aclara para que se lean los bordes (css/estilo.css)
+  rotulaHemi(est === 'pacto' ? (k === 12 ? pacto12 : pacto6) : null);
+  rotHemi.style.transitionDelay = est === 'pacto' && llega ? Math.max(0, llega - 200) + 'ms' : '0ms'; rotHemi.classList.toggle('ve', est === 'pacto');
   cancelAnimationFrame(anim);
   const paso = now => {
     let sigue = false;

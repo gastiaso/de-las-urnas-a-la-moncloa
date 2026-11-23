@@ -96,6 +96,7 @@ fieldset input{width:22px;height:22px;accent-color:var(--teja);margin:0}
 .ver{border-top:1.5px solid var(--ink);padding:5px 0;font-size:14px}
 .ver small{display:block;font-size:12px;font-weight:700}
 .ver b.ok{color:var(--teja2)}
+.ver b::before{content:'✗ ';content:'✗ ' / ''}.ver b.ok::before{content:'✓ ';content:'✓ ' / ''}   /* «Sale» y «No sale» no se distinguen solo por el color */
 .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin:6px 0}
 .grid button{height:44px;padding:0 2px;border:1.5px solid var(--ink);border-radius:22px;font:inherit;font-size:12px;font-weight:700;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.15}
 .grid button b{font-family:'Libre Franklin',system-ui,sans-serif;font-weight:800;font-size:13px}
@@ -202,6 +203,12 @@ main{position:relative;z-index:1}
 .escenario .tuyo circle{fill:var(--ink)}
 .escenario .raya176{stroke:var(--ink);stroke-width:.003;stroke-dasharray:.01 .007;fill:none}
 .escenario .t176{font:700 .022px 'Courier Prime',monospace;fill:var(--ink);text-anchor:middle}
+/* pactos: «Sí», «Abst.» y «No» bajo el hemiciclo y, en escritorio, el nombre de los partidos grandes, con un halo del color del fondo */
+.escenario .hemi-rot{pointer-events:none;opacity:0;transition:opacity .2s}.escenario .hemi-rot.ve{opacity:1;transition-duration:.4s}
+.escenario .hemi-rot text{font-family:'Libre Franklin',system-ui,sans-serif;font-weight:800;text-anchor:middle;fill:var(--ink);paint-order:stroke;stroke-linejoin:round}
+.escenario .r-bloque{font-size:.026px;text-transform:uppercase;letter-spacing:.06em;stroke:var(--ground);stroke-width:.006px}
+.escenario .r-partido{font-size:.024px;stroke:var(--paper);stroke-width:.009px}
+@media (max-width:899px){.escenario .r-bloque{font-size:.042px;stroke-width:.008px}}
 .rotulo{position:absolute;left:14px;top:10px;right:14px;margin:0;font-family:'Libre Franklin',system-ui,sans-serif;font-weight:800;font-size:clamp(15px,2.1vw,25px);line-height:1.12;pointer-events:none}
 .rotulo small{display:block;font-family:'Courier Prime',monospace;font-weight:700;font-size:13px;color:var(--sec);margin-top:3px}
 .rotulo .esc-hab{display:flex;align-items:center;gap:0;margin-top:5px;font-family:'Courier Prime',monospace;font-weight:700;font-size:12.5px;color:var(--sec)}
