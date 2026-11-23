@@ -180,8 +180,10 @@ export const ES = {
   /* fase 2: los resultados */
   avisoPrueba: etiqueta => 'Vista previa con datos de prueba: ' + etiqueta + '. No son los resultados del 29N.',
   masEscanos: (nombre, n, pctVotos, absoluta) => may(elP(nombre)) + ' es el partido con más escaños: ' + n + ', con el ' + pctVotos + ' de los votos. ' + (absoluta ? 'Supera los 176 de la mayoría absoluta.' : 'Ningún partido llega solo a los 176 de la mayoría absoluta.'),
-  participacion: p => ' Votó el ' + p + ' del censo.',
-  // tras masEscanos (y participacion), mientras los resultados sean provisionales
+  // provisional: va justo después de provisionalRes, que dice que el voto llegado del extranjero se suma el 4 de diciembre;
+  // el recuento de la noche no lo lleva (ni su censo), y «ese voto» es ese
+  participacion: (p, provisional) => ' Votó el ' + p + ' del censo' + (provisional ? ', sin contar aún ese voto.' : '.'),
+  // tras masEscanos, mientras los resultados sean provisionales (y antes de participacion)
   provisionalRes: ' Son resultados provisionales hasta el escrutinio general del 4 de diciembre, que suma el voto llegado del extranjero.',
   thVotos: 'Votos',
   thEscanos: 'Escaños',

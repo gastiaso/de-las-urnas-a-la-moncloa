@@ -347,11 +347,12 @@ if (FASE2) {
   const g = orden[0];
   $('#r9').textContent = T.masEscanos(g.nombre, g.esc, pct(g.votos / val), g.esc >= 176);
   // Participación, si el CSV traía censo y votantes (herramientas/resultados.py las pasa solo cuando vienen en todas las filas).
+  // Mientras sea provisional, primero T.provisionalRes (el voto del extranjero se suma el 4-dic) y luego la participación, que no lo lleva.
+  if (PROVISIONAL) { $('#r9').textContent += T.provisionalRes; $('#n12').textContent = T.provisional12; $('#n12').hidden = false; }
   if (RES.prov.every(p => p.censo)) {
     const censo = RES.prov.reduce((x, p) => x + p.censo, 0), vot = RES.prov.reduce((x, p) => x + p.votantes, 0);
-    $('#r9').textContent += T.participacion(pct(vot / censo));
+    $('#r9').textContent += T.participacion(pct(vot / censo), PROVISIONAL);
   }
-  if (PROVISIONAL) { $('#r9').textContent += T.provisionalRes; $('#n12').textContent = T.provisional12; $('#n12').hidden = false; }
   $('#t9').innerHTML = '<table><tr><th>' + T.partido + '</th><th>' + T.thVotos + '</th><th>' + T.thEscanos + '</th></tr>' + orden.filter(q => q.esc > 0).map(q => '<tr><td>' + pt(q) + q.nombre + '</td><td>' + pct(q.votos / val) + '</td><td>' + q.esc + '</td></tr>').join('') + '</table>';
   $('#f9').textContent = T.fuenteRes(RES.prueba, etiqueta, T.dato(RES.fuente));
   /* 9 · frente a 2023: los escaños de cada partido frente a los del 23J, con las parejas de js/equivalencias.js */

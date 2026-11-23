@@ -300,7 +300,7 @@ export const textos = {
   /* fase 2: los resultados */
   avisoPrueba: etiqueta => 'Aurrebista, probako datuekin: ' + etiqueta + '. Ez dira azaroaren 29ko emaitzak.',
   masEscanos: (nombre, n, pctVotos, absoluta) => nombre + ' da eserleku gehien dituen alderdia: ' + n + ' eserleku, botoen ' + pctVotos + ' lortuta. ' + (absoluta ? 'Gehiengo osoaren 176 eserlekuetara iristen da.' : 'Alderdi bakar bat ere ez da bere kabuz iristen gehiengo osoaren 176 eserlekuetara.'),
-  participacion: p => ' Parte-hartzea: erroldaren ' + p + '.',
+  participacion: (p, provisional) => ' Parte-hartzea: erroldaren ' + p + (provisional ? ', boto hori oraindik zenbatu gabe.' : '.'),
   provisionalRes: ' Behin-behineko emaitzak dira abenduaren 4ko zenbaketa orokorrera arte; orduan gehitzen da atzerritik iritsitako botoa.',
   thVotos: 'Botoak',
   thEscanos: 'Eserlekuak',

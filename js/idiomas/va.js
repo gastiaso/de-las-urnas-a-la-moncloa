@@ -266,7 +266,7 @@ export const textos = {
   /* fase 2: los resultados */
   avisoPrueba: etiqueta => 'Vista prèvia amb dades de prova: ' + etiqueta + '. No són els resultats del 29N.',
   masEscanos: (nombre, n, pctVotos, absoluta) => maj(elP(nombre)) + ' és el partit amb més escons: ' + n + ', amb ' + el(pctVotos) + ' dels vots. ' + (absoluta ? 'Supera els 176 de la majoria absoluta.' : 'Cap partit arriba a soles als 176 de la majoria absoluta.'),
-  participacion: p => ' Va votar ' + el(p) + ' del cens.',
+  participacion: (p, provisional) => ' Va votar ' + el(p) + ' del cens' + (provisional ? ', sense comptar encara eixe vot.' : '.'),
   provisionalRes: " Són resultats provisionals fins a l'escrutini general del 4 de desembre, que suma el vot arribat de l'estranger.",
   thVotos: 'Vots',
   thEscanos: 'Escons',

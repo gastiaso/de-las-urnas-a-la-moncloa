@@ -222,7 +222,7 @@ export const textos = {
   /* fase 2 */
   avisoPrueba: etiqueta => 'Preview with test data: ' + etiqueta + '. These are not the results of 29 November.',
   masEscanos: (nombre, n, pctVotos, absoluta) => may(theP(nombre)) + ' is the party with most seats: ' + n + ', with ' + pctVotos + ' of the vote. ' + (absoluta ? 'That is more than the 176 of an absolute majority.' : 'No party reaches the 176 of an absolute majority on its own.'),
-  participacion: p => ' Turnout was ' + p + ' of the electoral register.',
+  participacion: (p, provisional) => ' Turnout was ' + p + ' of the electoral register' + (provisional ? ', not yet counting those votes.' : '.'),
   provisionalRes: ' These are provisional results until the general count on 4 December, which adds the votes from abroad.',
   thVotos: 'Votes',
   thEscanos: 'Seats',

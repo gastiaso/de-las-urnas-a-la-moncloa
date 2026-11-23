@@ -79,7 +79,7 @@ function frases(t) {
     [50, 1, 1, [{ nombre: 'PP', signo: '−1' }, { nombre: 'PSOE', signo: '+1' }], [], [], []], [35, 8, 8, [], ['PSOE'], [], [{ nombre: 'Sumar', n: 1 }, { nombre: 'Nueva Canarias', n: 1 }]]])
     pon('frase2023', t.frase2023(i, { e, e23, cambios, iguales, sin: s, antes: a }));
   pon('avisoPrueba', t.avisoPrueba(t.dato('resultados del 23 de julio de 2023')));
-  pon('masEscanos', t.masEscanos('PP', 137, t.pct(0.3306), false)); pon('masEscanos (absoluta)', t.masEscanos('PP', 180, t.pct(0.41), true)); pon('participacion', t.participacion(t.pct(0.664)));
+  pon('masEscanos', t.masEscanos('PP', 137, t.pct(0.3306), false)); pon('masEscanos (absoluta)', t.masEscanos('PP', 180, t.pct(0.41), true)); pon('participacion', t.participacion(t.pct(0.664))); pon('participacion (provisional)', t.provisionalRes + t.participacion(t.pct(0.704), true));
   pon('fuenteRes', t.fuenteRes(true, t.dato('resultados del 23 de julio de 2023'), t.dato('Ministerio del Interior, escrutinio del 23J (datos reunidos en Porra Electoral)')));
   pon('fuenteRes', t.fuenteRes(false, t.dato('Escrutinio provisional del 29 de noviembre de 2026'), t.dato('Ministerio del Interior')));
   pon('fuenteRes (noche)', t.fuenteRes(false, t.dato('escrutinio provisional del 29 de noviembre de 2026, con el 99,9 % escrutado'), t.dato('Ministerio del Interior, escrutinio provisional')));

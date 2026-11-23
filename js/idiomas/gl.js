@@ -269,7 +269,7 @@ export const textos = {
   /* fase 2: los resultados */
   avisoPrueba: etiqueta => 'Vista previa con datos de proba: ' + etiqueta + '. Non son os resultados do 29N.',
   masEscanos: (nombre, n, pctVotos, absoluta) => mai(oP(nombre)) + ' é o partido con máis escanos: ' + n + ', co ' + pctVotos + ' dos votos. ' + (absoluta ? 'Supera os 176 da maioría absoluta.' : 'Ningún partido chega el só aos 176 da maioría absoluta.'),
-  participacion: p => ' Votou o ' + p + ' do censo.',
+  participacion: (p, provisional) => ' Votou o ' + p + ' do censo' + (provisional ? ', sen contar aínda ese voto.' : '.'),
   provisionalRes: ' Son resultados provisionais ata o escrutinio xeral do 4 de decembro, que suma o voto chegado do estranxeiro.',
   thVotos: 'Votos',
   thEscanos: 'Escanos',
