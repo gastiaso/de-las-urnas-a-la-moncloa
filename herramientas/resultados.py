@@ -16,11 +16,14 @@ Uso:
   python3 herramientas/resultados.py datos/resultados_29N.csv --abierta \
       --etiqueta "Escrutinio provisional del 29 de noviembre de 2026" --fuente "Ministerio del Interior" > js/resultados.js
   Con el escrutinio general (4-dic), además --general: la web deja de decir que los resultados son provisionales.
+  Con --senado datos/senado_29N.csv, también los senadores elegidos en las urnas (pasos 9 y 10). Formato y comprobaciones
+  en herramientas/senado.py: se para si no cuadran con el Real Decreto 806/2026. Su fuente, la de --fuente o --fuente-senado.
   Las etiquetas y fuentes que la web traduce están en la lista «dato» de cada js/idiomas/xx.js; otra cualquiera sale en castellano.
 """
 import argparse, csv, json, re, sys, pathlib
 
 TINTA = '#2B2118'
+NEUTRO = '#C9C1B4'   # Senado: candidaturas que no están en META (una agrupación de una sola isla, por ejemplo)
 # Orden de izquierda a derecha del hemiciclo y color de cada partido. Orden y colores son provisionales.
 META = [('BILDU', 'EH Bildu', '#7C9440', '#fff'), ('ERC', 'ERC', '#D9A62E', TINTA), ('AA', 'Adelante Andalucía', '#3E7C59', '#fff'),
         ('POD', 'Podemos', '#6B4A86', '#fff'), ('FA', 'Frente Amplio', '#B4527A', '#fff'), ('SUMAR', 'Sumar', '#B4527A', '#fff'),
@@ -36,6 +39,8 @@ a = argparse.ArgumentParser(); a.add_argument('csv'); a.add_argument('--escanos'
 a.add_argument('--etiqueta', default=''); a.add_argument('--fuente', default='')
 a.add_argument('--prueba', action='store_true'); a.add_argument('--abierta', action='store_true')
 a.add_argument('--general', action='store_true', help='escrutinio general (4-dic): los resultados dejan de ser provisionales')
+a.add_argument('--senado', help='CSV de senadores elegidos por circunscripción y partido (ver herramientas/senado.py)')
+a.add_argument('--fuente-senado', default='', help='fuente de los datos del Senado, si no es la misma que --fuente')
 o = a.parse_args()
 filas = list(csv.DictReader(open(o.csv, encoding='utf-8')))
 assert len(filas) == 52, 'Tiene que haber 52 circunscripciones'
@@ -73,7 +78,20 @@ if 'general' in o.etiqueta.lower() and not o.general:
 res = {'abierta': o.abierta, 'prueba': o.prueba, 'provisional': not o.general, 'etiqueta': o.etiqueta, 'fuente': o.fuente,
        'partidos': [{'id': p[0], 'nombre': p[1], 'color': p[2], 'tinta': p[3]} for p in partidos],
        'prov': prov, 'hitos': [{'f': h[0], 'r': h[1], 't': h[2]} for h in HITOS]}
+if o.senado:
+    # Senado: los partidos de META, en su orden y con su color; los demás, con su nombre y un color neutro, detrás.
+    import senado
+    S = senado.leer(o.senado, prueba=o.prueba)
+    for m in S['avisos']: print('AVISO (Senado) · ' + m, file=sys.stderr)
+    t = senado.total(S)
+    ids = [m[0] for m in META if m[0] in t] + [i for i, _ in t.most_common() if i not in [m[0] for m in META]]
+    sp = [dict(zip(('id', 'nombre', 'color', 'tinta'), next((m for m in META if m[0] == i), (i, i, NEUTRO, TINTA))), n=t[i]) for i in ids]
+    res['senado'] = {'fuente': o.fuente_senado or o.fuente, 'partidos': sp,
+                     'circ': [{'c': c['c'], 'p': c['p'], 'n': c['n'], 'r': [[ids.index(i), n] for i, n in sorted(c['r'].items(), key=lambda x: (-x[1], ids.index(x[0])))]}
+                              for c in S['circ']]}
+    print('Senado: %d senadores en %d circunscripciones (%s).' % (sum(t.values()), len(S['circ']), ', '.join('%s %d' % (p['id'], p['n']) for p in sp)), file=sys.stderr)
 print('// Generado con herramientas/resultados.py. No editar a mano: cambiar el CSV y volver a generar.')
 print('// «abierta» abre la fase 2 para todo el mundo; «prueba» avisa de que no son los resultados del 29N;')
-print('// «provisional» (hasta el escrutinio general del 4-dic) lo dice en los pasos 9, 10 y 12.')
+print('// «provisional» (hasta el escrutinio general del 4-dic) lo dice en los pasos 9, 10 y 12. «senado», si está: los senadores')
+print('// elegidos en las urnas (partidos y, en circ, cada circunscripción con su provincia p y [partido, electos]).')
 print('export const RES = ' + json.dumps(res, ensure_ascii=False, separators=(',', ':')) + ';')
