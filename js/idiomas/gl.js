@@ -204,6 +204,7 @@ export const textos = {
 
   /* paso 1 */
   provElige: (i, n) => suxeito(i, true) + ' ' + verbo(i, 'elixe', 'elixen') + ' ' + escanos(n) + ' dos 350.',
+  cambiaProv: (i, a, b) => 'Non votas ' + en(i) + '? ' + a + 'Cámbiaa aquí abaixo' + b + '.',   // recuadro del paso 1 sin provincia elegida
 
   /* paso 2: la apuesta y la tabla de divisiones */
   apuestaIntro: (i, n) => suxeito(i, true) + ' ' + verbo(i, 'reparte', 'reparten') + ' ' + escanos(n) + ' entre cinco partidos inventados. Cantos lle dás a cada un?',

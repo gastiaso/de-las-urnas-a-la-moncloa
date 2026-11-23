@@ -112,6 +112,8 @@ export const ES = {
 
   /* paso 1 */
   provElige: (i, n) => prov(i) + ' elige ' + escanos(n) + ' de los 350.',
+  // en el recuadro «Tu voto» del paso 1, si no se ha elegido provincia; a y b envuelven el enlace al desplegable
+  cambiaProv: (i, a, b) => '¿No votas en ' + prov(i) + '? ' + a + 'Cámbiala aquí debajo' + b + '.',
 
   /* paso 2: la apuesta y la tabla de divisiones */
   apuestaIntro: (i, n) => prov(i) + ' reparte ' + escanos(n) + ' entre cinco partidos inventados. ¿Cuántos le das a cada uno?',

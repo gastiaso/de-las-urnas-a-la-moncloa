@@ -234,6 +234,7 @@ secs.forEach(s => {
   const et = document.createElement('p'); et.className = 'estacion';
   et.innerHTML = ICONO[kk] + '<span>' + T.estacion(kk, ULTIMA) + '</span>';
   cu.insertBefore(et, h);
+  if (h.firstChild && h.firstChild.nodeType === 3) h.firstChild.data = h.firstChild.data.replace(/^\d+ · /, '');   // «1 · Qué se vota»: el número ya lo dice la línea de encima
   const tv = document.createElement('div'); tv.className = 'tuvoto'; tv.dataset.k = kk; h.after(tv);
 });
 let enviado = 0;   // paso de la calculadora a la que se ha llegado por un enlace sin haber elegido provincia (ver al final)
@@ -241,7 +242,10 @@ function pintaTuVoto() {
   if (!C) return;
   const sp = $('#provVoto'); if (sp) sp.value = C.st.prov;
   $$('.tuvoto').forEach(t => { const f = frase(+t.dataset.k); t.hidden = !f || (+t.dataset.k === enviado && !C.st.elegida); t.innerHTML = f ? '<span class="tv-et">' + T.tuVoto + '</span>' + f : ''; });
+  // paso 1: si no se ha elegido provincia, el recuadro lo dice y lleva al desplegable
+  const t1 = $('.tuvoto[data-k="1"]'); if (t1 && !t1.hidden && !C.st.elegida) t1.insertAdjacentHTML('beforeend', '<span class="tv-cambia">' + T.cambiaProv(C.st.prov, '<button type="button" class="enlace">', '</button>') + '</span>');
 }
+document.addEventListener('click', e => { if (e.target.closest('.tv-cambia .enlace')) { irA(1, false, $('#prov')); $('#prov').focus({ preventScroll: true }); } });
 /* salida: elegir dónde votas. Va justo debajo del título, para que se vea sin bajar nada más cerrar la portada. */
 const salida = $('.paso[data-k="0"] .portada');
 const elige = document.createElement('div'); elige.className = 'elige';
@@ -261,7 +265,7 @@ const irA = (kk, foco, dentro) => {   // dentro: un elemento del paso al que baj
   if (foco) { const t = $('h1, h2', s); t.tabIndex = -1; t.focus({ preventScroll: true }); }
 };
 secs.forEach(s => {
-  const kk = casilla(s), b = document.createElement('button'); b.type = 'button';
+  const kk = casilla(s), b = document.createElement('button'); b.type = 'button'; b.dataset.k = kk;
   b.innerHTML = '<b>' + (kk === 0 ? '·' : kk === 14 ? '·' : kk) + '</b><span>' + T.titulos[kk] + '</span>';
   b.addEventListener('click', () => { abreIndice(false); irA(kk, true); });
   indice.appendChild(b);
@@ -323,6 +327,7 @@ function mira(forzar) {
   let a = 0;
   secs.forEach(s => { if (s.getBoundingClientRect().top < innerHeight * 0.55) a = casilla(s); });
   $('#donde').textContent = T.donde(a, ULTIMA, enLectura()) + ' ▾';
+  $$('button[data-k]', indice).forEach(b => { if (+b.dataset.k === a) b.setAttribute('aria-current', 'step'); else b.removeAttribute('aria-current'); });   // el menú marca dónde estás
   if (a !== k || forzar) { k = a; if (listo) aplica(true); pintaTuVoto(); }
 }
 let pend = false;

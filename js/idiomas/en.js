@@ -161,6 +161,7 @@ export const textos = {
 
   /* paso 1 */
   provElige: (i, n) => 'Voters in ' + prov(i) + ' elect ' + n + ' of the 350 deputies.',
+  cambiaProv: (i, a, b) => 'The vote being followed is cast in ' + prov(i) + '. ' + a + 'Choose another province below' + b + '.',   // recuadro del paso 1 sin provincia elegida
 
   /* paso 2 */
   apuestaIntro: (i, n) => 'In ' + prov(i) + ' there ' + (n === 1 ? 'is ' : 'are ') + escanos(n) + ' to share out among five made-up parties. How many would you give each one?',

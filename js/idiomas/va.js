@@ -202,6 +202,7 @@ export const textos = {
 
   /* paso 1 */
   provElige: (i, n) => Prov(i) + verb(i, ' elegix ', ' elegixen ') + escons(n) + ' dels 350.',
+  cambiaProv: (i, a, b) => 'No votes ' + aProv(i) + '? ' + a + 'Canvia-la ací davall' + b + '.',   // recuadro del paso 1 sin provincia elegida
 
   /* paso 2: la apuesta y la tabla de divisiones */
   apuestaIntro: (i, n) => Prov(i) + verb(i, ' repartix ', ' repartixen ') + escons(n) + ' entre cinc partits inventats. Quants en dones a cadascun?',

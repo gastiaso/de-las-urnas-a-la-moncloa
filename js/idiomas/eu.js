@@ -239,6 +239,7 @@ export const textos = {
 
   /* paso 1 */
   provElige: (i, n) => nork(i) + ' 350 eserlekuetatik ' + n + ' aukeratzen ' + (PLURALA.includes(i) ? (n === 1 ? 'dute' : 'dituzte') : (n === 1 ? 'du' : 'ditu')) + '.',
+  cambiaProv: (i, a, b) => 'Ez duzu ' + non(i) + ' bozkatzen? ' + a + 'Aldatu hemen behean' + b + '.',   // recuadro del paso 1 sin provincia elegida
 
   /* paso 2: la apuesta y la tabla de divisiones */
   apuestaIntro: (i, n) => non(i) + ' ' + eserleku(n) + (n === 1 ? ' banatzen da' : ' banatzen dira') + ' asmatutako bost alderdiren artean. Zenbat emango dizkiozu bakoitzari?',
