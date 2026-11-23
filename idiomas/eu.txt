@@ -194,8 +194,14 @@ eu: D'Hondt legea 1977tik erabiltzen da. Urte hartako martxoko hauteskunde-araue
 es: Aquel decreto la presentaba como un freno a que el Congreso quedara demasiado fragmentado. Y el reparto de entonces era otro: Madrid elegía 32 diputados, Barcelona 33 y Soria 3.
 eu: Dekretu hark Kongresua gehiegi zatituta ez geratzeko balazta gisa aurkezten zuen. Eta orduko banaketa bestelakoa zen: Madrilek 32 diputatu aukeratzen zituen; Bartzelonak, 33, eta Soriak, 3.
 
-es: Fuente: Real Decreto-ley 20/1977, de 18 de marzo, sobre Normas Electorales: preámbulo y arts. 19 y 20.
-eu: Iturria: 20/1977 Errege Lege Dekretua, martxoaren 18koa, Hauteskunde Arauei buruzkoa: hitzaurrea eta 19. eta 20. art.
+es: La regla lleva el nombre de Victor D'Hondt (1841-1901), profesor de Derecho civil en la Universidad de Gante. La propuso en un libro de 1882. Bélgica la adoptó en 1899 y la estrenó en las elecciones de 1900.
+eu: Legeak Victor D'Hondten (1841-1901) izena darama; Genteko Unibertsitateko Zuzenbide Zibileko irakaslea zen. 1882ko liburu batean proposatu zuen. Belgikak 1899an hartu zuen, eta 1900eko hauteskundeetan erabili zuen lehen aldiz.
+
+es: En un folleto de 1878 había defendido otro sistema. Él mismo cuenta que cambió de idea por las críticas de un abogado de Gante.
+eu: 1878ko liburuxka batean beste sistema bat defendatu zuen. Berak kontatzen duenez, Genteko abokatu baten kritikengatik aldatu zuen iritziz.
+
+es: Fuentes: Real Decreto-ley 20/1977, de 18 de marzo, sobre Normas Electorales: preámbulo y arts. 19 y 20; V. D'Hondt, <i>Système pratique et raisonné de représentation proportionnelle</i> (1882); G. Beatse, en <i>Liber memorialis</i> de la Universidad de Gante, t. I (1913), pp. 428-429; F. Dhondt, <i>Seqüência</i>, n.º 86 (2020).
+eu: Iturriak: 20/1977 Errege Lege Dekretua, martxoaren 18koa, Hauteskunde Arauei buruzkoa: hitzaurrea eta 19. eta 20. art.; V. D'Hondt, <i>Système pratique et raisonné de représentation proportionnelle</i> (1882); G. Beatse, Genteko Unibertsitateko <i>Liber memorialis</i>, I. liburukia (1913), 428-429 or.; F. Dhondt, <i>Seqüência</i>, 86. zk. (2020).
 
 es: La barrera del 3 %
 eu: % 3ko langa
@@ -438,14 +444,20 @@ eu: Bozkatzen ez diren senatariak
 es: Además de los elegidos en las urnas, cada parlamento autonómico designa un senador, más otro por cada millón de habitantes de su comunidad. Son los [[designacion|senadores por designación]].
 eu: Hautetsontzietan aukeratutakoez gain, autonomia-erkidegoko parlamentu bakoitzak senatari bat izendatzen du, eta beste bat erkidegoko milioi bat biztanleko. Horiek dira [[designacion|izendapen bidezko senatariak]].
 
+es: En la legislatura de 2023 a 2026 fueron 58, y el Senado tuvo 266 miembros. El número se recalcula con cada elección general, con la población oficial de ese momento.
+eu: 2023tik 2026ra bitarteko legealdian 58 izan ziren, eta Senatuak 266 kide izan zituen. Kopurua hauteskunde orokor bakoitzean kalkulatzen da berriro, une horretako biztanleria ofizialarekin.
+
 es: No se eligen el 29N, pero cuentan igual que los demás: las mayorías del Senado se calculan sobre todos los senadores, no solo sobre los 209 que salen de las urnas.
 eu: Ez dira azaroaren 29an aukeratzen, baina besteek bezainbeste balio dute: Senatuko gehiengoak senatari guztien gainean kalkulatzen dira, ez bakarrik hautetsontzietatik ateratzen diren 209en gainean.
+
+es: Tras las elecciones, cada parlamento autonómico confirma a los suyos o los designa de nuevo, según sus propias normas.
+eu: Hauteskundeen ondoren, autonomia-erkidegoko parlamentu bakoitzak bereak berresten ditu edo berriro izendatzen ditu, bere arauen arabera.
 
 es: Si un senador elegido en las urnas deja el escaño, lo ocupa su suplente.
 eu: Hautetsontzietan aukeratutako senatari batek eserlekua uzten badu, haren ordezkoak betetzen du.
 
-es: Fuentes: Constitución, art. 69.5; LOREG, arts. 165.4 y 166.2.
-eu: Iturriak: Konstituzioa, 69.5 art.; LOREG, 165.4 eta 166.2 art.
+es: Fuentes: Constitución, art. 69.5; LOREG, arts. 165.4 y 166.2; Reglamento del Senado, art. 1.2, y normas de designación de cada comunidad; Senado, cuadro de evolución del número de senadores designados (revisado el 12 de marzo de 2024) y composición del Senado (revisada el 20 de mayo de 2026).
+eu: Iturriak: Konstituzioa, 69.5 art.; LOREG, 165.4 eta 166.2 art.; Senatuko Erregelamendua, 1.2 art., eta erkidego bakoitzaren izendapen-arauak; Senatua, izendatutako senatarien kopuruaren bilakaera-taula (2024ko martxoaren 12an berrikusia) eta Senatuaren osaera (2026ko maiatzaren 20an berrikusia).
 
 # ───── 5 · Las mayorías ─────
 

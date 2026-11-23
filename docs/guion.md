@@ -96,8 +96,10 @@ _Fuente: LOREG, art. 163. En la tabla, los porcentajes inventados hacen de votos
 
 La regla D'Hondt se usa desde 1977. La fijó el real decreto-ley de normas electorales de marzo de aquel año, que reguló las primeras elecciones tras la Ley para la Reforma Política (la que abrió paso a las primeras elecciones democráticas), ya con 350 diputados. Ya la llamaba «regla d'Hondt», ya ponía la barrera en el 3 % y ya traía el mismo ejemplo de 480.000 votos que trae hoy la ley.
 Aquel decreto la presentaba como un freno a que el Congreso quedara demasiado fragmentado. Y el reparto de entonces era otro: Madrid elegía 32 diputados, Barcelona 33 y Soria 3.
+La regla lleva el nombre de Victor D'Hondt (1841-1901), profesor de Derecho civil en la Universidad de Gante. La propuso en un libro de 1882. Bélgica la adoptó en 1899 y la estrenó en las elecciones de 1900.
+En un folleto de 1878 había defendido otro sistema. Él mismo cuenta que cambió de idea por las críticas de un abogado de Gante.
 
-_Fuente: Real Decreto-ley 20/1977, de 18 de marzo, sobre Normas Electorales: preámbulo y arts. 19 y 20._
+_Fuentes: Real Decreto-ley 20/1977, de 18 de marzo, sobre Normas Electorales: preámbulo y arts. 19 y 20; V. D'Hondt, Système pratique et raisonné de représentation proportionnelle (1882); G. Beatse, en Liber memorialis de la Universidad de Gante, t. I (1913), pp. 428-429; F. Dhondt, Seqüência, n.º 86 (2020)._
 
 **Saber más: La barrera del 3 %**
 
@@ -237,10 +239,12 @@ _Explicación propia a partir de los arts. 90, 122.3, 159.1, 167 y 168 de la Con
 **Saber más: Los senadores que no se votan**
 
 Además de los elegidos en las urnas, cada parlamento autonómico designa un senador, más otro por cada millón de habitantes de su comunidad. Son los senadores por designación.
+En la legislatura de 2023 a 2026 fueron 58, y el Senado tuvo 266 miembros. El número se recalcula con cada elección general, con la población oficial de ese momento.
 No se eligen el 29N, pero cuentan igual que los demás: las mayorías del Senado se calculan sobre todos los senadores, no solo sobre los 209 que salen de las urnas.
+Tras las elecciones, cada parlamento autonómico confirma a los suyos o los designa de nuevo, según sus propias normas.
 Si un senador elegido en las urnas deja el escaño, lo ocupa su suplente.
 
-_Fuentes: Constitución, art. 69.5; LOREG, arts. 165.4 y 166.2._
+_Fuentes: Constitución, art. 69.5; LOREG, arts. 165.4 y 166.2; Reglamento del Senado, art. 1.2, y normas de designación de cada comunidad; Senado, cuadro de evolución del número de senadores designados (revisado el 12 de marzo de 2024) y composición del Senado (revisada el 20 de mayo de 2026)._
 
 ## 5 · Las mayorías
 
@@ -603,5 +607,5 @@ El último paso. El recorrido termina cuando el Congreso elige presidente y el n
 
 # Recuento
 
-- Cajones «saber más»: 61 (3864 palabras).
+- Cajones «saber más»: 61 (3975 palabras).
 - Términos de glosario: 30.
