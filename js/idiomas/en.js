@@ -28,6 +28,7 @@ const DATOS = {
   'ministerio del interior, escrutinio provisional': 'Ministry of the Interior, provisional count',
   'escrutinio general del 4 de diciembre de 2026': 'general count of 4 December 2026',
   'ministerio del interior, escrutinio general': 'Ministry of the Interior, general count',
+  'junta electoral central, senadores proclamados el 23j (boe del 1 de septiembre de 2023)': 'Central Electoral Board, senators declared elected on 23 July (BOE of 1 September 2023)',
   '29 nov': '29 Nov', '4 dic': '4 Dec', '23 dic': '23 Dec', 'sin fecha': 'No date', '1.ª votación': '1st vote', '48 h después': '48 h later', 'gobierno': 'Government',
   'votación.': 'Polling day.',
   'escrutinio general: el recuento oficial.': 'General count: the official tally.',
@@ -226,6 +227,11 @@ export const textos = {
   thEscanos: 'Seats',
   thPorEscano: 'Votes per seat',
   fuenteRes: (prueba, etiqueta, fuente) => (prueba ? 'Test data: ' + etiqueta : may(etiqueta)) + '. Source: ' + fuente + '. The seats are calculated here from the votes in each province; the official ones are proclaimed by the electoral boards.',
+  thSenadores: 'Senators',
+  senMas: (nombres, n, total) => nombres.length > 1
+    ? 'The parties with most senators elected at the ballot box are ' + textos.lista(nombres.map(p => theP(p))) + ', with ' + n + ' each, of ' + total + '.'
+    : may(theP(nombres[0])) + ' is the party with most senators elected at the ballot box: ' + n + ' of ' + total + '.',
+  fuenteSen: (prueba, etiqueta, fuente) => (prueba ? 'Test data: ' + etiqueta : may(etiqueta)) + '. Source: ' + fuente + '. In each province or island the candidates with most votes are elected; the electoral boards declare them elected.',
   /* paso 9: frente a 2023 */
   lista: xs => xs.length < 2 ? xs.join('') : xs.slice(0, -1).join(', ') + ' and ' + xs[xs.length - 1],
   frente2023(gana, mas, pierde, menos, todos) {
@@ -262,6 +268,12 @@ export const textos = {
   ultimo: (ganador, rival, votos) => 'The last seat went to ' + theP(ganador) + '. ' + may(theP(rival)) + ' fell ' + (votos === 1 ? '1 vote' : miles(votos) + ' votes') + ' short of taking it.',
   provisionalUltimo: ' This is the provisional count: the votes from abroad, added on 4 December, could change it.',
   unico: ganador => 'The seat went to ' + theP(ganador) + '.',
+  senProv(i, circs) {
+    const rep = ps => this.lista(ps.map(([p, n]) => n + ' from ' + theP(p))), c = circs[0];
+    if (!c.isla) return 'In the Senate, the ' + c.n + ' senators for ' + prov(i) + ' are ' + (c.partidos.length === 1 ? (c.n === 2 ? 'both' : 'all') + ' from ' + theP(c.partidos[0][0]) : rep(c.partidos)) + '.';
+    return 'In the Senate, each island in ' + prov(i) + ' elects its own. ' + circs.map(x => x.isla + ': ' + rep(x.partidos) + '.').join(' ');
+  },
+  isla: s => ({ 'Ibiza y Formentera': 'Ibiza and Formentera' })[s] || s,
   provisional12: 'These are the seats from the provisional count. The general count on 4 December adds the votes from abroad and could move some of them.',
   votos: n => miles(n) + ' votes',
   ysiIguales: 'Choose two different parties.',

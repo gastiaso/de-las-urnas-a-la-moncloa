@@ -186,6 +186,13 @@ export const ES = {
   thEscanos: 'Escaños',
   thPorEscano: 'Votos por escaño',
   fuenteRes: (prueba, etiqueta, fuente) => (prueba ? 'Datos de prueba: ' + etiqueta : may(etiqueta)) + '. Fuente: ' + fuente + '. Los escaños se calculan aquí con los votos de cada provincia; los oficiales los proclaman las juntas electorales.',
+  /* paso 9: el Senado (si js/resultados.js trae «senado»). nombres: el partido con más senadores elegidos en las urnas (varios
+     si empatan); n: cuántos; total: los elegidos en las urnas (209 el 29N). Los designados llegan después: no se suman. */
+  thSenadores: 'Senadores',
+  senMas: (nombres, n, total) => nombres.length > 1
+    ? 'Los partidos con más senadores elegidos en las urnas son ' + ES.lista(nombres.map(p => elP(p))) + ', con ' + n + ' cada uno, de ' + total + '.'
+    : may(elP(nombres[0])) + ' es el partido con más senadores elegidos en las urnas: ' + n + ' de ' + total + '.',
+  fuenteSen: (prueba, etiqueta, fuente) => (prueba ? 'Datos de prueba: ' + etiqueta : may(etiqueta)) + '. Fuente: ' + fuente + '. En cada provincia o isla salen los candidatos más votados; los proclaman las juntas electorales.',
   /* paso 9: frente a 2023. Qué partido se compara con cuál está en js/equivalencias.js. */
   lista: xs => xs.length < 2 ? xs.join('') : xs.slice(0, -1).join(', ') + ' y ' + xs[xs.length - 1],
   // gana, pierde: los partidos que más escaños ganan y más pierden (varios si empatan, ninguno si nadie gana o pierde);
@@ -230,6 +237,14 @@ export const ES = {
   // tras ultimo, mientras los resultados sean provisionales
   provisionalUltimo: ' Es el recuento provisional: el voto llegado del extranjero, que se suma el 4 de diciembre, puede cambiarlo.',
   unico: ganador => 'El escaño fue para ' + elP(ganador) + '.',
+  // paso 10: los senadores elegidos en la provincia i. circs: [{ isla, n, partidos: [[nombre, electos], ...] }]: una sola, con
+  // isla null, si la provincia es una circunscripción; en Baleares y Canarias, una por isla, con su nombre ya escrito (T.isla)
+  senProv(i, circs) {
+    const reparto = ps => ps.length === 1 ? delP(ps[0][0]) : this.lista(ps.map(([p, n]) => n + ' ' + delP(p)));
+    if (!circs[0].isla) return 'En el Senado, los ' + circs[0].n + ' senadores de ' + prov(i) + ' son ' + reparto(circs[0].partidos) + '.';
+    return 'En el Senado, en ' + prov(i) + ' cada isla elige los suyos. ' + circs.map(c => c.isla + ': ' + (c.partidos.length === 1 ? c.n + ' ' : '') + reparto(c.partidos) + '.').join(' ');
+  },
+  isla: s => s,   // el nombre de una isla, tal como viene en js/resultados.js («Ibiza», «La Gomera»; en 2023, «Ibiza y Formentera»)
   // paso 12, bajo «Estos son los escaños del 29N», mientras los resultados sean provisionales
   provisional12: 'Son los escaños del recuento provisional. El escrutinio general del 4 de diciembre suma el voto llegado del extranjero y puede mover alguno.',
   votos: n => miles(n) + ' votos',

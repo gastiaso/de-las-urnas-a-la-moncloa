@@ -979,6 +979,12 @@ eu: 2023rekin alderatuta
 es: <i class="lv"></i> 2023 <i class="le"></i> 29N
 eu: <i class="lv"></i> 2023 <i class="le"></i> aza. 29
 
+es: El Senado
+eu: Senatua
+
+es: Faltan los [[designacion|senadores por designación]], que nombran los parlamentos autonómicos después de las elecciones. Hasta entonces no hay un total oficial de senadores por partido.
+eu: Falta dira [[designacion|izendapen bidezko senatariak]], autonomia-erkidegoetako parlamentuek hauteskundeen ondoren izendatzen dituztenak. Ordura arte ez dago alderdi bakoitzeko senatarien guztizko ofizialik.
+
 es: Cómo leer el mapa
 eu: Nola irakurri mapa
 
@@ -1023,6 +1029,18 @@ eu: Zer diren baliozko botoak
 
 es: Los porcentajes se calculan sobre los votos válidos: los que van a un partido más los votos en blanco. Los nulos quedan fuera.
 eu: Ehunekoak baliozko botoen gainean kalkulatzen dira: alderdi batera doazenak gehi boto zuriak. Baliogabeak kanpoan geratzen dira.
+
+es: Cómo salen los senadores
+eu: Nola ateratzen diren senatariak
+
+es: En el Senado no hay listas ni regla D'Hondt: salen las personas más votadas de cada provincia o isla, hasta cubrir los puestos que le tocan.
+eu: Senatuan ez dago zerrendarik ez D'Hondt legerik: probintzia edo uharte bakoitzean boto gehien dituzten pertsonak ateratzen dira, dagozkion postuak bete arte.
+
+es: Aquí se suman por partido. Las candidaturas que solo se presentan en una isla o una provincia salen con su propio nombre.
+eu: Hemen alderdika batzen dira. Uharte edo probintzia bakar batean aurkezten diren hautagaitzak beren izenarekin ateratzen dira.
+
+es: Fuentes: LOREG, art. 166; Real Decreto 806/2026, art. 3. La suma por partido es propia.
+eu: Iturriak: LOREG, 166. art.; 806/2026 Errege Dekretua, 3. art. Alderdikako batuketa propioa da.
 
 # ───── 10 · En tu provincia ─────
 

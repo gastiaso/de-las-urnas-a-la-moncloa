@@ -88,6 +88,7 @@ const DATOS = {
   'Ministerio del Interior, escrutinio provisional': 'Ministerio do Interior, escrutinio provisional',
   'escrutinio general del 4 de diciembre de 2026': 'escrutinio xeral do 4 de decembro de 2026',
   'Ministerio del Interior, escrutinio general': 'Ministerio do Interior, escrutinio xeral',
+  'Junta Electoral Central, senadores proclamados el 23J (BOE del 1 de septiembre de 2023)': 'Xunta Electoral Central, senadores proclamados o 23J (BOE do 1 de setembro de 2023)',
   '29 nov': '29 nov',
   '4 dic': '4 dec',
   '23 dic': '23 dec',
@@ -273,6 +274,11 @@ export const textos = {
   thEscanos: 'Escanos',
   thPorEscano: 'Votos por escano',
   fuenteRes: (prueba, etiqueta, fuente) => (prueba ? 'Datos de proba: ' + etiqueta : mai(etiqueta)) + '. Fonte: ' + fuente + '. Os escanos calcúlanse aquí cos votos de cada provincia; os oficiais proclámanos as xuntas electorais.',
+  thSenadores: 'Senadores',
+  senMas: (nombres, n, total) => nombres.length > 1
+    ? 'Os partidos con máis senadores elixidos nas urnas son ' + textos.lista(nombres.map(p => oP(p))) + ', con ' + n + ' cada un, de ' + total + '.'
+    : mai(oP(nombres[0])) + ' é o partido con máis senadores elixidos nas urnas: ' + n + ' de ' + total + '.',
+  fuenteSen: (prueba, etiqueta, fuente) => (prueba ? 'Datos de proba: ' + etiqueta : mai(etiqueta)) + '. Fonte: ' + fuente + '. En cada provincia ou illa saen os candidatos máis votados; proclámanos as xuntas electorais.',
   /* paso 9: frente a 2023 */
   lista: xs => xs.length < 2 ? xs.join('') : xs.slice(0, -1).join(', ') + ' e ' + xs[xs.length - 1],
   frente2023(gana, mas, pierde, menos, todos) {
@@ -309,6 +315,12 @@ export const textos = {
   ultimo: (ganador, rival, votos) => 'O último escano foi para ' + oP(ganador) + '. ' + mai(aoP(rival)) + (Math.round(votos) === 1 ? ' faltoulle ' : ' faltáronlle ') + nvotos(votos) + ' para quitarllo.',
   provisionalUltimo: ' É o reconto provisional: o voto chegado do estranxeiro, que se suma o 4 de decembro, pode cambialo.',
   unico: ganador => 'O escano foi para ' + oP(ganador) + '.',
+  senProv(i, circs) {
+    const rep = ps => ps.length === 1 ? doP(ps[0][0]) : this.lista(ps.map(([p, n]) => n + ' ' + doP(p)));
+    if (!circs[0].isla) return 'No Senado, os ' + circs[0].n + ' senadores ' + de(i) + ' son ' + rep(circs[0].partidos) + '.';
+    return 'No Senado, ' + en(i) + ' cada illa elixe os seus. ' + circs.map(c => c.isla + ': ' + (c.partidos.length === 1 ? c.n + ' ' : '') + rep(c.partidos) + '.').join(' ');
+  },
+  isla: s => ({ 'Ibiza y Formentera': 'Ibiza e Formentera', 'La Palma': 'A Palma', 'La Gomera': 'A Gomera', 'El Hierro': 'O Hierro' })[s] || s,
   provisional12: 'Son os escanos do reconto provisional. O escrutinio xeral do 4 de decembro suma o voto chegado do estranxeiro e pode mover algún.',
   votos: nvotos,
   ysiIguales: 'Elixe dous partidos distintos.',

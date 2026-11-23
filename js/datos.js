@@ -4,6 +4,18 @@
 export const PROV = [["Albacete",4],["Alicante/Alacant",12],["Almería",6],["Araba/Álava",4],["Asturias",7],["Ávila",3],["Badajoz",5],["Balears (Illes)",8],["Barcelona",32],["Bizkaia",8],["Burgos",4],["Cáceres",4],["Cádiz",8],["Cantabria",5],["Castellón/Castelló",5],["Ciudad Real",5],["Córdoba",6],["Coruña (A)",8],["Cuenca",3],["Gipuzkoa",6],["Girona",6],["Granada",7],["Guadalajara",3],["Huelva",5],["Huesca",3],["Jaén",5],["León",4],["Lleida",4],["Lugo",4],["Madrid",38],["Málaga",11],["Murcia",10],["Navarra",5],["Ourense",4],["Palencia",3],["Palmas (Las)",8],["Pontevedra",7],["Rioja (La)",4],["Salamanca",4],["Santa Cruz de Tenerife",7],["Segovia",3],["Sevilla",12],["Soria",2],["Tarragona",6],["Teruel",3],["Toledo",6],["Valencia/València",16],["Valladolid",5],["Zamora",3],["Zaragoza",7],["Ceuta",1],["Melilla",1]];
 export const PROV_INICIAL = 46; // Valencia/València
 
+// Senadores que se eligen en cada circunscripción del Senado: Real Decreto 806/2026, art. 3 (LOREG, art. 165). Suman 209.
+// [circunscripción, provincia (índice de PROV), senadores]. En Baleares y Canarias cada isla es una circunscripción; Ibiza y
+// Formentera, por separado (en 2023 eran una sola). Las 60, en el orden de PROV. Las usa herramientas/senado.py para comprobar los datos.
+export const SENADO = [["Albacete",0,4],["Alicante/Alacant",1,4],["Almería",2,4],["Araba/Álava",3,4],["Asturias",4,4],["Ávila",5,4],["Badajoz",6,4],
+  ["Mallorca",7,3],["Menorca",7,1],["Ibiza",7,1],["Formentera",7,1],["Barcelona",8,4],["Bizkaia",9,4],["Burgos",10,4],["Cáceres",11,4],["Cádiz",12,4],
+  ["Cantabria",13,4],["Castellón/Castelló",14,4],["Ciudad Real",15,4],["Córdoba",16,4],["Coruña (A)",17,4],["Cuenca",18,4],["Gipuzkoa",19,4],["Girona",20,4],
+  ["Granada",21,4],["Guadalajara",22,4],["Huelva",23,4],["Huesca",24,4],["Jaén",25,4],["León",26,4],["Lleida",27,4],["Lugo",28,4],["Madrid",29,4],
+  ["Málaga",30,4],["Murcia",31,4],["Navarra",32,4],["Ourense",33,4],["Palencia",34,4],["Gran Canaria",35,3],["Lanzarote",35,1],["Fuerteventura",35,1],
+  ["Pontevedra",36,4],["Rioja (La)",37,4],["Salamanca",38,4],["Tenerife",39,3],["La Palma",39,1],["La Gomera",39,1],["El Hierro",39,1],["Segovia",40,4],
+  ["Sevilla",41,4],["Soria",42,4],["Tarragona",43,4],["Teruel",44,4],["Toledo",45,4],["Valencia/València",46,4],["Valladolid",47,4],["Zamora",48,4],
+  ["Zaragoza",49,4],["Ceuta",50,2],["Melilla",51,2]];
+
 // Población de cada circunscripción, en el mismo orden que PROV: cifras oficiales del padrón a 1 de enero de 2025,
 // Real Decreto 1117/2025, anexo (BOE-A-2025-25362). Con ellas, la regla del art. 162 de la LOREG reproduce el anexo del decreto.
 export const POB = [390406, 2030037, 773577, 342161, 1013529, 159887, 663886, 1237480, 5983325, 1166816, 361556, 387752, 1257041, 593964, 627173, 494407, 772153, 1135612, 198216, 733365, 832026, 942618, 285390, 535703, 230624, 617604, 446771, 456106, 325759, 7137031, 1791092, 1589138, 683500, 305573, 158687, 1167555, 946225, 327286, 328779, 1082421, 158470, 1976624, 90234, 874808, 136197, 750815, 2758633, 528841, 165275, 991991, 83595, 86780];

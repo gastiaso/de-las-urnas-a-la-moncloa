@@ -1,0 +1,67 @@
+# Plantilla del CSV del Senado para herramientas/senado.py (y resultados.py --senado). Las líneas con # no cuentan.
+# Las 60 circunscripciones del 29N (Real Decreto 806/2026, art. 3): una fila por partido que saque senador en cada una.
+# partido: el id de la web (PP, PSOE, VOX, FA, ERC, JUNTS, BILDU, PNV, BNG, CC, UPN...) o las siglas tal como salen.
+# electos: sus senadores en esa circunscripción. Si en una salen dos partidos, se copia la fila: «Albacete;PP;3» y «Albacete;PSOE;1».
+# a_repartir: los senadores que elige cada una, solo para comprobar a ojo (no se lee). Filas sin electos: no cuentan.
+# Guardar como «CSV UTF-8» con separador «;». Comprobar con: py herramientas/senado.py datos/senado_29N.csv
+circunscripcion;partido;electos;a_repartir
+Albacete;;;4
+Alicante/Alacant;;;4
+Almería;;;4
+Araba/Álava;;;4
+Asturias;;;4
+Ávila;;;4
+Badajoz;;;4
+Mallorca;;;3
+Menorca;;;1
+Ibiza;;;1
+Formentera;;;1
+Barcelona;;;4
+Bizkaia;;;4
+Burgos;;;4
+Cáceres;;;4
+Cádiz;;;4
+Cantabria;;;4
+Castellón/Castelló;;;4
+Ciudad Real;;;4
+Córdoba;;;4
+Coruña (A);;;4
+Cuenca;;;4
+Gipuzkoa;;;4
+Girona;;;4
+Granada;;;4
+Guadalajara;;;4
+Huelva;;;4
+Huesca;;;4
+Jaén;;;4
+León;;;4
+Lleida;;;4
+Lugo;;;4
+Madrid;;;4
+Málaga;;;4
+Murcia;;;4
+Navarra;;;4
+Ourense;;;4
+Palencia;;;4
+Gran Canaria;;;3
+Lanzarote;;;1
+Fuerteventura;;;1
+Pontevedra;;;4
+Rioja (La);;;4
+Salamanca;;;4
+Tenerife;;;3
+La Palma;;;1
+La Gomera;;;1
+El Hierro;;;1
+Segovia;;;4
+Sevilla;;;4
+Soria;;;4
+Tarragona;;;4
+Teruel;;;4
+Toledo;;;4
+Valencia/València;;;4
+Valladolid;;;4
+Zamora;;;4
+Zaragoza;;;4
+Ceuta;;;2
+Melilla;;;2

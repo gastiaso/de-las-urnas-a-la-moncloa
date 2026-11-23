@@ -980,6 +980,12 @@ en: Compared with 2023
 es: <i class="lv"></i> 2023 <i class="le"></i> 29N
 en: <i class="lv"></i> 2023 <i class="le"></i> 29 Nov
 
+es: El Senado
+en: The Senate
+
+es: Faltan los [[designacion|senadores por designación]], que nombran los parlamentos autonómicos después de las elecciones. Hasta entonces no hay un total oficial de senadores por partido.
+en: The [[designacion|appointed senators]] are still to come: the regional parliaments name them after the election. Until then there is no official total of senators for each party.
+
 es: Cómo leer el mapa
 en: How to read the map
 
@@ -1024,6 +1030,18 @@ en: What valid votes are
 
 es: Los porcentajes se calculan sobre los votos válidos: los que van a un partido más los votos en blanco. Los nulos quedan fuera.
 en: Percentages are calculated on valid votes: those cast for a party plus blank votes. Spoilt votes are left out.
+
+es: Cómo salen los senadores
+en: How senators are elected
+
+es: En el Senado no hay listas ni regla D'Hondt: salen las personas más votadas de cada provincia o isla, hasta cubrir los puestos que le tocan.
+en: In the Senate there are no party lists and no D'Hondt method: the people with most votes in each province or island are elected, until its seats are filled.
+
+es: Aquí se suman por partido. Las candidaturas que solo se presentan en una isla o una provincia salen con su propio nombre.
+en: Here they are added up by party. Candidacies that stand in only one island or one province are shown under their own name.
+
+es: Fuentes: LOREG, art. 166; Real Decreto 806/2026, art. 3. La suma por partido es propia.
+en: Sources: LOREG, art. 166; Royal Decree 806/2026, art. 3. The totals by party are our own sum.
 
 # ───── 10 · En tu provincia ─────
 

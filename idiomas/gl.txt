@@ -979,6 +979,12 @@ gl: Fronte a 2023
 es: <i class="lv"></i> 2023 <i class="le"></i> 29N
 gl: <i class="lv"></i> 2023 <i class="le"></i> 29N
 
+es: El Senado
+gl: O Senado
+
+es: Faltan los [[designacion|senadores por designación]], que nombran los parlamentos autonómicos después de las elecciones. Hasta entonces no hay un total oficial de senadores por partido.
+gl: Faltan os [[designacion|senadores por designación]], que nomean os parlamentos autonómicos despois das eleccións. Ata entón non hai un total oficial de senadores por partido.
+
 es: Cómo leer el mapa
 gl: Como ler o mapa
 
@@ -1023,6 +1029,18 @@ gl: Que son os votos válidos
 
 es: Los porcentajes se calculan sobre los votos válidos: los que van a un partido más los votos en blanco. Los nulos quedan fuera.
 gl: As porcentaxes calcúlanse sobre os votos válidos: os que van para un partido máis os votos en branco. Os nulos quedan fóra.
+
+es: Cómo salen los senadores
+gl: Como saen os senadores
+
+es: En el Senado no hay listas ni regla D'Hondt: salen las personas más votadas de cada provincia o isla, hasta cubrir los puestos que le tocan.
+gl: No Senado non hai listas nin regra D'Hondt: saen as persoas máis votadas de cada provincia ou illa, ata cubrir os postos que lle tocan.
+
+es: Aquí se suman por partido. Las candidaturas que solo se presentan en una isla o una provincia salen con su propio nombre.
+gl: Aquí súmanse por partido. As candidaturas que só se presentan nunha illa ou nunha provincia saen co seu propio nome.
+
+es: Fuentes: LOREG, art. 166; Real Decreto 806/2026, art. 3. La suma por partido es propia.
+gl: Fontes: LOREG, art. 166; Real decreto 806/2026, art. 3. A suma por partido é propia.
 
 # ───── 10 · En tu provincia ─────
 

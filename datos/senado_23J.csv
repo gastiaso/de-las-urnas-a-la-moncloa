@@ -1,0 +1,116 @@
+# Senadores elegidos en las urnas el 23 de julio de 2023, por circunscripción y partido: datos de prueba para la fase 2.
+# Fuente: Junta Electoral Central, relación de senadores proclamados electos (BOE-A-2023-18907, 1-9-2023), cotejada con los
+# resultados oficiales del Ministerio del Interior (infoelectoral, PROV_03_202307_1). 59 circunscripciones y 208 senadores:
+# en 2023, Ibiza y Formentera votaban juntas (por eso hace falta --prueba). Partido: el id de la web; PSOE incluye PSC, PSE-EE,
+# PSdeG, PSN y PSIB. ASG (Agrupación Socialista Gomera), AHI (Agrupación Herreña Independiente) y Eivissa i Formentera al Senat
+# (coalición de PSOE, Sumar, EUIB y Ara Eivissa) salen con su nombre. Formato: ver herramientas/senado.py.
+circunscripcion;partido;electos
+Albacete;PP;3
+Albacete;PSOE;1
+Alicante/Alacant;PP;3
+Alicante/Alacant;PSOE;1
+Almería;PP;3
+Almería;PSOE;1
+Araba/Álava;PSOE;3
+Araba/Álava;BILDU;1
+Asturias;PP;3
+Asturias;PSOE;1
+Ávila;PP;3
+Ávila;PSOE;1
+Badajoz;PSOE;2
+Badajoz;PP;2
+Mallorca;PP;2
+Mallorca;PSOE;1
+Menorca;PP;1
+Ibiza y Formentera;Eivissa i Formentera al Senat;1
+Barcelona;PSOE;3
+Barcelona;ERC;1
+Bizkaia;PNV;3
+Bizkaia;PSOE;1
+Burgos;PP;3
+Burgos;PSOE;1
+Cáceres;PP;2
+Cáceres;PSOE;2
+Cádiz;PP;3
+Cádiz;PSOE;1
+Cantabria;PP;3
+Cantabria;PSOE;1
+Castellón/Castelló;PP;3
+Castellón/Castelló;PSOE;1
+Ciudad Real;PP;3
+Ciudad Real;PSOE;1
+Córdoba;PP;3
+Córdoba;PSOE;1
+Coruña (A);PP;3
+Coruña (A);PSOE;1
+Cuenca;PP;3
+Cuenca;PSOE;1
+Gipuzkoa;BILDU;3
+Gipuzkoa;PNV;1
+Girona;PSOE;3
+Girona;JUNTS;1
+Granada;PP;3
+Granada;PSOE;1
+Guadalajara;PP;3
+Guadalajara;PSOE;1
+Huelva;PP;2
+Huelva;PSOE;2
+Huesca;PP;3
+Huesca;PSOE;1
+Jaén;PP;3
+Jaén;PSOE;1
+León;PP;3
+León;PSOE;1
+Lleida;PSOE;3
+Lleida;ERC;1
+Lugo;PP;3
+Lugo;PSOE;1
+Madrid;PP;3
+Madrid;PSOE;1
+Málaga;PP;3
+Málaga;PSOE;1
+Murcia;PP;3
+Murcia;PSOE;1
+Navarra;PSOE;3
+Navarra;UPN;1
+Ourense;PP;3
+Ourense;PSOE;1
+Palencia;PP;3
+Palencia;PSOE;1
+Gran Canaria;PSOE;2
+Gran Canaria;PP;1
+Lanzarote;PSOE;1
+Fuerteventura;PSOE;1
+Pontevedra;PP;3
+Pontevedra;PSOE;1
+Rioja (La);PP;3
+Rioja (La);PSOE;1
+Salamanca;PP;3
+Salamanca;PSOE;1
+Tenerife;PSOE;2
+Tenerife;PP;1
+La Palma;PSOE;1
+La Gomera;ASG;1
+El Hierro;AHI;1
+Segovia;PP;3
+Segovia;PSOE;1
+Sevilla;PSOE;3
+Sevilla;PP;1
+Soria;PP;3
+Soria;PSOE;1
+Tarragona;PSOE;3
+Tarragona;ERC;1
+Teruel;PP;3
+Teruel;PSOE;1
+Toledo;PP;3
+Toledo;PSOE;1
+Valencia/València;PP;2
+Valencia/València;PSOE;2
+Valladolid;PP;3
+Valladolid;PSOE;1
+Zamora;PP;3
+Zamora;PSOE;1
+Zaragoza;PP;3
+Zaragoza;PSOE;1
+Ceuta;PP;2
+Melilla;PP;2
