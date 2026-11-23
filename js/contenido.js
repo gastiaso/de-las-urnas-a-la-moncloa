@@ -368,9 +368,9 @@ if (FASE2) {
   $('#n9').innerHTML = [...nac.filter(nota).map(f => '* ' + nota(f)), ...nac.filter(f => f.dif === null && f.tipo !== 'nuevo' && !nota(f)).map(f => f.nombre + ': ' + sinCifra(f) + '.'), T.fuente2023].join(' ');
   /* 9 · el Senado: los senadores elegidos en las urnas, si js/resultados.js los trae (herramientas/resultados.py --senado) */
   if (RES.senado) {
-    const ps = [...RES.senado.partidos].sort((a, b) => b.n - a.n), tot = ps.reduce((a, q) => a + q.n, 0);
+    const ps = [...RES.senado.partidos].sort((a, b) => b.n - a.n);
     $('#sen9').hidden = false;
-    $('#r9s').textContent = T.senMas(ps.filter(q => q.n === ps[0].n).map(q => q.nombre), ps[0].n, tot) + (PROVISIONAL ? T.provisionalRes : '');
+    $('#r9s').textContent = T.senMas(ps.filter(q => q.n === ps[0].n).map(q => q.nombre), ps[0].n) + (PROVISIONAL ? T.provisionalRes : '');
     $('#t9s').innerHTML = '<table><tr><th>' + T.partido + '</th><th>' + T.thSenadores + '</th></tr>' + ps.map(q => '<tr><td>' + pt(q) + q.nombre + '</td><td>' + q.n + '</td></tr>').join('') + '</table>';
     $('#f9s').textContent = T.fuenteSen(RES.prueba, etiqueta, T.dato(RES.senado.fuente));
   }

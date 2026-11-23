@@ -307,9 +307,9 @@ export const textos = {
   thPorEscano: 'Botoak eserlekuko',
   fuenteRes: (prueba, etiqueta, fuente) => (prueba ? 'Probako datuak: ' + etiqueta : etiqueta.charAt(0).toUpperCase() + etiqueta.slice(1)) + '. Iturria: ' + fuente + '. Eserlekuak hemen kalkulatzen dira, probintzia bakoitzeko botoekin; ofizialak hauteskunde-batzordeek aldarrikatzen dituzte.',
   thSenadores: 'Senatariak',
-  senMas: (nombres, n, total) => nombres.length > 1
-    ? 'Hautetsontzietan aukeratutako senatari gehien dituzten alderdiak ' + textos.lista(nombres) + ' dira: ' + n + ' bakoitzak, ' + tik(total) + '.'
-    : nombres[0] + ' da hautetsontzietan aukeratutako senatari gehien dituen alderdia: ' + tik(total) + ' ' + n + '.',
+  senMas: (nombres, n) => nombres.length > 1
+    ? 'Hautetsontzietan aukeratutako senatari gehien dituzten alderdiak ' + textos.lista(nombres) + ' dira: ' + n + ' bakoitzak.'
+    : nombres[0] + ' da hautetsontzietan aukeratutako senatari gehien dituen alderdia: ' + n + '.',
   fuenteSen: (prueba, etiqueta, fuente) => (prueba ? 'Probako datuak: ' + etiqueta : etiqueta.charAt(0).toUpperCase() + etiqueta.slice(1)) + '. Iturria: ' + fuente + '. Probintzia edo uharte bakoitzean boto gehien dituzten hautagaiak ateratzen dira; hauteskunde-batzordeek aldarrikatzen dituzte.',
   /* paso 9: frente a 2023. Los nombres de los partidos, en caso absoluto, como en el resto de frases */
   lista: xs => xs.length < 2 ? xs.join('') : xs.slice(0, -1).join(', ') + ' eta ' + xs[xs.length - 1],

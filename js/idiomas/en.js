@@ -229,9 +229,9 @@ export const textos = {
   thPorEscano: 'Votes per seat',
   fuenteRes: (prueba, etiqueta, fuente) => (prueba ? 'Test data: ' + etiqueta : may(etiqueta)) + '. Source: ' + fuente + '. The seats are calculated here from the votes in each province; the official ones are proclaimed by the electoral boards.',
   thSenadores: 'Senators',
-  senMas: (nombres, n, total) => nombres.length > 1
-    ? 'The parties with most senators elected at the ballot box are ' + textos.lista(nombres.map(p => theP(p))) + ', with ' + n + ' each, of ' + total + '.'
-    : may(theP(nombres[0])) + ' is the party with most senators elected at the ballot box: ' + n + ' of ' + total + '.',
+  senMas: (nombres, n) => nombres.length > 1
+    ? 'The parties with most senators elected at the ballot box are ' + textos.lista(nombres.map(p => theP(p))) + ', with ' + n + ' each.'
+    : may(theP(nombres[0])) + ' is the party with most senators elected at the ballot box: ' + n + '.',
   fuenteSen: (prueba, etiqueta, fuente) => (prueba ? 'Test data: ' + etiqueta : may(etiqueta)) + '. Source: ' + fuente + '. In each province or island the candidates with most votes are elected; the electoral boards declare them elected.',
   /* paso 9: frente a 2023 */
   lista: xs => xs.length < 2 ? xs.join('') : xs.slice(0, -1).join(', ') + ' and ' + xs[xs.length - 1],

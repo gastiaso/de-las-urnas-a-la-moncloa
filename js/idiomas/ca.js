@@ -278,9 +278,9 @@ export const textos = {
   thPorEscano: 'Vots per escó',
   fuenteRes: (prueba, etiqueta, fuente) => (prueba ? 'Dades de prova: ' + etiqueta : maj(etiqueta)) + '. Font: ' + fuente + '. Els escons es calculen aquí amb els vots de cada província; els oficials els proclamen les juntes electorals.',
   thSenadores: 'Senadors',
-  senMas: (nombres, n, total) => nombres.length > 1
-    ? 'Els partits amb més senadors escollits a les urnes són ' + textos.lista(nombres.map(p => elP(p))) + ', amb ' + n + ' cadascun, de ' + total + '.'
-    : maj(elP(nombres[0])) + ' és el partit amb més senadors escollits a les urnes: ' + n + ' de ' + total + '.',
+  senMas: (nombres, n) => nombres.length > 1
+    ? 'Els partits amb més senadors escollits a les urnes són ' + textos.lista(nombres.map(p => elP(p))) + ', amb ' + n + ' cadascun.'
+    : maj(elP(nombres[0])) + ' és el partit amb més senadors escollits a les urnes: ' + n + '.',
   fuenteSen: (prueba, etiqueta, fuente) => (prueba ? 'Dades de prova: ' + etiqueta : maj(etiqueta)) + '. Font: ' + fuente + '. A cada província o illa surten els candidats més votats; els proclamen les juntes electorals.',
   /* paso 9: frente a 2023 */
   lista: xs => xs.length < 2 ? xs.join('') : xs.slice(0, -1).join(', ') + ' i ' + xs[xs.length - 1],

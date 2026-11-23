@@ -190,11 +190,11 @@ export const ES = {
   thPorEscano: 'Votos por escaño',
   fuenteRes: (prueba, etiqueta, fuente) => (prueba ? 'Datos de prueba: ' + etiqueta : may(etiqueta)) + '. Fuente: ' + fuente + '. Los escaños se calculan aquí con los votos de cada provincia; los oficiales los proclaman las juntas electorales.',
   /* paso 9: el Senado (si js/resultados.js trae «senado»). nombres: el partido con más senadores elegidos en las urnas (varios
-     si empatan); n: cuántos; total: los elegidos en las urnas (209 el 29N). Los designados llegan después: no se suman. */
+     si empatan); n: cuántos. Sin el total de elegidos: con los designados, que llegan después, el Senado es mayor. */
   thSenadores: 'Senadores',
-  senMas: (nombres, n, total) => nombres.length > 1
-    ? 'Los partidos con más senadores elegidos en las urnas son ' + ES.lista(nombres.map(p => elP(p))) + ', con ' + n + ' cada uno, de ' + total + '.'
-    : may(elP(nombres[0])) + ' es el partido con más senadores elegidos en las urnas: ' + n + ' de ' + total + '.',
+  senMas: (nombres, n) => nombres.length > 1
+    ? 'Los partidos con más senadores elegidos en las urnas son ' + ES.lista(nombres.map(p => elP(p))) + ', con ' + n + ' cada uno.'
+    : may(elP(nombres[0])) + ' es el partido con más senadores elegidos en las urnas: ' + n + '.',
   fuenteSen: (prueba, etiqueta, fuente) => (prueba ? 'Datos de prueba: ' + etiqueta : may(etiqueta)) + '. Fuente: ' + fuente + '. En cada provincia o isla salen los candidatos más votados; los proclaman las juntas electorales.',
   /* paso 9: frente a 2023. Qué partido se compara con cuál está en js/equivalencias.js. */
   lista: xs => xs.length < 2 ? xs.join('') : xs.slice(0, -1).join(', ') + ' y ' + xs[xs.length - 1],

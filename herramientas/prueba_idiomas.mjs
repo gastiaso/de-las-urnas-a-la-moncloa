@@ -94,7 +94,7 @@ function frases(t) {
   // el Senado (pasos 9 y 10): RES.senado, que escribe herramientas/resultados.py --senado
   const fSen = 'Junta Electoral Central, senadores proclamados el 23J (BOE del 1 de septiembre de 2023)';
   pon('dato', fSen + '  →  ' + t.dato(fSen));
-  pon('senMas', t.senMas(['PP'], 120, 208)); pon('senMas (sin artículo)', t.senMas(['Sumar'], 50, 209)); pon('senMas (empate)', t.senMas(['PP', 'PSOE'], 100, 209));
+  pon('senMas', t.senMas(['PP'], 120)); pon('senMas (sin artículo)', t.senMas(['Sumar'], 50)); pon('senMas (empate)', t.senMas(['PP', 'PSOE'], 100)); pon('senMas (artículo femenino)', t.senMas(['Unidad del Pueblo Canario'], 3));
   pon('fuenteSen', t.fuenteSen(true, t.dato('resultados del 23 de julio de 2023'), t.dato(fSen)));
   pon('fuenteSen (noche)', t.fuenteSen(false, t.dato('escrutinio provisional del 29 de noviembre de 2026, con el 99,9 % escrutado'), t.dato('Ministerio del Interior, escrutinio provisional')));
   pon('isla', ['Mallorca', 'Ibiza', 'Formentera', 'Ibiza y Formentera', 'Gran Canaria', 'La Gomera', 'El Hierro'].map(t.isla).join(' · '));

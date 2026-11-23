@@ -276,9 +276,9 @@ export const textos = {
   thPorEscano: 'Votos por escano',
   fuenteRes: (prueba, etiqueta, fuente) => (prueba ? 'Datos de proba: ' + etiqueta : mai(etiqueta)) + '. Fonte: ' + fuente + '. Os escanos calcúlanse aquí cos votos de cada provincia; os oficiais proclámanos as xuntas electorais.',
   thSenadores: 'Senadores',
-  senMas: (nombres, n, total) => nombres.length > 1
-    ? 'Os partidos con máis senadores elixidos nas urnas son ' + textos.lista(nombres.map(p => oP(p))) + ', con ' + n + ' cada un, de ' + total + '.'
-    : mai(oP(nombres[0])) + ' é o partido con máis senadores elixidos nas urnas: ' + n + ' de ' + total + '.',
+  senMas: (nombres, n) => nombres.length > 1
+    ? 'Os partidos con máis senadores elixidos nas urnas son ' + textos.lista(nombres.map(p => oP(p))) + ', con ' + n + ' cada un.'
+    : mai(oP(nombres[0])) + ' é o partido con máis senadores elixidos nas urnas: ' + n + '.',
   fuenteSen: (prueba, etiqueta, fuente) => (prueba ? 'Datos de proba: ' + etiqueta : mai(etiqueta)) + '. Fonte: ' + fuente + '. En cada provincia ou illa saen os candidatos máis votados; proclámanos as xuntas electorais.',
   /* paso 9: frente a 2023 */
   lista: xs => xs.length < 2 ? xs.join('') : xs.slice(0, -1).join(', ') + ' e ' + xs[xs.length - 1],
