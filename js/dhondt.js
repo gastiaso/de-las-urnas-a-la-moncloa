@@ -14,13 +14,29 @@ export function reparto(escanos, votos, validos, barrera = 0.03) {
     if (!mejor) break;
     seats[mejor.id]++; order.push(mejor.id); ultimo = { id: mejor.id, q };
   }
+  // Lo que le falta a cada partido: votos para que su siguiente división supere a la del último escaño (en enteros, sin
+  // redondeos; a igual división gana el que tiene más votos en total, art. 163.1.d) y, si no llega a la barrera, también
+  // los que necesita para pasarla. Cuenta a todos los que se presentan, no solo a los que pasan la barrera.
   let rival = null;
-  if (ultimo) for (const p of dentro) {
-    if (p.id === ultimo.id) continue;
-    const faltan = Math.floor(ultimo.q * (seats[p.id] + 1) - p.v) + 1;
-    if (!rival || faltan < rival.faltan) rival = { id: p.id, faltan };
+  if (ultimo) {
+    const u = votos.find(p => p.id === ultimo.id), su = seats[u.id];
+    for (const p of votos) {
+      if (p.id === ultimo.id || !(p.v > 0)) continue;
+      const d = u.v * (seats[p.id] + 1) - p.v * su;   // lo que le falta, multiplicado por los escaños del último
+      let faltan = d % su === 0 && p.v + d / su > u.v ? d / su : Math.floor(d / su) + 1;
+      if (!dentro.includes(p)) faltan = Math.max(faltan, hastaBarrera(p.v, validos, barrera));
+      if (!rival || faltan < rival.faltan) rival = { id: p.id, faltan };
+    }
   }
   return { seats, order, ultimo, rival, dentro: dentro.map(p => p.id) };
+}
+
+// Votos que le faltan a un partido para llegar a la barrera. Al sumárselos también crecen los válidos, y con ellos la barrera.
+function hastaBarrera(v, validos, barrera) {
+  let x = Math.max(0, Math.ceil((barrera * validos - v) / (1 - barrera)));
+  while ((v + x) / (validos + x) < barrera) x++;
+  while (x > 0 && (v + x - 1) / (validos + x - 1) >= barrera) x--;
+  return x;
 }
 
 // El mismo reparto con los cinco partidos inventados de la fase 1 (sus porcentajes hacen de votos).

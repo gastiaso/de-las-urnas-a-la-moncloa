@@ -10,6 +10,16 @@ const dec = x => x.toFixed(1).replace('.', ',');
 // Nombre para el texto: «Balears (Illes)» → «Illes Balears», «Coruña (A)» → «A Coruña».
 const prov = i => PROV[i][0].replace(/^(.*) \((.*)\)$/, '$2 $1');
 const faltan = n => (n === 1 ? 'falta ' : 'faltan ') + sies(n);
+const may = s => s.charAt(0).toUpperCase() + s.slice(1);
+
+// Partidos que se nombran con artículo, por el nombre que llevan en js/resultados.js (m: masculino; f: femenino). Los demás
+// van sin él: «Vox», «Sumar», «EH Bildu», «Junts», «Compromís». Cada idioma pone su artículo y sus contracciones.
+// Un partido nuevo que lleve artículo («la CUP») se añade aquí y vale para todos los idiomas.
+export const ARTICULO = { PP: 'm', PSOE: 'm', PNV: 'm', BNG: 'm', 'Frente Amplio': 'm' };
+// p: nombre del partido; b: en negrita (el artículo queda fuera de la negrita)
+const elP = (p, b) => (ARTICULO[p] ? (ARTICULO[p] === 'f' ? 'la ' : 'el ') : '') + (b ? '<b>' + p + '</b>' : p);   // «el PP», «Vox»
+const alP = p => ARTICULO[p] === 'm' ? 'al ' + p : 'a ' + elP(p);      // «al PSOE», «a Sumar»
+const delP = p => ARTICULO[p] === 'm' ? 'del ' + p : 'de ' + elP(p);   // «del PP», «de Vox»
 
 export const ES = {
   cod: 'es',      // carpeta del idioma; el castellano está en la raíz
@@ -42,7 +52,7 @@ export const ES = {
     5: '176 de 350: la mayoría absoluta',
     7: 'El Congreso que elegirá presidente<small>El plazo de dos meses empieza con la primera votación.</small>',
     8: '350 escaños',
-    9: 'Cada escaño, del color de quien lo ganó',
+    9: 'Cada escaño, del color de su partido',
     10: prov(i) + ': ' + escanos(n),
     11: 'El Congreso que sale de las urnas',
     13: 'El Congreso que sale de las urnas',
@@ -81,8 +91,8 @@ export const ES = {
       case 6: return (uno ? 'El diputado de ' + nom + ' suele votar con su partido.' : 'Los ' + n + ' diputados de ' + nom + ' suelen votar con su partido.') + ' Tu voto queda aparte, debajo del hemiciclo: en qué bloque estaría depende de a quién votes.';
       case 7: return 'La noche del 29N, tu papeleta se cuenta en tu mesa de ' + nom + ', en público y en voz alta.';
       case 8: return 'Ese es el camino de tu papeleta en ' + nom + ': de la urna a la Moncloa.';
-      case 10: return primero ? 'El hexágono dorado es el primer escaño que se repartió en ' + nom + ': fue para <b>' + primero + '</b>.' : '';
-      case 11: case 12: return primero ? 'El hexágono dorado es el primer escaño de ' + nom + ': fue para <b>' + primero + '</b>, el partido más votado allí.' : '';
+      case 10: return primero ? 'El hexágono dorado es el primer escaño que se repartió en ' + nom + ': fue para ' + elP(primero, true) + '.' : '';
+      case 11: case 12: return primero ? 'El hexágono dorado es el primer escaño de ' + nom + ': fue para ' + elP(primero, true) + ', el partido más votado allí.' : '';
       default: return '';
     }
   },
@@ -154,19 +164,25 @@ export const ES = {
 
   /* fase 2: los resultados */
   avisoPrueba: etiqueta => 'Vista previa con datos de prueba: ' + etiqueta + '. No son los resultados del 29N.',
-  masEscanos: (nombre, n, pctVotos, absoluta) => nombre + ' es el partido con más escaños: ' + n + ', con el ' + pctVotos + ' de los votos. ' + (absoluta ? 'Supera los 176 de la mayoría absoluta.' : 'Ningún partido llega solo a los 176 de la mayoría absoluta.'),
+  masEscanos: (nombre, n, pctVotos, absoluta) => may(elP(nombre)) + ' es el partido con más escaños: ' + n + ', con el ' + pctVotos + ' de los votos. ' + (absoluta ? 'Supera los 176 de la mayoría absoluta.' : 'Ningún partido llega solo a los 176 de la mayoría absoluta.'),
   participacion: p => ' Votó el ' + p + ' del censo.',
+  // tras masEscanos (y participacion), mientras los resultados sean provisionales
+  provisionalRes: ' Son resultados provisionales hasta el escrutinio general del 4 de diciembre, que suma el voto llegado del extranjero.',
   thVotos: 'Votos',
   thEscanos: 'Escaños',
   thPorEscano: 'Votos por escaño',
-  fuenteRes: (prueba, etiqueta, fuente) => (prueba ? 'Datos de prueba: ' : '') + etiqueta + '. Fuente: ' + fuente + '. Los escaños se calculan aquí con los votos de cada provincia.',
+  fuenteRes: (prueba, etiqueta, fuente) => (prueba ? 'Datos de prueba: ' + etiqueta : may(etiqueta)) + '. Fuente: ' + fuente + '. Los escaños se calculan aquí con los votos de cada provincia; los oficiales los proclaman las juntas electorales.',
   repartia: (i, n) => prov(i) + ' repartía ' + escanos(n) + '.',
-  ultimo: (ganador, rival, votos) => 'El último escaño fue para ' + ganador + '. A ' + rival + ' le faltaron ' + miles(votos) + ' votos para quitárselo.',
-  unico: ganador => 'El escaño fue para ' + ganador + '.',
+  ultimo: (ganador, rival, votos) => 'El último escaño fue para ' + elP(ganador) + '. ' + may(alP(rival)) + (votos === 1 ? ' le faltó 1 voto' : ' le faltaron ' + miles(votos) + ' votos') + ' para quitárselo.',
+  // tras ultimo, mientras los resultados sean provisionales
+  provisionalUltimo: ' Es el recuento provisional: el voto llegado del extranjero, que se suma el 4 de diciembre, puede cambiarlo.',
+  unico: ganador => 'El escaño fue para ' + elP(ganador) + '.',
+  // paso 12, bajo «Estos son los escaños del 29N», mientras los resultados sean provisionales
+  provisional12: 'Son los escaños del recuento provisional. El escrutinio general del 4 de diciembre suma el voto llegado del extranjero y puede mover alguno.',
   votos: n => miles(n) + ' votos',
   ysiIguales: 'Elige dos partidos distintos.',
-  ysiCambia: (n, de, a, ultimo) => 'Con ' + miles(n) + ' votos de ' + de + ' a ' + a + ', cambia el reparto. El último escaño sería para ' + ultimo + '.',
-  ysiNoCambia: (n, ultimo) => 'Con ' + miles(n) + ' votos, el reparto no cambia. El último escaño sigue siendo para ' + ultimo + '.',
+  ysiCambia: (n, de, a, ultimo) => 'Con ' + miles(n) + ' votos ' + delP(de) + ' ' + alP(a) + ', cambia el reparto. El último escaño sería para ' + elP(ultimo) + '.',
+  ysiNoCambia: (n, ultimo) => 'Con ' + miles(n) + ' votos, el reparto no cambia. El último escaño sigue siendo para ' + elP(ultimo) + '.',
   votosYEscanos: 'El porcentaje de escaños de un partido casi nunca coincide con su porcentaje de votos.',
   sinEscano: (n, p) => miles(n) + ' votos (' + p + ') fueron a candidaturas que no lograron escaño en su provincia.',
   loSiguiente: t => 'Lo siguiente: ' + t.charAt(0).toLowerCase() + t.slice(1),
@@ -176,6 +192,13 @@ export const ES = {
 // Los textos en uso. La página de cada idioma carga antes su js/idiomas/xx.js, que llama a idioma() con los suyos.
 export const T = { ...ES };
 export function idioma(textos) { Object.assign(T, textos); }
+
+// Para los demás idiomas: la etiqueta de la noche lleva el porcentaje escrutado, que cambia («…, con el 99,9 % escrutado»).
+// Devuelve { t: la etiqueta sin el porcentaje, n: el número escrito «99,9» }, o null si no lo lleva.
+export function parteEscrutado(s) {
+  const x = /^(.+), con el (\d{1,3}(?:[.,]\d+)?) ?% escrutado$/.exec(String(s).trim());
+  return x ? { t: x[1], n: x[2].replace('.', ',') } : null;
+}
 
 // Para los demás idiomas: descompone una fecha escrita en castellano («8 de noviembre de 2026») o como 2026-11-08.
 // Devuelve { d, m, a }, con el mes de 1 a 12, o null si no la entiende.

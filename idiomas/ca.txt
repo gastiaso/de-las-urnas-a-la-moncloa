@@ -958,8 +958,8 @@ ca: 9 · Què ha passat
 es: Cómo leer el mapa
 ca: Com es llegeix el mapa
 
-es: Cada hexágono es un escaño y lleva el color del partido que lo ha ganado. Las provincias grandes ocupan más porque reparten más escaños, no porque tengan más territorio.
-ca: Cada hexàgon és un escó i porta el color del partit que l'ha guanyat. Les províncies grans ocupen més perquè reparteixen més escons, no perquè tinguin més territori.
+es: Cada hexágono es un escaño, con el color del partido al que le corresponde según el recuento. Las provincias grandes ocupan más porque reparten más escaños, no porque tengan más territorio.
+ca: Cada hexàgon és un escó, amb el color del partit a qui correspon segons el recompte. Les províncies grans ocupen més perquè reparteixen més escons, no perquè tinguin més territori.
 
 es: Explicación propia.
 ca: Explicació pròpia.
@@ -970,11 +970,14 @@ ca: Provisional i oficial
 es: Lo que se conoce la noche electoral es un recuento provisional. El oficial lo hacen las juntas electorales cinco días después, y es entonces cuando se suma el voto llegado del extranjero.
 ca: El que es coneix la nit electoral és un recompte provisional. L'oficial el fan les juntes electorals cinc dies després, i és llavors quan s'hi suma el vot arribat de l'estranger.
 
+es: Ese voto puede mover los escaños más ajustados: por eso el reparto oficial puede no coincidir con el de la noche. En 2023 cambió uno de Madrid, que pasó del PSOE al PP. Sin ese voto, el PP sumaba 136 escaños y el PSOE, 122; con él, 137 y 121.
+ca: Aquest vot pot moure els escons més ajustats: per això el repartiment oficial pot no coincidir amb el de la nit. El 2023 en va canviar un de Madrid, que va passar del PSOE al PP. Sense aquest vot, el PP sumava 136 escons i el PSOE, 122; un cop sumat, 137 i 121.
+
 es: Después se proclaman los elegidos. Desde ese momento hay tres días para recurrir, y los recursos los resuelve el Tribunal Supremo.
 ca: Després es proclamen els elegits. Des d'aquell moment hi ha tres dies per presentar recurs, i els recursos els resol el Tribunal Suprem.
 
-es: Fuentes: LOREG, arts. 75, 98, 103, 108 y 112.
-ca: Fonts: LOREG, arts. 75, 98, 103, 108 i 112.
+es: Fuentes: LOREG, arts. 75, 98, 103, 108 y 112. 2023: cálculo propio con los resultados oficiales del Ministerio del Interior.
+ca: Fonts: LOREG, arts. 75, 98, 103, 108 i 112. 2023: càlcul propi amb els resultats oficials del Ministeri de l'Interior.
 
 es: Qué son los votos válidos
 ca: Què són els vots vàlids
@@ -1010,6 +1013,9 @@ ca: Com es calcula el que va faltar
 
 es: El último escaño se lo lleva la división más alta que quedaba en la tabla. Lo que le faltó al partido que se quedó más cerca es cuántos votos más habría necesitado para que su división superase a esa, sin que cambie nada más.
 ca: L'últim escó se l'enduu la divisió més alta que quedava a la taula. El que li va faltar al partit que es va quedar més a prop és quants vots més hauria necessitat perquè la seva divisió superés aquesta, sense que canviï res més.
+
+es: Si ese partido no llegaba al 3 %, se cuentan también los votos que le faltaban para pasar la barrera. Y si las dos divisiones empatan, el escaño es del partido con más votos.
+ca: Si aquest partit no arribava al 3 %, també es compten els vots que li faltaven per superar la barrera. I si les dues divisions empaten, l'escó és per al partit amb més vots.
 
 es: Es una cuenta sobre el papel: en la realidad, si un partido sube, otros bajan.
 ca: És un càlcul sobre el paper: a la realitat, si un partit puja, d'altres baixen.
@@ -1060,8 +1066,8 @@ ca: La primera cosa exigeix reformar la Constitució. La segona, majoria absolut
 es: 12 · ¿Quién gobierna?
 ca: 12 · Qui governa?
 
-es: Estos son los escaños de verdad. Toca cada partido para cambiar su voto en la investidura: no, sí o abstención.
-ca: Aquests són els escons de debò. Toca cada partit per canviar el seu vot a la investidura: no, sí o abstenció.
+es: Estos son los escaños del 29N. Toca cada partido para cambiar su voto en la investidura: no, sí o abstención.
+ca: Aquests són els escons del 29N. Toca cada partit per canviar el seu vot a la investidura: no, sí o abstenció.
 
 es: Qué mirar en una negociación
 ca: Què cal mirar en una negociació

@@ -1,5 +1,5 @@
 // Textos del JavaScript en euskera. Mismas entradas que js/textos.js.
-import { idioma, parteFecha } from '../textos.js';
+import { idioma, parteFecha, parteEscrutado } from '../textos.js';
 
 // Las 52 circunscripciones, en el mismo orden que PROV (js/datos.js), con los exónimos de Euskaltzaindia y las formas
 // declinadas que usan las frases: [NOR (absoluto), NON (inesivo), NONGO (genitivo locativo), NORK (ergativo)].
@@ -82,6 +82,9 @@ const DATUAK = {
   'ministerio del Interior, escrutinio del 23J (datos reunidos en Porra Electoral)': 'Barne Ministerioa, uztailaren 23ko zenbaketa (Porra Electoralen bildutako datuak)',
   'escrutinio provisional del 29 de noviembre de 2026': '2026ko azaroaren 29ko behin-behineko zenbaketa',
   'ministerio del Interior': 'Barne Ministerioa',
+  'ministerio del Interior, escrutinio provisional': 'Barne Ministerioa, behin-behineko zenbaketa',
+  'escrutinio general del 4 de diciembre de 2026': '2026ko abenduaren 4ko zenbaketa orokorra',
+  'ministerio del Interior, escrutinio general': 'Barne Ministerioa, zenbaketa orokorra',
   '29 nov': 'aza. 29',
   '4 dic': 'abe. 4',
   '23 dic': 'abe. 23',
@@ -157,7 +160,8 @@ export const textos = {
   },
   // La fecha de las elecciones, ya en el caso que pide calcNota («… hauteskundeetan»): «2023ko uztailaren 23ko». El sufijo depende del día y del año.
   fecha: f => { const x = parteFecha(f); return x ? x.a + (kons(x.a) ? 'eko ' : 'ko ') + HIL[x.m - 1] + 'aren ' + x.d + (kons(x.d) ? 'eko' : 'ko') : f; },
-  dato: s => DATUAK[txikiz(String(s))] || s,
+  // la etiqueta de la noche lleva el porcentaje escrutado: «…, botoen % 99,9 zenbatuta»
+  dato: s => { const e = parteEscrutado(s); return e ? (DATUAK[txikiz(e.t)] || e.t) + ', botoen % ' + e.n + ' zenbatuta' : DATUAK[txikiz(String(s))] || s; },
 
   /* el escenario */
   ariaEscenario: 'Kongresuko 350 eserlekuak, urrats bakoitzean forma aldatzen dutenak. Hexagono urrekara zure botoa da.',
@@ -173,7 +177,7 @@ export const textos = {
     5: '350etik 176: gehiengo osoa',
     7: 'Presidentea aukeratuko duen Kongresua<small>Bi hilabeteko epea lehen bozketarekin hasten da.</small>',
     8: '350 eserleku',
-    9: 'Eserleku bakoitza, irabazi duenaren kolorez',
+    9: 'Eserleku bakoitza, bere alderdiaren kolorez',
     10: nor(i) + ': ' + eserleku(n),
     11: 'Hautetsontzietatik ateratzen den Kongresua',
     13: 'Hautetsontzietatik ateratzen den Kongresua',
@@ -284,13 +288,16 @@ export const textos = {
   avisoPrueba: etiqueta => 'Aurrebista, probako datuekin: ' + etiqueta + '. Ez dira azaroaren 29ko emaitzak.',
   masEscanos: (nombre, n, pctVotos, absoluta) => nombre + ' da eserleku gehien dituen alderdia: ' + n + ' eserleku, botoen ' + pctVotos + ' lortuta. ' + (absoluta ? 'Gehiengo osoaren 176 eserlekuetara iristen da.' : 'Alderdi bakar bat ere ez da bere kabuz iristen gehiengo osoaren 176 eserlekuetara.'),
   participacion: p => ' Parte-hartzea: erroldaren ' + p + '.',
+  provisionalRes: ' Behin-behineko emaitzak dira abenduaren 4ko zenbaketa orokorrera arte; orduan gehitzen da atzerritik iritsitako botoa.',
   thVotos: 'Botoak',
   thEscanos: 'Eserlekuak',
   thPorEscano: 'Botoak eserlekuko',
-  fuenteRes: (prueba, etiqueta, fuente) => (prueba ? 'Probako datuak: ' : '') + etiqueta + '. Iturria: ' + fuente + '. Eserlekuak hemen kalkulatzen dira, probintzia bakoitzeko botoekin.',
+  fuenteRes: (prueba, etiqueta, fuente) => (prueba ? 'Probako datuak: ' + etiqueta : etiqueta.charAt(0).toUpperCase() + etiqueta.slice(1)) + '. Iturria: ' + fuente + '. Eserlekuak hemen kalkulatzen dira, probintzia bakoitzeko botoekin; ofizialak hauteskunde-batzordeek aldarrikatzen dituzte.',
   repartia: (i, n) => non(i) + ' ' + eserleku(n) + (n === 1 ? ' banatzen zen.' : ' banatzen ziren.'),
   ultimo: (ganador, rival, votos) => 'Azken eserlekua ' + ganador + ' alderdiarentzat izan zen. ' + rival + ' alderdiari ' + boto(votos) + (votos === 1 ? ' falta izan zitzaion' : ' falta izan zitzaizkion') + ' eserleku hori kentzeko.',
+  provisionalUltimo: ' Behin-behineko kontaketa da: atzerritik iritsitako botoak, abenduaren 4an gehitzen denak, alda dezake.',
   unico: ganador => 'Eserlekua ' + ganador + ' alderdiarentzat izan zen.',
+  provisional12: 'Behin-behineko kontaketako eserlekuak dira. Abenduaren 4ko zenbaketa orokorrak atzerritik iritsitako botoa gehitzen du, eta eserlekuren bat mugi dezake.',
   votos: boto,
   ysiIguales: 'Aukeratu bi alderdi desberdin.',
   ysiCambia: (n, de, a, ultimo) => de + ' alderditik ' + a + ' alderdira ' + boto(n) + ' pasatuta, banaketa aldatu egiten da. Azken eserlekua ' + ultimo + ' alderdiarentzat izango litzateke.',

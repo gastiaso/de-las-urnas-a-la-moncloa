@@ -1,5 +1,5 @@
 // Textos del JavaScript en catalán. Mismas entradas que js/textos.js.
-import { idioma, parteFecha } from '../textos.js';
+import { idioma, parteFecha, parteEscrutado, ARTICULO } from '../textos.js';
 
 /* números */
 const escons = n => n + (n === 1 ? ' escó' : ' escons');
@@ -16,6 +16,13 @@ const minus = s => s.charAt(0).toLowerCase() + s.slice(1);
 // «de» se apostrofa ante vocal o h muda: «d'Àvila», «d'Osca», «d'abril», «d'ERC». No ante «hu» + vocal, que suena [w]
 // como en «de Washington»: «de Huelva».
 const de = s => (/^[aeiouàèéíòóúh]/i.test(s) && !/^hu[aeio]/i.test(s) ? "d'" : 'de ') + s;
+
+/* partidos: «el PP», «per al PSOE», «al PNV», «del BNG»; sin artículo, «per a Sumar», «a Vox», «d'EH Bildu» (ARTICULO, en js/textos.js).
+   p: nombre del partido; b: en negrita, con el artículo fuera. Los que llevan artículo empiezan por consonante: sin apóstrofo. */
+const elP = (p, b) => (ARTICULO[p] ? (ARTICULO[p] === 'f' ? 'la ' : 'el ') : '') + (b ? '<b>' + p + '</b>' : p);
+const perA = s => /^el /.test(s) ? 'per al ' + s.slice(3) : 'per a ' + s;   // s: con el artículo ya puesto (elP)
+const aP = s => /^el /.test(s) ? 'al ' + s.slice(3) : 'a ' + s;
+const deP = s => /^el /.test(s) ? 'del ' + s.slice(3) : de(s);
 
 /* las 52 circunscripciones, en el mismo orden que PROV en js/datos.js: [nombre, artículo si lo lleva] */
 const PROVS = [['Albacete'], ['Alacant'], ['Almeria'], ['Àlaba'], ['Astúries'], ['Àvila'], ['Badajoz'], ['Illes Balears', 'les'], ['Barcelona'],
@@ -45,6 +52,9 @@ const DADES = new Map([
   ['Ministerio del Interior, escrutinio del 23J (datos reunidos en Porra Electoral)', "Ministeri de l'Interior, escrutini del 23J (dades recollides a Porra Electoral)"],
   ['Escrutinio provisional del 29 de noviembre de 2026', 'Escrutini provisional del 29 de novembre de 2026'],
   ['Ministerio del Interior', "Ministeri de l'Interior"],
+  ['Ministerio del Interior, escrutinio provisional', "Ministeri de l'Interior, escrutini provisional"],
+  ['escrutinio general del 4 de diciembre de 2026', 'escrutini general del 4 de desembre de 2026'],
+  ['Ministerio del Interior, escrutinio general', "Ministeri de l'Interior, escrutini general"],
   ['29 nov', '29 nov.'],
   ['4 dic', '4 des.'],
   ['23 dic', '23 des.'],
@@ -61,12 +71,14 @@ const DADES = new Map([
   ['El Rey nombra al presidente.', 'El Rei nomena el president.']
 ].map(([es, ca]) => [minus(es), ca]));
 // Busca sin distinguir la mayúscula de la primera letra y devuelve la traducción con la inicial tal como llega.
-const dato = s => {
+const datoFijo = s => {
   const t = typeof s === 'string' ? DADES.get(minus(s)) : undefined;
   if (t === undefined) return s;
   const c = s.charAt(0);
   return c !== c.toLowerCase() ? maj(t) : c !== c.toUpperCase() ? minus(t) : t;
 };
+// La etiqueta de la noche lleva el porcentaje escrutado: «…, amb el 99,9 % escrutat», «amb l'11 %».
+const dato = s => { const e = parteEscrutado(s); return e ? datoFijo(e.t) + ', amb ' + (/^(1|11)(?!\d)/.test(e.n) ? "l'" : 'el ') + e.n + ' % escrutat' : datoFijo(s); };
 
 
 const ILLES = {
@@ -139,7 +151,7 @@ export const textos = {
     5: '176 de 350: la majoria absoluta',
     7: 'El Congrés que escollirà president<small>El termini de dos mesos comença amb la primera votació.</small>',
     8: '350 escons',
-    9: 'Cada escó, del color de qui el va guanyar',
+    9: 'Cada escó, del color del seu partit',
     10: Prov(i) + ': ' + escons(n),
     11: 'El Congrés que surt de les urnes',
     13: 'El Congrés que surt de les urnes',
@@ -173,8 +185,8 @@ export const textos = {
       case 6: return (uno ? 'El diputat ' + deProv(i) + ' sol votar amb el seu partit.' : 'Els ' + n + ' diputats ' + deProv(i) + ' solen votar amb el seu partit.') + " El teu vot queda a part, sota l'hemicicle: en quin bloc estaria depèn de qui votis.";
       case 7: return 'La nit del 29N, la teva papereta es compta a la teva mesa ' + deProv(i) + ', en públic i en veu alta.';
       case 8: return 'Aquest és el camí de la teva papereta ' + aProv(i) + ": de l'urna a la Moncloa.";
-      case 10: return primero ? "L'hexàgon daurat és el primer escó que es va repartir " + aProv(i) + ': va ser per a <b>' + primero + '</b>.' : '';
-      case 11: case 12: return primero ? "L'hexàgon daurat és el primer escó " + deProv(i) + ': va ser per a <b>' + primero + '</b>, el partit més votat allà.' : '';
+      case 10: return primero ? "L'hexàgon daurat és el primer escó que es va repartir " + aProv(i) + ': va ser ' + perA(elP(primero, true)) + '.' : '';
+      case 11: case 12: return primero ? "L'hexàgon daurat és el primer escó " + deProv(i) + ': va ser ' + perA(elP(primero, true)) + ', el partit més votat allà.' : '';
       default: return '';
     }
   },
@@ -245,19 +257,22 @@ export const textos = {
 
   /* fase 2: los resultados */
   avisoPrueba: etiqueta => 'Vista prèvia amb dades de prova: ' + etiqueta + '. No són els resultats del 29N.',
-  masEscanos: (nombre, n, pctVotos, absoluta) => nombre + ' és el partit amb més escons: ' + n + ', amb el ' + pctVotos + ' dels vots. ' + (absoluta ? 'Supera els 176 de la majoria absoluta.' : 'Cap partit no arriba tot sol als 176 de la majoria absoluta.'),
+  masEscanos: (nombre, n, pctVotos, absoluta) => maj(elP(nombre)) + ' és el partit amb més escons: ' + n + ', amb el ' + pctVotos + ' dels vots. ' + (absoluta ? 'Supera els 176 de la majoria absoluta.' : 'Cap partit no arriba tot sol als 176 de la majoria absoluta.'),
   participacion: p => ' Va votar el ' + p + ' del cens.',
+  provisionalRes: " Són resultats provisionals fins a l'escrutini general del 4 de desembre, que suma el vot arribat de l'estranger.",
   thVotos: 'Vots',
   thEscanos: 'Escons',
   thPorEscano: 'Vots per escó',
-  fuenteRes: (prueba, etiqueta, fuente) => (prueba ? 'Dades de prova: ' : '') + etiqueta + '. Font: ' + fuente + '. Els escons es calculen aquí amb els vots de cada província.',
+  fuenteRes: (prueba, etiqueta, fuente) => (prueba ? 'Dades de prova: ' + etiqueta : maj(etiqueta)) + '. Font: ' + fuente + '. Els escons es calculen aquí amb els vots de cada província; els oficials els proclamen les juntes electorals.',
   repartia: (i, n) => Prov(i) + (plural(i) ? ' repartien ' : ' repartia ') + escons(n) + '.',
-  ultimo: (ganador, rival, votos) => "L'últim escó va ser per a " + ganador + '. A ' + rival + ' li van faltar ' + miles(votos) + " vots per prendre-l'hi.",
-  unico: ganador => "L'escó va ser per a " + ganador + '.',
+  ultimo: (ganador, rival, votos) => "L'últim escó va ser " + perA(elP(ganador)) + '. ' + maj(aP(elP(rival))) + (votos === 1 ? ' li va faltar 1 vot' : ' li van faltar ' + miles(votos) + ' vots') + " per prendre-l'hi.",
+  provisionalUltimo: " És el recompte provisional: el vot arribat de l'estranger, que se suma el 4 de desembre, el pot canviar.",
+  unico: ganador => "L'escó va ser " + perA(elP(ganador)) + '.',
+  provisional12: "Són els escons del recompte provisional. L'escrutini general del 4 de desembre suma el vot arribat de l'estranger i en pot moure algun.",
   votos: n => miles(n) + ' vots',
   ysiIguales: 'Tria dos partits diferents.',
-  ysiCambia: (n, de_, a, ultimo) => 'Amb ' + miles(n) + ' vots ' + de(de_) + ' a ' + a + ", canvia el repartiment. L'últim escó seria per a " + ultimo + '.',
-  ysiNoCambia: (n, ultimo) => 'Amb ' + miles(n) + " vots, el repartiment no canvia. L'últim escó continua sent per a " + ultimo + '.',
+  ysiCambia: (n, de_, a, ultimo) => 'Amb ' + miles(n) + ' vots ' + deP(elP(de_)) + ' ' + aP(elP(a)) + ", canvia el repartiment. L'últim escó seria " + perA(elP(ultimo)) + '.',
+  ysiNoCambia: (n, ultimo) => 'Amb ' + miles(n) + " vots, el repartiment no canvia. L'últim escó continua sent " + perA(elP(ultimo)) + '.',
   votosYEscanos: "El percentatge d'escons d'un partit gairebé mai coincideix amb el seu percentatge de vots.",
   sinEscano: (n, p) => miles(n) + ' vots (' + p + ') van anar a candidatures que no van aconseguir escó a la seva província.',
   loSiguiente: t => 'El que ve ara: ' + t.charAt(0).toLowerCase() + t.slice(1),

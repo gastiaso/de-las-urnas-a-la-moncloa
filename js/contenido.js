@@ -11,6 +11,9 @@ const { escanos: plural, miles, pct } = T;
 const calma = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
 // La fase 2 se abre para todos con RES.abierta; para verla antes, añadir #fase2 a la dirección.
 export const FASE2 = RES.abierta || location.hash === '#fase2';
+// Hasta el escrutinio general (4-dic), los resultados son provisionales y los textos lo dicen. Se quita con
+// herramientas/resultados.py --general; si js/resultados.js no lo trae, se da por provisional.
+const PROVISIONAL = RES.provisional !== false;
 
 /* G: setProv, resetBet, reveal, setSen, setPact, setRes, setProvRes, setPact2 (pueden no hacer nada).
    anuncia(texto): mensaje para lectores de pantalla. enLectura(): si se está en modo de solo texto. */
@@ -263,6 +266,8 @@ function pintaProvRes() {
   $('#u10').textContent = p.rep.ultimo && p.rep.rival
     ? T.ultimo(nom(p.rep.ultimo.id), nom(p.rep.rival.id), p.rep.rival.faltan)
     : (p.rep.ultimo ? T.unico(nom(p.rep.ultimo.id)) : '');
+  // mientras sea provisional, el aviso de que puede cambiar va detrás, sin negrita
+  if (PROVISIONAL && p.rep.rival) { const s = document.createElement('span'); s.style.fontWeight = 'normal'; s.textContent = T.provisionalUltimo; $('#u10').appendChild(s); }
   G.setProvRes(p.rep.order.map(id => R.partidos.find(q => q.id === id).color), p.e);
   preparaYsi();
 }
@@ -317,6 +322,7 @@ if (FASE2) {
     const censo = RES.prov.reduce((x, p) => x + p.censo, 0), vot = RES.prov.reduce((x, p) => x + p.votantes, 0);
     $('#r9').textContent += T.participacion(pct(vot / censo));
   }
+  if (PROVISIONAL) { $('#r9').textContent += T.provisionalRes; $('#n12').textContent = T.provisional12; $('#n12').hidden = false; }
   $('#t9').innerHTML = '<table><tr><th>' + T.partido + '</th><th>' + T.thVotos + '</th><th>' + T.thEscanos + '</th></tr>' + orden.filter(q => q.esc > 0).map(q => '<tr><td>' + pt(q) + q.nombre + '</td><td>' + pct(q.votos / val) + '</td><td>' + q.esc + '</td></tr>').join('') + '</table>';
   $('#f9').textContent = T.fuenteRes(RES.prueba, etiqueta, T.dato(RES.fuente));
   /* 11 */
@@ -330,7 +336,9 @@ if (FASE2) {
   const corto = q => q.nombre.replace('Coalición Canaria', 'CC').replace('Adelante Andalucía', 'AA').replace('Frente Amplio', 'FA').replace('EH Bildu', 'Bildu');
   pintaPact2 = calculadora($('#calc12'), R.partidos.filter(q => q.esc > 0).map(q => [corto(q), q.nombre, q.esc, q.color]), st.pact2, (e, p) => G.setPact2(e, p), 'p12');
   /* 13 */
-  const hoy = new Date().toISOString().slice(0, 10), sig = RES.hitos.find(h => !h.f || h.f > hoy);
+  // la fecha de hoy en la hora del lector (toISOString daría la de Greenwich: entre las 0:00 y la 1:00, la de ayer)
+  const ahora = new Date(), hoy = ahora.getFullYear() + '-' + String(ahora.getMonth() + 1).padStart(2, '0') + '-' + String(ahora.getDate()).padStart(2, '0');
+  const sig = RES.hitos.find(h => !h.f || h.f > hoy);
   $('#r13').textContent = sig ? T.loSiguiente(T.dato(sig.t)) : T.calendarioCompleto;
   $('#l13').innerHTML = RES.hitos.map(h => '<li class="' + (h.f && h.f <= hoy ? 'hecho' : h === sig ? 'clave' : '') + '"><b>' + T.dato(h.r) + '</b><span>' + T.dato(h.t) + '</span></li>').join('');
   R.hemi = []; R.partidos.forEach(q => { for (let i = 0; i < q.esc; i++) R.hemi.push(q.color); });
